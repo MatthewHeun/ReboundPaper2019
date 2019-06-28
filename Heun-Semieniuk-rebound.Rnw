@@ -184,7 +184,14 @@ economy-wide new energy demand~($E_{nd,EW}$):
 Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} gives
 %
 \begin{equation} \label{eq:}
-  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_install}{E_{sav,dev}} \right) \; k \; I_p \right]
+  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_install}{E_{sav,dev}} \right) \; k \; I_p \right] \; .
+\end{equation}
+
+The economy-wide energy rebound effect~($Re_{EW}$) resulting from device-level energy saving
+can be given as 
+%
+\begin{equation}
+  Re_{EW} = 1 - \frac{}{denom}
 \end{equation}
 %
 
