@@ -3,6 +3,37 @@
 \usepackage{lineno,hyperref}
 \modulolinenumbers[5]
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands provided by the authors.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Change name of figures to Fig. for the Elsevier style
+\renewcommand{\figurename}{Fig.}
+
+% Commands for editing.
+
+\usepackage{xcolor}            % For colored text
+\usepackage[normalem]{ulem}    % For \sout command (strikethrough)
+
+% From https://tex.stackexchange.com/questions/130623/crossing-out-using-different-colour,
+% Change the \sout color to red
+\newcommand{\redsout}{\bgroup\markoverwith{\textcolor{red}{\rule[0.5ex]{2pt}{0.4pt}}}\ULon}
+
+% Use these versions to display changes.
+\newcommand{\del}[1]{\textcolor{gray}{\redsout{#1}}}
+\newcommand{\ins}[1]{\textcolor{red}{#1}}
+\newcommand{\rev}[2]{\del{#1}\ins{#2}}
+
+% Use these versions for a clean copy.
+% \newcommand{\del}[1]{}
+% \newcommand{\ins}[1]{#1}
+% \newcommand{\rev}[2]{#2}
+
+\newcommand{\mpc}{M\!PC}
+
+
+
 \journal{Energy Economics}
 
 
@@ -59,6 +90,120 @@ energy rebound\sep energy efficiency \sep marginal propensity to consume
 \section{Theory}
 \label{sec:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Definitions}
+\label{sec:definitions}
+%++++++++++++++++++++++++++++++
+
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Expected device-level energy savings}
+\label{sec:expected_device_level_energy_savings}
+%++++++++++++++++++++++++++++++
+
+Device-level rebound~($Re_{dev}$) can be expressed as
+%
+\begin{equation} \label{eq:dev_level_rebound}
+  Re_{dev} = 1 - \frac{E_{sav,dev}}{E_{sav,dev,expected}} \; ,
+\end{equation}
+%
+where $E_{sav,dev}$ is the actual device-level energy savings (in kW-hr), and
+$E_{sav,dev,expected}$ is the expected device-level energy savings (in kW-hr).
+
+Some of the expected device-level energy savings can be ``taken back'' by 
+device-level rebound effects~($Re_{dev}$).
+Expected device-level energy savings~($E_{sav,dev,expected}$) 
+can be expressed in terms of device-level rebound~($Re_{dev}$)
+by solving Eq.~\ref{eq:dev_level_rebound} for $E_{sav,dev,expected}$:
+%
+\begin{equation}
+  E_{sav,dev,expected} = \frac{E_{sav,dev}}{1 - Re_{dev}} \; .
+\end{equation}
+
+To connect device-level rebound~($Re_{dev}$) to economy-wide rebound~($Re_{EW}$),
+net cost savings at the device level~($C_{sav,dev,net}$) 
+due to actual energy savings at the device level~($E_{sav,dev}$) 
+are first determined by the following equation:
+%
+\begin{equation} \label{eq:actual_cost_savings}
+  C_{sav,dev,net} = E_{sav,dev} p_E - C_{install} \; ,
+\end{equation}
+%
+where $p_E$ is the price of energy (in \$/kW-hr, for example), and
+$C_{install}$ is the cost of installing the energy-saving device,
+including labor and materials (in \$).
+
+But the net cost savings at the device level~($C_{sav,dev,net}$)
+can be re-spent in the economy,
+spinning through the economy in a manner similar to a tax cut.
+Exactly how much the net, device-level energy cost savings generates new economic growth 
+depends on how much of the savings are re-spent by consumers.
+The economic term for this respending is ``marginal propensity to consume''~($\mpc$).
+
+A multiplier~($k$) can be used to describe the infinite series of re-spending in the economy.
+(Generating additional economic activity from a tax cut or other savings 
+is known as the ``multiplier effect.'')
+The multiplier~($k$) is related to $\mpc$ by 
+%
+\begin{equation} \label{eq:k_eqn}
+  k = \frac{1}{1 - \mpc} \; .
+\end{equation}
+
+Every new dollar spent in an economy,
+including energy cost savings,
+has energy implications.
+On average,
+the economy-wide primary energy implications of device-level energy cost savings 
+can be estimated by the primary energy intensity of economic activity~($I_p$).
+Thus, net device-level energy cost saving~($C_{sav,dev,net}$) 
+leads to new, economy-wide primary energy demand~($E_{nd,EW}$)
+by the following equation:
+%
+\begin{equation} \label{eq:E_nd_EW_prelim}
+  E_{nd,EW} = C_{sav,dev,net} \; k \; I_p \; .
+\end{equation}
+%
+Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} gives
+%
+\begin{equation} \label{eq:E_nd_EW}
+  E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_p
+\end{equation}
+%
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{}
+\label{sec:placeholder_label}
+%++++++++++++++++++++++++++++++
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+\label{sec:data}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Marginal propensity to consume~($\mpc$)}
+\label{sec:mpc}
+%++++++++++++++++++++++++++++++
+
+Say how we get $\mpc$ here.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Energy intensity of economic activity~($I$)}
+\label{sec:I}
+%++++++++++++++++++++++++++++++
+
+Say how we obtained energy intensity here.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
