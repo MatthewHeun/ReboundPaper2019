@@ -130,14 +130,14 @@ due to actual energy savings at the device level~($E_{sav,dev}$)
 are first determined by the following equation:
 %
 \begin{equation} \label{eq:actual_cost_savings}
-  C_{sav,dev,net} = E_{sav,dev} p_E - C_{install} \; ,
+  C_{sav,dev,net} = E_{sav,dev} p_{E_f} - C_{install} \; ,
 \end{equation}
 %
-where $p_E$ is the price of energy (in \$/kW-hr, for example), and
+where $p_{E_f}$ is the price of final energy purchased by the consumer (in \$/kW-hr, for example), and
 $C_{install}$ is the cost of installing the energy-saving device,
 including labor and materials (in \$).
 
-But the net cost savings at the device level~($C_{sav,dev,net}$)
+But the net cost savings at the device level~($C_{sav,dev,net}$, in \$)
 can be re-spent in the economy,
 spinning through the economy in a manner similar to a tax cut.
 Exactly how much the net, device-level energy cost savings generates new economic growth 
@@ -172,8 +172,21 @@ Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} g
 \begin{equation} \label{eq:E_nd_EW}
   E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_p
 \end{equation}
-%
 
+The net energy savings from the device-level energy savings is given by 
+the difference between device-level energy savings($E_{sav,dev}$) and
+economy-wide new energy demand~($E_{nd,EW}$):
+%
+\begin{equation} \label{eq:net_savings}
+  E_{sav,net} = E_{sav,dev} - E_{nd,EW} \; .
+\end{equation}
+%
+Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} gives
+%
+\begin{equation} \label{eq:}
+  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_install}{E_{sav,dev}} \right) \; k \; I_p \right]
+\end{equation}
+%
 
 
 %++++++++++++++++++++++++++++++
