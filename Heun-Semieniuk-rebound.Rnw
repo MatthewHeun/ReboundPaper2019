@@ -32,7 +32,10 @@
 % \newcommand{\ins}[1]{#1}
 % \newcommand{\rev}[2]{#2}
 
+% MPC with nicer spacing between letters
 \newcommand{\mpc}{M\!PC}
+% kW-hr with nicer spacing in equations.
+\newcommand{\kWhr}{kW\!\!-\!\!hr}
 
 
 
@@ -262,13 +265,17 @@ Focus on LED replacement of incandescent bulb. U.S.\ information.
 \label{sec:mpc_and_k}
 %++++++++++++++++++++++++++++++
 
-<<MPC, include = FALSE>>=
+<<MPC, include = TRUE>>=
 mpc <- 0.94
 k <- 1 / (1 - mpc)
 @
 
 One estimate for $\mpc$ is \Sexpr{mpc},
-which gives $k = \Sexpr{format(k, digits = 4)}$ by Eq.~\ref{eq:k_eqn}.
+which, by Eq.~\ref{eq:k_eqn} gives 
+%
+\begin{equation} \label{eq:k_calc}
+  k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)}
+\end{equation}
 
 **** Get a better estimate for $\mpc$ and $k$ here. 
 Gregor said something about the slope of a GPD graph? ****
@@ -284,21 +291,28 @@ Gregor said something about the slope of a GPD graph? ****
 # Key World Energy Statistics 2018. Technical report, 2018.
 I_E_p_toe_per_thousand_dollars <- 0.13
 # Convert to kW-hr/dollar
-# Multiply by 1000 to get per dollar.
+# divide by 1000 to get per dollar.
 # Multiply by 11630 kWhr_per_ktoe to convert from toe to kW-hr.
 # According to the IEA's unit converter website 
 # at https://www.iea.org/statistics/resources/unitconverter/, 
 # 1 toe = 11630 kW-hr.
 kWhr_per_toe <- 11630
-I_E_p <- I_E_p_toe_per_thousand_dollars * 1000 * kWhr_per_toe
+I_E_p <- I_E_p_toe_per_thousand_dollars / 1000 * kWhr_per_toe
 @
 
 For 2016, 
 the primary energy intensity of the U.S.\ economy is given as 
-$I_{E_p} = \Sexpr{I_E_p_toe_per_thousand_dollars}$~toe/1000\$~\cite[p.~34]{International-Energy-Agency:2018a}.
-After unit conversion, the energy intensity of economic activity 
-in the U.S.\ is given as $I_{E_p} = \Sexpr{I_E_p}$~kW-hr/\$.
-(Dollars are given as 2010 \$ at purchase power parity (PPP).)
+$I_{E_p} = \Sexpr{I_E_p_toe_per_thousand_dollars}$~toe/k\$~\cite[p.~34]{International-Energy-Agency:2018a}.
+The final value for $I_{E_p}$ is obtained after converting units to kW-hr/\$:
+%
+\begin{equation} \label{eq:I_E_p value}
+  I_{E_p} = \frac{\Sexpr{I_E_p_toe_per_thousand_dollars} \; \mathrm{toe}}{\mathrm{k\$}} \;
+              \frac{\mathrm{k\$}}{\$1000} \;
+              \frac{\Sexpr{format(kWhr_per_toe, digits = 5)} \; \mathrm{\kWhr}}{\mathrm{toe}}
+              = \Sexpr{format(I_E_p, digits = 4)} \; \mathrm{\kWhr/\$} \;
+\end{equation}
+%
+Note that all dollars are given as 2010 \$ at purchase power parity (PPP).
 
 
 %++++++++++++++++++++++++++++++
@@ -320,9 +334,6 @@ E_sav_dev_expected <- C_sav / p_E_f
 P <- p_E_f - C_install / E_sav_dev_expected
 @
 
-Give example prices, costs, and energy savings here.
-Then calculate unit profit~($P$).
-
 A visit to the grocery store confirms that a 4-pack 
 of 8.5~W General Electric LED bulbs retails for \$6,
 or \$1.50 each.
@@ -333,15 +344,23 @@ Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected
 And the unit profit~($P$) from the LED bulb is expected to be 
 %
 \begin{equation} \label{eq:profit}
-  P = \$\Sexpr{p_E_f}/\mathrm{kW\!\!-\!\!hr} 
-            - \frac{\$\Sexpr{C_install}}{\Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{kW\!\!-\!\!hr}} 
-            = \Sexpr{format(P, digits = 3)} \; \$/\mathrm{kW\!\!-\!\!hr} \; .
+  P = \frac{\$\Sexpr{p_E_f}}{\mathrm{\kWhr}} 
+            - \frac{\$\Sexpr{format(C_install, digits = 3, nsmall = 2)}}{\Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{\kWhr}} 
+            = \Sexpr{format(P, digits = 3)} \; \$/\mathrm{\kWhr} \; .
 \end{equation}
-%
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Device-level rebound~($Re_{dev}$)}
+\label{sec:placeholder_label}
+%++++++++++++++++++++++++++++++
 
-The LED bulbs save 51.5~W of electricity (60~W -- 8.5~W).
+<<Re_dev>>=
+Re_dev <- 0.4
+@
+
+An estimate for device-level rebound for LED replacements is
+$Re_{dev} =$ \Sexpr{Re_dev}.
 
 
 %++++++++++++++++++++++++++++++
@@ -349,8 +368,16 @@ The LED bulbs save 51.5~W of electricity (60~W -- 8.5~W).
 \label{sec:economy_wide_rebound}
 %++++++++++++++++++++++++++++++
 
-Calculate economy-wide rebound for the case study here.
+<<Re_EW>>= 
 
+@ 
+
+The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}.
+%
+\begin{equation} \label{eq:Re_EW_val}
+  Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev})
+\end{equation}
+%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
