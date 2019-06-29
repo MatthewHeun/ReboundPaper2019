@@ -258,19 +258,20 @@ indicates how economy-wide rebound will change as device-level rebound changes:
 Focus on LED replacement of incandescent bulb. U.S.\ information.
 
 %++++++++++++++++++++++++++++++
-\subsection{Marginal propensity to consume~($\mpc$)}
-\label{sec:mpc}
+\subsection{Marginal propensity to consume~($\mpc$) and multiplier~($k$)}
+\label{sec:mpc_and_k}
 %++++++++++++++++++++++++++++++
 
-Say how we get $\mpc$ here.
+<<MPC, include = FALSE>>=
+mpc <- 0.94
+k <- 1 / (1 - mpc)
+@
 
+One estimate for $\mpc$ is \Sexpr{mpc},
+which gives $k = \Sexpr{format(k, digits = 4)}$ by Eq.~\ref{eq:k_eqn}.
 
-%++++++++++++++++++++++++++++++
-\subsection{Multiplier~($k$)}
-\label{sec:multiplier}
-%++++++++++++++++++++++++++++++
-
-Say how we get $k$ here.
+**** Get a better estimate for $\mpc$ and $k$ here. 
+Gregor said something about the slope of a GPD graph? ****
 
 
 %++++++++++++++++++++++++++++++
@@ -278,7 +279,26 @@ Say how we get $k$ here.
 \label{sec:I}
 %++++++++++++++++++++++++++++++
 
-Say how we obtained energy intensity here.
+<<I_E_p, include = TRUE>>=
+# From p. 34 in International Energy Agency. 
+# Key World Energy Statistics 2018. Technical report, 2018.
+I_E_p_toe_per_thousand_dollars <- 0.13
+# Convert to kW-hr/dollar
+# Multiply by 1000 to get per dollar.
+# Multiply by 11630 kWhr_per_ktoe to convert from toe to kW-hr.
+# According to the IEA's unit converter website 
+# at https://www.iea.org/statistics/resources/unitconverter/, 
+# 1 toe = 11630 kW-hr.
+kWhr_per_toe <- 11630
+I_E_p <- I_E_p_toe_per_thousand_dollars * 1000 * kWhr_per_toe
+@
+
+For 2016, 
+the primary energy intensity of the U.S.\ economy is given as 
+$I_{E_p} = \Sexpr{I_E_p_toe_per_thousand_dollars}$~toe/1000\$~\cite[p.~34]{International-Energy-Agency:2018a}.
+After unit conversion, the energy intensity of economic activity 
+in the U.S.\ is given as $I_{E_p} = \Sexpr{I_E_p}$~kW-hr/\$.
+(Dollars are given as 2010 \$ at purchase power parity (PPP).)
 
 
 %++++++++++++++++++++++++++++++
@@ -286,8 +306,42 @@ Say how we obtained energy intensity here.
 \label{sec:unit_profit}
 %++++++++++++++++++++++++++++++
 
+<<profit>>=
+# From the LED packaging:
+# Assumed final electricity price
+p_E_f <- 0.11 # $/kW-hr
+# Cost savings claimed by manufacturer
+C_sav <- 84 # $
+# Cost to purchase and install the LED bulb
+C_install <- 1.5 # $
+# Expected device-level savings.
+E_sav_dev_expected <- C_sav / p_E_f
+# Unit profit
+P <- p_E_f - C_install / E_sav_dev_expected
+@
+
 Give example prices, costs, and energy savings here.
 Then calculate unit profit~($P$).
+
+A visit to the grocery store confirms that a 4-pack 
+of 8.5~W General Electric LED bulbs retails for \$6,
+or \$1.50 each.
+The LED bulbs provide as much illumination as 60~W incandescents and
+are claimed to save \$84 of \$0.11/kW-hr electricity over their 13.6~year lifetime
+being used 3 hours/day.
+Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = 763.6~kW-hr.
+And the unit profit~($P$) from the LED bulb is expected to be 
+%
+\begin{equation} \label{eq:profit}
+  P = \$\Sexpr{p_E_f}/\mathrm{kW\!\!-\!\!hr} 
+            - \frac{\$\Sexpr{C_install}}{\Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{kW\!\!-\!\!hr}} 
+            = \Sexpr{format(P, digits = 3)} \; \$/\mathrm{kW\!\!-\!\!hr} \; .
+\end{equation}
+%
+
+
+
+The LED bulbs save 51.5~W of electricity (60~W -- 8.5~W).
 
 
 %++++++++++++++++++++++++++++++
