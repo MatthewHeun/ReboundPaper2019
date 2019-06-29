@@ -1,7 +1,9 @@
 \documentclass[review]{elsarticle}
 
-\usepackage{lineno,hyperref}
+\usepackage[inline]{enumitem}  % For inline enumerate* lists
+\usepackage{lineno}
 \modulolinenumbers[5]
+\usepackage{hyperref}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,7 +122,7 @@ Expected device-level energy savings~($E_{sav,dev,expected}$)
 can be expressed in terms of device-level rebound~($Re_{dev}$)
 by solving Eq.~\ref{eq:dev_level_rebound} for $E_{sav,dev,expected}$:
 %
-\begin{equation}
+\begin{equation} \label{eq:E_sav_dev_expected}
   E_{sav,dev,expected} = \frac{E_{sav,dev}}{1 - Re_{dev}} \; .
 \end{equation}
 
@@ -158,19 +160,19 @@ including energy cost savings,
 has energy implications.
 On average,
 the economy-wide primary energy implications of device-level energy cost savings 
-can be estimated by the primary energy intensity of economic activity~($I_p$).
+can be estimated by the primary energy intensity of economic activity~($I_{E_p}$).
 Thus, net device-level energy cost saving~($C_{sav,dev,net}$) 
 leads to new, economy-wide primary energy demand~($E_{nd,EW}$)
 by the following equation:
 %
 \begin{equation} \label{eq:E_nd_EW_prelim}
-  E_{nd,EW} = C_{sav,dev,net} \; k \; I_p \; .
+  E_{nd,EW} = C_{sav,dev,net} \; k \; I_{E_p} \; .
 \end{equation}
 %
 Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} gives
 %
 \begin{equation} \label{eq:E_nd_EW}
-  E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_p
+  E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_{E_p}
 \end{equation}
 
 The net energy savings from the device-level energy savings is given by 
@@ -183,17 +185,90 @@ economy-wide new energy demand~($E_{nd,EW}$):
 %
 Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} gives
 %
-\begin{equation} \label{eq:}
-  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_install}{E_{sav,dev}} \right) \; k \; I_p \right] \; .
+\begin{equation} \label{eq:E_sav_net}
+  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_p} \right] \; .
 \end{equation}
+%
+Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy (in \$/kW-hr).
 
 The economy-wide energy rebound effect~($Re_{EW}$) resulting from device-level energy saving
-can be given as 
+is given as 
 %
-\begin{equation}
-  Re_{EW} = 1 - \frac{}{denom}
+\begin{equation} \label{eq:Re_EW_prelim}
+  Re_{EW} = 1 - \frac{E_{sav,net}}{E_{sav,dev,expected}} \; .
 \end{equation}
 %
+Substituting Eqs.~\ref{eq:E_sav_dev_expected} and \ref{eq:E_sav_net} 
+into Eq.~\ref{eq:Re_EW_prelim} gives
+%
+\begin{equation} \label{eq:Re_EW_intermediate}
+  Re_{EW} = 1 - \frac{E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_p} \right]}
+            {\frac{E_{sav,dev}}{1 - Re_{dev}}} \; .
+\end{equation}
+%
+Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result:
+%
+\begin{equation} \label{eq:Re_EW}
+  Re_{EW} = 1 - (1 - k I_{E_p} P ) (1 - Re_{dev}) \; ,
+\end{equation}
+%
+where $P = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit profit from the energy efficiency intervention
+
+Eq.~\ref{eq:Re_EW} relates 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item device-level rebound~($Re_{dev}$) and
+  
+  \item economy-wide rebound~($Re_{EW}$).
+    
+\end{enumerate*}
+% 
+Key parameters in the relationship are 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the multiplier effect~($k$) and the marginal propensity to consume~($\mpc$) and
+  
+  \item the primary energy intensity of the economy~($I_{E_p}$).
+    
+\end{enumerate*}
+
+Note that economy-wide backfire occurs when $Re_{EW} \ge 1$, or
+%
+\begin{equation} \label{eq:backfire_inequality_1}
+  Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev}) \ge 1 \; .
+\end{equation}
+%
+Simplification gives
+%
+\begin{equation} \label{eq:backfire_inequality_2}
+  (1 - k I_{E_p} P) (1 - Re_{dev}) \le 0 \; .
+\end{equation}
+
+We expect that $Re_{dev} < 1$ and
+$(1 - Re_{dev}) > 0$. 
+If it were not so, 
+implementing the energy efficiency device would be uneconomic for the device owner.
+Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
+%
+\begin{equation} \label{eq:backfire_inequality_3}
+  1 - k I_{E_p} P \le 0 \; .
+\end{equation}
+%
+Solving for $P$ gives
+%
+\begin{equation} \label{eq:backfire_inequality_4}
+  P > \frac{1}{k I_{E_p}}
+\end{equation}
+%
+Substituting for $P$ gives
+%
+\begin{equation} \label{eq:backfire_inequality}
+  p_{E_f} - \frac{C_{install}}{E_{sav,dev}} > \frac{1}{k I_{E_p}}
+\end{equation}
+%
+
 
 
 %++++++++++++++++++++++++++++++
