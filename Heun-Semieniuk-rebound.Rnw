@@ -103,8 +103,8 @@ energy rebound\sep energy efficiency \sep marginal propensity to consume
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Expected device-level energy savings}
-\label{sec:expected_device_level_energy_savings}
+\subsection{Relationship between device-level and economy-wide rebound}
+\label{sec:relationship}
 %++++++++++++++++++++++++++++++
 
 Device-level rebound~($Re_{dev}$) can be expressed as
@@ -145,6 +145,8 @@ spinning through the economy in a manner similar to a tax cut.
 Exactly how much the net, device-level energy cost savings generates new economic growth 
 depends on how much of the savings are re-spent by consumers.
 The economic term for this respending is ``marginal propensity to consume''~($\mpc$).
+(The value of $\mpc$ is between 0 and 1, 
+with 0 representing no respending and 1 representing complete respending.)
 
 A multiplier~($k$) can be used to describe the infinite series of re-spending in the economy.
 (Generating additional economic activity from a tax cut or other savings 
@@ -160,7 +162,8 @@ including energy cost savings,
 has energy implications.
 On average,
 the economy-wide primary energy implications of device-level energy cost savings 
-can be estimated by the primary energy intensity of economic activity~($I_{E_p}$).
+can be estimated by the primary energy intensity of economic activity~($I_{E_p}$)
+in units of kW-hr/\$.
 Thus, net device-level energy cost saving~($C_{sav,dev,net}$) 
 leads to new, economy-wide primary energy demand~($E_{nd,EW}$)
 by the following equation:
@@ -183,13 +186,13 @@ economy-wide new energy demand~($E_{nd,EW}$):
   E_{sav,net} = E_{sav,dev} - E_{nd,EW} \; .
 \end{equation}
 %
-Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} gives
+Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} and rearranging gives
 %
 \begin{equation} \label{eq:E_sav_net}
   E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_p} \right] \; .
 \end{equation}
 %
-Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy (in \$/kW-hr).
+Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy (in \$/kW-hr, the same units as energy price, $p_{E_f}$).
 
 The economy-wide energy rebound effect~($Re_{EW}$) resulting from device-level energy saving
 is given as 
@@ -212,7 +215,8 @@ Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result:
   Re_{EW} = 1 - (1 - k I_{E_p} P ) (1 - Re_{dev}) \; ,
 \end{equation}
 %
-where $P = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit profit from the energy efficiency intervention
+where $P = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit profit 
+from an energy efficiency intervention.
 
 Eq.~\ref{eq:Re_EW} relates 
 %
@@ -228,11 +232,100 @@ Key parameters in the relationship are
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item the multiplier effect~($k$) and the marginal propensity to consume~($\mpc$) and
+  \item the multiplier~($k$) and the marginal propensity to consume~($\mpc$) 
+        from which it is derived,
   
-  \item the primary energy intensity of the economy~($I_{E_p}$).
+  \item the primary energy intensity of economic activity~($I_{E_p}$), and 
+  
+  \item the unit profit of energy efficiency~($P$).
     
 \end{enumerate*}
+
+The first derivative of $Re_{EW}$ with respect to $Re_{dev}$ 
+from Eq.~\ref{eq:Re_EW}
+indicates how economy-wide rebound will change as device-level rebound changes:
+%
+\begin{equation} \label{eq:dRe_EW/dRe_dev}
+  \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_p} P \; .
+\end{equation}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Case study}
+\label{sec:case_study}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Focus on LED replacement of incandescent bulb. U.S.\ information.
+
+%++++++++++++++++++++++++++++++
+\subsection{Marginal propensity to consume~($\mpc$)}
+\label{sec:mpc}
+%++++++++++++++++++++++++++++++
+
+Say how we get $\mpc$ here.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Multiplier~($k$)}
+\label{sec:multiplier}
+%++++++++++++++++++++++++++++++
+
+Say how we get $k$ here.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Primary energy intensity of economic activity~($I_{E_p}$)}
+\label{sec:I}
+%++++++++++++++++++++++++++++++
+
+Say how we obtained energy intensity here.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Unit profit~($P$)}
+\label{sec:unit_profit}
+%++++++++++++++++++++++++++++++
+
+Give example prices, costs, and energy savings here.
+Then calculate unit profit~($P$).
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Economy-wide rebound}
+\label{sec:economy_wide_rebound}
+%++++++++++++++++++++++++++++++
+
+Calculate economy-wide rebound for the case study here.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{sec:discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The equations in Section~\ref{sec:theory} and case study 
+in Section~\ref{sec:case_study}
+enable the following observations.
+
+For the conditions shown in Section~\ref{sec:case_study},
+namely $k = ****$, $I_{E_p} = ****$, and $P = ****$,
+Eq.~\ref{eq:dRe_EW/dRe_dev} shows that $\frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = -****$.
+I.e., economy-wide rebound \emph{decreases} when $Re_{dev}$ increases.
+Although this result may be counterintuitive, initially,
+the result is perfectly resaonable.
+When $Re_{dev}$ increases, the owner of the energy efficiency device has less 
+freed cash to respend in the economy.
+With less freed cash spent in the economy, 
+the multiplier effect is less pronounced, 
+and new demand for energy (at the energy intensity of the economy)
+is lessened.
+In the limit where $Re_{dev} \rightarrow 1$ 
+(i.e., all device-level savings are ``taken back'' by device-level energy rebound), 
+the owner of the energy efficiency device obtains zero economic benefit from the energy efficiency,
+and there is no excess cash from which additional, economy-wide energy demand accrues.
+Under these conditions,
+economy-wide rebound is the same as device-level rebound, namely $Re_{EW} = 1$.
 
 Note that economy-wide backfire occurs when $Re_{EW} \ge 1$, or
 %
@@ -246,10 +339,10 @@ Simplification gives
   (1 - k I_{E_p} P) (1 - Re_{dev}) \le 0 \; .
 \end{equation}
 
-We expect that $Re_{dev} < 1$ and
+It is expected that $Re_{dev} < 1$ and
 $(1 - Re_{dev}) > 0$. 
 If it were not so, 
-implementing the energy efficiency device would be uneconomic for the device owner.
+implementing energy efficiency would be uneconomic for the device implementer.
 Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
 %
 \begin{equation} \label{eq:backfire_inequality_3}
@@ -259,52 +352,40 @@ Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
 Solving for $P$ gives
 %
 \begin{equation} \label{eq:backfire_inequality_4}
-  P > \frac{1}{k I_{E_p}}
+  P > \frac{1}{k I_{E_p}} \; .
 \end{equation}
 %
 Substituting for $P$ gives
 %
 \begin{equation} \label{eq:backfire_inequality}
-  p_{E_f} - \frac{C_{install}}{E_{sav,dev}} > \frac{1}{k I_{E_p}}
+  p_{E_f} - \frac{C_{install}}{E_{sav,dev}} > \frac{1}{k I_{E_p}} \; .
 \end{equation}
+
+Eq.~\ref{eq:backfire_inequality} shows that backfire is more likely to occur when
 %
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item $p_{E_f}$ is large 
+        (energy is expensive),        
+  
+  \item $\frac{C_{install}}{E_{sav,dev}}$ is small 
+        (the unit cost of implementing energy efficiency is low),
+  
+  \item $k$ is large, because $\mpc \rightarrow 1$ 
+        (the multiplier effect is high, because nearly all freed cash is respent), and
+  
+  \item $I_{E_p}$ is large 
+        (the economy is very energy intensive).
+    
+\end{enumerate*}
 
-
-
-%++++++++++++++++++++++++++++++
-\subsection{}
-\label{sec:placeholder_label}
-%++++++++++++++++++++++++++++++
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Data}
-\label{sec:data}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Marginal propensity to consume~($\mpc$)}
-\label{sec:mpc}
-%++++++++++++++++++++++++++++++
-
-Say how we get $\mpc$ here.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Energy intensity of economic activity~($I$)}
-\label{sec:I}
-%++++++++++++++++++++++++++++++
-
-Say how we obtained energy intensity here.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Case study}
-\label{sec:case_study}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+As time progresses, most countries are becoming \emph{less} energy intensive
+($I_{E_p}$ is getting smaller).
+The effective price of energy has \emph{declined} over the past century
+($p_{E_f}$ is going down).
+All other things being equal, the above trends would tend to decrease $Re_{EW}$.
+Thus, backfire is likely becoming smaller.
+And energy-efficiency-driven, backfire-enabled economic growth could be stalling.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -312,7 +393,11 @@ Say how we obtained energy intensity here.
 \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
+It has long been thought that device-level energy reductions due to energy efficiency improvements
+could be ``taken back'' via the economic route of respending 
+of device-level energy cost savings in the wider economy.
+This paper is the first to show how device-level and economy-wide energy rebound are related.
+**** More here. ****
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -323,9 +408,12 @@ Say how we obtained energy intensity here.
 The authors are grateful
 to ****
         of ****
+        for ****;
+to ****
+        of ****
         for ****; and
 to internal reviewers
-        ****
+        ****, ****, and ****
         for many insightful suggestions.
 Support for Matthew Kuperus Heun was provided by ****.
 Grebor Semieniuk's time was funded as part of ****.
