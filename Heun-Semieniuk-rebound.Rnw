@@ -443,12 +443,22 @@ The equations in Section~\ref{sec:theory} and
 the case study in Section~\ref{sec:case_study}
 enable the following observations.
 
-First, for the conditions shown in Section~\ref{sec:case_study},
+First, installation of LED bulbs is likely to cause backfire 
+when the economy-wide rebound is considered.
+
+**** Make graph of $RE_{EW}$ vs.\ $Re_{dev}$ ****
+
+**** Possibly also make a star graph. ****
+
+**** Or show a graph of first derivative of $Re_{EW}$ with respect to $Re_{dev}$.
+
+Second, for the conditions shown in Section~\ref{sec:case_study},
 namely 
 $k = \Sexpr{format(k, digits = 4)}$, 
 $I_{E_p} = \Sexpr{I_E_p} \; \frac{\mathrm{\kWhr}}{\$}$, and
 $P = \Sexpr{format(P, digits = 4, nsmall = 4)} \; \frac{\$}{\mathrm{\kWhr}}$,
-Eq.~\ref{eq:dRe_EW/dRe_dev_val} shows that $\frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = \Sexpr{format(dReEW_dRedev, digits = 4)}$.
+Eq.~\ref{eq:dRe_EW/dRe_dev_val} shows that 
+$\frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = \Sexpr{format(dReEW_dRedev, digits = 4)}$.
 I.e., economy-wide rebound \emph{decreases} when device-level rebound \emph{increases}.
 Although this result may be counterintuitive initially,
 it is perfectly resaonable.
@@ -465,7 +475,7 @@ and there is no freed and respent cash from which additional, economy-wide energ
 Under these conditions,
 economy-wide rebound is the same as device-level rebound, namely $Re_{EW} = 1$.
 
-Second, note that economy-wide backfire occurs when $Re_{EW} \ge 1$, or with reference to Eq.~\ref{eq:Re_EW},
+Third, note that economy-wide backfire occurs when $Re_{EW} \ge 1$, or with reference to Eq.~\ref{eq:Re_EW},
 %
 \begin{equation} \label{eq:backfire_inequality_1}
   1 - (1 - k I_{E_p} P) (1 - Re_{dev}) \ge 1 \; .
@@ -480,7 +490,7 @@ Simplification gives
 It is expected that $Re_{dev} < 1$ and
 $(1 - Re_{dev}) > 0$. 
 If it were not so, 
-implementing energy efficiency would be uneconomic for the device implementer.
+energy efficiency would be uneconomic for the device implementer.
 Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
 %
 \begin{equation} \label{eq:backfire_inequality_3}
@@ -499,35 +509,41 @@ Substituting for $P$ from Eq.~\ref{eq:P_eqn} gives
   p_{E_f} - \frac{C_{install}}{(1 - Re_{dev}) E_{sav,dev,expected}} > \frac{1}{k I_{E_p}} \; .
 \end{equation}
 
-Inspection of Eq.~\ref{eq:backfire_inequality} reveals that
-backfire is more likely to occur when
+Inspection of Eqs.~\ref{eq:backfire_inequality_4} and~\ref{eq:backfire_inequality} reveals that
+economy-wide backfire is more likely to occur when
 %
 \begin{itemize}
 	
-  \item $p_{E_f}$ is large 
-        (energy is expensive),        
-  
-  \item $Re_{dev} \rightarrow 0$ (device-level rebound is small),
+	\item $P$ is large (it is economically advantageous to install energy-efficient devices), which occurs when
+	%
+  \begin{itemize}
 
-  \item $\frac{C_{install}}{E_{sav,dev,expected}}$ is small 
-        (the unit cost of implementing energy efficiency is low),
-  
+    \item $p_{E_f}$ is large 
+          (energy is expensive),
+
+    \item $Re_{dev}$ is small (rebound at the device-level is negligible), and
+    
+    \item $\frac{C_{install}}{E_{sav,dev,expected}}$ is small 
+          (implementing energy efficiency is inexpensive relative to the expected energy savings);
+
+  \end{itemize}
+%
   \item $k$ is large, because $\mpc \rightarrow 1$ 
-        (the multiplier effect is large, because nearly all freed cash is respent), and
+        (the multiplier effect is large, because nearly all freed cash is respent); and
   
   \item $I_{E_p}$ is large 
         (the economy is very energy intensive).
         
-    
 \end{itemize}
 
-As time progresses, most countries are becoming \emph{less} energy intensive
+Fourth, as time progresses, most countries are becoming \emph{less} energy intensive
 ($I_{E_p}$ is getting smaller).
 The effective price of energy has \emph{declined} over the past century
 ($p_{E_f}$ is going down).
 All other things being equal, the above trends would tend to decrease $Re_{EW}$.
 Thus, backfire is likely becoming smaller.
 And energy-efficiency-driven, backfire-enabled economic growth could be stalling.
+In other words, conditions for backfire were more favorable 100 years ago.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
