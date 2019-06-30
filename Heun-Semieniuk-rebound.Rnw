@@ -102,6 +102,15 @@ energy rebound\sep energy efficiency \sep marginal propensity to consume
 \label{sec:definitions}
 %++++++++++++++++++++++++++++++
 
+Energy efficiency device
+
+Expected energy savings
+
+Actual energy savings
+
+Device-level rebound
+
+Economy-wide rebound
 
 
 
@@ -147,7 +156,7 @@ including labor and materials (in \$).
 But the net cost savings at the device level~($C_{sav,dev,net}$, in \$)
 is freed cash 
 which can be re-spent in the economy,
-spinning through the economy in a manner similar to how a tax cut generates additional GDP.
+spinning through it similar to how a tax cut generates additional GDP.
 Exactly how much economic growth is created by the freed cash of the 
 net, device-level energy cost savings 
 depends on how much of the savings are re-spent by consumers.
@@ -187,7 +196,7 @@ Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} g
 \end{equation}
 
 The net energy savings from the device-level energy savings is given by 
-the difference between device-level energy savings($E_{sav,dev}$) and
+the difference between actual device-level energy savings~($E_{sav,dev}$) and
 economy-wide new energy demand~($E_{nd,EW}$):
 %
 \begin{equation} \label{eq:net_savings}
@@ -200,7 +209,8 @@ Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} and rearranging 
   E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_p} \right] \; .
 \end{equation}
 %
-Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy (in \$/kW-hr, the same units as energy price, $p_{E_f}$).
+Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy 
+(in \$/kW-hr, the same units as final energy price, $p_{E_f}$).
 
 The economy-wide energy rebound effect~($Re_{EW}$) resulting from device-level energy saving
 is given as 
@@ -217,14 +227,15 @@ into Eq.~\ref{eq:Re_EW_prelim} gives
             {\frac{E_{sav,dev}}{1 - Re_{dev}}} \; .
 \end{equation}
 %
-Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result:
+Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result
+for economy-wide rebound~($Re_{EW}$):
 %
 \begin{equation} \label{eq:Re_EW}
   Re_{EW} = 1 - (1 - k I_{E_p} P ) (1 - Re_{dev}) \; ,
 \end{equation}
 %
 where $P = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit profit 
-from an energy efficiency intervention.
+from an energy efficiency device
 Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ and
 substituted to obtain
 %
@@ -232,6 +243,7 @@ substituted to obtain
   P = \left( p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \right) \; .
 \end{equation}
 %
+Device-level rebound~($Re_{dev}$) is seen to reduce profit~($P$) to the device owner.
 
 Eq.~\ref{eq:Re_EW} relates 
 %
@@ -340,6 +352,8 @@ Re_dev <- 0.4
 An estimate for device-level rebound for LED replacements is
 $Re_{dev} =$ \Sexpr{Re_dev}.
 
+**** Find a better number for device-level rebound for installation of LEDs. ****
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Unit profit~($P$)}
@@ -349,30 +363,33 @@ $Re_{dev} =$ \Sexpr{Re_dev}.
 <<profit>>=
 # From the LED packaging:
 # Assumed final electricity price
-p_E_f <- 0.11 # $/kW-hr
+p_E_f <- 0.11 # USD/kW-hr
 # Cost savings claimed by manufacturer
-C_sav <- 84 # $
+C_sav <- 84 # USD
 # Cost to purchase and install the LED bulb
-C_install <- 1.5 # $
+C_install <- 1.5 # USD
 # Expected device-level savings.
 E_sav_dev_expected <- C_sav / p_E_f
 # Unit profit
 P <- p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected)
 @
 
+**** The above \$ are 2019. 
+Need to ensure that we're doing the right thing with 2019 and 2010 \$. ****
+
 A visit to the grocery store confirms that a 4-pack 
 of 8.5~W General Electric LED bulbs retails for \$6,
 or \$1.50 each.
 The LED bulbs provide as much illumination as 60~W incandescents and
 are claimed to save \$84 of \$0.11/kW-hr electricity over their 13.6~year lifetime
-being used 3 hours/day.
+if they are used 3 hours/day.
 Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = 763.6~kW-hr.
 And the unit profit~($P$) from the LED bulb is expected to be 
 %
 \begin{equation} \label{eq:profit}
   P = \frac{\$\Sexpr{p_E_f}}{\mathrm{\kWhr}} 
             - \frac{\$\Sexpr{format(C_install, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev}) \times \Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{\kWhr}} 
-            = \Sexpr{format(P, digits = 3)} \; \$/\mathrm{\kWhr} \; .
+            = \Sexpr{format(P, digits = 4)} \; \$/\mathrm{\kWhr} \; .
 \end{equation}
 
 
