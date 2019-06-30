@@ -1,4 +1,4 @@
-\documentclass[preprint]{elsarticle}
+\documentclass[review]{elsarticle}
 
 \usepackage[inline]{enumitem}  % For inline enumerate* lists
 \usepackage{lineno}
@@ -314,35 +314,44 @@ Gregor said something about the slope of a GDP graph? ****
 <<I_E_p, include = TRUE>>=
 # From p. 34 in International Energy Agency. 
 # Key World Energy Statistics 2018. Technical report, 2018.
-I_E_p_toe_per_thousand_dollars <- 0.13
+TPES_2016_USA_Mtoe <- 2166.6 # Mtoe
+GDP_2016_USA_PPP_billion2010USD <- 16920.3 # billion 2010 USD
+# Using the inflation calculator at 
+# https://www.bls.gov/data/inflation_calculator.htm, 
+# we find that an inflation multiplier 
+# for January 2000 to January 2016 is
+Inflator_2010_2016 <- 1.40
+GDP_2016_USA_PPP_billion2016USD <- GDP_2016_USA_PPP_billion2010USD * Inflator_2010_2016
+
+I_E_p_Mtoe_per_billion_dollars <- TPES_2016_USA_Mtoe / GDP_2016_USA_PPP_billion2016USD
 # Convert to kW-hr/USD
-# divide by 1000 to get per USD.
+# divide by 1e9 to get per USD.
 # Multiply by 11630 kWhr_per_ktoe to convert from toe to kW-hr.
 # According to the IEA's unit converter website 
 # at https://www.iea.org/statistics/resources/unitconverter/, 
 # 1 toe = 11630 kW-hr.
-kWhr_per_toe <- 11630
-I_E_p <- I_E_p_toe_per_thousand_dollars / 1000 * kWhr_per_toe
+kWhr_per_Mtoe <- 1.163e+10
+I_E_p <- I_E_p_Mtoe_per_billion_dollars / 1e9 * kWhr_per_Mtoe
 @
 
-For 2016, 
-the primary energy intensity of the U.S.\ economy is given as 
-$I_{E_p} = \Sexpr{I_E_p_toe_per_thousand_dollars}$~toe/k\$~\cite[p.~34]{International-Energy-Agency:2018a}.
-The final value for $I_{E_p}$ is obtained after converting units to kW-hr/\$:
-%
-\begin{equation} \label{eq:I_E_p value}
-  I_{E_p} = \frac{\Sexpr{I_E_p_toe_per_thousand_dollars} \; \mathrm{toe}}{\mathrm{k\$}} \;
-              \frac{\mathrm{k\$}}{\$1000} \;
-              \frac{\Sexpr{format(kWhr_per_toe, digits = 5)} \; \mathrm{\kWhr}}{\mathrm{toe}}
-              = \Sexpr{format(I_E_p, digits = 4)} \; \mathrm{\kWhr/\$} \;
-\end{equation}
-%
-Note that all dollars in this case study are 2010\$ at purchase power parity~(PPP).
+For 2016,
+the total primary energy supply to the U.S.\ economy was
+\Sexpr{TPES_2016_USA_Mtoe}~Mtoe~\cite[p.~34]{International-Energy-Agency:2018a}.
+In the same year, 
+U.S.\ purchase power parity (PPP) GDP was 
+\Sexpr{format(GDP_2016_USA_PPP_billion2010USD, digits = 6, big.mark = ",")}
+billion 2010USD~\cite[p.~34]{International-Energy-Agency:2018a}.
+The inflation multiplier from January 2010 to January 2016 is
+\Sexpr{format(Inflator_2010_2016, digits = 3, nsmall = 2)}~\cite{BLS-stats:2019aa}.
+Thus, the U.S.\ 2016 GDP is \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",")} billion 2016\$.
+After converting Mtoe to kW-hr
+(1 Mtoe = \Sexpr{kWhr_per_Mtoe} kW-hr~\cite{International-Energy-Agency:2019aa}),
+the primary energy intensity of the economy is \Sexpr{format(I_E_p, digits = 4)} kW-hr/\$.
 
 
 %++++++++++++++++++++++++++++++
 \subsection{Device-level rebound~($Re_{dev}$)}
-\label{sec:placeholder_label}
+\label{sec:device_level_rebound}
 %++++++++++++++++++++++++++++++
 
 <<Re_dev>>=
@@ -362,7 +371,7 @@ $Re_{dev} =$ \Sexpr{Re_dev}.
 
 <<profit>>=
 # From the LED packaging:
-# Assumed final electricity price
+# Assumed electricity price (final energy)
 p_E_f <- 0.11 # USD/kW-hr
 # Cost savings claimed by manufacturer
 C_sav <- 84 # USD
@@ -375,16 +384,16 @@ P <- p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected)
 @
 
 **** The above \$ are 2019. 
-Need to ensure that we're doing the right thing with 2019 and 2010 \$. ****
+Need to ensure that we're doing the right thing between 2019 and 2016 USD. ****
 
 A visit to the grocery store confirms that a 4-pack 
 of 8.5~W General Electric LED bulbs retails for \$6,
 or \$1.50 each.
 The LED bulbs provide as much illumination as 60~W incandescents and
-are claimed to save \$84 of \$0.11/kW-hr electricity over their 13.6~year lifetime
+are claimed to save \$84 of \$0.11/kW-hr electricity over their 13.6~year lifetime,
 if they are used 3 hours/day.
 Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = 763.6~kW-hr.
-And the unit profit~($P$) from the LED bulb is expected to be 
+From Eq.~\ref{eq:P_eqn}, the unit profit~($P$) from the LED bulb is expected to be 
 %
 \begin{equation} \label{eq:profit}
   P = \frac{\$\Sexpr{p_E_f}}{\mathrm{\kWhr}} 
@@ -420,7 +429,7 @@ Then economy-wide rebound can be calculated as
 \begin{equation} \label{eq:Re_EW_val}
   Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev}) 
           = 1 - (1 - \Sexpr{format(kIProfit, digits = 4)})(1 - \Sexpr{format(Re_dev, digits = 4)})
-          = \Sexpr{format(Re_EW, digits = 4)}
+          = \Sexpr{format(Re_EW, digits = 4)} \; .
 \end{equation}
 
 Finally, the first derivative of economy-wide rebound with respect to device-level rebound 
@@ -428,7 +437,7 @@ can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
 %
 \begin{equation} \label{eq:dRe_EW/dRe_dev_val}
   \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_p} p_{E_f}
-                                                  = 1 - \Sexpr{format(kIprice, digits = 4)}
+                                                  = 1 - \Sexpr{format(kIprice, digits = 5)}
                                                   = \Sexpr{format(dReEW_dRedev, digits = 4)} \; .
 \end{equation}
 %
