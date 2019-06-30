@@ -369,13 +369,36 @@ $Re_{dev} =$ \Sexpr{Re_dev}.
 %++++++++++++++++++++++++++++++
 
 <<Re_EW>>= 
-
+kIP <- k * I_E_p * P
+Re_EW <- 1 - (1 - kIP)*(1 - Re_dev)
+dReEW_dRedev <- 1 - kIP
 @ 
 
 The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}.
+An important term in Eq.~\ref{eq:Re_EW} is $k I_{E_p} P$:
+%
+\begin{equation} \label{eq:kIP}
+  k I_{E_p} P = \Sexpr{format(k, digits = 4)} 
+                  \times \Sexpr{format(I_E_p, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
+                  \times \Sexpr{format(P, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
+                  = \Sexpr{format(kIP, digits = 4)} \; .
+\end{equation}
+%
+Then economy-wide rebound can be calculated as
 %
 \begin{equation} \label{eq:Re_EW_val}
-  Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev})
+  Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev}) 
+          = 1 - (1 - \Sexpr{format(kIP, digits = 4)})(1 - \Sexpr{format(Re_dev, digits = 4)})
+          = \Sexpr{format(Re_EW, digits = 4)}
+\end{equation}
+
+Finally, the first derivative of economy-wide rebound with respect to device-level rebound 
+can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
+%
+\begin{equation} \label{eq:dRe_EW/dRe_dev_val}
+  \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_p} P 
+                                                  = 1 - \Sexpr{format(kIP, digits = 4)}
+                                                  = \Sexpr{format(dReEW_dRedev, digits = 4)} \; .
 \end{equation}
 %
 
