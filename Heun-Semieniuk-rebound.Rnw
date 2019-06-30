@@ -315,8 +315,8 @@ Gregor said something about the slope of a GDP graph? ****
 # From p. 34 in International Energy Agency. 
 # Key World Energy Statistics 2018. Technical report, 2018.
 I_E_p_toe_per_thousand_dollars <- 0.13
-# Convert to kW-hr/dollar
-# divide by 1000 to get per dollar.
+# Convert to kW-hr/USD
+# divide by 1000 to get per USD.
 # Multiply by 11630 kWhr_per_ktoe to convert from toe to kW-hr.
 # According to the IEA's unit converter website 
 # at https://www.iea.org/statistics/resources/unitconverter/, 
