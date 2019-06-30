@@ -240,7 +240,7 @@ Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ and
 substituted to obtain
 %
 \begin{equation} \label{eq:P_eqn}
-  P = \left( p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \right) \; .
+  P =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
 \end{equation}
 %
 Device-level rebound~($Re_{dev}$) is seen to reduce profit~($P$) to the device owner.
@@ -397,7 +397,8 @@ From Eq.~\ref{eq:P_eqn}, the unit profit~($P$) from the LED bulb is expected to 
 %
 \begin{equation} \label{eq:profit}
   P = \frac{\$\Sexpr{p_E_f}}{\mathrm{\kWhr}} 
-            - \frac{\$\Sexpr{format(C_install, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev}) \times \Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{\kWhr}} 
+            - \frac{\$\Sexpr{format(C_install, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev}) 
+                \times \Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{\kWhr}} 
             = \Sexpr{format(P, digits = 4)} \; \$/\mathrm{\kWhr} \; .
 \end{equation}
 
@@ -408,8 +409,19 @@ From Eq.~\ref{eq:P_eqn}, the unit profit~($P$) from the LED bulb is expected to 
 %++++++++++++++++++++++++++++++
 
 <<Re_EW>>= 
+Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_p = NULL, p_E_f = NULL,
+                       C_install = NULL, E_sav_dev_expected = NULL, Re_dev, 
+                       P = p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected), 
+                       kIP = k * I_E_p * P){
+  if (!is.null(MPC)) {
+    # Verify MPC is between 0 and 1.
+    assertthat::assert_that(MPC >= 0 & MPC <= 1)
+  }
+  Re_EW <- 1 - (1 - kIP) * (1 - Re_dev)
+  return(Re_EW)
+}
 kIProfit <- k * I_E_p * P
-Re_EW <- 1 - (1 - kIProfit)*(1 - Re_dev)
+Re_EW <- Re_EW_func(kIP = kIProfit, Re_dev = Re_dev)
 kIprice <- k * I_E_p * p_E_f
 dReEW_dRedev <- 1 - kIprice
 @ 
