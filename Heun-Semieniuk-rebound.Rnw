@@ -1,4 +1,4 @@
-\documentclass[review]{elsarticle}
+\documentclass[preprint]{elsarticle}
 
 \usepackage[inline]{enumitem}  % For inline enumerate* lists
 \usepackage{lineno}
@@ -571,7 +571,7 @@ to ****
         of ****
         for ****; and
 to internal reviewers
-        ****, ****, and ****
+        Paul Brockway (University of Leeds), ****, and ****
         for many insightful suggestions.
 Support for Matthew Kuperus Heun was provided by ****.
 Grebor Semieniuk's time was funded as part of ****.
