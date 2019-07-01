@@ -672,14 +672,12 @@ Then comment on the trend. ****
 
 
 %..............................
-\paragraph{Effect of $\mpc$ and $k$} 
+\paragraph{Effect of $\mpc$} 
 %..............................
 
-Fig.~\ref{fig:Re_EWvsMPC_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-with the marginal propensity to consume~($\mpc$).
-
 <<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_p}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
-data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.01)) %>% 
+MPC_for_Re_EW1 <- 1 - I_E_p * P
+data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.005)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = MPC, I_E_p = I_E_p, p_E_f = p_E_f, 
                        C_install = C_install, 
@@ -687,22 +685,42 @@ data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.01)) %>%
                        Re_dev = Re_dev)
   ) %>% 
   ggplot(mapping = aes(x = MPC, y = Re_EW)) + 
-  geom_line() + 
-  labs(x = "MPC [-]", y = expression(Re[EW]*" [-]")) + 
   # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
   # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
   # Red dot and guide lines for nominal values
-  geom_point(x = mpc, y = Re_EW, colour = "red", size = 3) + 
+  
   geom_vline(xintercept = mpc, colour = "gray", size = 0.1) +
   geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = 0.888, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = MPC_for_Re_EW1, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  # Line
+  geom_line() + 
+  # Red dot
+  geom_point(x = mpc, y = Re_EW, colour = "red", size = 3) + 
+  labs(x = "MPC [-]", y = expression(Re[EW]*" [-]")) + 
   MKHthemes::xy_theme()
 @
 
-**** Solve for the value of $I_{E_p}$ when $Re_{EW}$ is 1
-and use that value in the graph and in this discussion. ****
+Fig.~\ref{fig:Re_EWvsMPC_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with the marginal propensity to consume~($\mpc$).
+As discussed above, economy-wide backfire can be avoided 
+when the multiplier~($k$) and $\mpc$ are small.
+To find the value of the marginal propensity to consume at which 
+economy-wide rebound is 1 (the boundary between rebound and backfire),
+Eq.~\ref{eq:Re_EW} can be solved for $\mpc$
+%
+\begin{equation} \label{eq:MPC_for_Re_EW_1}
+  \mpc = 1 - \frac{I_{E_p} P}{1 - \frac{1 - Re_{EW}}{1 - Re_{dev}}} \; ,
+\end{equation}
+%
+and $Re_{EW}$ set to 1.
+Doing so yields 
+$\mpc = \Sexpr{format(MPC_for_Re_EW1, digits = 4)}$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_study}.
+So economy-wide backfire is avoided only when people save
+\Sexpr{format((1 - MPC_for_Re_EW1) * 100, digits = 3)}~\% of their freed cash
+compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently.
 
 
 %..............................
