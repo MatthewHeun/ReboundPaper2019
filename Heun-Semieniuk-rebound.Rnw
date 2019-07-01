@@ -1,5 +1,6 @@
 \documentclass[review]{elsarticle}
 
+% \usepackage{amsmath}           % For equation* environment
 \usepackage[inline]{enumitem}  % For inline enumerate* lists
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -37,7 +38,10 @@
 % kW-hr with nicer spacing in equations.
 \newcommand{\kWhr}{kW\!\!-\!\!hr}
 
-
+<<setup>>=
+library(ggplot2)
+library(magrittr)
+@
 
 \journal{Energy Economics}
 
@@ -90,11 +94,8 @@ energy rebound\sep energy efficiency \sep marginal propensity to consume
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Theory}
-\label{sec:theory}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+**** Note that code blocks are included for discussion purposes and
+will be removed for publication. ****
 
 
 %++++++++++++++++++++++++++++++
@@ -112,6 +113,11 @@ Device-level rebound
 
 Economy-wide rebound
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Theory}
+\label{sec:theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %++++++++++++++++++++++++++++++
@@ -413,10 +419,6 @@ Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_p = NULL, p_E_f = NULL
                        C_install = NULL, E_sav_dev_expected = NULL, Re_dev, 
                        P = p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected), 
                        kIP = k * I_E_p * P){
-  if (!is.null(MPC)) {
-    # Verify MPC is between 0 and 1.
-    assertthat::assert_that(MPC >= 0 & MPC <= 1)
-  }
   Re_EW <- 1 - (1 - kIP) * (1 - Re_dev)
   return(Re_EW)
 }
@@ -426,17 +428,17 @@ kIprice <- k * I_E_p * p_E_f
 dReEW_dRedev <- 1 - kIprice
 @ 
 
-The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}.
-An important term in Eq.~\ref{eq:Re_EW} is $k I_{E_p} P$:
+The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}, 
+beginning with the value of $k I_{E_p} P$:
 %
 \begin{equation} \label{eq:kIP}
   k I_{E_p} P = \Sexpr{format(k, digits = 4)} 
                   \times \Sexpr{format(I_E_p, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
                   \times \Sexpr{format(P, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
-                  = \Sexpr{format(kIProfit, digits = 4)} \; .
+                  = \Sexpr{format(kIProfit, digits = 4)} \; ,
 \end{equation}
 %
-Then economy-wide rebound can be calculated as
+followed by calculation of $Re_{EW}$:
 %
 \begin{equation} \label{eq:Re_EW_val}
   Re_{EW} = 1 - (1 - k I_{E_p} P) (1 - Re_{dev}) 
@@ -464,39 +466,80 @@ The equations in Section~\ref{sec:theory} and
 the case study in Section~\ref{sec:case_study}
 enable the following observations.
 
-First, installation of LED bulbs is likely to cause backfire 
-when the economy-wide rebound is considered.
 
-**** Make graph of $RE_{EW}$ vs.\ $Re_{dev}$ ****
+%..............................
+\paragraph{Economy-wide energy backfire is observed} 
+%..............................
 
-**** Possibly also make a star graph. ****
+Installation of LED bulbs is likely to cause energy backfire 
+when economy-wide rebound is considered, 
+because Eq.~\ref{eq:Re_EW_val} shows $Re_{EW} > 1$.
 
-**** Or show a graph of first derivative of $Re_{EW}$ with respect to $Re_{dev}$.
 
-Second, for the conditions shown in Section~\ref{sec:case_study},
-namely 
-$k = \Sexpr{format(k, digits = 4)}$, 
-$I_{E_p} = \Sexpr{I_E_p} \; \frac{\mathrm{\kWhr}}{\$}$, and
-$P = \Sexpr{format(P, digits = 4, nsmall = 4)} \; \frac{\$}{\mathrm{\kWhr}}$,
-Eq.~\ref{eq:dRe_EW/dRe_dev_val} shows that 
-$\frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = \Sexpr{format(dReEW_dRedev, digits = 4)}$.
-I.e., economy-wide rebound \emph{decreases} when device-level rebound \emph{increases}.
+%..............................
+\paragraph{$Re_{EW}$ and $Re_{dev}$ are inversely related} 
+\label{sec:placeholder_label}
+%..............................
+
+<<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_p}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
+data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>% 
+  dplyr::mutate(
+    Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
+                       C_install = C_install, 
+                       E_sav_dev_expected = E_sav_dev_expected, 
+                       Re_dev = Re_dev)
+  ) %>% 
+  ggplot(mapping = aes(x = Re_dev, y = Re_EW)) + 
+  geom_line() + 
+  labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]")) + 
+  scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
+  scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
+  # Nominal values red dot
+  geom_point(x = Re_dev, y = Re_EW, colour = "red", size = 3) + 
+  geom_vline(xintercept = Re_dev, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  # Lines that cross at 1, 1
+  geom_vline(xintercept = 1, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  MKHthemes::xy_theme()
+@
+
+The variation of economy-wide rebound with respect to device-level rebound is shown
+in Fig.~\ref{fig:Re_EWvsRedev_graph}.
+The slope of the line is negative, 
+as shown by Eq.~\ref{eq:dRe_EW/dRe_dev_val},
+indicating that decreasing device-level rebound 
+leads to increasing economy-wide rebound, and even backfire.
 Although this result may be counterintuitive initially,
-it is perfectly resaonable.
+it is perfectly reasonable.
+When $Re_{dev}$ decreases, the owner of the energy efficiency device has more 
+freed cash to spend in the economy.
+With more freed cash spent in the economy, 
+the multiplier effect is more pronounced, 
+and new demand for primary energy (at the primary energy intensity of the economy)
+grows.
+The converse is also true.
 When $Re_{dev}$ increases, the owner of the energy efficiency device has less 
 freed cash to spend in the economy.
 With less freed cash spent in the economy, 
-the multiplier effect is less pronounced, 
-and new demand for energy (at the energy intensity of the economy)
-is lessened.
-As $Re_{dev} \rightarrow 1$ 
-(i.e., all device-level savings are ``taken back'' by device-level energy rebound), 
-the owner of the energy efficiency device obtains zero economic benefit from the energy efficiency,
-and there is no freed and respent cash from which additional, economy-wide energy demand accrues.
-Under these conditions,
-economy-wide rebound is the same as device-level rebound, namely $Re_{EW} = 1$.
+the multiplier effect is muted, 
+and new demand for primary energy (at the primary energy intensity of the economy)
+diminishes.
 
-Third, note that economy-wide backfire occurs when $Re_{EW} \ge 1$, or with reference to Eq.~\ref{eq:Re_EW},
+When device-level rebound is large enough,
+economy-wide backfire is avoided~($Re_{EW} < 1$).
+However, for the example of LED bulb replacements, 
+economy-wide backfire is avoided only when the device 
+is marginally economic or uneconomic for its owner. 
+**** Solve for the value of $Re_{dev}$ when $Re_{EW}$ is 1
+and use that value in the graph and in this discussion. ****
+
+
+%..............................
+\paragraph{Conditions for economy-wide backfire} 
+%..............................
+
+Economy-wide backfire occurs when $Re_{EW} > 1$, or with reference to Eq.~\ref{eq:Re_EW},
 %
 \begin{equation} \label{eq:backfire_inequality_1}
   1 - (1 - k I_{E_p} P) (1 - Re_{dev}) \ge 1 \; .
@@ -511,7 +554,7 @@ Simplification gives
 It is expected that $Re_{dev} < 1$ and
 $(1 - Re_{dev}) > 0$. 
 If it were not so, 
-energy efficiency would be uneconomic for the device implementer.
+the energy efficiency device would be uneconomic for the device implementer.
 Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
 %
 \begin{equation} \label{eq:backfire_inequality_3}
@@ -557,7 +600,175 @@ economy-wide backfire is more likely to occur when
         
 \end{itemize}
 
-Fourth, as time progresses, most countries are becoming \emph{less} energy intensive
+
+%..............................
+\paragraph{Effect of $I_{E_p}$} 
+%..............................
+
+Fig.~\ref{fig:Re_EWvsI_E_p_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with primary energy intensity of the economy~($I_{E_p}$).
+
+<<Re_EWvsI_E_p_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with primary energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_p}$ from the case study.">>=
+data.frame(I_E_p = seq(from = 0.5*I_E_p, to = 1.2*I_E_p, by = 0.01*I_E_p)) %>% 
+  dplyr::mutate(
+    Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
+                       C_install = C_install, 
+                       E_sav_dev_expected = E_sav_dev_expected, 
+                       Re_dev = Re_dev)
+  ) %>% 
+  ggplot(mapping = aes(x = I_E_p, y = Re_EW)) + 
+  geom_line() + 
+  labs(x = expression(I[E[p]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
+  # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
+  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
+  # Red dot and guide lines for nominal values
+  geom_point(x = I_E_p, y = Re_EW, colour = "red", size = 3) + 
+  geom_vline(xintercept = I_E_p, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  # Guide lines for Re_EW = 1
+  geom_vline(xintercept = 0.57, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  MKHthemes::xy_theme()
+@
+
+**** Solve for the value of $I_{E_p}$ when $Re_{EW}$ is 1
+and use that value in the graph and in this discussion. ****
+
+
+%..............................
+\paragraph{Effect of $\mpc$ and $k$} 
+%..............................
+
+Fig.~\ref{fig:Re_EWvsMPC_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with the marginal propensity to consume~($\mpc$).
+
+<<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_p}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
+data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.01)) %>% 
+  dplyr::mutate(
+    Re_EW = Re_EW_func(MPC = MPC, I_E_p = I_E_p, p_E_f = p_E_f, 
+                       C_install = C_install, 
+                       E_sav_dev_expected = E_sav_dev_expected, 
+                       Re_dev = Re_dev)
+  ) %>% 
+  ggplot(mapping = aes(x = MPC, y = Re_EW)) + 
+  geom_line() + 
+  labs(x = "MPC [-]", y = expression(Re[EW]*" [-]")) + 
+  # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
+  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
+  # Red dot and guide lines for nominal values
+  geom_point(x = mpc, y = Re_EW, colour = "red", size = 3) + 
+  geom_vline(xintercept = mpc, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  # Guide lines for Re_EW = 1
+  geom_vline(xintercept = 0.888, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  MKHthemes::xy_theme()
+@
+
+**** Solve for the value of $I_{E_p}$ when $Re_{EW}$ is 1
+and use that value in the graph and in this discussion. ****
+
+
+%..............................
+\paragraph{Effect of $\frac{C_{install}}{E_{sav,dev,expected}}$}
+%..............................
+
+
+Fig.~\ref{fig:Re_EWvsCost_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with the unit cost to install~($\frac{C_{install}}{E_{sav,dev,expected}}$).
+
+<<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_p}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
+unit_cost_nominal <- C_install / E_sav_dev_expected
+data.frame(C_install = seq(from = 0.8*C_install, to = 20*C_install, by = 0.01*C_install)) %>% 
+  dplyr::mutate(
+    Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
+                       C_install = C_install, 
+                       E_sav_dev_expected = E_sav_dev_expected, 
+                       Re_dev = Re_dev), 
+    unit_cost = C_install / E_sav_dev_expected
+  ) %>% 
+  ggplot(mapping = aes(x = unit_cost, y = Re_EW)) + 
+  geom_line() + 
+  labs(x = expression(C[install]*"/"*E[sav,dev,expected]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
+  # scale_x_continuous(limits = c(0.7, 1.0), breaks = seq(from = 0.7, to = 1.2, by = 0.1)) +
+  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
+  # Red dot and guide lines for nominal values
+  geom_point(x = unit_cost_nominal, y = Re_EW, colour = "red", size = 3) + 
+  geom_vline(xintercept = unit_cost_nominal, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  # Guide lines for Re_EW = 1
+  geom_vline(xintercept = 0.032, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  MKHthemes::xy_theme()
+@
+
+**** Solve for the value of $E_{install}$ when $Re_{EW}$ is 1
+and use that value in the graph and in this discussion. ****
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%..............................
+\paragraph{Trends} 
+%..............................
+
+**** Say something here about trends in the variables of Eq.~\ref{eq:Re_EW}. 
+The paragraph below may be a start. ****
+
+As time progresses, most countries are becoming \emph{less} energy intensive
 ($I_{E_p}$ is getting smaller).
 The effective price of energy has \emph{declined} over the past century
 ($p_{E_f}$ is going down).
