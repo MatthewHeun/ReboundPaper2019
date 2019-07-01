@@ -415,6 +415,8 @@ which, by Eq.~\ref{eq:k_eqn} gives
   k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)}
 \end{equation}
 
+Say that $1 - \mpc$ is marginal propensity to save.
+
 **** Get a better estimate for $\mpc$ and $k$ here. 
 Gregor said something about the slope of a GDP graph? ****
 
