@@ -38,7 +38,7 @@
 % kW-hr with nicer spacing in equations.
 \newcommand{\kWhr}{kW\!\!-\!\!hr}
 
-<<setup>>=
+<<setup, echo = FALSE>>=
 library(ggplot2)
 library(magrittr)
 @
