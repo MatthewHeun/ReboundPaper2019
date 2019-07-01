@@ -689,7 +689,7 @@ data.frame(C_install = seq(from = 0.8*C_install, to = 20*C_install, by = 0.01*C_
   ) %>% 
   ggplot(mapping = aes(x = unit_cost, y = Re_EW)) + 
   geom_line() + 
-  labs(x = expression(C[install]*"/"*E[sav,dev,expected]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
+  labs(x = expression(C[install]*"/"*E[list(sav,dev,expected)]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
   # scale_x_continuous(limits = c(0.7, 1.0), breaks = seq(from = 0.7, to = 1.2, by = 0.1)) +
   # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
   # Red dot and guide lines for nominal values
@@ -702,63 +702,8 @@ data.frame(C_install = seq(from = 0.8*C_install, to = 20*C_install, by = 0.01*C_
   MKHthemes::xy_theme()
 @
 
-**** Solve for the value of $E_{install}$ when $Re_{EW}$ is 1
+**** Solve for the value of $C_{install}$ when $Re_{EW}$ is 1
 and use that value in the graph and in this discussion. ****
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 %..............................
