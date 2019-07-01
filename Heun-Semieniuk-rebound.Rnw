@@ -482,6 +482,8 @@ because Eq.~\ref{eq:Re_EW_val} shows $Re_{EW} > 1$.
 %..............................
 
 <<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_p}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
+# Calculate the Re_dev value at which Re_EW = 1
+Re_dev_for_Re_EW1 <- (1 - k*I_E_p*(p_E_f - C_install/E_sav_dev_expected)) / (1 - k*I_E_p*p_E_f)
 data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
@@ -490,17 +492,19 @@ data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>%
                        Re_dev = Re_dev)
   ) %>% 
   ggplot(mapping = aes(x = Re_dev, y = Re_EW)) + 
+  # Guide lines that cross at nominal values
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = Re_dev, colour = "gray", size = 0.1) +
+  # Guide lines for Re_EW = 1
+  geom_vline(xintercept = Re_dev_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  # The line itself.
   geom_line() + 
+  # The red dot for nominal values
+  geom_point(x = Re_dev, y = Re_EW, colour = "red", size = 3) + 
   labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]")) + 
   scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
   scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
-  # Nominal values red dot
-  geom_point(x = Re_dev, y = Re_EW, colour = "red", size = 3) + 
-  geom_vline(xintercept = Re_dev, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
-  # Lines that cross at 1, 1
-  geom_vline(xintercept = 1, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   MKHthemes::xy_theme()
 @
 
@@ -526,13 +530,25 @@ the multiplier effect is muted,
 and new demand for primary energy (at the primary energy intensity of the economy)
 diminishes.
 
-When device-level rebound is large enough,
-economy-wide backfire is avoided~($Re_{EW} < 1$).
-However, for the example of LED bulb replacements, 
-economy-wide backfire is avoided only when the device 
-is marginally economic or uneconomic for its owner. 
-**** Solve for the value of $Re_{dev}$ when $Re_{EW}$ is 1
-and use that value in the graph and in this discussion. ****
+When device-level rebound~($Re_{dev}$) is large enough,
+economy-wide backfire can be avoided ($Re_{EW} < 1$).
+To find the value of device-level rebound at which 
+economy-wide rebound is 1 (the boundary between rebound and backfire),
+Eq.~\ref{eq:Re_EW} can be solved for $Re_{dev}$
+%
+\begin{equation} \label{eq:Re_dev_for_Re_EW_1}
+  Re_{dev} = \frac{Re_{EW} - k I_{E_p} \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev,expected}} \right)}{1 - k I_{E_p} p_{E_f}} \; ,
+\end{equation}
+%
+and $Re_{EW}$ set to 1.
+Doing so yields 
+$Re_{dev} = \Sexpr{format(Re_dev_for_Re_EW1, digits = 2)}$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_study}.
+So economy-wide backfire is avoided only when device-level rebound 
+takes back nearly all~($\sim \Sexpr{format(Re_dev_for_Re_EW1 * 100, digits = 2)}$~\%) 
+of the monetary savings the owner would have expected. 
+To avoid backfire, 
+the energy efficiency device must be only marginally economic for the device owner.
 
 
 %..............................
@@ -605,10 +621,8 @@ economy-wide backfire is more likely to occur when
 \paragraph{Effect of $I_{E_p}$} 
 %..............................
 
-Fig.~\ref{fig:Re_EWvsI_E_p_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-with primary energy intensity of the economy~($I_{E_p}$).
-
 <<Re_EWvsI_E_p_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with primary energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_p}$ from the case study.">>=
+I_E_p_for_Re_EW1 <- 1 / (k * P)
 data.frame(I_E_p = seq(from = 0.5*I_E_p, to = 1.2*I_E_p, by = 0.01*I_E_p)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
@@ -617,22 +631,44 @@ data.frame(I_E_p = seq(from = 0.5*I_E_p, to = 1.2*I_E_p, by = 0.01*I_E_p)) %>%
                        Re_dev = Re_dev)
   ) %>% 
   ggplot(mapping = aes(x = I_E_p, y = Re_EW)) + 
-  geom_line() + 
   labs(x = expression(I[E[p]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
-  # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
-  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
-  # Red dot and guide lines for nominal values
-  geom_point(x = I_E_p, y = Re_EW, colour = "red", size = 3) + 
+  # Guide lines for nominal values
   geom_vline(xintercept = I_E_p, colour = "gray", size = 0.1) +
   geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = 0.57, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = I_E_p_for_Re_EW1, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  # Add the line
+  geom_line() + 
+  # Add the red dot
+  geom_point(x = I_E_p, y = Re_EW, colour = "red", size = 3) + 
+  # Adjust the scale
+  scale_x_continuous(breaks = seq(from = 0.4, to = 1.4, by = 0.2)) +
   MKHthemes::xy_theme()
 @
 
-**** Solve for the value of $I_{E_p}$ when $Re_{EW}$ is 1
-and use that value in the graph and in this discussion. ****
+Fig.~\ref{fig:Re_EWvsI_E_p_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with primary energy intensity of the economy~($I_{E_p}$).
+As discussed above, economy-wide backfire can be avoided 
+when the primary energy intensity of the economy~($I_{E_p}$) is small.
+To find the value of primary energy intensity at which 
+economy-wide rebound is 1 (the boundary between rebound and backfire),
+Eq.~\ref{eq:Re_EW} can be solved for $I_{E_p}$
+%
+\begin{equation} \label{eq:I_E_p_for_Re_EW_1}
+  I_{E_p} = \frac{1}{k P} \left( 1 - \frac{1 - Re_{EW}}{1 - Re_{dev}} \right) \; ,
+\end{equation}
+%
+and $Re_{EW}$ set to 1.
+Doing so yields 
+$I_{E_p} = \Sexpr{format(I_E_p_for_Re_EW1, digits = 4)}$ kW-hr/\$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_study}.
+So economy-wide backfire is avoided only when primary energy intensity is 
+\Sexpr{format((I_E_p - I_E_p_for_Re_EW1) / I_E_p * 100, digits = 2)}~\% below 
+the current value (\Sexpr{format(I_E_p, digits = 5)} kW-hr/\$).
+
+**** Graph here of U.S.\ energy intensity over time? 
+Then comment on the trend. ****
 
 
 %..............................
