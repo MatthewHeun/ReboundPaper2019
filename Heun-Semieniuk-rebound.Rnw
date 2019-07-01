@@ -721,19 +721,17 @@ for the case study in Section~\ref{sec:case_study}.
 So economy-wide backfire is avoided only when people save
 \Sexpr{format((1 - MPC_for_Re_EW1) * 100, digits = 3)}~\% of their freed cash
 compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently.
+I.e., savings rates would need to double.
 
 
 %..............................
 \paragraph{Effect of $\frac{C_{install}}{E_{sav,dev,expected}}$}
 %..............................
 
-
-Fig.~\ref{fig:Re_EWvsCost_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-with the unit cost to install~($\frac{C_{install}}{E_{sav,dev,expected}}$).
-
 <<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_p}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
 unit_cost_nominal <- C_install / E_sav_dev_expected
-data.frame(C_install = seq(from = 0.8*C_install, to = 20*C_install, by = 0.01*C_install)) %>% 
+unit_cost_for_Re_EW1 <- (1 - Re_dev) * (p_E_f - 1/(k*I_E_p))
+data.frame(C_install = seq(from = 0.6*C_install, to = 20*C_install, by = 0.05*C_install)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
                        C_install = C_install, 
@@ -742,22 +740,41 @@ data.frame(C_install = seq(from = 0.8*C_install, to = 20*C_install, by = 0.01*C_
     unit_cost = C_install / E_sav_dev_expected
   ) %>% 
   ggplot(mapping = aes(x = unit_cost, y = Re_EW)) + 
-  geom_line() + 
-  labs(x = expression(C[install]*"/"*E[list(sav,dev,expected)]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
-  # scale_x_continuous(limits = c(0.7, 1.0), breaks = seq(from = 0.7, to = 1.2, by = 0.1)) +
-  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
   # Red dot and guide lines for nominal values
-  geom_point(x = unit_cost_nominal, y = Re_EW, colour = "red", size = 3) + 
   geom_vline(xintercept = unit_cost_nominal, colour = "gray", size = 0.1) +
   geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = 0.032, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = unit_cost_for_Re_EW1, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  # Add the line
+  geom_line() + 
+  # Add the point
+  geom_point(x = unit_cost_nominal, y = Re_EW, colour = "red", size = 3) + 
+  # Add the correct labels.
+  labs(x = expression(C[install]*"/"*E[list(sav,dev,expected)]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
   MKHthemes::xy_theme()
 @
 
-**** Solve for the value of $C_{install}$ when $Re_{EW}$ is 1
-and use that value in the graph and in this discussion. ****
+Fig.~\ref{fig:Re_EWvsCost_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with the unit cost to install~$\left( \frac{C_{install}}{E_{sav,dev,expected}} \right)$.
+As discussed above, economy-wide backfire can be avoided 
+when when the unit cost to install is large.
+To find the value of the unit cost to install at which 
+economy-wide rebound is 1 (the boundary between rebound and backfire),
+Eq.~\ref{eq:Re_EW} can be solved for $\frac{C_{install}}{E_{sav,dev,expected}}$
+%
+\begin{equation} \label{eq:MPC_for_Re_EW_1}
+  \frac{C_{install}}{E_{sav,dev,expected}} = p_{E_f} (1 - Re_{dev}) 
+                                              - \frac{1}{k I_{E_p}} (Re_{EW} - Re_{dev}) \; ,
+\end{equation}
+%
+and $Re_{EW}$ set to 1.
+Doing so yields 
+$\frac{C_{install}}{E_{sav,dev,expected}} = \Sexpr{format(unit_cost_for_Re_EW1, digits = 2)}$ \$/kW-hr to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_study}.
+So economy-wide backfire can be avoided if the unit cost to install rises from
+\Sexpr{format(unit_cost_nominal, digits = 3)} \$/kW-hr to \Sexpr{format(unit_cost_for_Re_EW1, digits = 3)} \$/kW-hr, 
+a \Sexpr{format((unit_cost_for_Re_EW1 - unit_cost_nominal) / unit_cost_nominal * 100, digits = 3)} \% increase.
 
 
 %..............................
