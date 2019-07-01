@@ -725,6 +725,58 @@ I.e., savings rates would need to double.
 
 
 %..............................
+\paragraph{Effect of $p_{E_f}$} 
+%..............................
+
+<<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_p}$, $\\mpc$, $\\frac{C_{install}}{E_{sav,dev,expected}}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
+p_E_f_for_Re_EW1 <- 1 / (k * I_E_p) + C_install / ((1 - Re_dev) * E_sav_dev_expected)
+data.frame(p_E_f = seq(from = 0.5*p_E_f, to = 1.2*p_E_f, by = 0.01*p_E_f)) %>% 
+  dplyr::mutate(
+    Re_EW = Re_EW_func(MPC = mpc, I_E_p = I_E_p, p_E_f = p_E_f, 
+                       C_install = C_install, 
+                       E_sav_dev_expected = E_sav_dev_expected, 
+                       Re_dev = Re_dev) 
+  ) %>% 
+  ggplot(mapping = aes(x = p_E_f, y = Re_EW)) + 
+  # Guide lines for nominal values
+  geom_vline(xintercept = p_E_f, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  # Guide lines for Re_EW = 1
+  geom_vline(xintercept = p_E_f_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
+  # Add the line
+  geom_line() + 
+  # Add the point
+  geom_point(x = p_E_f, y = Re_EW, colour = "red", size = 3) + 
+  # Add the correct labels.
+  labs(x = expression(p[E[f]]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
+  MKHthemes::xy_theme()
+@
+
+Fig.~\ref{fig:Re_EWvsp_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
+with the price of final energy~$p_{E_f}$.
+As discussed above, economy-wide backfire can be avoided 
+when when the price of final energy is low.
+To find the value of the price of final energy at which 
+economy-wide rebound is 1 (the boundary between rebound and backfire),
+Eq.~\ref{eq:Re_EW} can be solved for $p_{E_f}$
+%
+\begin{equation} \label{eq:p_E_f_for_Re_EW_1}
+  p_{E_f} = \frac{1}{k I_{E_p}} \left( 1 - \frac{1 - Re_{DW}}{1 - Re_{dev}} \right) + \frac{C_{install}}{(1 - Re_{dev}) E_{sav,dev,expected}}    \; ,
+\end{equation}
+%
+and $Re_{EW}$ set to 1.
+Doing so yields
+$p_{E_f} = \Sexpr{format(p_E_f_for_Re_EW1, digits = 3)}$~\$/kW-hr
+for the case study in Section~\ref{sec:case_study}, 
+a \Sexpr{format((p_E_f - p_E_f_for_Re_EW1)/p_E_f * 100, digits = 3)}~\% reduction
+compared to the price of final energy in the case study~(\Sexpr{format(p_E_f, digits = 3)} \$/kW-hr).
+% So economy-wide backfire can be avoided if the unit cost to install rises from
+% \Sexpr{format(unit_cost_nominal, digits = 3)} \$/kW-hr to \Sexpr{format(unit_cost_for_Re_EW1, digits = 3)} \$/kW-hr, 
+% a \Sexpr{format((unit_cost_for_Re_EW1 - unit_cost_nominal) / unit_cost_nominal * 100, digits = 3)} \% increase.
+
+
+%..............................
 \paragraph{Effect of $\frac{C_{install}}{E_{sav,dev,expected}}$}
 %..............................
 
@@ -763,7 +815,7 @@ To find the value of the unit cost to install at which
 economy-wide rebound is 1 (the boundary between rebound and backfire),
 Eq.~\ref{eq:Re_EW} can be solved for $\frac{C_{install}}{E_{sav,dev,expected}}$
 %
-\begin{equation} \label{eq:MPC_for_Re_EW_1}
+\begin{equation} \label{eq:unit_cost_for_Re_EW_1}
   \frac{C_{install}}{E_{sav,dev,expected}} = p_{E_f} (1 - Re_{dev}) 
                                               - \frac{1}{k I_{E_p}} (Re_{EW} - Re_{dev}) \; ,
 \end{equation}
