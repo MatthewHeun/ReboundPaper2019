@@ -107,6 +107,8 @@ Etc.
 \label{sec:definitions}
 %++++++++++++++++++++++++++++++
 
+**** Define energy efficiency. ****
+
 An \emph{energy service} is a desired good that is delivered by an energy conversion apparatus.
 For example, illumination is an energy service provided by lights
 that convert electrical energy into light energy.
