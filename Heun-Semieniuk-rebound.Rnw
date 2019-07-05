@@ -79,11 +79,6 @@ library(magrittr)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-Here is where we will write our abstract.
-And it will be concise.
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{keyword}
 energy rebound\sep energy efficiency \sep marginal propensity to consume
@@ -501,13 +496,8 @@ Gregor said something about the slope of a GDP graph? ****
 # From p. 34 in International Energy Agency. 
 # Key World Energy Statistics 2018. Technical report, 2018.
 TPES_2016_USA_Mtoe <- 2166.6 # Mtoe
-GDP_2016_USA_PPP_billion2010USD <- 16920.3 # billion 2010 USD
-# Using the inflation calculator at 
-# https://www.bls.gov/data/inflation_calculator.htm, 
-# we find that an inflation multiplier 
-# for January 2000 to January 2016 is
-Inflator_2010_2016 <- 1.40
-GDP_2016_USA_PPP_billion2016USD <- GDP_2016_USA_PPP_billion2010USD * Inflator_2010_2016
+
+GDP_2016_USA_PPP_billion2016USD <- 18707.20 # billion 2016 USD
 
 I_E_p_Mtoe_per_billion_dollars <- TPES_2016_USA_Mtoe / GDP_2016_USA_PPP_billion2016USD
 # Convert to kW-hr/USD
@@ -524,12 +514,8 @@ For 2016,
 the total primary energy supply to the U.S.\ economy was
 \Sexpr{TPES_2016_USA_Mtoe}~Mtoe~\cite[p.~34]{International-Energy-Agency:2018a}.
 In the same year, 
-U.S.\ purchase power parity (PPP) GDP was 
-\Sexpr{format(GDP_2016_USA_PPP_billion2010USD, digits = 6, big.mark = ",")}
-billion 2010USD~\cite[p.~34]{International-Energy-Agency:2018a}.
-The inflation multiplier from January 2010 to January 2016 is
-\Sexpr{format(Inflator_2010_2016, digits = 3, nsmall = 2)}~\cite{BLS-stats:2019aa}.
-Thus, the U.S.\ 2016 GDP is \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",")} billion 2016\$.
+GDP was \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",")} billion 2016\$.
+**** Add refrence to BEA website here. ****
 After converting Mtoe to kW-hr
 (1 Mtoe = \Sexpr{kWhr_per_Mtoe} kW-hr~\cite{International-Energy-Agency:2019aa}),
 the primary energy intensity of the economy is \Sexpr{format(I_E_p, digits = 4)} kW-hr/\$.
