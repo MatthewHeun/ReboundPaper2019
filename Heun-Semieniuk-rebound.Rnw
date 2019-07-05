@@ -79,6 +79,10 @@ library(magrittr)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+Here is where we will write our abstract.
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{keyword}
 energy rebound\sep energy efficiency \sep marginal propensity to consume
