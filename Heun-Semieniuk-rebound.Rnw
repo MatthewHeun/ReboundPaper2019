@@ -57,7 +57,8 @@ library(magrittr)
 \begin{frontmatter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Relating device-level and economy-wide rebound: Theory and a case study of energy-efficient light bulbs}
+\title{(1) Relating device-level and economy-wide rebound: Theory and a case study of energy-efficient light bulbs\\
+(2) How marginal propensity to consume translates device-level efficiency to economy-wide rebound}
 
 %% or include affiliations in footnotes:
 \author[HeunAddress]{Matthew Kuperus Heun\corref{correspondingauthor}}
@@ -95,6 +96,40 @@ energy rebound\sep energy efficiency \sep marginal propensity to consume
 \section{Introduction}
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The rebound effect has confounded researchers and policymakers for more than a century.
+From the time Jevons first postulated 
+increased steam engine efficiency 
+could possibly \emph{increase} coal consumption
+to questions about lighting and transportaion today,
+estimates of the magnitude of rebound range from very small~\cite{Gillingham:2013aa} to very large (backfire)~\cite{Saunders:1992aa}.
+Part of the challenge to estimating rebound is its many definitions, types, and levels:
+direct, indirect; producer-sided, consumer-sided; macro and micro; and device-level, economy-wide.
+In addition, rebound characteristics are thought to differ among economic sectors.
+
+Although energy rebound is an intellectual puzzle, 
+its real-world consequences are of the utmost importance.
+For if energy efficiency is to be an important policy instrument 
+to combat depletion of primary energy resources and 
+reduce energy-relatied CO$_2$ emissions, 
+policymakers ought to have deep understanding of both 
+the causes and the magnitude of rebound.
+Without such deep understanding of rebound, 
+energy efficiency policies may have limited effect, or even worse,
+opposite of their intended effect,
+when dealing with some of the most important challenges 
+facing humanity today.
+
+This paper provides a new way to 
+
+
+
+\cite{Gillingham:2013aa}
+
+\cite{Hertwich:2005aa}
+
+
+
 
 Energy efficiency is assumed to be an effective means to achieving final energy and CO$_2$ emissions reduction goals.
 But is energy efficiency effective for meeting these goals?
