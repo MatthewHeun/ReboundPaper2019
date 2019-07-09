@@ -231,9 +231,10 @@ Device-level backfire is expected to be rare due to the economic incentive to av
 **** This is the literature review. ****
 
 
-
-
-
+%------------------------------
+\subsubsection{Framework} 
+\label{sec:lr_framework}
+%------------------------------
 Alfredsson used the MPC concept (although it was called ``marginal propensity to spend'')
 to assess respending of freed cash in the Swedish economy
 to conclude that 
@@ -243,12 +244,20 @@ but could at best offer a temporary palliative''~\cite{Alfredsson_2004}.
 However, Alfredsson did not link MPC to energy rebound. 
 
 
-Schliech et al.~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
+%------------------------------
+\subsubsection{Rebound} 
+\label{sec:lr_rebound}
+%------------------------------
 
+Schliech et al.~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
 
 Tsao and Saunders~\cite{Tsao:2010,Saunders:2012} studied rebound effects for lighting.
 
 
+%------------------------------
+\subsubsection{Marginal propensity to consume} 
+\label{sec:lr_mpc}
+%------------------------------
 
 Parker et al.~\cite{Parker:2013aa} evaluated 
 U.S.\ household spending of the 2008 economic stimulus payments 
@@ -511,7 +520,7 @@ Thereafter, economy-wide rebound~($Re_{EW}$) is determined.
 will be removed for publication. ****
 
 <<Re_dev>>=
-Re_dev <- 0.4
+Re_dev <- 0.06
 @
 
 An estimate for device-level rebound for LED replacements is
@@ -527,7 +536,7 @@ $Re_{dev} =$ \Sexpr{Re_dev}.
 %++++++++++++++++++++++++++++++
 
 <<MPC, include = TRUE>>=
-mpc <- 0.94
+mpc <- 0.9
 k <- 1 / (1 - mpc)
 @
 
