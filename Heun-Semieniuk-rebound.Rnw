@@ -6,6 +6,7 @@
 \modulolinenumbers[5]
 \usepackage{longtable}  		   % For tables that span more than 1 page (nomenclature)
 \usepackage{multirow}          % For tables
+\usepackage{natbib}            % For better citations
 \usepackage{hyperref}
 
 
@@ -229,11 +230,24 @@ Device-level backfire is expected to be rare due to the economic incentive to av
 
 **** This is the literature review. ****
 
-**** Reference other studies about LED rebound effects here. ****
 
-See \url{https://www.sciencedirect.com/science/article/pii/S0301421514002638} which claims 6~\% for direct rebound.
 
-Also, Saunders: \url{https://www.sciencedirect.com/science/article/pii/S0301421512005605}.
+
+
+Alfredsson used the MPC concept (although it was called ``marginal propensity to spend'')
+to assess respending of freed cash in the Swedish economy
+to conclude that 
+``adopting green patterns of consumption while retaining the same level of total consumption
+does not solve the problem of climate change (CO$_2$ emission), 
+but could at best offer a temporary palliative''~\cite{Alfredsson_2004}.
+However, Alfredsson did not link MPC to energy rebound. 
+
+
+Schliech et.\ al~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
+
+
+Tsao and Saunders~\cite{Tsao:2010,Saunders:2012} studied rebound effects for lighting.
+
 
 
 %++++++++++++++++++++++++++++++
