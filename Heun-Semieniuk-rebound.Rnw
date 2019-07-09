@@ -243,11 +243,17 @@ but could at best offer a temporary palliative''~\cite{Alfredsson_2004}.
 However, Alfredsson did not link MPC to energy rebound. 
 
 
-Schliech et.\ al~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
+Schliech et al.~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
 
 
 Tsao and Saunders~\cite{Tsao:2010,Saunders:2012} studied rebound effects for lighting.
 
+
+
+Parker et al.~\cite{Parker:2013aa} evaluated 
+U.S.\ household spending of the 2008 economic stimulus payments 
+and found that the marginal propensity to consume 
+was between 0.5 and 0.9.
 
 
 %++++++++++++++++++++++++++++++
