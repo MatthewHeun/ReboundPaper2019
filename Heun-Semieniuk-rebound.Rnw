@@ -249,8 +249,6 @@ However, Alfredsson did not link MPC to energy rebound.
 \label{sec:lr_rebound}
 %------------------------------
 
-Schliech et al.~\cite{Schleich:2014aa} suggest the device-level rebound effect for energy efficient lighting is about 6~\%.
-
 Tsao and Saunders~\cite{Tsao:2010,Saunders:2012} studied rebound effects for lighting.
 
 
@@ -447,16 +445,16 @@ for economy-wide rebound:
   Re_{EW} = 1 - (1 - k I_{E_f} P ) (1 - Re_{dev}) \; ,
 \end{equation}
 %
-where $P = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit profit 
+where $s = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit savings
 from an energy efficiency device.
 Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ and
 substituted into Eq.~\ref{eq:Re_EW} to obtain
 %
-\begin{equation} \label{eq:P_eqn}
-  P =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
+\begin{equation} \label{eq:s_eqn}
+  s =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
 \end{equation}
 %
-In Eq.~\ref{eq:P_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce profit~($P$) to the device owner.
+In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce profit~($P$) to the device owner.
 The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings.
 
 Eq.~\ref{eq:Re_EW} relates 
@@ -478,7 +476,7 @@ Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
   
   \item the final energy intensity of economic activity~($I_{E_f}$), and 
   
-  \item the unit profit of energy efficiency~($P$).
+  \item the net unit savings of energy efficiency~($s$).
     
 \end{enumerate*}
 
@@ -493,24 +491,30 @@ it indicates how economy-wide rebound will change with device-level rebound:
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Case study}
-\label{sec:case_study}
+\section{Case studies}
+\label{sec:case_studies}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-LED lights can provide the same illumination 
-as incandescent lights for much less electric power consumption, so
-a common energy efficiency intervention is replacement of incandencent lights by LEDs.
-This energy efficiency intervention  
-provides a simple but effective case study
-for which numerical results can be obtained,
-thereby illustrating the theoretical framework
+In this section, two case studies demonstrate the framework 
+discussed in Section~\ref{sec:theory}.
+The first case study is LED lights that provide the same illumination 
+as incandescent lights for much less electric power consumption.
+The second case study is energy efficiency improvements 
+for an internal combustion engine~(ICE) vehicle.
+Although the efficiency of automobiles has increased over time, 
+high-mileage vehicles have not come to dominate the car market 
+in the same way as LED lights now dominate the lighting market.
+Thus, these energy efficiency interventions 
+provide numerical illustration of the theoretical framework
 developed in Section~\ref{sec:theory}.
-To begin, values for each key parameter are determined:
+
+To begin, values for each key parameter in Eq.~\ref{eq:Re_EW} are determined
+for each case study:
 device-level rebound~($Re_{dev}$),
 the multiplier~($k$), 
 final energy intensity of the economy~($I_{E_f}$), and
-the unit profit of energy efficiency~($P$).
-Thereafter, economy-wide rebound~($Re_{EW}$) is determined.
+the net unit savings of energy efficiency~($s$).
+Thereafter, economy-wide rebound~($Re_{EW}$) is determined for each case study.
 
 
 %++++++++++++++++++++++++++++++
@@ -522,14 +526,15 @@ Thereafter, economy-wide rebound~($Re_{EW}$) is determined.
 will be removed for publication. ****
 
 <<Re_dev>>=
-Re_dev <- 0.06
+Re_dev_light <- 0.06
+Re_dev_auto <- 0.222
 @
 
-An estimate for device-level rebound for LED replacements is
-$Re_{dev} =$ \Sexpr{Re_dev}.
-
-**** Find a number for device-level rebound for installation of LEDs. 
-0.4 is only my guess.  ---MKH ****
+Schliech et al.\ suggest the device-level rebound effect 
+for energy efficient lighting is about
+$Re_{dev,light} =$ \Sexpr{Re_dev_light}~\cite{Schleich:2014aa}.
+Small and Van Dender estimate the long-run rebound for automobile travel 
+to be $Re_{dev,auto} =$ \Sexpr{Re_dev_auto}~\cite{Small:2007aa}.
 
 
 %++++++++++++++++++++++++++++++
@@ -549,10 +554,7 @@ which, by Eq.~\ref{eq:k_eqn} gives
   k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)}
 \end{equation}
 
-Say that $1 - \mpc$ is marginal propensity to save ($MPS$).
-
-**** Get a better estimate for $\mpc$ and $k$ here. 
-Gregor said something about the slope of a GDP graph? ****
+The marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mpc}.
 
 
 %++++++++++++++++++++++++++++++
@@ -596,34 +598,34 @@ the final energy intensity of the economy is \Sexpr{format(I_E_f, digits = 4)} k
 <<profit>>=
 # From the LED packaging:
 # Assumed electricity price (final energy)
-p_E_f <- 0.11 # USD/kW-hr
+p_E_f_light <- 0.11 # USD/kW-hr
 # Cost savings claimed by manufacturer
-C_sav <- 84 # USD
+C_sav_light <- 84 # USD
 # Cost to purchase and install the LED bulb
-C_install <- 1.5 # USD
+C_install_light <- 1.5 # USD
 # Expected device-level savings.
-E_sav_dev_expected <- C_sav / p_E_f
-# Unit profit
-P <- p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected)
+E_sav_dev_expected_light <- C_sav_light / p_E_f_light
+# Net unit savings
+s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
 @
 
 **** The above \$ are 2019. 
 Need to ensure that we're doing the right thing between 2019 and 2016 USD. ****
 
 A visit to the grocery store confirms that a 4-pack 
-of 8.5-W General Electric LED bulbs retails for \$6,
-or \$1.50 each.
-The LED bulbs provide as much illumination as 60~W incandescents and
-are claimed to save \$84 of \$0.11/kW-hr electricity over their 13.6~year lifetime,
+of 8.5-W General Electric LED bulbs retails for \$\Sexpr{4 * C_install_light},
+or \$\Sexpr{C_install_light} each.
+Each LED light provides as much illumination as a 60~W incandescent light and
+is claimed to save \$\Sexpr{C_sav_light} of \$\Sexpr{p_E_f_light}/kW-hr electricity over their 13.6~year lifetime,
 if they are used 3 hours/day.
-Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = 763.6~kW-hr.
-With reference to Eq.~\ref{eq:P_eqn}, the unit profit~($P$) from the LED bulb is expected to be 
+Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = \Sexpr{C_sav_light / p_E_f_light}~kW-hr.
+With reference to Eq.~\ref{eq:s_eqn}, the net unit savings~($s_{light}$) from the LED bulb is expected to be 
 %
 \begin{equation} \label{eq:profit}
-  P = \frac{\$\Sexpr{p_E_f}}{\mathrm{\kWhr}} 
-            - \frac{\$\Sexpr{format(C_install, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev}) 
-                \times \Sexpr{format(E_sav_dev_expected, digits = 4)} \; \mathrm{\kWhr}} 
-            = \Sexpr{format(P, digits = 4)} \; \$/\mathrm{\kWhr} \; .
+  s_{light} = \frac{\$\Sexpr{p_E_f_light}}{\mathrm{\kWhr}} 
+            - \frac{\$\Sexpr{format(C_install_light, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev_light}) 
+                \times \Sexpr{format(E_sav_dev_expected_light, digits = 4)} \; \mathrm{\kWhr}} 
+            = \Sexpr{format(s_light, digits = 4)} \; \$/\mathrm{\kWhr} \; .
 \end{equation}
 
 
@@ -632,45 +634,48 @@ With reference to Eq.~\ref{eq:P_eqn}, the unit profit~($P$) from the LED bulb is
 \label{sec:economy_wide_rebound}
 %++++++++++++++++++++++++++++++
 
-<<Re_EW>>= 
+<<Re_EW_func>>= 
 Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_f = NULL, p_E_f = NULL,
                        C_install = NULL, E_sav_dev_expected = NULL, Re_dev, 
-                       P = p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected), 
-                       kIP = k * I_E_f * P){
-  Re_EW <- 1 - (1 - kIP) * (1 - Re_dev)
+                       s = p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected), 
+                       kIs = k * I_E_f * s){
+  Re_EW <- 1 - (1 - kIs) * (1 - Re_dev)
   return(Re_EW)
 }
-kIProfit <- k * I_E_f * P
-Re_EW <- Re_EW_func(kIP = kIProfit, Re_dev = Re_dev)
-kIprice <- k * I_E_f * p_E_f
-dReEW_dRedev <- 1 - kIprice
+@
+
+<<EW_rebound>>=
+kIs_light <- k * I_E_f * s_light
+Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light)
+kIp_light <- k * I_E_f * p_E_f_light
+dReEW_dRedev_light <- 1 - kIp_light
 @ 
 
 The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}, 
-beginning with the value of $k I_{E_f} P$:
+beginning with the value of $k I_{E_f} s$:
 %
-\begin{equation} \label{eq:kIP}
-  k I_{E_f} P = \Sexpr{format(k, digits = 4)} 
+\begin{equation} \label{eq:kIs_light}
+  k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)} 
                   \times \Sexpr{format(I_E_f, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-                  \times \Sexpr{format(P, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
-                  = \Sexpr{format(kIProfit, digits = 4)} \; ,
+                  \times \Sexpr{format(s_light, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
+                  = \Sexpr{format(kIs_light, digits = 4)} \; ,
 \end{equation}
 %
-followed by calculation of $Re_{EW}$:
+followed by calculation of $Re_{EW,light}$:
 %
-\begin{equation} \label{eq:Re_EW_val}
-  Re_{EW} = 1 - (1 - k I_{E_f} P) (1 - Re_{dev}) 
-          = 1 - (1 - \Sexpr{format(kIProfit, digits = 4)})(1 - \Sexpr{format(Re_dev, digits = 4)})
-          = \Sexpr{format(Re_EW, digits = 4)} \; .
+\begin{equation} \label{eq:Re_EW_light}
+  Re_{EW,light} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
+          = 1 - (1 - \Sexpr{format(kIs_light, digits = 4)})(1 - \Sexpr{format(Re_dev_light, digits = 4)})
+          = \Sexpr{format(Re_EW_light, digits = 4)} \; .
 \end{equation}
 
 Finally, the first derivative of economy-wide rebound with respect to device-level rebound 
 can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
 %
-\begin{equation} \label{eq:dRe_EW/dRe_dev_val}
-  \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f}
-                                                  = 1 - \Sexpr{format(kIprice, digits = 5)}
-                                                  = \Sexpr{format(dReEW_dRedev, digits = 4)} \; .
+\begin{equation} \label{eq:dRe_EW/dRe_dev_val_light}
+  \frac{\mathrm{d} Re_{EW,light}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f}
+                                                  = 1 - \Sexpr{format(kIp_light, digits = 5)}
+                                                  = \Sexpr{format(dReEW_dRedev_light, digits = 4)} \; .
 \end{equation}
 %
 
