@@ -255,6 +255,8 @@ U.S.\ household spending of the 2008 economic stimulus payments
 and found that the marginal propensity to consume 
 was between 0.5 and 0.9.
 
+Carroll~\cite{Carroll_2009} found that the MPC was between 0.75 and 0.92.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Conceptual model linking device-level and economy-wide rebound is needed}
