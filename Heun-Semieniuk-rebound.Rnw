@@ -266,6 +266,8 @@ was between 0.5 and 0.9.
 
 Carroll~\cite{Carroll_2009} found that the MPC was between 0.75 and 0.92.
 
+Carroll~\cite{Carroll_2017} showed that MPC is sensitive to income levels.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Conceptual model linking device-level and economy-wide rebound is needed}
