@@ -121,6 +121,10 @@ opposite of their intended effect,
 when dealing with some of the most important challenges 
 facing humanity today.
 
+Nominal values for key parameters are identified.
+Sensitivity studies are conducted to gain understanding 
+of the effect of key paramters on economy-wide rebound.
+
 This paper provides a new way to 
 
 
@@ -235,6 +239,7 @@ Device-level backfire is expected to be rare due to the economic incentive to av
 \subsubsection{Framework} 
 \label{sec:lr_framework}
 %------------------------------
+
 Alfredsson used the MPC concept (although it was called ``marginal propensity to spend'')
 to assess respending of freed cash in the Swedish economy
 to conclude that 
@@ -530,6 +535,10 @@ Re_dev_light <- 0.06
 Re_dev_auto <- 0.222
 @
 
+Nominal values for device-level rebound~($Re_{dev}$) 
+are taken from previous studies.
+Each case study (lighting and transport) 
+has a different nominal value for device-level rebound value.
 Schliech et al.\ suggest the device-level rebound effect 
 for energy efficient lighting is about
 $Re_{dev,light} =$ \Sexpr{Re_dev_light}~\cite{Schleich:2014aa}.
@@ -547,14 +556,27 @@ mpc <- 0.9
 k <- 1 / (1 - mpc)
 @
 
-One estimate for $\mpc$ is \Sexpr{mpc},
-which, by Eq.~\ref{eq:k_eqn} gives 
+As discussed in Section~\ref{sec:lr_mpc},
+there are many estimates for $\mpc$.
+The nominal value for $\mpc$ is taken to be \Sexpr{mpc},
+because freed cash from energy efficiency interventions
+is assumed to be much like 
+the 2009 economic stimulus payments to households.
+Parker et al.~\cite{Parker:2013aa} found that $\mpc$ resulting from the economic stimulus payments
+was as high as \Sexpr{mpc}.
+The precise value for $\mpc$ is less important than 
+the sensitivity of rebound to $\mpc$,
+which is pursued later.
+$\mpc$ is assumed to be invariant across different energy efficiency interventions,
+so the lighting and transport case studies use the same value for $\mpc$.
+The value for $k$ is found from Eq.~\ref{eq:k_eqn} which gives
 %
 \begin{equation} \label{eq:k_calc}
-  k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)}
+  k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)} \; .
 \end{equation}
 
-The marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mpc}.
+The multiplier~($k$) is also invariant across case studies.
+For completeness, the marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mpc}.
 
 
 %++++++++++++++++++++++++++++++
@@ -587,7 +609,8 @@ GDP was \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",
 **** Add refrence to BEA website here. ****
 After converting Mtoe to kW-hr
 (1 Mtoe = \Sexpr{kWhr_per_ktoe} kW-hr~\cite{International-Energy-Agency:2019aa}),
-the final energy intensity of the economy is \Sexpr{format(I_E_f, digits = 4)} kW-hr/\$.
+the final energy intensity of the economy is  $I_{E_f} =$ \Sexpr{format(I_E_f, digits = 4)} kW-hr/\$.
+The value of $I_{E_f}$ is taken to be invariant across the case studies.
 
 
 %++++++++++++++++++++++++++++++
@@ -1190,25 +1213,32 @@ Symbol & Description \\
 \endlastfoot
 
 % Table body
-$C_{install}$ & cost to purchase and install an energy-efficient device [\$] \\
-$C_{sav,dev,net}$ & net cost savings [\$] \\
-$E_{nd,EW}$ & new, economy-wide final energy demand [kW-hr] \\
-$E_{sav,dev}$ & actual device-level energy savings [kW-hr] \\
-$E_{sav,dev,expected}$ & expected device-level energy savings [kW-hr] \\
-$E_{sav,net}$ & net energy savings from device-level energy savings [kW-hr] \\
+$C$ & cost [\$] \\
+$E$ & energy [kW-hr] \\
 GDP & gross domestic product [\$] \\
-$I_{E_f}$ & final energy intensity [kW-hr/\$] \\
+$I$ & energy intensity [kW-hr/\$] \\
 $k$ & respending multiplier [--] \\
 LED & light-emitting diode \\
 $\mpc$ & marginal propensity to consume [--] \\
 PPP & purchase power parity \\
-$p_{E_f}$ & price of final energy [\$/kW-hr] \\
-$Re_{dev}$ & device-level rebound [--] \\
-$Re_{EW}$ & economy-wide rebound [--] \\
+$p$ & price [\$/kW-hr] \\
+$Re$ & rebound [--] \\
 $s$ & net device-level unit savings from energy efficiency [\$/kW-hr] \\
 %
-\emph{Units} & \\
+Subscripts & \\
+$dev$ & device level \\
+$E$ & energy \\
+$EW$ & economy wide \\
+$expected$ & an expected quantity \\
+$f$ & final stage \\
+$install$ & installation\\
+$nd$ & new demand \\
+$net$ & a net quantity \\
+$sav$ & savings \\
+%
+Units & \\
 \$ & U.S.\ dollar \\
+gal & gallons of fuel \\
 kW-hr & kilowatt hour \\
 Mtoe & million tons of oil equivalent \\
 %
