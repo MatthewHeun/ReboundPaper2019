@@ -154,7 +154,7 @@ An \emph{energy efficiency device} (or energy efficient device)
 is an apparatus that provides the same level of energy service
 while consuming less energy than an original device.
 One example of an energy efficiency device is an LED light.
-(An LED light is used as an examle energy efficiency device in the case study of Section~\ref{sec:case_study}.)
+(An LED light is used as an examle energy efficiency device in the case study of Section~\ref{sec:case_studies}.)
 An \emph{energy efficiency intervention} involves replacing a less-efficient device 
 with an energy efficiency device.
 Replacing an inefficient incandescent light 
@@ -313,7 +313,7 @@ Furthermore,
 The remainder of this paper is organized as follows:
 Section~\ref{sec:theory} develops a conceptual model for relating device-level rebound and economy-wide rebound and
 addresses questions \ref{Q:dev_EW_rel} and \ref{Q:factors_affect} above.
-Section~\ref{sec:case_study} presents a case study of replacing an incandescent light with an LED light.
+Section~\ref{sec:case_studies} presents a case study of replacing an incandescent light with an LED light.
 Section~\ref{sec:discussion} provides additional discussion of the case study
 and shows how the framework applies to 
 questions \ref{Q:backfire_conditions} and \ref{Q:avoid_backfire} in the context of the case study.
@@ -445,7 +445,7 @@ for economy-wide rebound:
   Re_{EW} = 1 - (1 - k I_{E_f} P ) (1 - Re_{dev}) \; ,
 \end{equation}
 %
-where $s = \left( p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right)$ is the device-level unit savings
+where $s = p_{E_f} - \frac{C_{install}}{E_{sav,dev}}$ is the net device-level unit savings
 from an energy efficiency device.
 Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ and
 substituted into Eq.~\ref{eq:Re_EW} to obtain
@@ -476,7 +476,7 @@ Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
   
   \item the final energy intensity of economic activity~($I_{E_f}$), and 
   
-  \item the net unit savings of energy efficiency~($s$).
+  \item the net device-level unit savings of energy efficiency~($s$).
     
 \end{enumerate*}
 
@@ -513,7 +513,7 @@ for each case study:
 device-level rebound~($Re_{dev}$),
 the multiplier~($k$), 
 final energy intensity of the economy~($I_{E_f}$), and
-the net unit savings of energy efficiency~($s$).
+the net device-level unit savings of energy efficiency~($s$).
 Thereafter, economy-wide rebound~($Re_{EW}$) is determined for each case study.
 
 
@@ -605,7 +605,7 @@ C_sav_light <- 84 # USD
 C_install_light <- 1.5 # USD
 # Expected device-level savings.
 E_sav_dev_expected_light <- C_sav_light / p_E_f_light
-# Net unit savings
+# Net device-level unit savings
 s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
 @
 
@@ -619,7 +619,7 @@ Each LED light provides as much illumination as a 60~W incandescent light and
 is claimed to save \$\Sexpr{C_sav_light} of \$\Sexpr{p_E_f_light}/kW-hr electricity over their 13.6~year lifetime,
 if they are used 3 hours/day.
 Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = \Sexpr{C_sav_light / p_E_f_light}~kW-hr.
-With reference to Eq.~\ref{eq:s_eqn}, the net unit savings~($s_{light}$) from the LED bulb is expected to be 
+With reference to Eq.~\ref{eq:s_eqn}, the net device-level unit savings~($s_{light}$) from the LED bulb is expected to be 
 %
 \begin{equation} \label{eq:profit}
   s_{light} = \frac{\$\Sexpr{p_E_f_light}}{\mathrm{\kWhr}} 
@@ -686,7 +686,7 @@ can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The equations in Section~\ref{sec:theory} and 
-the case study in Section~\ref{sec:case_study}
+the case study in Section~\ref{sec:case_studies}
 enable the following observations.
 
 
@@ -795,26 +795,26 @@ are each considered in turn.
 \label{sec:effect_p_E_f}
 %------------------------------
 
-<<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $\\frac{C_{install}}{E_{sav,dev,expected}}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
-p_E_f_for_Re_EW1 <- 1 / (k * I_E_f) + C_install / ((1 - Re_dev) * E_sav_dev_expected)
-data.frame(p_E_f = seq(from = 0.5*p_E_f, to = 1.2*p_E_f, by = 0.01*p_E_f)) %>% 
+<<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $\\frac{C_{install}}{E_{sav,dev,expected}}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
+p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f) + C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
+data.frame(p_E_f = seq(from = 0.5*p_E_f_light, to = 1.2*p_E_f_light, by = 0.01*p_E_f_light)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f, 
-                       C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected, 
-                       Re_dev = Re_dev) 
+                       C_install = C_install_light, 
+                       E_sav_dev_expected = E_sav_dev_expected_light, 
+                       Re_dev = Re_dev_light) 
   ) %>% 
   ggplot(mapping = aes(x = p_E_f, y = Re_EW)) + 
   # Guide lines for nominal values
-  geom_vline(xintercept = p_E_f, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = p_E_f_light, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = p_E_f_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = p_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   # Add the line
   geom_line() + 
   # Add the point
-  geom_point(x = p_E_f, y = Re_EW, colour = "red", size = 3) + 
+  geom_point(x = p_E_f_light, y = Re_EW_light, colour = "red", size = 3) + 
   # Add the correct labels.
   labs(x = expression(p[E[f]]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
   MKHthemes::xy_theme()
@@ -834,10 +834,10 @@ Eq.~\ref{eq:Re_EW} can be solved for $p_{E_f}$
 %
 and $Re_{EW}$ set to 1.
 Doing so yields
-$p_{E_f} = \Sexpr{format(p_E_f_for_Re_EW1, digits = 3)}$~\$/kW-hr
-for the case study in Section~\ref{sec:case_study}, 
-a \Sexpr{format((p_E_f - p_E_f_for_Re_EW1)/p_E_f * 100, digits = 3)}~\% reduction
-compared to the baseline price of final energy~(\Sexpr{format(p_E_f, digits = 3)} \$/kW-hr).
+$p_{E_f} = \Sexpr{format(p_E_f_for_Re_EW1_light, digits = 3)}$~\$/kW-hr
+for the case study in Section~\ref{sec:case_studies}, 
+a \Sexpr{format((p_E_f_light - p_E_f_for_Re_EW1_light)/p_E_f_light * 100, digits = 3)}~\% reduction
+compared to the baseline price of final energy~(\Sexpr{format(p_E_f_light, digits = 3)} \$/kW-hr).
 
 
 %------------------------------
@@ -845,27 +845,27 @@ compared to the baseline price of final energy~(\Sexpr{format(p_E_f, digits = 3)
 \label{sec:effect_Re_dev}
 %------------------------------
 
-<<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
+<<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
 # Calculate the Re_dev value at which Re_EW = 1
-Re_dev_for_Re_EW1 <- (1 - k*I_E_f*(p_E_f - C_install/E_sav_dev_expected)) / (1 - k*I_E_f*p_E_f)
+Re_dev_for_Re_EW1_light <- (1 - k*I_E_f*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f*p_E_f_light)
 data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f, 
-                       C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected, 
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+                       C_install = C_install_light, 
+                       E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev)
   ) %>% 
   ggplot(mapping = aes(x = Re_dev, y = Re_EW)) + 
   # Guide lines that cross at nominal values
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
-  geom_vline(xintercept = Re_dev, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = Re_dev_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = Re_dev_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = Re_dev_for_Re_EW1_light, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   # The line itself.
   geom_line() + 
   # The red dot for nominal values
-  geom_point(x = Re_dev, y = Re_EW, colour = "red", size = 3) + 
+  geom_point(x = Re_dev_light, y = Re_EW_light, colour = "red", size = 3) + 
   labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]")) + 
   scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
   scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
@@ -906,10 +906,10 @@ Eq.~\ref{eq:Re_EW} can be solved for $Re_{dev}$
 %
 and $Re_{EW}$ set to 1.
 Doing so yields 
-$Re_{dev} = \Sexpr{format(Re_dev_for_Re_EW1, digits = 2)}$ to achieve $Re_{EW} = 1$
-for the case study in Section~\ref{sec:case_study}.
+$Re_{dev} = \Sexpr{format(Re_dev_for_Re_EW1_light, digits = 2)}$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_studies}.
 So economy-wide backfire is avoided only when device-level rebound 
-takes back nearly all~($\Sexpr{format(Re_dev_for_Re_EW1 * 100, digits = 2)}$~\%) 
+takes back nearly all~($\Sexpr{format(Re_dev_for_Re_EW1_light * 100, digits = 2)}$~\%) 
 of the monetary savings the owner of the energy efficiency device would have expected. 
 To avoid backfire, 
 the energy efficiency device must be only marginally economic for the device owner.
@@ -920,28 +920,28 @@ the energy efficiency device must be only marginally economic for the device own
 \label{sec:effect_unit_cost}
 %------------------------------
 
-<<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
-unit_cost_nominal <- C_install / E_sav_dev_expected
-unit_cost_for_Re_EW1 <- (1 - Re_dev) * (p_E_f - 1/(k*I_E_f))
-data.frame(C_install = seq(from = 0.6*C_install, to = 20*C_install, by = 0.05*C_install)) %>% 
+<<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
+unit_cost_nominal_light <- C_install_light / E_sav_dev_expected_light
+unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f))
+data.frame(C_install = seq(from = 0.6*C_install_light, to = 20*C_install_light, by = 0.05*C_install_light)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f, 
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
                        C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected, 
-                       Re_dev = Re_dev), 
-    unit_cost = C_install / E_sav_dev_expected
+                       E_sav_dev_expected = E_sav_dev_expected_light, 
+                       Re_dev = Re_dev_light), 
+    unit_cost = C_install / E_sav_dev_expected_light
   ) %>% 
   ggplot(mapping = aes(x = unit_cost, y = Re_EW)) + 
   # Red dot and guide lines for nominal values
-  geom_vline(xintercept = unit_cost_nominal, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = unit_cost_nominal_light, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = unit_cost_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = unit_cost_for_Re_EW1_light, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   # Add the line
   geom_line() + 
   # Add the point
-  geom_point(x = unit_cost_nominal, y = Re_EW, colour = "red", size = 3) + 
+  geom_point(x = unit_cost_nominal_light, y = Re_EW_light, colour = "red", size = 3) + 
   # Add the correct labels.
   labs(x = expression(C[install]*"/"*E[list(sav,dev,expected)]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
   MKHthemes::xy_theme()
@@ -962,11 +962,13 @@ Eq.~\ref{eq:Re_EW} can be solved for $\frac{C_{install}}{E_{sav,dev,expected}}$
 %
 and $Re_{EW}$ set to 1.
 Doing so yields 
-$\frac{C_{install}}{E_{sav,dev,expected}} = \Sexpr{format(unit_cost_for_Re_EW1, digits = 2)}$ \$/kW-hr to achieve $Re_{EW} = 1$
-for the case study in Section~\ref{sec:case_study}.
+$\frac{C_{install}}{E_{sav,dev,expected}} = \Sexpr{format(unit_cost_for_Re_EW1_light, digits = 2)}$ \$/kW-hr 
+to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_studies}.
 So economy-wide backfire can be avoided if the unit cost to install rises from
-\Sexpr{format(unit_cost_nominal, digits = 3)} \$/kW-hr to \Sexpr{format(unit_cost_for_Re_EW1, digits = 3)} \$/kW-hr, 
-a \Sexpr{format((unit_cost_for_Re_EW1 - unit_cost_nominal) / unit_cost_nominal * 100, digits = 3)} \% increase.
+\Sexpr{format(unit_cost_nominal_light, digits = 3)} \$/kW-hr 
+to \Sexpr{format(unit_cost_for_Re_EW1_light, digits = 3)} \$/kW-hr, 
+a \Sexpr{format((unit_cost_for_Re_EW1_light - unit_cost_nominal_light) / unit_cost_nominal_light * 100, digits = 3)} \% increase.
 
 
 %------------------------------
@@ -974,14 +976,14 @@ a \Sexpr{format((unit_cost_for_Re_EW1 - unit_cost_nominal) / unit_cost_nominal *
 \label{sec:effect_mpc}
 %------------------------------
 
-<<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
-MPC_for_Re_EW1 <- 1 - I_E_f * P
+<<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
+MPC_for_Re_EW1_light <- 1 - I_E_f * s_light
 data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.005)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = MPC, I_E_f = I_E_f, p_E_f = p_E_f, 
-                       C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected, 
-                       Re_dev = Re_dev)
+    Re_EW = Re_EW_func(MPC = MPC, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+                       C_install = C_install_light, 
+                       E_sav_dev_expected = E_sav_dev_expected_light, 
+                       Re_dev = Re_dev_light)
   ) %>% 
   ggplot(mapping = aes(x = MPC, y = Re_EW)) + 
   # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
@@ -989,14 +991,14 @@ data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.005)) %>%
   # Red dot and guide lines for nominal values
   
   geom_vline(xintercept = mpc, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = MPC_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = MPC_for_Re_EW1_light, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   # Line
   geom_line() + 
   # Red dot
-  geom_point(x = mpc, y = Re_EW, colour = "red", size = 3) + 
+  geom_point(x = mpc, y = Re_EW_light, colour = "red", size = 3) + 
   labs(x = "MPC [-]", y = expression(Re[EW]*" [-]")) + 
   MKHthemes::xy_theme()
 @
@@ -1015,12 +1017,11 @@ Eq.~\ref{eq:Re_EW} can be solved for $\mpc$
 %
 and $Re_{EW}$ set to 1.
 Doing so yields 
-$\mpc = \Sexpr{format(MPC_for_Re_EW1, digits = 4)}$ to achieve $Re_{EW} = 1$
-for the case study in Section~\ref{sec:case_study}.
+$\mpc = \Sexpr{format(MPC_for_Re_EW1_light, digits = 4)}$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_studies}.
 So economy-wide backfire could be avoided when, on average, people save
-\Sexpr{format((1 - MPC_for_Re_EW1) * 100, digits = 3)}~\% of their freed cash
-compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently, 
-i.e., savings rates would need to double.
+\Sexpr{format((1 - MPC_for_Re_EW1_light) * 100, digits = 3)}~\% of their freed cash
+compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently.
 
 
 %------------------------------
@@ -1028,27 +1029,27 @@ i.e., savings rates would need to double.
 \label{sec:effect_I_E_f}
 %------------------------------
 
-<<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_study}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
-I_E_f_for_Re_EW1 <- 1 / (k * P)
+<<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
+I_E_f_for_Re_EW1_light <- 1 / (k * s_light)
 data.frame(I_E_f = seq(from = 0.5*I_E_f, to = 1.2*I_E_f, by = 0.01*I_E_f)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f, 
-                       C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected, 
-                       Re_dev = Re_dev)
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+                       C_install = C_install_light, 
+                       E_sav_dev_expected = E_sav_dev_expected_light, 
+                       Re_dev = Re_dev_light)
   ) %>% 
-  ggplot(mapping = aes(x = I_E_f, y = Re_EW)) + 
-  labs(x = expression(I[E[p]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
+  ggplot(mapping = aes(x = I_E_f, y = Re_EW_light)) + 
+  labs(x = expression(I[E[f]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
   # Guide lines for nominal values
   geom_vline(xintercept = I_E_f, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW, colour = "gray", size = 0.1) +
+  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
-  geom_vline(xintercept = I_E_f_for_Re_EW1, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = I_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
   # Add the line
   geom_line() + 
   # Add the red dot
-  geom_point(x = I_E_f, y = Re_EW, colour = "red", size = 3) + 
+  geom_point(x = I_E_f, y = Re_EW_light, colour = "red", size = 3) + 
   # Adjust the scale
   scale_x_continuous(breaks = seq(from = 0.4, to = 1.4, by = 0.2)) +
   MKHthemes::xy_theme()
@@ -1068,10 +1069,10 @@ Eq.~\ref{eq:Re_EW} can be solved for $I_{E_f}$
 %
 and $Re_{EW}$ set to 1.
 Doing so yields 
-$I_{E_f} = \Sexpr{format(I_E_f_for_Re_EW1, digits = 4)}$ kW-hr/\$ to achieve $Re_{EW} = 1$
-for the case study in Section~\ref{sec:case_study}.
+$I_{E_f} = \Sexpr{format(I_E_f_for_Re_EW1_light, digits = 4)}$ kW-hr/\$ to achieve $Re_{EW} = 1$
+for the case study in Section~\ref{sec:case_studies}.
 So economy-wide backfire can be avoided when final energy intensity is 
-\Sexpr{format((I_E_f - I_E_f_for_Re_EW1) / I_E_f * 100, digits = 2)}~\% below 
+\Sexpr{format((I_E_f - I_E_f_for_Re_EW1_light) / I_E_f * 100, digits = 2)}~\% below 
 the current value (\Sexpr{format(I_E_f, digits = 5)} kW-hr/\$).
 
 
@@ -1200,11 +1201,11 @@ $I_{E_f}$ & final energy intensity [kW-hr/\$] \\
 $k$ & respending multiplier [--] \\
 LED & light-emitting diode \\
 $\mpc$ & marginal propensity to consume [--] \\
-$P$ & device-level unit profit from energy efficiency [\$/kW-hr] \\
 PPP & purchase power parity \\
 $p_{E_f}$ & price of final energy [\$/kW-hr] \\
 $Re_{dev}$ & device-level rebound [--] \\
 $Re_{EW}$ & economy-wide rebound [--] \\
+$s$ & net device-level unit savings from energy efficiency [\$/kW-hr] \\
 %
 \emph{Units} & \\
 \$ & U.S.\ dollar \\
