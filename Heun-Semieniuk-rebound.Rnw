@@ -636,10 +636,10 @@ s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expec
 
 # Automobile calculations
 p_E_f_car <- 2.82 # USD/gal (Michigan)
-C_install_marginal_car <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
+C_install_car_marginal <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
 eta_improvement <- 1.25
 C_car <- 25774 # USD, median cost of a light duty vehicle in the U.S., 2018.
-C_install_car <- C_car + C_install_marginal_car # USD
+C_install_car <- C_car + C_install_car_marginal # USD
 lifetime_car <- 15 # years
 duty_car <- 12000 # miles/year
 eta_car_baseline <- 37.7 # mi/gal in 2016.  Source: US bureau of transportation statistics, Table 4_23.xlsx.
@@ -648,30 +648,54 @@ E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # gal
 E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # gal
 E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # gal
 C_sav_car <- E_sav_dev_expected_car * p_E_f_car # USD
-s_car <- p_E_f_car - C_install_car / E_sav_dev_expected_car # USD/gal
-s_car_marginal <- p_E_f_car - C_install_marginal_car / E_sav_dev_expected_car # USD/gas
+s_car <- p_E_f_car - C_install_car / ((1 - Re_dev_auto) * E_sav_dev_expected_car) # USD/gal
+s_car_marginal <- p_E_f_car - C_install_car_marginal / ((1 - Re_dev_auto) * E_sav_dev_expected_car) # USD/gas
 @
 
 **** The above \$ are 2019. 
 Need to ensure that we're doing the right thing between 2019 and 2016 USD. ****
 
 Unit savings for energy-efficient lighting can be estimated
-by prices and savings for LED lights.
+from the electricity price and cost and energy savings for LED lights.
 A visit to the grocery store confirms that a 4-pack 
 of 8.5-W General Electric LED lights retails for \$\Sexpr{4 * C_install_light},
 or \$\Sexpr{C_install_light} each.
 Each LED light provides as much illumination as a 60~W incandescent light and
 is claimed to save \$\Sexpr{C_sav_light} of \$\Sexpr{p_E_f_light}/kW-hr electricity over their 13.6~year lifetime,
 if they are used 3 hours/day.
-Thus, the expected lifetime device-level energy savings are $E_{sav,dev,expected}$ = \Sexpr{C_sav_light / p_E_f_light}~kW-hr.
+Thus, the expected lifetime device-level energy savings are 
+$E_{sav,dev,expected}$ = \Sexpr{format(C_sav_light / p_E_f_light, digits = 4)}~kW-hr.
 With reference to Eq.~\ref{eq:s_eqn}, the net device-level unit savings~($s_{light}$) from the LED bulb is expected to be 
 %
-\begin{equation} \label{eq:profit}
+\begin{equation} \label{eq:s_light}
   s_{light} = \frac{\$\Sexpr{p_E_f_light}}{\mathrm{\kWhr}} 
-            - \frac{\$\Sexpr{format(C_install_light, digits = 3, nsmall = 2)}}{(1 - \Sexpr{Re_dev_light}) 
-                \times \Sexpr{format(E_sav_dev_expected_light, digits = 4)} \; \mathrm{\kWhr}} 
+            - \frac{\$\Sexpr{format(C_install_light, digits = 3, nsmall = 2)}}
+                {(1 - \Sexpr{Re_dev_light}) \times \Sexpr{format(E_sav_dev_expected_light, digits = 4)} \; \mathrm{\kWhr}} 
             = \Sexpr{format(s_light, digits = 4)} \; \$/\mathrm{\kWhr} \; .
 \end{equation}
+
+Unit savings for energy-efficiency personal transportation can be estimated
+from the fuel price and cost and energy savings for personal transportation automobiles.
+%
+\begin{equation} \label{eq:s_car}
+  s_{transp} = \frac{\$\Sexpr{p_E_f_car}}{\mathrm{gal}} 
+                - \frac{\$\Sexpr{format(C_install_car, digits = 4, big.mark = ",")}}
+                    {(1 - \Sexpr{Re_dev_auto}) \times \Sexpr{format(E_sav_dev_expected_car, digits = 4)} \; \mathrm{gal}}
+             = \Sexpr{format(s_car, digits = 4)} \; \$/\mathrm{gal} \; .
+\end{equation}
+%
+Clearly, investing in a new vehicle is uneconomic, as $s_{transp} < 0$.
+If the econoic agent is considered to need the new vehicle anyway, 
+the cost of additional fuel efficiency will be marginal, and
+$C_{install,transp} = \$\Sexpr{C_install_car_marginal}$.
+Then,
+\begin{equation} \label{eq:s_car_marginal}
+  s_{transp,marginal} = \frac{\$\Sexpr{p_E_f_car}}{\mathrm{gal}} 
+                - \frac{\$\Sexpr{format(C_install_car_marginal, digits = 4, big.mark = ",")}}
+                    {(1 - \Sexpr{Re_dev_auto}) \times \Sexpr{format(E_sav_dev_expected_car, digits = 4)} \; \mathrm{gal}}
+             = \Sexpr{format(s_car_marginal, digits = 4)} \; \$/\mathrm{gal} \; .
+\end{equation}
+
 
 
 %++++++++++++++++++++++++++++++
@@ -690,24 +714,44 @@ Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_f = NULL, p_E_f = NULL
 @
 
 <<EW_rebound>>=
+# Re_EW for lighting
 kIs_light <- k * I_E_f_kWhr * s_light # unitless
 Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light) # unitless
+
 kIp_light <- k * I_E_f_kWhr * p_E_f_light # unitless
 dReEW_dRedev_light <- 1 - kIp_light # unitless
 
+# Re_EW for transport
 kIs_car <- k * I_E_f_kWhr * s_car / kWhr_per_gal # unitless
+Re_EW_car <- Re_EW_func(kIs = kIs_car, Re_dev = Re_dev_auto) # unitless
+kIs_car_marginal <- k * I_E_f_kWhr * s_car_marginal / kWhr_per_gal # unitless
+Re_EW_car_marginal <- Re_EW_func(kIs = kIs_car_marginal, Re_dev = Re_dev_auto) # unitless
 
+kIp_car <- k * I_E_f_kWhr * p_E_f_car / kWhr_per_gal # unitless
+dReEW_dRedev_car <- 1 - kIp_car # unitless
 @ 
 
-The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}, 
-beginning with the value of $k I_{E_f} s$:
+The economy-wide rebound for each case study can be calculated by Eq.~\ref{eq:Re_EW}, 
+beginning with the value of $k I_{E_f} s$.
+For lighting:
 %
 \begin{equation} \label{eq:kIs_light}
-  k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)} 
-                  \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-                  \times \Sexpr{format(s_light, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
-                  = \Sexpr{format(kIs_light, digits = 4)} \; ,
+k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)} 
+                        \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
+                        \times \Sexpr{format(s_light, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
+                    = \Sexpr{format(kIs_light, digits = 4)} \; .
 \end{equation}
+%
+For transport:
+%
+\begin{equation} \label{eq:kIs_car}
+  k I_{E_f} s_{transp} = \Sexpr{format(k, digits = 4)} 
+                            \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
+                            \times \Sexpr{format(s_car, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
+                            \times \frac{1}{\Sexpr{kWhr_per_gal} kW-hr/gal}
+                       = \Sexpr{format(kIs_car, digits = 4)} \; .
+\end{equation}
+%
 %
 followed by calculation of $Re_{EW,light}$:
 %
