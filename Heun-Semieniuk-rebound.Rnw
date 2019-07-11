@@ -599,7 +599,7 @@ I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion20
 # 1 ktoe = 11630000 kW-hr.
 kWhr_per_ktoe <- 11630000
 I_E_f_kWhr <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
-# Convert to gal/USD
+# Set up conversion factor for kW-hr to gallons of fuel for later.
 # 1 gal = 33.41 kW-hr
 kWhr_per_gal <- 33.41 
 @
@@ -647,7 +647,9 @@ eta_car_enhanced <- eta_car_baseline * eta_improvement # mi/gal.  25 % improveme
 E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # gal
 E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # gal
 E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # gal
-C_sav_car <- E_sav_dev_expected_car * p_E_f_car
+C_sav_car <- E_sav_dev_expected_car * p_E_f_car # USD
+s_car <- p_E_f_car - C_install_car / E_sav_dev_expected_car # USD/gal
+s_car_marginal <- p_E_f_car - C_install_marginal_car / E_sav_dev_expected_car # USD/gas
 @
 
 **** The above \$ are 2019. 
@@ -688,10 +690,13 @@ Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_f = NULL, p_E_f = NULL
 @
 
 <<EW_rebound>>=
-kIs_light <- k * I_E_f_kWhr * s_light
-Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light)
-kIp_light <- k * I_E_f_kWhr * p_E_f_light
-dReEW_dRedev_light <- 1 - kIp_light
+kIs_light <- k * I_E_f_kWhr * s_light # unitless
+Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light) # unitless
+kIp_light <- k * I_E_f_kWhr * p_E_f_light # unitless
+dReEW_dRedev_light <- 1 - kIp_light # unitless
+
+kIs_car <- k * I_E_f_kWhr * s_car / kWhr_per_gal # unitless
+
 @ 
 
 The economy-wide rebound for the case study can be calculated by Eq.~\ref{eq:Re_EW}, 
