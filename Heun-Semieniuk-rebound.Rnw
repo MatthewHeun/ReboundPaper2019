@@ -551,7 +551,7 @@ to be $Re_{dev,auto} =$ \Sexpr{Re_dev_auto}~\cite{Small:2007aa}.
 \label{sec:mpc_and_k}
 %++++++++++++++++++++++++++++++
 
-<<MPC, include = TRUE>>=
+<<MPC>>=
 mpc <- 0.9
 k <- 1 / (1 - mpc)
 @
@@ -584,7 +584,7 @@ For completeness, the marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mp
 \label{sec:I}
 %++++++++++++++++++++++++++++++
 
-<<I_E_f, include = TRUE>>=
+<<I_E_f>>=
 # From Extended energy balances 2018
 TFC_2016_USA_ktoe <- 1515035.0 # ktoe
 # From the BEA
@@ -598,7 +598,10 @@ I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion20
 # at https://www.iea.org/statistics/resources/unitconverter/, 
 # 1 ktoe = 11630000 kW-hr.
 kWhr_per_ktoe <- 11630000
-I_E_f <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
+I_E_f_kWhr <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
+# Convert to gal/USD
+# 1 gal = 33.41 kW-hr
+kWhr_per_gal <- 33.41 
 @
 
 For 2016,
@@ -609,16 +612,16 @@ GDP was \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",
 **** Add refrence to BEA website here. ****
 After converting Mtoe to kW-hr
 (1 Mtoe = \Sexpr{kWhr_per_ktoe} kW-hr~\cite{International-Energy-Agency:2019aa}),
-the final energy intensity of the economy is  $I_{E_f} =$ \Sexpr{format(I_E_f, digits = 4)} kW-hr/\$.
+the final energy intensity of the economy is  $I_{E_f} =$ \Sexpr{format(I_E_f_kWhr, digits = 4)} kW-hr/\$.
 The value of $I_{E_f}$ is taken to be invariant across the case studies.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Unit profit of energy efficiency~($P$)}
-\label{sec:unit_profit}
+\subsection{Unit savings of energy efficiency~($s$)}
+\label{sec:unit_savings}
 %++++++++++++++++++++++++++++++
 
-<<profit>>=
+<<unit_savings>>=
 # From the LED packaging:
 # Assumed electricity price (final energy)
 p_E_f_light <- 0.11 # USD/kW-hr
@@ -630,13 +633,30 @@ C_install_light <- 1.5 # USD
 E_sav_dev_expected_light <- C_sav_light / p_E_f_light
 # Net device-level unit savings
 s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
+
+# Automobile calculations
+p_E_f_car <- 2.82 # USD/gal (Michigan)
+C_install_marginal_car <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
+eta_improvement <- 1.25
+C_car <- 25774 # USD, median cost of a light duty vehicle in the U.S., 2018.
+C_install_car <- C_car + C_install_marginal_car # USD
+lifetime_car <- 15 # years
+duty_car <- 12000 # miles/year
+eta_car_baseline <- 37.7 # mi/gal in 2016.  Source: US bureau of transportation statistics, Table 4_23.xlsx.
+eta_car_enhanced <- eta_car_baseline * eta_improvement # mi/gal.  25 % improvement.
+E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # gal
+E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # gal
+E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # gal
+C_sav_car <- E_sav_dev_expected_car * p_E_f_car
 @
 
 **** The above \$ are 2019. 
 Need to ensure that we're doing the right thing between 2019 and 2016 USD. ****
 
+Unit savings for energy-efficient lighting can be estimated
+by prices and savings for LED lights.
 A visit to the grocery store confirms that a 4-pack 
-of 8.5-W General Electric LED bulbs retails for \$\Sexpr{4 * C_install_light},
+of 8.5-W General Electric LED lights retails for \$\Sexpr{4 * C_install_light},
 or \$\Sexpr{C_install_light} each.
 Each LED light provides as much illumination as a 60~W incandescent light and
 is claimed to save \$\Sexpr{C_sav_light} of \$\Sexpr{p_E_f_light}/kW-hr electricity over their 13.6~year lifetime,
@@ -668,9 +688,9 @@ Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_f = NULL, p_E_f = NULL
 @
 
 <<EW_rebound>>=
-kIs_light <- k * I_E_f * s_light
+kIs_light <- k * I_E_f_kWhr * s_light
 Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light)
-kIp_light <- k * I_E_f * p_E_f_light
+kIp_light <- k * I_E_f_kWhr * p_E_f_light
 dReEW_dRedev_light <- 1 - kIp_light
 @ 
 
@@ -679,7 +699,7 @@ beginning with the value of $k I_{E_f} s$:
 %
 \begin{equation} \label{eq:kIs_light}
   k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)} 
-                  \times \Sexpr{format(I_E_f, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
+                  \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
                   \times \Sexpr{format(s_light, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
                   = \Sexpr{format(kIs_light, digits = 4)} \; ,
 \end{equation}
@@ -819,10 +839,10 @@ are each considered in turn.
 %------------------------------
 
 <<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $\\frac{C_{install}}{E_{sav,dev,expected}}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
-p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f) + C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
+p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f_kWhr) + C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
 data.frame(p_E_f = seq(from = 0.5*p_E_f_light, to = 1.2*p_E_f_light, by = 0.01*p_E_f_light)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f, 
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f, 
                        C_install = C_install_light, 
                        E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev_light) 
@@ -870,10 +890,10 @@ compared to the baseline price of final energy~(\Sexpr{format(p_E_f_light, digit
 
 <<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
 # Calculate the Re_dev value at which Re_EW = 1
-Re_dev_for_Re_EW1_light <- (1 - k*I_E_f*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f*p_E_f_light)
+Re_dev_for_Re_EW1_light <- (1 - k*I_E_f_kWhr*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f_kWhr*p_E_f_light)
 data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
                        C_install = C_install_light, 
                        E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev)
@@ -945,10 +965,10 @@ the energy efficiency device must be only marginally economic for the device own
 
 <<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
 unit_cost_nominal_light <- C_install_light / E_sav_dev_expected_light
-unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f))
+unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f_kWhr))
 data.frame(C_install = seq(from = 0.6*C_install_light, to = 20*C_install_light, by = 0.05*C_install_light)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
                        C_install = C_install, 
                        E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev_light), 
@@ -1000,10 +1020,10 @@ a \Sexpr{format((unit_cost_for_Re_EW1_light - unit_cost_nominal_light) / unit_co
 %------------------------------
 
 <<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
-MPC_for_Re_EW1_light <- 1 - I_E_f * s_light
+MPC_for_Re_EW1_light <- 1 - I_E_f_kWhr * s_light
 data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.005)) %>% 
   dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = MPC, I_E_f = I_E_f, p_E_f = p_E_f_light, 
+    Re_EW = Re_EW_func(MPC = MPC, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
                        C_install = C_install_light, 
                        E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev_light)
@@ -1054,17 +1074,17 @@ compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently
 
 <<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
 I_E_f_for_Re_EW1_light <- 1 / (k * s_light)
-data.frame(I_E_f = seq(from = 0.5*I_E_f, to = 1.2*I_E_f, by = 0.01*I_E_f)) %>% 
+data.frame(I_E_f = seq(from = 0.5*I_E_f_kWhr, to = 1.2*I_E_f_kWhr, by = 0.01*I_E_f_kWhr)) %>% 
   dplyr::mutate(
     Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
                        C_install = C_install_light, 
                        E_sav_dev_expected = E_sav_dev_expected_light, 
                        Re_dev = Re_dev_light)
   ) %>% 
-  ggplot(mapping = aes(x = I_E_f, y = Re_EW_light)) + 
+  ggplot(mapping = aes(x = I_E_f_kWhr, y = Re_EW_light)) + 
   labs(x = expression(I[E[f]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
   # Guide lines for nominal values
-  geom_vline(xintercept = I_E_f, colour = "gray", size = 0.1) +
+  geom_vline(xintercept = I_E_f_kWhr, colour = "gray", size = 0.1) +
   geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
   # Guide lines for Re_EW = 1
   geom_vline(xintercept = I_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
@@ -1072,7 +1092,7 @@ data.frame(I_E_f = seq(from = 0.5*I_E_f, to = 1.2*I_E_f, by = 0.01*I_E_f)) %>%
   # Add the line
   geom_line() + 
   # Add the red dot
-  geom_point(x = I_E_f, y = Re_EW_light, colour = "red", size = 3) + 
+  geom_point(x = I_E_f_kWhr, y = Re_EW_light, colour = "red", size = 3) + 
   # Adjust the scale
   scale_x_continuous(breaks = seq(from = 0.4, to = 1.4, by = 0.2)) +
   MKHthemes::xy_theme()
@@ -1095,8 +1115,8 @@ Doing so yields
 $I_{E_f} = \Sexpr{format(I_E_f_for_Re_EW1_light, digits = 4)}$ kW-hr/\$ to achieve $Re_{EW} = 1$
 for the case study in Section~\ref{sec:case_studies}.
 So economy-wide backfire can be avoided when final energy intensity is 
-\Sexpr{format((I_E_f - I_E_f_for_Re_EW1_light) / I_E_f * 100, digits = 2)}~\% below 
-the current value (\Sexpr{format(I_E_f, digits = 5)} kW-hr/\$).
+\Sexpr{format((I_E_f_kWhr - I_E_f_for_Re_EW1_light) / I_E_f_kWhr * 100, digits = 2)}~\% below 
+the current value (\Sexpr{format(I_E_f_kWhr, digits = 5)} kW-hr/\$).
 
 
 %++++++++++++++++++++++++++++++
