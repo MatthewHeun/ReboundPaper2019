@@ -697,7 +697,6 @@ Then,
 \end{equation}
 
 
-
 %++++++++++++++++++++++++++++++
 \subsection{Economy-wide rebound}
 \label{sec:economy_wide_rebound}
@@ -742,24 +741,48 @@ k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)}
                     = \Sexpr{format(kIs_light, digits = 4)} \; .
 \end{equation}
 %
-For transport:
+For transport when the full cost of the energy efficiency intervention is born by the project:
 %
 \begin{equation} \label{eq:kIs_car}
   k I_{E_f} s_{transp} = \Sexpr{format(k, digits = 4)} 
                             \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-                            \times \Sexpr{format(s_car, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
-                            \times \frac{1}{\Sexpr{kWhr_per_gal} kW-hr/gal}
+                            \times \Sexpr{format(s_car, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{gal}}
+                            \times \frac{1 \; \mathrm{gal}}{\Sexpr{kWhr_per_gal} \; \mathrm{\kWhr}}
                        = \Sexpr{format(kIs_car, digits = 4)} \; .
 \end{equation}
 %
+But if we consider energy efficiency to be marginal,
 %
-followed by calculation of $Re_{EW,light}$:
+\begin{equation} \label{eq:kIs_car_marginal}
+  k I_{E_f} s_{transp,marginal} = \Sexpr{format(k, digits = 4)} 
+                            \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
+                            \times \Sexpr{format(s_car_marginal, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{gal}}
+                            \times \frac{1 \; \mathrm{gal}}{\Sexpr{kWhr_per_gal} \; \mathrm{\kWhr}}
+                       = \Sexpr{format(kIs_car_marginal, digits = 4)} \; .
+\end{equation}
+
+Economy-wide rebound ($Re_{EW}$) can be calculated for both lighting and transport.
 %
 \begin{equation} \label{eq:Re_EW_light}
   Re_{EW,light} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
           = 1 - (1 - \Sexpr{format(kIs_light, digits = 4)})(1 - \Sexpr{format(Re_dev_light, digits = 4)})
-          = \Sexpr{format(Re_EW_light, digits = 4)} \; .
+          = \Sexpr{format(Re_EW_light, digits = 4)}
 \end{equation}
+%
+\begin{equation} \label{eq:Re_EW_car}
+  Re_{EW,transp} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
+          = 1 - (1 - \Sexpr{format(kIs_car, digits = 4)})(1 - \Sexpr{format(Re_dev_auto, digits = 4)})
+          = \Sexpr{format(Re_EW_car, digits = 4)}
+\end{equation}
+%
+\begin{equation} \label{eq:Re_EW_car_marginal}
+  Re_{EW,transp,marginal} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
+          = 1 - (1 - \Sexpr{format(kIs_car_marginal, digits = 4)})(1 - \Sexpr{format(Re_dev_auto, digits = 4)})
+          = \Sexpr{format(Re_EW_car_marginal, digits = 4)}
+\end{equation}
+
+
+
 
 Finally, the first derivative of economy-wide rebound with respect to device-level rebound 
 can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
@@ -770,6 +793,11 @@ can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
                                                   = \Sexpr{format(dReEW_dRedev_light, digits = 4)} \; .
 \end{equation}
 %
+\begin{equation} \label{eq:dRe_EW/dRe_dev_val_car}
+  \frac{\mathrm{d} Re_{EW,transp}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f}
+                                                  = 1 - \Sexpr{format(kIp_car, digits = 5)}
+                                                  = \Sexpr{format(dReEW_dRedev_car, digits = 4)} \; .
+\end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
