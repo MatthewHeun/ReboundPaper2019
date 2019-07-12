@@ -486,7 +486,7 @@ Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
 \end{enumerate*}
 
 The first derivative of economy-wide rebound with respect to device-level rebound
-($\frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}}$) 
+$\left( \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} \right)$
 can be calculated from Eq.~\ref{eq:Re_EW}, and
 it indicates how economy-wide rebound will change with device-level rebound:
 %
@@ -500,7 +500,7 @@ it indicates how economy-wide rebound will change with device-level rebound:
 \label{sec:case_studies}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, two case studies demonstrate the framework 
+Two case studies demonstrate the framework 
 discussed in Section~\ref{sec:theory}.
 The first case study is LED lights that provide the same illumination 
 as incandescent lights for much less electric power consumption.
@@ -513,13 +513,19 @@ Thus, these energy efficiency interventions
 provide numerical illustration of the theoretical framework
 developed in Section~\ref{sec:theory}.
 
-To begin, values for each key parameter in Eq.~\ref{eq:Re_EW} are determined
+To begin, nominal values are selected for each key parameter in Eq.~\ref{eq:Re_EW}
 for each case study:
 device-level rebound~($Re_{dev}$),
 the multiplier~($k$), 
 final energy intensity of the economy~($I_{E_f}$), and
 the net device-level unit savings of energy efficiency~($s$).
-Thereafter, economy-wide rebound~($Re_{EW}$) is determined for each case study.
+Thereafter, economy-wide rebound~($Re_{EW}$) is calculated for each case study.
+Note that the nominal values selected for each key parameter
+are helpful for anchoring the calculations and discussion.
+It is not the purpose of this paper to pick winners 
+in the conversation about \emph{true} magnitude of key parameters.
+To reduce the importance of the chosen value for key parameters,
+sensitivity studies are performed in Section~\ref{sec:discussion}.
 
 
 %++++++++++++++++++++++++++++++
