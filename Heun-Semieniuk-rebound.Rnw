@@ -44,6 +44,7 @@
 <<setup, echo = FALSE>>=
 library(ggplot2)
 library(magrittr)
+library(rlang)
 @
 
 \journal{Energy Economics}
@@ -583,10 +584,9 @@ assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, t
 assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
 
 
-Data <- expand.grid(case = c("light", "car"), 
+Base <- expand.grid(case = c("light", "car"), 
                     marginal = c(TRUE, FALSE), 
-                    base = c(TRUE), 
-                    varying = c("p_E_f", "Re_dev", "MPC", "I_E_f", "C_install", "E_sav_dev_expected")) %>% 
+                    base = c(TRUE)) %>% 
   dplyr::arrange(case, marginal, base) %>% 
   dplyr::mutate(
     # MPC is unitless
@@ -596,26 +596,71 @@ Data <- expand.grid(case = c("light", "car"),
     # Re_dev is unitless
     Re_dev = dplyr::case_when(
       case == "light" ~ Re_dev_light,
-      case == "car" ~ Re_dev_car
+      case == "car" ~ Re_dev_car,
+      TRUE ~ NA_real_
     ),
     # p_E_f is in $/kW-hr
     p_E_f = dplyr::case_when(
-      case == "light" ~ p_E_f_light, 
-      case == "car" ~ p_E_f_car
-    ), 
+      case == "light" ~ p_E_f_light,
+      case == "car" ~ p_E_f_car,
+      TRUE ~ NA_real_
+    ),
     # C_install in $/kW-hr
     C_install = dplyr::case_when(
       case == "light" & !marginal ~ C_install_light,
       case == "light" & marginal ~ C_install_light_marginal,
       case == "car" & !marginal ~ C_install_car,
-      case == "car" & marginal ~ C_install_car_marginal
-    ), 
+      case == "car" & marginal ~ C_install_car_marginal,
+      TRUE ~ NA_real_
+    ),
     # E_sav_dev_expected in kW-hr
     E_sav_dev_expected = dplyr::case_when(
-      case == "light" ~ E_sav_dev_expected_light, 
-      case == "car" ~ E_sav_dev_expected_car
-    )
+      case == "light" ~ E_sav_dev_expected_light,
+      case == "car" ~ E_sav_dev_expected_car,
+      TRUE ~ NA_real_
+    ),
+    c_expected = C_install / E_sav_dev_expected, # $/kW-hr, unit cost of expected energy savings or the expected cost to save 1 kW-hr
+    C_install = NULL,
+    E_sav_dev_expected = NULL
   )
+
+# Now make the parametric study data frames
+
+varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
+                I_E_f = seq(from = 0.6, to = 1.2, by = 0.01),
+                Re_dev = seq(from = 0.02, to = 0.5, by = 0.01),
+                p_E_f = seq(from = 0.05, to = 0.15, by = 0.01),
+                c_expected = seq(from = 0, to = 1, by = 0.01))
+
+Parametric <- data.frame()
+
+for (varname in names(varying)) {
+  range <- varying[[varname]]
+  df_piece <- data.frame(range) %>% magrittr::set_names(varname)
+  # Grab each row of Data and make a data frame from it.
+  for (i in nrow(Base)) {
+    # Eliminate the var column
+    temp <- Base %>% 
+      dplyr::mutate(
+        !!as.name(varname) := NULL
+      )
+    # Pick the row we want
+    row <- temp[i, ]
+    # Get the remaining names from the desired row
+    nms <- names(row)
+    # Make a column for every name in the desired row
+    for (nm in nms) {
+      df_piece <- df_piece %>% 
+        dplyr::mutate(
+          !!as.name(nm) := row[[nm]], 
+          varying = varname, 
+          base = FALSE
+        )
+    }
+    Parametric <- dplyr::bind_rows(Parametric, df_piece)
+  }
+}
+Parametric <- dplyr::bind_rows(Base, Parametric)
 
 @
 
