@@ -495,6 +495,132 @@ it indicates how economy-wide rebound will change with device-level rebound:
 \end{equation}
 
 
+
+<<analysis, echo = FALSE>>=
+
+###########################
+# Re_dev, device level rebound
+###########################
+
+Re_dev_light <- 0.06
+Re_dev_car <- 0.222
+
+###########################
+# MPC, marginal propensity to consume
+###########################
+
+mpc <- 0.9
+
+###########################
+# I_E_f, final energy intensity of the U.S. economy.
+###########################
+
+# From IEA extended energy balances 2018
+TFC_2016_USA_ktoe <- 1515035.0 # total final consumption, ktoe
+# From the BEA
+GDP_2016_USA_PPP_billion2016USD <- 18707.20 # billion 2016 USD
+# Calculate energy intensity in given units.
+I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion2016USD
+# Convert to kW-hr/USD
+# divide by 1e9 to get per USD.
+# Multiply by 11630000  kWhr_per_ktoe to convert from ktoe to kW-hr.
+# According to the IEA's unit converter website 
+# at https://www.iea.org/statistics/resources/unitconverter/, 
+# 1 ktoe = 11630000 kW-hr.
+kWhr_per_ktoe <- 11630000
+I_E_f_kWhr <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
+# Set up conversion factor for kW-hr to gallons of fuel for later.
+# 1 gal = 33.41 kW-hr
+kWhr_per_gal <- 33.41 
+
+###########################
+# s, Unit savings
+###########################
+
+# From the LED packaging:
+# Assumed electricity price (final energy)
+p_E_f_light <- 0.11 # USD/kW-hr
+# Cost savings claimed by manufacturer
+C_sav_light <- 84 # USD
+# Cost to purchase and install the LED bulb
+C_install_light <- 1.5 # USD
+# Expected device-level savings.
+E_sav_dev_expected_light <- C_sav_light / p_E_f_light
+# Net device-level unit savings
+s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
+# Marginal cost to install an LED light
+# On Amazon: SYLVANIA General Lighting 74765 A19 Efficient 8.5W Soft White 2700K 60W Equivalent A29 LED Light Bulb (24 Pack)
+C_install_incandescent <- 24.08 / 24 # Basically $1/light
+C_install_light_marginal <- C_install_light - C_install_incandescent
+
+# Automobile calculations
+p_E_f_car_gal <- 2.82 # USD/gal (Michigan)
+p_E_f_car <- p_E_f_car_gal / kWhr_per_gal # Convert to USD/kWhr
+C_install_car_marginal <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
+eta_improvement <- 1.25
+C_car <- 25774 # USD, median cost of a light duty vehicle in the U.S., 2018.
+C_install_car <- C_car + C_install_car_marginal # USD
+lifetime_car <- 15 # years
+duty_car <- 12000 # miles/year
+eta_car_baseline_gal <- 37.7 # mi/gal in 2016.  Source: US bureau of transportation statistics, Table 4_23.xlsx.
+eta_car_baseline <- eta_car_baseline_gal / kWhr_per_gal # mi/kWhr
+eta_car_enhanced_gal <- eta_car_baseline_gal * eta_improvement # mi/gal.  25 % improvement.
+eta_car_enhanced <- eta_car_baseline * eta_improvement # mi/kWhr.  25 % improvement.
+E_fuel_baseline_gal <- duty_car * lifetime_car / eta_car_baseline_gal # gal
+E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # kWhr
+E_fuel_enhanced_gal <- duty_car * lifetime_car / eta_car_enhanced_gal # gal
+E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # kWhr
+E_sav_dev_expected_car_gal <- E_fuel_baseline_gal - E_fuel_enhanced_gal # gal
+E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # kWhr
+C_sav_car_gal <- E_sav_dev_expected_car_gal * p_E_f_car_gal # USD. From the gallon calculations. Should be same as next calculation.
+C_sav_car <- E_sav_dev_expected_car * p_E_f_car # USD. From the kWhr calculations. Should be same as above calculation.
+assertthat::assert_that(assertthat::are_equal(C_sav_car_gal, C_sav_car, tol = 1e-6))
+s_car_gal <- p_E_f_car_gal - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
+s_car <- p_E_f_car - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
+s_car_marginal_gal <- p_E_f_car_gal - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
+s_car_marginal <- p_E_f_car - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
+assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, tol = 1e-6))
+assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
+
+
+Data <- expand.grid(case = c("light", "car"), 
+                    marginal = c(TRUE, FALSE), 
+                    base = c(TRUE), 
+                    varying = c("p_E_f", "Re_dev", "MPC", "I_E_f", "C_install")) %>% 
+  dplyr::arrange(case, marginal, base, varying) %>% 
+  dplyr::mutate(
+    # MPC is unitless
+    MPC = mpc,
+    # I_E_f is in $/kW-hr
+    I_E_f = I_E_f_kWhr, 
+    # Re_dev is unitless
+    Re_dev = dplyr::case_when(
+      case == "light" ~ Re_dev_light,
+      case == "car" ~ Re_dev_car
+    ),
+    # p_E_f is in $/kW-hr
+    p_E_f = dplyr::case_when(
+      case == "light" ~ p_E_f_light, 
+      case == "car" ~ p_E_f_car
+    ), 
+    # C_install in $/kW-hr
+    C_install = dplyr::case_when(
+      case == "light" & !marginal ~ C_install_light,
+      case == "light" & marginal ~ C_install_light_marginal,
+      case == "car" & !marginal ~ C_install_car,
+      case == "car" & marginal ~ C_install_car_marginal
+    ), 
+    # E_sav_dev_expected in kW-hr
+    E_sav_dev_expected = dplyr::case_when(
+      case == "light" ~ E_sav_dev_expected_light, 
+      case == "car" ~ E_sav_dev_expected_car
+    )
+  ) %>% View
+
+@
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Case studies}
 \label{sec:case_studies}
@@ -536,11 +662,6 @@ sensitivity studies are performed in Section~\ref{sec:discussion}.
 **** Note that code blocks are included for discussion purposes and
 will be removed for publication. ****
 
-<<Re_dev>>=
-Re_dev_light <- 0.06
-Re_dev_car <- 0.222
-@
-
 Nominal values for device-level rebound~($Re_{dev}$) 
 are taken from previous studies.
 Each case study (lighting and transport) 
@@ -556,11 +677,6 @@ to be $Re_{dev,auto} =$ \Sexpr{Re_dev_car}~\cite{Small:2007aa}.
 \subsection{Marginal propensity to consume~($\mpc$) and multiplier~($k$)}
 \label{sec:mpc_and_k}
 %++++++++++++++++++++++++++++++
-
-<<MPC>>=
-mpc <- 0.9
-k <- 1 / (1 - mpc)
-@
 
 As discussed in Section~\ref{sec:lr_mpc},
 there are many estimates for $\mpc$.
@@ -590,26 +706,6 @@ For completeness, the marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mp
 \label{sec:I}
 %++++++++++++++++++++++++++++++
 
-<<I_E_f>>=
-# From Extended energy balances 2018
-TFC_2016_USA_ktoe <- 1515035.0 # ktoe
-# From the BEA
-GDP_2016_USA_PPP_billion2016USD <- 18707.20 # billion 2016 USD
-# Calculate energy intensity in given units.
-I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion2016USD
-# Convert to kW-hr/USD
-# divide by 1e9 to get per USD.
-# Multiply by 11630000  kWhr_per_ktoe to convert from ktoe to kW-hr.
-# According to the IEA's unit converter website 
-# at https://www.iea.org/statistics/resources/unitconverter/, 
-# 1 ktoe = 11630000 kW-hr.
-kWhr_per_ktoe <- 11630000
-I_E_f_kWhr <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
-# Set up conversion factor for kW-hr to gallons of fuel for later.
-# 1 gal = 33.41 kW-hr
-kWhr_per_gal <- 33.41 
-@
-
 For 2016,
 the total final energy consumption of the U.S.\ economy was
 \Sexpr{format(TFC_2016_USA_ktoe, big.mark = ",")}~ktoe~ **** cite IEA extended energy balances here ****.
@@ -626,52 +722,6 @@ The value of $I_{E_f}$ is taken to be invariant across the case studies.
 \subsection{Unit savings of energy efficiency~($s$)}
 \label{sec:unit_savings}
 %++++++++++++++++++++++++++++++
-
-<<unit_savings>>=
-# From the LED packaging:
-# Assumed electricity price (final energy)
-p_E_f_light <- 0.11 # USD/kW-hr
-# Cost savings claimed by manufacturer
-C_sav_light <- 84 # USD
-# Cost to purchase and install the LED bulb
-C_install_light <- 1.5 # USD
-# Expected device-level savings.
-E_sav_dev_expected_light <- C_sav_light / p_E_f_light
-# Net device-level unit savings
-s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
-
-# Automobile calculations
-p_E_f_car_gal <- 2.82 # USD/gal (Michigan)
-p_E_f_car <- p_E_f_car_gal / kWhr_per_gal # Convert to USD/kWhr
-C_install_car_marginal <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
-eta_improvement <- 1.25
-C_car <- 25774 # USD, median cost of a light duty vehicle in the U.S., 2018.
-C_install_car <- C_car + C_install_car_marginal # USD
-lifetime_car <- 15 # years
-duty_car <- 12000 # miles/year
-eta_car_baseline_gal <- 37.7 # mi/gal in 2016.  Source: US bureau of transportation statistics, Table 4_23.xlsx.
-eta_car_baseline <- eta_car_baseline_gal / kWhr_per_gal # mi/kWhr
-eta_car_enhanced_gal <- eta_car_baseline_gal * eta_improvement # mi/gal.  25 % improvement.
-eta_car_enhanced <- eta_car_baseline * eta_improvement # mi/kWhr.  25 % improvement.
-E_fuel_baseline_gal <- duty_car * lifetime_car / eta_car_baseline_gal # gal
-E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # kWhr
-E_fuel_enhanced_gal <- duty_car * lifetime_car / eta_car_enhanced_gal # gal
-E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # kWhr
-E_sav_dev_expected_car_gal <- E_fuel_baseline_gal - E_fuel_enhanced_gal # gal
-E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # kWhr
-C_sav_car_gal <- E_sav_dev_expected_car_gal * p_E_f_car_gal # USD. From the gallon calculations. Should be same as next calculation.
-C_sav_car <- E_sav_dev_expected_car * p_E_f_car # USD. From the kWhr calculations. Should be same as above calculation.
-assertthat::assert_that(assertthat::are_equal(C_sav_car_gal, C_sav_car, tol = 1e-6))
-s_car_gal <- p_E_f_car_gal - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
-s_car <- p_E_f_car - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
-s_car_marginal_gal <- p_E_f_car_gal - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
-s_car_marginal <- p_E_f_car - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
-assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, tol = 1e-6))
-assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
-@
-
-**** The above \$ are 2019. 
-Need to ensure that we're doing the right thing between 2019 and 2016 USD. ****
 
 Unit savings for energy-efficient lighting can be estimated
 from the electricity price and cost and energy savings for LED lights.
