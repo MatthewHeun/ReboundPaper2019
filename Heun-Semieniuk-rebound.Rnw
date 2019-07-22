@@ -624,7 +624,7 @@ Base <- expand.grid(case = c("light", "car"),
     E_sav_dev_expected = NULL
   )
 
-# Now make the parametric study data frames
+# Make the parametric study data frames
 
 varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
                 I_E_f = seq(from = 0.6, to = 1.2, by = 0.01),
@@ -660,7 +660,12 @@ for (varname in names(varying)) {
     Parametric <- dplyr::bind_rows(Parametric, df_piece)
   }
 }
+
+# Add the base parameters to the data frame
 Parametric <- dplyr::bind_rows(Base, Parametric)
+
+# Now make calculations of key parameters
+
 @
 
 
