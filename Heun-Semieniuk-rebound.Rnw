@@ -514,7 +514,7 @@ Re_dev_car <- 0.222
 ###########################
 
 mpc <- 0.9
-k <- 1 / (1-mpc)
+k <- 1 / (1 - mpc)
 
 ###########################
 # I_E_f, final energy intensity of the U.S. economy.
@@ -588,11 +588,23 @@ assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, t
 assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
 @
 
+<<values_for_backfire>>=
+# Don't know if I need these any more.
+p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f_kWhr) + C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
+p_E_f_for_Re_EW1_car <- 1 / (k * I_E_f_kWhr) + C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car * kWhr_per_gal)
+Re_dev_for_Re_EW1_light <- (1 - k*I_E_f_kWhr*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f_kWhr*p_E_f_light)
+Re_dev_for_Re_EW1_car <- (1 - k*I_E_f_kWhr*(p_E_f_car - C_install_car/E_sav_dev_expected_car)) / (1 - k*I_E_f_kWhr*p_E_f_car)
+I_E_f_for_Re_EW1_light <- 1 / (k * s_light)
+unit_cost_nominal_light <- C_install_light / E_sav_dev_expected_light
+unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f_kWhr))
+MPC_for_Re_EW1_light <- 1 - I_E_f_kWhr * s_light
+@
+
 <<baseline, echo = FALSE>>=
-Base <- expand.grid(case = c("light", "car"), 
-                    marginal = c(TRUE, FALSE), 
+Base <- expand.grid(case = c("Light", "Car"), 
+                    costing = c("Marginal", "Full"), 
                     base = c(TRUE)) %>% 
-  dplyr::arrange(case, marginal, base) %>% 
+  dplyr::arrange(case, costing, base) %>% 
   dplyr::mutate(
     # MPC is unitless
     MPC = mpc,
@@ -600,28 +612,28 @@ Base <- expand.grid(case = c("light", "car"),
     I_E_f = I_E_f_kWhr, 
     # Re_dev is unitless
     Re_dev = dplyr::case_when(
-      case == "light" ~ Re_dev_light,
-      case == "car" ~ Re_dev_car,
+      case == "Light" ~ Re_dev_light,
+      case == "Car" ~ Re_dev_car,
       TRUE ~ NA_real_
     ),
     # p_E_f is in $/kW-hr
     p_E_f = dplyr::case_when(
-      case == "light" ~ p_E_f_light,
-      case == "car" ~ p_E_f_car,
+      case == "Light" ~ p_E_f_light,
+      case == "Car" ~ p_E_f_car,
       TRUE ~ NA_real_
     ),
     # C_install in $/kW-hr
     C_install = dplyr::case_when(
-      case == "light" & !marginal ~ C_install_light,
-      case == "light" & marginal ~ C_install_light_marginal,
-      case == "car" & !marginal ~ C_install_car,
-      case == "car" & marginal ~ C_install_car_marginal,
+      case == "Light" & costing == "Full" ~ C_install_light,
+      case == "Light" & costing == "Marginal" ~ C_install_light_marginal,
+      case == "Car" & costing == "Full" ~ C_install_car,
+      case == "Car" & costing == "Marginal" ~ C_install_car_marginal,
       TRUE ~ NA_real_
     ),
     # E_sav_dev_expected in kW-hr
     E_sav_dev_expected = dplyr::case_when(
-      case == "light" ~ E_sav_dev_expected_light,
-      case == "car" ~ E_sav_dev_expected_car,
+      case == "Light" ~ E_sav_dev_expected_light,
+      case == "Car" ~ E_sav_dev_expected_car,
       TRUE ~ NA_real_
     ),
     c_expected = C_install / E_sav_dev_expected, # $/kW-hr, unit cost of expected energy savings or the expected cost to save 1 kW-hr
@@ -634,7 +646,7 @@ Base <- expand.grid(case = c("light", "car"),
 # Set the ranges for varying the key parameters
 varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
                 I_E_f = seq(from = 0.6, to = 1.2, by = 0.01),
-                Re_dev = seq(from = 0.02, to = 0.5, by = 0.01),
+                Re_dev = seq(from = 0, to = 0.99, by = 0.01),
                 p_E_f = seq(from = 0.05, to = 0.15, by = 0.01),
                 c_expected = seq(from = 0, to = 1, by = 0.01))
 
@@ -677,8 +689,10 @@ Data <- Parametric %>%
     k = 1 / (1-MPC),
     s = p_E_f - c_expected / (1 - Re_dev), 
     kIs = k * I_E_f_kWhr * s,
-    Re_EW = 1 - (1 - kIs) * (1 - Re_dev)
-  ) %>% View
+    Re_EW = 1 - (1 - kIs) * (1 - Re_dev), 
+    # Set orders for graphing
+    costing = factor(costing, levels = c("Marginal", "Full"))
+  )
 @
 
 
@@ -1043,69 +1057,20 @@ are each considered in turn.
 \label{sec:effect_p_E_f}
 %------------------------------
 
-<<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $\\frac{C_{install}}{E_{sav,dev,expected}}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
-p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f_kWhr) + C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
-p_E_f_for_Re_EW1_car <- 1 / (k * I_E_f_kWhr) + C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car * kWhr_per_gal)
 
-Re_EW_vs_p_light <- data.frame(p_E_f = seq(from = 0.5*p_E_f_light, to = 1.2*p_E_f_light, by = 0.01*p_E_f_light)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f, 
-                       C_install = C_install_light, 
-                       E_sav_dev_expected = E_sav_dev_expected_light, 
-                       Re_dev = Re_dev_light), 
-    type = "light"
-  )
-
-Re_EW_vs_p_car <- data.frame(p_E_f = seq(from = 0.5*p_E_f_car, to = 1.2*p_E_f_car, by = 0.01*p_E_f_car)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f,
-                       C_install = C_install_car,
-                       E_sav_dev_expected = E_sav_dev_expected_car * kWhr_per_gal,
-                       Re_dev = Re_dev_car),
-    type = "car"
-  )
-
-# data.frame(p_E_f = seq(from = 0.5*p_E_f_light, to = 1.2*p_E_f_light, by = 0.01*p_E_f_light)) %>% 
-#   dplyr::mutate(
-#     Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f, 
-#                        C_install = C_install_light, 
-#                        E_sav_dev_expected = E_sav_dev_expected_light, 
-#                        Re_dev = Re_dev_light) 
-#   ) %>% 
-
-# dplyr::bind_rows(Re_EW_vs_p_light, Re_EW_vs_p_car) %>% 
-# Re_EW_vs_p_light %>% 
-#   ggplot(mapping = aes(x = p_E_f, y = Re_EW)) + 
-#   # Guide lines for nominal values
-#   geom_vline(xintercept = p_E_f_light, colour = "gray", size = 0.1) +
-#   geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-#   # Guide lines for Re_EW = 1
-#   geom_vline(xintercept = p_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
-#   geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-#   # Add the line
-#   geom_line() + 
-#   # Add the point
-#   geom_point(x = p_E_f_light, y = Re_EW_light, colour = "red", size = 3) + 
-#   # Add the correct labels.
-#   labs(x = expression(p[E[f]]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
-#   MKHthemes::xy_theme()
-
-dplyr::bind_rows(Re_EW_vs_p_light, Re_EW_vs_p_car) %>% 
-  ggplot(mapping = aes(x = p_E_f, y = Re_EW, linetype = type, colour = type)) + 
-  # Guide lines for nominal values
-  geom_vline(xintercept = p_E_f_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-  # Guide lines for Re_EW = 1
-  geom_vline(xintercept = p_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-  # Add the line
-  geom_line() + 
-  # Add the point
-  geom_point(x = p_E_f_light, y = Re_EW_light, colour = "red", size = 3) + 
-  # Add the correct labels.
+<<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $c_{expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
+Data %>% 
+  dplyr::filter(varying == "p_E_f") %>% 
+  ggplot(mapping = aes(x = p_E_f, y = Re_EW, linetype = costing, colour = costing)) + 
+  facet_wrap(~ case) + 
+  geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
+  geom_line() +
+  geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = p_E_f, y = Re_EW), colour = "red", size = 3) +
   labs(x = expression(p[E[f]]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
+  scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
+  scale_x_continuous(breaks = c(0.05, 0.1, 0.15)) +
+  scale_colour_manual(values = c(Full = "black", Marginal = "blue")) +
   MKHthemes::xy_theme()
-
 @
 
 Fig.~\ref{fig:Re_EWvsp_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
@@ -1133,30 +1098,18 @@ compared to the baseline price of final energy~(\Sexpr{format(p_E_f_light, digit
 \label{sec:effect_Re_dev}
 %------------------------------
 
-<<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, $C_{install}$, and $E_{sav,dev,expected}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
-# Calculate the Re_dev value at which Re_EW = 1
-Re_dev_for_Re_EW1_light <- (1 - k*I_E_f_kWhr*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f_kWhr*p_E_f_light)
-data.frame(Re_dev = seq(from = 0, to = 1.4, by = 0.051)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
-                       C_install = C_install_light, 
-                       E_sav_dev_expected = E_sav_dev_expected_light, 
-                       Re_dev = Re_dev)
-  ) %>% 
-  ggplot(mapping = aes(x = Re_dev, y = Re_EW)) + 
-  # Guide lines that cross at nominal values
-  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-  geom_vline(xintercept = Re_dev_light, colour = "gray", size = 0.1) +
-  # Guide lines for Re_EW = 1
-  geom_vline(xintercept = Re_dev_for_Re_EW1_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-  # The line itself.
-  geom_line() + 
-  # The red dot for nominal values
-  geom_point(x = Re_dev_light, y = Re_EW_light, colour = "red", size = 3) + 
-  labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]")) + 
-  scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
-  scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
+<<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, and $c_{expected}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red points indicate nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
+Data %>% 
+  dplyr::filter(varying == "Re_dev") %>% 
+  ggplot(mapping = aes(x = Re_dev, y = Re_EW, linetype = costing, colour = costing)) + 
+  facet_wrap(~ case) + 
+  geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
+  geom_line() +
+  geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = Re_dev, y = Re_EW), colour = "red", size = 3) +
+  labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
+  scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
+  scale_x_continuous(breaks = c(0, 0.5, 1)) +
+  scale_colour_manual(values = c(Full = "black", Marginal = "blue")) +
   MKHthemes::xy_theme()
 @
 
@@ -1208,30 +1161,18 @@ the energy efficiency device must be only marginally economic for the device own
 \label{sec:effect_unit_cost}
 %------------------------------
 
-<<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
-unit_cost_nominal_light <- C_install_light / E_sav_dev_expected_light
-unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f_kWhr))
-data.frame(C_install = seq(from = 0.6*C_install_light, to = 20*C_install_light, by = 0.05*C_install_light)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
-                       C_install = C_install, 
-                       E_sav_dev_expected = E_sav_dev_expected_light, 
-                       Re_dev = Re_dev_light), 
-    unit_cost = C_install / E_sav_dev_expected_light
-  ) %>% 
-  ggplot(mapping = aes(x = unit_cost, y = Re_EW)) + 
-  # Red dot and guide lines for nominal values
-  geom_vline(xintercept = unit_cost_nominal_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-  # Guide lines for Re_EW = 1
-  geom_vline(xintercept = unit_cost_for_Re_EW1_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-  # Add the line
-  geom_line() + 
-  # Add the point
-  geom_point(x = unit_cost_nominal_light, y = Re_EW_light, colour = "red", size = 3) + 
-  # Add the correct labels.
-  labs(x = expression(C[install]*"/"*E[list(sav,dev,expected)]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]")) + 
+<<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
+Data %>% 
+  dplyr::filter(varying == "c_expected") %>% 
+  ggplot(mapping = aes(x = c_expected, y = Re_EW, linetype = costing, colour = costing)) + 
+  facet_wrap(~ case) + 
+  geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
+  geom_line() +
+  geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = c_expected, y = Re_EW), colour = "red", size = 3) +
+  labs(x = expression(c[expected]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
+  scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
+  scale_x_continuous(breaks = c(0, 0.2, 0.4)) +
+  scale_colour_manual(values = c(Full = "black", Marginal = "blue")) +
   MKHthemes::xy_theme()
 @
 
@@ -1264,30 +1205,18 @@ a \Sexpr{format((unit_cost_for_Re_EW1_light - unit_cost_nominal_light) / unit_co
 \label{sec:effect_mpc}
 %------------------------------
 
-<<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
-MPC_for_Re_EW1_light <- 1 - I_E_f_kWhr * s_light
-data.frame(MPC = seq(from = 0.98, to = 0.5, by = -0.005)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = MPC, I_E_f = I_E_f_kWhr, p_E_f = p_E_f_light, 
-                       C_install = C_install_light, 
-                       E_sav_dev_expected = E_sav_dev_expected_light, 
-                       Re_dev = Re_dev_light)
-  ) %>% 
-  ggplot(mapping = aes(x = MPC, y = Re_EW)) + 
-  # scale_x_continuous(breaks = seq(from = 0, to = 1.4, by = 0.2)) +
-  # scale_y_continuous(breaks = seq(from = 0.4, to = 2, by = 0.2)) +
-  # Red dot and guide lines for nominal values
-  
-  geom_vline(xintercept = mpc, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-  # Guide lines for Re_EW = 1
-  geom_vline(xintercept = MPC_for_Re_EW1_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-  # Line
-  geom_line() + 
-  # Red dot
-  geom_point(x = mpc, y = Re_EW_light, colour = "red", size = 3) + 
-  labs(x = "MPC [-]", y = expression(Re[EW]*" [-]")) + 
+<<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
+Data %>% 
+  dplyr::filter(varying == "MPC") %>% 
+  ggplot(mapping = aes(x = MPC, y = Re_EW, linetype = costing, colour = costing)) + 
+  facet_wrap(~ case) + 
+  geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
+  geom_line() +
+  geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = MPC, y = Re_EW), colour = "red", size = 3) +
+  labs(x = "MPC [-]", y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
+  scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2), limits = c(-10, 5)) +
+  scale_x_continuous(breaks = c(0.4, 0.6, 0.8, 1)) +
+  scale_colour_manual(values = c(Full = "black", Marginal = "blue")) +
   MKHthemes::xy_theme()
 @
 
@@ -1317,29 +1246,18 @@ compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently
 \label{sec:effect_I_E_f}
 %------------------------------
 
-<<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 2.5, fig.width = 4, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
-I_E_f_for_Re_EW1_light <- 1 / (k * s_light)
-data.frame(I_E_f = seq(from = 0.5*I_E_f_kWhr, to = 1.2*I_E_f_kWhr, by = 0.01*I_E_f_kWhr)) %>% 
-  dplyr::mutate(
-    Re_EW = Re_EW_func(MPC = mpc, I_E_f = I_E_f, p_E_f = p_E_f_light, 
-                       C_install = C_install_light, 
-                       E_sav_dev_expected = E_sav_dev_expected_light, 
-                       Re_dev = Re_dev_light)
-  ) %>% 
-  ggplot(mapping = aes(x = I_E_f_kWhr, y = Re_EW_light)) + 
-  labs(x = expression(I[E[f]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]")) + 
-  # Guide lines for nominal values
-  geom_vline(xintercept = I_E_f_kWhr, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = Re_EW_light, colour = "gray", size = 0.1) +
-  # Guide lines for Re_EW = 1
-  geom_vline(xintercept = I_E_f_for_Re_EW1_light, colour = "gray", size = 0.1) +
-  geom_hline(yintercept = 1, colour = "gray", size = 0.1) +
-  # Add the line
-  geom_line() + 
-  # Add the red dot
-  geom_point(x = I_E_f_kWhr, y = Re_EW_light, colour = "red", size = 3) + 
-  # Adjust the scale
-  scale_x_continuous(breaks = seq(from = 0.4, to = 1.4, by = 0.2)) +
+<<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
+Data %>% 
+  dplyr::filter(varying == "I_E_f") %>% 
+  ggplot(mapping = aes(x = I_E_f, y = Re_EW, linetype = costing, colour = costing)) + 
+  facet_wrap(~ case) + 
+  geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
+  geom_line() +
+  geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = I_E_f, y = Re_EW), colour = "red", size = 3) +
+  labs(x = expression(I[E[f]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
+  scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
+  scale_x_continuous(breaks = c(0, 0.5, 1)) +
+  scale_colour_manual(values = c(Full = "black", Marginal = "blue")) +
   MKHthemes::xy_theme()
 @
 
