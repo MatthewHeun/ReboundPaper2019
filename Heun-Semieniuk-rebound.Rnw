@@ -586,8 +586,8 @@ assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_margina
 Data <- expand.grid(case = c("light", "car"), 
                     marginal = c(TRUE, FALSE), 
                     base = c(TRUE), 
-                    varying = c("p_E_f", "Re_dev", "MPC", "I_E_f", "C_install")) %>% 
-  dplyr::arrange(case, marginal, base, varying) %>% 
+                    varying = c("p_E_f", "Re_dev", "MPC", "I_E_f", "C_install", "E_sav_dev_expected")) %>% 
+  dplyr::arrange(case, marginal, base) %>% 
   dplyr::mutate(
     # MPC is unitless
     MPC = mpc,
@@ -615,7 +615,7 @@ Data <- expand.grid(case = c("light", "car"),
       case == "light" ~ E_sav_dev_expected_light, 
       case == "car" ~ E_sav_dev_expected_car
     )
-  ) %>% View
+  )
 
 @
 
