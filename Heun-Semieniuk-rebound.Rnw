@@ -588,7 +588,7 @@ assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, t
 assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
 @
 
-<<baseline. echo = FALSE>>=
+<<baseline, echo = FALSE>>=
 Base <- expand.grid(case = c("light", "car"), 
                     marginal = c(TRUE, FALSE), 
                     base = c(TRUE)) %>% 
@@ -630,9 +630,8 @@ Base <- expand.grid(case = c("light", "car"),
   )
 @
 
-<<parametric>>=
-# Make the parametric study data frames
-
+<<parametric, echo = FALSE>>=
+# Set the ranges for varying the key parameters
 varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
                 I_E_f = seq(from = 0.6, to = 1.2, by = 0.01),
                 Re_dev = seq(from = 0.02, to = 0.5, by = 0.01),
@@ -643,24 +642,25 @@ Parametric <- data.frame()
 
 for (varname in names(varying)) {
   range <- varying[[varname]]
-  df_piece <- data.frame(range) %>% magrittr::set_names(varname)
-  # Grab each row of Data and make a data frame from it.
-  for (i in nrow(Base)) {
-    # Eliminate the var column
-    temp <- Base %>% 
-      dplyr::mutate(
-        !!as.name(varname) := NULL
-      )
-    # Pick the row we want
+  first_col <- data.frame(range) %>% magrittr::set_names(varname)
+  # Eliminate the var column in Base
+  temp <- Base %>%
+    dplyr::mutate(
+      !!as.name(varname) := NULL
+    )
+  # Get the remaining names from temp
+  nms <- names(temp)
+  # Grab each row of Base and make a data frame from it.
+  for (i in 1:nrow(Base)) {
+    df_piece <- first_col
+    # Pick the row we want from temp
     row <- temp[i, ]
-    # Get the remaining names from the desired row
-    nms <- names(row)
     # Make a column for every name in the desired row
     for (nm in nms) {
-      df_piece <- df_piece %>% 
+      df_piece <- df_piece %>%
         dplyr::mutate(
-          !!as.name(nm) := row[[nm]], 
-          varying = varname, 
+          !!as.name(nm) := row[[nm]],
+          varying = varname,
           base = FALSE
         )
     }
@@ -675,7 +675,9 @@ Parametric <- dplyr::bind_rows(Base, Parametric)
 Data <- Parametric %>% 
   dplyr::mutate(
     k = 1 / (1-MPC),
-    s = p_E_f - c_expected / (1 - Re_dev)
+    s = p_E_f - c_expected / (1 - Re_dev), 
+    kIs = k * I_E_f_kWhr * s,
+    Re_EW = 1 - (1 - kIs) * (1 - Re_dev)
   ) %>% View
 @
 
