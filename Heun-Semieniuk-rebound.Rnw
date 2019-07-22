@@ -448,20 +448,19 @@ Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result
 for economy-wide rebound:
 %
 \begin{equation} \label{eq:Re_EW}
-  Re_{EW} = 1 - (1 - k I_{E_f} P ) (1 - Re_{dev}) \; ,
+  Re_{EW} = 1 - (1 - k I_{E_f} s ) (1 - Re_{dev}) \; ,
 \end{equation}
 %
 where $s = p_{E_f} - \frac{C_{install}}{E_{sav,dev}}$ is the net device-level unit savings
 from an energy efficiency device.
-Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ and
-substituted into Eq.~\ref{eq:Re_EW} to obtain
+Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ to obtain
 %
 \begin{equation} \label{eq:s_eqn}
   s =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
 \end{equation}
 %
-In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce profit~($P$) to the device owner.
-The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings.
+In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce unit savings~($s$) to the device owner.
+The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings ($c_{expected}$).
 
 Eq.~\ref{eq:Re_EW} relates 
 %
@@ -495,9 +494,13 @@ it indicates how economy-wide rebound will change with device-level rebound:
   \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f} \; .
 \end{equation}
 
+**** In the equation above, should $p_{E_f}$ be $s$? ****
+
+**** Discuss how first derivative changes sign with kIs. ****
 
 
-<<analysis, echo = FALSE>>=
+
+<<initial_calcs, echo = FALSE>>=
 
 ###########################
 # Re_dev, device level rebound
@@ -511,6 +514,7 @@ Re_dev_car <- 0.222
 ###########################
 
 mpc <- 0.9
+k <- 1 / (1-mpc)
 
 ###########################
 # I_E_f, final energy intensity of the U.S. economy.
@@ -582,8 +586,9 @@ s_car_marginal_gal <- p_E_f_car_gal - C_install_car_marginal / ((1 - Re_dev_car)
 s_car_marginal <- p_E_f_car - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
 assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, tol = 1e-6))
 assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
+@
 
-
+<<baseline. echo = FALSE>>=
 Base <- expand.grid(case = c("light", "car"), 
                     marginal = c(TRUE, FALSE), 
                     base = c(TRUE)) %>% 
@@ -623,7 +628,9 @@ Base <- expand.grid(case = c("light", "car"),
     C_install = NULL,
     E_sav_dev_expected = NULL
   )
+@
 
+<<parametric>>=
 # Make the parametric study data frames
 
 varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
@@ -665,7 +672,11 @@ for (varname in names(varying)) {
 Parametric <- dplyr::bind_rows(Base, Parametric)
 
 # Now make calculations of key parameters
-
+Data <- Parametric %>% 
+  dplyr::mutate(
+    k = 1 / (1-MPC),
+    s = p_E_f - c_expected / (1 - Re_dev)
+  ) %>% View
 @
 
 
