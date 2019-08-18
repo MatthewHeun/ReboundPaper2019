@@ -550,13 +550,13 @@ p_E_f_light <- 0.11 # USD/kW-hr
 # Cost savings claimed by manufacturer
 C_sav_light <- 84 # USD
 # Cost to purchase and install the LED bulb
+# On Amazon: SYLVANIA General Lighting 74765 A19 Efficient 8.5W Soft White 2700K 60W Equivalent A29 LED Light Bulb (24 Pack)
 C_install_light <- 1.5 # USD
 # Expected device-level savings.
 E_sav_dev_expected_light <- C_sav_light / p_E_f_light
 # Net device-level unit savings
 s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
 # Marginal cost to install an LED light
-# On Amazon: SYLVANIA General Lighting 74765 A19 Efficient 8.5W Soft White 2700K 60W Equivalent A29 LED Light Bulb (24 Pack)
 C_install_incandescent <- 24.08 / 24 # Basically $1/light
 C_install_light_marginal <- C_install_light - C_install_incandescent
 
