@@ -397,6 +397,8 @@ On average,
 the economy-wide final energy implications of net, device-level energy cost savings 
 can be estimated by the final energy intensity of economic activity ($I_{E_f}$,
 in units of kW-hr/\$).
+$I_{E_f}$ is calculated by dividing the aggregate final energy consumption by GDP
+as reported by the BEA~\cite{Bureau-of-Economic-Analysis:2019aa}.
 Thus, the freed cash from 
 net, device-level energy cost saving~($C_{sav,dev,net}$) 
 leads to new, economy-wide final energy demand~($E_{nd,EW}$)
