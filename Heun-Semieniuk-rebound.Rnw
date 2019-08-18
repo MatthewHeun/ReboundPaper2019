@@ -525,7 +525,7 @@ k <- 1 / (1 - mpc)
 # From IEA extended energy balances 2018
 TFC_2016_USA_ktoe <- 1515035.0 # total final consumption, ktoe
 # From the BEA
-GDP_2016_USA_PPP_billion2016USD <- 18707.20 # billion 2016 USD
+GDP_2016_USA_PPP_billion2016USD <- 18715.0 # billion 2016 USD
 # Calculate energy intensity in given units.
 I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion2016USD
 # Convert to kW-hr/USD
