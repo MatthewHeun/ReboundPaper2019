@@ -537,7 +537,8 @@ Project_data <- Project_data %>%
     E_dot_sav_net = E_dot_sav_dev - E_dot_nd_EW, 
     # Unit savings of the energy efficiency intervention [$/MJ]
     s = p_E + (C_dot_repl_base - C_dot_repl_EE) / E_dot_sav_dev, 
-    
+    # Economy-wide rebound
+    Re_EW = 1 - (1 - k * I * s) * (1 - Re_dev)
   )
 
 
