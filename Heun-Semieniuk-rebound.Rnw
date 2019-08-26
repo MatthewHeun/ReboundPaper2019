@@ -504,6 +504,46 @@ it indicates how economy-wide rebound will change with device-level rebound:
 
 <<initial_calcs, echo = FALSE>>=
 
+# The next statement reads economic data from the file and converts it to 
+# variables in the global environment.
+# GDP, MPC, and TFC are all read here.
+# These variables are same for all energy efficiency projects.
+economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Economic data") %>% 
+  as.list()
+
+# Read the project data
+Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data")
+
+# Add a column in Project_data for each item in the list of economic_data.
+for (i in 1:length(economic_data)) {
+  Project_data[[names(economic_data[i])]] <- economic_data[[i]]
+}
+
+Project_data <- Project_data %>% 
+  dplyr::mutate(
+    # Expected device-level energy savings rate [MJ/yr]
+    E_dot_sav_dev_expected = (E_dot_emb_base + E_dot_cons_base) - (E_dot_emb_EE + E_dot_cons_EE), 
+    # Actual device-level energy savings rate [MJ/yr]
+    E_dot_sav_dev = (1 - Re_dev) * E_dot_sav_dev_expected, 
+    # Device-level net cost savings rate [$/yr]
+    C_dot_sav_dev_net = E_dot_sav_dev * p_E + (C_dot_repl_base - C_dot_repl_EE),
+    # Multiplier [-]
+    k = 1 / (1 - MPC) - 1, 
+    # Energy intensity [MJ/$]
+    I = TFC / GDP,
+    # Rate of new demand for energy [MJ/yr]
+    E_dot_nd_EW = C_dot_sav_dev_net * k * I, 
+    # Rate of net energy savings [MJ/yr]
+    E_dot_sav_net = E_dot_sav_dev - E_dot_nd_EW, 
+    # Unit savings of the energy efficiency intervention [$/MJ]
+    s = p_E + (C_dot_repl_base - C_dot_repl_EE) / E_dot_sav_dev, 
+    
+  )
+
+
+
+
+
 ###########################
 # Re_dev, device level rebound
 ###########################
