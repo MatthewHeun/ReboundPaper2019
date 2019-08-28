@@ -521,6 +521,8 @@ for (i in 1:length(economic_data)) {
 
 Project_data <- Project_data %>% 
   dplyr::mutate(
+    # Replacement cost saving rate [$/yr]
+    C_dot_sav_repl = C_dot_repl_base - C_dot_repl_EE,
     # Expected device-level energy savings rate [MJ/yr]
     E_dot_sav_dev_expected = (E_dot_emb_base + E_dot_cons_base) - (E_dot_emb_EE + E_dot_cons_EE), 
     # Actual device-level energy savings rate [MJ/yr]
