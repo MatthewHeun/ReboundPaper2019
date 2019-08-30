@@ -504,6 +504,15 @@ it indicates how economy-wide rebound will change with device-level rebound:
 
 <<initial_calcs, echo = FALSE>>=
 
+Re_EW_func <- function(MPC, I, p_E, C_dot_repl_base, C_dot_repl_EE, Re_dev, E_dot_cons_base, E_dot_cons_EE, phi){
+  C_dot_sav_repl <- C_dot_repl_base - C_dot_repl_EE
+  E_dot_sav_dev_cons_expected <- E_dot_cons_base - E_dot_cons_EE
+  E_dot_sav_dev_cons <- (1 - Re_dev) * E_dot_sav_dev_cons_expected
+  s <- p_E + C_dot_sav_repl / E_dot_sav_dev_cons
+  k <- 1 / (1 - MPC) - 1
+  Re_EW <- 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+}
+
 # The next statement reads economic data from the file and converts it to 
 # variables in the global environment.
 # GDP, MPC, and TFC are all read here.
@@ -548,97 +557,10 @@ Project_data <- Project_data %>%
     # Ratio of embodied to consumed device-level energy savings
     phi = E_dot_sav_dev_emb / E_dot_sav_dev_cons,
     # Economy-wide rebound
-    Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+    # Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+    Re_EW = Re_EW_func(MPC = MPC, I = I, p_E = p_E, C_dot_repl_base = C_dot_repl_base, C_dot_repl_EE = C_dot_repl_EE,
+                       Re_dev = Re_dev, E_dot_cons_base = E_dot_cons_base, E_dot_cons_EE = E_dot_cons_EE, phi = phi)
   )
-
-
-
-# 
-# 
-# ###########################
-# # Re_dev, device level rebound
-# ###########################
-# 
-# Re_dev_light <- 0.06
-# Re_dev_car <- 0.222
-# 
-# ###########################
-# # MPC, marginal propensity to consume
-# ###########################
-# 
-# mpc <- 0.9
-# k <- 1 / (1 - mpc)
-# 
-# ###########################
-# # I_E_f, final energy intensity of the U.S. economy.
-# ###########################
-# 
-# # From IEA extended energy balances 2018
-# TFC_2016_USA_ktoe <- 1515035.0 # total final consumption, ktoe
-# # From the BEA
-# GDP_2016_USA_PPP_billion2016USD <- 18715.0 # billion 2016 USD
-# # Calculate energy intensity in given units.
-# I_E_f_ktoe_per_billion_dollars <- TFC_2016_USA_ktoe / GDP_2016_USA_PPP_billion2016USD
-# # Convert to kW-hr/USD
-# # divide by 1e9 to get per USD.
-# # Multiply by 11630000  kWhr_per_ktoe to convert from ktoe to kW-hr.
-# # According to the IEA's unit converter website 
-# # at https://www.iea.org/statistics/resources/unitconverter/, 
-# # 1 ktoe = 11630000 kW-hr.
-# kWhr_per_ktoe <- 11630000
-# I_E_f_kWhr <- I_E_f_ktoe_per_billion_dollars / 1e9 * kWhr_per_ktoe
-# # Set up conversion factor for kW-hr to gallons of fuel for later.
-# # 1 gal = 33.41 kW-hr
-# kWhr_per_gal <- 33.41 
-# 
-# ###########################
-# # s, Unit savings
-# ###########################
-# 
-# # From the LED packaging:
-# # Assumed electricity price (final energy)
-# p_E_f_light <- 0.11 # USD/kW-hr
-# # Cost savings claimed by manufacturer
-# C_sav_light <- 84 # USD
-# # Cost to purchase and install the LED bulb
-# # On Amazon: SYLVANIA General Lighting 74765 A19 Efficient 8.5W Soft White 2700K 60W Equivalent A29 LED Light Bulb (24 Pack)
-# C_install_light <- 1.5 # USD
-# # Expected device-level savings.
-# E_sav_dev_expected_light <- C_sav_light / p_E_f_light
-# # Net device-level unit savings
-# s_light <- p_E_f_light - C_install_light / ((1 - Re_dev_light) * E_sav_dev_expected_light)
-# # Marginal cost to install an LED light
-# C_install_incandescent <- 24.08 / 24 # Basically $1/light
-# C_install_light_marginal <- C_install_light - C_install_incandescent
-# 
-# # Automobile calculations
-# p_E_f_car_gal <- 2.82 # USD/gal (Michigan)
-# p_E_f_car <- p_E_f_car_gal / kWhr_per_gal # Convert to USD/kWhr
-# C_install_car_marginal <- 1000 # USD.  Efficiency improvements can be obtained for a 1000 USD investment.
-# eta_improvement <- 1.25
-# C_car <- 25774 # USD, median cost of a light duty vehicle in the U.S., 2018.
-# C_install_car <- C_car + C_install_car_marginal # USD
-# lifetime_car <- 15 # years
-# duty_car <- 12000 # miles/year
-# eta_car_baseline_gal <- 37.7 # mi/gal in 2016.  Source: US bureau of transportation statistics, Table 4_23.xlsx.
-# eta_car_baseline <- eta_car_baseline_gal / kWhr_per_gal # mi/kWhr
-# eta_car_enhanced_gal <- eta_car_baseline_gal * eta_improvement # mi/gal.  25 % improvement.
-# eta_car_enhanced <- eta_car_baseline * eta_improvement # mi/kWhr.  25 % improvement.
-# E_fuel_baseline_gal <- duty_car * lifetime_car / eta_car_baseline_gal # gal
-# E_fuel_baseline <- duty_car * lifetime_car / eta_car_baseline # kWhr
-# E_fuel_enhanced_gal <- duty_car * lifetime_car / eta_car_enhanced_gal # gal
-# E_fuel_enhanced <- duty_car * lifetime_car / eta_car_enhanced # kWhr
-# E_sav_dev_expected_car_gal <- E_fuel_baseline_gal - E_fuel_enhanced_gal # gal
-# E_sav_dev_expected_car <- E_fuel_baseline - E_fuel_enhanced # kWhr
-# C_sav_car_gal <- E_sav_dev_expected_car_gal * p_E_f_car_gal # USD. From the gallon calculations. Should be same as next calculation.
-# C_sav_car <- E_sav_dev_expected_car * p_E_f_car # USD. From the kWhr calculations. Should be same as above calculation.
-# assertthat::assert_that(assertthat::are_equal(C_sav_car_gal, C_sav_car, tol = 1e-6))
-# s_car_gal <- p_E_f_car_gal - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
-# s_car <- p_E_f_car - C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
-# s_car_marginal_gal <- p_E_f_car_gal - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car_gal) # USD/gal
-# s_car_marginal <- p_E_f_car - C_install_car_marginal / ((1 - Re_dev_car) * E_sav_dev_expected_car) # USD/kWhr
-# assertthat::assert_that(assertthat::are_equal(s_car_gal / s_car, kWhr_per_gal, tol = 1e-6))
-# assertthat::assert_that(assertthat::are_equal(s_car_marginal_gal / s_car_marginal, kWhr_per_gal, tol = 1e-6))
 @
 
 <<values_for_backfire>>=
@@ -647,7 +569,7 @@ p_E_f_for_Re_EW1_light <- 1 / (k * I_E_f_kWhr) + C_install_light / ((1 - Re_dev_
 p_E_f_for_Re_EW1_car <- 1 / (k * I_E_f_kWhr) + C_install_car / ((1 - Re_dev_car) * E_sav_dev_expected_car * kWhr_per_gal)
 Re_dev_for_Re_EW1_light <- (1 - k*I_E_f_kWhr*(p_E_f_light - C_install_light/E_sav_dev_expected_light)) / (1 - k*I_E_f_kWhr*p_E_f_light)
 Re_dev_for_Re_EW1_car <- (1 - k*I_E_f_kWhr*(p_E_f_car - C_install_car/E_sav_dev_expected_car)) / (1 - k*I_E_f_kWhr*p_E_f_car)
-I_E_f_for_Re_EW1_light <- 1 / (k * s_light)
+I_E_f_for_Re_EW1_light <- 1 / (k * s_light)ag
 unit_cost_nominal_light <- C_install_light / E_sav_dev_expected_light
 unit_cost_for_Re_EW1_light <- (1 - Re_dev_light) * (p_E_f_light - 1/(k*I_E_f_kWhr))
 MPC_for_Re_EW1_light <- 1 - I_E_f_kWhr * s_light
