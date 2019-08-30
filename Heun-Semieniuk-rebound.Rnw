@@ -566,16 +566,67 @@ Project_data <- Project_data %>%
     psi = c_impl / p_E,
     # Unit savings of the energy efficiency intervention [$/MJ]
     s = p_E * (1 - psi / (1 - Re_dev)),
-    # Ratio of embodied to consumed device-level energy savings
-    phi = E_dot_sav_dev_emb / E_dot_sav_dev_cons,
+    # Ratio of embodied to expected consumed device-level energy savings
+    phi = E_dot_sav_dev_emb / E_dot_sav_dev_cons_expected,
     # Economy-wide rebound
-    Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+    Re_EW = (1 - k*I*p_E)*Re_dev + k*I*p_E*(1 - psi) - phi
     # Re_EW = Re_EW_func(MPC = MPC, I = I, p_E = p_E, psi = psi, Re_dev = Re_dev, phi = phi), 
   )
 @
 
 <<Parametric_Analysis>>=
-variations <- list(MPC = seq(0.5, 0.99, by = 0.01), psi = seq(0.01, 2.0, by = 0.01))
+variations <- list(MPC = seq(0.5, 0.99, by = 0.01), 
+                   I = seq(2, 6, by = 0.1),
+                   p_E = seq(0.01, 0.05, by = 0.001),
+                   psi = seq(0.01, 2.0, by = 0.01), 
+                   Re_dev = seq(0.0, 0.99, by = 0.01),
+                   phi = seq(0.1, 4, by = 0.02))
+
+Parametric <- data.frame()
+
+for (varname in names(variations)) {
+  range <- variations[[varname]]
+  first_col <- data.frame(range) %>% magrittr::set_names(varname)
+  temp <- Project_data %>%
+    # Keep only the important columns in Project_data
+    dplyr::select(-C_dot_repl_base, -E_dot_emb_base, -E_dot_cons_base, -C_dot_repl_EE, -E_dot_emb_EE, -E_dot_cons_EE, 
+                  -E_dot_sav_dev_emb, -E_dot_sav_dev_cons_expected, -C_dot_sav_repl, -E_dot_sav_dev_expected, -E_dot_sav_dev_cons, 
+                  -E_dot_sav_dev, -C_dot_sav_dev_net, -E_dot_nd_EW, -C_dot_impl, -c_impl) %>% 
+    # Eliminate the varname column in Project_data
+    dplyr::mutate(
+      !!as.name(varname) := NULL
+    )
+  # Get the remaining names from temp
+  nms <- names(temp)
+  # Grab each row of Base and make a data frame from it.
+  for (i in 1:nrow(Project_data)) {
+    df_piece <- first_col
+    # Pick the row we want from temp
+    row <- temp[i, ]
+    # Make a column for every name in the desired row
+    for (nm in nms) {
+      df_piece <- df_piece %>%
+        dplyr::mutate(
+          !!as.name(nm) := row[[nm]],
+          varying = varname,
+          base = FALSE
+        )
+    }
+    Parametric <- dplyr::bind_rows(Parametric, df_piece)
+  }
+}
+
+# Now make calculations of key parameters
+Data <- Parametric %>% 
+  dplyr::mutate(
+    k = 1 / (1-MPC) - 1,
+    s = p_E * (1 - psi / (1 - Re_dev)),
+    phi = 
+    Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+  )
+
+
+
 @
 
 <<values_for_backfire>>=
