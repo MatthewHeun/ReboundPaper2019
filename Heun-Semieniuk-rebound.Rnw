@@ -504,13 +504,19 @@ it indicates how economy-wide rebound will change with device-level rebound:
 
 <<initial_calcs, echo = FALSE>>=
 
-Re_EW_func <- function(MPC, I, p_E, C_dot_repl_base, C_dot_repl_EE, Re_dev, E_dot_cons_base, E_dot_cons_EE, phi){
-  C_dot_sav_repl <- C_dot_repl_base - C_dot_repl_EE
-  E_dot_sav_dev_cons_expected <- E_dot_cons_base - E_dot_cons_EE
-  E_dot_sav_dev_cons <- (1 - Re_dev) * E_dot_sav_dev_cons_expected
-  s <- p_E + C_dot_sav_repl / E_dot_sav_dev_cons
+Re_EW_func <- function(MPC, I, p_E, psi, Re_dev, phi){
+  max_length <- max(length(MPC), length(I), length(p_E), length(psi), length(Re_dev), length(phi))
+  MPC <- rep_len(MPC, max_length)
+  I <- rep_len(I, max_length)
+  p_E <- rep_len(p_E, max_length)
+  psi <- rep_len(psi, max_length)
+  Re_dev <- rep_len(Re_dev, max_length)
+  phi <- rep_len(phi, max_length)
+  
+  s <- p_E * (1 - psi / (1 - Re_dev))
   k <- 1 / (1 - MPC) - 1
   Re_EW <- 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+  return(Re_EW)
 }
 
 # The next statement reads economic data from the file and converts it to 
@@ -552,15 +558,24 @@ Project_data <- Project_data %>%
     E_dot_nd_EW = C_dot_sav_dev_net * k * I,
     # Rate of net energy savings [MJ/yr]
     E_dot_sav_net = E_dot_sav_dev - E_dot_nd_EW,
+    # Cost of implementing EE intervention relative to base [$/yr]
+    C_dot_impl = C_dot_repl_EE - C_dot_repl_base,
+    # Unit cost of implementation [$/MJ]
+    c_impl = C_dot_impl / E_dot_sav_dev_cons_expected,
+    # Ratio of implementaion cost to energy price [-]
+    psi = c_impl / p_E,
     # Unit savings of the energy efficiency intervention [$/MJ]
-    s = p_E + C_dot_sav_repl / E_dot_sav_dev_cons,
+    s = p_E * (1 - psi / (1 - Re_dev)),
     # Ratio of embodied to consumed device-level energy savings
     phi = E_dot_sav_dev_emb / E_dot_sav_dev_cons,
     # Economy-wide rebound
-    # Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
-    Re_EW = Re_EW_func(MPC = MPC, I = I, p_E = p_E, C_dot_repl_base = C_dot_repl_base, C_dot_repl_EE = C_dot_repl_EE,
-                       Re_dev = Re_dev, E_dot_cons_base = E_dot_cons_base, E_dot_cons_EE = E_dot_cons_EE, phi = phi)
+    Re_EW = 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
+    # Re_EW = Re_EW_func(MPC = MPC, I = I, p_E = p_E, psi = psi, Re_dev = Re_dev, phi = phi), 
   )
+@
+
+<<Parametric_Analysis>>=
+variations <- list(MPC = seq(0.5, 0.99, by = 0.01), psi = seq(0.01, 2.0, by = 0.01))
 @
 
 <<values_for_backfire>>=
