@@ -565,11 +565,10 @@ If $\gamma > 1$, the energy efficiency intervention is uneconomic.
   remove later
 \end{equation}
 %
-
-$s$ becomes
+Written in terms of $\gamma$, $s$ becomes
 %
 \begin{equation} \label{eq:s2}
-  s = p_E - \frac{c_{impl}}{1 - Re_{edev}} = p_E - \frac{\gamma p_E}{1 - Re_{dev}} = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}}\right) 
+  s = p_E - \frac{c_{impl}}{1 - Re_{edev}} = p_E - \frac{\gamma p_E}{1 - Re_{dev}} = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}}\right) \; .
 \end{equation}
 
 Substituting Equation~\ref{eq:s_prelim} into Equation~\ref{eq:E_dot_sav_EW_net} gives
@@ -582,10 +581,62 @@ Substituting Equation~\ref{eq:s_prelim} into Equation~\ref{eq:E_dot_sav_EW_net} 
 Next, we define $\varepsilon$ as
 %
 \begin{equation} \label{eq:epsilon}
-  \varepsilon \equiv \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dir,expected}} \; .
+  \varepsilon \equiv \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir,expected}} \; .
 \end{equation}
 %
+$\varepsilon$ (for ``embodied'') indicates the relative magnitude of the embodied energy cost rate increase
+compared to the expected device-level direct energy savings
+from an energy efficiency intervention.
+$\varepsilon < 0$ indicates that the energy efficiency intervention reduces 
+the embodied energy cost rate of an end-use machine.
+In Equation~\ref{eq:E_dot_sav_EW_net_2}, 
+the ratio $\frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}}$
+can be rewritten in terms of $\varepsilon$ by substituting Equation~\ref{eq:E_dot_sav_dev_dir}
+to obtain
+%
+\begin{equation} \label{eq:E_dot_ratio}
+  \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} = \frac{\dot{E}_{cost,dev,emb}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} = \frac{\varepsilon}{(1 - Re_{dev})} \; .
+\end{equation}
 
+Substitute Equation~\ref{eq:E_dot_ratio} into Equation~\ref{eq:E_dot_sav_EW_net_2} to obtain
+%
+\begin{equation} \label{eq:E_dot_sav_EW_net_3}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left( 1 - \frac{\varepsilon}{(1 - Re_{dev})} - k I s \right)  \; .
+\end{equation}
+
+
+Economy-wide rebound is defined as 
+%
+\begin{equation} \label{eq:Re_EW_1}
+  Re_{EW} \equiv 1 - \frac{\dot{E}_{sav,EW,net}}{\dot{E}_{sav,dev,dir,expected}} \; .
+\end{equation}
+
+Substitute Equations~\ref{eq:E_dot_sav_EW_net_3} and~\ref{eq:E_dot_sav_dev_dir_expected}
+into Equation~\ref{eq:Re_EW_prelim} to obtain
+%
+\begin{equation} \label{eq:Re_EW2}
+  Re_{EW} = 1 - \frac{\dot{E}_{sav,dev,dir} \left( 1 - \frac{\varepsilon}{1 - Re_{dev}} - k I s \right) }
+                     {\frac{\dot{E}_{sav,dev,dir}}{1 - Re_{dev}}} \; .
+\end{equation}
+%
+%
+\begin{equation} 
+  remove later
+\end{equation}
+%
+\begin{equation} 
+  remove later
+\end{equation}
+%
+Simplification, substitution of Equation~\ref{eq:s2}, and regrouping terms yields
+an equation that relates 
+economy-wide rebound~($Re_{EW}$) and 
+device-level rebound~($Re_{dev}$):
+%
+\begin{equation} \label{eq:Re_EW}
+  Re_{EW} = Re_{dev} + \varepsilon + (1 - Re_{dev} - \gamma) k I p_E \; .
+\end{equation}
+%
 
 
 ****** Ended here. ******
