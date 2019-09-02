@@ -331,7 +331,7 @@ Section~\ref{sec:conclusion} concludes and provides suggestions for future work.
 \label{sec:theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This section develops a mathematical description and model of the theoretical framework 
+This section develops a mathematical description and model
 for understanding the relationship between device-level and economy-wide rebound.
 The basis for the theoretical framework is the prose description 
 in Section~\ref{sec:definitions} above.
@@ -430,7 +430,7 @@ $\dot{E}_{sav,dev,dir}$ for later use.
   \dot{E}_{sav,dev,dir} = (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}
 \end{equation}
 
-Actual, device-level energy saving is the difference between direct energy savings and embodied energy cost.
+Actual, device-level energy savings is the difference between direct energy savings and embodied energy cost.
 %
 \begin{equation} \label{eq:E_dot_sav_dev_prelim}
   \dot{E}_{sav,dev} = \dot{E}_{sav,dev,dir} - \dot{E}_{cost,dev,emb}
@@ -636,8 +636,31 @@ device-level rebound~($Re_{dev}$):
 \begin{equation} \label{eq:Re_EW}
   Re_{EW} = Re_{dev} + \varepsilon + (1 - Re_{dev} - \gamma) k I p_E \; .
 \end{equation}
-%
 
+Equation~\ref{eq:Re_EW} contains three terms, one for each contributor to economy-wide rebound,
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item device-level rebound ($Re_{dev}$),
+  
+  \item embodied energy effects ($\varepsilon$), and
+  
+  \item respending with economic interactions $(1 - Re_{dev} - \gamma) k I p_E$.
+    
+\end{enumerate*}
+
+The first term ($Re_{dev}$ is intuitive.
+Device-level rebound is the driver for econoy-wide rebound.
+In the absence of embodied energy and respending effects, $Re_{EW} = Re_{dev}$.
+Embodied energy effects and respending effects modify device-level rebound.
+
+The second term ($\varepsilon$) can be expressed as
+%
+\begin{equation} \label{eq:epsilon_expanded}
+  \varepsilon = \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir,expected}} 
+              = \frac{\dot{E}_{emb,EE} - \dot{E}_{emb,base}}{\dot{E}_{sav,dev,dir,expected}}
+\end{equation}
+%
 
 ****** Ended here. ******
 
