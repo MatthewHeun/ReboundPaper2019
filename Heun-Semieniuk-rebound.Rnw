@@ -419,6 +419,175 @@ Device-level rebound~($Re_{dev}$) is defined for direct energy only.
 where $\dot{E}_{sav,dev,dir}$ is the actual, device-level energy savings rate (in MJ/yr), and
 $\dot{E}_{sav,dev,dir,expected}$ is the expected device-level energy savings rate (in MJ/yr).
 
+Equation~\ref{eq:Re_dev} can be solved for $\dot{E}_{sav,dev,dir,expected}$ and 
+$\dot{E}_{sav,dev,dir}$ for later use.
+%
+\begin{equation} \label{eq:E_dot_sav_dev_dir_expected}
+  \dot{E}_{sav,dev,dir,expected} = 1 - \frac{\dot{E}_{sav,dev,dir}}{1 - Re_{dev}}
+\end{equation}
+%
+\begin{equation} \label{eq:E_dot_sav_dev_dir}
+  \dot{E}_{sav,dev,dir} = (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}
+\end{equation}
+
+Actual, device-level energy saving is the difference between direct energy savings and embodied energy cost.
+%
+\begin{equation} \label{eq:E_dot_sav_dev_prelim}
+  \dot{E}_{sav,dev} = \dot{E}_{sav,dev,dir} - \dot{E}_{cost,dev,emb}
+\end{equation}
+
+Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:E_dot_sav_dev_prelim} gives
+%
+\begin{equation} \label{eq:E_dot_sav_dev}
+  \dot{E}_{sav,dev} = (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected} - \dot{E}_{cost,dev,emb} \; .
+\end{equation}
+
+%
+\begin{equation} \label{eq:placeholder}
+  Delete this equation later.
+\end{equation}
+%
+
+The device-level, net cost savings resulting from an energy-efficiency intervention is
+%
+\begin{equation} \label{eq:C_dot_sav_dev_net}
+  \dot{C}_{sav,dev,net} = \dot{E}_{sav,dev,dir} \; p_E  - \dot{C}_{impl} \; .
+\end{equation}
+
+The owner of an energy-efficient device respends $\dot{C}_{sav,dev,net}$
+in the economy. 
+Each \$ spent:
+%
+\begin{itemize}
+
+  \item spins around the economy by the multiplier effect ($k$) and 
+
+  \item has energy implications at, on average, the final energy intensity ($I$) of the economy.
+
+\end{itemize}
+%
+\begin{equation} \label{eq:I_eqn}
+  I \equiv \frac{E}{GDP}
+\end{equation}
+%
+Energy intensity ($I$) has units of MJ/\$.
+
+The multiplier ($k$) tells how much of $\dot{C}_{sav,dev,net}$ is respent by the owner of the machine.
+The multiplier is a function of the marginal propensity to consume ($\mpc$).
+%
+\begin{equation} \label{eq:MPC}
+  k = \frac{\mpc}{1 - \mpc}
+\end{equation}
+%
+See Appendix~\ref{sec:k_derivation} for a derivation of Equaation~\ref{eq:MPC}.
+
+The economy-wide rate of new energy demand caused by respending is the product of
+$\dot{C}_{sav,dev,net}$, $k$, and $I$.
+%
+\begin{equation} \label{eq:E_dot_nd_EW_prelim}
+  \dot{E}_{nd,EW} = \dot{C}_{sav,dev,net} k I
+\end{equation}
+
+Substituting Equation~\ref{eq:C_dot_sav_dev_net} into Equation~\ref{eq:E_dot_nd_EW_prelim} yields
+%
+\begin{equation} \label{eq:E_dot_nd_EW}
+  \dot{E}_{nd,EW} = \left[ \dot{E}_{sav,dev,dir} \; p_E - \dot{C}_{impl}  \right] k I
+\end{equation}
+
+The new, economy-wide energy savings rate is the difference between
+actual, device-level energy savings and economy-wide energy new demand.
+%
+\begin{equation} \label{eq:E_dot_sav_EW_net_prelim}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev} - \dot{E}_{nd,EW}
+\end{equation}
+
+Substituting Equations~\ref{eq:E_dot_sav_dev_prelim} and~\ref{eq:E_dot_nd_EW} into Equation~\ref{eq:E_dot_sav_EW_net} yields
+%
+\begin{equation} \label{eq:E_dot_sav_EW_net_prelim}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} - \dot{E}_{cost,dev,emb} - \left[ \dot{E}_{sav,dev,dir} \; p_E - \dot{C}_{impl}  \right] k I \; .
+\end{equation}
+%
+Factoring Equation~\ref{eq:E_dot_sav_EW_net_prelim} yields
+%
+\begin{equation} \label{eq:E_dot_sav_EW_net}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} 
+                         \left\{ 1 
+                                 - \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} 
+                                 - \left[ p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}}\right] k I \right\} \; .
+\end{equation}
+
+The net savings (on a per MJ basis) of an energy-efficiency intervention ($s$) is given by
+%
+\begin{equation} \label{eq:s_prelim}
+  s \equiv p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} \; .
+\end{equation}
+%
+$s$ compares
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the price of buying a MJ of energy ($p_E$) with        
+  
+  \item the cost to save a MJ of energy $\left( \frac{\dot{C}_{impl}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \right)$.
+    
+\end{enumerate*}
+%
+When $s > 0$, an energy efficiency intervention saves money for the owner of the energy-efficient machine.
+When $s < 0$, an energy efficiency intervention is uneconomic.
+Note that when $Re_{dev} \rightarrow 1$, net savings~($s$) are eroded.
+
+Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:s} gives
+%
+\begin{equation} \label{eq:s}
+  s \equiv p_E - \frac{\dot{C}_{impl}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \; .
+\end{equation}
+%
+
+The ratio $\frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$ represents 
+the expected, per-unit-energy-saved, net cost increase of implementing an energy-efficiency intervntion. 
+The ratio has the same units as energy price (\$/MJ).
+So we define $c_{impl} \equiv \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$.
+$c_{impl}$ is the expected cost increase of an energy efficiency intervention.
+
+The unit cost savings~($s$) can be rewritten by defining 
+%
+\begin{equation} \label{eq:gamma}
+  \gamma \equiv \frac{c_{impl}}{p_E} = \frac{\dot{C}_{impl}}{p_E \dot{E}_{sav,dev,dir,expected}} \; .
+\end{equation}
+%
+$\gamma$ is the ratio of the cost rate to implement a energy efficiency intervention
+to the expected direct energy savings at the device level.
+When $\gamma < 1$, device-level direct energy cost savings are expected (but may not materialize due to device-level rebound).
+If $\gamma > 1$, the energy efficiency intervention is uneconomic.
+
+%
+\begin{equation} 
+  remove later
+\end{equation}
+%
+
+$s$ becomes
+%
+\begin{equation} \label{eq:s2}
+  s = p_E - \frac{c_{impl}}{1 - Re_{edev}} = p_E - \frac{\gamma p_E}{1 - Re_{dev}} = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}}\right) 
+\end{equation}
+
+Substituting Equation~\ref{eq:s_prelim} into Equation~\ref{eq:E_dot_sav_EW_net} gives
+%
+\begin{equation} \label{eq:E_dot_sav_EW_net_2}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left\{ 1 - \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} - k I s \right\} \; .
+\end{equation}
+%
+
+Next, we define $\varepsilon$ as
+%
+\begin{equation} \label{eq:epsilon}
+  \varepsilon \equiv \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dir,expected}} \; .
+\end{equation}
+%
+
+
+
 ****** Ended here. ******
 
 Some of the expected device-level energy savings can be ``taken back'' by 
@@ -577,21 +746,6 @@ it indicates how economy-wide rebound will change with device-level rebound:
 
 
 <<initial_calcs, echo = FALSE>>=
-
-Re_EW_func <- function(MPC, I, p_E, psi, Re_dev, phi){
-  max_length <- max(length(MPC), length(I), length(p_E), length(psi), length(Re_dev), length(phi))
-  MPC <- rep_len(MPC, max_length)
-  I <- rep_len(I, max_length)
-  p_E <- rep_len(p_E, max_length)
-  psi <- rep_len(psi, max_length)
-  Re_dev <- rep_len(Re_dev, max_length)
-  phi <- rep_len(phi, max_length)
-  
-  s <- p_E * (1 - psi / (1 - Re_dev))
-  k <- 1 / (1 - MPC) - 1
-  Re_EW <- 1 + (k*I*s - (1 + phi)) * (1 - Re_dev)
-  return(Re_EW)
-}
 
 # The next statement reads economic data from the file and converts it to 
 # variables in the global environment.
@@ -1364,8 +1518,8 @@ Grebor Semieniuk's time was funded as part of ****.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of rebound equation}
-\label{sec:derivation_of_rebound_equation}
+\section{Derivation of multiplier equation}
+\label{sec:k_derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
