@@ -580,6 +580,7 @@ variations <- list(MPC = seq(0.5, 0.99, by = 0.01),
                    gamma = seq(0.01, 2.0, by = 0.01), 
                    epsilon = seq(0.1, 4, by = 0.02))
 
+# Create data frame of varying variables
 Parametric <- data.frame()
 
 for (varname in names(variations)) {
@@ -612,112 +613,17 @@ for (varname in names(variations)) {
   }
 }
 
-# Now make calculations of key parameters
+# Now calculate parameteric data
 Parametric <- Parametric %>% 
   dplyr::select(Source, Example, Varying, MPC, p_E, I, Re_dev, epsilon, gamma) %>% 
   dplyr::mutate(
     k = MPC / (1-MPC),
     Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E
   ) %>% 
+  # Create a nested data frame with a Graph_Data column containing nested data frames.
   dplyr::group_by(Varying) %>% 
   tidyr::nest(.key = "Graph_Data")
 @
-
-<<baseline, echo = FALSE>>=
-Base <- expand.grid(case = c("Light", "Car"), 
-                    costing = c("Incremental", "Full"), 
-                    base = c(TRUE)) %>% 
-  dplyr::arrange(case, costing, base) %>% 
-  dplyr::mutate(
-    # MPC is unitless
-    MPC = mpc,
-    # I_E_f is in $/kW-hr
-    I_E_f = I_E_f_kWhr, 
-    # Re_dev is unitless
-    Re_dev = dplyr::case_when(
-      case == "Light" ~ Re_dev_light,
-      case == "Car" ~ Re_dev_car,
-      TRUE ~ NA_real_
-    ),
-    # p_E_f is in $/kW-hr
-    p_E_f = dplyr::case_when(
-      case == "Light" ~ p_E_f_light,
-      case == "Car" ~ p_E_f_car,
-      TRUE ~ NA_real_
-    ),
-    # C_install in $/kW-hr
-    C_install = dplyr::case_when(
-      case == "Light" & costing == "Full" ~ C_install_light,
-      case == "Light" & costing == "Incremental" ~ C_install_light_marginal,
-      case == "Car" & costing == "Full" ~ C_install_car,
-      case == "Car" & costing == "Incremental" ~ C_install_car_marginal,
-      TRUE ~ NA_real_
-    ),
-    # E_sav_dev_expected in kW-hr
-    E_sav_dev_expected = dplyr::case_when(
-      case == "Light" ~ E_sav_dev_expected_light,
-      case == "Car" ~ E_sav_dev_expected_car,
-      TRUE ~ NA_real_
-    ),
-    c_expected = C_install / E_sav_dev_expected, # $/kW-hr, unit cost of expected energy savings or the expected cost to save 1 kW-hr
-    C_install = NULL,
-    E_sav_dev_expected = NULL
-  )
-@
-
-<<parametric, echo = FALSE>>=
-# Set the ranges for varying the key parameters
-varying <- list(MPC = seq(from = 0.98, to = 0.5, by = -0.005),
-                I_E_f = seq(from = 0.6, to = 1.2, by = 0.01),
-                Re_dev = seq(from = 0, to = 0.99, by = 0.01),
-                p_E_f = seq(from = 0.05, to = 0.15, by = 0.01),
-                c_expected = seq(from = 0, to = 1, by = 0.01))
-
-Parametric <- data.frame()
-
-for (varname in names(varying)) {
-  range <- varying[[varname]]
-  first_col <- data.frame(range) %>% magrittr::set_names(varname)
-  # Eliminate the var column in Base
-  temp <- Base %>%
-    dplyr::mutate(
-      !!as.name(varname) := NULL
-    )
-  # Get the remaining names from temp
-  nms <- names(temp)
-  # Grab each row of Base and make a data frame from it.
-  for (i in 1:nrow(Base)) {
-    df_piece <- first_col
-    # Pick the row we want from temp
-    row <- temp[i, ]
-    # Make a column for every name in the desired row
-    for (nm in nms) {
-      df_piece <- df_piece %>%
-        dplyr::mutate(
-          !!as.name(nm) := row[[nm]],
-          varying = varname,
-          base = FALSE
-        )
-    }
-    Parametric <- dplyr::bind_rows(Parametric, df_piece)
-  }
-}
-
-# Add the base parameters to the data frame
-Parametric <- dplyr::bind_rows(Base, Parametric)
-
-# Now make calculations of key parameters
-Data <- Parametric %>% 
-  dplyr::mutate(
-    k = 1 / (1-MPC),
-    s = p_E_f - c_expected / (1 - Re_dev), 
-    kIs = k * I_E_f_kWhr * s,
-    Re_EW = 1 - (1 - kIs) * (1 - Re_dev), 
-    # Set orders for graphing
-    costing = factor(costing, levels = c("Incremental", "Full"))
-  )
-@
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
