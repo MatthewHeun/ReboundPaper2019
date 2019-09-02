@@ -527,29 +527,30 @@ economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficie
   as.list()
 
 # Read the project data
-Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data")
+Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
+  tibble::as_tibble()
 
 # Add a column in Project_data for each item in the list of economic_data.
 for (i in 1:length(economic_data)) {
   Project_data[[names(economic_data[i])]] <- economic_data[[i]]
 }
 
-Project_data <- Project_data %>% 
+Project_data <- Project_data %>%
   dplyr::mutate(
-    # Expected embodied energy savings at the device level [MJ/yr]
-    E_dot_sav_dev_emb = E_dot_emb_base - E_dot_emb_EE,
+    # Expected embodied energy cost at the device level [MJ/yr]
+    E_dot_cost_dev_emb = E_dot_emb_EE - E_dot_emb_base,
     # Expected consumed energy savings at the device level [MJ/yr]
-    E_dot_sav_dev_cons_expected = E_dot_cons_base - E_dot_cons_EE,
-    # Replacement cost saving rate [$/yr]
-    C_dot_sav_repl = C_dot_repl_base - C_dot_repl_EE,
+    E_dot_sav_dev_dir_expected = E_dot_dir_base - E_dot_dir_EE,
+    # Implementation cost rate [$/yr]
+    C_dot_impl = C_dot_repl_EE - C_dot_repl_base,
     # Expected device-level energy savings rate [MJ/yr]
-    E_dot_sav_dev_expected = E_dot_sav_dev_emb + E_dot_sav_dev_cons_expected,
+    E_dot_sav_dev_expected = E_dot_sav_dev_dir_expected - E_dot_cost_dev_emb,
     # Actual device-level savings of consumed energy [MJ/yr]
-    E_dot_sav_dev_cons = (1 - Re_dev) * E_dot_sav_dev_cons_expected,
+    E_dot_sav_dev_dir = (1 - Re_dev) * E_dot_sav_dev_dir_expected,
     # Actual device-level energy savings rate [MJ/yr]
-    E_dot_sav_dev = E_dot_sav_dev_emb + E_dot_sav_dev_cons,
+    E_dot_sav_dev = E_dot_sav_dev_dir - E_dot_cost_dev_emb,
     # Device-level net cost savings rate [$/yr]
-    C_dot_sav_dev_net = E_dot_sav_dev_cons * p_E + C_dot_sav_repl,
+    C_dot_sav_dev_net = E_dot_sav_dev_dir * p_E + C_dot_impl,
     # Multiplier [-]
     k = 1 / (1 - MPC) - 1,
     # Energy intensity [MJ/$]
@@ -557,20 +558,17 @@ Project_data <- Project_data %>%
     # Rate of new demand for energy [MJ/yr]
     E_dot_nd_EW = C_dot_sav_dev_net * k * I,
     # Rate of net energy savings [MJ/yr]
-    E_dot_sav_net = E_dot_sav_dev - E_dot_nd_EW,
-    # Cost of implementing EE intervention relative to base [$/yr]
-    C_dot_impl = C_dot_repl_EE - C_dot_repl_base,
-    # Unit cost of implementation [$/MJ]
-    c_impl = C_dot_impl / E_dot_sav_dev_cons_expected,
+    E_dot_sav_EW_net = E_dot_sav_dev - E_dot_nd_EW,
+    # Expected unit cost of implementation [$/MJ]
+    c_impl = C_dot_impl / E_dot_sav_dev_dir_expected,
     # Ratio of implementaion cost to energy price [-]
-    psi = c_impl / p_E,
+    gamma = c_impl / p_E,
     # Unit savings of the energy efficiency intervention [$/MJ]
-    s = p_E * (1 - psi / (1 - Re_dev)),
+    s = p_E * (1 - gamma / (1 - Re_dev)),
     # Ratio of embodied to expected consumed device-level energy savings
-    phi = E_dot_sav_dev_emb / E_dot_sav_dev_cons_expected,
+    epsilon = E_dot_cost_dev_emb / E_dot_sav_dev_dir_expected,
     # Economy-wide rebound
-    Re_EW = (1 - k*I*p_E)*Re_dev + k*I*p_E*(1 - psi) - phi
-    # Re_EW = Re_EW_func(MPC = MPC, I = I, p_E = p_E, psi = psi, Re_dev = Re_dev, phi = phi), 
+    Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E
   )
 @
 
@@ -581,8 +579,6 @@ variations <- list(MPC = seq(0.5, 0.99, by = 0.01),
                    psi = seq(0.01, 2.0, by = 0.01), 
                    Re_dev = seq(0.0, 0.99, by = 0.01),
                    phi = seq(0.1, 4, by = 0.02))
-
-Parametric <- data.frame()
 
 for (varname in names(variations)) {
   range <- variations[[varname]]
