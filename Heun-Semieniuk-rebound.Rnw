@@ -361,8 +361,7 @@ The energy-consuming machine for each case (base and EE) has:
   \item replacment costs ($C_{repl}$), 
         the cost to emplace the machine, spread over its life.
         If a machine lasts $\Delta t$ years, 
-        the replacement cost rate ($\dot{C}_{repl}$,
-        spread over the life of the device,
+        the replacement cost rate ($\dot{C}_{repl}$
         is $\dot{C}_{repl} = \frac{C_{repl}}{\Delta t}$.
         The units of $\dot{C}_{repl}$ are \$/yr.
         
@@ -377,12 +376,13 @@ The energy-consuming machine for each case (base and EE) has:
 $\dot{E}_{emb}$, $\dot{E}_{dir}$, and $\dot{C}_{repl}$ are applicable to 
 the base case and the energy-efficient case.
 Thus, we have
-$\dot{E}_{emb,base}$, $\dot{E}_{dir,base}$, and $\dot{C}_{repl,base}$; as well as
+$\dot{E}_{emb,base}$, $\dot{E}_{dir,base}$, and $\dot{C}_{repl,base}$; and
 $\dot{E}_{emb,EE}$, $\dot{E}_{dir,EE}$, and $\dot{C}_{repl,EE}$.
 
 The energy efficient case can have a higher embodied energy rate than the base case,
 representing an ``investment'' of embodied energy to reduce direct energy consumption.
-Higher embodied energy represents an energy cost ($\dot{E}_{cost,dev,emb}$).
+Higher embodied energy represents an energy cost ($\dot{E}_{cost,dev,emb}$)
+of the energy efficiency intervention.
 %
 \begin{equation} \label{eq:E_dot_cost_dev_emb}
   \dot{E}_{cost,dev,emb} = \dot{E}_{emb,EE} - \dot{E}_{emb,base}
@@ -410,7 +410,7 @@ The expected energy savings rate at the device level is
   \dot{E}_{sav,dev,expected} = \dot{E}_{sav,dev,dir,expected} - \dot{E}_{cost,dev,emb} \; .
 \end{equation}
 
-Device-level rebound~($Re_{dev}$) is defined for direct energy only.
+Device-level rebound~($Re_{dev}$) is defined for direct energy consumption only.
 %
 \begin{equation} \label{eq:Re_dev}
   Re_{dev} \equiv 1 - \frac{\dot{E}_{sav,dev,dir}}{\dot{E}_{sav,dev,dir,expected}} \; ,
