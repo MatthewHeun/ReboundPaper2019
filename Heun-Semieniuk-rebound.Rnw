@@ -552,7 +552,7 @@ Project_data <- Project_data %>%
     # Device-level net cost savings rate [$/yr]
     C_dot_sav_dev_net = E_dot_sav_dev_dir * p_E + C_dot_impl,
     # Multiplier [-]
-    k = 1 / (1 - MPC) - 1,
+    k = MPC / (1 - MPC),
     # Energy intensity [MJ/$]
     I = TFC / GDP,
     # Rate of new demand for energy [MJ/yr]
