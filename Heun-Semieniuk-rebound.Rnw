@@ -533,7 +533,7 @@ $s$ compares
 \end{enumerate*}
 %
 When $s > 0$, an energy efficiency intervention saves money for the owner of the energy-efficient machine.
-When $s < 0$, an energy efficiency intervention is uneconomic.
+When $s < 0$, an energy efficiency intervention is uneconomic and unlikely to be pursued.
 Note that when $Re_{dev} \rightarrow 1$, net savings~($s$) are eroded.
 
 Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:s} gives
@@ -558,7 +558,8 @@ The unit cost savings~($s$) can be rewritten by defining
 $\gamma$ is the ratio of the cost rate to implement a energy efficiency intervention
 to the expected direct energy savings at the device level.
 When $\gamma < 1$, device-level direct energy cost savings are expected (but may not materialize due to device-level rebound).
-If $\gamma > 1$, the energy efficiency intervention is uneconomic.
+If $\gamma > 1$, the energy efficiency intervention is uneconomic
+and unlikely to be implemented.
 
 %
 \begin{equation} 
@@ -604,7 +605,6 @@ Substitute Equation~\ref{eq:E_dot_ratio} into Equation~\ref{eq:E_dot_sav_EW_net_
   \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left( 1 - \frac{\varepsilon}{(1 - Re_{dev})} - k I s \right)  \; .
 \end{equation}
 
-
 Economy-wide rebound is defined as 
 %
 \begin{equation} \label{eq:Re_EW_1}
@@ -649,8 +649,8 @@ Equation~\ref{eq:Re_EW} contains three terms, one for each contributor to econom
     
 \end{enumerate*}
 
-The first term ($Re_{dev}$ is intuitive.
-Device-level rebound is the driver for econoy-wide rebound.
+The first term ($Re_{dev}$) is intuitive.
+Device-level rebound is a driver for economy-wide rebound.
 In the absence of embodied energy and respending effects, $Re_{EW} = Re_{dev}$.
 Embodied energy effects and respending effects modify device-level rebound.
 
@@ -661,161 +661,241 @@ The second term ($\varepsilon$) can be expressed as
               = \frac{\dot{E}_{emb,EE} - \dot{E}_{emb,base}}{\dot{E}_{sav,dev,dir,expected}}
 \end{equation}
 %
+If an energy efficiency intervention \emph{increases} the embodied energy demand rate,
+$\varepsilon > 0$, and $Re_{EW}$ is enhanced, because embodied energy is one way that 
+an energy efficiency intervention can rebound through the wider economy. 
+On the other hand, if an energy efficiency intervention \emph{decreases} the embodied energy demand rate,
+$\varepsilon < 0$, and $Re_{EW}$ is dminished.
+Embodied energy has a straightforward effect on economy-wide rebound when ratioed against the expected,
+device-level direct energy savings.
 
-****** Ended here. ******
+The third term $\left[ (1 - Re_{dev} - \gamma) k I p_E \right]$ quantifies the effect
+on economy-wide rebound of repending of freed cash from an energy efficiency intervention.
+The term can be understood by building from the left.
+The difference $1 - Re_{dev}$ represents the fact that device-level rebound
+will reduce device-level direct energy cost savings.
+Device-level rebound decreases energy cost savings and, therefore,
+decreases freed cash available for respending in the economy.
+Thus, an increase in $Re_{dev}$ diminishes the importance of respending on economy-wide rebound.
 
-Some of the expected device-level energy savings can be ``taken back'' by 
-device-level rebound effects~($Re_{dev}$), 
-as discussed in Section~\ref{sec:definitions}.
-Expected device-level energy savings ($E_{sav,dev,expected}$) 
-can be expressed in terms of device-level rebound~($Re_{dev}$)
-by solving Eq.~\ref{eq:dev_level_rebound} for $E_{sav,dev,expected}$:
+Continuing the expansion of the respending term, 
+it can be shown that $\gamma$ can be expressed as 
 %
-\begin{equation} \label{eq:E_sav_dev_expected}
-  E_{sav,dev,expected} = \frac{E_{sav,dev}}{1 - Re_{dev}} \; .
+\begin{equation} \label{eq:gamma_expanded}
+  \gamma \equiv \frac{c_{impl}}{p_E} = \frac{\dot{C}_{impl}}{p_E \dot{E}_{sav,dev,dir,expected}} 
+                                     = \frac{\dot{C}_{repl,EE} - \dot{C}_{repl,base}}{p_E \dot{E}_{sav,dev,dir,expected}} \; .
 \end{equation}
+%
+From Equation~\ref{eq:gamma_expanded},
+it can be seen that $\gamma$ represents the magnitude of the increase of replacement cost rate
+due to the energy efficiency intervention relative to expected direct energy cost savings.
+Like $Re_{dev}$, an increased replacement cost rate reduces freed cash,
+thereby reducing the effect of respending on economy-wide rebound.
 
-To connect device-level rebound~($Re_{dev}$) to economy-wide rebound~($Re_{EW}$),
-net cost savings at the device level~($C_{sav,dev,net}$) 
-due to actual energy savings at the device level~($E_{sav,dev}$) 
-are first determined by the following equation:
-%
-\begin{equation} \label{eq:actual_cost_savings}
-  C_{sav,dev,net} = E_{sav,dev} p_{E_f} - C_{install} \; ,
-\end{equation}
-%
-where $p_{E_f}$ is the price of final energy purchased by the consumer (in \$/kW-hr, for example), and
-$C_{install}$ is the cost of purchasing and installing the energy-saving device,
-including labor and materials (in \$).
+After multiplying by $p_E$, it can be observed that
+$(1 - Re_{dev} - \gamma) p_E$ represents the freed cash available for respending in the economy.
 
-But the net cost savings at the device level~($C_{sav,dev,net}$, in \$)
-is freed cash 
-which can be re-spent in the economy,
-spinning through it similar to how a tax cut generates additional GDP.
-Exactly how much total spending is created by the freed cash 
-depends on how much of the net cost savings are re-spent.
-The term for the respending fraction is ``marginal propensity to consume''~($\mpc$).
-(The value of $\mpc$ is between 0 and 1, 
-with 0 representing no respending and 1 representing full respending.)
+The multiplier ($k$) enhances the first respend such that the third term is now
+$(1 - Re_{dev} - \gamma) k p_E$, which
+represents the total, economy-wide respending resulting from the energy efficiency intervention.
+Because $k$ increases nonlinearly with the marginal propensity to consume ($\mpc$), 
+$\mpc$ is a key driver of economy-wide rebound via the respending effect.
 
-A multiplier~($k$) can be used to describe the infinite series of respending in the economy,
-and generating additional economic activity from a tax cut or other savings 
-is known as the ``multiplier effect.''
-The multiplier~($k$) is related to $\mpc$ by 
-%
-\begin{equation} \label{eq:k_eqn}
-  k = \frac{1}{1 - \mpc} \; .
-\end{equation}
+Multiplying by $I$ gives the energy impact of the total, economy-wide respending, thereby
+completing the respending term: $(1 - Re_{dev} - \gamma) k I p_E$.
 
-Every new dollar spent in an economy,
-including energy cost savings,
-has energy implications.
-On average,
-the economy-wide final energy implications of net, device-level energy cost savings 
-can be estimated by the final energy intensity of economic activity ($I_{E_f}$,
-in units of kW-hr/\$).
-$I_{E_f}$ is calculated by dividing the aggregate final energy consumption by GDP
-as reported by the BEA~\cite{Bureau-of-Economic-Analysis:2019aa}.
-Thus, the freed cash from 
-net, device-level energy cost saving~($C_{sav,dev,net}$) 
-leads to new, economy-wide final energy demand~($E_{nd,EW}$)
-by the following equation:
+It is important to note that device-level rebound ($Re_{dev}$) both enhances (via the first term of Equation~\ref{eq:Re_EW}) 
+and diminishes (via the third term of Equation~\ref{eq:Re_EW}) economy-wide rebound.
+Which effect dominates can be determined by rearranging Equation~\ref{eq:Re_EW} as follows:
 %
-\begin{equation} \label{eq:E_nd_EW_prelim}
-  E_{nd,EW} = C_{sav,dev,net} \; k \; I_{E_f} \; .
+\begin{equation} \label{eq:Re_EW_rearranged}
+  Re_{EW} = (1 - k I p_E) Re_{dev} + \varepsilon + (1 - \gamma) k I p_E \;.
 \end{equation}
 %
-Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} gives
-%
-\begin{equation} \label{eq:E_nd_EW}
-  E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_{E_f}
-\end{equation}
+If $k I p_E < 1$,
+an increase in $Re_{dev}$ will increase $Re_{EW}$, and
+the direct effect of $Re_{dev}$ on $Re_{EW}$ (via the first term in Equation~\ref{eq:Re_EW}) dominates.
+If $k I p_E > 1$,
+an increase in $Re_{dev}$ will decrease $Re_{EW}$, and 
+reduction of freed cash (via the third term in Equation~\ref{eq:Re_EW}) dominates.
 
-The net energy savings~($E_{sav,net}$) from the device-level energy savings is given by 
-the difference between actual, device-level energy savings~($E_{sav,dev}$) and
-new, economy-wide energy demand~($E_{nd,EW}$):
-%
-\begin{equation} \label{eq:net_savings}
-  E_{sav,net} = E_{sav,dev} - E_{nd,EW} \; .
-\end{equation}
-%
-Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} and rearranging gives
-%
-\begin{equation} \label{eq:E_sav_net}
-  E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right] \; .
-\end{equation}
-%
-Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy 
-(in \$/kW-hr, the same units as final energy price, $p_{E_f}$).
-
-The economy-wide energy rebound effect~($Re_{EW}$) resulting from an energy efficiency intervention 
-is given as 
-%
-\begin{equation} \label{eq:Re_EW_prelim}
-  Re_{EW} = 1 - \frac{E_{sav,net}}{E_{sav,dev,expected}} \; .
-\end{equation}
-%
-Substituting Eqs.~\ref{eq:E_sav_dev_expected} and \ref{eq:E_sav_net} 
-into Eq.~\ref{eq:Re_EW_prelim} gives
-%
-\begin{equation} \label{eq:Re_EW_intermediate}
-  Re_{EW} = 1 - \frac{E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right]}
-            {\frac{E_{sav,dev}}{1 - Re_{dev}}} \; .
-\end{equation}
-%
-Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result
-for economy-wide rebound:
-%
-\begin{equation} \label{eq:Re_EW}
-  Re_{EW} = 1 - (1 - k I_{E_f} s ) (1 - Re_{dev}) \; ,
-\end{equation}
-%
-where $s = p_{E_f} - \frac{C_{install}}{E_{sav,dev}}$ is the net device-level unit savings
-from an energy efficiency device.
-Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ to obtain
-%
-\begin{equation} \label{eq:s_eqn}
-  s =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
-\end{equation}
-%
-In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce unit savings~($s$) to the device owner.
-The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings ($c_{expected}$).
-
-Eq.~\ref{eq:Re_EW} relates 
+Note that a special case exists.
+When $k I p_E \approx 1$, 
+the magnitude of device-level rebound ($Re_{dev}$) has no effect on $Re_{EW}$.
+This observation may explain why some authors
+claim that device-level rebound
+does not extend to the wider economy.
+If the special case is extended to include
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item device-level rebound~($Re_{dev}$) and
+  \item $\gamma \rightarrow 1$
+        (i.e., implementing energy efficiency is expensive
+        relative to expected device-level energy cost savings, see Equation~\ref{eq:gamma_expanded}) and 
   
-  \item economy-wide rebound~($Re_{EW}$).
+  \item $\varepsilon \rightarrow 0$ (the embodied energy rate is invariant 
+        before and after the energy efficiency intervention), 
     
 \end{enumerate*}
+%
+it can be observed that economy-wide rebound ($Re_{EW}$) will be 0
+for special combinations of values of the important parameters
+$Re_{dev}$, $k I p_E$, $\varepsilon$, and $\gamma$.
+
+
 % 
-Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item the multiplier~($k$) and the marginal propensity to consume~($\mpc$) 
-        from which it is derived,
-  
-  \item the final energy intensity of economic activity~($I_{E_f}$), and 
-  
-  \item the net device-level unit savings of energy efficiency~($s$).
-    
-\end{enumerate*}
-
-The first derivative of economy-wide rebound with respect to device-level rebound
-$\left( \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} \right)$
-can be calculated from Eq.~\ref{eq:Re_EW}, and
-it indicates how economy-wide rebound will change with device-level rebound:
-%
-\begin{equation} \label{eq:dRe_EW/dRe_dev}
-  \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f} \; .
-\end{equation}
-
-**** In the equation above, should $p_{E_f}$ be $s$? ****
-
-**** Discuss how first derivative changes sign with kIs. ****
+% Some of the expected device-level energy savings can be ``taken back'' by 
+% device-level rebound effects~($Re_{dev}$), 
+% as discussed in Section~\ref{sec:definitions}.
+% Expected device-level energy savings ($E_{sav,dev,expected}$) 
+% can be expressed in terms of device-level rebound~($Re_{dev}$)
+% by solving Eq.~\ref{eq:dev_level_rebound} for $E_{sav,dev,expected}$:
+% %
+% \begin{equation} \label{eq:E_sav_dev_expected}
+%   E_{sav,dev,expected} = \frac{E_{sav,dev}}{1 - Re_{dev}} \; .
+% \end{equation}
+% 
+% To connect device-level rebound~($Re_{dev}$) to economy-wide rebound~($Re_{EW}$),
+% net cost savings at the device level~($C_{sav,dev,net}$) 
+% due to actual energy savings at the device level~($E_{sav,dev}$) 
+% are first determined by the following equation:
+% %
+% \begin{equation} \label{eq:actual_cost_savings}
+%   C_{sav,dev,net} = E_{sav,dev} p_{E_f} - C_{install} \; ,
+% \end{equation}
+% %
+% where $p_{E_f}$ is the price of final energy purchased by the consumer (in \$/kW-hr, for example), and
+% $C_{install}$ is the cost of purchasing and installing the energy-saving device,
+% including labor and materials (in \$).
+% 
+% But the net cost savings at the device level~($C_{sav,dev,net}$, in \$)
+% is freed cash 
+% which can be re-spent in the economy,
+% spinning through it similar to how a tax cut generates additional GDP.
+% Exactly how much total spending is created by the freed cash 
+% depends on how much of the net cost savings are re-spent.
+% The term for the respending fraction is ``marginal propensity to consume''~($\mpc$).
+% (The value of $\mpc$ is between 0 and 1, 
+% with 0 representing no respending and 1 representing full respending.)
+% 
+% A multiplier~($k$) can be used to describe the infinite series of respending in the economy,
+% and generating additional economic activity from a tax cut or other savings 
+% is known as the ``multiplier effect.''
+% The multiplier~($k$) is related to $\mpc$ by 
+% %
+% \begin{equation} \label{eq:k_eqn}
+%   k = \frac{1}{1 - \mpc} \; .
+% \end{equation}
+% 
+% Every new dollar spent in an economy,
+% including energy cost savings,
+% has energy implications.
+% On average,
+% the economy-wide final energy implications of net, device-level energy cost savings 
+% can be estimated by the final energy intensity of economic activity ($I_{E_f}$,
+% in units of kW-hr/\$).
+% $I_{E_f}$ is calculated by dividing the aggregate final energy consumption by GDP
+% as reported by the BEA~\cite{Bureau-of-Economic-Analysis:2019aa}.
+% Thus, the freed cash from 
+% net, device-level energy cost saving~($C_{sav,dev,net}$) 
+% leads to new, economy-wide final energy demand~($E_{nd,EW}$)
+% by the following equation:
+% %
+% \begin{equation} \label{eq:E_nd_EW_prelim}
+%   E_{nd,EW} = C_{sav,dev,net} \; k \; I_{E_f} \; .
+% \end{equation}
+% %
+% Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} gives
+% %
+% \begin{equation} \label{eq:E_nd_EW}
+%   E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_{E_f}
+% \end{equation}
+% 
+% The net energy savings~($E_{sav,net}$) from the device-level energy savings is given by 
+% the difference between actual, device-level energy savings~($E_{sav,dev}$) and
+% new, economy-wide energy demand~($E_{nd,EW}$):
+% %
+% \begin{equation} \label{eq:net_savings}
+%   E_{sav,net} = E_{sav,dev} - E_{nd,EW} \; .
+% \end{equation}
+% %
+% Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} and rearranging gives
+% %
+% \begin{equation} \label{eq:E_sav_net}
+%   E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right] \; .
+% \end{equation}
+% %
+% Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy 
+% (in \$/kW-hr, the same units as final energy price, $p_{E_f}$).
+% 
+% The economy-wide energy rebound effect~($Re_{EW}$) resulting from an energy efficiency intervention 
+% is given as 
+% %
+% \begin{equation} \label{eq:Re_EW_prelim}
+%   Re_{EW} = 1 - \frac{E_{sav,net}}{E_{sav,dev,expected}} \; .
+% \end{equation}
+% %
+% Substituting Eqs.~\ref{eq:E_sav_dev_expected} and \ref{eq:E_sav_net} 
+% into Eq.~\ref{eq:Re_EW_prelim} gives
+% %
+% \begin{equation} \label{eq:Re_EW_intermediate}
+%   Re_{EW} = 1 - \frac{E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right]}
+%             {\frac{E_{sav,dev}}{1 - Re_{dev}}} \; .
+% \end{equation}
+% %
+% Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result
+% for economy-wide rebound:
+% %
+% \begin{equation} \label{eq:Re_EW}
+%   Re_{EW} = 1 - (1 - k I_{E_f} s ) (1 - Re_{dev}) \; ,
+% \end{equation}
+% %
+% where $s = p_{E_f} - \frac{C_{install}}{E_{sav,dev}}$ is the net device-level unit savings
+% from an energy efficiency device.
+% Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ to obtain
+% %
+% \begin{equation} \label{eq:s_eqn}
+%   s =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
+% \end{equation}
+% %
+% In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce unit savings~($s$) to the device owner.
+% The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings ($c_{expected}$).
+% 
+% Eq.~\ref{eq:Re_EW} relates 
+% %
+% \begin{enumerate*}[label={(\alph*)}]
+% 	
+%   \item device-level rebound~($Re_{dev}$) and
+%   
+%   \item economy-wide rebound~($Re_{EW}$).
+%     
+% \end{enumerate*}
+% % 
+% Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
+% %
+% \begin{enumerate*}[label={(\alph*)}]
+% 	
+%   \item the multiplier~($k$) and the marginal propensity to consume~($\mpc$) 
+%         from which it is derived,
+%   
+%   \item the final energy intensity of economic activity~($I_{E_f}$), and 
+%   
+%   \item the net device-level unit savings of energy efficiency~($s$).
+%     
+% \end{enumerate*}
+% 
+% The first derivative of economy-wide rebound with respect to device-level rebound
+% $\left( \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} \right)$
+% can be calculated from Eq.~\ref{eq:Re_EW}, and
+% it indicates how economy-wide rebound will change with device-level rebound:
+% %
+% \begin{equation} \label{eq:dRe_EW/dRe_dev}
+%   \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f} \; .
+% \end{equation}
+% 
+% **** In the equation above, should $p_{E_f}$ be $s$? ****
+% 
+% **** Discuss how first derivative changes sign with kIs. ****
 
 
 
@@ -874,7 +954,7 @@ Project_data <- Project_data %>%
   )
 @
 
-<<Parametric_Analysis>>=
+<<Parametric_Analysis, echo = FALSE>>=
 variations <- list(MPC = seq(0.5, 0.99, by = 0.01), 
                    I = seq(2, 6, by = 0.1),
                    p_E = seq(0.01, 0.06, by = 0.001),
