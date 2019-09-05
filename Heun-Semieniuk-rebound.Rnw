@@ -643,6 +643,12 @@ device-level rebound~($Re_{dev}$):
   Re_{EW} = Re_{dev} + \varepsilon + (1 - Re_{dev} - \gamma) k I p_E \; .
 \end{equation}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+\label{sec:discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Equation~\ref{eq:Re_EW} contains three terms, one for each contributing factor to economy-wide rebound,
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -749,163 +755,39 @@ for special combinations of values of the important parameters
 $Re_{dev}$, $k I p_E$, $\varepsilon$, and $\gamma$.
 
 
-% 
-% Some of the expected device-level energy savings can be ``taken back'' by 
-% device-level rebound effects~($Re_{dev}$), 
-% as discussed in Section~\ref{sec:definitions}.
-% Expected device-level energy savings ($E_{sav,dev,expected}$) 
-% can be expressed in terms of device-level rebound~($Re_{dev}$)
-% by solving Eq.~\ref{eq:dev_level_rebound} for $E_{sav,dev,expected}$:
-% %
-% \begin{equation} \label{eq:E_sav_dev_expected}
-%   E_{sav,dev,expected} = \frac{E_{sav,dev}}{1 - Re_{dev}} \; .
-% \end{equation}
-% 
-% To connect device-level rebound~($Re_{dev}$) to economy-wide rebound~($Re_{EW}$),
-% net cost savings at the device level~($C_{sav,dev,net}$) 
-% due to actual energy savings at the device level~($E_{sav,dev}$) 
-% are first determined by the following equation:
-% %
-% \begin{equation} \label{eq:actual_cost_savings}
-%   C_{sav,dev,net} = E_{sav,dev} p_{E_f} - C_{install} \; ,
-% \end{equation}
-% %
-% where $p_{E_f}$ is the price of final energy purchased by the consumer (in \$/kW-hr, for example), and
-% $C_{install}$ is the cost of purchasing and installing the energy-saving device,
-% including labor and materials (in \$).
-% 
-% But the net cost savings at the device level~($C_{sav,dev,net}$, in \$)
-% is freed cash 
-% which can be re-spent in the economy,
-% spinning through it similar to how a tax cut generates additional GDP.
-% Exactly how much total spending is created by the freed cash 
-% depends on how much of the net cost savings are re-spent.
-% The term for the respending fraction is ``marginal propensity to consume''~($\mpc$).
-% (The value of $\mpc$ is between 0 and 1, 
-% with 0 representing no respending and 1 representing full respending.)
-% 
-% A multiplier~($k$) can be used to describe the infinite series of respending in the economy,
-% and generating additional economic activity from a tax cut or other savings 
-% is known as the ``multiplier effect.''
-% The multiplier~($k$) is related to $\mpc$ by 
-% %
-% \begin{equation} \label{eq:k_eqn}
-%   k = \frac{1}{1 - \mpc} \; .
-% \end{equation}
-% 
-% Every new dollar spent in an economy,
-% including energy cost savings,
-% has energy implications.
-% On average,
-% the economy-wide final energy implications of net, device-level energy cost savings 
-% can be estimated by the final energy intensity of economic activity ($I_{E_f}$,
-% in units of kW-hr/\$).
-% $I_{E_f}$ is calculated by dividing the aggregate final energy consumption by GDP
-% as reported by the BEA~\cite{Bureau-of-Economic-Analysis:2019aa}.
-% Thus, the freed cash from 
-% net, device-level energy cost saving~($C_{sav,dev,net}$) 
-% leads to new, economy-wide final energy demand~($E_{nd,EW}$)
-% by the following equation:
-% %
-% \begin{equation} \label{eq:E_nd_EW_prelim}
-%   E_{nd,EW} = C_{sav,dev,net} \; k \; I_{E_f} \; .
-% \end{equation}
-% %
-% Substituting Eq.~\ref{eq:actual_cost_savings} into Eq.~\ref{eq:E_nd_EW_prelim} gives
-% %
-% \begin{equation} \label{eq:E_nd_EW}
-%   E_{nd,EW} = (E_{sav,dev} p_E - C_{install}) \; k \; I_{E_f}
-% \end{equation}
-% 
-% The net energy savings~($E_{sav,net}$) from the device-level energy savings is given by 
-% the difference between actual, device-level energy savings~($E_{sav,dev}$) and
-% new, economy-wide energy demand~($E_{nd,EW}$):
-% %
-% \begin{equation} \label{eq:net_savings}
-%   E_{sav,net} = E_{sav,dev} - E_{nd,EW} \; .
-% \end{equation}
-% %
-% Substituting Eq.~\ref{eq:E_nd_EW} into Eq.~\ref{eq:net_savings} and rearranging gives
-% %
-% \begin{equation} \label{eq:E_sav_net}
-%   E_{sav,net} = E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right] \; .
-% \end{equation}
-% %
-% Note that $\frac{C_{install}}{E_{sav,dev}}$ is the unit cost to save energy 
-% (in \$/kW-hr, the same units as final energy price, $p_{E_f}$).
-% 
-% The economy-wide energy rebound effect~($Re_{EW}$) resulting from an energy efficiency intervention 
-% is given as 
-% %
-% \begin{equation} \label{eq:Re_EW_prelim}
-%   Re_{EW} = 1 - \frac{E_{sav,net}}{E_{sav,dev,expected}} \; .
-% \end{equation}
-% %
-% Substituting Eqs.~\ref{eq:E_sav_dev_expected} and \ref{eq:E_sav_net} 
-% into Eq.~\ref{eq:Re_EW_prelim} gives
-% %
-% \begin{equation} \label{eq:Re_EW_intermediate}
-%   Re_{EW} = 1 - \frac{E_{sav,dev} \left[1 - \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev}} \right) \; k \; I_{E_f} \right]}
-%             {\frac{E_{sav,dev}}{1 - Re_{dev}}} \; .
-% \end{equation}
-% %
-% Simplification of Eq.~\ref{eq:Re_EW_intermediate} gives the final result
-% for economy-wide rebound:
-% %
-% \begin{equation} \label{eq:Re_EW}
-%   Re_{EW} = 1 - (1 - k I_{E_f} s ) (1 - Re_{dev}) \; ,
-% \end{equation}
-% %
-% where $s = p_{E_f} - \frac{C_{install}}{E_{sav,dev}}$ is the net device-level unit savings
-% from an energy efficiency device.
-% Eq.~\ref{eq:dev_level_rebound} can be solved for $E_{sav,dev}$ to obtain
-% %
-% \begin{equation} \label{eq:s_eqn}
-%   s =  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev})E_{sav,dev,expected}} \; .
-% \end{equation}
-% %
-% In Eq.~\ref{eq:s_eqn}, device-level rebound~($Re_{dev}$) is seen to reduce unit savings~($s$) to the device owner.
-% The ratio $\frac{C_{install}}{E_{sav,dev,expected}}$ is the unit cost of expected energy savings ($c_{expected}$).
-% 
-% Eq.~\ref{eq:Re_EW} relates 
-% %
-% \begin{enumerate*}[label={(\alph*)}]
-% 	
-%   \item device-level rebound~($Re_{dev}$) and
-%   
-%   \item economy-wide rebound~($Re_{EW}$).
-%     
-% \end{enumerate*}
-% % 
-% Eq.~\ref{eq:Re_EW} shows that several parameters affect that relationship:
-% %
-% \begin{enumerate*}[label={(\alph*)}]
-% 	
-%   \item the multiplier~($k$) and the marginal propensity to consume~($\mpc$) 
-%         from which it is derived,
-%   
-%   \item the final energy intensity of economic activity~($I_{E_f}$), and 
-%   
-%   \item the net device-level unit savings of energy efficiency~($s$).
-%     
-% \end{enumerate*}
-% 
-% The first derivative of economy-wide rebound with respect to device-level rebound
-% $\left( \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} \right)$
-% can be calculated from Eq.~\ref{eq:Re_EW}, and
-% it indicates how economy-wide rebound will change with device-level rebound:
-% %
-% \begin{equation} \label{eq:dRe_EW/dRe_dev}
-%   \frac{\mathrm{d} Re_{EW}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f} \; .
-% \end{equation}
-% 
-% **** In the equation above, should $p_{E_f}$ be $s$? ****
-% 
-% **** Discuss how first derivative changes sign with kIs. ****
+%++++++++++++++++++++++++++++++
+\subsection{Conditions for economy-wide backfire}
+\label{sec:conditions_for_backfire}
+%++++++++++++++++++++++++++++++
 
 
 
-<<initial_calcs, echo = FALSE>>=
+%++++++++++++++++++++++++++++++
+\subsection{How to avoid backfire}
+\label{sec:avoiding_backfire}
+%++++++++++++++++++++++++++++++
+
+When the purpose of energy efficiency is to \emph{reduce} energy consumption,
+economy-wide backfire is undesirable.
+Given the above results, 
+this section uses the case study to explore
+the sensitivity of economy-wide rebound to the various parameters in Eq.~\ref{eq:Re_EW}
+and ways to avoid backfire.
+In particular, the effects of 
+the price of final energy~($p_{E_f}$), 
+device-level rebound~($Re_{dev}$), 
+the expected unit cost of an energy efficiency intervention~$\left(\frac{C_{install}}{E_{sav,dev,expected}}\right)$,
+the marginal propensity to consume~($\mpc$), and 
+final energy intensity~($R_{E_p}$)
+are each considered in turn.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Case studies}
+\label{sec:case_studies}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+<<case_study_calcs, echo = FALSE>>=
 
 # The next statement reads economic data from the file and converts it to 
 # variables in the global environment.
@@ -913,6 +795,7 @@ $Re_{dev}$, $k I p_E$, $\varepsilon$, and $\gamma$.
 # These variables are same for all energy efficiency projects.
 economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Economic data") %>% 
   as.list()
+economic_data[["k"]] <- economic_data[["MPC"]] / (1 - economic_data[["MPC"]])
 
 # Read the project data
 Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
@@ -939,8 +822,6 @@ Project_data <- Project_data %>%
     E_dot_sav_dev = E_dot_sav_dev_dir - E_dot_cost_dev_emb,
     # Device-level net cost savings rate [$/yr]
     C_dot_sav_dev_net = E_dot_sav_dev_dir * p_E + C_dot_impl,
-    # Multiplier [-]
-    k = MPC / (1 - MPC),
     # Energy intensity [MJ/$]
     I = TFC / GDP,
     # Rate of new demand for energy [MJ/yr]
@@ -1014,611 +895,83 @@ Parametric <- Parametric %>%
 @
 
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Case studies}
-% \label{sec:case_studies}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% Two case studies demonstrate the framework 
-% discussed in Section~\ref{sec:theory}.
-% The first case study is LED lights that provide the same illumination 
-% as incandescent lights for much less electric power consumption.
-% The second case study is energy efficiency improvements 
-% for an internal combustion engine~(ICE) vehicle.
-% Although the efficiency of automobiles has increased over time, 
-% high-mileage vehicles have not come to dominate the car market 
-% in the same way as LED lights now dominate the lighting market.
-% Thus, these energy efficiency interventions 
-% provide numerical illustration of the theoretical framework
-% developed in Section~\ref{sec:theory}.
-% 
-% To begin, nominal values are selected for each key parameter in Eq.~\ref{eq:Re_EW}
-% for each case study:
-% device-level rebound~($Re_{dev}$),
-% the multiplier~($k$), 
-% final energy intensity of the economy~($I_{E_f}$), and
-% the net device-level unit savings of energy efficiency~($s$).
-% Thereafter, economy-wide rebound~($Re_{EW}$) is calculated for each case study.
-% Note that the nominal values selected for each key parameter
-% are helpful for anchoring the calculations and discussion.
-% It is not the purpose of this paper to pick winners 
-% in the conversation about \emph{true} magnitude of key parameters.
-% To reduce the importance of the chosen value for key parameters,
-% sensitivity studies are performed in Section~\ref{sec:discussion}.
-% 
-% 
-% %++++++++++++++++++++++++++++++
-% \subsection{Device-level rebound~($Re_{dev}$)}
-% \label{sec:device_level_rebound}
-% %++++++++++++++++++++++++++++++
-% 
-% **** Note that code blocks are included for discussion purposes and
-% will be removed for publication. ****
-% 
-% Nominal values for device-level rebound~($Re_{dev}$) 
-% are taken from previous studies.
-% Each case study (lighting and transport) 
-% has a different nominal value for device-level rebound value.
-% Schliech et al.\ suggest the device-level rebound effect 
-% for energy efficient lighting is about
-% $Re_{dev,light} =$ \Sexpr{Re_dev_light}~\cite{Schleich:2014aa}.
-% Small and Van Dender estimate the long-run rebound for automobile travel 
-% to be $Re_{dev,auto} =$ \Sexpr{Re_dev_car}~\cite{Small:2007aa}.
-% 
-% 
-% %++++++++++++++++++++++++++++++
-% \subsection{Marginal propensity to consume~($\mpc$) and multiplier~($k$)}
-% \label{sec:mpc_and_k}
-% %++++++++++++++++++++++++++++++
-% 
-% As discussed in Section~\ref{sec:lr_mpc},
-% there are many estimates for $\mpc$.
-% The nominal value for $\mpc$ is taken to be \Sexpr{mpc},
-% because freed cash from energy efficiency interventions
-% is assumed to be much like 
-% the 2009 economic stimulus payments to households.
-% Parker et al.~\cite{Parker:2013aa} found that $\mpc$ resulting from the economic stimulus payments
-% was as high as \Sexpr{mpc}.
-% The precise value for $\mpc$ is less important than 
-% the sensitivity of rebound to $\mpc$,
-% which is pursued later.
-% $\mpc$ is assumed to be invariant across different energy efficiency interventions,
-% so the lighting and transport case studies use the same value for $\mpc$.
-% The value for $k$ is found from Eq.~\ref{eq:k_eqn} which gives
-% %
-% \begin{equation} \label{eq:k_calc}
-%   k = \frac{1}{1 - \Sexpr{mpc}} = \Sexpr{format(k, digits = 4)} \; .
-% \end{equation}
-% 
-% The multiplier~($k$) is also invariant across case studies.
-% For completeness, the marginal propensity to save is $1 - \mpc$ or \Sexpr{1 - mpc}.
-% 
-% 
-% %++++++++++++++++++++++++++++++
-% \subsection{Final energy intensity of economic activity~($I_{E_f}$)}
-% \label{sec:I}
-% %++++++++++++++++++++++++++++++
-% 
-% For 2016,
-% the total final energy consumption of the U.S.\ economy was
-% \Sexpr{format(TFC_2016_USA_ktoe, big.mark = ",")}~ktoe~ **** cite IEA extended energy balances here ****.
-% In the same year, 
-% GDP was \Sexpr{format(GDP_2016_USA_PPP_billion2016USD, digits = 6, big.mark = ",")} billion 2016\$.
-% **** Add refrence to BEA website here. ****
-% After converting Mtoe to kW-hr
-% (1 Mtoe = \Sexpr{kWhr_per_ktoe} kW-hr~\cite{International-Energy-Agency:2019aa}),
-% the final energy intensity of the economy is  $I_{E_f} =$ \Sexpr{format(I_E_f_kWhr, digits = 4)} kW-hr/\$.
-% The value of $I_{E_f}$ is taken to be invariant across the case studies.
-% 
-% 
-% %++++++++++++++++++++++++++++++
-% \subsection{Unit savings of energy efficiency~($s$)}
-% \label{sec:unit_savings}
-% %++++++++++++++++++++++++++++++
-% 
-% Unit savings for energy-efficient lighting can be estimated
-% from the electricity price and cost and energy savings for LED lights.
-% A visit to the grocery store confirms that a 4-pack 
-% of 8.5-W General Electric LED lights retails for \$\Sexpr{4 * C_install_light},
-% or \$\Sexpr{C_install_light} each.
-% Each LED light provides as much illumination as a 60~W incandescent light and
-% is claimed to save \$\Sexpr{C_sav_light} of \$\Sexpr{p_E_f_light}/kW-hr electricity over their 13.6~year lifetime,
-% if they are used 3 hours/day.
-% Thus, the expected lifetime device-level energy savings are 
-% $E_{sav,dev,expected}$ = \Sexpr{format(C_sav_light / p_E_f_light, digits = 4)}~kW-hr.
-% With reference to Eq.~\ref{eq:s_eqn}, the net device-level unit savings~($s_{light}$) from the LED bulb is expected to be 
-% %
-% \begin{equation} \label{eq:s_light}
-%   s_{light} = \frac{\$\Sexpr{p_E_f_light}}{\mathrm{\kWhr}} 
-%             - \frac{\$\Sexpr{format(C_install_light, digits = 3, nsmall = 2)}}
-%                 {(1 - \Sexpr{Re_dev_light}) \times \Sexpr{format(E_sav_dev_expected_light, digits = 4)} \; \mathrm{\kWhr}} 
-%             = \Sexpr{format(s_light, digits = 4)} \; \$/\mathrm{\kWhr} \; .
-% \end{equation}
-% 
-% Unit savings for energy-efficiency personal transportation can be estimated
-% from the fuel price and cost and energy savings for personal transportation automobiles.
-% %
-% \begin{equation} \label{eq:s_car}
-%   s_{transp} = \frac{\$\Sexpr{p_E_f_car}}{\mathrm{gal}} 
-%                 - \frac{\$\Sexpr{format(C_install_car, digits = 4, big.mark = ",")}}
-%                     {(1 - \Sexpr{Re_dev_car}) \times \Sexpr{format(E_sav_dev_expected_car, digits = 4)} \; \mathrm{gal}}
-%              = \Sexpr{format(s_car, digits = 4)} \; \$/\mathrm{gal} \; .
-% \end{equation}
-% %
-% Clearly, investing in a new vehicle is uneconomic, as $s_{transp} < 0$.
-% If the econoic agent is considered to need the new vehicle anyway, 
-% the cost of additional fuel efficiency will be marginal, and
-% $C_{install,transp} = \$\Sexpr{C_install_car_marginal}$.
-% Then,
-% \begin{equation} \label{eq:s_car_marginal}
-%   s_{transp,marginal} = \frac{\$\Sexpr{p_E_f_car}}{\mathrm{gal}} 
-%                 - \frac{\$\Sexpr{format(C_install_car_marginal, digits = 4, big.mark = ",")}}
-%                     {(1 - \Sexpr{Re_dev_car}) \times \Sexpr{format(E_sav_dev_expected_car, digits = 4)} \; \mathrm{gal}}
-%              = \Sexpr{format(s_car_marginal, digits = 4)} \; \$/\mathrm{gal} \; .
-% \end{equation}
-% 
-% 
-% %++++++++++++++++++++++++++++++
-% \subsection{Economy-wide rebound}
-% \label{sec:economy_wide_rebound}
-% %++++++++++++++++++++++++++++++
-% 
-% <<Re_EW_func>>= 
-% Re_EW_func <- function(MPC = NULL, k = 1 / (1 - MPC), I_E_f = NULL, p_E_f = NULL,
-%                        C_install = NULL, E_sav_dev_expected = NULL, Re_dev, 
-%                        s = p_E_f - C_install / ((1 - Re_dev) * E_sav_dev_expected), 
-%                        kIs = k * I_E_f * s){
-%   Re_EW <- 1 - (1 - kIs) * (1 - Re_dev)
-%   return(Re_EW)
-% }
-% @
-% 
-% <<EW_rebound>>=
-% # Re_EW for lighting
-% kIs_light <- k * I_E_f_kWhr * s_light # unitless
-% Re_EW_light <- Re_EW_func(kIs = kIs_light, Re_dev = Re_dev_light) # unitless
-% 
-% kIp_light <- k * I_E_f_kWhr * p_E_f_light # unitless
-% dReEW_dRedev_light <- 1 - kIp_light # unitless
-% 
-% # Re_EW for transport
-% kIs_car <- k * I_E_f_kWhr * s_car / kWhr_per_gal # unitless
-% Re_EW_car <- Re_EW_func(kIs = kIs_car, Re_dev = Re_dev_car) # unitless
-% kIs_car_marginal <- k * I_E_f_kWhr * s_car_marginal / kWhr_per_gal # unitless
-% Re_EW_car_marginal <- Re_EW_func(kIs = kIs_car_marginal, Re_dev = Re_dev_car) # unitless
-% 
-% kIp_car <- k * I_E_f_kWhr * p_E_f_car / kWhr_per_gal # unitless
-% dReEW_dRedev_car <- 1 - kIp_car # unitless
-% @ 
-% 
-% The economy-wide rebound for each case study can be calculated by Eq.~\ref{eq:Re_EW}, 
-% beginning with the value of $k I_{E_f} s$.
-% For lighting:
-% %
-% \begin{equation} \label{eq:kIs_light}
-% k I_{E_f} s_{light} = \Sexpr{format(k, digits = 4)} 
-%                         \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-%                         \times \Sexpr{format(s_light, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{\kWhr}}
-%                     = \Sexpr{format(kIs_light, digits = 4)} \; .
-% \end{equation}
-% %
-% For transport when the full cost of the energy efficiency intervention is born by the project:
-% %
-% \begin{equation} \label{eq:kIs_car}
-%   k I_{E_f} s_{transp} = \Sexpr{format(k, digits = 4)} 
-%                             \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-%                             \times \Sexpr{format(s_car, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{gal}}
-%                             \times \frac{1 \; \mathrm{gal}}{\Sexpr{kWhr_per_gal} \; \mathrm{\kWhr}}
-%                        = \Sexpr{format(kIs_car, digits = 4)} \; .
-% \end{equation}
-% %
-% But if we consider energy efficiency to be marginal,
-% %
-% \begin{equation} \label{eq:kIs_car_marginal}
-%   k I_{E_f} s_{transp,marginal} = \Sexpr{format(k, digits = 4)} 
-%                             \times \Sexpr{format(I_E_f_kWhr, digits = 4)} \frac{\mathrm{\kWhr}}{\$} 
-%                             \times \Sexpr{format(s_car_marginal, digits = 4, nsmall = 4)} \frac{\$}{\mathrm{gal}}
-%                             \times \frac{1 \; \mathrm{gal}}{\Sexpr{kWhr_per_gal} \; \mathrm{\kWhr}}
-%                        = \Sexpr{format(kIs_car_marginal, digits = 4)} \; .
-% \end{equation}
-% 
-% Economy-wide rebound ($Re_{EW}$) can be calculated for both lighting and transport.
-% %
-% \begin{equation} \label{eq:Re_EW_light}
-%   Re_{EW,light} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
-%           = 1 - (1 - \Sexpr{format(kIs_light, digits = 4)})(1 - \Sexpr{format(Re_dev_light, digits = 4)})
-%           = \Sexpr{format(Re_EW_light, digits = 4)}
-% \end{equation}
-% %
-% \begin{equation} \label{eq:Re_EW_car}
-%   Re_{EW,transp} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
-%           = 1 - (1 - \Sexpr{format(kIs_car, digits = 4)})(1 - \Sexpr{format(Re_dev_car, digits = 4)})
-%           = \Sexpr{format(Re_EW_car, digits = 4)}
-% \end{equation}
-% %
-% \begin{equation} \label{eq:Re_EW_car_marginal}
-%   Re_{EW,transp,marginal} = 1 - (1 - k I_{E_f} s) (1 - Re_{dev}) 
-%           = 1 - (1 - \Sexpr{format(kIs_car_marginal, digits = 4)})(1 - \Sexpr{format(Re_dev_car, digits = 4)})
-%           = \Sexpr{format(Re_EW_car_marginal, digits = 4)}
-% \end{equation}
-% 
-% 
-% Finally, the first derivative of economy-wide rebound with respect to device-level rebound 
-% can be calculated using Eq.~\ref{eq:dRe_EW/dRe_dev}:
-% %
-% \begin{equation} \label{eq:dRe_EW/dRe_dev_val_light}
-%   \frac{\mathrm{d} Re_{EW,light}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f}
-%                                                   = 1 - \Sexpr{format(kIp_light, digits = 5)}
-%                                                   = \Sexpr{format(dReEW_dRedev_light, digits = 4)} \; .
-% \end{equation}
-% %
-% \begin{equation} \label{eq:dRe_EW/dRe_dev_val_car}
-%   \frac{\mathrm{d} Re_{EW,transp}}{\mathrm{d} Re_{dev}} = 1 - k I_{E_f} p_{E_f}
-%                                                   = 1 - \Sexpr{format(kIp_car, digits = 5)}
-%                                                   = \Sexpr{format(dReEW_dRedev_car, digits = 4)} \; .
-% \end{equation}
+Two case studies demonstrate the framework
+discussed in Section~\ref{sec:theory}.
+The first case study is LED lights that provide the same illumination
+as incandescent lights for much less electric power consumption.
+The second case study is energy efficiency improvements
+for an internal combustion engine~(ICE) vehicle.
+Although the efficiency of automobiles has increased over time,
+high-mileage vehicles have not come to dominate the car market
+in the same way as LED lights now dominate the lighting market.
+Thus, these energy efficiency interventions
+provide numerical illustration of the theoretical framework
+developed in Section~\ref{sec:theory}.
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion}
-\label{sec:discussion}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-The equations in Section~\ref{sec:theory} and 
-the case study in Section~\ref{sec:case_studies}
-enable the following observations.
-
+We begin by compiling economic data common to both case studies.
 
 %++++++++++++++++++++++++++++++
-\subsection{Economy-wide energy backfire is observed}
-\label{sec:backfire_observed}
+\subsection{Economic data}
+\label{sec:economic_data}
 %++++++++++++++++++++++++++++++
 
-Installation of LED bulbs is likely to cause economy-wide energy backfire 
-when economy-wide rebound is considered, 
-because Eq.~\ref{eq:Re_EW_val} shows $Re_{EW} > 1$.
-**** Discuss how this result agrees (or doesn't) with other economy-wide backfire estimates
-from the literature. ****
+%------------------------------
+\subsubsection{Marginal propensity to consume~($\mpc$) and multiplier~($k$)}
+\label{sec:mpc_and_k}
+%------------------------------
 
-
-%++++++++++++++++++++++++++++++
-\subsection{Conditions for economy-wide backfire}
-\label{sec:conditinos_for_backfire}
-%++++++++++++++++++++++++++++++
-
-Economy-wide backfire occurs when $Re_{EW} > 1$, or, with reference to Eq.~\ref{eq:Re_EW},
+As discussed in Section~\ref{sec:lr_mpc},
+there are many estimates for $\mpc$.
+The nominal value for $\mpc$ is taken to be \Sexpr{economic_data[["MPC"]]},
+because freed cash from energy efficiency interventions
+is assumed to be much like
+the 2009 economic stimulus payments to households.
+Parker et al.~\cite{Parker:2013aa} found that $\mpc$ resulting from the economic stimulus payments
+was as high as \Sexpr{economic_data[["MPC"]]}.
+The precise value for $\mpc$ is less important than
+the sensitivity of rebound to $\mpc$,
+which is pursued later.
+$\mpc$ is assumed to be invariant across different energy efficiency interventions,
+so the lighting and transport case studies use the same value for $\mpc$.
+The value for $k$ is found by
 %
-\begin{equation} \label{eq:backfire_inequality_1}
-  1 - (1 - k I_{E_f} s) (1 - Re_{dev}) > 1 \; .
-\end{equation}
-%
-Simplification gives
-%
-\begin{equation} \label{eq:backfire_inequality_2}
-  (1 - k I_{E_f} s) (1 - Re_{dev}) < 0 \; .
+\begin{equation} \label{eq:k_calc}
+  k \equiv \frac{\mpc}{1 - \mpc} = \frac{\Sexpr{economic_data[["MPC"]]}}{1 - \Sexpr{economic_data[["MPC"]]}} = \Sexpr{format(economic_data[["k"]], digits = 4)} \; .
 \end{equation}
 
-It is expected that $Re_{dev} < 1$ and
-$(1 - Re_{dev}) > 0$. 
-If it were not so, 
-energy efficiency interventions would be uneconomic for the efficiency device owner.
-Thus, the inequality of Eq.~\ref{eq:backfire_inequality_2} simplifies to
-%
-\begin{equation} \label{eq:backfire_inequality_3}
-  1 - k I_{E_f} s < 0 \; .
-\end{equation}
-%
-Solving for $s$ gives
-%
-\begin{equation} \label{eq:backfire_inequality_4}
-  s > \frac{1}{k I_{E_f}} \; .
-\end{equation}
-%
-Substituting for $s$ from Eq.~\ref{eq:s_eqn} gives
-%
-\begin{equation} \label{eq:backfire_inequality}
-  p_{E_f} - \frac{C_{install}}{(1 - Re_{dev}) E_{sav,dev,expected}} > \frac{1}{k I_{E_f}} \; .
-\end{equation}
+The multiplier~($k$) is also invariant across case studies.
+For completeness, the marginal propensity to save is $1 - \mpc =  \Sexpr{1 - economic_data[["MPC"]]}$.
 
-Inspection of Eqs.~\ref{eq:backfire_inequality_4} and~\ref{eq:backfire_inequality} reveals that
-economy-wide backfire is more likely to occur when
-%
-\begin{itemize}
-	
-	\item $s$ is large (it is economically advantageous for the energy efficiency device owner 
-	      to install energy-efficient devices), which occurs when
-	%
-  \begin{itemize}
 
-    \item $p_{E_f}$ is large 
-          (energy is expensive),
+%------------------------------
+\subsubsection{Final energy intensity of economic activity~($I$)}
+\label{sec:I} 
+%------------------------------
 
-    \item $Re_{dev}$ is small (rebound at the device-level is negligible), and
-    
-    \item $\frac{C_{install}}{E_{sav,dev,expected}}$ is small 
-          (implementing energy efficiency is inexpensive relative to the expected energy savings);
-
-  \end{itemize}
-%
-  \item $k$ is large, because $\mpc \rightarrow 1$ 
-        (the multiplier effect is large, because nearly all freed cash is respent); and
-  
-  \item $I_{E_f}$ is large 
-        (the economy is very energy intensive).
-        
-\end{itemize}
+For 2016,
+the total final energy consumption of the U.S.\ economy was
+\Sexpr{format(economic_data[["TFC"]], big.mark = ",")}~MJ~ **** cite IEA extended energy balances here ****.
+In the same year,
+GDP was \Sexpr{format(economic_data[["GDP"]], digits = 6, big.mark = ",")} billion 2016\$.
+**** Add refrence to BEA website here. ****
+The final energy intensity of the economy is  $I = \Sexpr{format(economic_data[["TFC"]] / economic_data[["GDP"]], digits = 3)}$~MJ/\$.
+The value of $I$ is taken to be invariant across the case studies.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{How to avoid backfire}
-\label{sec:avoiding_backfire}
+\subsection{Lighting}
+\label{sec:lighting}
 %++++++++++++++++++++++++++++++
 
-When the purpose of energy efficiency is to \emph{reduce} energy consumption,
-economy-wide backfire is undesirable.
-Given the above results, 
-this section uses the case study to explore
-the sensitivity of economy-wide rebound to the various parameters in Eq.~\ref{eq:Re_EW}
-and ways to avoid backfire.
-In particular, the effects of 
-the price of final energy~($p_{E_f}$), 
-device-level rebound~($Re_{dev}$), 
-the expected unit cost of an energy efficiency intervention~$\left(\frac{C_{install}}{E_{sav,dev,expected}}\right)$,
-the marginal propensity to consume~($\mpc$), and 
-final energy intensity~($R_{E_p}$)
-are each considered in turn.
 
-
-%------------------------------
-\subsubsection{Effect of $p_{E_f}$} 
-\label{sec:effect_p_E_f}
-%------------------------------
-
-
-% <<Re_EWvsp_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the price of final energy. For this graph, $I_{E_f}$, $\\mpc$, $c_{expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $p_{E_f}$  from the case study.">>=
-% Data %>% 
-%   dplyr::filter(varying == "p_E_f") %>% 
-%   ggplot(mapping = aes(x = p_E_f, y = Re_EW, linetype = costing, colour = costing)) + 
-%   facet_wrap(~ case) + 
-%   geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
-%   geom_line() +
-%   geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = p_E_f, y = Re_EW), colour = "red", size = 3) +
-%   labs(x = expression(p[E[f]]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
-%   scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
-%   scale_x_continuous(breaks = c(0.05, 0.1, 0.15)) +
-%   scale_colour_manual(values = c(Full = "black", Incremental = "blue")) +
-%   MKHthemes::xy_theme()
-% @
-% 
-% Fig.~\ref{fig:Re_EWvsp_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-% with the price of final energy~$p_{E_f}$.
-% As discussed above, economy-wide backfire can be avoided 
-% when when the price of final energy is low.
-% To find the value of the price of final energy at which 
-% economy-wide rebound is 1 (the boundary between rebound and backfire),
-% Eq.~\ref{eq:Re_EW} can be solved for $p_{E_f}$
-% %
-% \begin{equation} \label{eq:p_E_f_for_Re_EW_1}
-%   p_{E_f} = \frac{1}{k I_{E_f}} \left( 1 - \frac{1 - Re_{DW}}{1 - Re_{dev}} \right) + \frac{C_{install}}{(1 - Re_{dev}) E_{sav,dev,expected}}    \; ,
-% \end{equation}
-% %
-% and $Re_{EW}$ set to 1.
-% Doing so yields
-% $p_{E_f} = \Sexpr{format(p_E_f_for_Re_EW1_light, digits = 3)}$~\$/kW-hr
-% for the case study in Section~\ref{sec:case_studies}, 
-% a \Sexpr{format((p_E_f_light - p_E_f_for_Re_EW1_light)/p_E_f_light * 100, digits = 3)}~\% reduction
-% compared to the baseline price of final energy~(\Sexpr{format(p_E_f_light, digits = 3)} \$/kW-hr).
-
-
-%------------------------------
-\subsubsection{Effect of $Re_{dev}$} 
-\label{sec:effect_Re_dev}
-%------------------------------
-
-% <<Re_EWvsRedev_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with device-level rebound. For this graph, $k$, $I_{E_f}$, $p_{E_f}$, and $c_{expected}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red points indicate nominal values of $Re_{EW}$ and $Re_{dev}$ from the case study.">>=
-% Data %>% 
-%   dplyr::filter(varying == "Re_dev") %>% 
-%   ggplot(mapping = aes(x = Re_dev, y = Re_EW, linetype = costing, colour = costing)) + 
-%   facet_wrap(~ case) + 
-%   geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
-%   geom_line() +
-%   geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = Re_dev, y = Re_EW), colour = "red", size = 3) +
-%   labs(x = expression(Re[dev]*" [-]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
-%   scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
-%   scale_x_continuous(breaks = c(0, 0.5, 1)) +
-%   scale_colour_manual(values = c(Full = "black", Incremental = "blue")) +
-%   MKHthemes::xy_theme()
-% @
-% 
-% The variation of economy-wide rebound with device-level rebound is shown
-% in Fig.~\ref{fig:Re_EWvsRedev_graph}.
-% The slope of the line is negative, 
-% as shown by Eq.~\ref{eq:dRe_EW/dRe_dev_val},
-% indicating that decreasing device-level rebound 
-% leads to increasing economy-wide rebound, even backfire.
-% Although this result may be counterintuitive initially,
-% it is perfectly reasonable.
-% When $Re_{dev}$ decreases, the owner of the energy efficiency device has more 
-% freed cash to re-spend in the economy.
-% With more freed cash re-spent in the economy, 
-% the multiplier effect is more pronounced, 
-% and new demand for final energy (at the final energy intensity of the economy)
-% grows.
-% The converse is also true.
-% When $Re_{dev}$ increases, the owner of the energy efficiency device has less 
-% freed cash to spend in the economy.
-% With less freed cash spent in the economy, 
-% the multiplier effect is muted, 
-% and new demand for final energy (at the final energy intensity of the economy)
-% diminishes.
-% 
-% When device-level rebound~($Re_{dev}$) is large enough,
-% economy-wide backfire can be avoided ($Re_{EW} < 1$).
-% To find the value of device-level rebound at which 
-% economy-wide rebound is 1 (the boundary between rebound and backfire),
-% Eq.~\ref{eq:Re_EW} can be solved for $Re_{dev}$
-% %
-% \begin{equation} \label{eq:Re_dev_for_Re_EW_1}
-%   Re_{dev} = \frac{Re_{EW} - k I_{E_f} \left(p_{E_f} - \frac{C_{install}}{E_{sav,dev,expected}} \right)}{1 - k I_{E_f} p_{E_f}} \; ,
-% \end{equation}
-% %
-% and $Re_{EW}$ set to 1.
-% Doing so yields 
-% $Re_{dev} = \Sexpr{format(Re_dev_for_Re_EW1_light, digits = 2)}$ to achieve $Re_{EW} = 1$
-% for the case study in Section~\ref{sec:case_studies}.
-% So economy-wide backfire is avoided only when device-level rebound 
-% takes back nearly all~($\Sexpr{format(Re_dev_for_Re_EW1_light * 100, digits = 2)}$~\%) 
-% of the monetary savings the owner of the energy efficiency device would have expected. 
-% To avoid backfire, 
-% the energy efficiency device must be only marginally economic for the device owner.
-
-
-%------------------------------
-\subsubsection{Effect of $\frac{C_{install}}{E_{sav,dev,expected}}$} 
-\label{sec:effect_unit_cost}
-%------------------------------
-
-% <<Re_EWvsCost_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the unit cost to install the energy efficiency device. For this graph, $I_{E_f}$, $p_{E_f}$, $\\mpc$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\frac{C_{install}}{E_{sav,dev,expected}}$ from the case study.">>=
-% Data %>% 
-%   dplyr::filter(varying == "c_expected") %>% 
-%   ggplot(mapping = aes(x = c_expected, y = Re_EW, linetype = costing, colour = costing)) + 
-%   facet_wrap(~ case) + 
-%   geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
-%   geom_line() +
-%   geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = c_expected, y = Re_EW), colour = "red", size = 3) +
-%   labs(x = expression(c[expected]*" [$/kW-hr]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
-%   scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
-%   scale_x_continuous(breaks = c(0, 0.2, 0.4)) +
-%   scale_colour_manual(values = c(Full = "black", Incremental = "blue")) +
-%   MKHthemes::xy_theme()
-% @
-% 
-% Fig.~\ref{fig:Re_EWvsCost_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-% with the unit cost to install~$\left( \frac{C_{install}}{E_{sav,dev,expected}} \right)$.
-% As discussed above, economy-wide backfire can be avoided 
-% when when the unit cost to install is large.
-% To find the value of the unit cost to install at which 
-% economy-wide rebound is 1 (the boundary between rebound and backfire),
-% Eq.~\ref{eq:Re_EW} can be solved for $\frac{C_{install}}{E_{sav,dev,expected}}$
-% %
-% \begin{equation} \label{eq:unit_cost_for_Re_EW_1}
-%   \frac{C_{install}}{E_{sav,dev,expected}} = p_{E_f} (1 - Re_{dev}) 
-%                                               - \frac{1}{k I_{E_f}} (Re_{EW} - Re_{dev}) \; ,
-% \end{equation}
-% %
-% and $Re_{EW}$ set to 1.
-% Doing so yields 
-% $\frac{C_{install}}{E_{sav,dev,expected}} = \Sexpr{format(unit_cost_for_Re_EW1_light, digits = 2)}$ \$/kW-hr 
-% to achieve $Re_{EW} = 1$
-% for the case study in Section~\ref{sec:case_studies}.
-% So economy-wide backfire can be avoided if the unit cost to install rises from
-% \Sexpr{format(unit_cost_nominal_light, digits = 3)} \$/kW-hr 
-% to \Sexpr{format(unit_cost_for_Re_EW1_light, digits = 3)} \$/kW-hr, 
-% a \Sexpr{format((unit_cost_for_Re_EW1_light - unit_cost_nominal_light) / unit_cost_nominal_light * 100, digits = 3)} \% increase.
-
-
-%------------------------------
-\subsubsection{Effect of $\mpc$} 
-\label{sec:effect_mpc}
-%------------------------------
-
-% <<Re_EWvsMPC_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with the marginal propensity to consume. For this graph, $I_{E_f}$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $\\mpc$ from the case study.">>=
-% Data %>% 
-%   dplyr::filter(varying == "MPC") %>% 
-%   ggplot(mapping = aes(x = MPC, y = Re_EW, linetype = costing, colour = costing)) + 
-%   facet_wrap(~ case) + 
-%   geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
-%   geom_line() +
-%   geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = MPC, y = Re_EW), colour = "red", size = 3) +
-%   labs(x = "MPC [-]", y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
-%   scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2), limits = c(-10, 5)) +
-%   scale_x_continuous(breaks = c(0.4, 0.6, 0.8, 1)) +
-%   scale_colour_manual(values = c(Full = "black", Incremental = "blue")) +
-%   MKHthemes::xy_theme()
-% @
-% 
-% Fig.~\ref{fig:Re_EWvsMPC_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-% with the marginal propensity to consume~($\mpc$).
-% As discussed above, economy-wide backfire can be avoided 
-% when the multiplier~($k$) and $\mpc$ are small.
-% To find the value of the marginal propensity to consume at which 
-% economy-wide rebound is 1 (the boundary between rebound and backfire),
-% Eq.~\ref{eq:Re_EW} can be solved for $\mpc$
-% %
-% \begin{equation} \label{eq:MPC_for_Re_EW_1}
-%   \mpc = 1 - \frac{I_{E_f} P}{1 - \frac{1 - Re_{EW}}{1 - Re_{dev}}} \; ,
-% \end{equation}
-% %
-% and $Re_{EW}$ set to 1.
-% Doing so yields 
-% $\mpc = \Sexpr{format(MPC_for_Re_EW1_light, digits = 4)}$ to achieve $Re_{EW} = 1$
-% for the case study in Section~\ref{sec:case_studies}.
-% So economy-wide backfire could be avoided when, on average, people save
-% \Sexpr{format((1 - MPC_for_Re_EW1_light) * 100, digits = 3)}~\% of their freed cash
-% compared to \Sexpr{format((1 - mpc) * 100, digits = 3, nsmall = 1)}~\% currently.
-
-
-%------------------------------
-\subsubsection{Effect of $I_{E_f}$} 
-\label{sec:effect_I_E_f}
-%------------------------------
-
-% <<Re_EWvsI_E_f_graph, echo = FALSE, fig.align = "center", fig.height = 3.5, fig.width = 6.5, fig.cap = "Variation of economy-wide rebound with final energy intensity. For this graph, $k$, $p_{E_f}$, $C_{install}$, $E_{sav,dev,expected}$, and $Re_{dev}$ are constant at their values shown in Section~\\ref{sec:case_studies}. The red point indicates nominal values of $Re_{EW}$ and $I_{E_f}$ from the case study.">>=
-% Data %>% 
-%   dplyr::filter(varying == "I_E_f") %>% 
-%   ggplot(mapping = aes(x = I_E_f, y = Re_EW, linetype = costing, colour = costing)) + 
-%   facet_wrap(~ case) + 
-%   geom_hline(yintercept = c(0, 1), colour = "gray50", size = 0.1) +
-%   geom_line() +
-%   geom_point(data = Data %>% dplyr::filter(base), mapping = aes(x = I_E_f, y = Re_EW), colour = "red", size = 3) +
-%   labs(x = expression(I[E[f]]*" [kW-hr/$]"), y = expression(Re[EW]*" [-]"), linetype = element_blank(), colour = element_blank()) + 
-%   scale_y_continuous(breaks = c(-8, -6, -4, -2, 0, 1, 2)) +
-%   scale_x_continuous(breaks = c(0, 0.5, 1)) +
-%   scale_colour_manual(values = c(Full = "black", Incremental = "blue")) +
-%   MKHthemes::xy_theme()
-% @
-% 
-% Fig.~\ref{fig:Re_EWvsI_E_f_graph} shows the variation of economy-wide rebound~($Re_{EW}$)
-% with final energy intensity of the economy~($I_{E_f}$).
-% As discussed above, economy-wide backfire can be avoided 
-% when the final energy intensity of the economy~($I_{E_f}$) is small.
-% To find the value of final energy intensity at which 
-% economy-wide rebound is 1 (the boundary between rebound and backfire),
-% Eq.~\ref{eq:Re_EW} can be solved for $I_{E_f}$
-% %
-% \begin{equation} \label{eq:I_E_f_for_Re_EW_1}
-%   I_{E_f} = \frac{1}{k P} \left( 1 - \frac{1 - Re_{EW}}{1 - Re_{dev}} \right) \; ,
-% \end{equation}
-% %
-% and $Re_{EW}$ set to 1.
-% Doing so yields 
-% $I_{E_f} = \Sexpr{format(I_E_f_for_Re_EW1_light, digits = 4)}$ kW-hr/\$ to achieve $Re_{EW} = 1$
-% for the case study in Section~\ref{sec:case_studies}.
-% So economy-wide backfire can be avoided when final energy intensity is 
-% \Sexpr{format((I_E_f_kWhr - I_E_f_for_Re_EW1_light) / I_E_f_kWhr * 100, digits = 2)}~\% below 
-% the current value (\Sexpr{format(I_E_f_kWhr, digits = 5)} kW-hr/\$).
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Trends}
-\label{sec:trends}
+\subsection{Automotive transport}
+\label{sec:automotive_transport}
 %++++++++++++++++++++++++++++++
 
-**** Graph here of U.S.\ energy intensity over time? 
-Other parameters?
-Then comment on the trends. ****
 
-**** Say something here about trends in the variables of Eq.~\ref{eq:Re_EW}?
-The paragraph below may be a start. ****
-
-As time progresses, most countries are becoming \emph{less} energy intensive
-($I_{E_f}$ is getting smaller).
-The effective price of energy has \emph{declined} over the past century
-($p_{E_f}$ is going down).
-All other things being equal, the above trends would tend to decrease $Re_{EW}$.
-Thus, backfire is likely becoming smaller.
-And energy-efficiency-driven, backfire-enabled economic growth could be stalling.
-In other words, conditions for backfire were more favorable 100 years ago.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
