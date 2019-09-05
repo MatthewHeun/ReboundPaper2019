@@ -515,8 +515,59 @@ Factoring Equation~\ref{eq:E_dot_sav_EW_net_prelim} yields
   \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} 
                          \left\{ 1 
                                  - \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} 
-                                 - \left[ p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}}\right] k I \right\} \; .
+                                 - \left[ p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} \right] k I \right\} \; .
 \end{equation}
+
+Next, we define $\varepsilon$ as
+%
+\begin{equation} \label{eq:epsilon}
+  \varepsilon \equiv \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir,expected}} \; .
+\end{equation}
+%
+$\varepsilon$ (for ``$\varepsilon$mbodied'') indicates the relative magnitude of the embodied energy cost rate increase (in the numerator)
+compared to the expected device-level direct energy savings
+from an energy efficiency intervention (in the denominator).
+$\varepsilon > 0$ indicates that the energy efficiency intervention increases
+the embodied energy cost rate of an end-use machine,
+introducing an embodied energy cost to obtain device-level direct energy savings.
+$\varepsilon < 0$ indicates that the energy efficiency intervention reduces 
+the embodied energy cost rate of an end-use machine.
+
+Using Equation~\ref{eq:E_dot_sav_dev_dir} and
+$\varepsilon$ as defined in Equation~\ref{eq:epsilon}, 
+we can rewrite the $\frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}}$ term from Equation~\ref{eq:E_dot_sav_EW_net} as
+%
+\begin{equation} \label{eq:using_epsilon}
+  \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} = \frac{\dot{E}_{cost,dev,emb}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}}
+                                                       = \frac{\varepsilon}{1 - Re_{dev}}
+\end{equation}
+
+We now define $\gamma$ as
+%
+\begin{equation} \label{eq:gamma}
+  \gamma \equiv \frac{\dot{C}_{impl}}{p_E \dot{E}_{sav,dev,dir,expected}} \; .
+\end{equation}
+%
+The ratio $\frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$ represents 
+the expected, per-unit-energy-saved, net cost increase of implementing an energy-efficiency intervntion. 
+The ratio has the same units as energy price (\$/MJ),
+so we define $c_{impl} \equiv \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$.
+$c_{impl}$ is the expected cost increase of an energy efficiency intervention.
+
+Using Equation~\ref{eq:E_dot_sav_dev_dir} and
+$\gamma$ as defined in Equation~\ref{eq:gamma}, 
+we can rewrite the $p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}}$ term from Equation~\ref{eq:E_dot_sav_EW_net} as
+%
+\begin{equation} \label{eq:using_gamma}
+  p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} 
+      = p_E \left( 1 - \frac{\dot{C}_{impl}}{p_E (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \right) 
+      = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}} \right) \; .
+\end{equation}
+%
+
+
+******* Ended here. *********
+
 
 The net savings (on a per MJ basis) of an energy-efficiency intervention ($s$) is given by
 %
@@ -545,17 +596,8 @@ Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:s} gives
 \end{equation}
 %
 
-The ratio $\frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$ represents 
-the expected, per-unit-energy-saved, net cost increase of implementing an energy-efficiency intervntion. 
-The ratio has the same units as energy price (\$/MJ),
-so we define $c_{impl} \equiv \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$.
-$c_{impl}$ is the expected cost increase of an energy efficiency intervention.
-
 The unit cost savings~($s$) can be rewritten by defining 
 %
-\begin{equation} \label{eq:gamma}
-  \gamma \equiv \frac{c_{impl}}{p_E} = \frac{\dot{C}_{impl}}{p_E \dot{E}_{sav,dev,dir,expected}} \; .
-\end{equation}
 %
 $\gamma$ is the ratio of the cost rate to implement a energy efficiency intervention
 to the expected direct energy savings at the device level.
@@ -581,20 +623,6 @@ Substituting Equation~\ref{eq:s_prelim} into Equation~\ref{eq:E_dot_sav_EW_net} 
 \end{equation}
 %
 
-Next, we define $\varepsilon$ as
-%
-\begin{equation} \label{eq:epsilon}
-  \varepsilon \equiv \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir,expected}} \; .
-\end{equation}
-%
-$\varepsilon$ (for ``$\varepsilon$mbodied'') indicates the relative magnitude of the embodied energy cost rate increase
-compared to the expected device-level direct energy savings
-from an energy efficiency intervention.
-$\varepsilon > 0$ indicates that the energy efficiency intervention increases
-the embodied energy cost rate of an end-use machine,
-introducing an embodied energy cost to obtain device-level direct energy savings.
-$\varepsilon < 0$ indicates that the energy efficiency intervention reduces 
-the embodied energy cost rate of an end-use machine.
 In Equation~\ref{eq:E_dot_sav_EW_net_2}, 
 the ratio $\frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}}$
 can be rewritten in terms of $\varepsilon$.
