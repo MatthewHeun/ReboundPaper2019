@@ -653,8 +653,15 @@ it can be shown that $\gamma$ can be expressed as
 From Equation~\ref{eq:gamma_expanded},
 it can be seen that $\gamma$ represents the magnitude of the increase of replacement cost rate
 due to the energy efficiency intervention relative to expected direct energy cost savings.
-Like $Re_{dev}$, an increased replacement cost rate reduces freed cash,
-thereby reducing the effect of respending on economy-wide rebound.
+Like $Re_{dev}$, increasing replacement cost rate ($\dot{C}_{impl}$) reduces freed cash,
+thereby increasing $\gamma$, and
+reducing the effect of respending on economy-wide rebound.
+
+If $\gamma > 1$, the cost increase to emplace the energy efficiency intervention 
+is greater than the monetary value of the expected direct energy savings.
+Under those conditions, the energy efficiency intervention is uneconomic, and 
+the energy efficiency intervention is unlikely to be pursued
+in the absence of regulations or mandates.
 
 After multiplying by $p_E$, it can be observed that
 $(1 - Re_{dev} - \gamma) p_E$ represents the freed cash available for respending in the economy.
@@ -667,6 +674,16 @@ $\mpc$ is a key driver of economy-wide rebound via the respending effect.
 
 Multiplying by $I$ gives the energy impact of the total, economy-wide respending, thereby
 completing the respending term: $(1 - Re_{dev} - \gamma) k I p_E$.
+
+Policies will affect the value of the $\gamma$ term.
+With reference to Equation~\ref{eq:gamma_expanded}, 
+we see that subsidies for energy-efficiency technology
+will reduce $\dot{C}_{repl,EE}$, thereby reducing $\gamma$, 
+increasing the respending term in Equation~\ref{eq:Re_EW}, and 
+increasing $Re_{EW}$.
+In contrast, mandates for energy efficiency interventions could drive up 
+demand for and increase the price of energy-efficiency technologies.
+When $\dot{C}_{repl,EE}$ goes up, $\gamma$ goes up, and $Re_{EW}$ goes down.
 
 It is important to note that device-level rebound ($Re_{dev}$) both enhances (via the first term of Equation~\ref{eq:Re_EW}) 
 and diminishes (via the third term of Equation~\ref{eq:Re_EW}) economy-wide rebound.
