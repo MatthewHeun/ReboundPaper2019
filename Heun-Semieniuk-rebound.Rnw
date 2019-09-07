@@ -1,6 +1,7 @@
 \documentclass[review]{elsarticle}
 
-\usepackage{booktabs}
+\usepackage{amsmath}           % For align environment
+\usepackage{booktabs}          % For sweet tables
 \usepackage[inline]{enumitem}  % For inline enumerate* lists
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -511,7 +512,7 @@ Substituting Equations~\ref{eq:E_dot_sav_dev_prelim} and~\ref{eq:E_dot_nd_EW} in
 %
 Factoring Equation~\ref{eq:E_dot_sav_EW_net_prelim} yields
 %
-\begin{equation} \label{eq:E_dot_sav_EW_net}
+\begin{equation} \label{eq:E_dot_sav_EW_net_prelim2}
   \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} 
                          \left\{ 1 
                                  - \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} 
@@ -549,94 +550,25 @@ We now define $\gamma$ as
 \end{equation}
 %
 The ratio $\frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$ represents 
-the expected, per-unit-energy-saved, net cost increase of implementing an energy-efficiency intervntion. 
-The ratio has the same units as energy price (\$/MJ),
-so we define $c_{impl} \equiv \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir,expected}}$.
-$c_{impl}$ is the expected cost increase of an energy efficiency intervention.
+the expected, per-unit-energy-saved, net cost increase of implementing an energy-efficiency intervntion
+and has the same units as energy price (\$/MJ).
 
 Using Equation~\ref{eq:E_dot_sav_dev_dir} and
 $\gamma$ as defined in Equation~\ref{eq:gamma}, 
 we can rewrite the $p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}}$ term from Equation~\ref{eq:E_dot_sav_EW_net} as
 %
-\begin{equation} \label{eq:using_gamma}
-  p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} 
-      = p_E \left( 1 - \frac{\dot{C}_{impl}}{p_E (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \right) 
-      = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}} \right) \; .
-\end{equation}
-%
+\begin{align} \label{eq:using_gamma}
+  p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} &= p_E \left( 1 - \frac{\dot{C}_{impl}}
+                                                                       {p_E (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \right) \nonumber \\
+      &= p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}} \right) \; .
+\end{align}
 
-
-******* Ended here. *********
-
-
-The net savings (on a per MJ basis) of an energy-efficiency intervention ($s$) is given by
+With Equations~\ref{eq:using_epsilon} and~\ref{eq:using_gamma},
+Equation~\ref{eq:E_dot_sav_EW_net_prelim2} can be rewritten as
 %
-\begin{equation} \label{eq:s_prelim}
-  s \equiv p_E - \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} \; .
-\end{equation}
-%
-$s$ compares
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item the price of buying a MJ of energy ($p_E$) with        
-  
-  \item the cost to save a MJ of energy $\left( \frac{\dot{C}_{impl}}{\dot{E}_{sav,dev,dir}} \right)$.
-    
-\end{enumerate*}
-%
-When $s > 0$, an energy efficiency intervention saves money for the owner of the energy-efficient machine.
-When $s < 0$, an energy efficiency intervention is uneconomic and unlikely to be pursued.
-Note that when $Re_{dev} \rightarrow 1$, net savings~($s$) are eroded.
-
-Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:s} gives
-%
-\begin{equation} \label{eq:s}
-  s = p_E - \frac{\dot{C}_{impl}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} \; .
-\end{equation}
-%
-
-The unit cost savings~($s$) can be rewritten by defining 
-%
-%
-$\gamma$ is the ratio of the cost rate to implement a energy efficiency intervention
-to the expected direct energy savings at the device level.
-When $\gamma < 1$, device-level, direct energy cost savings are expected (but may not materialize due to device-level rebound).
-If $\gamma > 1$, the energy efficiency intervention is uneconomic
-and unlikely to be implemented.
-
-%
-\begin{equation} 
-  remove later
-\end{equation}
-%
-Written in terms of $\gamma$, $s$ becomes
-%
-\begin{equation} \label{eq:s2}
-  s = p_E - \frac{c_{impl}}{1 - Re_{edev}} = p_E - \frac{\gamma p_E}{1 - Re_{dev}} = p_E \left( 1 - \frac{\gamma}{1 - Re_{dev}}\right) \; .
-\end{equation}
-
-Substituting Equation~\ref{eq:s_prelim} into Equation~\ref{eq:E_dot_sav_EW_net} gives
-%
-\begin{equation} \label{eq:E_dot_sav_EW_net_2}
-  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left\{ 1 - \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} - k I s \right\} \; .
-\end{equation}
-%
-
-In Equation~\ref{eq:E_dot_sav_EW_net_2}, 
-the ratio $\frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}}$
-can be rewritten in terms of $\varepsilon$.
-After substituting Equation~\ref{eq:E_dot_sav_dev_dir},
-it can be seen that 
-%
-\begin{equation} \label{eq:E_dot_ratio}
-  \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir}} = \frac{\dot{E}_{cost,dev,emb}}{(1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected}} = \frac{\varepsilon}{(1 - Re_{dev})} \; .
-\end{equation}
-
-Substitute Equation~\ref{eq:E_dot_ratio} into Equation~\ref{eq:E_dot_sav_EW_net_2} to obtain
-%
-\begin{equation} \label{eq:E_dot_sav_EW_net_3}
-  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left( 1 - \frac{\varepsilon}{(1 - Re_{dev})} - k I s \right)  \; .
+\begin{equation} \label{eq:E_dot_sav_EW_net}
+  \dot{E}_{sav,EW,net} = \dot{E}_{sav,dev,dir} \left\{ 1 - \frac{\varepsilon}{1 - Re_{dev}} 
+                                                         - \left[  p_E \left( 1 - \frac{\gamma }{1 - Re_{dev}}\right)  \right] kI \right\}
 \end{equation}
 
 Economy-wide rebound is defined as 
@@ -645,26 +577,17 @@ Economy-wide rebound is defined as
   Re_{EW} \equiv 1 - \frac{\dot{E}_{sav,EW,net}}{\dot{E}_{sav,dev,dir,expected}} \; .
 \end{equation}
 %
-Substitute Equations~\ref{eq:E_dot_sav_EW_net_3} and~\ref{eq:E_dot_sav_dev_dir_expected}
+Substitute Equations~\ref{eq:E_dot_sav_EW_net} and~\ref{eq:E_dot_sav_dev_dir_expected}
 into Equation~\ref{eq:Re_EW_1} to obtain
 %
 \begin{equation} \label{eq:Re_EW2}
   Re_{EW} = 1 - \frac{\dot{E}_{sav,dev,dir} \left( 1 - \frac{\varepsilon}{1 - Re_{dev}} - k I s \right) }
                      {\frac{\dot{E}_{sav,dev,dir}}{1 - Re_{dev}}} \; .
 \end{equation}
-%
-%
-\begin{equation} 
-  remove later
-\end{equation}
-%
-\begin{equation} 
-  remove later
-\end{equation}
-%
-Simplification, substitution of Equation~\ref{eq:s2}, and regrouping terms yields
+
+Simplification and regrouping of terms yields
 an equation that relates 
-economy-wide rebound~($Re_{EW}$) and 
+economy-wide rebound~($Re_{EW}$) to 
 device-level rebound~($Re_{dev}$):
 %
 \begin{equation} \label{eq:Re_EW}
@@ -685,7 +608,7 @@ Equation~\ref{eq:Re_EW} contains three terms, one for each contributing factor t
   
   \item embodied energy effects ($\varepsilon$), and
   
-  \item respending of freed cash ($(1 - Re_{dev} - \gamma) k I p_E$).
+  \item respending of freed cash [$(1 - Re_{dev} - \gamma) k I p_E$].
     
 \end{enumerate*}
 
@@ -698,22 +621,23 @@ The second term ($\varepsilon$) can be expressed as
 %
 \begin{equation} \label{eq:epsilon_expanded}
   \varepsilon = \frac{\dot{E}_{cost,dev,emb}}{\dot{E}_{sav,dev,dir,expected}} 
-              = \frac{\dot{E}_{emb,EE} - \dot{E}_{emb,base}}{\dot{E}_{sav,dev,dir,expected}}
+              = \frac{\dot{E}_{emb,EE} - \dot{E}_{emb,base}}{\dot{E}_{sav,dev,dir,expected}} \; .
 \end{equation}
 %
 If an energy efficiency intervention \emph{increases} the embodied energy demand rate,
-$\varepsilon > 0$, and $Re_{EW}$ is enhanced, because embodied energy is one way that 
+$\varepsilon > 0$, and $Re_{EW}$ is enhanced, 
+because additional embodied energy demand is one way that 
 an energy efficiency intervention can rebound through the wider economy. 
 On the other hand, if an energy efficiency intervention \emph{decreases} the embodied energy demand rate,
 $\varepsilon < 0$, and $Re_{EW}$ is dminished.
 Embodied energy has a straightforward effect on economy-wide rebound when ratioed against the expected,
-device-level direct energy savings.
+device-level direct energy savings ($\dot{E}_{sav,dev,dir,expected}$).
 
 The third term $\left[ (1 - Re_{dev} - \gamma) k I p_E \right]$ quantifies the effect
 on economy-wide rebound of repending of freed cash from an energy efficiency intervention.
 The term can be understood by building from the left.
 The difference $1 - Re_{dev}$ represents the fact that device-level rebound
-will reduce device-level direct energy cost savings.
+reduces device-level direct energy cost savings.
 Device-level rebound decreases energy cost savings and, therefore,
 decreases freed cash available for respending in the economy.
 Thus, an increase in $Re_{dev}$ diminishes the importance of respending on economy-wide rebound.
@@ -760,11 +684,8 @@ an increase in $Re_{dev}$ will decrease $Re_{EW}$, and
 reduction of freed cash (via the third term in Equation~\ref{eq:Re_EW}) dominates.
 
 Note that a special case exists.
-When $k I p_E \approx 1$, 
+Equation~\ref{eq:Re_EW_rearranged} shows that when $k I p_E \approx 1$, 
 the magnitude of device-level rebound ($Re_{dev}$) has no effect on $Re_{EW}$.
-This observation may explain why some authors
-claim that device-level rebound
-does not extend to the wider economy.
 If the special case is extended to include
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -781,33 +702,12 @@ If the special case is extended to include
 it can be observed that economy-wide rebound ($Re_{EW}$) will be 0
 for special combinations of values of the important parameters
 $Re_{dev}$, $k I p_E$, $\varepsilon$, and $\gamma$.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Conditions for economy-wide backfire}
-\label{sec:conditions_for_backfire}
-%++++++++++++++++++++++++++++++
+These observations may explain why some authors
+claim that device-level rebound
+does not extend to the wider economy.
 
 
 
-%++++++++++++++++++++++++++++++
-\subsection{How to avoid backfire}
-\label{sec:avoiding_backfire}
-%++++++++++++++++++++++++++++++
-
-When the purpose of energy efficiency is to \emph{reduce} energy consumption,
-economy-wide backfire is undesirable.
-Given the above results, 
-this section uses the case study to explore
-the sensitivity of economy-wide rebound to the various parameters in Eq.~\ref{eq:Re_EW}
-and ways to avoid backfire.
-In particular, the effects of 
-the price of final energy~($p_{E_f}$), 
-device-level rebound~($Re_{dev}$), 
-the expected unit cost of an energy efficiency intervention~$\left(\frac{C_{install}}{E_{sav,dev,expected}}\right)$,
-the marginal propensity to consume~($\mpc$), and 
-final energy intensity~($R_{E_p}$)
-are each considered in turn.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
