@@ -445,12 +445,6 @@ Substituting Equation~\ref{eq:E_dot_sav_dev_dir} into Equation~\ref{eq:E_dot_sav
   \dot{E}_{sav,dev} = (1 - Re_{dev}) \dot{E}_{sav,dev,dir,expected} - \dot{E}_{cost,dev,emb} \; .
 \end{equation}
 
-%
-\begin{equation} \label{eq:placeholder}
-  Delete this equation later.
-\end{equation}
-%
-
 The device-level, net cost savings resulting from an energy-efficiency intervention is
 %
 \begin{equation} \label{eq:C_dot_sav_dev_net}
