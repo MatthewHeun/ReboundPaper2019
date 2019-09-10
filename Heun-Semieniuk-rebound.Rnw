@@ -61,8 +61,10 @@ library(rlang)
 \begin{frontmatter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{(1) Relating device-level and economy-wide rebound: Theory and a case study of energy-efficient light bulbs\\
-(2) How marginal propensity to consume translates device-level efficiency to economy-wide rebound}
+\title{Relating the device-level rebound effect to the macroeconomic multiplier
+%(1) Relating device-level and economy-wide rebound: Theory and a case study of energy-efficient light bulbs\\
+%(2) How marginal propensity to consume translates device-level efficiency to economy-wide rebound
+}
 
 %% or include affiliations in footnotes:
 \author[HeunAddress]{Matthew Kuperus Heun\corref{correspondingauthor}}
@@ -74,7 +76,7 @@ library(rlang)
 
 \address[HeunAddress]{Engineering Department, Calvin University,\\3201 Burton St.\ SE, Grand Rapids, MI, 49546, USA}
 
-\address[SemieniukAddress]{Department of Economics, University of Massachusetts at Amhurst,\\412 North Pleasant St., Amherst, MA, 01002, USA}
+\address[SemieniukAddress]{Political Economy Research Institute \& Department of Economics,\\University of Massachusetts at Amherst,\\412 North Pleasant St., Amherst, MA, 01002, USA}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,8 +88,9 @@ library(rlang)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{keyword}
-energy rebound\sep energy efficiency \sep marginal propensity to consume
-\MSC[2010] 62P20\sep 91B02\sep 91B82
+energy rebound\sep energy efficiency \sep multiplier \sep windfall income \sep macroeconomic rebound
+\MSC[2010] 62P20\sep 91B02\sep 91B82\\
+JEL: E21, O33, Q43, Q48
 \end{keyword}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -115,7 +118,7 @@ Although energy rebound is an intellectual puzzle,
 its real-world consequences are of the utmost importance.
 For if energy efficiency is to be an important policy instrument 
 to combat depletion of primary energy resources and 
-reduce energy-relatied CO$_2$ emissions, 
+reduce energy-related greenhouse gas emissions, 
 policymakers ought to have deep understanding of both 
 the causes and the magnitude of rebound.
 Without such deep understanding of rebound, 
@@ -124,26 +127,77 @@ opposite of their intended effect,
 when dealing with some of the most important challenges 
 facing humanity today.
 
-Nominal values for key parameters are identified.
-Sensitivity studies are conducted to gain understanding 
-of the effect of key paramters on economy-wide rebound.
+Recent literature reviews attest that there is ample and growing empirical evidence 
+on direct and indirect rebound effects \cite{Gillingham2016}, and also
+increasing evidence for the size and nature of macroeconomic rebound \cite{BrockwaySorrellSemieniukHeunCourt2019}. 
+%Estimates vary widely, in part reflecting model specification but in part 
+%also the range of possible rebounds depending on the particular conditions. 
+However, both reviews ((!!check with Steve, read Barker!!)) find little, if any, evidence on the economic growth effect 
+that is due to respending of the windfall income that consumers earn 
+when their end-use devices deliver energy services with less final energy. 
+Borenstein \cite{Borenstein:2015aa} confirms the absence of such studies. 
+While he and many others have examined the indirect reboud from income effects from a micro perspective, 
+ to our knowledge there is no linkage of the aggregate effect
+ of these windfall incomes on the macrolevel. 
+Yet, the connection with macro spending multipliers
+and their effect on the level of output is obvious, 
+as is the further effect of higher output on energy aggregate demand
+and hence the macroeconomic rebound.
 
-This paper provides a new way to 
+This paper builds a simple conceptual model to understand the macroeconomic multiplier rebound
+effect from the aggregation of microlevel income effects. It relates the direct
+rebound effect from an end-use device energy efficiency improvement, which is typically
+far below one\cite{Gillingham2016}, and the consequent money savings (or windfall income)
+to the expenditure side of gross domestic product.
+Here, as is wwell known from IS-LM macroeconomics,
+an increase in consumption leads to additional aggregate demand, activity and hence further
+spending rounds: a multiplier process. This additional demand has an energy intensity, 
+namely that of the economy average in a first instance,
+and the new energy consumption can be attributed
+to a macroeconomic multiplier rebound effect.\cite{Borenstein:2015aa}
+What differentiates the present situation from
+the usual macroeconomic multiplier story, which can be reduced or even
+reversed by crowding out \cite{Ramey2011,Ramy2019}, is that there is no
+debt-financed government lending that could drive up interest rates or otherwise take
+resources from their most efficient use. Instead, the effect on income here arises
+from a mechanism similar to the ``windfall income" literature that assesses the effect on GDP
+of an unexpected (one off) increase in disposable income that is not debt financed.\cite{Johnson2006,Agarwal2014}
+Hence the multiplier is particular effective.
+
+To test our model, we apply it to energy efficient light bulbs and electric cars.
+We conduct sensitivity studies conducted to gain understanding of the effect
+of key paramters on economy-wide rebound.
+
+This model allows estimating the rough magnitude of macroeconomic rebound from the
+aggregation of microecomic income effects, which is particularly important in assessing
+short term rebound. However, since the productivity increase is permanent, the increased
+spending is not a one-off, but expected to perpetuate in the long run other things equal,
+so our model also illustrates how the demand side contributes to the wider ``macroeconomic
+``growth" (rebound) effect, which is neglected in supply-side determined growth models (!!check Barker!!).
+Secondly, the model immediately permits assessing the impact of capital cost
+on windfall income and hence permits calculating the difference in rebound between
+costless efficiency improvements and those costly ones mandated by policy. This is important
+to the discussion about just how relevant rebounds are when efficiency improvements are
+compensated with an increase in the cost of living, e.g. by taxing the now cheaper
+energy services or fossil fuel derived energy.\cite{Grubler2018,Pollin2015}
+Thirdly, only very little data is needed to operationalise the model as we show with examples
+from light bulbs and electric cars.
+
+We show that there is an inverse relationship between direct rebound effect and
+macroeconomic multiplier effect and that this relationship xxx. We also show that 
+for reasonable parameters the macroeconomic multiplier rebound is yyy. Finally,
+for the examples of energy efficienc light bulbs and electric cars, we show that
+making efficiency improvements costly has zzz effect on the rebound.
+
+The rest of the paper proceeds as follows...
 
 
 
-\cite{Gillingham:2013aa}
+
+
 
 \cite{Hertwich:2005aa}
 
-
-
-
-Energy efficiency is assumed to be an effective means to achieving final energy and CO$_2$ emissions reduction goals.
-But is energy efficiency effective for meeting these goals?
-The energy rebound effect can reduce expected energy savings.
-Even worse, energy backfire can lead to more energy consumption than before an energy efficiency intervention.
-Etc.
 
 %++++++++++++++++++++++++++++++
 \subsection{Definitions}
