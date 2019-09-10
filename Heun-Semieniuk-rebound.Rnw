@@ -45,6 +45,7 @@
 <<setup, echo = FALSE, message = FALSE>>=
 library(ggplot2)
 library(magrittr)
+library(openxlsx)
 library(rlang)
 @
 
