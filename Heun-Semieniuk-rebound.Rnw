@@ -2,6 +2,7 @@
 
 \usepackage{amsmath}           % For align environment
 \usepackage{booktabs}          % For sweet tables
+\usepackage{gensymb}           % For \degree command (as in \degree C)
 \usepackage[inline]{enumitem}  % For inline enumerate* lists
 \usepackage{lineno}
 \modulolinenumbers[5]
