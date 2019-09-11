@@ -137,7 +137,7 @@ However, both reviews ((!!check with Steve, read Barker!!)) find little, if any,
 that is due to respending of the windfall income that consumers earn 
 when their end-use devices deliver energy services with less final energy. 
 Borenstein \cite{Borenstein:2015aa} confirms the absence of such studies. 
-While he and many others have examined the indirect reboud from income effects from a micro perspective, 
+While he and many others have examined the indirect rebound from income effects from a micro perspective, 
  to our knowledge there is no linkage of the aggregate effect
  of these windfall incomes on the macrolevel. 
 Yet, the connection with macro spending multipliers
@@ -148,40 +148,49 @@ and hence the macroeconomic rebound.
 This paper builds a simple conceptual model to understand the macroeconomic multiplier rebound
 effect from the aggregation of microlevel income effects. It relates the direct
 rebound effect from an end-use device energy efficiency improvement, which is typically
-far below one\cite{Gillingham2016}, and the consequent money savings (or windfall income)
+far below one~\cite{Gillingham2016}, and the consequent money savings (or windfall income)
 to the expenditure side of gross domestic product.
-Here, as is wwell known from IS-LM macroeconomics,
-an increase in consumption leads to additional aggregate demand, activity and hence further
+Here, as is well known from IS-LM macroeconomics,
+an increase in consumption leads to additional aggregate demand, activity, and, hence, further
 spending rounds: a multiplier process. This additional demand has an energy intensity, 
 namely that of the economy average in a first instance,
 and the new energy consumption can be attributed
-to a macroeconomic multiplier rebound effect.\cite{Borenstein:2015aa}
+to a macroeconomic multiplier rebound effect~\cite{Borenstein:2015aa}.
 What differentiates the present situation from
 the usual macroeconomic multiplier story, which can be reduced or even
-reversed by crowding out \cite{Ramey2011,Ramy2019}, is that there is no
+reversed by crowding out \cite{Ramey2011,Ramey2019}, is that there is no
 debt-financed government lending that could drive up interest rates or otherwise take
 resources from their most efficient use. Instead, the effect on income here arises
 from a mechanism similar to the ``windfall income" literature that assesses the effect on GDP
-of an unexpected (one off) increase in disposable income that is not debt financed.\cite{Johnson2006,Agarwal2014}
+of an unexpected (one-off) increase in disposable income that is not debt financed~\cite{Johnson2006,Agarwal2014}.
 Hence the multiplier is particular effective.
 
 To test our model, we apply it to energy efficient light bulbs and electric cars.
-We conduct sensitivity studies conducted to gain understanding of the effect
+We conduct sensitivity studies to gain understanding of the effect
 of key paramters on economy-wide rebound.
 
 This model allows estimating the rough magnitude of macroeconomic rebound from the
 aggregation of microecomic income effects, which is particularly important in assessing
 short term rebound. However, since the productivity increase is permanent, the increased
-spending is not a one-off, but expected to perpetuate in the long run other things equal,
-so our model also illustrates how the demand side contributes to the wider ``macroeconomic
+spending is not a one-off, but expected to perpetuate in the long run, other things equal.
+Thus, our model also illustrates how the demand side contributes to the wider ``macroeconomic
 ``growth" (rebound) effect, which is neglected in supply-side determined growth models (!!check Barker!!).
 Secondly, the model immediately permits assessing the impact of capital cost
 on windfall income and hence permits calculating the difference in rebound between
-costless efficiency improvements and those costly ones mandated by policy. This is important
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item costless energy efficiency improvements and
+  
+  \item costly energy efficiency improvements mandated by policy.
+    
+\end{enumerate*}
+%
+The ability to distinguish between costless and costly energy efficiency improvements is important
 to the discussion about just how relevant rebounds are when efficiency improvements are
-compensated with an increase in the cost of living, e.g. by taxing the now cheaper
-energy services or fossil fuel derived energy.\cite{Grubler2018,Pollin2015}
-Thirdly, only very little data is needed to operationalise the model as we show with examples
+compensated with an increase in the cost of living, e.g.\ by taxing the now cheaper
+energy services or fossil fuel derived energy~\cite{Grubler2018,Pollin2015}.
+Thirdly, only very little data is needed to operationalize the model as we show with examples
 from light bulbs and electric cars.
 
 We show that there is an inverse relationship between direct rebound effect and
