@@ -301,6 +301,11 @@ Device-level backfire is expected to be rare due to the economic incentive to av
 
 **** This is the literature review. ****
 
+**** N\"{a}ss\'{e}n and Holmberg \cite{Nassen:2009aa} looked at rebound in Sweden. 
+And they developed an expression for rebound that is somewhat similar to mine. 
+Review and compare. ****
+
+
 
 %------------------------------
 \subsubsection{Framework} 
