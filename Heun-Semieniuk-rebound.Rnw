@@ -305,6 +305,8 @@ Device-level backfire is expected to be rare due to the economic incentive to av
 And they developed an expression for rebound that is somewhat similar to mine. 
 Review and compare. ****
 
+**** Grabs looked at respending rebound for vegetarianism. \cite{Grabs:2015aa} ****
+
 
 
 %------------------------------
