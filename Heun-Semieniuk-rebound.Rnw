@@ -894,7 +894,6 @@ for (varname in names(variations)) {
 }
 
 # Now calculate parameteric data
-
 Parametric <- Parametric %>% 
   dplyr::select(Source, Example, Varying, MPC, p_E, I, Re_dev, epsilon, gamma) %>% 
   dplyr::mutate(
