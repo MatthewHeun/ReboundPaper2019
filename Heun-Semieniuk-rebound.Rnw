@@ -894,6 +894,7 @@ for (varname in names(variations)) {
 }
 
 # Now calculate parameteric data
+
 Parametric <- Parametric %>% 
   dplyr::select(Source, Example, Varying, MPC, p_E, I, Re_dev, epsilon, gamma) %>% 
   dplyr::mutate(
@@ -902,7 +903,7 @@ Parametric <- Parametric %>%
   ) %>% 
   # Create a nested data frame with a Graph_Data column containing nested data frames.
   dplyr::group_by(Varying) %>% 
-  tidyr::nest(.key = "Graph_Data")
+  tidyr::nest(Graph_Data = -Varying)
 @
 
 
