@@ -45,6 +45,7 @@
 
 <<setup, echo = FALSE, message = FALSE>>=
 library(ggplot2)
+library(MacroGrowth)
 library(magrittr)
 library(openxlsx)
 library(rlang)
@@ -809,14 +810,18 @@ economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficie
 economic_data[["k"]] <- economic_data[["MPC"]] / (1 - economic_data[["MPC"]])
 
 # Read the project data
-Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
+Heun_Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
   tibble::as_tibble()
+ENGR333_Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "Group Wide Energy Input Sheet.xlsx"), sheet = "Heun Tab") %>% 
+  tibble::as_tibble()
+Project_data <- dplyr::bind_rows(Heun_Project_data, ENGR333_Project_data)
 
 # Add a column in Project_data for each item in the list of economic_data.
 for (i in 1:length(economic_data)) {
   Project_data[[names(economic_data[i])]] <- economic_data[[i]]
 }
 
+# Perform calculations
 Project_data <- Project_data %>%
   dplyr::mutate(
     # Expected embodied energy cost at the device level [MJ/yr]
@@ -848,7 +853,11 @@ Project_data <- Project_data %>%
     # Ratio of embodied to expected consumed device-level energy savings
     epsilon = E_dot_cost_dev_emb / E_dot_sav_dev_dir_expected,
     # Economy-wide rebound
-    Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E
+    Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E, 
+    # Fractions (phi) of Re_EW for each component
+    phi_Re_dev = Re_dev / Re_EW,
+    phi_epsilon = epsilon / Re_EW,
+    phi_respend = ((1 - Re_dev - gamma) * k * I * p_E) / Re_EW
   )
 @
 
@@ -903,6 +912,20 @@ Parametric <- Parametric %>%
   # Create a nested data frame with a Graph_Data column containing nested data frames.
   dplyr::group_by(Varying) %>% 
   tidyr::nest(Graph_Data = -Varying)
+@
+
+<<Ternary_graph>>=
+ggplot(data = Project_data)  +
+  tri_theme() +
+  tri_grid(colour="gray", labels = c(x = "x", y = "y", z = "z")) +
+  tri_labels(size=10, padding=.05) +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10))
+
+
 @
 
 
