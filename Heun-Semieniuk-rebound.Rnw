@@ -49,6 +49,7 @@ library(MacroGrowth)
 library(magrittr)
 library(openxlsx)
 library(rlang)
+library(tibble)
 @
 
 \journal{Energy Economics}
@@ -1001,6 +1002,25 @@ Project_data %>%
 
 <<Ternary_graph_fancy_with_section>>=
 Project_data %>% 
+  dplyr::mutate(
+    init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
+  ) %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="gray") +
+  tri_labels(size=4, padding=.05, labels = c(x = "Re[dev]", y = "epsilon", z = "Respending")) +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW, shape = Class.Section), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10)) + 
+  # split by section
+  facet_grid(Fuel.Type~init_cost)
+@
+
+<<Empty_Ternary_Graph>>=
+Project_data %>% 
+  dplyr::filter(Source == "Heun", Example == "Light") %>% 
   dplyr::mutate(
     init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
   ) %>% 
