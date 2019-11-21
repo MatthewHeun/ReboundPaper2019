@@ -920,11 +920,11 @@ Project_data %>%
   dplyr::filter(Source != "Heun") %>% 
   ggplot() +
   tri_theme() +
-  tri_grid(colour="black", labels = c(x = "x", y = "y", z = "z")) +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
+  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
   geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+  scale_colour_gradientn(colours = c("green", "green", "blue", "blue", "red", "pink"),
+                         values = scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
                          space = "Lab", limits = c(-5, 10))
 @
 
@@ -934,11 +934,11 @@ Project_data %>%
   dplyr::filter(Source != "Heun" & startsWith(Example, "Autos")) %>% 
   ggplot() +
   tri_theme() +
-  tri_grid(colour="black", labels = c(x = "x", y = "y", z = "z")) +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+  tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
+  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x = phi_Re_dev, y = phi_epsilon, z = phi_respend, colour = Re_EW), stat = "triangle", size = 3, alpha = 1) + 
+  scale_colour_gradientn(colours = c("green", "green", "blue", "blue", "red", "pink"),
+                         values = scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
                          space = "Lab", limits = c(-5, 10))
 @
 
