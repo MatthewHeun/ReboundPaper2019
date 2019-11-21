@@ -1070,7 +1070,83 @@ Project_data %>%
 @
 
 
+<<Ternary_Graph_hyperconservation>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun") %>% 
+  dplyr::mutate(
+    rebound_size = dplyr::case_when(
+      Re_EW < 0 ~ "Hyperconservation", 
+      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
+      Re_EW > 1 ~ "Backfire"
+    ), 
+    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
+  ) %>% 
+  dplyr::filter(rebound_size == "Hyperconservation") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10)) + 
+  # split by rebound size
+  facet_wrap(~rebound_size)
+@
 
+
+<<Ternary_Graph_rebound>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun") %>% 
+  dplyr::mutate(
+    rebound_size = dplyr::case_when(
+      Re_EW < 0 ~ "Hyperconservation", 
+      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
+      Re_EW > 1 ~ "Backfire"
+    ), 
+    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
+  ) %>% 
+  dplyr::filter(rebound_size == "Rebound") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10)) + 
+  # split by rebound size
+  facet_wrap(~rebound_size)
+@
+
+
+
+<<Ternary_Graph_backfire>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun") %>% 
+  dplyr::mutate(
+    rebound_size = dplyr::case_when(
+      Re_EW < 0 ~ "Hyperconservation", 
+      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
+      Re_EW > 1 ~ "Backfire"
+    ), 
+    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
+  ) %>% 
+  dplyr::filter(rebound_size == "Backfire") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10)) + 
+  # split by rebound size
+  facet_wrap(~rebound_size)
+@
 
 
 Two case studies demonstrate the framework
