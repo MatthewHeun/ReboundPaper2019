@@ -808,7 +808,7 @@ does not extend to the wider economy.
 # These variables are same for all energy efficiency projects.
 economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Economic data") %>% 
   as.list()
-economic_data[["k"]] <- economic_data[["MPC"]] / (1 - economic_data[["MPC"]])
+# economic_data[["k"]] <- economic_data[["MPC"]] / (1 - economic_data[["MPC"]])
 
 # Read the project data
 Heun_Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
@@ -821,10 +821,24 @@ Project_data <- dplyr::bind_rows(Heun_Project_data, ENGR333_Project_data)
 for (i in 1:length(economic_data)) {
   Project_data[[names(economic_data[i])]] <- economic_data[[i]]
 }
+# Delete the MPC column, as we will add a range of values next.
+Project_data[["MPC"]] <- NULL
+
+# Duplicate for different values of MPC
+MPC_vals <- c(0.95, 0.9, 0.85, 0.75)
+Project_data <- lapply(MPC_vals, function(mpc){
+  Project_data %>% 
+    dplyr::mutate(
+      MPC = mpc
+    )
+  }) %>% 
+  dplyr::bind_rows()
 
 # Perform calculations
 Project_data <- Project_data %>%
   dplyr::mutate(
+    # Multiplier
+    k = 1 / (1 - MPC) - 1,
     # Expected embodied energy cost at the device level [MJ/yr]
     E_dot_cost_dev_emb = E_dot_emb_EE - E_dot_emb_base,
     # Expected consumed energy savings at the device level [MJ/yr]
@@ -862,62 +876,62 @@ Project_data <- Project_data %>%
   )
 @
 
-<<Parametric_Analysis, echo = FALSE>>=
-variations <- list(MPC = seq(0.5, 0.99, by = 0.01), 
-                   I = seq(2, 6, by = 0.1),
-                   p_E = seq(0.01, 0.06, by = 0.001),
-                   Re_dev = seq(0.0, 0.99, by = 0.01),
-                   gamma = seq(0.01, 2.0, by = 0.01), 
-                   epsilon = seq(0.1, 4, by = 0.02))
-
-# Create data frame of varying variables
-Parametric <- data.frame()
-
-for (varname in names(variations)) {
-  range <- variations[[varname]]
-  first_col <- data.frame(range) %>% 
-    magrittr::set_names(varname)
-  temp <- Project_data %>%
-    # Keep only the important columns in Project_data
-    dplyr::select(Source, Example, p_E, Re_dev, MPC, I, gamma, epsilon) %>% 
-    # Eliminate the varname column in Project_data
-    dplyr::mutate(
-      !!as.name(varname) := NULL
-    )
-  # Get the remaining names from temp
-  nms <- names(temp)
-  # Grab each row of Base and make a data frame from it.
-  for (i in 1:nrow(Project_data)) {
-    df_piece <- first_col
-    # Pick the row we want from temp
-    row <- temp[i, ]
-    # Make a column for every name in the desired row
-    for (nm in nms) {
-      df_piece <- df_piece %>%
-        dplyr::mutate(
-          !!as.name(nm) := row[[nm]],
-          Varying = varname
-        )
-    }
-    Parametric <- dplyr::bind_rows(Parametric, df_piece)
-  }
-}
-
-# Now calculate parameteric data
-Parametric <- Parametric %>% 
-  dplyr::select(Source, Example, Varying, MPC, p_E, I, Re_dev, epsilon, gamma) %>% 
-  dplyr::mutate(
-    k = MPC / (1-MPC),
-    Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E
-  ) %>% 
-  # Create a nested data frame with a Graph_Data column containing nested data frames.
-  dplyr::group_by(Varying) %>% 
-  tidyr::nest(Graph_Data = -Varying)
-@
+% <<Parametric_Analysis, echo = FALSE>>=
+% variations <- list(MPC = seq(0.5, 0.99, by = 0.01), 
+%                    I = seq(2, 6, by = 0.1),
+%                    p_E = seq(0.01, 0.06, by = 0.001),
+%                    Re_dev = seq(0.0, 0.99, by = 0.01),
+%                    gamma = seq(0.01, 2.0, by = 0.01), 
+%                    epsilon = seq(0.1, 4, by = 0.02))
+% 
+% # Create data frame of varying variables
+% Parametric <- data.frame()
+% 
+% for (varname in names(variations)) {
+%   range <- variations[[varname]]
+%   first_col <- data.frame(range) %>% 
+%     magrittr::set_names(varname)
+%   temp <- Project_data %>%
+%     # Keep only the important columns in Project_data
+%     dplyr::select(Source, Example, p_E, Re_dev, MPC, I, gamma, epsilon) %>% 
+%     # Eliminate the varname column in Project_data
+%     dplyr::mutate(
+%       !!as.name(varname) := NULL
+%     )
+%   # Get the remaining names from temp
+%   nms <- names(temp)
+%   # Grab each row of Base and make a data frame from it.
+%   for (i in 1:nrow(Project_data)) {
+%     df_piece <- first_col
+%     # Pick the row we want from temp
+%     row <- temp[i, ]
+%     # Make a column for every name in the desired row
+%     for (nm in nms) {
+%       df_piece <- df_piece %>%
+%         dplyr::mutate(
+%           !!as.name(nm) := row[[nm]],
+%           Varying = varname
+%         )
+%     }
+%     Parametric <- dplyr::bind_rows(Parametric, df_piece)
+%   }
+% }
+% 
+% # Now calculate parameteric data
+% Parametric <- Parametric %>% 
+%   dplyr::select(Source, Example, Varying, MPC, p_E, I, Re_dev, epsilon, gamma) %>% 
+%   dplyr::mutate(
+%     k = MPC / (1-MPC),
+%     Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E
+%   ) %>% 
+%   # Create a nested data frame with a Graph_Data column containing nested data frames.
+%   dplyr::group_by(Varying) %>% 
+%   tidyr::nest(Graph_Data = -Varying)
+% @
 
 <<Ternary_graph_all>>=
 Project_data %>% 
-  dplyr::filter(Source != "Heun") %>% 
+  dplyr::filter(Source != "Heun", MPC == 0.95) %>% 
   ggplot() +
   tri_theme() +
   tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
@@ -931,7 +945,7 @@ Project_data %>%
 
 <<Ternary_graph_autos>>=
 Project_data %>% 
-  dplyr::filter(Source != "Heun" & startsWith(Example, "Autos")) %>% 
+  dplyr::filter(Source != "Heun" & startsWith(Example, "Autos"), MPC == 0.95) %>% 
   ggplot() +
   tri_theme() +
   tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
@@ -944,6 +958,7 @@ Project_data %>%
 
 <<Ternary_graph_sections>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   ggplot() +
   tri_theme() +
   tri_grid(colour="gray") +
@@ -960,6 +975,7 @@ Project_data %>%
 
 <<Ternary_graph_fuel>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   ggplot() +
   tri_theme() +
   tri_grid(colour="gray") +
@@ -977,6 +993,7 @@ Project_data %>%
 
 <<Ternary_graph_initial_cost>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
   ) %>% 
@@ -996,6 +1013,7 @@ Project_data %>%
 
 <<Ternary_graph_fancy>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
   ) %>% 
@@ -1015,6 +1033,7 @@ Project_data %>%
 
 <<Ternary_graph_fancy_with_section>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
   ) %>% 
@@ -1033,6 +1052,7 @@ Project_data %>%
 
 <<Empty_Ternary_Graph>>=
 Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::filter(Source == "Heun", Example == "Car") %>% 
   dplyr::mutate(
     init_cost = ifelse(Initial.Cost.Base.Case < 1000, yes = "Low", no = "High")
@@ -1047,7 +1067,7 @@ Project_data %>%
 
 <<Ternary_Graph_rebound_size>>=
 Project_data %>% 
-  dplyr::filter(Source != "Heun") %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     rebound_size = dplyr::case_when(
       Re_EW < 0 ~ "Hyperconservation", 
@@ -1072,7 +1092,7 @@ Project_data %>%
 
 <<Ternary_Graph_hyperconservation>>=
 Project_data %>% 
-  dplyr::filter(Source != "Heun") %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     rebound_size = dplyr::case_when(
       Re_EW < 0 ~ "Hyperconservation", 
@@ -1098,7 +1118,7 @@ Project_data %>%
 
 <<Ternary_Graph_rebound>>=
 Project_data %>% 
-  dplyr::filter(Source != "Heun") %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::mutate(
     rebound_size = dplyr::case_when(
       Re_EW < 0 ~ "Hyperconservation", 
