@@ -49,6 +49,7 @@ library(MacroGrowth)
 library(magrittr)
 library(openxlsx)
 library(rlang)
+library(scales)
 library(tibble)
 @
 
@@ -1162,7 +1163,8 @@ Project_data %>%
   tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
   tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
   geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = class), stat="triangle", 
-             size = 5, alpha = 1, shape = 21, colour = "black")
+             size = 6, alpha = 1, shape = 21, colour = "black") +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound"))
 @
 
 
