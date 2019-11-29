@@ -875,12 +875,12 @@ Project_data <- Project_data %>%
     phi_epsilon = epsilon / Re_EW,
     phi_respend = ((1 - Re_dev - gamma) * k * I * p_E) / Re_EW,
     # Rebound classification
-    class = dplyr::case_when(
-      Re_EW < 0 ~ "hyperconservation", 
+    rebound_type = dplyr::case_when(
+      Re_EW < 0 ~ "hyperconservation",
       Re_EW >= 0 & Re_EW < 1 ~ "rebound",
       TRUE ~ "backfire"
-    ), 
-    class = factor(class, levels = c("backfire", "rebound", "hyperconservation"))
+    ),
+    rebound_type = factor(rebound_type, levels = c("backfire", "rebound", "hyperconservation"))
   )
 @
 
@@ -1032,7 +1032,29 @@ Project_data %>%
   facet_grid(Fuel.Type~init_cost)
 @
 
-<<Empty_Ternary_Graph>>=
+
+<<Ternary_Graph_rebound_size>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
+  # scale_colour_gradient(limits = c(-10, 3))
+  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
+                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
+                         space = "Lab", limits = c(-5, 10)) + 
+  # split by rebound size
+  facet_wrap(~rebound_type)
+@
+
+
+
+
+The following graphs are used for the ENGR333 presentations.
+
+<<Empty_Ternary_Graph, fig.width=3.5, fig.height=2.25>>=
 Project_data %>% 
   dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
   dplyr::filter(Source == "Heun", Example == "Car") %>% 
@@ -1042,147 +1064,110 @@ Project_data %>%
   ggplot() +
   tri_theme() +
   tri_grid(colour="black") +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respending]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend), stat="triangle", size = 0, alpha = 1)
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend), stat="triangle", size = 0, alpha = 1) + 
+  theme(plot.margin = margin(0, 21, 0, 12)) +
+  coord_cartesian(clip = "off")
 @
 
-
-<<Ternary_Graph_rebound_size>>=
-Project_data %>% 
-  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
-  dplyr::mutate(
-    rebound_size = dplyr::case_when(
-      Re_EW < 0 ~ "Hyperconservation", 
-      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
-      Re_EW > 1 ~ "Backfire"
-    ), 
-    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
-  ) %>% 
-  ggplot() +
-  tri_theme() +
-  tri_grid(colour="black") +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  # scale_colour_gradient(limits = c(-10, 3))
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
-                         space = "Lab", limits = c(-5, 10)) + 
-  # split by rebound size
-  facet_wrap(~rebound_size)
-@
-
-
-<<Ternary_Graph_hyperconservation>>=
-Project_data %>% 
-  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
-  dplyr::mutate(
-    rebound_size = dplyr::case_when(
-      Re_EW < 0 ~ "Hyperconservation", 
-      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
-      Re_EW > 1 ~ "Backfire"
-    ), 
-    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
-  ) %>% 
-  dplyr::filter(rebound_size == "Hyperconservation") %>% 
-  ggplot() +
-  tri_theme() +
-  tri_grid(colour="black") +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  # scale_colour_gradient(limits = c(-10, 3))
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
-                         space = "Lab", limits = c(-5, 10)) + 
-  # split by rebound size
-  facet_wrap(~rebound_size)
-@
-
-
-<<Ternary_Graph_rebound>>=
-Project_data %>% 
-  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
-  dplyr::mutate(
-    rebound_size = dplyr::case_when(
-      Re_EW < 0 ~ "Hyperconservation", 
-      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
-      Re_EW > 1 ~ "Backfire"
-    ), 
-    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
-  ) %>% 
-  dplyr::filter(rebound_size == "Rebound") %>% 
-  ggplot() +
-  tri_theme() +
-  tri_grid(colour="black") +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  # scale_colour_gradient(limits = c(-10, 3))
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
-                         space = "Lab", limits = c(-5, 10)) + 
-  # split by rebound size
-  facet_wrap(~rebound_size)
-@
-
-
-
-<<Ternary_Graph_backfire>>=
-Project_data %>% 
-  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
-  dplyr::mutate(
-    rebound_size = dplyr::case_when(
-      Re_EW < 0 ~ "Hyperconservation", 
-      Re_EW >= 0 & Re_EW < 1 ~ "Rebound", 
-      Re_EW > 1 ~ "Backfire"
-    ), 
-    rebound_size = factor(rebound_size, levels = c("Hyperconservation", "Rebound", "Backfire"))
-  ) %>% 
-  dplyr::filter(rebound_size == "Backfire") %>% 
-  ggplot() +
-  tri_theme() +
-  tri_grid(colour="black") +
-  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, colour=Re_EW), stat="triangle", size = 3, alpha = 1) + 
-  # scale_colour_gradient(limits = c(-10, 3))
-  scale_colour_gradientn(colours=c("green", "green", "blue", "blue", "red", "pink"),
-                         values=scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
-                         space = "Lab", limits = c(-5, 10)) + 
-  # split by rebound size
-  facet_wrap(~rebound_size)
-@
-
-
-
-
-The following graphs are used for the ENGR333 presentations.
-
-<<Ternary_graph_all>>=
+<<Ternary_graph_all, fig.width=6.5, fig.height=5>>=
 Project_data %>% 
   dplyr::filter(Source != "Heun", MPC == 0.95) %>% 
   ggplot() +
   tri_theme() +
-  tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
-  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = class), stat="triangle", 
+  tri_grid(colour = "black") +
+  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
              size = 6, alpha = 1, shape = 21, colour = "black") +
-  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound"))
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title=element_blank(), legend.text = element_text(colour = "black"), plot.margin = margin(0, 0, 0, 12)) + 
+  coord_cartesian(clip = "off")
 @
 
 
-<<Ternary_graph_autos>>=
+<<Ternary_graph_autos, fig.width=6.5, fig.height=3.5>>=
 Project_data %>% 
   dplyr::filter(Source != "Heun" & startsWith(Example, "Autos"), MPC == 0.95) %>% 
   ggplot() +
   tri_theme() +
-  tri_grid(colour = "black", labels = c(x = "x", y = "y", z = "z")) +
-  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[emb]", z = "phi[respend]"), colour = "black") +
-  geom_point(aes(x = phi_Re_dev, y = phi_epsilon, z = phi_respend, colour = Re_EW), stat = "triangle", size = 3, alpha = 1) + 
-  scale_colour_gradientn(colours = c("green", "green", "blue", "blue", "red", "pink"),
-                         values = scales::rescale(c(-5, 0, 0.99,  1, 1.01, 10)),
-                         space = "Lab", limits = c(-5, 10))
+  tri_grid(colour = "black") +
+  tri_labels(size = 6, padding = 0.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
+             size = 6, alpha = 1, shape = 21, colour = "black") +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title=element_blank(), legend.text = element_text(colour = "black"), plot.margin = margin(0, 0, 0, 12)) + 
+  coord_cartesian(clip = "off")
+@
+
+<<Ternary_Graph_hyperconservation, fig.width=3.5, fig.height=2.5>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
+  dplyr::filter(rebound_type == "hyperconservation") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
+             size = 6, alpha = 1, shape = 21, colour = "black", show.legend = FALSE) +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title=element_blank(), legend.text = element_text(colour = "black"), plot.margin = margin(2, 21, 0, 12))+ 
+  coord_cartesian(clip = "off")
+@
+
+<<Ternary_Graph_rebound, fig.width=3.5, fig.height=3.5>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
+  dplyr::filter(rebound_type == "rebound") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
+             size = 6, alpha = 1, shape = 21, colour = "black", show.legend = FALSE) +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title=element_blank(), legend.text = element_text(colour = "black"), plot.margin = margin(0, 22, 0, 12))+ 
+  coord_cartesian(clip = "off")
+@
+
+<<Ternary_Graph_backfire, fig.width=3.5, fig.height=2.5>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun" & MPC == 0.95) %>%
+  dplyr::filter(rebound_type == "backfire") %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour="black") +
+  tri_labels(size=6, padding=.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
+             size = 6, alpha = 1, shape = 21, colour = "black", show.legend = FALSE) +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title = element_blank(), 
+        legend.text = element_text(colour = "black"), 
+        plot.margin = margin(0, 22, 0, 12)) + 
+  coord_cartesian(clip = "off")
 @
 
 
-
+<<Ternary_graph_sensitivity, fig.width=6.5, fig.height=5.75>>=
+Project_data %>% 
+  dplyr::filter(Source != "Heun") %>% 
+  dplyr::filter(phi_respend <= 2, phi_epsilon >= -2, phi_epsilon < 2) %>%
+  dplyr::mutate(
+    MPC = factor(MPC, levels = c(0.95, 0.9, 0.85, 0.75))
+  ) %>% 
+  ggplot() +
+  tri_theme() +
+  tri_grid(colour = "black") +
+  tri_labels(size = 4, padding = 0.05, labels = c(x = "phi[device]", y = "phi[embodied]", z = "phi[respend]"), colour = "black") +
+  geom_point(aes(x=phi_Re_dev, y=phi_epsilon, z=phi_respend, fill = rebound_type), stat="triangle", 
+             size = 3, alpha = 1, shape = 21, colour = "black") +
+  scale_fill_manual(values = scales::hue_pal()(3) %>% set_names("backfire", "hyperconservation", "rebound")) + 
+  theme(legend.title=element_blank(), 
+        legend.text = element_text(colour = "black"), 
+        strip.text = element_text(colour = "black"),
+        plot.margin = margin(0, 0, 0, 12)) + 
+  coord_cartesian(clip = "off") + 
+  facet_wrap(~MPC)
+@
 
 
 Two case studies demonstrate the framework
