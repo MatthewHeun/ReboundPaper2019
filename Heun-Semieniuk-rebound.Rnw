@@ -227,20 +227,6 @@ Findings from a new exergy-based national-level rebound approach.''}
 
 
 %------------------------------------------------
-
-% \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-% Figueredo, A.~J. and P. S.~A. Wolf (2009).
-% \newblock ``Assortative pairing and life history strategy - a cross-cultural study.''
-% \newblock {\em Human Nature}, 20:317--330.
-
-%------------------------------------------------
-
-% \bibitem[Smith, 2012]{Smith:2012qr}
-% Smith, J.~M. and A.~B. Jones (2012).
-% \newblock {\em ``Chemistry.''}
-% \newblock Publisher, City, 7th edition.
-
-%------------------------------------------------
 % Articles:
 %\bibitem[<citation to appear in-text>]{<citekey>}
 %<author block as it appears in the references list> (<year>).
