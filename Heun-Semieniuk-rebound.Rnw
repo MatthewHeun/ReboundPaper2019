@@ -47,17 +47,19 @@
 % \singleauthor{<author name>}{<superscript identifier>}
 % Suitable identifiers are *, **, ***, ****
 \authors{
-\singleauthor{Matthew Kuperus Heun}{*}
-and
+\singleauthor{Matthew Kuperus Heun}{*},
 \singleauthor{Gregor Semieniuk}{**},
+and
+\singleauthor{Paul E. Brockway}{***},
 }
 
 % Specify each author affiliation with the following command:
 % \singleaffiliation{<superscript identifier indent>}{<superscript identifer>}{<affiliation>}
 % The superscript indent takes values in multiples of 3pt, e.g. first affiliation is 3pt, second 6pt, etc
 \affiliations{
-\singleaffiliation{3pt}{*}{Corresponding author. Engineering Department, Calvin University, 3201 Burton St. SE, Grand Rapids, MI, 49546. E-mail: \href{mailto:mkh2@calvin.edu}{mkh2@calvin.edu}.}
-\singleaffiliation{6pt}{**}{Political Economy Research Institute \& Department of Economics, University of Massachusetts at Amherst, 412 North Pleasant St., Amherst, MA, 01002}
+\singleaffiliation{3pt}{*}{Corresponding author. Engineering Department, Calvin University, 3201 Burton St. SE, Grand Rapids, MI, 49546, USA. E-mail: \href{mailto:mkh2@calvin.edu}{mkh2@calvin.edu}.}
+\singleaffiliation{6pt}{**}{Political Economy Research Institute \& Department of Economics, University of Massachusetts at Amherst, 412 North Pleasant St., Amherst, MA, 01002, USA}
+\singleaffiliation{6pt}{***}{Sustainability Research Institute, School of Earth and Environment, University of Leeds, Leeds, LS2 9JT, UK}
 }
 
 % Note that acknowledgements are placed in their own section after the appendix and before the bibliography
