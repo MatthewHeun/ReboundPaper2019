@@ -48,8 +48,7 @@
 % Suitable identifiers are *, **, ***, ****
 \authors{
 \singleauthor{Matthew Kuperus Heun}{*},
-\singleauthor{Gregor Semieniuk}{**},
-and
+\singleauthor{Gregor Semieniuk}{**}, and
 \singleauthor{Paul E. Brockway}{***},
 }
 
@@ -81,7 +80,7 @@ University of Leeds, Leeds, LS2 9JT, UK}
 %----------------------------------------------------------------------------------------
 
 \abstractblock
-{Place the abstract text here}
+{Max 150 words. Place the abstract text here}
 {Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
 {C32, H23, O33, O38, Q56, Q58} % JEL
@@ -94,9 +93,26 @@ University of Leeds, Leeds, LS2 9JT, UK}
 
 % Place your text for the Introduction here. The following dummy text illustrates how to insert footnotes and figure or table references.
 
+See guide for authors at \url{http://www.iaee.org/en/publications/authors.aspx}.
+Main points are:
+
+**** Use Chicago Manual of Style. ****
+
+**** Manuscripts may not exceed 25--35 pages or 9,500 words. ****
+
+**** Acceptable file formats for fitures include 
+EPS, TIFF, JPEG, GIF, PNG, BMP, XLS, XLSX, DOC, DOCX, and PDF. ****
+
+**** The Journal does not publish in color. ****
+
+**** In order to improve the accessibility of Energy Journal papers, authors are required to submit a short (one to two page) non-technical Executive Summary in PDF format which contains the following: a) the motivations underlying the research; b) a short account of the research performed; c) the main conclusions; and, d) potential benefits, applications and policy implications of the work. No tables, charts, graphics, equations, etc. are to be included in the Executive Summary.
+
+Authors are encouraged to include the Executive Summary with their initial submission. ****
+
 This statement\footnote{Not actually a statement} needs referencing \citep{Borenstein:2015aa}. 
 This was described in \cite{Brockway:2017a}. 
 This is a reference to a table (Table \ref{tab:example}).
+
 
 %----------------------------------------------------------------------------------------
 %	MATERIALS AND METHODS
