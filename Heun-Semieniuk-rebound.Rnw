@@ -82,7 +82,7 @@ University of Leeds, Leeds, LS2 9JT, UK}
 
 \abstractblock
 {Place the abstract text here}
-{Energy innovation, Energy transition, Energy cost, Economic, keyword1, keyword2} % Keywords
+{Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
 {C32, H23, O33, O38, Q56, Q58} % JEL
 
@@ -94,7 +94,9 @@ University of Leeds, Leeds, LS2 9JT, UK}
 
 % Place your text for the Introduction here. The following dummy text illustrates how to insert footnotes and figure or table references.
 
-This statement\footnote{Not actually a statement} needs referencing \citep{Borenstein:2015aa}. This was described in \cite{Figueredo:2009dg}. This is a reference to a table (Table \ref{tab:example}).
+This statement\footnote{Not actually a statement} needs referencing \citep{Borenstein:2015aa}. 
+This was described in \cite{Brockway:2017a}. 
+This is a reference to a table (Table \ref{tab:example}).
 
 %----------------------------------------------------------------------------------------
 %	MATERIALS AND METHODS
@@ -200,17 +202,27 @@ Borenstein, S. (2015).
 
 %------------------------------------------------
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and P. S.~A. Wolf (2009).
-\newblock ``Assortative pairing and life history strategy - a cross-cultural study.''
-\newblock {\em Human Nature}, 20:317--330.
+\bibitem[Brockway, 2017]{Brockway:2017a}
+Brockway, P.E., et\ al.\ (2017).
+\newblock {``Energy rebound as a potential threat to a low-carbon future: 
+Findings from a new exergy-based national-level rebound approach.''}
+\newblock {\em Energies}, 10(1)51:1--24.
+\newblock{\url{https://doi.org/10.3390/en10010051}}.
+
 
 %------------------------------------------------
 
-\bibitem[Smith, 2012]{Smith:2012qr}
-Smith, J.~M. and A.~B. Jones (2012).
-\newblock {\em ``Chemistry.''}
-\newblock Publisher, City, 7th edition.
+% \bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+% Figueredo, A.~J. and P. S.~A. Wolf (2009).
+% \newblock ``Assortative pairing and life history strategy - a cross-cultural study.''
+% \newblock {\em Human Nature}, 20:317--330.
+
+%------------------------------------------------
+
+% \bibitem[Smith, 2012]{Smith:2012qr}
+% Smith, J.~M. and A.~B. Jones (2012).
+% \newblock {\em ``Chemistry.''}
+% \newblock Publisher, City, 7th edition.
 
 %------------------------------------------------
 % Articles:
