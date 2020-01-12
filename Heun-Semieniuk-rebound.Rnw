@@ -481,15 +481,32 @@ Assuming that the price of final energy does not change because of $U$
 ($\after{p}_{E_f} = \before{p}_{E_f}$)
 and using $p_s = p_{E_f}/\eta$, $\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
 
+As quantity demanded increases, direct energy consumption is gained 
+at the device at the efficiency of the upgraded device~($\after{\eta}$),
+$\rate{E}_{f,gain} = \left( \rateafter{q}_s - \ratebefore{q} \right) / \after{\eta}$.
+Using $\rateafter{E}_{f,dir} = \ratebefore{q}_s / \after{\eta}$ and
+$\rateafter{E}_{f,dir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir}$, 
+we find that
+$\rate{E}_{f,gain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right] 
+                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir}$
+If $\before{\eta} = \after{\eta}$, $\rate{E}_{f,gain} = 0$, as expected.
+If $\epsilon = 0$, $\rate{E}_{f,gain} = 0$, as expected.
+
+$\rate{E}_{f,gain}$ represents energy savings taken back by the substitution effect at the device.
+As such, $\rate{E}_{f,gain}$ is the source of device-level rebound. 
+Applying Equation~\ref{eq:rebound_2} gives 
+$Re_{dev} = \rate{E}_{f,gain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir} \right]$.
+After simplification, we find
+%
+\begin{equation} \label{eq:Re_dev}
+  Re_{dev} = \frac{\left( \frac{\before{\eta}}{\after{\eta}} \right)^{\epsilon} - 1 }
+               {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 } \, .
+\end{equation}
+%
 
 
 
 
-
-%------------------------------
-\subsubsection{Device-level rebound} 
-\label{sec:device_level_rebound_derivation}
-%------------------------------
 
 
 
