@@ -41,6 +41,9 @@
 % If you wish to submit to the Economics of Energy & Environmental Policy, use the [EEEPJ] option below
 \documentclass[EJ]{IAEE}
 
+% Packages imported by the authors
+\usepackage{nomencl}     % To obtain a nice nomenclature section
+\makenomenclature
 
 \articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound} % Article title
 
@@ -118,6 +121,8 @@ This is a reference to a table (Table \ref{tab:example}).
 
 **** Our introduction starts here. ****
 
+\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
+\nomenclature{$h$}{Planck constant}
 
 
 
@@ -240,8 +245,10 @@ e = mc^2
 \label{sec:nomenclature}
 %++++++++++++++++++++++++++++++
 
+\printnomenclature
 
 
+Something in Nomenclature section.
 
 
 %++++++++++++++++++++++++++++++
