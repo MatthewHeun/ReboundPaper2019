@@ -475,8 +475,13 @@ embodied energy rebound will be smaller.
 When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$), 
 the service price decreases ($\after{p}_s < \before{p}_s$), and 
 the quantity demanded can increase ($\rateafter{q}_s > \ratebefore{q}_s$).
-The service price elasticity of demand ($\epsilon$) quantifies this relationship such that
+The service price elasticity of demand ($\epsilon$) quantifies these dynamics such that
 $\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
+Assuming that the price of final energy does not change because of $U$
+($\after{p}_{E_f} = \before{p}_{E_f}$)
+and using $p_s = p_{E_f}/\eta$, $\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
+
+
 
 
 
