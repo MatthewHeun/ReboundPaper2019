@@ -45,10 +45,14 @@
 \usepackage{booktabs}
 
 % Functions defined by the authors
-\newcommand{\after}[1]{\widetilde{#1}}
-\newcommand{\rate}[1]{\dot{#1}}
-\newcommand{\rateafter}[1]{\widetilde{\dot{#1}}}
+\newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
+\newcommand{\before}[1]{#1}                        % No decoration for before the energy efficiency upgrade (U)
+\newcommand{\after}[1]{\widetilde{#1}}             % Decoration for after the energy efficiency upgrade (U)
+\newcommand{\ratebefore}[1]{\rate{#1}}             % Decoration for a rate before the energy efficiency upgrade (U)
+\newcommand{\rateafter}[1]{\widetilde{\rate{#1}}}  % Decoration for a rate after the energy efficiency upgrade (U)
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound} % Article title
 
 % Specify each author with the following command:
@@ -72,26 +76,23 @@ University of Massachusetts at Amherst, 412 North Pleasant St., Amherst, MA, 010
 \singleaffiliation{6pt}{***}{Sustainability Research Institute, School of Earth and Environment, 
 University of Leeds, Leeds, LS2 9JT, UK}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Note that acknowledgements are placed in their own section after the appendix and before the bibliography
 
-%----------------------------------------------------------------------------------------
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 \maketitle % Print the article title and authors
 
 \printaffiliations % Print the affiliations in the footer of the first page
 
-%----------------------------------------------------------------------------------------
-%	ABSTRACT BLOCK
-%----------------------------------------------------------------------------------------
-
 \abstractblock
 {Max 150 words. Place the abstract text here}
 {Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
 {C32, H23, O33, O38, Q56, Q58} % JEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -297,10 +298,10 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Decoration & Meaning [example units] \\
   \midrule
-  $X$ & (without decoration) prior to energy efficiency intervention \\
-  $\after{X}$ & after energy efficiency intervention \\
-  $\rate{X}$ & rate of $X$ before energy efficiency intervention [X/year] \\
-  $\rateafter{X}$ & rate of $X$ after energy efficiency intervention [X/year] \\
+  $\before{X}$ & (without decoration) prior to energy efficiency upgrade \\
+  $\after{X}$ & after energy efficiency upgrade \\
+  $\rate{X}$ & rate of $X$ before energy efficiency upgrade [X/year] \\
+  $\rateafter{X}$ & rate of $X$ after energy efficiency upgrade [X/year] \\
   \bottomrule
 \end{tabular}
 \label{tab:decorations}
@@ -367,8 +368,8 @@ As final energy-to-service efficiency~($\eta$) increases,
 service price~($p_s$) declines.
 
 The rate of service provided~($\rate{q}_s$) is related to 
-final energy-to-service efficiency~($\eta $) and 
-device direct energy consumption~($E_{f,dir}$) by
+final energy-to-service efficiency~($\eta$) and 
+the rate of final energy consumption directly by the device~($\rate{E}_{f,dir}$) by
 $\rate{q}_s = \eta \rate{E}_{f,dir}$, where
 $\rate{q}_s$ could be in [vehicle-miles/year] and
 $\rate{E}_{f,dir}$ in [MJ/year].
@@ -384,38 +385,39 @@ Also, $\rate{E}_{f,dir} = \rate{q}_S / \eta$.
 %------------------------------
 
 Prior to the energy efficiency upgrade~($U$), 
-the device has final energy-to-services efficiency of $\eta$, and
+the device has final energy-to-services efficiency of $\before{\eta}$, and
 the user of the energy conversion device consumes services 
-provided by the device at a rate of $\rate{q}_s$, 
+provided by the device at a rate of $\ratebefore{q}_s$, 
 which implies the final energy consumption rate of the device to be
-$\rate{E}_{f,dir} = \rate{q}_s / \eta$.
+$\ratebefore{E}_{f,dir} = \ratebefore{q}_s / \before{\eta}$.
 After $U$, the rate of final energy consumption by the device is
-$\rateafter{E}_{f,dir} = \rate{q}_s / \after{\eta}$, 
+$\rateafter{E}_{f,dir} = \ratebefore{q}_s / \after{\eta}$, 
 because the rate of service consumption is assumed to be unchanged 
-(i.e., $\rateafter{q}_s = \rate{q}_s$).
+(i.e., $\rateafter{q}_s = \ratebefore{q}_s$).
 The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) 
 due to $U$ is given by 
-$\Delta \rate{E}_{f,dir} = \frac{\rate{q}_s}{\after{\eta}} - \frac{\rate{q}_s}{\eta}$, 
+$\Delta \rate{E}_{f,dir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebefore{q}_s}{\before{\eta}}$, 
 which can be rearranged to be
 %
 \begin{equation}
-  \Delta \rate{E}_{f,dir} = \left( \frac{\eta }{\after{\eta}} - 1 \right) \rate{E}_{f,dir}
+  \Delta \rate{E}_{f,dir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{f,dir}
 \end{equation}
 %
-using $\rate{E}_{f,dir} = \frac{\rate{q}_s}{\eta}$.
-If $\after{\eta} \rightarrow \infty$, 
-the infinite efficiency eliminates all final energy consumption, and 
-$\Delta \rate{E}_{f,dir} = - \rate{E}_{f,dir}$, as expected.
-If efficiency increases due to $U$ such that $\after{\eta} > \eta$, 
+using $\ratebefore{E}_{f,dir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
+if $\after{\eta} \rightarrow \infty$, 
+all final energy consumption is eliminated, and 
+$\Delta \rate{E}_{f,dir} = - \ratebefore{E}_{f,dir}$, as expected.
+If efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$, 
 the rate of final energy consumption declines, and 
 $\Delta \rate{E}_{f,dir} < 0$,
 as expected.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption, 
-or $-\Delta \rate{E}_{f,dir} = (1 - \eta / \after{\eta}) \rate{E}_{f,dir}$.
-Thus Equation~\ref{eq:rebound_1} can be rewritten as, 
+or $-\Delta \rate{E}_{f,dir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{f,dir}$.
+Thus Equation~\ref{eq:rebound_1} can be rewritten as
+%
 \begin{equation} \label{eq:rebound_2}
-  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\eta}{\after{\eta}} \right) \rate{E}_{f,dir}} \, .
+  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{f,dir}} \, .
 \end{equation}
 
 
@@ -427,49 +429,49 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as,
 
 Prior to $U$, the embodied final energy of the device is $E_{f,emb}$.
 After $U$, the embodied final energy of the device is $\after{E}_{f,emb}$.
-We allocate embodied energy over the life of the device ($t$ and $\after{t}$) 
+We allocate embodied energy over the life of the device ($\before{t}$ and $\after{t}$) 
 to obtain embodied energy rates.
 The change in embodied final energy due to $U$ is given by 
 %
 \begin{equation} \label{eq:delta_embodied}
-  \Delta \rate{E}_{f,emb} = \left( \frac{\after{E}_{f,emb}}{E_{f,emb}}
-  \frac{t}{\after{t}} - 1 \right) \rate{E}_{f,emb} \, .
+  \Delta \rate{E}_{f,emb} = \left( \frac{\after{E}_{f,emb}}{\before{E}_{f,emb}}
+  \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{f,emb} \, .
 \end{equation}
 %
 Typically, increases in energy efficiency are associated with increased device complexity
-and more embodied energy ($\after{E}_{f,emb} > E_{f,emb}$). 
+and more embodied energy ($\after{E}_{f,emb} > \before{E}_{f,emb}$). 
 However, if the upgraded device has longer life than the original device
-($\after{t} > t$), 
+($\after{t} > \before{t}$), 
 $\Delta \rate{E}_{f,emb}$ can be negative.
 
 $\Delta \rate{E}_{f,emb}$ represents energy savings taken back due to embodied energy effects.
 Thus, embodied energy rebound can be written as
 %
 \begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \frac{\left( \frac{\after{E}_{f,emb}}{E_{f,emb}}\frac{t}{\after{t}} - 1 \right)}
-             {\left( 1 - \frac{\eta}{\after{\eta}} \right)}
-             \frac{\rate{E}_{f,emb}}{\rate{E}_{f,dir}} \, .
+  Re_{emb} = \frac{\left( \frac{\after{E}_{f,emb}}{\before{E}_{f,emb}}\frac{\before{t}}{\after{t}} - 1 \right)}
+             {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
+             \frac{\ratebefore{E}_{f,emb}}{\ratebefore{E}_{f,dir}} \, .
 \end{equation}
 %
-As the original embodied energy rate is larger than the direct final energy consumption rate 
-($\rate{E}_{f,emb} > \rate{E}_{f,dir}$), 
+When the original embodied energy rate is larger than the original direct final energy consumption rate 
+($\ratebefore{E}_{f,emb} > \ratebefore{E}_{f,dir}$), 
 embodied energy rebound will be larger.
-As the embodied energy of the device is larger after $U$ than before
-($\after{E}_{f,emb} > E_{f,emb}$), 
+When the embodied energy of the device is larger after $U$ than before
+($\after{E}_{f,emb} > \before{E}_{f,emb}$), 
 embodied energy rebound will be larger.
-If the upgraded device has longer life than the original device
-($\after{t} > t$), 
+When the upgraded device has longer life than the original device
+($\after{t} > \before{t}$), 
 embodied energy rebound will be smaller.
 To the extent that $U$ increases efficiency
-($\after{\eta} > \eta$),
-embodied energy will be smaller.
-
+($\after{\eta} > \before{\eta}$),
+embodied energy rebound will be smaller.
 
 
 %------------------------------
 \subsubsection{Substitution effect} 
 \label{sec:substitution_effect_derivation}
 %------------------------------
+
 
 
 
