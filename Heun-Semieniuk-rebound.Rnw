@@ -42,8 +42,12 @@
 \documentclass[EJ]{IAEE}
 
 % Packages imported by the authors
-\usepackage{nomencl}     % To obtain a nice nomenclature section
-\makenomenclature
+\usepackage{booktabs}
+
+% Functions defined by the authors
+\newcommand{\after}[1]{\widetilde{#1}}
+\newcommand{\rate}[1]{\dot{#1}}
+\newcommand{\rateafter}[1]{\widetilde{\dot{#1}}}
 
 \articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound} % Article title
 
@@ -120,9 +124,6 @@ This is a reference to a table (Table \ref{tab:example}).
 
 
 **** Our introduction starts here. ****
-
-\nomenclature{$c$}{Speed of light in a vacuum inertial frame}
-\nomenclature{$h$}{Planck constant}
 
 
 
@@ -245,10 +246,76 @@ e = mc^2
 \label{sec:nomenclature}
 %++++++++++++++++++++++++++++++
 
-\printnomenclature
+\begin{table}
+\centering % Centered table
+\caption{Symbols.}
+\begin{tabular}{r l}
+  \toprule
+  Symbol & Meaning [example units] \\
+  \midrule
+  $C$ & cost [\$] \\
+  $E$ & energy [MJ] \\
+  $G$ & income [\$] \\
+  $I$ & energy intensity of economic activity [MJ/\$] \\
+  $p$ & price [\$] \\
+  $q$ & quantity [--] \\
+  $Re$ & rebound [--] \\
+  $t$ & device lifetime [years] \\
+  \bottomrule
+\end{tabular}
+\label{tab:symbols}
+\end{table}
 
 
-Something in Nomenclature section.
+\begin{table}
+\centering % Centered table
+\caption{Greek letters.}
+\begin{tabular}{r l}
+  \toprule
+  Greek letter & Meaning [example units] \\
+  \midrule
+  $\epsilon$ & service price elasticity of demand [--] \\ 
+  $\eta$ & final energy-to-services efficiency [vehicle-miles/MJ] \\
+  \bottomrule
+\end{tabular}
+\label{tab:greek}
+\end{table}
+
+
+\begin{table}
+\centering % Centered table
+\caption{Decorations.}
+\begin{tabular}{r l}
+  \toprule
+  Decoration & Meaning [example units] \\
+  \midrule
+  $X$ & (without decoration) prior to energy efficiency intervention \\
+  $\after{X}$ & after energy efficiency intervention \\
+  $\rate{X}$ & rate of $X$ before energy efficiency intervention [X/year] \\
+  $\rateafter{X}$ & rate of $X$ after energy efficiency intervention [X/year] \\
+  \bottomrule
+\end{tabular}
+\label{tab:decorations}
+\end{table}
+
+
+
+\begin{table}
+\centering % Centered table
+\caption{Subscripts.}
+\begin{tabular}{r l}
+  \toprule
+  Subscript & Meaning \\
+  \midrule
+  $dir$ & direct (denotes energy used directly by the device) \\
+  $dev$ & device \\
+  $E_f$ & final energy \\
+  $emb$ & embodied \\
+  $s$ & service \\
+  \bottomrule
+\end{tabular}
+\label{tab:subscripts}
+\end{table}
 
 
 %++++++++++++++++++++++++++++++
