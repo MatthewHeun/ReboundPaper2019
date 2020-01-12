@@ -472,6 +472,11 @@ embodied energy rebound will be smaller.
 \label{sec:substitution_effect_derivation}
 %------------------------------
 
+When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$), 
+the service price decreases ($\after{p}_s < \before{p}_s$), and 
+the quantity demanded can increase ($\rateafter{q}_s > \ratebefore{q}_s$).
+The service price elasticity of demand ($\epsilon$) quantifies this relationship such that
+$\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
 
 
 
