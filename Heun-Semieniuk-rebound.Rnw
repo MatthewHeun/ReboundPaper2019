@@ -246,8 +246,9 @@ e = mc^2
 \label{sec:nomenclature}
 %++++++++++++++++++++++++++++++
 
+We adopt nomenclature similar to that of \cite{Borenstein:2015aa}.
 Table~\ref{tab:symbols} shows symbols, their meanings, and example units.
-Table~\ref{tab:greek} shows greek letters, their meanings, and example units.
+Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
 Table~\ref{tab:decorations} shows symbol decorations and their meanings. 
 Table~\ref{tab:subscripts} shows subscripts and their meanings. 
 
@@ -313,11 +314,12 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Subscript & Meaning \\
   \midrule
-  $dir$ & direct (denotes energy used directly by the device) \\
+  $dir$ & direct, meaning energy used directly by the device \\
   $dev$ & device \\
   $E_f$ & final energy \\
   $emb$ & embodied \\
-  $s$ & service \\
+  $f$ & final energy stage of the energy conversion chain \\
+  $s$ & service stage of the energy conversion chain\\
   \bottomrule
 \end{tabular}
 \label{tab:subscripts}
@@ -364,6 +366,7 @@ Also, $\rate{E}_{f,dir} = \rate{q}_S / \eta$.
 %------------------------------
 
 Prior to the energy efficiency upgrade~($U$), 
+the device has final energy-to-services efficiency of $\eta$, and
 the user of the energy conversion device consumes services 
 provided by the device at a rate of $\rate{q}_s$, 
 which implies final energy consumption by the device at a rate 
@@ -372,25 +375,51 @@ After $U$, the rate of final energy consumption by the device is
 $\rateafter{E}_{f,dir} = \rate{q}_s / \after{\eta}$, 
 because the rate of service consumption is assumed to be unchanged 
 ($\rateafter{q}_s = \rate{q}_s$).
-The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) is given by 
+The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) 
+due to $U$ is given by 
 $\Delta \rate{E}_{f,dir} = \frac{\rate{q}_s}{\after{\eta}} - \frac{\rate{q}_s}{\eta}$, 
-which can be rearranged to 
+which can be rearranged to be
 %
 \begin{equation}
-  \Delta \rate{E}_{f,dir} = \left( \frac{\eta }{\after{\eta}} - 1 \right) \rate{E}_{f,dir}  \, ,
+  \Delta \rate{E}_{f,dir} = \left( \frac{\eta }{\after{\eta}} - 1 \right) \rate{E}_{f,dir}
 \end{equation}
 %
 using $\rate{E}_{f,dir} = \frac{\rate{q}_s}{\eta}$.
+If $\after{\eta} \rightarrow \infty$, 
+the infinite efficiency eliminates all final energy consumption, and 
+$\Delta \rate{E}_{f,dir} = - \Delta  \rate{E}_{f,dir}$, as expected.
+If efficiency increases such that $\after{\eta} > \eta$, 
+the rate of final energy consumption declines, and 
+$\Delta \rate{E}_{f,dir} < 0$,
+as expected.
+
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption, 
-or $(1 - \eta / \after{\eta}) \rate{E}_{f,dir}$.
-
-
+or $-\Delta \rate{E}_{f,dir} = (1 - \eta / \after{\eta}) \rate{E}_{f,dir}$.
 
 
 %------------------------------
 \subsubsection{Embodied energy effect} 
 \label{sec:embodied_effect_derivation}
 %------------------------------
+
+Prior to $U$, the embodied final energy of the device is $E_{f,emb}$.
+After $U$, the embodied final energy of the device is $\after{E}_{f,emb}$.
+We allocate embodied energy over the life of the device ($t$ and $\after{t}$) 
+to obtain embodied energy rates.
+The change in embodied final energy due to $U$ is given by 
+%
+\begin{equation} \label{eq:delta_embodied}
+  \Delta \rate{E}_{f,emb} = \left( \frac{\after{E}_{f,emb}}{E_{f,emb}}
+  \frac{t}{\after{t}} - 1\right) \rate{E}_{f,emb} \, .
+\end{equation}
+%
+Typically, increases in energy efficiency are associated with increased device complexity
+and more embodied energy ($\after{E}_{f,emb} > E_{f,emb}$). 
+However, if the upgraded device has longer life than the original device
+($\after{t} > t$), 
+$\Delta \rate{E}_{f,emb}$ can be negative.
+
+$\Delta \rate{E}_{f,emb}$ represents energy savings taken back due to embodied energy effects.
 
 
 %------------------------------
