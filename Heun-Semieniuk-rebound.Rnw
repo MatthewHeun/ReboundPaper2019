@@ -246,6 +246,12 @@ e = mc^2
 \label{sec:nomenclature}
 %++++++++++++++++++++++++++++++
 
+Table~\ref{tab:symbols} shows symbols, their meanings, and example units.
+Table~\ref{tab:greek} shows greek letters, their meanings, and example units.
+Table~\ref{tab:decorations} shows symbol decorations and their meanings. 
+Table~\ref{tab:subscripts} shows subscripts and their meanings. 
+
+
 \begin{table}
 \centering % Centered table
 \caption{Symbols.}
@@ -261,6 +267,7 @@ e = mc^2
   $q$ & quantity [--] \\
   $Re$ & rebound [--] \\
   $t$ & device lifetime [years] \\
+  $U$ & energy efficiency upgrade \\
   \bottomrule
 \end{tabular}
 \label{tab:symbols}
@@ -299,7 +306,6 @@ e = mc^2
 \end{table}
 
 
-
 \begin{table}
 \centering % Centered table
 \caption{Subscripts.}
@@ -327,10 +333,56 @@ This section shows the derivation of the explicit rebound model.
 
 
 %------------------------------
-\subsubsection{Expected energy savings} 
-\label{sec:expected energy savings}
+\subsubsection{Preliminaries} 
+\label{sec:preliminaries}
 %------------------------------
 
+Service price~($p_s$) is related to final energy price~($p_{E_f}$) through
+final energy-to-service efficiency~($\eta$) by  
+$p_s = p_{E_f}/\eta$, where
+$p_s$ could be in [\$/vehicle-mile], 
+$p_{E_f}$ in [\$/MJ], and
+$\eta$ in [vehicle-miles/MJ].
+As final energy-to-service efficiency~($\eta$) increases,
+service price~($p_s$) declines.
+
+The rate of service provided~($\rate{q}_s$) is related to 
+final energy-to-service efficiency~($\eta $) and 
+device direct energy consumption~($E_{f,dir}$) by
+$\rate{q}_s = \eta \rate{E}_{f,dir}$, where
+$\rate{q}_s$ could be in [vehicle-miles/year] and
+$\rate{E}_{f,dir}$ in [MJ/year].
+As final energy-to-service efficiency~($\eta$) increases,
+a higher rate of service~($\rate{q}_s$) can be provided for the same
+rate of final energy consumption by the device~($\rate{E}_{f,dir}$).
+Also, $\rate{E}_{f,dir} = \rate{q}_S / \eta$.
+
+
+%------------------------------
+\subsubsection{Expected energy savings} 
+\label{sec:expected_energy_savings}
+%------------------------------
+
+Prior to the energy efficiency upgrade~($U$), 
+the user of the energy conversion device consumes services 
+provided by the device at a rate of $\rate{q}_s$, 
+which implies final energy consumption by the device at a rate 
+$\rate{E}_{f,dir} = \rate{q}_s / \eta$.
+After $U$, the rate of final energy consumption by the device is
+$\rateafter{E}_{f,dir} = \rate{q}_s / \after{\eta}$, 
+because the rate of service consumption is assumed to be unchanged 
+($\rateafter{q}_s = \rate{q}_s$).
+The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) is given by 
+$\Delta \rate{E}_{f,dir} = \frac{\rate{q}_s}{\after{\eta}} - \frac{\rate{q}_s}{\eta}$, 
+which can be rearranged to 
+%
+\begin{equation}
+  \Delta \rate{E}_{f,dir} = \left( \frac{\eta }{\after{\eta}} - 1 \right) \rate{E}_{f,dir}  \, ,
+\end{equation}
+%
+using $\rate{E}_{f,dir} = \frac{\rate{q}_s}{\eta}$.
+The expected, device-level energy savings is the negative of the change in direct, final energy consumption, 
+or $(1 - \eta / \after{\eta}) \rate{E}_{f,dir}$.
 
 
 
