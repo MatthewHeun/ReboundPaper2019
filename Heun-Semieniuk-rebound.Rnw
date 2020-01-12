@@ -319,6 +319,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $E_f$ & final energy \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
+  $i$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $s$ & service stage of the energy conversion chain\\
   \bottomrule
 \end{tabular}
@@ -332,6 +333,23 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 %++++++++++++++++++++++++++++++
 
 This section shows the derivation of the explicit rebound model.
+Like \cite{Borenstein:2015aa}, we consider three contributing factors to rebound,
+embodied energy effects, 
+substitution effects, and
+income effects.
+Energy rebound for each effect~($i$) can be calculated by
+$Re_i = 1 - \frac{\mathrm{actual \, energy \, savings_i}}{\mathrm{expected \, energy \, savings}}$, 
+where expected energy savings are measured at the device level,
+assuming no change in the rate of service, 
+no substitution, 
+and no change of embodied energy.
+Actual energy savings are given by 
+$\mathrm{actual \, energy \, savings} = \mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
+Thus, 
+%
+\begin{equation} \label{eq:rebound_1}
+  Re_i = \frac{\mathrm{takeback_i}}{\mathrm{expected \, energy \, savings}} \, .
+\end{equation}
 
 
 %------------------------------
@@ -369,12 +387,12 @@ Prior to the energy efficiency upgrade~($U$),
 the device has final energy-to-services efficiency of $\eta$, and
 the user of the energy conversion device consumes services 
 provided by the device at a rate of $\rate{q}_s$, 
-which implies final energy consumption by the device at a rate 
+which implies the final energy consumption rate of the device to be
 $\rate{E}_{f,dir} = \rate{q}_s / \eta$.
 After $U$, the rate of final energy consumption by the device is
 $\rateafter{E}_{f,dir} = \rate{q}_s / \after{\eta}$, 
 because the rate of service consumption is assumed to be unchanged 
-($\rateafter{q}_s = \rate{q}_s$).
+(i.e., $\rateafter{q}_s = \rate{q}_s$).
 The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) 
 due to $U$ is given by 
 $\Delta \rate{E}_{f,dir} = \frac{\rate{q}_s}{\after{\eta}} - \frac{\rate{q}_s}{\eta}$, 
@@ -387,14 +405,19 @@ which can be rearranged to be
 using $\rate{E}_{f,dir} = \frac{\rate{q}_s}{\eta}$.
 If $\after{\eta} \rightarrow \infty$, 
 the infinite efficiency eliminates all final energy consumption, and 
-$\Delta \rate{E}_{f,dir} = - \Delta  \rate{E}_{f,dir}$, as expected.
-If efficiency increases such that $\after{\eta} > \eta$, 
+$\Delta \rate{E}_{f,dir} = - \rate{E}_{f,dir}$, as expected.
+If efficiency increases due to $U$ such that $\after{\eta} > \eta$, 
 the rate of final energy consumption declines, and 
 $\Delta \rate{E}_{f,dir} < 0$,
 as expected.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption, 
 or $-\Delta \rate{E}_{f,dir} = (1 - \eta / \after{\eta}) \rate{E}_{f,dir}$.
+Thus Equation~\ref{eq:rebound_1} can be rewritten as, 
+\begin{equation} \label{eq:rebound_2}
+  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\eta}{\after{\eta}} \right) \rate{E}_{f,dir}} \, .
+\end{equation}
+
 
 
 %------------------------------
@@ -420,15 +443,27 @@ However, if the upgraded device has longer life than the original device
 $\Delta \rate{E}_{f,emb}$ can be negative.
 
 $\Delta \rate{E}_{f,emb}$ represents energy savings taken back due to embodied energy effects.
-Embodied energy rebound is given by the ratio of embodied energy takeback to expected, 
-device-level energy savings due to $U$.
+Thus, embodied energy rebound can be written as
 %
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \frac{\left( \frac{\after{E}_{f,emb}}{E_{f,emb}}\frac{t}{\after{t}} - 1 \right)}
              {\left( 1 - \frac{\eta}{\after{\eta}} \right)}
-             \frac{\rate{E}_{f,emb}}{\rate{E}_{f,dir}}
+             \frac{\rate{E}_{f,emb}}{\rate{E}_{f,dir}} \, .
 \end{equation}
 %
+As the original embodied energy rate is larger than the direct final energy consumption rate 
+($\rate{E}_{f,emb} > \rate{E}_{f,dir}$), 
+embodied energy rebound will be larger.
+As the embodied energy of the device is larger after $U$ than before
+($\after{E}_{f,emb} > E_{f,emb}$), 
+embodied energy rebound will be larger.
+If the upgraded device has longer life than the original device
+($\after{t} > t$), 
+embodied energy rebound will be smaller.
+To the extent that $U$ increases efficiency
+($\after{\eta} > \eta$),
+embodied energy will be smaller.
+
 
 
 %------------------------------
