@@ -410,7 +410,7 @@ The change in embodied final energy due to $U$ is given by
 %
 \begin{equation} \label{eq:delta_embodied}
   \Delta \rate{E}_{f,emb} = \left( \frac{\after{E}_{f,emb}}{E_{f,emb}}
-  \frac{t}{\after{t}} - 1\right) \rate{E}_{f,emb} \, .
+  \frac{t}{\after{t}} - 1 \right) \rate{E}_{f,emb} \, .
 \end{equation}
 %
 Typically, increases in energy efficiency are associated with increased device complexity
@@ -420,12 +420,23 @@ However, if the upgraded device has longer life than the original device
 $\Delta \rate{E}_{f,emb}$ can be negative.
 
 $\Delta \rate{E}_{f,emb}$ represents energy savings taken back due to embodied energy effects.
+Embodied energy rebound is given by the ratio of embodied energy takeback to expected, 
+device-level energy savings due to $U$.
+%
+\begin{equation} \label{eq:Re_emb}
+  Re_{emb} = \frac{\left( \frac{\after{E}_{f,emb}}{E_{f,emb}}\frac{t}{\after{t}} - 1 \right)}
+             {\left( 1 - \frac{\eta}{\after{\eta}} \right)}
+             \frac{\rate{E}_{f,emb}}{\rate{E}_{f,dir}}
+\end{equation}
+%
 
 
 %------------------------------
 \subsubsection{Substitution effect} 
 \label{sec:substitution_effect_derivation}
 %------------------------------
+
+
 
 
 %------------------------------
