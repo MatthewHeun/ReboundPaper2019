@@ -57,7 +57,9 @@
 \newcommand{\femb}{\fcomma{}emb}                   % Improves spacing between f,emb
 \newcommand{\fgain}{\fcomma{}gain}                 % Improves spacing between f,gain
 \newcommand{\floss}{\fcomma{}loss}                 % Improves spacing between f,loss
-\newcommand{\shift}{shi\!f\!\!t}                     % Improves spacing in the italicized word "shift"
+\newcommand{\shift}{shi\!f\!\!t}                   % Improves spacing in the italicized word "shift"
+\newcommand{\fsub}{\fcomma{}sub}                   % Improves spacing between f,loss
+
 
 
 
@@ -454,7 +456,7 @@ However, if the upgraded device has longer life than the original device
 $\Delta \rate{E}_{\femb}$ can be negative.
 
 $\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
-Thus, embodied energy rebound can be written as
+Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
 %
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
@@ -534,6 +536,31 @@ such that $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{E_f}$.
 Assuming that $\rate{C}_{\shift}$ reduces energy consumption 
 by the energy intensity of the economy gives
 $\rate{E}_{\floss} = \rate{C}_{\shift} I_{E_f} = \rate{E}_{\fgain} p_{E_f} I_{E_f}$.
+
+The net substition effect ($\Delta \rate{E}_{\fsub}$) is given by 
+$\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{floss}$.
+After substituting for $\rate{E}_{\fgain}$ and some rearranging,
+the net substitution effect can be expressed as
+%
+\begin{equation} \label{eq:delta_sub}
+  \Delta \rate{E}_{\fsub} = (1 - p_{E_f} I_{E_f}) 
+                            \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon - 1 \right]
+                            \frac{\before{\eta}}{\after{\eta}} \, 
+                            \rate{E}_{\fdir} \, .
+\end{equation}
+
+$\Delta \rate{E}_{\fsub}$ represents the energy savings taken back by substitution effects.
+Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution rebound as
+$Re_{sub} = (1 - p_{E_f} I_{E_f}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
+After simplification, substitution rebound can be expressed as
+%
+\begin{equation} \label{eq:Re_sub}
+  Re_{sub} = (1 - p_{E_f} I_{E_f}) Re_{dev} \, .
+\end{equation}
+%
+
+
+
 
 
 
