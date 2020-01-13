@@ -56,6 +56,8 @@
 \newcommand{\fdir}{\fcomma{}dir}                   % Improves spacing between f,dir
 \newcommand{\femb}{\fcomma{}emb}                   % Improves spacing between f,emb
 \newcommand{\fgain}{\fcomma{}gain}                 % Improves spacing between f,gain
+\newcommand{\finc}{\fcomma{}inc}                   % Improves spacing between f,inc
+\newcommand{\fincres}{\fcomma{}inc\&res}           % Improves spacing between f,inc&res
 \newcommand{\floss}{\fcomma{}loss}                 % Improves spacing between f,loss
 \newcommand{\shift}{shi\!f\!\!t}                   % Improves spacing in the italicized word "shift"
 \newcommand{\fsub}{\fcomma{}sub}                   % Improves spacing between f,loss
@@ -265,6 +267,10 @@ Table~\ref{tab:decorations} shows symbol decorations and their meanings.
 Table~\ref{tab:subscripts} shows subscripts and their meanings. 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{table}
 \centering % Centered table
 \caption{Symbols.}
@@ -274,8 +280,10 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \midrule
   $C$ & cost [\$] \\
   $E$ & energy [MJ] \\
+  $FC$ & freed cash [\$] \\
   $G$ & income [\$] \\
   $I$ & energy intensity of economic activity [MJ/\$] \\
+  $k$ & technology multiplier \\
   $p$ & price [\$] \\
   $q$ & quantity [--] \\
   $Re$ & rebound [--] \\
@@ -286,6 +294,10 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 \label{tab:symbols}
 \end{table}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Greek
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
 \centering % Centered table
@@ -301,6 +313,10 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 \label{tab:greek}
 \end{table}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Decorations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{table}
 \centering % Centered table
@@ -319,20 +335,29 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 \end{table}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subscripts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{table}
-\centering % Centered table
+\centering 
 \caption{Subscripts.}
 \begin{tabular}{r l}
   \toprule
   Subscript & Meaning \\
   \midrule
   $dir$ & direct, meaning energy used directly by the device \\
+  $dis$ & disposal \\
   $dev$ & device \\
   $E_f$ & final energy \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
   $i$ & an index for different rebound effects (embodied energy, substitution, income) \\
-  $s$ & service stage of the energy conversion chain\\
+  $inc$ & income \\
+  $OM$ & operation and maintenance \\
+  $pur$ & purchase \\
+  $res$ & respending \\
+  $s$ & service stage of the energy conversion chain \\
   \bottomrule
 \end{tabular}
 \label{tab:subscripts}
@@ -557,22 +582,48 @@ After simplification, substitution rebound can be expressed as
 \begin{equation} \label{eq:Re_sub}
   Re_{sub} = (1 - p_{E_f} I_{E_f}) Re_{dev} \, .
 \end{equation}
-%
-
-
-
-
-
-
-
-
-
 
 
 %------------------------------
 \subsubsection{Income effect} 
 \label{sec:income_effect_derivation}
 %------------------------------
+
+Energy cost savings~($\rate{G}$) (known as ``income''\footnote{
+  Energy cost savings are an ``income'' in the sense of a return on investment in energy efficiency.
+  The device user's income, in the sense of remuneration for labor, is unchanged. 
+}
+) are one result of the investment in $U$.
+$\rate{G}$ is money that is no longer spent on energy, 
+assuming the same service level from the device. 
+Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{E_f}$. 
+Because $\Delta \rate{E}_{\fdir}$ is negative, $\rate{G}$ is positive.
+It costs money to procure, operate, maintain, and dispose of the energy-efficient device.
+But it also cost money to procure, operate, maintain, and dispose of the original device, too.
+If costs are spread across the life of the device, we obtain
+$\rateafter{C}_{dev} = \after{C}_{pur} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / t$ and
+$\ratebefore{C}_{dev} = \before{C}_{pur} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.
+The change in device cost rate is given by 
+$\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.
+After rearrangement, $\Delta \rate{C}_{dev} = \left( \rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1 \right) \ratebefore{C}_{dev}.$
+
+Freed cash ($FC$) is the difference between income and 
+the change in cost rates for procuring, operating, maintaining, and disposing
+the upgraded device relative to the original device.
+Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
+
+Assuming that the freed cash is spent in the economy at the energy intensity of the economy gives
+$\Delta \rate{E}_{\finc} = FC \, I_{E_F}$.
+But the freed cash is respent in the economy.
+The respending can be represented by a technology multiplier~($k$).
+Thus, 
+$\Delta E_{\fincres} = FC \, I_{E_f} k$.
+
+
+
+
+
+
 
 
 %------------------------------
