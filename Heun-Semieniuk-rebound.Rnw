@@ -618,6 +618,24 @@ But the freed cash is respent in the economy.
 The respending can be represented by a technology multiplier~($k$).
 Thus, 
 $\Delta E_{\fincres} = FC \, I_{E_f} k$.
+Using the definitions above yields
+%
+\begin{equation} \label{eq:deta_income}
+  \Delta \rate{E}_{\fincres} = \left( 1 - \frac{\before{\eta}}{\after{\eta}} 
+                                 - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}} \right) 
+                               k I_{E_f} p_{E_f} \ratebefore{E}_{\fdir} \, .
+\end{equation}
+
+Without the energy efficiency upgrade ($U$),
+$\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, and
+$\Delta \rate{E}_{\fincres} = 0$, as expected.
+As $\after{\eta}$ increases, $\Delta \rate{E}_{\fincres}$ goes up.
+More freed cash is available when $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$, and
+$\Delta \rate{E}_{\fdir}$ goes up.
+
+$\Delta \rate{E}_{\fincres}$ represents energy savings taken back due to the income effect.
+Equation~\ref{eq:rebound_2} can be employed for the income and respending rebound effect.
+
 
 
 
