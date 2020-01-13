@@ -42,14 +42,23 @@
 \documentclass[EJ]{IAEE}
 
 % Packages imported by the authors
-\usepackage{booktabs}
+\usepackage{booktabs}           % For nicely formatted tables
+\usepackage[inline]{enumitem}   % For inline enumeration
 
-% Functions defined by the authors
+% Macros defined by the authors
 \newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
 \newcommand{\before}[1]{#1}                        % No decoration for before the energy efficiency upgrade (U)
 \newcommand{\after}[1]{\widetilde{#1}}             % Decoration for after the energy efficiency upgrade (U)
-\newcommand{\ratebefore}[1]{\rate{#1}}             % Decoration for a rate before the energy efficiency upgrade (U)
-\newcommand{\rateafter}[1]{\widetilde{\rate{#1}}}  % Decoration for a rate after the energy efficiency upgrade (U)
+\newcommand{\ratebefore}[1]{\before{\rate{#1}}}    % Decoration for a rate before the energy efficiency upgrade (U)
+\newcommand{\rateafter}[1]{\after{\rate{#1}}}      % Decoration for a rate after the energy efficiency upgrade (U)
+
+\newcommand{\fcomma}{f\!\!,}
+\newcommand{\fdir}{\fcomma{}dir}                   % Improves spacing between f,dir
+\newcommand{\femb}{\fcomma{}emb}                   % Improves spacing between f,emb
+\newcommand{\fgain}{\fcomma{}gain}                 % Improves spacing between f,gain
+\newcommand{\floss}{\fcomma{}loss}                 % Improves spacing between f,loss
+\newcommand{\shift}{shi\!f\!\!t}                     % Improves spacing in the italicized word "shift"
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -369,14 +378,14 @@ service price~($p_s$) declines.
 
 The rate of service provided~($\rate{q}_s$) is related to 
 final energy-to-service efficiency~($\eta$) and 
-the rate of final energy consumption directly by the device~($\rate{E}_{f,dir}$) by
-$\rate{q}_s = \eta \rate{E}_{f,dir}$, where
+the rate of final energy consumption directly by the device~($\rate{E}_{\fdir}$) by
+$\rate{q}_s = \eta \rate{E}_{\fdir}$, where
 $\rate{q}_s$ could be in [vehicle-miles/year] and
-$\rate{E}_{f,dir}$ in [MJ/year].
+$\rate{E}_{\fdir}$ in [MJ/year].
 As final energy-to-service efficiency~($\eta$) increases,
 a higher rate of service~($\rate{q}_s$) can be provided for the same
-rate of final energy consumption by the device~($\rate{E}_{f,dir}$).
-Also, $\rate{E}_{f,dir} = \rate{q}_S / \eta$.
+rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
+Also, $\rate{E}_{\fdir} = \rate{q}_S / \eta$.
 
 
 %------------------------------
@@ -389,35 +398,35 @@ the device has final energy-to-services efficiency of $\before{\eta}$, and
 the user of the energy conversion device consumes services 
 provided by the device at a rate of $\ratebefore{q}_s$, 
 which implies the final energy consumption rate of the device to be
-$\ratebefore{E}_{f,dir} = \ratebefore{q}_s / \before{\eta}$.
+$\ratebefore{E}_{\fdir} = \ratebefore{q}_s / \before{\eta}$.
 After $U$, the rate of final energy consumption by the device is
-$\rateafter{E}_{f,dir} = \ratebefore{q}_s / \after{\eta}$, 
+$\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$, 
 because the rate of service consumption is assumed to be unchanged 
 (i.e., $\rateafter{q}_s = \ratebefore{q}_s$).
-The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{f,dir}$) 
+The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{\fdir}$) 
 due to $U$ is given by 
-$\Delta \rate{E}_{f,dir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebefore{q}_s}{\before{\eta}}$, 
+$\Delta \rate{E}_{\fdir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebefore{q}_s}{\before{\eta}}$, 
 which can be rearranged to be
 %
 \begin{equation}
-  \Delta \rate{E}_{f,dir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{f,dir}
+  \Delta \rate{E}_{\fdir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{\fdir}
 \end{equation}
 %
-using $\ratebefore{E}_{f,dir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
-if $\after{\eta} \rightarrow \infty$, 
+using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
+If $\after{\eta} \rightarrow \infty$, 
 all final energy consumption is eliminated, and 
-$\Delta \rate{E}_{f,dir} = - \ratebefore{E}_{f,dir}$, as expected.
+$\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$, as expected.
 If efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$, 
 the rate of final energy consumption declines, and 
-$\Delta \rate{E}_{f,dir} < 0$,
+$\Delta \rate{E}_{\fdir} < 0$,
 as expected.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption, 
-or $-\Delta \rate{E}_{f,dir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{f,dir}$.
+or $-\Delta \rate{E}_{\fdir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{\fdir}$.
 Thus Equation~\ref{eq:rebound_1} can be rewritten as
 %
 \begin{equation} \label{eq:rebound_2}
-  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{f,dir}} \, .
+  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
 \end{equation}
 
 
@@ -427,44 +436,56 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \label{sec:embodied_effect_derivation}
 %------------------------------
 
-Prior to $U$, the embodied final energy of the device is $E_{f,emb}$.
-After $U$, the embodied final energy of the device is $\after{E}_{f,emb}$.
+Prior to $U$, the embodied final energy of the device is $E_{\femb}$.
+After $U$, the embodied final energy of the device is $\after{E}_{\femb}$.
 We allocate embodied energy over the life of the device ($\before{t}$ and $\after{t}$) 
 to obtain embodied energy rates.
-The change in embodied final energy due to $U$ is given by 
+The change in embodied final energy due to $U$ (expressed as a rate) is given by 
 %
 \begin{equation} \label{eq:delta_embodied}
-  \Delta \rate{E}_{f,emb} = \left( \frac{\after{E}_{f,emb}}{\before{E}_{f,emb}}
-  \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{f,emb} \, .
+  \Delta \rate{E}_{\femb} = \left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}
+  \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{\femb} \, .
 \end{equation}
 %
 Typically, increases in energy efficiency are associated with increased device complexity
-and more embodied energy ($\after{E}_{f,emb} > \before{E}_{f,emb}$). 
+and more embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$). 
 However, if the upgraded device has longer life than the original device
 ($\after{t} > \before{t}$), 
-$\Delta \rate{E}_{f,emb}$ can be negative.
+$\Delta \rate{E}_{\femb}$ can be negative.
 
-$\Delta \rate{E}_{f,emb}$ represents energy savings taken back due to embodied energy effects.
+$\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
 Thus, embodied energy rebound can be written as
 %
 \begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \frac{\left( \frac{\after{E}_{f,emb}}{\before{E}_{f,emb}}\frac{\before{t}}{\after{t}} - 1 \right)}
+  Re_{emb} = \frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
              {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
-             \frac{\ratebefore{E}_{f,emb}}{\ratebefore{E}_{f,dir}} \, .
+             \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}} \, .
 \end{equation}
 %
-When the original embodied energy rate is larger than the original direct final energy consumption rate 
-($\ratebefore{E}_{f,emb} > \ratebefore{E}_{f,dir}$), 
-embodied energy rebound will be larger.
-When the embodied energy of the device is larger after $U$ than before
-($\after{E}_{f,emb} > \before{E}_{f,emb}$), 
-embodied energy rebound will be larger.
-When the upgraded device has longer life than the original device
-($\after{t} > \before{t}$), 
-embodied energy rebound will be smaller.
-To the extent that $U$ increases efficiency
-($\after{\eta} > \before{\eta}$),
-embodied energy rebound will be smaller.
+Embodied energy rebound increases to the extent that
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the original embodied energy rate is larger than the original direct final energy consumption rate 
+        ($\ratebefore{E}_{\femb} > \ratebefore{E}_{\fdir}$) or 
+  
+  \item the embodied energy of the device is larger after $U$ than before
+        ($\after{E}_{\femb} > \before{E}_{\femb}$), 
+    
+\end{enumerate*}
+%
+On the other hand,
+embodied energy rebound will be smaller to the extent that
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the upgraded device has longer life than the original device
+        ($\after{t} > \before{t}$) or
+  
+  \item $U$ increases efficiency
+        ($\after{\eta} > \before{\eta}$).
+    
+\end{enumerate*}
 
 
 %------------------------------
@@ -478,31 +499,42 @@ the quantity demanded can increase ($\rateafter{q}_s > \ratebefore{q}_s$).
 The service price elasticity of demand ($\epsilon$) quantifies these dynamics such that
 $\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
 Assuming that the price of final energy does not change because of $U$
-($\after{p}_{E_f} = \before{p}_{E_f}$)
-and using $p_s = p_{E_f}/\eta$, $\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
+(i.e., $\after{p}_{E_f} = \before{p}_{E_f}$)
+and using $p_s = p_{E_f}/\eta$, 
+the new quantity demanded can be expressed in terms of service price elasticity of demand as
+$\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
 
 As quantity demanded increases, direct energy consumption is gained 
 at the device at the efficiency of the upgraded device~($\after{\eta}$),
-$\rate{E}_{f,gain} = \left( \rateafter{q}_s - \ratebefore{q} \right) / \after{\eta}$.
-Using $\rateafter{E}_{f,dir} = \ratebefore{q}_s / \after{\eta}$ and
-$\rateafter{E}_{f,dir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir}$, 
+such that
+$\rate{E}_{\fgain} = \left( \rateafter{q}_s - \ratebefore{q} \right) / \after{\eta}$.
+Using $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$ and
+$\rateafter{E}_{\fdir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$, 
 we find that
-$\rate{E}_{f,gain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right] 
-                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir}$
-If $\before{\eta} = \after{\eta}$, $\rate{E}_{f,gain} = 0$, as expected.
-If $\epsilon = 0$, $\rate{E}_{f,gain} = 0$, as expected.
+$\rate{E}_{\fgain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right] 
+                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$.
+If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
+If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
 
-$\rate{E}_{f,gain}$ represents energy savings taken back by the substitution effect at the device.
-As such, $\rate{E}_{f,gain}$ is the source of device-level rebound. 
+$\rate{E}_{\fgain}$ represents energy savings taken back by the substitution effect at the device.
+As such, $\rate{E}_{\fgain}$ is the source of device-level rebound. 
 Applying Equation~\ref{eq:rebound_2} gives 
-$Re_{dev} = \rate{E}_{f,gain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{f,dir} \right]$.
-After simplification, we find
+$Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
+After simplification, the explicit expression for device-level rebound is
 %
 \begin{equation} \label{eq:Re_dev}
   Re_{dev} = \frac{\left( \frac{\before{\eta}}{\after{\eta}} \right)^{\epsilon} - 1 }
                {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 } \, .
 \end{equation}
-%
+
+However, increased service consumption ($\rateafter{q}_s > \ratebefore{q}_s$) 
+implies an increased energy cost for the device.
+The increased energy cost is shifted from other non-energy expenditures in the economy
+such that $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{E_f}$.
+Assuming that $\rate{C}_{\shift}$ reduces energy consumption 
+by the energy intensity of the economy gives
+$\rate{E}_{\floss} = \rate{C}_{\shift} I_{E_f} = \rate{E}_{\fgain} p_{E_f} I_{E_f}$.
+
 
 
 
