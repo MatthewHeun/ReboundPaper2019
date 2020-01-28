@@ -672,7 +672,6 @@ After substituting and rearranging, total rebound is found to be
 \begin{equation} \label{eq:rebound_total}
   Re = Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f} \, .
 \end{equation}
-%
 
 
 %++++++++++++++++++++++++++++++
@@ -680,7 +679,27 @@ After substituting and rearranging, total rebound is found to be
 \label{sec:model_verification}
 %++++++++++++++++++++++++++++++
 
-**** Add verification of Borenstein's results here. ****
+\citet[Section IV.A]{Borenstein:2015aa} provides
+example calculations for rebound from an increase in auto fuel economy.
+The details of \citeauthor{Borenstein:2015aa}'s 
+fuel economy example provide the opportunity for numerical verification of
+the explicit equation for rebound developed above.
+Only the expressions for income and substitution effects 
+($Re_{inc}$ and $Re_{sub}$) can be verified, because
+\citeauthor{Borenstein:2015aa} did not provide 
+example calculations for embodied energy rebound ($Re_{emb}$).
+
+
+%------------------------------
+\subsubsection{Verification of income effect rebound ($Re_{inc}$)} 
+\label{sec:verification_income}
+%------------------------------
+
+The explicit equation for income effect rebound  ($Re_{inc}$) is given by
+Equation~\ref{eq:Re_inc} with $k = 1$.
+
+
+
 
 
 } % This brace ends the appendix content section.
