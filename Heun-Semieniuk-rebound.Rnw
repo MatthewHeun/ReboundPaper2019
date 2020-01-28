@@ -675,6 +675,12 @@ After substituting and rearranging, total rebound is found to be
 %
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Model verification}
+\label{sec:model_verification}
+%++++++++++++++++++++++++++++++
+
+**** Add verification of Borenstein's results here. ****
 
 
 } % This brace ends the appendix content section.
