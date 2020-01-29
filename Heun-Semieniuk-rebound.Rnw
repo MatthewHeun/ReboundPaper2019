@@ -588,15 +588,15 @@ After simplification, substitution rebound can be expressed as
 
 
 %------------------------------
-\subsubsection{Income effect} 
+\subsubsection{Income and respending effects} 
 \label{sec:income_effect_derivation}
 %------------------------------
 
 Energy cost savings~($\rate{G}$, in \$/year, known as ``income''\footnote{
   Energy cost savings are an ``income'' in the sense of a return on investment in energy efficiency.
   The device user's income, in the sense of remuneration for labor, is unchanged. 
-}
-) are one result of the investment in $U$.
+}) 
+are one result of the investment in $U$.
 $\rate{G}$ is money that is no longer spent on energy to run the upgraded device, 
 assuming the same service level from the device. 
 Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{E_f}$. 
@@ -685,23 +685,76 @@ The details of \citeauthor{Borenstein:2015aa}'s
 fuel economy example provide the opportunity for numerical verification of
 the explicit equation for rebound developed above.
 Only the expressions for income and substitution effects 
-($Re_{inc}$ and $Re_{sub}$) can be verified, because
+($Re_{inc}$ and $Re_{sub}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_inc} 
+can be verified, because
 \citeauthor{Borenstein:2015aa} did not provide 
 example calculations for embodied energy rebound ($Re_{emb}$).
 
 
 %------------------------------
-\subsubsection{Verification of income effect rebound ($Re_{inc}$)} 
+\subsubsection{Verification of substitution effect rebound ($Re_{sub}$) equation} 
+\label{sec:verification_substitution}
+%------------------------------
+
+To verify the derivation of the explicit substitution effect rebound equation,
+we use numbers from \citeauthor{Borenstein:2015aa}'s 
+fuel economy example to calculate $Re_{sub}$ by Equation~\ref{eq:Re_sub}.
+Then, we compare our answer to 
+\citeauthor{Borenstein:2015aa}'s numerical estimate for $Re_{sub}$.
+Agreement will indicate that the derivation of Equation~\ref{eq:Re_sub} is correct.
+
+The explicit equation for substitution effect rebound ($Re_{sub}$) is given by
+Equation~\ref{eq:Re_sub}.
+Numerical quantification for each term of Equation~\ref{eq:Re_sub}
+is given below.
+The price of gasoline ($p_{E,f}$) can be calculated using \citeauthor{Borenstein:2015aa}'s numbers as
+$p_{E,f} = \frac{1}{(113,996 \, \mathrm{BTU/gallon})(1 \, \mathrm{gallon}/\$3)} 
+= 2.6317 \times 10^{-5} \, \$/\mathrm{BTU}$.
+\citeauthor{Borenstein:2015aa}'s energy intensity of the economy is $6472 \, \mathrm{BTU/\$}$.
+Device-level rebound ($Re_{dev}$) is given by Equation~\ref{eq:Re_dev}.
+With the price elasticity of final energy demand as $\epsilon  = -0.2$ and
+$\before{\eta}$ and $\after{\eta}$ as 25 and 50 miles/gallon, respectively, 
+we obtain $Re_{dev} = 0.149$.
+Using the above results in Equation~\ref{eq:Re_sub}
+gives $Re_{sub} = 0.124$. 
+\citeauthor{Borenstein:2015aa} callculated 0.128.
+We attribute the difference to rounding errors, 
+as \citeauthor{Borenstein:2015aa}'s calculation involves many steps,
+whereas the explicit expression in Equation~\ref{eq:Re_sub}
+is evaluated directly.
+The near-match verifies the derivation of Equation~\ref{eq:Re_sub}.
+
+
+%------------------------------
+\subsubsection{Verification of income effect rebound ($Re_{inc}$) equation} 
 \label{sec:verification_income}
 %------------------------------
 
-The explicit equation for income effect rebound  ($Re_{inc}$) is given by
+To verify the derivation of the explicit income effect rebound equation,
+we use numbers from \citeauthor{Borenstein:2015aa}'s 
+fuel economy example to calculate $Re_{inc}$ by Equation~\ref{eq:Re_inc}.
+Then, we compare our answer to 
+\citeauthor{Borenstein:2015aa}'s numerical estimate for $Re_{inc}$.
+Agreement will indicate that the derivation of Equation~\ref{eq:Re_inc} is correct.
+
+The explicit equation for income effect rebound ($Re_{inc}$) is given by
 Equation~\ref{eq:Re_inc} with $k = 1$.
-
-
-
-
-
+Numerical quantification for each term of Equation~\ref{eq:Re_inc}
+is given below.
+\citet{Borenstein:2015aa} indicates that the fuel economy upgrade 
+from $\before{\eta}$ to $\after{\eta}$
+costs \$3000,
+and the automobile's expected lifetime is 12 years.
+Thus, $\rateafter{C}_{dev} - \ratebefore{C}_{dev} = \frac{\$3000}{12 \, \mathrm{yrs}} = \$250/\mathrm{year}$.
+The pre-upgrade direct final energy consumption rate
+($\ratebefore{E}_{\fdir}$)
+is calculated from expected usage (12,000 mi/yr) and $\eta$ as
+$\ratebefore{E}_{\fdir} = (12,000 \, \mathrm{mi/yr})(1 \, \mathrm{gal}/25 \, \mathrm{mi}) (113,996 \, \mathrm{BTU/gal}) 
+= 5.472 \times 10^7 \, \mathrm{BTU/yr}$.
+Using the above numbers in Equation~\ref{eq:Re_inc} with $k = 1$, 
+we obtain $Re_{inc} = 0.110$, 
+exactly matching the value of 0.11 reported in \citet[Section IV.A]{Borenstein:2015aa}.
+The match verifies the derivation of Equation~\ref{eq:Re_inc}.
 } % This brace ends the appendix content section.
 
 %----------------------------------------------------------------------------------------
