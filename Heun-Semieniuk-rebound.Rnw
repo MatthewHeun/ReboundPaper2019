@@ -56,8 +56,8 @@
 \newcommand{\fdir}{\fcomma{}dir}                   % Improves spacing between f,dir
 \newcommand{\femb}{\fcomma{}emb}                   % Improves spacing between f,emb
 \newcommand{\fgain}{\fcomma{}gain}                 % Improves spacing between f,gain
-\newcommand{\finc}{\fcomma{}inc}                   % Improves spacing between f,inc
-\newcommand{\incres}{inc\&res}                     % Subscript for income and respending
+\newcommand{\finc}{\fcomma{}i}                     % Improves spacing between f,inc
+\newcommand{\incres}{ir}                           % Subscript for income and respending
 \newcommand{\fincres}{\fcomma{}\incres}            % Improves spacing between f,inc&res
 \newcommand{\floss}{\fcomma{}loss}                 % Improves spacing between f,loss
 \newcommand{\shift}{shi\!f\!\!t}                   % Improves spacing in the italicized word "shift"
@@ -308,7 +308,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   Greek letter & Meaning [example units] \\
   \midrule
   $\epsilon$ & service price elasticity of final energy demand [--] \\ 
-  $\eta$ & final energy-to-services efficiency [vehicle-miles/MJ] \\
+  $\eta$ & final-energy-to-service efficiency [vehicle-miles/MJ] \\
   \bottomrule
 \end{tabular}
 \label{tab:greek}
@@ -352,9 +352,9 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $dev$ & device \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
-  $i$ & an index for different rebound effects (embodied energy, substitution, income) \\
-  $inc$ & income \\
+  $i$ & income \\
   $ir$ & income and respending \\
+  $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $OM$ & operation and maintenance \\
   $pur$ & purchase \\
   $res$ & respending \\
@@ -375,8 +375,8 @@ Like \cite{Borenstein:2015aa}, we consider three contributing factors to rebound
 embodied energy effects, 
 substitution effects, and
 income effects.
-Energy rebound for each effect~($i$) can be calculated by
-$Re_i = 1 - \frac{\mathrm{actual \, energy \, savings_i}}{\mathrm{expected \, energy \, savings}}$, 
+Energy rebound for each effect~($j$) can be calculated by
+$Re_j = 1 - \frac{\mathrm{actual \, energy \, savings_i}}{\mathrm{expected \, energy \, savings}}$, 
 where expected energy savings are measured at the device level,
 assuming no change in the rate of service, 
 no substitution, 
@@ -386,7 +386,7 @@ $\mathrm{actual \, energy \, savings} = \mathrm{expected \, energy \, savings} -
 Thus, 
 %
 \begin{equation} \label{eq:rebound_1}
-  Re_i = \frac{\mathrm{takeback_i}}{\mathrm{expected \, energy \, savings}} \, .
+  Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
 \end{equation}
 
 
@@ -396,22 +396,25 @@ Thus,
 %------------------------------
 
 Service price~($p_s$) is related to final energy price~($p_{E_f}$) through
-final energy-to-service efficiency~($\eta$) by  
+final-energy-to-service efficiency~($\eta$) by  
 $p_s = p_{E_f}/\eta$, where
 $p_s$ could be in \$/vehicle-mile, 
 $p_{E_f}$ in \$/MJ, and
 $\eta$ in vehicle-miles/MJ
 for an automobile efficiency upgrade.
-As final energy-to-service efficiency~($\eta$) increases,
+As final-energy-to-service efficiency~($\eta$) increases,
 service price~($p_s$) declines.
+Final-energy-to-services efficiency~($\before{\eta}$) is the inverse of 
+\citeauthor{Borenstein:2015aa}'s $e$,
+such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\tilde{e}$.
 
-The rate of service provided~($\rate{q}_s$) is related to 
-final energy-to-service efficiency~($\eta$) and 
-the rate of final energy consumption directly by the device~($\rate{E}_{\fdir}$) by
+The rate of service provided by the device~($\rate{q}_s$) is related to 
+final-energy-to-service efficiency~($\eta$) and 
+the rate of direct final energy consumption by the device~($\rate{E}_{\fdir}$) by
 $\rate{q}_s = \eta \rate{E}_{\fdir}$, where
 $\rate{q}_s$ could be in vehicle-miles/year and
 $\rate{E}_{\fdir}$ in MJ/year.
-As final energy-to-service efficiency~($\eta$) increases,
+As final-energy-to-service efficiency~($\eta$) increases,
 a higher rate of service~($\rate{q}_s$) can be provided for the same
 rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
 Also, $\rate{E}_{\fdir} = \rate{q}_S / \eta$.
@@ -423,7 +426,7 @@ Also, $\rate{E}_{\fdir} = \rate{q}_S / \eta$.
 %------------------------------
 
 Prior to the energy efficiency upgrade~($U$), 
-the device has final energy-to-services efficiency of $\before{\eta}$, and
+the device has final-energy-to-services efficiency of $\before{\eta}$, and
 the user of the energy conversion device consumes services 
 provided by the device at a rate of $\ratebefore{q}_s$, 
 which implies the final energy consumption rate of the device to be
@@ -438,7 +441,7 @@ $\Delta \rate{E}_{\fdir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebe
 which can be rearranged to be
 %
 \begin{equation}
-  \Delta \rate{E}_{\fdir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{\fdir}
+  \Delta \rate{E}_{\fdir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{\fdir} \, ,
 \end{equation}
 %
 using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
@@ -477,10 +480,11 @@ The change in embodied final energy due to $U$ (expressed as a rate) is given by
 \end{equation}
 %
 Typically, increases in energy efficiency are associated with increased device complexity
-and more embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$). 
+and more embodied energy such that $\after{E}_{\femb} > \before{E}_{\femb}$. 
 However, if the upgraded device has longer life than the original device
 ($\after{t} > \before{t}$), 
-$\Delta \rate{E}_{\femb}$ can be negative.
+$\Delta \rate{E}_{\femb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device.
 
 $\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
@@ -491,15 +495,15 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
              \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}} \, .
 \end{equation}
 %
-Embodied energy rebound increases to the extent that
+Embodied energy rebound ($Re_{emb}$) increases to the extent that
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item the original embodied energy rate is greater than the original direct final energy consumption rate 
-        ($\ratebefore{E}_{\femb} > \ratebefore{E}_{\fdir}$) or 
-  
   \item the embodied energy of the device is greater after $U$ than before
-        ($\after{E}_{\femb} > \before{E}_{\femb}$), 
+        ($\after{E}_{\femb} > \before{E}_{\femb}$) or 
+        
+  \item the original embodied energy rate is greater than the original direct final energy consumption rate 
+        ($\ratebefore{E}_{\femb} > \ratebefore{E}_{\fdir}$).
     
 \end{enumerate*}
 %
@@ -511,7 +515,7 @@ embodied energy rebound will be smaller to the extent that
   \item the upgraded device has longer life than the original device
         ($\after{t} > \before{t}$) or
   
-  \item $U$ increases final energy-to-services efficiency
+  \item $U$ increases final-energy-to-services efficiency
         ($\after{\eta} > \before{\eta}$).
     
 \end{enumerate*}
@@ -547,7 +551,7 @@ If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
 If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
 
 $\rate{E}_{\fgain}$ represents energy savings taken back by the substitution effect at the device.
-As such, $\rate{E}_{\fgain}$ is the source of device-level rebound. 
+As such, $\rate{E}_{\fgain}$ is the source of device-level rebound ($Re_{dev}$). 
 Applying Equation~\ref{eq:rebound_2} gives 
 $Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
 After simplification, the explicit expression for device-level rebound becomes
@@ -579,7 +583,8 @@ the net substitution effect can be expressed as
 
 $\Delta \rate{E}_{\fsub}$ represents the energy savings taken back by substitution effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
-$Re_{sub} = (1 - p_{E_f} I_{E_f}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
+$Re_{sub} = (1 - p_{E_f} I_{E_f}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] 
+                            / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
 After simplification, substitution rebound can be expressed as
 %
 \begin{equation} \label{eq:Re_sub}
@@ -618,13 +623,19 @@ Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
 
 Assuming that the freed cash is spent in the economy at the energy intensity of the economy gives
 $\Delta \rate{E}_{\finc} = FC \, I_{E_F}$.
-But the freed cash is respent in the economy.
-The respending can be represented by a technology multiplier~($k$).
-Thus, 
+Freed cash can be respent in the economy in a manner 
+``akin to a the macroeconomic multiplier that might result 
+following a new discovery of a natural resource deposit'' \citep[p.~11]{Borenstein:2015aa}.
+The effect of this respending can be represented by a technology multiplier~($k$).
+Although \citeauthor{Borenstein:2015aa} did not include a multiplier ($k$) in his model,
+we do so here.\footnote{
+  To be precise, \citet{Borenstein:2015aa} assumed $k = 1$.
+}
+Thus, the change in final energy consumption due to income and respending can be written as
 $\Delta \rate{E}_{\fincres} = FC \, I_{E_f} k$.
-Using the definitions above yields
+The discussion above yields
 %
-\begin{equation} \label{eq:deta_income}
+\begin{equation} \label{eq:delta_income}
   \Delta \rate{E}_{\fincres} = \left( 1 - \frac{\before{\eta}}{\after{\eta}} 
                                  - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}} \right) 
                                k I_{E_f} p_{E_f} \ratebefore{E}_{\fdir} \, .
@@ -640,21 +651,21 @@ $\Delta \rate{E}_{\fincres}$ goes up.
 $\Delta \rate{E}_{\fincres}$ represents energy savings taken back due to the income effect.
 Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression 
 for rebound due to income and respending effects:
-$Re_{\incres} = \Delta \rate{E}_{\fincres} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$ .
+$Re_{\incres} = \Delta \rate{E}_{\fincres} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$.
 After simplification, and using the definition
 $\gamma \equiv \left( \frac{1}{1 - \frac{\before{\eta}}{\after{\eta}}} \right) 
                        \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}}$
-to represent the effect of device costs,
-income effect rebound can be written as
+to represent the nondimensional effect of device costs,
+rebound from income and respending effects can be written as
 %
 \begin{equation} \label{eq:Re_inc}
   Re_{\incres} = ( 1 - \gamma) k I_{E_f} p_{E_f} \, .
 \end{equation}
 %
-As $\rateafter{C}_{dev} - \ratebefore{C}_{dev}$ goes up, $Re_{\incres}$ goes down,
+As $\rateafter{C}_{dev} - \ratebefore{C}_{dev}$ goes up, $\gamma$ increases, and $Re_{\incres}$ goes down,
 because the cost of procuring, operating, maintaining, and disposing of the device 
-eats away at the energy cost savings available to be respent in the economy.
-If $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, $U$ is costless, and 
+reduces the net energy cost savings available to be respent in the economy.
+If $U$ is costless, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, $\gamma = 0$, and 
 $Re_{\incres} = k I_{E_f} p_{E_f}$, as shown by \cite{Borenstein:2015aa}.%
 \footnote{
   \cite{Borenstein:2015aa} assumed that the multiplier $k = 1$. 
@@ -667,10 +678,14 @@ $Re_{\incres} = k I_{E_f} p_{E_f}$, as shown by \cite{Borenstein:2015aa}.%
 %------------------------------
 
 Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_{\incres}$.
-After substituting and rearranging, total rebound is found to be
+After substituting and rearranging, total rebound can be expressed in terms of
+embodied energy rebound~($Re_{emb}$),
+device-level rebound~($Re_{dev}$), 
+the nondimensional change in device cost rate~($\gamma$), and
+economic parameters ($k$, $I_{E_f}$, and $p_{E_f}$).
 %
 \begin{equation} \label{eq:rebound_total}
-  Re = Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f} \, .
+  Re = Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f}
 \end{equation}
 
 
@@ -679,13 +694,13 @@ After substituting and rearranging, total rebound is found to be
 \label{sec:model_verification}
 %++++++++++++++++++++++++++++++
 
-\citet[Section IV.A]{Borenstein:2015aa} provides
-example calculations for rebound from an increase in auto fuel economy.
+\citet[pp.~15--17]{Borenstein:2015aa} provides
+example calculations for rebound caused by an increase in auto fuel economy.
 The details of \citeauthor{Borenstein:2015aa}'s 
 fuel economy example provide the opportunity for numerical verification of
 the explicit equation for rebound developed above.
 Only the expressions for income and substitution effects 
-($Re_{inc}$ and $Re_{sub}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_inc} 
+($Re_{sub}$ and $Re_{i}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_inc} 
 can be verified, because
 \citeauthor{Borenstein:2015aa} did not provide 
 example calculations for embodied energy rebound ($Re_{emb}$).
@@ -706,7 +721,7 @@ Agreement will indicate that the derivation of Equation~\ref{eq:Re_sub} is corre
 The explicit equation for substitution effect rebound ($Re_{sub}$) is given by
 Equation~\ref{eq:Re_sub}.
 Numerical quantification for each term of Equation~\ref{eq:Re_sub}
-is given below.
+is as follows.
 The price of gasoline ($p_{E,f}$) can be calculated using \citeauthor{Borenstein:2015aa}'s numbers as
 $p_{E,f} = \frac{1}{(113,996 \, \mathrm{BTU/gallon})(1 \, \mathrm{gallon}/\$3)} 
 = 2.6317 \times 10^{-5} \, \$/\mathrm{BTU}$.
@@ -733,14 +748,17 @@ The near-match verifies the derivation of Equation~\ref{eq:Re_sub}.
 To verify the derivation of the explicit income effect rebound equation,
 we use numbers from \citeauthor{Borenstein:2015aa}'s 
 fuel economy example to calculate $Re_{inc}$ by Equation~\ref{eq:Re_inc}.
-Then, we compare our answer to 
-\citeauthor{Borenstein:2015aa}'s numerical estimate for $Re_{inc}$.
+Then, we compare our answer to
+\citeauthor{Borenstein:2015aa}'s numerical estimate for $Re_{i}$.%
+\footnote{
+  Note that $Re_{i} = Re_{\incres}$ from Equation~\ref{eq:Re_inc} with $k = 1$.
+}
 Agreement will indicate that the derivation of Equation~\ref{eq:Re_inc} is correct.
 
-The explicit equation for income effect rebound ($Re_{inc}$) is given by
+The explicit equation for income effect rebound ($Re_{i}$) is given by
 Equation~\ref{eq:Re_inc} with $k = 1$.
 Numerical quantification for each term of Equation~\ref{eq:Re_inc}
-is given below.
+is given in Section~\ref{sec:verification_substitution} and following.
 \citet{Borenstein:2015aa} indicates that the fuel economy upgrade 
 from $\before{\eta}$ to $\after{\eta}$
 costs \$3000,
@@ -748,12 +766,12 @@ and the automobile's expected lifetime is 12 years.
 Thus, $\rateafter{C}_{dev} - \ratebefore{C}_{dev} = \frac{\$3000}{12 \, \mathrm{yrs}} = \$250/\mathrm{year}$.
 The pre-upgrade direct final energy consumption rate
 ($\ratebefore{E}_{\fdir}$)
-is calculated from expected usage (12,000 mi/yr) and $\eta$ as
+is calculated from expected usage (12,000 mi/yr) and the pre-upgrade efficiency ($\eta$) as
 $\ratebefore{E}_{\fdir} = (12,000 \, \mathrm{mi/yr})(1 \, \mathrm{gal}/25 \, \mathrm{mi}) (113,996 \, \mathrm{BTU/gal}) 
 = 5.472 \times 10^7 \, \mathrm{BTU/yr}$.
 Using the above numbers in Equation~\ref{eq:Re_inc} with $k = 1$, 
-we obtain $Re_{inc} = 0.110$, 
-exactly matching the value of 0.11 reported in \citet[Section IV.A]{Borenstein:2015aa}.
+we obtain $Re_{i} = 0.110$, 
+exactly matching the value of 0.11 reported in \citet[p.~17, Table~2]{Borenstein:2015aa}.
 The match verifies the derivation of Equation~\ref{eq:Re_inc}.
 } % This brace ends the appendix content section.
 
