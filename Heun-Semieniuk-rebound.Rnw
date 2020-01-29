@@ -75,7 +75,7 @@
 \authors{
 \singleauthor{Matthew Kuperus Heun}{*},
 \singleauthor{Gregor Semieniuk}{**}, and
-\singleauthor{Paul E. Brockway}{***},
+\singleauthor{Paul E. Brockway}{***}
 }
 
 % Specify each author affiliation with the following command:
