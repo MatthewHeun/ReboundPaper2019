@@ -202,9 +202,9 @@ our approach differs from \citeauthor{Borenstein:2015aa} in several important wa
 
 \end{enumerate}
 
-With these modifications to the \citeauthor{Borenstein:2015aa} approach,
-we derive an explicit, symbolic version of the \citet{Borenstein:2015aa} model
-by analyzing four mechanisms of energy rebound: 
+With these modifications, 
+we derive a symbolic version of the \citet{Borenstein:2015aa} model
+by analyzing four effects that give rise to energy rebound: 
 device-level effects, embodied energy effects, 
 substitution effects, and income and respending effects.
 (See the Appendix, Section~\ref{sec:model_derivation}, for details.)
@@ -271,16 +271,21 @@ total energy rebound can be expressed as
 The symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
 allows explication of the factors that contribute to total energy rebound and
 thereby represents an enhancement of the work of \citet{Borenstein:2015aa}.
+In particular, Equation~\ref{eq:Re_tot} allows us to 
+identify the relationships among device-level rebound ($Re_{dev}$) and
+embodied, substitution, and income and respending effects.
 Equation~\ref{eq:Re_tot} shows that 
-embodied energy rebound ($Re_{emb}$) contributes additively to total rebound.
+embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
+and is unaffected by device-level rebound.
 When the embodied energy rate for an energy-service-providing device 
 goes up (down) due to $U$, 
-total rebound also increases (decreases).
+total rebound also increases (decreases)
+by the same amount.
 Equation~\ref{eq:Re_emb} shows that 
 increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
 and 
 shorter device lifetimes ($\after{t} < \before{t}$)
-increase embodied energy rebound.
+both increase embodied energy rebound.
 
 When costs for procuring, operating, maintaining, and disposing
 the energy efficient device 
@@ -299,11 +304,28 @@ enhances total rebound when $I_{E_f} p_{E_f} < 1$ and
 reduces total rebound when $I_{E_f} p_{E_f} > 1$.
 
 The effect of the energy service price elasticity of final energy demand ($\epsilon$) is similarly
-confounded by relationship between the product $I_{E_f} p_{E_f}$ and 1.
+confounded by the relationship between the product $I_{E_f} p_{E_f}$ and 1.
+For this discussion, we assume that 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item $U$ increases final-energy-to-services efficiency ($\after{\eta} > \before{\eta}$) and
+  
+  \item $\epsilon < 0$ such that 
+        an increase in final-energy-to-services efficiency ($\after{\eta} > \before{\eta}$)
+        leads to a reduction in service price ($\after{p}_s < \before{p}_s$)
+        and additional device usage.
+    
+\end{enumerate*}
+%
 When $I_{E_f} p_{E_f} < 1$, 
-a more-negative $\epsilon$ will **** energy rebound, because ****.
+higher service price elasticity of demand (a more-negative $\epsilon$)
+will lead to larger energy rebound, 
+because $Re_{dev}$ gets more positive as demand grows and $(1 - p_{E_f} I_{E_f})$ is positive. 
 On the other hand, when $I_{E_f} p_{E_f} > 1$, 
-a more-negative $\epsilon$ will **** energy rebound, because ****.
+higher service price elasticity of demand (a more-negative $\epsilon$)
+will read to reduced energy rebound, 
+because $Re_{dev}$ gets more positive as demand grows and $(1 - p_{E_f} I_{E_f})$ is negative. 
 
 The third term of Equation~\ref{eq:Re_tot} shows that 
 when $1 - Re_{dev}/k - \gamma > 0$, 
