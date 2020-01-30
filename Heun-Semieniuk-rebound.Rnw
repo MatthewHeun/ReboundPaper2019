@@ -216,9 +216,10 @@ Device-level rebound ($Re_{dev}$) is given by
 \end{equation}
 %
 where
-a symbol (e.g., $\before{X}$ without decoration) indicates $X$ before the energy efficiency upgrade,
-$\after{X}$ indicates $X$ after $U$, 
-$\eta$ is final-energy-to-services efficiency before $U$ ($\before{\eta}$) and after $U$ ($\after{\eta}$), and
+a symbol (e.g., $\before{X}$ without decoration) indicates $X$ before the energy efficiency upgrade ($U$),
+$\after{X}$ indicates $X$ after $U$.
+Final-energy-to-services efficiencies 
+before and after $U$ are given by $\before{\eta}$ and $\after{\eta}$, respectively, and
 $\epsilon$ is the energy service price elasticity of final energy demand.
 
 Embodied energy rebound ($Re_{emb}$) is given by
@@ -245,7 +246,7 @@ where
 $p_{E_f}$ is the price of final energy in \$/MJ and
 $I_{E_f}$ is the final energy intensity of the economy in MJ/\$.
 
-Income and respending effect rebound ($Re_{ir}$) is given by 
+Rebound from income and respending effects is given by 
 %
 \begin{equation} \label{eq:Re_ir}
   Re_{ir} = \Reirequation{} \, ,
@@ -257,7 +258,7 @@ $\rate{C}_{dev}$ is the cost to procure, operate, maintain, and dispose of the d
 expressed as a rate,
 and
 $k$ is a nondimensional economic multiplier that accounts for 
-the economic expansion casued by $U$.
+the economic expansion caused by $U$.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After rearranging, 
@@ -269,7 +270,7 @@ total energy rebound can be expressed as
 
 The symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
 allows explication of the factors that contribute to total energy rebound and
-thereby represents an advance from the work of \citeauthor{Borenstein:2015aa}.
+thereby represents an enhancement of the work of \citet{Borenstein:2015aa}.
 Equation~\ref{eq:Re_tot} shows that 
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound.
 When the embodied energy rate for an energy-service-providing device 
@@ -286,32 +287,55 @@ the energy efficient device
 (as represented by $\gamma$)
 go up (down),
 total rebound decreases (increases), because
-device costs reduce (increase) freed cash available 
+device costs reduce (increase) net freed cash available 
 for spending in the economy.
 
-While the effects of embodied energy and device costs on total rebound are clear,
+While the effects of embodied energy and device costs on total rebound
+can be ascertained by inspection of Equation~\ref{eq:Re_tot},
 the effect of device-level rebound ($Re_{dev}$) is less clear, 
-as $Re_{dev}$ appears in two terms of Equation~\ref{eq:Re_tot}.
+as $Re_{dev}$ appears in two terms with the opposite sense.
 However, Equation~\ref{eq:Re_sub} shows that device-level rebound 
 enhances total rebound when $I_{E_f} p_{E_f} < 1$ and 
 reduces total rebound when $I_{E_f} p_{E_f} > 1$.
 
+The effect of the energy service price elasticity of final energy demand ($\epsilon$) is similarly
+confounded by relationship between the product $I_{E_f} p_{E_f}$ and 1.
+When $I_{E_f} p_{E_f} < 1$, 
+a more-negative $\epsilon$ will **** energy rebound, because ****.
+On the other hand, when $I_{E_f} p_{E_f} > 1$, 
+a more-negative $\epsilon$ will **** energy rebound, because ****.
+
 The third term of Equation~\ref{eq:Re_tot} shows that 
 when $1 - Re_{dev}/k - \gamma > 0$, 
-total energy rebound is enhanced by 
-larger multiplier ($k$) due to enhanced respending in the economy,
-higher energy prices ($p_{E_f}$) as energy cost savings are spent in the economy, and
-higher final energy intensity of the economy ($I_{E_f}$) as respent energy cost savings demand additional energy in the economy.
+total energy rebound is enhanced by
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item a larger multiplier ($k$) due to enhanced respending in the economy,        
+  
+  \item higher energy prices ($p_{E_f}$) as greater energy cost savings from $U$ are spent in the economy, and
+  
+  \item higher final energy intensity of the economy ($I_{E_f}$) as respent energy cost savings demand additional energy in the economy.
+    
+\end{enumerate*}
+%
 If, on the other hand, $1 - Re_{dev}/k - \gamma < 0$, 
 total energy rebound is reduced by a larger multiplier ($k$),
 higher energy prices ($p_{E_f}$), and 
 higher final energy intensity of the economy ($I_{E_f}$).
 
-When $U$ 
-implies no additional embodied energy ($Re_{emb} = 0$), 
-has no device-level rebound ($Re_{dev} = 0$), and 
-is costless ($\gamma = 0$), 
-total final energy rebound is simply $k I_{E_f} p_{E_f}$.
+Total final energy rebound simplifies to $k I_{E_f} p_{E_f}$ if  
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item $U$ carries no additional embodied energy ($\after{E}_{\femb} = \before{E}_{\femb}$, leading to $Re_{emb} = 0$),
+  
+  \item $U$ has no device-level rebound ($\epsilon = 0$ or $\after{\eta} = \before{\eta}$, leading to $Re_{dev} = 0$), and 
+  
+  \item $U$ is costless ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$).
+    
+\end{enumerate*}
+
 
 
 
