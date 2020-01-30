@@ -63,6 +63,30 @@
 \newcommand{\shift}{shi\!f\!\!t}                   % Improves spacing in the italicized word "shift"
 \newcommand{\fsub}{\fcomma{}sub}                   % Improves spacing between f,loss
 
+% Equations as macros so that we can reuse in several places in the paper
+
+% Cost ratio (gamma)
+\newcommand{\gammaequation}{\left( \frac{1}{1 - \frac{\before{\eta}}{\after{\eta}}} \right) 
+                       \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}}}
+                       
+% Device-level rebound
+\newcommand{\Redevequation}{\frac{\left( \frac{\before{\eta}}{\after{\eta}} \right)^{\epsilon} - 1}
+               {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1}}
+               
+% Embodied energy rebound
+\newcommand{\Reembequation}{\frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
+             {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
+             \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}}}
+
+% Substitution rebound
+\newcommand{\Resubequation}{(1 - p_{E_f} I_{E_f}) Re_{dev}}
+
+% Income and respending rebound
+\newcommand{\Reirequation}{( 1 - \gamma) k I_{E_f} p_{E_f}}
+
+% Total rebound
+\newcommand{\Retotequation}{Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f}}
+
 
 
 
@@ -147,39 +171,149 @@ This is a reference to a table (Table \ref{tab:example}).
 \label{sec:extending_borenstein}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We extend the \cite{Borenstein:2015aa} model in several important ways.
+Although we are guided by the \citet{Borenstein:2015aa}, 
+our approach differs from \citeauthor{Borenstein:2015aa} in several important ways.
 
+**** focus on EXTENDING **** where possible.
+
+%
 \begin{enumerate}
- 
-  \item  Use typical year approach to allow for service life differences between base and EE devices.
-         (Borenstein didn’t account for varying service life in the theory/equestions,
-         although he may have done in the lighting example which MKH has not yet revieed in detail.)
 
-  \item Add substitution effects to Borenstein’s simpler equation (2a).
-        (Borenstein included substitution effects in equation 1 and the examples,
-        but not in the simpler, usable equation, 2a.)
+  \item We spread embodied energy and initial and disposal costs
+        across the service life of the device,
+        thereby assuming that the analysis applies to a ``typical year''
+        of the device.
+        This approach allows for service life differences between the initial and upgraded devices.
+        (\citeauthor{Borenstein:2015aa} didn’t account for varying service life
+        in his theory and equations.
+        Service life was applied in example calculations.
+        Our approach makes service life an explicit aspect of the equations.)
 
-  \item Flesh out discussion of the multiplier.
-        It is not a multiplier as typically represented (in the tax cut sense) and as Borenstein inherits.
-        Rather, a technology improvement leads to growth.
-        The energy implications of the new growth can be represented as a multiplier.
-
-  \item Include multiplier
-        (with additions developed by MKH recently) with income-effect terms.
-        (Borenstein discussed possible multipliers but did not include k in the equations.)
-
-  \item Re-derive the model, therby developing an explicit expression for $Re_{tot}$.
-        (Borenstein had only $\Delta E$ equation. Developing the explicit expression yields additional insight.)
+  \item We do not apply time-value-of-money considerations to the financial aspects of the model.
+        (\citeauthor{Borenstein:2015aa} discounted some cost streams in his examples.)
+  
+  \item We do not apply final-to-primary energy multipliers to final energy rates, because
+        these multipliers appear in both numerator and denominator of rebound expressions.
+        (\citeauthor{Borenstein:2015aa} applied multiplier which, ultimately divided out.)
+  
+  \item We add a multiplier ($k$) to describe technology changes.
+        (\citet[p.~11--13]{Borenstein:2015aa} discussed a multiplier but did not include 
+        a multiplier in his income-effect calculations, effectively assuming $k = 1$..) 
 
 \end{enumerate}
 
+With these modifications to the \citeauthor{Borenstein:2015aa} approach,
+we derive an explicit, symbolic version of the \citet{Borenstein:2015aa} model
+by analyzing four mechanisms of energy rebound: 
+device-level effects, embodied energy effects, 
+substitution effects, and income and respending effects.
+(See the Appendix, Section~\ref{sec:model_derivation}, for details.)
+
+Device-level rebound ($Re_{dev}$) is given by 
+%
+\begin{equation} \label{eq:Re_dev}
+  Re_{dev} = \Redevequation{} \, ,
+\end{equation}
+%
+where
+a symbol (e.g., $\before{X}$ without decoration) indicates $X$ before the energy efficiency upgrade,
+$\after{X}$ indicates $X$ after $U$, 
+$\eta$ is final-energy-to-services efficiency before $U$ ($\before{\eta}$) and after $U$ ($\after{\eta}$), and
+$\epsilon$ is the energy service price elasticity of final energy demand.
+
+Embodied energy rebound ($Re_{emb}$) is given by
+%
+\begin{equation} \label{eq:Re_emb}
+  Re_{emb} = \Reembequation{} \, ,
+\end{equation}
+%
+where 
+$\rate{X}$ indicates a rate of $X$ in $X$/year,
+$E_{\femb}$ is final energy embodied in the device in MJ,
+$t$ is device lifetime in years, 
+$\rate{E}_{\femb}$ is embodied final energy spread across the life of the device in MJ/year,
+and
+$\rate{E}_{\fdir}$ is the rate of final energy consumed directly by the device in MJ/year.
+
+Substitution effect rebound ($Re_{sub}$) is given by 
+%
+\begin{equation} \label{eq:Re_sub}
+  Re_{sub} = \Resubequation{} \, ,
+\end{equation}
+%
+where
+$p_{E_f}$ is the price of final energy in \$/MJ and
+$I_{E_f}$ is the final energy intensity of the economy in MJ/\$.
+
+Income and respending effect rebound ($Re_{ir}$) is given by 
+%
+\begin{equation} \label{eq:Re_ir}
+  Re_{ir} = \Reirequation{} \, ,
+\end{equation}
+%
+where
+$\gamma = \gammaequation{}$ is the nondimensionalized change in device cost rate, 
+$\rate{C}_{dev}$ is the cost to procure, operate, maintain, and dispose of the device
+expressed as a rate,
+and
+$k$ is a nondimensional economic multiplier that accounts for 
+the economic expansion casued by $U$.
+
+Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
+After rearranging, 
+total energy rebound can be expressed as 
+%
+\begin{equation} \label{eq:Re_tot}
+  Re = \Retotequation{} \, .
+\end{equation}
+
+The symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
+allows explication of the factors that contribute to total energy rebound and
+thereby represents an advance from the work of \citeauthor{Borenstein:2015aa}.
+Equation~\ref{eq:Re_tot} shows that 
+embodied energy rebound ($Re_{emb}$) contributes additively to total rebound.
+When the embodied energy rate for an energy-service-providing device 
+goes up (down) due to $U$, 
+total rebound also increases (decreases).
+Equation~\ref{eq:Re_emb} shows that 
+increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
+and 
+shorter device lifetimes ($\after{t} < \before{t}$)
+increase embodied energy rebound.
+
+When costs for procuring, operating, maintaining, and disposing
+the energy efficient device 
+(as represented by $\gamma$)
+go up (down),
+total rebound decreases (increases), because
+device costs reduce (increase) freed cash available 
+for spending in the economy.
+
+While the effects of embodied energy and device costs on total rebound are clear,
+the effect of device-level rebound ($Re_{dev}$) is less clear, 
+as $Re_{dev}$ appears in two terms of Equation~\ref{eq:Re_tot}.
+However, Equation~\ref{eq:Re_sub} shows that device-level rebound 
+enhances total rebound when $I_{E_f} p_{E_f} < 1$ and 
+reduces total rebound when $I_{E_f} p_{E_f} > 1$.
+
+The third term of Equation~\ref{eq:Re_tot} shows that 
+when $1 - Re_{dev}/k - \gamma > 0$, 
+total energy rebound is enhanced by 
+larger multiplier ($k$) due to enhanced respending in the economy,
+higher energy prices ($p_{E_f}$) as energy cost savings are spent in the economy, and
+higher final energy intensity of the economy ($I_{E_f}$) as respent energy cost savings demand additional energy in the economy.
+If, on the other hand, $1 - Re_{dev}/k - \gamma < 0$, 
+total energy rebound is reduced by a larger multiplier ($k$),
+higher energy prices ($p_{E_f}$), and 
+higher final energy intensity of the economy ($I_{E_f}$).
+
+When $U$ 
+implies no additional embodied energy ($Re_{emb} = 0$), 
+has no device-level rebound ($Re_{dev} = 0$), and 
+is costless ($\gamma = 0$), 
+total final energy rebound is simply $k I_{E_f} p_{E_f}$.
 
 
-**** Pull final equation up to main text and discuss,  
-especially the effect of $Re_{dev}$. 
-$Re_{emb}$ directly contributes to total rebound. 
-$Re_{dev}$ is less clear and can enhance or diminish total rebound. 
-Device costs (expressed as $\gamma$ reduce rebound. ****
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -414,7 +548,7 @@ As final-energy-to-service efficiency~($\eta$) increases,
 service price~($p_s$) declines.
 Final-energy-to-services efficiency~($\before{\eta}$) is the inverse of 
 \citeauthor{Borenstein:2015aa}'s $e$,
-such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\tilde{e}$.
+such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\widetilde{e}$.
 
 The rate of service provided by the device~($\rate{q}_s$) is related to 
 final-energy-to-service efficiency~($\eta$) and 
@@ -497,10 +631,8 @@ meaning that the upgraded device has a lower embodied energy rate than the origi
 $\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
 %
-\begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
-             {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
-             \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}} \, .
+\begin{equation} 
+  Re_{emb} = \Reembequation{} \, . \tag{\ref{eq:Re_emb}}
 \end{equation}
 %
 Embodied energy rebound ($Re_{emb}$) increases to the extent that
@@ -565,8 +697,7 @@ $Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \ri
 After simplification, the explicit expression for device-level rebound becomes
 %
 \begin{equation} \label{eq:Re_dev}
-  Re_{dev} = \frac{\left( \frac{\before{\eta}}{\after{\eta}} \right)^{\epsilon} - 1 }
-               {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 } \, .
+  Re_{dev} = \Redevequation{} \, .
 \end{equation}
 
 However, increased service consumption ($\rateafter{q}_s > \ratebefore{q}_s$) 
@@ -595,8 +726,8 @@ $Re_{sub} = (1 - p_{E_f} I_{E_f}) \left[ \left( \frac{\before{\eta}}{\after{\eta
                             / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
 After simplification, substitution rebound can be expressed as
 %
-\begin{equation} \label{eq:Re_sub}
-  Re_{sub} = (1 - p_{E_f} I_{E_f}) Re_{dev} \, .
+\begin{equation}
+  Re_{sub} = \Resubequation{} \, . \tag{\ref{eq:Re_sub}}
 \end{equation}
 
 
@@ -661,13 +792,12 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression
 for rebound due to income and respending effects:
 $Re_{\incres} = \Delta \rate{E}_{\fincres} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$.
 After simplification, and using the definition
-$\gamma \equiv \left( \frac{1}{1 - \frac{\before{\eta}}{\after{\eta}}} \right) 
-                       \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}}$
+$\gamma \equiv \gammaequation{}$
 to represent the nondimensional effect of device costs,
 rebound from income and respending effects can be written as
 %
-\begin{equation} \label{eq:Re_inc}
-  Re_{\incres} = ( 1 - \gamma) k I_{E_f} p_{E_f} \, .
+\begin{equation}
+  Re_{\incres} = \Reirequation{} \, . \tag{\ref{eq:Re_ir}}
 \end{equation}
 %
 As $\rateafter{C}_{dev} - \ratebefore{C}_{dev}$ goes up, $\gamma$ increases, and $Re_{\incres}$ goes down,
@@ -685,15 +815,21 @@ $Re_{\incres} = k I_{E_f} p_{E_f}$, as shown by \cite{Borenstein:2015aa}.%
 \label{sec:total_rebound_derivation}
 %------------------------------
 
-Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_{\incres}$.
-After substituting and rearranging, total rebound can be expressed in terms of
+Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_{\incres}$, or 
+%
+\begin{equation}
+  Re = \Reembequation{} + \Resubequation{} + \Reirequation{} \, .
+\end{equation}
+%
+After substituting and rearranging, we arrive at an expression 
+for total rebound expressed in terms of
 embodied energy rebound~($Re_{emb}$),
 device-level rebound~($Re_{dev}$), 
-the nondimensional change in device cost rate~($\gamma$), and
+the nondimensionalized change in device cost rate~($\gamma$), and
 economic parameters ($k$, $I_{E_f}$, and $p_{E_f}$).
 %
-\begin{equation} \label{eq:rebound_total}
-  Re = Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f}
+\begin{equation}
+  Re = \Retotequation{} \tag{\ref{eq:Re_tot}}
 \end{equation}
 
 
