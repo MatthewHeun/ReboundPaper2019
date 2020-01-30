@@ -171,43 +171,59 @@ This is a reference to a table (Table \ref{tab:example}).
 \label{sec:extending_borenstein}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Although we are guided by the \citet{Borenstein:2015aa}, 
-our approach differs from \citeauthor{Borenstein:2015aa} in several important ways.
+Like \citet{Borenstein:2015aa}, we assume a device providing energy services at a rate $\ratebefore{q}_s$
+with final-energy-to-services efficiency $\before{\eta}$.
+An energy efficiency upgrade ($U$) increases
+final-energy-to-services efficiency from $\before{\eta}$ to $\after{\eta}$,
+possibly at a financial cost.
+The upgraded device may also contain more embodied energy than the original device.
 
-**** focus on EXTENDING **** where possible.
-
+We extend the \citet{Borenstein:2015aa} model in several important ways.
 %
 \begin{enumerate}
 
+  \item We develop explicit, symbolic rebound expressions for four effects on rebound:
+        device-level effects, embodied energy effects, substitution effects, and income and respending effects.
+        (\citet{Borenstein:2015aa} did not develop explicit, symbolic
+        rebound expressions for any of these effects.)
+        Developing explicit, symbolic rebound expressions enables both
+        indentification of important factors for rebound and
+        explication of interactions among the different rebound effects.
+  
+  \item We add a macroeconomic multiplier ($k$) to describe technology changes.
+        (\citet[p.~11--13]{Borenstein:2015aa} discussed a macroeconomic multiplier but did not include 
+        it in his income-effect calculations, effectively assuming $k = 1$.) 
+        Including the macroeconomic multiplier allows quantification of the effects of technology changes on rebound.
+
   \item We spread embodied energy and initial and disposal costs
         across the service life of the device,
-        thereby assuming that the analysis applies to a ``typical year''
+        thereby assuming that the analysis applies for a ``typical year''
         of the device.
-        This approach allows for service life differences between the initial and upgraded devices.
-        (\citeauthor{Borenstein:2015aa} didn’t account for varying service life
-        in his theory and equations.
-        Service life was applied in example calculations.
-        Our approach makes service life an explicit aspect of the equations.)
+        (\citet{Borenstein:2015aa} didn’t account for varying service life
+        in his theory and equations, although
+        service life was considered in example calculations.)
+        Our approach allows for service life differences between the original and upgraded devices.
 
-  \item We do not apply time-value-of-money considerations to the financial aspects of the model.
+  \item We choose not to apply time-value-of-money considerations to the financial aspects of the model.
         (\citeauthor{Borenstein:2015aa} discounted some cost streams in his examples.)
+        This decision simplifies the derivation, provides consistency in the treatment of energy and money,
+        and avoids questions about whether time valuation should be applied to \emph{energy} as well.
   
-  \item We do not apply final-to-primary energy multipliers to final energy rates, because
-        these multipliers appear in both numerator and denominator of rebound expressions.
-        (\citeauthor{Borenstein:2015aa} applied multiplier which, ultimately divided out.)
-  
-  \item We add a multiplier ($k$) to describe technology changes.
-        (\citet[p.~11--13]{Borenstein:2015aa} discussed a multiplier but did not include 
-        a multiplier in his income-effect calculations, effectively assuming $k = 1$..) 
+  \item We choose not to apply final-to-primary energy multipliers 
+        to final energy rates in the numerators and denominators of rebound expressions. 
+        (\citeauthor{Borenstein:2015aa} applied final-to-primary energy multipliers which divide out, anyway.)
+        This decision simplifies derivations.
 
 \end{enumerate}
 
-With these modifications, 
-we derive a symbolic version of the \citet{Borenstein:2015aa} model
-by analyzing four effects that give rise to energy rebound: 
-device-level effects, embodied energy effects, 
-substitution effects, and income and respending effects.
-(See the Appendix, Section~\ref{sec:model_derivation}, for details.)
+Our derivations of
+explicit, symbolic expressions for the four rebound effects discussed above 
+(device-level effects, embodied energy effects, substitution effects, and income and respending effects)
+are provided in the Appendix, Section~\ref{sec:model_derivation}.
+We summarize and discuss the expressions below.
+(Note that Section~\ref{sec:model_verification} provides, where possible,
+verification of the explicit, symbolic expressions 
+using data from \citeauthor{Borenstein:2015aa}'s auto efficiency example.)
 
 Device-level rebound ($Re_{dev}$) is given by 
 %
@@ -216,8 +232,8 @@ Device-level rebound ($Re_{dev}$) is given by
 \end{equation}
 %
 where
-a symbol (e.g., $\before{X}$ without decoration) indicates $X$ before the energy efficiency upgrade ($U$),
-$\after{X}$ indicates $X$ after $U$.
+a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade ($U$),
+and $\after{X}$ indicates $X$ after $U$.
 Final-energy-to-services efficiencies 
 before and after $U$ are given by $\before{\eta}$ and $\after{\eta}$, respectively, and
 $\epsilon$ is the energy service price elasticity of final energy demand.
@@ -261,7 +277,7 @@ $k$ is a nondimensional economic multiplier that accounts for
 the economic expansion caused by $U$.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
-After rearranging, 
+After algebraic rearrangement, 
 total energy rebound can be expressed as 
 %
 \begin{equation} \label{eq:Re_tot}
@@ -270,7 +286,7 @@ total energy rebound can be expressed as
 
 The symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
 allows explication of the factors that contribute to total energy rebound and
-thereby represents an enhancement of the work of \citet{Borenstein:2015aa}.
+thereby represents an extension of the work of \citet{Borenstein:2015aa}.
 In particular, Equation~\ref{eq:Re_tot} allows us to 
 identify the relationships among device-level rebound ($Re_{dev}$) and
 embodied, substitution, and income and respending effects.
@@ -299,33 +315,35 @@ While the effects of embodied energy and device costs on total rebound
 can be ascertained by inspection of Equation~\ref{eq:Re_tot},
 the effect of device-level rebound ($Re_{dev}$) is less clear, 
 as $Re_{dev}$ appears in two terms with the opposite sense.
-However, Equation~\ref{eq:Re_sub} shows that device-level rebound 
-enhances total rebound when $I_{E_f} p_{E_f} < 1$ and 
-reduces total rebound when $I_{E_f} p_{E_f} > 1$.
+The first instance of $Re_{dev}$ (in the second term of Equation~\ref{eq:Re_tot}) 
+enhances total rebound directly.
+The second instance of $Re_{dev}$ (in the third term of Equation~\ref{eq:Re_tot})
+reduces total rebound, because energy cost savings taken back by device-level rebound
+cannot be spent in the economy.
+Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
+device-level rebound 
+enhances (reduces) total rebound when $I_{E_f} p_{E_f}$ is less than (greater than) 1.
 
-The effect of the energy service price elasticity of final energy demand ($\epsilon$) is similarly
+**** Not sure this is right yet. ****  The effect of service price elasticity of final energy demand ($\epsilon$) 
+on total rebound ($Re$) is similarly
 confounded by the relationship between the product $I_{E_f} p_{E_f}$ and 1.
-For this discussion, we assume that 
+We assume that, typically,
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
   \item $U$ increases final-energy-to-services efficiency ($\after{\eta} > \before{\eta}$) and
   
   \item $\epsilon < 0$ such that 
-        an increase in final-energy-to-services efficiency ($\after{\eta} > \before{\eta}$)
+        the increase in final-energy-to-services efficiency
         leads to a reduction in service price ($\after{p}_s < \before{p}_s$)
-        and additional device usage.
+        and additional device usage such that $Re_{dev} > 0$.
     
 \end{enumerate*}
 %
-When $I_{E_f} p_{E_f} < 1$, 
+When $I_{E_f} p_{E_f}$ is less than (greater than) 1, 
 higher service price elasticity of demand (a more-negative $\epsilon$)
-will lead to larger energy rebound, 
-because $Re_{dev}$ gets more positive as demand grows and $(1 - p_{E_f} I_{E_f})$ is positive. 
-On the other hand, when $I_{E_f} p_{E_f} > 1$, 
-higher service price elasticity of demand (a more-negative $\epsilon$)
-will read to reduced energy rebound, 
-because $Re_{dev}$ gets more positive as demand grows and $(1 - p_{E_f} I_{E_f})$ is negative. 
+will lead to larger (smaller) energy rebound, 
+because $Re_{dev}$ gets more positive as $\epsilon$ gets more negative and $1 - p_{E_f} I_{E_f}$ is positive (negative). 
 
 The third term of Equation~\ref{eq:Re_tot} shows that 
 when $1 - Re_{dev}/k - \gamma > 0$, 
@@ -357,9 +375,6 @@ Total final energy rebound simplifies to $k I_{E_f} p_{E_f}$ if
   \item $U$ is costless ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$).
     
 \end{enumerate*}
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -558,7 +573,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 \label{sec:model_derivation}
 %++++++++++++++++++++++++++++++
 
-This section shows the derivation of the explicit rebound model.
+This section shows the derivation of the symbolic rebound model.
 Like \cite{Borenstein:2015aa}, we consider three contributing factors to rebound,
 embodied energy effects, 
 substitution effects, and
@@ -829,9 +844,13 @@ The discussion above yields
 Without the energy efficiency upgrade ($U$),
 $\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, and
 $\Delta \rate{E}_{\fincres} = 0$, as expected.
-As $\after{\eta}$ increases, $\Delta \rate{E}_{\fincres}$ goes up.
-More freed cash is available when $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, and
-$\Delta \rate{E}_{\fincres}$ goes up.
+As $\after{\eta}$ increases relative to $\eta$, $\Delta \rate{E}_{\fincres}$ goes up, 
+because the efficiency gain yields more freed cash (from energy cost savings) to spend in the economy.
+$\Delta \rate{E}_{\fincres}$ goes up when
+$\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, also because
+more freed cash is available
+to be spent in the economy
+(because the device costs less to procure, operate, maintain, and dispose).
 
 $\Delta \rate{E}_{\fincres}$ represents energy savings taken back due to the income effect.
 Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression 
