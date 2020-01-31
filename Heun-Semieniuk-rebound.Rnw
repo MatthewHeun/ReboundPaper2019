@@ -19,7 +19,7 @@
 %
 % 4) References are to be written in standard BibTeX format (as \bibitem's) at the 
 % end of this template. You can then cite them in-text using the \citep{citekey}
-% for a citation with surrounding brackets and \cite{citekey} for a citation with 
+% for a citation with surrounding brackets and \citet{citekey} for a citation with 
 % brackets surrounding the year of the publication only.
 %
 % 5) If you would like figures to be less wide than the surrounding line width,
@@ -46,12 +46,11 @@
 \usepackage[inline]{enumitem}   % For inline enumeration
 
 % Macros defined by the authors
-
 \input{macros.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound} % Article title
+\articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound}
 
 % Specify each author with the following command:
 % \singleauthor{<author name>}{<superscript identifier>}
@@ -125,45 +124,35 @@ This is a reference to a table (Table \ref{tab:example}).
 **** Our introduction starts here. ****
 
 %++++++++++++++++++++++++++++++
-\subsection{Literature review}
-\label{sec:lit_rev}
+\subsection{Relevant previous work}
+\label{sec:previous_work}
 %++++++++++++++++++++++++++++++
 
+\citet{Thomas:2013aa, Thomas:2013ab} look at household spending 
+to ascertain embodied energy effects 
+of spending energy cost savings in the economy. 
 
 \Bt{} developed expressions for changes in final energy demand
 due to substitution and income effects,
 and he calculated, numerically, estimates for substitution and income rebound 
 for example energy efficiency upgrades.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Contribution of this work}
-\label{sec:contribution}
-%++++++++++++++++++++++++++++++
-
-The landmark work of \Bt{} 
-
-Neither \Bt{} mentioned embodied energy, but 
-he did not develop an expression for it. 
-Nor did he make estimates of its magnitude.
+\Bt{} mentioned embodied energy, but 
+he did not develop an expression for it, 
+nor did he make estimates of its magnitude.
 He mentioned a ``macroeconomic multiplier'' but did not include it 
 in his expressions or numerical estimates.
 And, he stopped short of obtaining explicit, symbolic expressions for 
 rebound from embodied energy, substitution, and income effects.
-In this paper, we extend the \Bt{} model in several important ways.
-%
-\begin{enumerate}
 
-  \item We develop explicit, symbolic rebound expressions for four effects on rebound:
-        device-level effects, embodied energy effects, substitution effects, and income and respending effects.
-        Developing explicit, symbolic rebound expressions enables both
-        indentification of important factors for rebound and
-        explication of interactions among the different rebound effects.
-  
-  \item We add a macroeconomic multiplier ($k$) to describe technology changes.
-        Including the macroeconomic multiplier allows quantification of the effects of technology changes on rebound.
+Our approach has some differences from the work of \Tt{} and \Bt{}.
+In contrast to \Tt{}, 
+we account for potential differences in embodied energy between the original and upgraded device.
 
-  \item We spread embodied energy and initial and disposal costs
+
+
+
+
+We spread embodied energy and initial and disposal costs
         across the service life of the device,
         thereby assuming that the analysis applies for a ``typical year''
         of the device.
@@ -172,15 +161,38 @@ In this paper, we extend the \Bt{} model in several important ways.
         service life was considered in example calculations.)
         Our approach allows for service life differences between the original and upgraded devices.
 
-  \item We choose not to apply time-value-of-money considerations to the financial aspects of the model.
+We choose not to apply time-value-of-money considerations to the financial aspects of the model.
         (\Ba{} discounted some cost streams in his examples.)
         This decision simplifies the derivation, provides consistency in the treatment of energy and money,
         and avoids questions about whether time valuation should be applied to \emph{energy} as well.
   
-  \item We choose not to apply final-to-primary energy multipliers 
+We choose not to apply final-to-primary energy multipliers 
         to final energy rates in the numerators and denominators of rebound expressions. 
         (\Ba{} applied final-to-primary energy multipliers which divide out, anyway.)
         This decision simplifies derivations.
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Contribution of this work}
+\label{sec:contribution}
+%++++++++++++++++++++++++++++++
+
+In this paper, we extend the work of \Bt{} in several important ways.
+%
+\begin{enumerate}
+
+  \item We develop explicit, symbolic rebound expressions for four effects on rebound:
+        device-level effects, embodied energy effects, substitution effects, and income and respending effects.
+        Doing so enables both indentification of important factors for rebound and
+        explication of interactions among the different rebound effects.
+  
+  \item We add a macroeconomic multiplier ($k$) to describe technology changes.
+        Doing so allows quantification of the effects of technology changes on rebound.
+
+  \item We include embodied energy effects in our theory. 
+        We estimate embodied energy effects on rebound and compare to other effects to ascertain 
+        the importance of embodied energy.
 
 \end{enumerate}
 
@@ -239,7 +251,7 @@ Device-level rebound ($Re_{dev}$) is given by
 \end{equation}
 %
 where
-Final-energy-to-services efficiencies 
+final-energy-to-services efficiencies 
 before and after $U$ are given by $\before{\eta}$ and $\after{\eta}$, respectively, and
 $\epsilon$ is the energy service price elasticity of final energy demand.
 
@@ -322,8 +334,11 @@ as $Re_{dev}$ appears in two terms with the opposite sense.
 The first instance of $Re_{dev}$ (in the second term of Equation~\ref{eq:Re_tot}) 
 enhances total rebound directly.
 The second instance of $Re_{dev}$ (in the third term of Equation~\ref{eq:Re_tot})
-reduces total rebound, because energy cost savings taken back by device-level rebound
-cannot be spent in the economy.
+reduces total rebound, 
+indicating that, as observed by \Tt{}, 
+income effect rebound is inversely related to device-level rebound.
+The inverse relationship arises because energy cost savings taken back by device-level rebound
+cannot be spent in the economy, thereby reducing rebound from the inccome effect.
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound 
 enhances (reduces) total rebound when $I_{E_f} p_{E_f}$ is less than (greater than) 1.
