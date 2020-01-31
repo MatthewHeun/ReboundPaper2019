@@ -85,10 +85,10 @@ University of Leeds, Leeds, LS2 9JT, UK}
 \printaffiliations % Print the affiliations in the footer of the first page
 
 \abstractblock
-{Max 150 words. Place the abstract text here}
+{**** Max 150 words. Place the abstract text here. ****}
 {Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
-{C32, H23, O33, O38, Q56, Q58} % JEL
+{**** C32, H23, O33, O38, Q56, Q58 ****} % JEL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -99,53 +99,47 @@ University of Leeds, Leeds, LS2 9JT, UK}
 
 % Place your text for the Introduction here. The following dummy text illustrates how to insert footnotes and figure or table references.
 
-See guide for authors at \url{http://www.iaee.org/en/publications/authors.aspx}.
-Main points are:
-
-**** Use Chicago Manual of Style. ****
-
-**** Manuscripts may not exceed 25--35 pages or 9,500 words. ****
-
-**** Acceptable file formats for fitures include 
-EPS, TIFF, JPEG, GIF, PNG, BMP, XLS, XLSX, DOC, DOCX, and PDF. ****
-
-**** The Journal does not publish in color. ****
-
-**** In order to improve the accessibility of Energy Journal papers, authors are required to submit a short (one to two page) non-technical Executive Summary in PDF format which contains the following: a) the motivations underlying the research; b) a short account of the research performed; c) the main conclusions; and, d) potential benefits, applications and policy implications of the work. No tables, charts, graphics, equations, etc. are to be included in the Executive Summary.
-
-Authors are encouraged to include the Executive Summary with their initial submission. ****
-
-This statement\footnote{Not actually a statement} needs referencing \Bp{}. 
-This was described in \cite{Brockway:2017a}. 
-This is a reference to a table (Table \ref{tab:example}).
+% See guide for authors at \url{http://www.iaee.org/en/publications/authors.aspx}.
+% Main points are:
+% 
+% **** Use Chicago Manual of Style. ****
+% 
+% **** Manuscripts may not exceed 25--35 pages or 9,500 words. ****
+% 
+% **** Acceptable file formats for fitures include 
+% EPS, TIFF, JPEG, GIF, PNG, BMP, XLS, XLSX, DOC, DOCX, and PDF. ****
+% 
+% **** The Journal does not publish in color. ****
+% 
+% **** In order to improve the accessibility of Energy Journal papers, authors are required to submit a short (one to two page) non-technical Executive Summary in PDF format which contains the following: a) the motivations underlying the research; b) a short account of the research performed; c) the main conclusions; and, d) potential benefits, applications and policy implications of the work. No tables, charts, graphics, equations, etc. are to be included in the Executive Summary.
+% 
+% Authors are encouraged to include the Executive Summary with their initial submission. ****
 
 
-
-**** Our introduction starts here. ****
 
 %++++++++++++++++++++++++++++++
 \subsection{Relevant previous work}
 \label{sec:previous_work}
 %++++++++++++++++++++++++++++++
 
-\citet{Thomas:2013aa, Thomas:2013ab} look at household spending 
-to ascertain embodied energy effects 
-of spending energy cost savings in the economy. 
+\citet{Thomas:2013aa, Thomas:2013ab} look at household spending
+to ascertain embodied energy effects
+of spending energy cost savings in the economy.
 
 \Bt{} developed expressions for changes in final energy demand
 due to substitution and income effects,
-and he calculated, numerically, estimates for substitution and income rebound 
+and he calculated, numerically, estimates for substitution and income rebound
 for example energy efficiency upgrades.
-\Bt{} mentioned embodied energy, but 
-he did not develop an expression for it, 
+\Bt{} mentioned embodied energy, but
+he did not develop an expression for it,
 nor did he make estimates of its magnitude.
-He mentioned a ``macroeconomic multiplier'' but did not include it 
+He mentioned a ``macroeconomic multiplier'' but did not include it
 in his expressions or numerical estimates.
-And, he stopped short of obtaining explicit, symbolic expressions for 
+And, he stopped short of obtaining explicit, symbolic expressions for
 rebound from embodied energy, substitution, and income effects.
 
 Our approach has some differences from the work of \Tt{} and \Bt{}.
-In contrast to \Tt{}, 
+In contrast to \Tt{},
 we account for potential differences in embodied energy between the original and upgraded device.
 
 
@@ -165,9 +159,9 @@ We choose not to apply time-value-of-money considerations to the financial aspec
         (\Ba{} discounted some cost streams in his examples.)
         This decision simplifies the derivation, provides consistency in the treatment of energy and money,
         and avoids questions about whether time valuation should be applied to \emph{energy} as well.
-  
-We choose not to apply final-to-primary energy multipliers 
-        to final energy rates in the numerators and denominators of rebound expressions. 
+
+We choose not to apply final-to-primary energy multipliers
+        to final energy rates in the numerators and denominators of rebound expressions.
         (\Ba{} applied final-to-primary energy multipliers which divide out, anyway.)
         This decision simplifies derivations.
 
@@ -186,12 +180,12 @@ In this paper, we extend the work of \Bt{} in several important ways.
         device-level effects, embodied energy effects, substitution effects, and income and respending effects.
         Doing so enables both indentification of important factors for rebound and
         explication of interactions among the different rebound effects.
-  
+
   \item We add a macroeconomic multiplier ($k$) to describe technology changes.
         Doing so allows quantification of the effects of technology changes on rebound.
 
-  \item We include embodied energy effects in our theory. 
-        We estimate embodied energy effects on rebound and compare to other effects to ascertain 
+  \item We include embodied energy effects in our theory.
+        We estimate embodied energy effects on rebound and compare to other effects to ascertain
         the importance of embodied energy.
 
 \end{enumerate}
@@ -204,36 +198,69 @@ In this paper, we extend the work of \Bt{} in several important ways.
 \label{sec:extending_borenstein}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Like \Bt{}, we assume that 
-a device (say, an automobile) consumes final energy ($E_f$, say gasoline) 
-to provide energy services (vehicle miles) 
-at rate $\ratebefore{q}_s$ (in miles/year)
-with final-energy-to-services efficiency $\before{\eta}$ (in miles/gallon).
+We assume a device (say, an automobile)
+that consumes final energy ($\Ef$, say gasoline)
+available at price $p_{\Ef}\!$ (in \$/MJ)
+to provide a rate of energy service ($\ratebefore{q}_s$, in vehicle miles/year)
+with final-energy-to-services efficiency $\before{\eta}$ (miles/gallon).
 An energy efficiency upgrade ($U$) increases
-final-energy-to-services efficiency such that 
+final-energy-to-services efficiency such that
 $\after{\eta} > \before{\eta}$,
 typically, but not always,
-at an increased financial cost to procure, operate, maintain, and dispose the device
-such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.%
-\footnote{
-  Following \Bt{}, 
-  a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade ($U$).
+at an increased financial cost rate to
+procure (capital), operate, maintain, and dispose the device
+such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
+  Following \Bt{},
+  a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade~($U$).
   $\after{X}$ indicates $X$ after $U$.
   $\rate{X}$ indicates the rate of $X$ before $U$ in units of $X$/year.
   $\rateafter{X}$ indicates the rate of $X$ after $U$ in units of $X$/year.
 }
-The upgraded device may also contain more embodied final energy
+Our approach to capital costs is different from \Tt{p.~205},
+who assume the upgraded device to have the same
+capital cost as the original device, and
+\Bt{}, who does not address capital costs.
+Neither \Ta{} nor \Ba{} address disposal costs.
+We spread capital and disposal costs across the life of the original and upgraded devices
+($\before{t}$ and $\after{t}$, respectively)
+to obtain cost rates ($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).
+
+In our model,
+the upgraded device may contain more (or less) embodied final energy
 than the original
-such that $\after{E}_{\femb} > \before{E}_{\femb}$.
-$U$ reduces the service price such that $\after{p}_s < \before{p}_s$, 
-freeing cash to be spent elsewhere 
-at the energy intensity of the broader economy ($I_{E_f}$).
+such that $\after{E}_{\femb} \ne \before{E}_{\femb}$.
+Our approach to embodied energy is different from \Tt{p.~205} who assume that
+the upgraded device has the same embodied energy as the original device,
+i.e., $\after{E}_{\femb} = \before{E}_{\femb}$.
+\Bt{} discusses embodied energy
+but does not include embodied energy effects in his model.%
+\footnote{
+  We define embodied energy as the energy/exergy analysis literature
+  to be the sum of all final energy consumed in the production of the device.
+  \Bt{} discusses ``embodied energy,'' but uses the term to mean
+  the primary energy equivalent of direct final energy consumed.
+}
+We spread embodied energy across the expected life of the device to obtain a rate of embodied energy
+($\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$ 
+and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$).
+
+$U$ reduces the service price (in, say, miles/\$) such that $\after{p}_s < \before{p}_s$, 
+freeing cash to be spent elsewhere in the economy at its final energy intensity
+($I_{\Ef}$, in MJ/\$).
+Our approach to freed cash is different from \Tt{} who used input-output methods 
+to ascertain the energy cost of income and substitution effects. 
+Our approach to freed cash is similar in practice to \Bt{} 
+who discussed ascertaining energy costs from a basket of a large number of goods, 
+but who, in the end, also assumed that freed cash has 
+energy implications at the energy intensity of the economy.
+
 The reduced service price may also lead to substitution of spending
 away from other purchases
 toward final energy to operate the device.
 The strength of the substitution dynamic is described 
 by the service price elasticity of final energy demand ($\epsilon$), 
-which is typically less than 0.
+where typically $\epsilon < 0$.
+Our approach to service price elasticity of final energy demand is identical to \Bt{}.
 
 Our derivations of
 explicit, symbolic expressions for the four rebound effects discussed above 
@@ -242,41 +269,25 @@ are provided in the Appendix, Section~\ref{sec:model_derivation}.
 We summarize and discuss the expressions below.
 (Note that Section~\ref{sec:model_verification} provides, where possible,
 verification of the explicit, symbolic expressions 
-using data from \Ba{}'s auto efficiency example.)
+using data from the auto efficiency example in \Bt{}.)
 
 Device-level rebound ($Re_{dev}$) is given by 
 %
 \begin{equation} \label{eq:Re_dev}
-  Re_{dev} = \Redevequation{} \, ,
+  Re_{dev} = \Redevequation{} \, .
 \end{equation}
-%
-where
-final-energy-to-services efficiencies 
-before and after $U$ are given by $\before{\eta}$ and $\after{\eta}$, respectively, and
-$\epsilon$ is the energy service price elasticity of final energy demand.
 
 Embodied energy rebound ($Re_{emb}$) is given by
 %
 \begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \Reembequation{} \, ,
+  Re_{emb} = \Reembequation{} \, .
 \end{equation}
-%
-where 
-$E_{\femb}$ is final energy embodied in the device in MJ,
-$t$ is device lifetime in years, 
-$\rate{E}_{\femb}$ is embodied final energy spread across the life of the device in MJ/year,
-and
-$\rate{E}_{\fdir}$ is the rate of final energy consumed directly by the device in MJ/year.
 
 Substitution effect rebound ($Re_{sub}$) is given by 
 %
 \begin{equation} \label{eq:Re_sub}
-  Re_{sub} = \Resubequation{} \, ,
+  Re_{sub} = \Resubequation{} \, .
 \end{equation}
-%
-where
-$p_{E_f}$ is the price of final energy in \$/MJ and
-$I_{E_f}$ is the final energy intensity of the economy in MJ/\$.
 
 Rebound from income and respending effects is given by 
 %
@@ -285,11 +296,8 @@ Rebound from income and respending effects is given by
 \end{equation}
 %
 where
-$\gamma = \gammaequation{}$ is the nondimensionalized change in device cost rate, 
-$\rate{C}_{dev}$ is the cost to procure, operate, maintain, and dispose of the device
-expressed as a rate,
-and
-$k$ is a nondimensional economic multiplier that accounts for 
+$\gamma = \gammaequation{}$ is the nondimensionalized change in device cost rate.
+$k$ is a dimensionless macroeconomic multiplier that accounts for 
 the economic expansion caused by $U$.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
@@ -341,11 +349,11 @@ The inverse relationship arises because energy cost savings taken back by device
 cannot be spent in the economy, thereby reducing rebound from the inccome effect.
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound 
-enhances (reduces) total rebound when $I_{E_f} p_{E_f}$ is less than (greater than) 1.
+enhances (reduces) total rebound when $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
 
 **** Not sure this is right yet. ****  The effect of service price elasticity of final energy demand ($\epsilon$) 
 on total rebound ($Re$) is similarly
-confounded by the relationship between the product $I_{E_f} p_{E_f}$ and 1.
+confounded by the relationship between the product $I_{\Ef} p_{\Ef}$ and 1.
 We assume that, typically,
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -359,10 +367,10 @@ We assume that, typically,
     
 \end{enumerate*}
 %
-When $I_{E_f} p_{E_f}$ is less than (greater than) 1, 
+When $I_{\Ef} p_{\Ef}$ is less than (greater than) 1, 
 higher service price elasticity of demand (a more-negative $\epsilon$)
 will lead to larger (smaller) energy rebound, 
-because $Re_{dev}$ gets more positive as $\epsilon$ gets more negative and $1 - p_{E_f} I_{E_f}$ is positive (negative). 
+because $Re_{dev}$ gets more positive as $\epsilon$ gets more negative and $1 - p_{\Ef} I_{\Ef}$ is positive (negative). 
 
 The third term of Equation~\ref{eq:Re_tot} shows that 
 when $1 - Re_{dev}/k - \gamma > 0$, 
@@ -372,18 +380,18 @@ total energy rebound is enhanced by
 	
   \item a larger multiplier ($k$) due to enhanced respending in the economy,        
   
-  \item higher energy prices ($p_{E_f}$) as greater energy cost savings from $U$ are spent in the economy, and
+  \item higher energy prices ($p_{\Ef}$) as greater energy cost savings from $U$ are spent in the economy, and
   
-  \item higher final energy intensity of the economy ($I_{E_f}$) as respent energy cost savings demand additional energy in the economy.
+  \item higher final energy intensity of the economy ($I_{\Ef}$) as respent energy cost savings demand additional energy in the economy.
     
 \end{enumerate*}
 %
 If, on the other hand, $1 - Re_{dev}/k - \gamma < 0$, 
 total energy rebound is reduced by a larger multiplier ($k$),
-higher energy prices ($p_{E_f}$), and 
-higher final energy intensity of the economy ($I_{E_f}$).
+higher energy prices ($p_{\Ef}$), and 
+higher final energy intensity of the economy ($I_{\Ef}$).
 
-Total final energy rebound simplifies to $k I_{E_f} p_{E_f}$ if  
+Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if  
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -412,43 +420,43 @@ Total final energy rebound simplifies to $k I_{E_f} p_{E_f}$ if
 \label{sec:results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Example figure
-\begin{figure}[t]
-\caption{A caption for a placeholder figure.}
-\includegraphics[width=\linewidth]{placeholder.jpg}
-\label{fig:FigRef}
-\end{figure}
-
-% Example rotated figure
-\begin{sidewaysfigure}
-\caption{A caption for a rotated placeholder figure.}
-\includegraphics[width=\linewidth]{placeholder.jpg}
-\label{fig:FigRef2}
-\end{sidewaysfigure}
-
-% Example table
-\begin{table}[t]
-\fontsize{10pt}{12pt}\selectfont % Table font size
-\centering % Centered table
-\caption{Calibrated Parameter and Initial Variable Values} % Table caption
-\begin{tabular}{llr}
-\noalign{\hrule height 1pt} % Table rule
-\textbf{Parameter} & & \\
-\textbf{or Variable} & \multicolumn{1}{c}{\textbf{Brief Description}} & \textbf{Value}\\
-\noalign{\hrule height 1pt} % Table rule
-$\pi$ & Initial population$\dagger$ & 1.0\\
-$S$ & Feasible technically recoverable fossil fuel resources & 2126.0527\\
-\noalign{\hrule height 1pt} % Table rule
-\multicolumn{3}{l}{$\dagger$ Set equal to 1.0 by using the value at $t = 0$ to define units}
-\end{tabular}
-\label{tab:example} % Table label for referencing the table elsewhere in the text with \ref{<label>}
-\end{table}
-
-% Example equation
-\begin{equation}
-\label{eq:emc}
-e = mc^2
-\end{equation}
+% % Example figure
+% \begin{figure}[t]
+% \caption{A caption for a placeholder figure.}
+% \includegraphics[width=\linewidth]{placeholder.jpg}
+% \label{fig:FigRef}
+% \end{figure}
+% 
+% % Example rotated figure
+% \begin{sidewaysfigure}
+% \caption{A caption for a rotated placeholder figure.}
+% \includegraphics[width=\linewidth]{placeholder.jpg}
+% \label{fig:FigRef2}
+% \end{sidewaysfigure}
+% 
+% % Example table
+% \begin{table}[t]
+% \fontsize{10pt}{12pt}\selectfont % Table font size
+% \centering % Centered table
+% \caption{Calibrated Parameter and Initial Variable Values} % Table caption
+% \begin{tabular}{llr}
+% \noalign{\hrule height 1pt} % Table rule
+% \textbf{Parameter} & & \\
+% \textbf{or Variable} & \multicolumn{1}{c}{\textbf{Brief Description}} & \textbf{Value}\\
+% \noalign{\hrule height 1pt} % Table rule
+% $\pi$ & Initial population$\dagger$ & 1.0\\
+% $S$ & Feasible technically recoverable fossil fuel resources & 2126.0527\\
+% \noalign{\hrule height 1pt} % Table rule
+% \multicolumn{3}{l}{$\dagger$ Set equal to 1.0 by using the value at $t = 0$ to define units}
+% \end{tabular}
+% \label{tab:example} % Table label for referencing the table elsewhere in the text with \ref{<label>}
+% \end{table}
+% 
+% % Example equation
+% \begin{equation}
+% \label{eq:emc}
+% e = mc^2
+% \end{equation}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -483,7 +491,7 @@ e = mc^2
 \label{sec:nomenclature}
 %++++++++++++++++++++++++++++++
 
-We adopt nomenclature similar to that of \cite{Borenstein:2015aa}.
+We adopt nomenclature similar to that of \Bt{}.
 Table~\ref{tab:symbols} shows symbols, their meanings, and example units.
 Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
 Table~\ref{tab:decorations} shows symbol decorations and their meanings. 
@@ -593,7 +601,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 %++++++++++++++++++++++++++++++
 
 This section shows the derivation of the symbolic rebound model.
-Like \cite{Borenstein:2015aa}, we consider three contributing factors to rebound,
+Like \Bt{}, we consider three contributing factors to rebound,
 embodied energy effects, 
 substitution effects, and
 income effects.
@@ -617,11 +625,11 @@ Thus,
 \label{sec:preliminaries}
 %------------------------------
 
-Service price~($p_s$) is related to final energy price~($p_{E_f}$) through
+Service price~($p_s$) is related to final energy price~($p_{\Ef}$) through
 final-energy-to-service efficiency~($\eta$) by  
-$p_s = p_{E_f}/\eta$, where
+$p_s = p_{\Ef}/\eta$, where
 $p_s$ could be in \$/vehicle-mile, 
-$p_{E_f}$ in \$/MJ, and
+$p_{\Ef}$ in \$/MJ, and
 $\eta$ in vehicle-miles/MJ
 for an automobile efficiency upgrade.
 As final-energy-to-service efficiency~($\eta$) increases,
@@ -755,8 +763,8 @@ $\epsilon < 0$ is expected
 such that a decrease in service price ($p_s$) yields 
 an increase in service consumption ($\rate{q}_s$).
 Assuming that the price of final energy does not change because of $U$
-(i.e., $\after{p}_{E_f} = \before{p}_{E_f}$)
-and using $p_s = p_{E_f}/\eta$, 
+(i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
+and using $p_s = p_{\Ef}/\eta$, 
 the new quantity demanded can be expressed in terms of service price elasticity of demand as
 $\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
 
@@ -786,10 +794,10 @@ After simplification, the explicit expression for device-level rebound becomes
 However, increased service consumption ($\rateafter{q}_s > \ratebefore{q}_s$) 
 implies an increased energy cost for the device.
 The increased energy cost is shifted from other non-energy expenditures in the economy
-such that $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{E_f}$.
+such that $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{\Ef}$.
 Assuming that $\rate{C}_{\shift}$ reduces energy consumption 
 by the energy intensity of the economy gives
-$\rate{E}_{\floss} = \rate{C}_{\shift} I_{E_f} = \rate{E}_{\fgain} p_{E_f} I_{E_f}$.
+$\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} p_{\Ef} I_{\Ef}$.
 
 The net substition effect ($\Delta \rate{E}_{\fsub}$) is given by 
 $\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{floss}$.
@@ -797,7 +805,7 @@ After substituting for $\rate{E}_{\fgain}$ and some rearranging,
 the net substitution effect can be expressed as
 %
 \begin{equation} \label{eq:delta_sub}
-  \Delta \rate{E}_{\fsub} = (1 - p_{E_f} I_{E_f}) 
+  \Delta \rate{E}_{\fsub} = (1 - p_{\Ef} I_{\Ef}) 
                             \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon - 1 \right]
                             \frac{\before{\eta}}{\after{\eta}} \, 
                             \rate{E}_{\fdir} \, .
@@ -805,7 +813,7 @@ the net substitution effect can be expressed as
 
 $\Delta \rate{E}_{\fsub}$ represents the energy savings taken back by substitution effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
-$Re_{sub} = (1 - p_{E_f} I_{E_f}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] 
+$Re_{sub} = (1 - p_{\Ef} I_{\Ef}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] 
                             / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
 After simplification, substitution rebound can be expressed as
 %
@@ -826,7 +834,7 @@ Energy cost savings~($\rate{G}$, in \$/year, known as ``income''\footnote{
 are one result of the investment in $U$.
 $\rate{G}$ is money that is no longer spent on energy to run the upgraded device, 
 assuming the same service level from the device. 
-Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{E_f}$. 
+Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$. 
 Because $\Delta \rate{E}_{\fdir} < 0$, $\rate{G}$ is positive.
 
 It costs money to procure, operate, maintain, and dispose of the energy-efficient device.
@@ -844,23 +852,23 @@ the upgraded device relative to the original device.
 Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
 
 Assuming that the freed cash is spent in the economy at the energy intensity of the economy gives
-$\Delta \rate{E}_{\finc} = FC \, I_{E_F}$.
+$\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
 Freed cash can be respent in the economy in a manner 
 ``akin to the macroeconomic multiplier that might result 
-following a new discovery of a natural resource deposit'' \citep[p.~11]{Borenstein:2015aa}.
+following a new discovery of a natural resource deposit'' \Bp{p.~11}.
 The effect of this respending can be represented by a technology multiplier~($k$).
 Although \Ba{} did not include a multiplier ($k$) in his model,
 we do so here.\footnote{
   To be precise, \Bt{} assumed $k = 1$.
 }
 Thus, the change in final energy consumption due to income and respending can be written as
-$\Delta \rate{E}_{\fincres} = FC \, I_{E_f} k$.
+$\Delta \rate{E}_{\fincres} = FC \, I_{\Ef} k$.
 The discussion above yields
 %
 \begin{equation} \label{eq:delta_income}
   \Delta \rate{E}_{\fincres} = \left( 1 - \frac{\before{\eta}}{\after{\eta}} 
-                                 - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}} \right) 
-                               k I_{E_f} p_{E_f} \ratebefore{E}_{\fdir} \, .
+                                 - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{\Ef}} \right) 
+                               k I_{\Ef} p_{\Ef} \ratebefore{E}_{\fdir} \, .
 \end{equation}
 
 Without the energy efficiency upgrade ($U$),
@@ -892,7 +900,7 @@ As $\rateafter{C}_{dev} - \ratebefore{C}_{dev}$ goes up, $\gamma$ increases, and
 because the cost of procuring, operating, maintaining, and disposing of the device 
 reduces the net energy cost savings available to be respent in the economy.
 If $U$ is costless, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, $\gamma = 0$, and 
-$Re_{\incres} = k I_{E_f} p_{E_f}$, as shown by \cite{Borenstein:2015aa}.%
+$Re_{\incres} = k I_{\Ef} p_{\Ef}$, as shown by \Bt{}.%
 \footnote{
   \Bt{} assumed that the multiplier $k = 1$. 
 }
@@ -914,7 +922,7 @@ for total rebound expressed in terms of
 embodied energy rebound~($Re_{emb}$),
 device-level rebound~($Re_{dev}$), 
 the nondimensionalized change in device cost rate~($\gamma$), and
-economic parameters ($k$, $I_{E_f}$, and $p_{E_f}$).
+economic parameters ($k$, $I_{\Ef}$, and $p_{\Ef}$).
 %
 \begin{equation}
   Re = \Retotequation{} \tag{\ref{eq:Re_tot}}
@@ -926,7 +934,7 @@ economic parameters ($k$, $I_{E_f}$, and $p_{E_f}$).
 \label{sec:model_verification}
 %++++++++++++++++++++++++++++++
 
-\citet[pp.~15--17]{Borenstein:2015aa} provides
+\Bt{pp.~15--17} provides
 example calculations for rebound caused by an increase in auto fuel economy.
 The details of \Ba{}'s 
 fuel economy example provide the opportunity for numerical verification of
@@ -1003,7 +1011,7 @@ $\ratebefore{E}_{\fdir} = (12,000 \, \mathrm{mi/yr})(1 \, \mathrm{gal}/25 \, \ma
 = 5.472 \times 10^7 \, \mathrm{BTU/yr}$.
 Using the above numbers in Equation~\ref{eq:Re_ir} with $k = 1$, 
 we obtain $Re_{i} = 0.110$, 
-exactly matching the value of 0.11 reported in \citet[p.~17, Table~2]{Borenstein:2015aa}.
+exactly matching the value of 0.11 reported in \Bt{p.~17, Table~2}.
 The match verifies the derivation of Equation~\ref{eq:Re_ir}.
 } % This brace ends the appendix content section.
 
