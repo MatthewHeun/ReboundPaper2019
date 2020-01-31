@@ -172,20 +172,20 @@ We choose not to apply final-to-primary energy multipliers
 \label{sec:contribution}
 %++++++++++++++++++++++++++++++
 
-In this paper, we extend the work of \Bt{} in several important ways.
+In this paper, we extend the work of \Tt{} and \Bt{} in several important ways.
 %
 \begin{enumerate}
 
   \item We develop explicit, symbolic rebound expressions for four effects on rebound:
         device-level effects, embodied energy effects, substitution effects, and income and respending effects.
         Doing so enables both indentification of important factors for rebound and
-        explication of interactions among the different rebound effects.
+        explication of interactions among factors that affect rebound.
 
-  \item We add a macroeconomic multiplier ($k$) to describe technology changes.
+  \item We include a macroeconomic multiplier ($k$) to describe technology changes.
         Doing so allows quantification of the effects of technology changes on rebound.
 
-  \item We include embodied energy effects in our theory.
-        We estimate embodied energy effects on rebound and compare to other effects to ascertain
+  \item We include embodied energy effects in the rebound model.
+        We then estimate the magnitude of embodied energy effects and compare to other factors to ascertain
         the importance of embodied energy.
 
 \end{enumerate}
@@ -297,8 +297,6 @@ Rebound from income and respending effects is given by
 %
 where
 $\gamma = \gammaequation{}$ is the nondimensionalized change in device cost rate.
-$k$ is a dimensionless macroeconomic multiplier that accounts for 
-the economic expansion caused by $U$.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After algebraic rearrangement, 
@@ -308,15 +306,22 @@ total energy rebound can be expressed as
   Re = \Retotequation{} \, .
 \end{equation}
 
-The symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
+The explicit, symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
 allows explication of the factors that contribute to total energy rebound and
-thereby represents an extension of the work of \Bt{}.
+thereby provides a benefit of extending the work of \Bt{}
+to obtain the expressions.
 In particular, Equation~\ref{eq:Re_tot} allows us to 
 identify the relationships among device-level rebound ($Re_{dev}$) and
 embodied, substitution, and income and respending effects.
+
+%++++++++++++++++++++++++++++++
+\subsection{Embodied energy effects}
+\label{sec:embodied_effects}
+%++++++++++++++++++++++++++++++
+
 Equation~\ref{eq:Re_tot} shows that 
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
-and is unaffected by device-level rebound.
+and is independent of device-level rebound.
 When the embodied energy rate for an energy-service-providing device 
 goes up (down) due to $U$, 
 total rebound also increases (decreases)
@@ -327,21 +332,33 @@ and
 shorter device lifetimes ($\after{t} < \before{t}$)
 both increase embodied energy rebound.
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Device cost effects}
+\label{sec:device_cost_effects}
+%++++++++++++++++++++++++++++++
+
 When costs for procuring, operating, maintaining, and disposing
 the energy efficient device 
-(as represented by $\gamma$)
+($\rate{C}_{dev}$ and represented by $\gamma$ in Equation~\ref{eq:Re_ir})
 go up (down),
 total rebound decreases (increases), because
 device costs reduce (increase) net freed cash available 
 for spending in the economy.
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Device-level rebound effects}
+\label{sec:device_level_rebound_effects}
+%++++++++++++++++++++++++++++++
+
 While the effects of embodied energy and device costs on total rebound
-can be ascertained by inspection of Equation~\ref{eq:Re_tot},
+are straightforward and can be ascertained by inspection of Equation~\ref{eq:Re_tot},
 the effect of device-level rebound ($Re_{dev}$) is less clear, 
 as $Re_{dev}$ appears in two terms with the opposite sense.
-The first instance of $Re_{dev}$ (in the second term of Equation~\ref{eq:Re_tot}) 
+The first instance of $Re_{dev}$ (in the second term of the right side of Equation~\ref{eq:Re_tot}) 
 enhances total rebound directly.
-The second instance of $Re_{dev}$ (in the third term of Equation~\ref{eq:Re_tot})
+The second instance of $Re_{dev}$ (in the third term of the right side of Equation~\ref{eq:Re_tot})
 reduces total rebound, 
 indicating that, as observed by \Tt{}, 
 income effect rebound is inversely related to device-level rebound.
@@ -350,6 +367,12 @@ cannot be spent in the economy, thereby reducing rebound from the inccome effect
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound 
 enhances (reduces) total rebound when $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Elasticity effects}
+\label{sec:elasticity effects}
+%++++++++++++++++++++++++++++++
 
 **** Not sure this is right yet. ****  The effect of service price elasticity of final energy demand ($\epsilon$) 
 on total rebound ($Re$) is similarly
@@ -372,6 +395,12 @@ higher service price elasticity of demand (a more-negative $\epsilon$)
 will lead to larger (smaller) energy rebound, 
 because $Re_{dev}$ gets more positive as $\epsilon$ gets more negative and $1 - p_{\Ef} I_{\Ef}$ is positive (negative). 
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Multiplier, energy intensity, and energy price effects}
+\label{sec:k_I_p_effects}
+%++++++++++++++++++++++++++++++
+
 The third term of Equation~\ref{eq:Re_tot} shows that 
 when $1 - Re_{dev}/k - \gamma > 0$, 
 total energy rebound is enhanced by
@@ -390,6 +419,12 @@ If, on the other hand, $1 - Re_{dev}/k - \gamma < 0$,
 total energy rebound is reduced by a larger multiplier ($k$),
 higher energy prices ($p_{\Ef}$), and 
 higher final energy intensity of the economy ($I_{\Ef}$).
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Degenerate cases}
+\label{sec:degenerate}
+%++++++++++++++++++++++++++++++
 
 Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if  
 %
@@ -577,6 +612,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Subscript & Meaning \\
   \midrule
+  $cap$ & capital (costs) \\
   $dir$ & direct, meaning energy used directly by the device \\
   $dis$ & disposal \\
   $dev$ & device \\
@@ -586,7 +622,6 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $ir$ & income and respending \\
   $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $OM$ & operation and maintenance \\
-  $pur$ & purchase \\
   $res$ & respending \\
   $s$ & service stage of the energy conversion chain \\
   \bottomrule
@@ -606,8 +641,8 @@ embodied energy effects,
 substitution effects, and
 income effects.
 Energy rebound for each effect~($j$) can be calculated by
-$Re_j = 1 - \frac{\mathrm{actual \, energy \, savings_i}}{\mathrm{expected \, energy \, savings}}$, 
-where expected energy savings are measured at the device level,
+$Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$, 
+where expected energy savings are quantified at the device level
 assuming no change in the rate of service, 
 no substitution, 
 and no change of embodied energy.
@@ -635,7 +670,7 @@ for an automobile efficiency upgrade.
 As final-energy-to-service efficiency~($\eta$) increases,
 service price~($p_s$) declines.
 Final-energy-to-services efficiency~($\before{\eta}$) is the inverse of 
-\Ba{}'s $e$,
+$e$ in \Bt{},
 such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\widetilde{e}$.
 
 The rate of service provided by the device~($\rate{q}_s$) is related to 
@@ -675,7 +710,7 @@ which can be rearranged to be
 \end{equation}
 %
 using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
-If $\after{\eta} \rightarrow \infty$, 
+As $\after{\eta} \rightarrow \infty$, 
 all final energy consumption is eliminated, and 
 $\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$, as expected.
 If efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$, 
@@ -698,8 +733,8 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \label{sec:embodied_effect_derivation}
 %------------------------------
 
-Prior to $U$, the embodied final energy of the device is $E_{\femb}$.
-After $U$, the embodied final energy of the device is $\after{E}_{\femb}$.
+$U$ causes the embodied final energy of the device to change 
+from $E_{\femb}$ to $\after{E}_{\femb}$.
 We allocate embodied energy over the life of the device ($\before{t}$ and $\after{t}$) 
 to obtain embodied energy rates.
 The change in embodied final energy due to $U$ (expressed as a rate) is given by 
@@ -722,31 +757,6 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 \begin{equation} 
   Re_{emb} = \Reembequation{} \, . \tag{\ref{eq:Re_emb}}
 \end{equation}
-%
-Embodied energy rebound ($Re_{emb}$) increases to the extent that
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item the embodied energy of the device is greater after $U$ than before
-        ($\after{E}_{\femb} > \before{E}_{\femb}$) or 
-        
-  \item the original embodied energy rate is greater than the original direct final energy consumption rate 
-        ($\ratebefore{E}_{\femb} > \ratebefore{E}_{\fdir}$).
-    
-\end{enumerate*}
-%
-On the other hand,
-embodied energy rebound will be smaller to the extent that
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item the upgraded device has longer life than the original device
-        ($\after{t} > \before{t}$) or
-  
-  \item $U$ increases final-energy-to-services efficiency
-        ($\after{\eta} > \before{\eta}$).
-    
-\end{enumerate*}
 
 
 %------------------------------
@@ -811,7 +821,7 @@ the net substitution effect can be expressed as
                             \rate{E}_{\fdir} \, .
 \end{equation}
 
-$\Delta \rate{E}_{\fsub}$ represents the energy savings taken back by substitution effects.
+$\Delta \rate{E}_{\fsub}$ represents, on net, the energy savings taken back by substitution effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
 $Re_{sub} = (1 - p_{\Ef} I_{\Ef}) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right] 
                             / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$. 
@@ -832,16 +842,16 @@ Energy cost savings~($\rate{G}$, in \$/year, known as ``income''\footnote{
   The device user's income, in the sense of remuneration for labor, is unchanged. 
 }) 
 are one result of the investment in $U$.
-$\rate{G}$ is money that is no longer spent on energy to run the upgraded device, 
+$\rate{G}$ is money that is no longer spent on energy to operate the upgraded device, 
 assuming the same service level from the device. 
 Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$. 
-Because $\Delta \rate{E}_{\fdir} < 0$, $\rate{G}$ is positive.
+Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
 
 It costs money to procure, operate, maintain, and dispose of the energy-efficient device.
 But it cost money to procure, operate, maintain, and dispose of the original device, too.
-If costs are spread across the life of the device, we obtain
-$\rateafter{C}_{dev} = \after{C}_{pur} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
-$\ratebefore{C}_{dev} = \before{C}_{pur} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.
+If capital and disposal costs are spread across the life of the device, we obtain
+$\rateafter{C}_{dev} = \after{C}_{cap} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
+$\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.
 The change in device cost rate is given by 
 $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.
 After rearrangement, $\Delta \rate{C}_{dev} = \left( \rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1 \right) \ratebefore{C}_{dev}.$
@@ -859,7 +869,7 @@ following a new discovery of a natural resource deposit'' \Bp{p.~11}.
 The effect of this respending can be represented by a technology multiplier~($k$).
 Although \Ba{} did not include a multiplier ($k$) in his model,
 we do so here.\footnote{
-  To be precise, \Bt{} assumed $k = 1$.
+  Not including the multiplier, in effect, assumes $k = 1$.
 }
 Thus, the change in final energy consumption due to income and respending can be written as
 $\Delta \rate{E}_{\fincres} = FC \, I_{\Ef} k$.
@@ -876,8 +886,8 @@ $\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, an
 $\Delta \rate{E}_{\fincres} = 0$, as expected.
 As $\after{\eta}$ increases relative to $\eta$, $\Delta \rate{E}_{\fincres}$ goes up, 
 because the efficiency gain yields more freed cash (from energy cost savings) to spend in the economy.
-$\Delta \rate{E}_{\fincres}$ goes up when
-$\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, also because
+Similarly, $\Delta \rate{E}_{\fincres}$ goes up when
+$\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, because
 more freed cash is available
 to be spent in the economy
 (because the device costs less to procure, operate, maintain, and dispose).
@@ -896,14 +906,6 @@ rebound from income and respending effects can be written as
 \end{equation}
 %
 Note that rebound from income only ($Re_i$) is obtained from Equation~\ref{eq:Re_ir} with $k = 1$.
-As $\rateafter{C}_{dev} - \ratebefore{C}_{dev}$ goes up, $\gamma$ increases, and $Re_{\incres}$ goes down,
-because the cost of procuring, operating, maintaining, and disposing of the device 
-reduces the net energy cost savings available to be respent in the economy.
-If $U$ is costless, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, $\gamma = 0$, and 
-$Re_{\incres} = k I_{\Ef} p_{\Ef}$, as shown by \Bt{}.%
-\footnote{
-  \Bt{} assumed that the multiplier $k = 1$. 
-}
 
 
 %------------------------------
@@ -935,15 +937,15 @@ economic parameters ($k$, $I_{\Ef}$, and $p_{\Ef}$).
 %++++++++++++++++++++++++++++++
 
 \Bt{pp.~15--17} provides
-example calculations for rebound caused by an increase in auto fuel economy.
+example calculations for rebound caused by increasing auto fuel economy.
 The details of \Ba{}'s 
 fuel economy example provide the opportunity for numerical verification of
 the explicit equation for rebound developed above.
 Only the expressions for income and substitution effects 
 ($Re_{sub}$ and $Re_{i}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_ir} 
 can be verified, because
-\Ba{} did not provide 
-example calculations for embodied energy rebound ($Re_{emb}$).
+\Ba{} provided neither 
+an expression for embodied energy effects nor example calculations for embodied energy rebound.
 
 
 %------------------------------
@@ -962,8 +964,8 @@ The explicit equation for substitution effect rebound ($Re_{sub}$) is given by
 Equation~\ref{eq:Re_sub}.
 Numerical quantification for each term of Equation~\ref{eq:Re_sub}
 is as follows.
-The price of gasoline ($p_{E,f}$) can be calculated using \Ba{}'s numbers as
-$p_{E,f} = \frac{1}{(113,996 \, \mathrm{BTU/gallon})(1 \, \mathrm{gallon}/\$3)} 
+The price of gasoline ($p_{\Ef}$) can be calculated using \Ba{}'s numbers as
+$p_{\Ef} = \frac{1}{(113,996 \, \mathrm{BTU/gallon})(1 \, \mathrm{gallon}/\$3)} 
 = 2.6317 \times 10^{-5} \, \$/\mathrm{BTU}$.
 \Ba{}'s energy intensity of the economy is $6472 \, \mathrm{BTU/\$}$.
 Device-level rebound ($Re_{dev}$) is given by Equation~\ref{eq:Re_dev}.
@@ -972,10 +974,10 @@ $\before{\eta}$ and $\after{\eta}$ as 25 and 50 miles/gallon, respectively,
 we obtain $Re_{dev} = 0.149$.
 Using the above results in Equation~\ref{eq:Re_sub}
 gives $Re_{sub} = 0.124$. 
-\Ba{} callculated 0.128.
+\Ba{} calculated 0.128.
 We attribute the difference to rounding errors, 
 as \Ba{}'s calculation involves many steps,
-whereas the explicit expression in Equation~\ref{eq:Re_sub}
+whereas the explicit, symbolic expression in Equation~\ref{eq:Re_sub}
 is evaluated directly.
 The near-match verifies the derivation of Equation~\ref{eq:Re_sub}.
 
@@ -989,16 +991,13 @@ To verify the derivation of the explicit income effect rebound equation,
 we use numbers from \Ba{}'s 
 fuel economy example to calculate $Re_{i}$ by Equation~\ref{eq:Re_ir}.
 Then, we compare our answer to
-\Ba{}'s numerical estimate for $Re_{i}$.%
-\footnote{
-  Note that $Re_{i} = Re_{\incres}$ when $k = 1$ in Equation~\ref{eq:Re_ir}.
-}
+\Ba{}'s numerical estimate for $Re_{i}$.
 Agreement will indicate that the derivation of Equation~\ref{eq:Re_ir} is correct.
 
 The explicit equation for income effect rebound ($Re_{i}$) is given by
 Equation~\ref{eq:Re_ir} with $k = 1$.
-Numerical quantification for each term of Equation~\ref{eq:Re_ir}
-is given in Section~\ref{sec:verification_substitution} and following.
+Numerical quantification of each term in Equation~\ref{eq:Re_ir} (except $\gamma$)
+is given in Section~\ref{sec:verification_substitution}.
 \Bt{} indicates that the fuel economy upgrade 
 from $\before{\eta}$ to $\after{\eta}$
 costs \$3000,
