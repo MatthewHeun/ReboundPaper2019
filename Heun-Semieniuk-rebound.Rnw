@@ -138,7 +138,7 @@ in his expressions or numerical estimates.
 And, he stopped short of obtaining explicit, symbolic expressions for
 rebound from embodied energy, substitution, and income effects.
 
-Our approach has some differences from the work of \Tt{} and \Bt{}.
+Our approach has important differences from the work of \Tt{} and \Bt{}.
 In contrast to \Tt{},
 we account for potential differences in embodied energy between the original and upgraded device.
 
