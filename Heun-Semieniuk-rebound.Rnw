@@ -199,16 +199,16 @@ In this paper, we extend the work of \Tt{} and \Bt{} in several important ways.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 We assume a device (say, an automobile)
-that consumes final energy ($\Ef$, say gasoline)
+that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}\!$ (in \$/MJ)
-to provide a rate of energy service ($\ratebefore{q}_s$, in vehicle miles/year)
-with final-energy-to-services efficiency $\before{\eta}$ (miles/gallon).
+to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle miles/year)
+with final-energy-to-services efficiency $\before{\eta}$ (in miles/gallon).
 An energy efficiency upgrade ($U$) increases
 final-energy-to-services efficiency such that
 $\after{\eta} > \before{\eta}$,
 typically, but not always,
 at an increased financial cost rate to
-procure (capital), operate, maintain, and dispose the device
+procure (capital cost), operate, maintain, and dispose the device
 such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
   Following \Bt{},
   a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade~($U$).
@@ -227,7 +227,7 @@ to obtain cost rates ($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).
 
 In our model,
 the upgraded device may contain more (or less) embodied final energy
-than the original
+than the original device
 such that $\after{E}_{\femb} \ne \before{E}_{\femb}$.
 Our approach to embodied energy is different from \Tt{p.~205} who assume that
 the upgraded device has the same embodied energy as the original device,
@@ -244,23 +244,26 @@ We spread embodied energy across the expected life of the device to obtain a rat
 ($\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$ 
 and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$).
 
-$U$ reduces the service price (in, say, miles/\$) such that $\after{p}_s < \before{p}_s$, 
-freeing cash to be spent elsewhere in the economy at its final energy intensity
-($I_{\Ef}$, in MJ/\$).
-Our approach to freed cash is different from \Tt{} who used input-output methods 
-to ascertain the energy cost of income and substitution effects. 
-Our approach to freed cash is similar in practice to \Bt{} 
-who discussed ascertaining energy costs from a basket of a large number of goods, 
-but who, in the end, also assumed that freed cash has 
-energy implications at the energy intensity of the economy.
-
-The reduced service price may also lead to substitution of spending
+$U$ reduces the service price $p_s$ (in miles/\$) such that $\after{p}_s < \before{p}_s$, 
+leading to substitution of spending
 away from other purchases
 toward final energy to operate the device.
 The strength of the substitution dynamic is described 
 by the service price elasticity of final energy demand ($\epsilon$), 
 where typically $\epsilon < 0$.
+Our approach to substitution effects is different from \Tt{}
+who used input-output methods to 
+ascertain the energy cost of both substitution and income effects. 
 Our approach to service price elasticity of final energy demand is identical to \Bt{}.
+
+The service price decline resulting from $U$ 
+provides income to the device owner
+to be spent elsewhere in the economy at the economy's final energy intensity
+$I_{\Ef}$ (in MJ/\$).
+Our approach to income effects is similar in practice to \Bt{} 
+who ascertained energy costs from a basket of a large number of goods, 
+but who, in the end, also assumed that freed cash has 
+energy implications at the energy intensity of the economy.
 
 Our derivations of
 explicit, symbolic expressions for the four rebound effects discussed above 
@@ -276,19 +279,19 @@ Device-level rebound ($Re_{dev}$) is given by
 \begin{equation} \label{eq:Re_dev}
   Re_{dev} = \Redevequation{} \, .
 \end{equation}
-
+%
 Embodied energy rebound ($Re_{emb}$) is given by
 %
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembequation{} \, .
 \end{equation}
-
+%
 Substitution effect rebound ($Re_{sub}$) is given by 
 %
 \begin{equation} \label{eq:Re_sub}
   Re_{sub} = \Resubequation{} \, .
 \end{equation}
-
+%
 Rebound from income and respending effects is given by 
 %
 \begin{equation} \label{eq:Re_ir}
@@ -296,7 +299,7 @@ Rebound from income and respending effects is given by
 \end{equation}
 %
 where
-$\gamma = \gammaequation{}$ is the nondimensionalized change in device cost rate.
+$\gamma \equiv \gammaequation{}$ is the nondimensionalized change in device cost rate.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After algebraic rearrangement, 
@@ -309,10 +312,12 @@ total energy rebound can be expressed as
 The explicit, symbolic expression for energy rebound in Equation~\ref{eq:Re_tot} 
 allows explication of the factors that contribute to total energy rebound and
 thereby provides a benefit of extending the work of \Bt{}
-to obtain the expressions.
+to obtain these expressions.
 In particular, Equation~\ref{eq:Re_tot} allows us to 
-identify the relationships among device-level rebound ($Re_{dev}$) and
-embodied, substitution, and income and respending effects.
+identify the relationships among total rebound and device-level rebound ($Re_{dev}$) 
+as well as many other factors. 
+The following subsections explore those relationships.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Embodied energy effects}
@@ -612,7 +617,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Subscript & Meaning \\
   \midrule
-  $cap$ & capital (costs) \\
+  $cap$ & capital costs \\
   $dir$ & direct, meaning energy used directly by the device \\
   $dis$ & disposal \\
   $dev$ & device \\
