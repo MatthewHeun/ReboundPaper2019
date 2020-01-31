@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file contains our macros. 
+% It is incorporated into the main file by the
+% \input{macros.tex}
+% command in the main .tex file.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Decorations for symbols
+
+\newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
+\newcommand{\before}[1]{#1}                        % No decoration for before the energy efficiency upgrade (U)
+\newcommand{\after}[1]{\widetilde{#1}}             % Decoration for after the energy efficiency upgrade (U)
+\newcommand{\ratebefore}[1]{\before{\rate{#1}}}    % Decoration for a rate before the energy efficiency upgrade (U)
+\newcommand{\rateafter}[1]{\after{\rate{#1}}}      % Decoration for a rate after the energy efficiency upgrade (U)
+
+%%%%% Kerning to improve spacings between characters
+
+\newcommand{\fcomma}{f\!\!,}
+\newcommand{\fdir}{\fcomma{}dir}                   % Improves spacing between f,dir
+\newcommand{\femb}{\fcomma{}emb}                   % Improves spacing between f,emb
+\newcommand{\fgain}{\fcomma{}gain}                 % Improves spacing between f,gain
+\newcommand{\finc}{\fcomma{}i}                     % Improves spacing between f,inc
+\newcommand{\incres}{ir}                           % Subscript for income and respending
+\newcommand{\fincres}{\fcomma{}\incres}            % Improves spacing between f,inc&res
+\newcommand{\floss}{\fcomma{}loss}                 % Improves spacing between f,loss
+\newcommand{\shift}{shi\!f\!\!t}                   % Improves spacing in the italicized word "shift"
+\newcommand{\fsub}{\fcomma{}sub}                   % Improves spacing between f,loss
+
+
+%%%% Equations as macros so that we can reuse in several places in the paper
+
+% Cost ratio (gamma)
+\newcommand{\gammaequation}{\left( \frac{1}{1 - \frac{\before{\eta}}{\after{\eta}}} \right) 
+                       \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}}}
+                       
+% Device-level rebound
+\newcommand{\Redevequation}{\frac{\left( \frac{\after{\eta}}{\before{\eta}} \right)^{-\epsilon} - 1}
+               {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1}}
+               
+% Embodied energy rebound
+\newcommand{\Reembequation}{\frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
+             {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
+             \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}}}
+
+% Substitution rebound
+\newcommand{\Resubequation}{(1 - p_{E_f} I_{E_f}) Re_{dev}}
+
+% Income rebound
+\newcommand{\Reiequation}{( 1 - \gamma) I_{E_f} p_{E_f}}
+
+% Income and respending rebound
+\newcommand{\Reirequation}{( 1 - \gamma) k I_{E_f} p_{E_f}}
+
+% Total rebound
+\newcommand{\Retotequation}{Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) k I_{E_f} p_{E_f}}
+
+
+%%%% Oft-used references
+
+\newcommand{\Ba}{\citeauthor{Borenstein:2015aa}}
+\newcommand{\Bp}{\citep{Borenstein:2015aa}}
+\newcommand{\Bt}{\citet{Borenstein:2015aa}}
