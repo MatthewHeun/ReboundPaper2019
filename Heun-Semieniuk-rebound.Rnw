@@ -558,6 +558,7 @@ cannot be spent in the economy, thereby reducing rebound from the income effect.
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound
 enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
+We note that $p_{\Ef} I_{\Ef} < 1$ is expected, else $U$ is uneconomic for the device owner.
 
 
 %++++++++++++++++++++++++++++++
@@ -565,26 +566,27 @@ enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than
 \label{sec:elasticity effects}
 %++++++++++++++++++++++++++++++
 
-**** Not sure this is right yet. ****  The effect of service price elasticity of final energy demand ($\epsilon$)
+The effect of service price elasticity of final energy demand ($\epsilon$)
 on total rebound ($Re$) is similarly
 confounded by the relationship between the product $I_{\Ef} p_{\Ef}$ and 1.
 We assume that, typically,
 %
 \begin{enumerate*}[label={(\alph*)}]
 
-  \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$) and
+  \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$),
+  
+  \item $U$ is economic for the device owner ($p_{\Ef} I_{\Ef} < 1$), and
 
   \item $\epsilon < 0$ such that
         the increase in final-energy-to-service efficiency
-        leads to a reduction in service price ($\after{p}_s < \before{p}_s$)
-        and additional device usage such that $Re_{dev} > 0$.
+        leads to a reduction in service price ($\after{p}_s < \before{p}_s$),
+        additional device usage, and $Re_{dev} > 0$.
 
 \end{enumerate*}
 %
-When $I_{\Ef} p_{\Ef}$ is less than (greater than) 1,
-higher service price elasticity of demand (a more-negative $\epsilon$)
-will lead to larger (smaller) energy rebound,
-because $Re_{dev}$ gets more positive as $\epsilon$ gets more negative and $1 - p_{\Ef} I_{\Ef}$ is positive (negative).
+Under these conditions, a more-negative (less-negative) 
+service price elasticity of final energy demand ($\epsilon$)
+will lead to larger (smaller) rebound.
 
 
 %++++++++++++++++++++++++++++++
