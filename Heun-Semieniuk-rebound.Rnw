@@ -333,7 +333,7 @@ in the context of microeconomic fundamentals.
 We use, as our basis, the model of \Bt{}.
 Like \Ba{}, we assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
-available at price $p_{\Ef}\!$ (in \$/MJ)
+available at price $p_{\Ef}$ (in \$/MJ)
 to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\before{\eta}$ (in km/liter).
 An energy efficiency upgrade ($U$) increases
@@ -406,7 +406,14 @@ Our approach to service price elasticity of final energy demand is identical to 
 The service price decline resulting from $U$
 provides income (``freed cash'') to the device owner
 to be spent elsewhere in the economy at the economy's final energy intensity
-$I_{\Ef}$ (in MJ/\$).
+$I_{\Ef}$ (in MJ/\$)%
+\footnote{
+  In 2017, total final energy consumption in the US 
+  was 1521 Mtoe = 63.6812 EJ = $63.6812 \times 10^{12}$ MJ~\citep{IEA2020:sankey, IEA2020:units}, and 
+  the size of the US economy was 19,519,424 M\$ or $\$19.519 \times 10^{12}$~\citep{BEA:2020}.
+  Thus, the final energy intensity of the US economy was $I_{\Ef} = 3.258$ MJ/\$.
+}.
+
 Our approach to income effects is similar in practice to \Bt{}
 who developed his model using a basket of $N$ other goods,
 but who, in the numerical estimates, also assumed that freed cash has
@@ -558,7 +565,6 @@ cannot be spent in the economy, thereby reducing rebound from the income effect.
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound
 enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
-We note that $p_{\Ef} I_{\Ef} < 1$ is expected, else $U$ is uneconomic for the device owner.
 
 
 %++++++++++++++++++++++++++++++
@@ -720,7 +726,7 @@ Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if
 %++++++++++++++++++++++++++++++
 
 We adopt nomenclature similar to that of \Bt{}.
-Table~\ref{tab:symbols} shows symbols, their meanings, and example units.
+Table~\ref{tab:symbols} shows symbols and abbreviations, their meanings, and example units.
 Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
 Table~\ref{tab:decorations} shows symbol decorations and their meanings.
 Table~\ref{tab:subscripts} shows subscripts and their meanings.
@@ -732,7 +738,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 
 \begin{table}
 \centering % Centered table
-\caption{Symbols.}
+\caption{Symbols and abbreviations.}
 \begin{tabular}{r l}
   \toprule
   Symbol & Meaning [example units] \\
@@ -749,6 +755,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $Re$ & rebound [--] \\
   $t$ & device lifetime [years] \\
   $U$ & energy efficiency upgrade \\
+  US & United States \\
   \bottomrule
 \end{tabular}
 \label{tab:symbols}
