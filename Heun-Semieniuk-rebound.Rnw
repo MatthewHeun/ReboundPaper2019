@@ -232,7 +232,7 @@ from energy efficiency investments in residential energy end uses
 using an input-output framework to determine cross-price elasticities
 for re-spending of energy cost savings on other goods and services,
 subject to a household budget constraint.
-\Tt{} provide a helpful summary of direct rebound estimates,
+They provide a helpful summary of direct rebound estimates,
 which are in the range of 1--15 \% for space heating and electric end uses
 and
 3--22 \% for transport \Tp{Table~1}.
@@ -243,29 +243,33 @@ thereby obtaining a supposed upper bound on energy rebound.
 (We show later that ignoring capital costs and device lifetimes
 does not necessarily provide an upper bound for energy rebound.)
 
-\Bt{} developed expressions for changes in final energy demand
+\Bt{} used a microeconomic framework to 
+develop expressions for changes in final energy demand
 due to substitution and income effects,
-and he calculated, numerically, estimates for substitution and income rebound
+and he calculated numeric estimates for substitution and income rebound
 for example energy efficiency upgrades.
 \Bt{} mentioned embodied energy, but
 he did not develop an expression for its effect on final energy demand,
 nor did he make estimates of its magnitude.
 He mentioned a ``macroeconomic multiplier'' \Bt{p.~11}
-to account for the energy effects of respending net cost savings in the broader economy,
+to account for the energy effects of respending net cost savings in the broader economy
 beyond the device owner,
 but did not include it
-in his expressions or numerical estimates.
+in his expressions or numeric estimates of rebound.
 And, he stopped short of obtaining explicit, symbolic expressions for
 rebound from embodied energy, substitution, and income effects.
 
-Our approach has important differences from the work of \Tt{} and \Bt{}.
-\Tt{} included embodied energy effects via input-output analysis,
-while \Bt{} discussed embodied energy but did not include it in his model or calculations.
-\Bt{} incorporated capital costs in his calculations via service life differences, while
-\Tt{} assumed no change in capital costs between the original and upgraded devices.
-Neither \Tt{} and \Bt{} considered differences in operations and maintenance costs or disposal costs
-between the original and upgraded devices.
-We do incorporate a macro
+Our approach has several important differences from the work of \Tt{} and \Bt{}.
+We include embodied energy effects, 
+whereas \Ba{} discussed but did not include them.
+We incorporate differential capital costs between the original and upgraded devices,
+whereas \Ta{} assumed they were equal.
+We include operations and maintenance costs and disposal costs,
+whereas neither \Ta{} nor \Ba{} included these costs.
+We incorporate a macroeconomic multiplier to account for rebound effects in the broader economy,
+whereas \Ta{} did not include these effects and \Ba{} only mentioned them.
+And we develop explicit, symbolic expressions for rebound,
+whereas \Ba{} did not.
 
 
 %++++++++++++++++++++++++++++++
@@ -273,52 +277,51 @@ We do incorporate a macro
 \label{sec:contribution}
 %++++++++++++++++++++++++++++++
 
-The contributions of this paper arise from enhancements to the previous work
-of \Tt{} and \Bt{}.
+% The contributions of this paper arise from enhancements to the previous work discussed above.
 %
-\begin{enumerate}
-
-  \item We develop explicit, symbolic rebound expressions for four effects on rebound:
-        device-level effects, embodied energy effects, substitution effects, and income and respending effects.
-        This is an advance from the work of \Bt{} who stopped short of deriving explicit, symbolic expressions.
-        Doing so enables both
-
-          \begin{enumerate*}[label={(\alph*)}]
-
-            \item identification of important drivers of overall energy rebound and
-
-            \item explication of interactions among factors that affect overall energy rebound.
-
-          \end{enumerate*}
-
-  \item Further, we account for service life, operations and maintenance costs, and disposal costs explicitly.
-        These enhancements to the previous work of \Tt{} and \Bt{} and
-        allows us to assess the conditions under which
-        service life,
-        embodied energy,
-        capital costs,
-        operations and maintenence costs, and/or
-        disposal costs
-        will be important drivers of overall rebound.
-
-  \item We include a macroeconomic multiplier ($k$) to describe technology changes.
-        Doing so allows quantification of the effects of technology changes on rebound.
-        **** Is this the right way to talk about $k$?
-        Adjust after seeing Gregor's inputs. ****
-
-\end{enumerate}
+% \begin{enumerate}
+% 
+%   \item We develop explicit, symbolic rebound expressions for four effects on rebound:
+%         device-level effects, embodied energy effects, substitution effects, and income and respending effects.
+%         This is an advance from the work of \Bt{} who stopped short of deriving explicit, symbolic expressions.
+%         Doing so enables both
+% 
+%           \begin{enumerate*}[label={(\alph*)}]
+% 
+%             \item identification of important drivers of overall energy rebound and
+% 
+%             \item explication of interactions among factors that affect overall energy rebound.
+% 
+%           \end{enumerate*}
+% 
+%   \item Further, we account for service life, operations and maintenance costs, and disposal costs explicitly.
+%         These enhancements to the previous work of \Tt{} and \Bt{} and
+%         allow us to assess the conditions under which
+%         service life,
+%         embodied energy,
+%         capital costs,
+%         operations and maintenence costs, and/or
+%         disposal costs
+%         will be important drivers of overall rebound.
+% 
+%   \item We include a macroeconomic multiplier ($k$) to describe technology changes.
+%         Doing so allows quantification of the effects of technology changes on rebound.
+%         **** Is this the right way to talk about $k$?
+%         Adjust after seeing Gregor's inputs. ****
+% 
+% \end{enumerate}
 %
-In short,
-this paper extends and enhances earlier work by
+This paper extends and enhances earlier work by
 gathering several pieces hinted in previous papers
 into a new, unified, simple-to-understand, clearly derived model
 of direct and indirect rebound
-based on microeconomic and energy fundamentals.
-The model enables, for the first time, assessment of
-the relative contributions to direct and indirect rebound
-of several important factors.
-The model provides, for the first time,
-a way to understand economy-wide rebound
+based on microeconomic fundamentals.
+The model enables, for the first time, via a case-study approach,
+assessment of
+the relative importance of several contributing factors
+to the rebound effect.
+And the model provides, for the first time,
+a way to understand economy-wide rebound (via the macroeconomic multiplier)
 in the context of microeconomic fundamentals.
 
 
@@ -327,7 +330,8 @@ in the context of microeconomic fundamentals.
 \label{sec:extending_borenstein}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We assume a device (say, an automobile)
+We use, as our basis, the model of \Bt{}.
+Like \Ba{}, we assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}\!$ (in \$/MJ)
 to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle km/year)
@@ -337,7 +341,7 @@ final-energy-to-service efficiency such that
 $\after{\eta} > \before{\eta}$,
 typically, but not always,
 at an increased financial cost rate to
-procure (capital cost), operate, maintain, and dispose the device
+procure (capital cost), operate, maintain, and dispose of the device
 such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
   Following \Bt{},
   a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade~($U$).
@@ -345,35 +349,47 @@ such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
   $\rate{X}$ indicates the rate of $X$ before $U$ in units of $X$/year.
   $\rateafter{X}$ indicates the rate of $X$ after $U$ in units of $X$/year.
 }
-Our approach to capital costs is different from \Tt{p.~205},
-who assume the upgraded device to have the same
-capital cost as the original device, and
-\Bt{}, who does not address capital costs.
-Neither \Ta{} nor \Ba{} address disposal costs.
+% Our approach to capital costs is different from \Tt{p.~205},
+% who assume the upgraded device to have the same
+% capital cost as the original device, and
+% \Bt{}, who does not address capital costs.
+% Neither \Ta{} nor \Ba{} address operations and maintenance and disposal costs.
 We spread capital and disposal costs across the life of the original and upgraded devices
 ($\before{t}$ and $\after{t}$, respectively)
 to obtain cost rates
 for the original and upgraded devices
-($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).
+($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).%
+\footnote{
+  We choose not to apply time-value-of-money considerations to the financial aspects of the model.
+  (\Bt{} discounted some cost streams in his examples.)
+  This decision simplifies the derivation, provides consistency in the treatment of energy and money,
+  and avoids questions about whether time valuation should be applied to \emph{energy} as well.
+  We choose not to apply final-to-primary energy multipliers
+  to final energy rates in the numerators and denominators of rebound expressions.
+  (\Bt{} applied final-to-primary energy multipliers which divide out, anyway.)
+  This decision simplifies derivations.
+}
 
 In our model,
 the upgraded device may contain more (or less) embodied final energy
 than the original device
-such that $\after{E}_{\femb} \ne \before{E}_{\femb}$.
-Our approach to embodied energy is different from \Tt{p.~205} who assume that
-the upgraded device has the same embodied energy as the original device,
-i.e., $\after{E}_{\femb} = \before{E}_{\femb}$.
-\Bt{} discusses embodied energy
-but does not include embodied energy effects in his model.%
+such that $\after{E}_{\femb} \ne \before{E}_{\femb}$.%
+% Our approach to embodied energy is different from \Tt{p.~205} who assume that
+% the upgraded device has the same embodied energy as the original device,
+% i.e., $\after{E}_{\femb} = \before{E}_{\femb}$.
+% \Bt{} discusses embodied energy
+% but does not include embodied energy effects in his model.%
 \footnote{
   We define embodied energy as the energy/exergy analysis literature
   to be the sum of all final energy consumed in the production of the device.
   \Bt{} discusses ``embodied energy,'' but uses the term to mean
   the primary energy equivalent of direct final energy consumed.
 }
-We spread embodied energy across the expected life of the device to obtain a rate of embodied energy
-($\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$
-and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$).
+Similar to device costs, 
+we spread embodied energy across the expected life of the device to obtain a rate of embodied energy,
+such that
+$\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$
+and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$.
 
 $U$ reduces the service price $p_s$ (in km/\$) such that $\after{p}_s < \before{p}_s$,
 leading to substitution of spending
@@ -388,16 +404,16 @@ ascertain the energy cost of both substitution and income effects.
 Our approach to service price elasticity of final energy demand is identical to \Bt{}.
 
 The service price decline resulting from $U$
-provides income to the device owner
+provides income (``freed cash'') to the device owner
 to be spent elsewhere in the economy at the economy's final energy intensity
 $I_{\Ef}$ (in MJ/\$).
 Our approach to income effects is similar in practice to \Bt{}
-who ascertained energy costs from a basket of a large number of goods,
-but who, in the end, also assumed that freed cash has
-energy implications at the energy intensity of the economy.
+who developed his model using a basket of $N$ other goods,
+but who, in the numerical estimates, also assumed that freed cash has
+energy implications at the average energy intensity of the economy.
 
 Our derivations of
-explicit, symbolic expressions for the four rebound effects discussed above
+explicit, symbolic expressions for the four rebound effects
 (device-level effects, embodied energy effects, substitution effects, and income and respending effects)
 are provided in the Appendix, Section~\ref{sec:model_derivation}.
 We summarize and discuss the expressions below.
@@ -430,7 +446,9 @@ Rebound from income and respending effects is given by
 \end{equation}
 %
 where
-$\gamma \equiv \gammaequation{}$ is the nondimensionalized change in device cost rate.
+$\gamma \equiv \gammaequation{}$ is the nondimensionalized change in device cost rate, and
+$\ratebefore{E}_{\fdir}$ is the direct energy consumption rate of the device 
+prior to the energy efficienc upgrade.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After algebraic rearrangement,
@@ -458,7 +476,7 @@ The following subsections explore those relationships.
 Equation~\ref{eq:Re_tot} shows that
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
 and is independent of device-level rebound.
-When the embodied energy rate for an energy-service-providing device
+When the embodied energy rate for a device
 goes up (down) due to $U$,
 total rebound also increases (decreases)
 by the same amount.
@@ -491,12 +509,12 @@ which boosts $Re_{ir}$ in Equation~\ref{eq:Re_ir}
 and $Re$ in Equation~\ref{eq:Re_tot}.
 (This situation is not uncommon for lighting upgrades
 involving LED technology, as shown later.)
-Thus, device cost effects may lead to respending-related indirect energy rebound
+Thus, device cost effects may lead to spending-related indirect energy rebound
 \emph{independent of} device-level energy cost savings.
 
 In this respect, we see that \Tapp{} assumption of identical capital costs
 for the original and upgraded devices
-closes off the possibility of respending-related indirect rebound
+closes off the possibility of spending-related indirect rebound
 due to device cost savings.
 Furthermore, assuming identical capital costs
 for the original and upgraded devices
@@ -512,7 +530,7 @@ the capital cost for the original device
 When the capital cost for the upgraded device is larger than
 the capital cost for the original device
 ($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
-assuming equal capital costs will tend to underestimate $Re$.
+assuming equal capital costs will tend to \emph{underestimate} $Re$.
 (Beyond that, it is not only capital costs that are important;
 Section~\ref{sec:income_effect_derivation}
 shows that
@@ -536,10 +554,10 @@ reduces total rebound,
 indicating that, as observed by \Tt{},
 income effect rebound is inversely related to device-level rebound.
 The inverse relationship arises because energy cost savings taken back by device-level rebound
-cannot be spent in the economy, thereby reducing rebound from the inccome effect.
+cannot be spent in the economy, thereby reducing rebound from the income effect.
 Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound
-enhances (reduces) total rebound when $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
+enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
 
 
 %++++++++++++++++++++++++++++++
@@ -864,15 +882,6 @@ a higher rate of service~($\rate{q}_s$) can be provided for the same
 rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
 Also, $\rate{E}_{\fdir} = \rate{q}_S / \eta$.
 
-We choose not to apply time-value-of-money considerations to the financial aspects of the model.
-(\Bt{} discounted some cost streams in his examples.)
-This decision simplifies the derivation, provides consistency in the treatment of energy and money,
-and avoids questions about whether time valuation should be applied to \emph{energy} as well.
-Furthermore, we choose not to apply final-to-primary energy multipliers
-to final energy rates in the numerators and denominators of rebound expressions.
-(\Ba{} applied final-to-primary energy multipliers which divide out, anyway.)
-This decision simplifies derivations.
-
 
 %------------------------------
 \subsubsection{Expected energy savings}
@@ -914,7 +923,7 @@ or $-\Delta \rate{E}_{\fdir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}
 Thus Equation~\ref{eq:rebound_1} can be rewritten as
 %
 \begin{equation} \label{eq:rebound_2}
-  Re_i = \frac{\mathrm{takeback_i}}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
+  Re_i = \frac{\mathrm{takeback}_i}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
 \end{equation}
 
 
@@ -1042,7 +1051,12 @@ It costs money to procure, operate, maintain, and dispose of the energy-efficien
 But it cost money to procure, operate, maintain, and dispose of the original device, too.
 If capital and disposal costs are spread across the life of the device, we obtain
 $\rateafter{C}_{dev} = \after{C}_{cap} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
-$\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.
+$\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.%
+\footnote{
+  Note that neither $\ratebefore{C}_{OM}$ nor $\rateafter{C}_{OM}$ include direct energy costs
+  to operate the device.
+}
+%
 The change in device cost rate is given by
 $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.
 After rearrangement, $\Delta \rate{C}_{dev} = \left( \rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1 \right) \ratebefore{C}_{dev}.$
