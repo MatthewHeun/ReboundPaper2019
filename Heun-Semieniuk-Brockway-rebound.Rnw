@@ -981,7 +981,7 @@ all final energy consumption is eliminated, and
 $\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$%
 \footnote{
   Of course, $\after{\eta} \rightarrow \infty$ is impossible 
-  See \citet{Paoli:2020} for a recent discussion on the upper limits to efficiencies.
+  See \citet{Paoli:2020} for a recent discussion of upper limits to efficiencies.
 }.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption,
