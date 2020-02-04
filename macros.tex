@@ -31,8 +31,8 @@
 %%%% Equations as macros so that we can reuse in several places in the paper
 
 % Cost ratio (gamma)
-\newcommand{\gammaequation}{\left( \frac{1}{1 - \frac{\before{\eta}}{\after{\eta}}} \right) 
-                       \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{E_f}}}
+\newcommand{\gammaequation}{ 
+                       \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)\ratebefore{E}_{\fdir} p_{E_f}}}
                        
 % Device-level rebound
 \newcommand{\Redevequation}{\frac{\left( \frac{\after{\eta}}{\before{\eta}} \right)^{-\epsilon} - 1}
