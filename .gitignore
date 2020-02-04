@@ -25,16 +25,16 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .DS_Store
-Heun-Semieniuk-rebound-concordance.tex
-Heun-Semieniuk-rebound.aux
-Heun-Semieniuk-rebound.bbl
-Heun-Semieniuk-rebound.blg
-Heun-Semieniuk-rebound.log
-Heun-Semieniuk-rebound.out
-Heun-Semieniuk-rebound.pdf
-Heun-Semieniuk-rebound.spl
-Heun-Semieniuk-rebound.synctex.gz
-Heun-Semieniuk-rebound.tex
+Heun-Semieniuk-Brockway-rebound-concordance.tex
+Heun-Semieniuk-Brockway-rebound.aux
+Heun-Semieniuk-Brockway-rebound.bbl
+Heun-Semieniuk-Brockway-rebound.blg
+Heun-Semieniuk-Brockway-rebound.log
+Heun-Semieniuk-Brockway-rebound.out
+Heun-Semieniuk-Brockway-rebound.pdf
+Heun-Semieniuk-Brockway-rebound.spl
+Heun-Semieniuk-Brockway-rebound.synctex.gz
+Heun-Semieniuk-Brockway-rebound.tex
 figure
 .Rproj.user
 Heun-Semieniuk-rebound.nlo

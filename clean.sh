@@ -3,7 +3,7 @@
 # Script to clean up auxiliary files on UNIX-based systems like macOS.
 # Run this script first if you need a clean compile of the book.
 
-PAPER=Heun-Semieniuk-rebound
+PAPER=Heun-Semieniuk-Brockway-rebound
 
 rm $PAPER-concordance.tex
 rm $PAPER.aux
