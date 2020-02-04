@@ -41,9 +41,14 @@
                {\left( \frac{\after{\eta}}{\before{\eta}} \right) - 1}}
                
 % Embodied energy rebound
-\newcommand{\Reembequation}{\frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
-             {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
-             \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}}}
+% \newcommand{\Reembequation}{\frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right)}
+%              {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right)}
+%              \frac{\ratebefore{E}_{\femb}}{\ratebefore{E}_{\fdir}}}
+
+\newcommand{\Reembequation}{
+\frac{\left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}\frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{\femb}}
+  {\left( 1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}}}
+
 
 % Substitution rebound
 \newcommand{\Resubequation}{(1 - \pI) Re_{dev}}
