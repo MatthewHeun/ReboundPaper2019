@@ -406,14 +406,7 @@ Our approach to service price elasticity of final energy demand is identical to 
 The service price decline resulting from $U$
 provides income (``freed cash'') to the device owner
 to be spent elsewhere in the economy at the economy's final energy intensity
-$I_{\Ef}$ (in MJ/\$)%
-\footnote{
-  In 2017, total final energy consumption in the US 
-  was 1521 Mtoe = 63.6812 EJ = $63.6812 \times 10^{12}$ MJ~\citep{IEA2020:sankey, IEA2020:units}, and 
-  the size of the US economy was 19,519,424 M\$ or $\$19.519 \times 10^{12}$~\citep{BEA:2020}.
-  Thus, the final energy intensity of the US economy was $I_{\Ef} = 3.258$ MJ/\$.
-}.
-
+$I_{\Ef}$ (in MJ/\$).
 Our approach to income effects is similar in practice to \Bt{}
 who developed his model using a basket of $N$ other goods,
 but who, in the numerical estimates, also assumed that freed cash has
@@ -646,6 +639,69 @@ Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if
 **** Add information from ENGR333 students here. ****
 
 **** Update LED lighting example from Borenstein. ****
+
+
+<<Conversion_Factors, echo=FALSE>>=
+PJ_per_Mtoe <- 41.868
+MJ_per_Mtoe <- PJ_per_Mtoe * 10^9 # MJ/PJ
+J_per_MJ <- 10^6
+E_content_gasoline_BTU_per_gallon <- 114000
+J_per_BTU <- 1055.06 # J/BTU
+@
+
+<<Energy_Intensity, echo=FALSE>>=
+# TFC of the US economy, 2017. From https://www.iea.org/sankey/
+TFC_US_2017_Mtoe <- 1521
+TFC_US_2017_MJ <- TFC_US_2017_Mtoe * MJ_per_Mtoe
+# GDP of the US economy, 2017. From https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=2#reqid=19&step=2&isuri=1&1921=survey
+GDP_US_2017_USD <- 19519424 * 10^6 # USD
+# Final energy intensity
+I_Ef_US_2017 <- TFC_US_2017_MJ / GDP_US_2017_USD
+@
+
+In 2017, total final energy consumption in the US was
+\Sexpr{TFC_US_2017_Mtoe}~Mtoe \citep{IEA2020:sankey} or
+\Sexpr{sfsmisc::pretty10exp(TFC_US_2017_MJ, digits = 4, lab.type = "latex", lab.sep = "times")}~MJ, and
+the size of the US economy was
+\Sexpr{sfsmisc::pretty10exp(GDP_US_2017_USD, digits = 4, lab.type = "latex", lab.sep = "times")}~USD \citep{BEA:2020}.
+Thus, the final energy intensity of the US economy in 2017 was
+$I_{\Ef}$ =
+\Sexpr{format(I_Ef_US_2017, digits = 4)} MJ/USD.
+
+<<Energy_Prices, echo=FALSE>>=
+# Gasoline price in 2017, from US EIA. From https://www.eia.gov/todayinenergy/detail.php?id=34392
+p_Ef_gasoline_2017_USD_per_gallon <- 2.41
+E_content_gasoline_MJ_per_gallon <- E_content_gasoline_BTU_per_gallon * J_per_BTU / J_per_MJ
+p_Ef_gasoline_2017_USD_per_MJ <- p_Ef_gasoline_2017_USD_per_gallon / E_content_gasoline_MJ_per_gallon
+pI_gasoline <- p_Ef_gasoline_2017_USD_per_MJ * I_Ef_US_2017
+
+# Electricity price in 2017, from US EIA.  From Table 2.4 at https://www.eia.gov/electricity/annual/html/epa_01_02.html
+p_Ef_electricity_2017_USD_per_kWhr <- 10.48 / 100 # Original is in cents/kW-hr
+E_content_electricity_MJ_per_kWhr <- 3.6
+p_Ef_electricity_2017_USD_per_MJ <- p_Ef_electricity_2017_USD_per_kWhr / E_content_electricity_MJ_per_kWhr
+pI_electricity <- p_Ef_electricity_2017_USD_per_MJ * I_Ef_US_2017
+@
+
+The average price of gasoline in the US in 2017 was
+\Sexpr{p_Ef_gasoline_2017_USD_per_gallon}~USD/gallon \citep{EIA:2018a}.
+Given that there are
+\Sexpr{format(E_content_gasoline_BTU_per_gallon, big.mark = ",")} BTU/gallon and
+\Sexpr{J_per_BTU} J/BTU,
+the price of gasoline is
+\Sexpr{format(p_Ef_gasoline_2017_USD_per_MJ, digits = 4)} USD/MJ.
+For energy efficiency upgrades to devices that consume gasoline,
+$p_{\Ef} I_{\Ef}$ =
+\Sexpr{format(pI_gasoline, digits = 3)}.
+
+The averge price of electricity in the US in 2017 was
+\Sexpr{format(p_Ef_electricity_2017_USD_per_kWhr, digits = 4)} USD/kW-hr \citep{EIA:2020}.
+Given that there are
+\Sexpr{E_content_electricity_MJ_per_kWhr} MJ/kW-hr,
+the price of electricity is
+\Sexpr{format(p_Ef_electricity_2017_USD_per_MJ, digits = 4)} USD/MJ.
+For energy efficiency upgrades to devices that consume gasoline
+$p_{\Ef} I_{\Ef}$ =
+\Sexpr{format(pI_electricity, digits = 3)}.
 
 
 
