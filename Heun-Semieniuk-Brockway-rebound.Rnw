@@ -942,7 +942,7 @@ $\rate{E}_{\fdir}$ in MJ/year.
 As final-energy-to-service efficiency~($\eta$) increases,
 a higher rate of service~($\rate{q}_s$) can be provided for the same
 rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
-Also, $\rate{E}_{\fdir} = \rate{q}_S / \eta$.
+Also, $\rate{E}_{\fdir} = \rate{q}_s / \eta$.
 
 
 %------------------------------
