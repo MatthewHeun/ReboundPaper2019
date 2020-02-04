@@ -446,9 +446,12 @@ Rebound from income and respending effects is given by
 \end{equation}
 %
 where
-$\gamma \equiv \gammaequation{}$ is the nondimensionalized change in device cost rate, and
-$\ratebefore{E}_{\fdir}$ is the direct energy consumption rate of the device 
-prior to the energy efficienc upgrade.
+$\gamma \equiv \gammaequation{}$ is the
+ratio of device cost rate increase 
+to expected energy cost savings at the device level.
+It is expected that $\gamma < 1$ 
+such that $(1 - \gamma) > 0$,
+else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After algebraic rearrangement,
@@ -555,9 +558,11 @@ indicating that, as observed by \Tt{},
 income effect rebound is inversely related to device-level rebound.
 The inverse relationship arises because energy cost savings taken back by device-level rebound
 cannot be spent in the economy, thereby reducing rebound from the income effect.
-Which effect dominates is shown by Equation~\ref{eq:Re_sub}:
+Which effect dominates on net is shown by Equation~\ref{eq:Re_sub}:
 device-level rebound
 enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than (greater than) 1.
+Typically, $I_{\Ef} p_{\Ef} < 1$, as shown in Section~\ref{sec:examples}, 
+so device-level rebound typically enhances total rebound.
 
 
 %++++++++++++++++++++++++++++++
@@ -565,27 +570,25 @@ enhances (reduces) total rebound when the product $I_{\Ef} p_{\Ef}$ is less than
 \label{sec:elasticity effects}
 %++++++++++++++++++++++++++++++
 
-The effect of service price elasticity of final energy demand ($\epsilon$)
-on total rebound ($Re$) is similarly
+Similar to device-level rebound, 
+the effect of service price elasticity of final energy demand ($\epsilon$)
+on total rebound ($Re$) is 
 confounded by the relationship between the product $I_{\Ef} p_{\Ef}$ and 1.
-We assume that, typically,
-%
-\begin{enumerate*}[label={(\alph*)}]
+But under typical conditions%
+\footnote{
+  Typical conditions are%
+  \begin{enumerate*}[label={(\alph*)}]
 
-  \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$),
+    \item $\epsilon < 0$,
+
+    \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$), and
   
-  \item $U$ is economic for the device owner ($p_{\Ef} I_{\Ef} < 1$), and
+    \item $0 < p_{\Ef} I_{\Ef} < 1$ (see Section~\ref{sec:examples} below).
 
-  \item $\epsilon < 0$ such that
-        the increase in final-energy-to-service efficiency
-        leads to a reduction in service price ($\after{p}_s < \before{p}_s$),
-        additional device usage, and $Re_{dev} > 0$.
-
-\end{enumerate*}
-%
-Under these conditions, a more-negative (less-negative) 
-service price elasticity of final energy demand ($\epsilon$)
-will lead to larger (smaller) rebound.
+  \end{enumerate*}
+},
+a more-negative (less-negative) service price elasticity of final energy demand
+($\epsilon$) leads to larger (smaller) rebound.
 
 
 %++++++++++++++++++++++++++++++
@@ -607,28 +610,16 @@ total energy rebound is enhanced by
 
 \end{enumerate*}
 %
-If, on the other hand, $1 - Re_{dev}/k - \gamma < 0$,
-total energy rebound is reduced by a larger multiplier ($k$),
+As discussed above,
+it is expected that $1 - \gamma > 0$,
+else $U$ would not be expected to be economic by the device owner.
+If device-level rebound ($Re_{dev}$) is not too large, 
+$1 - Re_{dev}/k - \gamma$ will remain positive. 
+If device-level rebound is so large that 
+$1 - Re_{dev}/k - \gamma < 0$,
+total energy rebound will be reduced by a larger multiplier ($k$),
 higher energy prices ($p_{\Ef}$), and
 higher final energy intensity of the economy ($I_{\Ef}$).
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Degenerate cases}
-\label{sec:degenerate}
-%++++++++++++++++++++++++++++++
-
-Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if
-%
-\begin{enumerate*}[label={(\alph*)}]
-
-  \item $U$ carries no additional embodied energy ($\after{E}_{\femb} = \before{E}_{\femb}$, leading to $Re_{emb} = 0$),
-
-  \item $U$ has no device-level rebound ($\epsilon = 0$ or $\after{\eta} = \before{\eta}$, leading to $Re_{dev} = 0$), and
-
-  \item $U$ is costless ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$).
-
-\end{enumerate*}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -640,6 +631,24 @@ Total final energy rebound simplifies to $k I_{\Ef} p_{\Ef}$ if
 
 **** Update LED lighting example from Borenstein. ****
 
+%++++++++++++++++++++++++++++++
+\subsection{Income and respending rebound}
+\label{sec:income_and_respending_example}
+%++++++++++++++++++++++++++++++
+
+As \Bt{} notes, a good first estimate for $Re_i$ 
+is obtained when
+%
+\begin{enumerate*}[label={(\alph*)}]
+
+  \item $U$ is cost-neutral with no effect on device costs ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$) and
+  
+  \item $k = 1$.
+
+\end{enumerate*}
+%
+Under these conditions, income effect rebound (Equation~\ref{eq:Re_ir})
+simplifies to $Re_i = I_{\Ef} p_{\Ef}$.
 
 <<Conversion_Factors, echo=FALSE>>=
 PJ_per_Mtoe <- 41.868
@@ -690,8 +699,10 @@ Given that there are
 the price of gasoline is
 \Sexpr{format(p_Ef_gasoline_2017_USD_per_MJ, digits = 4)} USD/MJ.
 For energy efficiency upgrades to devices that consume gasoline,
-$p_{\Ef} I_{\Ef}$ =
-\Sexpr{format(pI_gasoline, digits = 3)}.
+a quick estimate for income effect rebound is
+$Re_i = p_{\Ef} I_{\Ef}$ =
+\Sexpr{format(pI_gasoline, digits = 3)} or 
+\Sexpr{format(pI_gasoline * 100, digits = 3)} \%.
 
 The averge price of electricity in the US in 2017 was
 \Sexpr{format(p_Ef_electricity_2017_USD_per_kWhr, digits = 4)} USD/kW-hr \citep{EIA:2020}.
@@ -699,9 +710,13 @@ Given that there are
 \Sexpr{E_content_electricity_MJ_per_kWhr} MJ/kW-hr,
 the price of electricity is
 \Sexpr{format(p_Ef_electricity_2017_USD_per_MJ, digits = 4)} USD/MJ.
-For energy efficiency upgrades to devices that consume gasoline
-$p_{\Ef} I_{\Ef}$ =
-\Sexpr{format(pI_electricity, digits = 3)}.
+For energy efficiency upgrades to devices that consume gasoline,
+a quick estimate for income effect rebound is
+$Re_i = p_{\Ef} I_{\Ef}$ =
+\Sexpr{format(pI_electricity, digits = 3)} or
+\Sexpr{format(pI_electricity * 100, digits = 3)} \%.
+
+Income \emph{and} respending rebound is found by multiplying by $k$ such that $Re_{ir} = k Re_i$.
 
 
 
@@ -1175,7 +1190,8 @@ rebound from income and respending effects can be written as
   Re_{\incres} = \Reirequation{} \, . \tag{\ref{eq:Re_ir}}
 \end{equation}
 %
-Note that rebound from income only ($Re_i$) is obtained from Equation~\ref{eq:Re_ir} with $k = 1$.
+Note that rebound from income only ($Re_i$) is obtained from Equation~\ref{eq:Re_ir} with $k = 1$,
+such that $Re_{ir} = k Re_i$.
 
 
 %------------------------------
