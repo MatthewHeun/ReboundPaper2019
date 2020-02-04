@@ -139,82 +139,78 @@ opposite of their intended effect,
 when dealing with some of the most important challenges
 facing humanity today.
 
-Recent literature reviews attest that there is ample and growing empirical evidence
-on direct and indirect rebound effects \citep{Gillingham2016}, and also
-increasing evidence for the size and nature of macroeconomic rebound cite{BrockwaySorrellSemieniukHeunCourt2019}.
-Estimates vary widely, in part reflecting model specification but in part
-also the range of possible rebounds depending on the particular conditions.
-However, both reviews ((!!check with Steve, read Barker!!)) find little, if any, evidence on the economic growth effect
-that is due to respending of the windfall income that consumers earn
-when their end-use devices deliver energy services with less final energy.
-\Bt{} confirms the absence of such studies.
-While he and many others have examined the indirect rebound from income effects from a micro perspective,
- to our knowledge there is no linkage of the aggregate effect
- of these windfall incomes on the macrolevel.
-Yet, the connection with macro spending multipliers
-and their effect on the level of output is obvious,
-as is the further effect of higher output on energy aggregate demand
-and hence the macroeconomic rebound.
+% Recent literature reviews attest that there is ample and growing empirical evidence
+% on direct and indirect rebound effects \citep{Gillingham2016}, and also
+% increasing evidence for the size and nature of macroeconomic rebound cite{BrockwaySorrellSemieniukHeunCourt2019}.
+% Estimates vary widely, in part reflecting model specification but in part
+% also the range of possible rebounds depending on the particular conditions.
+% However, both reviews ((!!check with Steve, read Barker!!)) find little, if any, evidence on the economic growth effect
+% that is due to respending of the windfall income that consumers earn
+% when their end-use devices deliver energy services with less final energy.
+% \Bt{} confirms the absence of such studies.
+% While he and many others have examined the indirect rebound from income effects from a micro perspective,
+%  to our knowledge there is no linkage of the aggregate effect
+%  of these windfall incomes on the macrolevel.
+% Yet, the connection with macro spending multipliers
+% and their effect on the level of output is obvious,
+% as is the further effect of higher output on energy aggregate demand
+% and hence the macroeconomic rebound.
+% 
+% This paper builds a simple conceptual model to understand the macroeconomic multiplier rebound
+% effect from the aggregation of microlevel income effects. It relates the direct
+% rebound effect from an end-use device energy efficiency improvement, which is typically
+% far below one~\citep{Gillingham2016}, and the consequent money savings (or windfall income)
+% to the expenditure side of gross domestic product.
+% Here, as is well known from IS-LM macroeconomics,
+% an increase in consumption leads to additional aggregate demand, activity, and, hence, further
+% spending rounds: a multiplier process. This additional demand has an energy intensity,
+% namely that of the economy average in a first instance,
+% and the new energy consumption can be attributed
+% to a macroeconomic multiplier rebound effect~\Bt{}.
+% What differentiates the present situation from
+% the usual macroeconomic multiplier story, which can be reduced or even
+% reversed by crowding out \citep{Ramey2011,Ramey2019}, is that there is no
+% debt-financed government lending that could drive up interest rates or otherwise take
+% resources from their most efficient use. Instead, the effect on income here arises
+% from a mechanism similar to the ``windfall income" literature that assesses the effect on GDP
+% of an unexpected (one-off) increase in disposable income that is not debt financed~\citep{Johnson2006,Agarwal2014}.
+% Hence the multiplier is particular effective.
+% 
+% To test our model, we apply it to energy efficient light bulbs and electric cars.
+% We conduct sensitivity studies to gain understanding of the effect
+% of key paramters on economy-wide rebound.
+% 
+% This model allows estimating the rough magnitude of macroeconomic rebound from the
+% aggregation of microecomic income effects, which is particularly important in assessing
+% short term rebound. However, since the productivity increase is permanent, the increased
+% spending is not a one-off, but expected to perpetuate in the long run, other things equal.
+% Thus, our model also illustrates how the demand side contributes to the wider ``macroeconomic
+% ``growth" (rebound) effect, which is neglected in supply-side determined growth models (!!check Barker!!).
+% Secondly, the model immediately permits assessing the impact of capital cost
+% on windfall income and hence permits calculating the difference in rebound between
+% %
+% \begin{enumerate*}[label={(\alph*)}]
+% 
+%   \item costless energy efficiency improvements and
+% 
+%   \item costly energy efficiency improvements mandated by policy.
+% 
+% \end{enumerate*}
+% %
+% The ability to distinguish between costless and costly energy efficiency improvements is important
+% to the discussion about just how relevant rebounds are when efficiency improvements are
+% compensated with an increase in the cost of living, e.g.\ by taxing the now cheaper
+% % energy services or fossil fuel derived energy~\cite{Grubler2018,Pollin2015}.
+% Thirdly, only very little data is needed to operationalize the model as we show with examples
+% from light bulbs and electric cars.
+% 
+% We show that there is an inverse relationship between direct rebound effect and
+% macroeconomic multiplier effect and that this relationship xxx. We also show that
+% for reasonable parameters the macroeconomic multiplier rebound is yyy. Finally,
+% for the examples of energy efficienc light bulbs and electric cars, we show that
+% making efficiency improvements costly has zzz effect on the rebound.
 
-This paper builds a simple conceptual model to understand the macroeconomic multiplier rebound
-effect from the aggregation of microlevel income effects. It relates the direct
-rebound effect from an end-use device energy efficiency improvement, which is typically
-far below one~\citep{Gillingham2016}, and the consequent money savings (or windfall income)
-to the expenditure side of gross domestic product.
-Here, as is well known from IS-LM macroeconomics,
-an increase in consumption leads to additional aggregate demand, activity, and, hence, further
-spending rounds: a multiplier process. This additional demand has an energy intensity,
-namely that of the economy average in a first instance,
-and the new energy consumption can be attributed
-to a macroeconomic multiplier rebound effect~\Bt{}.
-What differentiates the present situation from
-the usual macroeconomic multiplier story, which can be reduced or even
-reversed by crowding out \citep{Ramey2011,Ramey2019}, is that there is no
-debt-financed government lending that could drive up interest rates or otherwise take
-resources from their most efficient use. Instead, the effect on income here arises
-from a mechanism similar to the ``windfall income" literature that assesses the effect on GDP
-of an unexpected (one-off) increase in disposable income that is not debt financed~\citep{Johnson2006,Agarwal2014}.
-Hence the multiplier is particular effective.
-
-To test our model, we apply it to energy efficient light bulbs and electric cars.
-We conduct sensitivity studies to gain understanding of the effect
-of key paramters on economy-wide rebound.
-
-This model allows estimating the rough magnitude of macroeconomic rebound from the
-aggregation of microecomic income effects, which is particularly important in assessing
-short term rebound. However, since the productivity increase is permanent, the increased
-spending is not a one-off, but expected to perpetuate in the long run, other things equal.
-Thus, our model also illustrates how the demand side contributes to the wider ``macroeconomic
-``growth" (rebound) effect, which is neglected in supply-side determined growth models (!!check Barker!!).
-Secondly, the model immediately permits assessing the impact of capital cost
-on windfall income and hence permits calculating the difference in rebound between
-%
-\begin{enumerate*}[label={(\alph*)}]
-
-  \item costless energy efficiency improvements and
-
-  \item costly energy efficiency improvements mandated by policy.
-
-\end{enumerate*}
-%
-The ability to distinguish between costless and costly energy efficiency improvements is important
-to the discussion about just how relevant rebounds are when efficiency improvements are
-compensated with an increase in the cost of living, e.g.\ by taxing the now cheaper
-% energy services or fossil fuel derived energy~\cite{Grubler2018,Pollin2015}.
-Thirdly, only very little data is needed to operationalize the model as we show with examples
-from light bulbs and electric cars.
-
-We show that there is an inverse relationship between direct rebound effect and
-macroeconomic multiplier effect and that this relationship xxx. We also show that
-for reasonable parameters the macroeconomic multiplier rebound is yyy. Finally,
-for the examples of energy efficienc light bulbs and electric cars, we show that
-making efficiency improvements costly has zzz effect on the rebound.
-
-The rest of the paper proceeds as follows...
-
-
-
-
+**** More. ****
 
 
 % \cite{Hertwich:2005aa}
@@ -226,8 +222,8 @@ The rest of the paper proceeds as follows...
 \label{sec:previous_work}
 %++++++++++++++++++++++++++++++
 
-Our work most closely follows the papers of \Tt{} and \Bt{}.
-\Tt{} studied direct and indirect energy rebound effects
+Our work follows most closely the papers of \Tt{} and \Bt{}.
+\Ttone{} studied direct and indirect energy rebound effects
 from energy efficiency investments in residential energy end uses
 using an input-output framework to determine cross-price elasticities
 for re-spending of energy cost savings on other goods and services,
@@ -235,7 +231,7 @@ subject to a household budget constraint.
 They provide a helpful summary of direct rebound estimates,
 which are in the range of 1--15 \% for space heating and electric end uses
 and
-3--22 \% for transport \Tp{Table~1}.
+3--22 \% for transport \Tpone{Table~1}.
 \Tttwo{} also perform extensive simulations to estimate
 energy and pollutant rebound for various fuels (electricity, natural gas, and gasoline).
 However, they assume capital costs are the same for the original and upgraded device,
@@ -246,7 +242,8 @@ does not necessarily provide an upper bound for energy rebound.)
 \Bt{} used a microeconomic framework to 
 develop expressions for changes in final energy demand
 due to substitution and income effects,
-and he calculated numeric estimates for substitution and income rebound
+and he calculated numeric estimates for substitution effect rebound
+and income effect rebound
 for example energy efficiency upgrades.
 \Bt{} mentioned embodied energy, but
 he did not develop an expression for its effect on final energy demand,
@@ -264,7 +261,8 @@ We include embodied energy effects,
 whereas \Ba{} discussed but did not include them.
 We incorporate differential capital costs between the original and upgraded devices,
 whereas \Ta{} assumed they were equal.
-We include operations and maintenance costs and disposal costs,
+We include differential operations and maintenance costs and disposal costs
+between the original and upgraded devices,
 whereas neither \Ta{} nor \Ba{} included these costs.
 We incorporate a macroeconomic multiplier to account for rebound effects in the broader economy,
 whereas \Ta{} did not include these effects and \Ba{} only mentioned them.
@@ -277,52 +275,28 @@ whereas \Ba{} did not.
 \label{sec:contribution}
 %++++++++++++++++++++++++++++++
 
-% The contributions of this paper arise from enhancements to the previous work discussed above.
-%
-% \begin{enumerate}
-% 
-%   \item We develop explicit, symbolic rebound expressions for four effects on rebound:
-%         device-level effects, embodied energy effects, substitution effects, and income and respending effects.
-%         This is an advance from the work of \Bt{} who stopped short of deriving explicit, symbolic expressions.
-%         Doing so enables both
-% 
-%           \begin{enumerate*}[label={(\alph*)}]
-% 
-%             \item identification of important drivers of overall energy rebound and
-% 
-%             \item explication of interactions among factors that affect overall energy rebound.
-% 
-%           \end{enumerate*}
-% 
-%   \item Further, we account for service life, operations and maintenance costs, and disposal costs explicitly.
-%         These enhancements to the previous work of \Tt{} and \Bt{} and
-%         allow us to assess the conditions under which
-%         service life,
-%         embodied energy,
-%         capital costs,
-%         operations and maintenence costs, and/or
-%         disposal costs
-%         will be important drivers of overall rebound.
-% 
-%   \item We include a macroeconomic multiplier ($k$) to describe technology changes.
-%         Doing so allows quantification of the effects of technology changes on rebound.
-%         **** Is this the right way to talk about $k$?
-%         Adjust after seeing Gregor's inputs. ****
-% 
-% \end{enumerate}
-%
 This paper extends and enhances earlier work by
 gathering several pieces hinted in previous papers
 into a new, unified, simple-to-understand, clearly derived model
 of direct and indirect rebound
 based on microeconomic fundamentals.
-The model enables, for the first time, via a case-study approach,
+The new model enables, via a case-study approach,
 assessment of
-the relative importance of several contributing factors
-to the rebound effect.
+the relative importance of several effects on total rebound, including, for the first time,
+embodied energy and device cost effects.
 And the model provides, for the first time,
 a way to understand economy-wide rebound (via the macroeconomic multiplier)
 in the context of microeconomic fundamentals.
+
+The rest of the paper proceeds as follows:
+the next section extends the \Bt{} model 
+to develop our new, unified, simple-to-understand, clearly derived model
+of direct and indirect rebound.
+We also explicate the new model, demonstrating 
+it can be used to elucidate various rebound effects and trends.
+Section~\ref{sec:examples} applies the new model to several energy efficeincy upgrades.
+Section~\ref{sec:discussion} discusses the results, and
+Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -361,12 +335,12 @@ for the original and upgraded devices
 ($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).%
 \footnote{
   We choose not to apply time-value-of-money considerations to the financial aspects of the model.
-  (\Bt{} discounted some cost streams in his examples.)
+  (Our approach to discounting is in contrast to \Bt{} who discounted some cost streams in his examples.)
   This decision simplifies the derivation, provides consistency in the treatment of energy and money,
   and avoids questions about whether time valuation should be applied to \emph{energy} as well.
   We choose not to apply final-to-primary energy multipliers
   to final energy rates in the numerators and denominators of rebound expressions.
-  (\Bt{} applied final-to-primary energy multipliers which divide out, anyway.)
+  (\Bt{} applied final-to-primary energy multipliers which divide out in rebound expressions, anyway.)
   This decision simplifies derivations.
 }
 
@@ -409,7 +383,7 @@ to be spent elsewhere in the economy at the economy's final energy intensity
 $I_{\Ef}$ (in MJ/\$).
 Our approach to income effects is similar in practice to \Bt{}
 who developed his model using a basket of $N$ other goods,
-but who, in the numerical estimates, also assumed that freed cash has
+but who, in his numeric estimates, also assumed that freed cash has
 energy implications at the average energy intensity of the economy.
 
 Our derivations of
@@ -427,18 +401,26 @@ Device-level rebound ($Re_{dev}$) is given by
   Re_{dev} = \Redevequation{} \, .
 \end{equation}
 %
+Device-level rebound is often called ``direct rebound.''
+
 Embodied energy rebound ($Re_{emb}$) is given by
 %
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembequation{} \, .
 \end{equation}
 %
+Embodied energy rebound is one mechanism for indirect rebound.
+
 Substitution effect rebound ($Re_{sub}$) is given by
 %
 \begin{equation} \label{eq:Re_sub}
   Re_{sub} = \Resubequation{} \, .
 \end{equation}
 %
+The term $p_{\Ef} I_{\Ef}$ represents 
+an energy shift away from purchases in the rest of the economy,
+an indirect rebound effect.
+
 Rebound from income and respending effects is given by
 %
 \begin{equation} \label{eq:Re_ir}
@@ -452,6 +434,13 @@ to expected energy cost savings at the device level.
 It is expected that $\gamma < 1$ 
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
+
+$k$ is a macroeconomic multiplier. 
+**** Discussion here about $k$ to be supplied by Gregor. ****
+
+$Re_i$ is an indirect rebound term.
+To the extent that $k > 1$, income and respending rebound is a macroeconomic effect.
+Thus, $Re_{ir}$
 
 Total energy rebound is the sum of $Re_{emb}$, $Re_{sub}$, and $Re_{ir}$.
 After algebraic rearrangement,
@@ -497,7 +486,7 @@ both increase embodied energy rebound.
 
 When costs for procuring, operating, maintaining, and disposing
 the energy efficient device
-($\rate{C}_{dev}$ and represented by $\gamma$ in Equations~\ref{eq:Re_ir} and~\ref{eq:Re_tot})
+($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_ir} and~\ref{eq:Re_tot})
 go up (down),
 total rebound decreases (increases), because
 device costs reduce (increase) net freed cash available
@@ -636,19 +625,19 @@ higher final energy intensity of the economy ($I_{\Ef}$).
 \label{sec:income_and_respending_example}
 %++++++++++++++++++++++++++++++
 
-As \Bt{} notes, a good first estimate for $Re_i$ 
+As \Bt{} notes, a good first estimate for income effect rebound ($Re_i$)
 is obtained when
 %
 \begin{enumerate*}[label={(\alph*)}]
 
-  \item $U$ is cost-neutral with no effect on device costs ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$) and
+  \item $U$ is cost-neutral ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$) and
   
   \item $k = 1$.
 
 \end{enumerate*}
 %
 Under these conditions, income effect rebound (Equation~\ref{eq:Re_ir})
-simplifies to $Re_i = I_{\Ef} p_{\Ef}$.
+simplifies to $Re_i = p_{\Ef} I_{\Ef} $.
 
 <<Conversion_Factors, echo=FALSE>>=
 PJ_per_Mtoe <- 41.868
@@ -668,6 +657,9 @@ GDP_US_2017_USD <- 19519424 * 10^6 # USD
 I_Ef_US_2017 <- TFC_US_2017_MJ / GDP_US_2017_USD
 @
 
+It is instructive to calculate the product $p_{\Ef} I_{\Ef}$ under typical conditions.
+The average energy intensity of the economy ($I_{\Ef}$) is independent of energy carrier, 
+while price ($p_{\Ef}$) varies by energy carrier.
 In 2017, total final energy consumption in the US was
 \Sexpr{TFC_US_2017_Mtoe}~Mtoe \citep{IEA2020:sankey} or
 \Sexpr{sfsmisc::pretty10exp(TFC_US_2017_MJ, digits = 4, lab.type = "latex", lab.sep = "times")}~MJ, and
@@ -721,8 +713,8 @@ Income \emph{and} respending rebound is found by multiplying by $k$ such that $R
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Results}
-\label{sec:results}
+% \section{Results}
+% \label{sec:results}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % % Example figure
