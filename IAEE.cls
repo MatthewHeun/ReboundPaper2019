@@ -201,12 +201,12 @@
 \ifthenelse{\equal{\journal}{EEEPJ}}{\fancyhead[RO]{\small \thepage}\fancyhead[LO]{\small\bfseries \articletitle}}{} % Custom header text - odd pages (EEEPJ)
 \ifthenelse{\equal{\journal}{EJ}}{\fancyhead[LO]{\small \thepage~/~\textit{The Energy Journal}}}{} % Custom header text - odd pages (EJ)
 
-\ifthenelse{\equal{\journal}{EEEPJ}}{\fancyfoot[C]{\small Copyright \textcopyright~2018 by the IAEE. All rights reserved.}}{} % Centered footer (EEEPJ)
+\ifthenelse{\equal{\journal}{EEEPJ}}{\fancyfoot[C]{\small Copyright \textcopyright~2020 by the IAEE. All rights reserved.}}{} % Centered footer (EEEPJ)
 \ifthenelse{\equal{\journal}{EJ}}{\fancyfoot[C]{}}{} % Centered footer (EJ)
 \ifthenelse{\equal{\journal}{EEEPJ}}{\fancyfoot[RE]{}}{} % Footer - even pages (EEEPJ)
-\ifthenelse{\equal{\journal}{EJ}}{\fancyfoot[RE]{\small Copyright \textcopyright~2018 by the IAEE. All rights reserved.}}{} % Footer - even pages (EJ)
+\ifthenelse{\equal{\journal}{EJ}}{\fancyfoot[RE]{\small Copyright \textcopyright~2020 by the IAEE. All rights reserved.}}{} % Footer - even pages (EJ)
 \ifthenelse{\equal{\journal}{EEEPJ}}{\fancyfoot[LO]{}}{} % Footer - odd pages (EEEPJ)
-\ifthenelse{\equal{\journal}{EJ}}{\fancyfoot[LO]{\small Copyright \textcopyright~2018 by the IAEE. All rights reserved.}}{} % Footer - odd pages (EJ)
+\ifthenelse{\equal{\journal}{EJ}}{\fancyfoot[LO]{\small Copyright \textcopyright~2020 by the IAEE. All rights reserved.}}{} % Footer - odd pages (EJ)
 \renewcommand{\headrulewidth}{1pt} % Disable the line under the header
 
 \usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
