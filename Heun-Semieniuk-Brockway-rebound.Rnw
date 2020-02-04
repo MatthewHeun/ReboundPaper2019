@@ -428,7 +428,7 @@ Rebound from income and respending effects is given by
 where
 $\gamma \equiv \gammaequation{}$ is the
 ratio of device cost rate increase 
-to expected energy cost savings at the device level.
+to device-level expected energy cost savings.
 It is expected that $\gamma < 1$ 
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
