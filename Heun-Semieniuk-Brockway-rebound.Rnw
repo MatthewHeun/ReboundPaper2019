@@ -972,20 +972,24 @@ which can be rearranged to be
 \end{equation}
 %
 using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
-As $\after{\eta} \rightarrow \infty$,
-all final energy consumption is eliminated, and
-$\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$, as expected.
 If efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$,
 the rate of final energy consumption declines, and
 $\Delta \rate{E}_{\fdir} < 0$,
 as expected.
+As $\after{\eta} \rightarrow \infty$,
+all final energy consumption is eliminated, and
+$\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$%
+\footnote{
+  Of course, $\after{\eta} \rightarrow \infty$ is impossible 
+  See \citet{Paoli:2020} for a recent discussion on the upper limits to efficiencies.
+}.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption,
 or $-\Delta \rate{E}_{\fdir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{\fdir}$.
 Thus Equation~\ref{eq:rebound_1} can be rewritten as
 %
 \begin{equation} \label{eq:rebound_2}
-  Re_i = \frac{\mathrm{takeback}_i}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
+  Re_j = \frac{\mathrm{takeback}_j}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
 \end{equation}
 
 
