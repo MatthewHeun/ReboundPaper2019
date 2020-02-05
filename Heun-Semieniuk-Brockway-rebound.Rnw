@@ -88,6 +88,20 @@ University of Leeds, Leeds, LS2 9JT, UK}
 {**** Max 150 words. Place the abstract text here. ****}
 {Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
+% JEL classifications from https://www.aeaweb.org/econlit/jelCodes.php?view=jel
+% Options to consider:
+% O1  Economic development
+%     O13  Agriculture • Natural Resources • Energy • Environment • Other Primary Products
+% O5  Economywide Country Studies
+%     O51  U.S. • Canada
+% P1  Capitalist systems
+%     P18  Energy • Environment
+% Q4  Energy
+%     Q43  Energy and the Macroeconomy
+%     Q47  Energy Forecasting
+% Q5	Environmental Economics
+%     Q54  Climate • Natural Disasters and Their Management • Global Warming
+%     Q55  Technological Innovation
 {**** C32, H23, O33, O38, Q56, Q58 ****} % JEL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -324,11 +338,6 @@ such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
   $\rate{X}$ indicates the rate of $X$ before $U$ in units of $X$/year.
   $\rateafter{X}$ indicates the rate of $X$ after $U$ in units of $X$/year.
 }
-% Our approach to capital costs is different from \Tt{p.~205},
-% who assume the upgraded device to have the same
-% capital cost as the original device, and
-% \Bt{}, who does not address capital costs.
-% Neither \Ta{} nor \Ba{} address operations and maintenance and disposal costs.
 We spread capital and disposal costs across the life of the original and upgraded devices
 ($\before{t}$ and $\after{t}$, respectively)
 to obtain cost rates
@@ -868,15 +877,15 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \midrule
   $cap$ & capital costs \\
   $dir$ & direct, meaning energy used directly by the device \\
-  $dis$ & disposal \\
+  $dis$ & disposal costs \\
   $dev$ & device \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
   $i$ & income \\
   $ir$ & income and respending \\
   $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
-  $OM$ & operation and maintenance \\
-  $res$ & respending \\
+  $OM$ & operation and maintenance costs \\
+  $r$ & respending \\
   $s$ & service stage of the energy conversion chain \\
   \bottomrule
 \end{tabular}
@@ -993,7 +1002,6 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \end{equation}
 
 
-
 %------------------------------
 \subsubsection{Embodied energy effect}
 \label{sec:embodied_effect_derivation}
@@ -1103,7 +1111,8 @@ After simplification, substitution rebound can be expressed as
 \label{sec:income_effect_derivation}
 %------------------------------
 
-Energy cost savings~($\rate{G}$, in \$/year, known as ``income''\footnote{
+Energy cost savings~($\rate{G}$, in \$/year, known as ``income''%
+\footnote{
   Energy cost savings are an ``income'' in the sense of a return on investment in energy efficiency.
   The device user's income, in the sense of remuneration for labor, is unchanged.
 })
@@ -1122,7 +1131,6 @@ $\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \b
   Note that neither $\ratebefore{C}_{OM}$ nor $\rateafter{C}_{OM}$ include direct energy costs
   to operate the device.
 }
-%
 The change in device cost rate is given by
 $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.
 After rearrangement, $\Delta \rate{C}_{dev} = \left( \rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1 \right) \ratebefore{C}_{dev}.$
@@ -1137,9 +1145,13 @@ $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
 Freed cash can be respent in the economy in a manner
 ``akin to the macroeconomic multiplier that might result
 following a new discovery of a natural resource deposit'' \Bp{p.~11}.
+As shown by \citet{Antal:2014aa}, 
+it is reasonable to assume that 
+freed cash is respent in the economy also at the energy intensity of the economy.
 The effect of this respending can be represented by a technology multiplier~($k$).
 Although \Ba{} did not include a multiplier ($k$) in his model,
-we do so here.\footnote{
+we do so here.%
+\footnote{
   Not including the multiplier, in effect, assumes $k = 1$.
 }
 Thus, the change in final energy consumption due to income and respending can be written as
