@@ -65,7 +65,7 @@
 % \singleaffiliation{<superscript identifier indent>}{<superscript identifer>}{<affiliation>}
 % The superscript indent takes values in multiples of 3pt, e.g. first affiliation is 3pt, second 6pt, etc
 \affiliations{
-\singleaffiliation{3pt}{*}{Corresponding author. Engineering Department, 
+\singleaffiliation{6pt}{*}{Corresponding author. Engineering Department, 
 Calvin University, 3201 Burton St. SE, Grand Rapids, MI, 49546, USA. 
 E-mail: \href{mailto:mkh2@calvin.edu}{mkh2@calvin.edu}.}
 \singleaffiliation{6pt}{**}{Political Economy Research Institute \& Department of Economics, 
@@ -86,7 +86,7 @@ University of Leeds, Leeds, LS2 9JT, UK}
 
 \abstractblock
 {**** Max 150 words. Place the abstract text here. ****}
-{Energy rebound, Takeback, Backfire, Energy services, Energy efficiency} % Keywords
+{Energy rebound, Energy efficiency, Energy services, Takeback, Backfire} % Keywords
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
 % JEL classifications from https://www.aeaweb.org/econlit/jelCodes.php?view=jel
 % Options to consider:
@@ -281,11 +281,10 @@ rebound from embodied energy, substitution, and income effects.
 Our approach has several important differences from the work of \Ta{} and \Ba{}.
 We include embodied energy effects, 
 whereas \Ba{} discussed but did not include them.
-We incorporate differential capital costs between the original and upgraded devices,
+We allow differential capital costs between the original and upgraded devices,
 whereas \Ta{} assumed they were equal.
-We include differential operations and maintenance costs and disposal costs
-between the original and upgraded devices,
-whereas neither \Ta{} nor \Ba{} included these costs.
+We include non-energy operations and maintenance costs and disposal costs,
+whereas neither \Ta{} nor \Ba{} included them.
 We incorporate a macroeconomic multiplier to account for rebound effects in the broader economy,
 whereas \Ta{} did not include these effects and \Ba{} only mentioned them.
 And we develop explicit, symbolic expressions for rebound,
@@ -353,7 +352,7 @@ for the original and upgraded devices
   We choose not to apply time-value-of-money considerations to the financial aspects of the model.
   (Our approach to discounting is in contrast to \Bt{} who discounted some cost streams in his examples.)
   This decision simplifies the derivation, provides consistency in the treatment of energy and money,
-  and avoids questions about whether time valuation should be applied to \emph{energy} as well.
+  and avoids questions about whether time valuation should be applied to \emph{energy} as well as money.
   We choose not to apply final-to-primary energy multipliers
   to final energy rates in the numerators and denominators of rebound expressions.
   (\Bt{} applied final-to-primary energy multipliers which divide out in rebound expressions, anyway.)
