@@ -90,6 +90,8 @@ University of Leeds, Leeds, LS2 9JT, UK}
 {http://www.example.com} % This URL is for the DOI information and will be added by the publisher once it has been determined
 % JEL classifications from https://www.aeaweb.org/econlit/jelCodes.php?view=jel
 % Options to consider:
+% N7  Transport, Trade, Energy, Technology, and Other Services
+%     N72  U.S. • Canada: 1913–
 % O1  Economic development
 %     O13  Agriculture • Natural Resources • Energy • Environment • Other Primary Products
 % O5  Economywide Country Studies
@@ -97,12 +99,14 @@ University of Leeds, Leeds, LS2 9JT, UK}
 % P1  Capitalist systems
 %     P18  Energy • Environment
 % Q4  Energy
+%     Q40  General
+%     Q41  Demand and Supply • Prices
 %     Q43  Energy and the Macroeconomy
 %     Q47  Energy Forecasting
 % Q5	Environmental Economics
 %     Q54  Climate • Natural Disasters and Their Management • Global Warming
 %     Q55  Technological Innovation
-{**** C32, H23, O33, O38, Q56, Q58 ****} % JEL
+{N72, P18, Q43, Q47, Q54, Q55} % JEL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -992,7 +996,7 @@ all final energy consumption is eliminated, and
 $\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$%
 \footnote{
   Of course, $\after{\eta} \rightarrow \infty$ is impossible 
-  See \citet{Paoli:2020} for a recent discussion of upper limits to efficiencies.
+  See \citet{Paoli:2020} for a recent discussion of upper limits to device efficiencies.
 }.
 
 The expected, device-level energy savings is the negative of the change in direct, final energy consumption,
@@ -1042,7 +1046,7 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 
 When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta} > 0$),
 the service price decreases ($\after{p}_s < \before{p}_s$), and
-the quantity of service demanded can increase ($\rateafter{q}_s > \ratebefore{q}_s$).
+the quantity of service demanded is likely to increase ($\rateafter{q}_s > \ratebefore{q}_s$).
 The service price elasticity of final energy demand ($\epsilon$) quantifies these dynamics such that
 $\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
 $\epsilon < 0$ is expected,
@@ -1087,8 +1091,11 @@ $\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} \pI$.
 
 The net substition effect ($\Delta \rate{E}_{\fsub}$) is given by
 $\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{floss}$.
-After substituting for $\rate{E}_{\fgain}$ and some rearranging,
-the net substitution effect can be expressed as
+After substituting for both
+$\rate{E}_{\fgain}$ and $\rate{E}_{\floss}$ 
+and some rearranging,
+the net change in final energy consumption 
+due to the substitution effect can be expressed as
 %
 \begin{equation} \label{eq:delta_sub}
   \Delta \rate{E}_{\fsub} = (1 - \pI)
@@ -1221,20 +1228,24 @@ economic parameters ($k$, $I_{\Ef}$, and $p_{\Ef}$).
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Model verification}
+\subsection{Verification of substitution effect and income effect rebound}
 \label{sec:model_verification}
 %++++++++++++++++++++++++++++++
 
-\Bt{pp.~15--17} provides
-example calculations for rebound caused by increasing auto fuel economy.
+\Bt{} does not provide explicit expressions for 
+rebound terms, as we do in Section~\ref{sec:model_derivation}.
+But he does provide example calculations for substitution effect rebound and income effect rebound 
+caused by increasing auto fuel economy~\Bp{pp.~15--17}.
 The details of \Ba{}'s
 fuel economy example provide the opportunity for numerical verification of
-the explicit equation for rebound developed above.
+the explicit rebound equations developed in Section~\ref{sec:model_derivation}.
 Only the expressions for income and substitution effects
 ($Re_{sub}$ and $Re_{i}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_ir}
-can be verified, because
+can be verified in this manner, because
 \Ba{} provided neither
 an expression for embodied energy effects nor example calculations for embodied energy rebound.
+Furthermore, \Ba{} didn't provide example macroeconomic rebound calculations,
+so we are unable to verify that aspect of our model.
 
 
 %------------------------------
@@ -1247,7 +1258,8 @@ we use numbers from \Ba{}'s
 fuel economy example to calculate $Re_{sub}$ by Equation~\ref{eq:Re_sub}.
 Then, we compare our answer to
 \Ba{}'s numerical estimate for $Re_{sub}$.
-Agreement will indicate that the derivation of Equation~\ref{eq:Re_sub} is correct.
+Agreement will indicate that the derivation of Equation~\ref{eq:Re_sub} 
+is consistent with \Ba{}'s model for substitution effect rebound.
 
 The explicit equation for substitution effect rebound ($Re_{sub}$) is given by
 Equation~\ref{eq:Re_sub}.
@@ -1281,7 +1293,8 @@ we use numbers from \Ba{}'s
 fuel economy example to calculate $Re_{i}$ by Equation~\ref{eq:Re_ir}.
 Then, we compare our answer to
 \Ba{}'s numerical estimate for $Re_{i}$.
-Agreement will indicate that the derivation of Equation~\ref{eq:Re_ir} is correct.
+Agreement will indicate that the derivation of Equation~\ref{eq:Re_ir} is consistent with \Ba{}'s 
+model for income effect rebound.
 
 The explicit equation for income effect rebound ($Re_{i}$) is given by
 Equation~\ref{eq:Re_ir} with $k = 1$.
