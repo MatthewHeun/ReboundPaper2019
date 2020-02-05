@@ -651,8 +651,8 @@ is obtained when
 %
 Under these conditions, income effect rebound (Equation~\ref{eq:Re_ir})
 simplifies to $Re_i = \pI$.
-The product $\pI$ provides a window on the economy.
-And clear thinking about the product $\pI$
+The product $\pI$ provides a window on the economy,
+and clear thinking 
 provides a constraint on its value.
 
 When any well-functioning economy generates profits, 
@@ -666,7 +666,7 @@ $p_{\Ef}$ is the cost of energy per MJ.
 Thus, we expect $1 / I_{\Ef} > p_{\Ef}$.
 Rearranging gives $\pI < 1$.
 Thus, we expect $\pI < 1$
-for a well-functioning economy.
+for any well-functioning economy.
 
 <<Conversion_Factors, echo=FALSE>>=
 PJ_per_Mtoe <- 41.868
@@ -687,8 +687,7 @@ I_Ef_US_2017 <- TFC_US_2017_MJ / GDP_US_2017_USD
 @
 
 It is instructive to calculate the product $\pI$ under typical conditions.
-The average energy intensity of the economy ($I_{\Ef}$) is independent of energy carrier, 
-while final energy price ($p_{\Ef}$) varies by energy carrier.
+The average energy intensity of the economy ($I_{\Ef}$) is independent of energy carrier. 
 In 2017, total final energy consumption in the US was
 \Sexpr{TFC_US_2017_Mtoe}~Mtoe \citep{IEA2020:sankey} or
 \Sexpr{sfsmisc::pretty10exp(TFC_US_2017_MJ, digits = 4, lab.type = "latex", lab.sep = "times")}~MJ, and
@@ -712,6 +711,7 @@ p_Ef_electricity_2017_USD_per_MJ <- p_Ef_electricity_2017_USD_per_kWhr / E_conte
 pI_electricity <- p_Ef_electricity_2017_USD_per_MJ * I_Ef_US_2017
 @
 
+Final energy price ($p_{\Ef}$) varies by energy carrier.
 In 2017, the average price of gasoline in the US was
 \Sexpr{p_Ef_gasoline_2017_USD_per_gallon}~USD/gallon \citep{EIA:2018a}.
 Given that there are
@@ -725,13 +725,13 @@ $Re_i \approx \pI$ =
 \Sexpr{format(pI_gasoline, digits = 3)} or 
 \Sexpr{format(pI_gasoline * 100, digits = 3)} \%.
 
-In 2017, The averge price of electricity in the US was
+In 2017, the averge price of electricity in the US was
 \Sexpr{format(p_Ef_electricity_2017_USD_per_kWhr, digits = 4)} USD/kW-hr \citep{EIA:2020}.
 Given that there are
 \Sexpr{E_content_electricity_MJ_per_kWhr} MJ/kW-hr,
 the price of electricity is
 \Sexpr{format(p_Ef_electricity_2017_USD_per_MJ, digits = 4)} USD/MJ.
-For energy efficiency upgrades to devices that consume gasoline,
+For energy efficiency upgrades to devices that consume electricity,
 a quick estimate for income effect rebound is
 $Re_i \approx \pI$ =
 \Sexpr{format(pI_electricity, digits = 3)} or
