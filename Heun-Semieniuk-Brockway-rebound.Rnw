@@ -1313,6 +1313,23 @@ Using the above numbers in Equation~\ref{eq:Re_ir} with $k = 1$,
 we obtain $Re_{i} = 0.110$,
 exactly matching the value of 0.11 reported in \Bt{p.~17, Table~2}.
 The match verifies the derivation of Equation~\ref{eq:Re_ir}.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Relationship between extended framework and microeconoic fundamentals}
+\label{sec:comparison_to_micro}
+%++++++++++++++++++++++++++++++
+
+****
+Placeholder for a section (to be written by Gregor?) 
+that demonstrates equivalences between the extended framework and 
+microeconomic theory.
+The idea for this section is that our derivation gives 
+an intuitavely comprehensible approach to the problem of rebound.
+But we may want to make the micro people happy. 
+This appendix, we can 
+show how our terms are equivalent to a microeconomic approach with partial derivatives, etc.
+****
 } % This brace ends the appendix content section.
 
 %----------------------------------------------------------------------------------------
