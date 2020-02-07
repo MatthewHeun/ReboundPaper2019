@@ -853,6 +853,8 @@ the energy rebound effect is magnified by macroeconomic interactions.
 We call this growth the productivity effect on energy rebound, and
 we give its magnitude the symbol $k$ in our derivation.
 
+**** More here from Gregor about the magnitude of $k$. ****
+
 Because the productivity effect is driven by device owner income derived from energy cost savings, 
 we obtain an expression for productivity effect rebound
 by multiplying $Re_i$ by $k$. 
@@ -1387,39 +1389,39 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 % \subsubsection{Expected energy savings}
 % \label{sec:expected_energy_savings}
 % %------------------------------
-
-
-
-
-%------------------------------
-\subsubsection{Embodied energy effect}
-\label{sec:embodied_effect_derivation}
-%------------------------------
-
-
-
-
-%------------------------------
-\subsubsection{Substitution effect}
-\label{sec:substitution_effect_derivation}
-%------------------------------
-
-
-
-
-
-%------------------------------
-\subsubsection{Income and respending effects}
-\label{sec:income_effect_derivation}
-%------------------------------
-
-
-
-
-%------------------------------
-\subsubsection{Total rebound}
-\label{sec:total_rebound_derivation}
-%------------------------------
+% 
+% 
+% 
+% 
+% %------------------------------
+% \subsubsection{Embodied energy effect}
+% \label{sec:embodied_effect_derivation}
+% %------------------------------
+% 
+% 
+% 
+% 
+% %------------------------------
+% \subsubsection{Substitution effect}
+% \label{sec:substitution_effect_derivation}
+% %------------------------------
+% 
+% 
+% 
+% 
+% 
+% %------------------------------
+% \subsubsection{Income and respending effects}
+% \label{sec:income_effect_derivation}
+% %------------------------------
+% 
+% 
+% 
+% 
+% %------------------------------
+% \subsubsection{Total rebound}
+% \label{sec:total_rebound_derivation}
+% %------------------------------
 
 
 
