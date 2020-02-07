@@ -861,7 +861,7 @@ by multiplying $Re_i$ by $k$.
 Thus, 
 %
 \begin{equation} \label{eq:Re_p}
-  Re_p = k Re_i \, .
+  Re_p = \Repequation{} \, .
 \end{equation}
 
 
@@ -871,10 +871,9 @@ Thus,
 %++++++++++++++++++++++++++++++
 
 Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_i$ + $Re_p$, or
-**** Fix equation below. ****
 %
 \begin{equation}
-  Re = \Reembequation{} + \Resubequation{} + \Reirequation{} \, .
+  Re = \Reembequation{} + \Resubequation{} + \Reiequation{} + \Repequation{} \, .
 \end{equation}
 %
 After substituting and rearranging, we arrive at an expression
@@ -882,12 +881,12 @@ for total rebound expressed in terms of
 embodied energy rebound~($Re_{emb}$),
 device-level rebound~($Re_{dev}$),
 the nondimensionalized change in device cost rate~($\gamma$), and
-economic parameters ($k$, $I_{\Ef}$, and $p_{\Ef}$).
+economic parameters ($k$, $p_{\Ef}$, and $I_{\Ef}$).
 %
 \begin{equation} \label{eq:Re_tot}
   Re = \Retotequation{}
 \end{equation}
-
+%
 (Note that Section~\ref{sec:model_verification} provides, where possible,
 verification of the explicit, symbolic expressions
 using data from the auto efficiency example in \Bt{}.)

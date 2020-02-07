@@ -63,11 +63,14 @@
 % Income rebound
 \newcommand{\Reiequation}{(1 - \gamma) \pI}
 
+% Productivity rebound
+\newcommand{\Repequation}{(1 - \gamma) \kpI}
+
 % Income and respending rebound
-\newcommand{\Reirequation}{(1 - \gamma) \kpI}
+% \newcommand{\Reirequation}{(1 - \gamma) \kpI}
 
 % Total rebound
-\newcommand{\Retotequation}{Re_{emb} + Re_{dev} + \left( 1 - \frac{Re_{dev}}{k} - \gamma \right) \kpI}
+\newcommand{\Retotequation}{Re_{emb} + Re_{dev} + \left( 1 - \gamma - \frac{Re_{dev}}{1 + k} \right) (1 + k) \pI}
 
 
 %%%% Oft-used references
