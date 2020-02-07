@@ -320,99 +320,467 @@ Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Extending the Borenstein model}
-\label{sec:extending_borenstein}
+\section{The \namecaps}
+\label{sec:extended_framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We use, as our basis, the model of \Bt{}.
+This section shows the derivation of the \name{}.
+We consider five rebound effects:
+%
+\begin{enumerate*}[label={(\arabic*)}]
+
+  \item device-level effects,
+
+  \item embodied energy effects,
+  
+  \item substitution effects, 
+  
+  \item income effects, and 
+  
+  \item productivity effects.
+
+\end{enumerate*}
+%
+By the typology of \citet[Table~1]{Brockway:2017a},
+device-level,
+substitution, and 
+income effects are examples of direct rebound, and 
+the embodied energy effect is an example of indirect rebound.
+Both direct and indirect rebound are microeconomic in nature.
+The productivity effect is a macroeconomic rebound effect.
+
+We use, as our basis, the model of \Bt{},
+who considered only three effects: device-level, substitution, and income effects.
 Like \Ba{}, we assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}$ (in \$/MJ)
 to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\before{\eta}$ (in km/liter).
+The final energy price ($p_{\Ef}$) is assumed to be exogenous,
+and the final energy purchaser is a price-taker.
+Thus, $\after{p}_{\Ef} = \before{p}_{\Ef}$.%
+\footnote{
+  Relaxing the exogenous price assumption
+  would require a full-economy model that is beyond the scope of this paper.
+}
+%
 An energy efficiency upgrade ($U$) increases
 final-energy-to-service efficiency such that
 $\after{\eta} > \before{\eta}$,
 typically, but not always,
 at an increased financial cost rate to
 procure (capital cost), operate, maintain, and dispose of the device,
-such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.\footnote{
+such that $\rateafter{C}_{dev} > \ratebefore{C}_{dev}$.
+As final-energy-to-service efficiency~($\eta$) increases,
+service price~($p_s$) declines.%
+\footnote{
+  Final-energy-to-service efficiency~($\before{\eta}$) is the inverse of
+  $e$ in \Bt{},
+  such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\widetilde{e}$.
+}
+%
+The rate of service provided by the device~($\rate{q}_s$) is related to
+final-energy-to-service efficiency~($\eta$) and
+the rate of direct final energy consumption by the device~($\rate{E}_{\fdir}$) by
+$\rate{q}_s = \eta \rate{E}_{\fdir}$, where
+$\rate{q}_s$ could be in vehicle-km/year and
+$\rate{E}_{\fdir}$ in MJ/year.%
+\footnote{
   Following \Bt{},
   a symbol without decoration (e.g., $\before{X}$) indicates $X$ before the energy efficiency upgrade~($U$).
   $\after{X}$ indicates $X$ after $U$.
   $\rate{X}$ indicates the rate of $X$ before $U$ in units of $X$/year.
   $\rateafter{X}$ indicates the rate of $X$ after $U$ in units of $X$/year.
-}
-We spread capital and disposal costs across the life of the original and upgraded devices
-($\before{t}$ and $\after{t}$, respectively)
-to obtain cost rates
-for the original and upgraded devices
-($\ratebefore{C}_{dev}$ and $\rateafter{C}_{dev}$).%
-\footnote{
-  We choose not to apply time-value-of-money considerations to the financial aspects of the model.
-  (Our approach to discounting is in contrast to \Bt{} who discounted some cost streams in his examples.)
-  This decision simplifies the derivation, provides consistency in the treatment of energy and money,
-  and avoids questions about whether time valuation should be applied to \emph{energy} as well as money.
-  We choose not to apply final-to-primary energy multipliers
-  to final energy rates in the numerators and denominators of rebound expressions.
-  (\Bt{} applied final-to-primary energy multipliers which divide out in rebound expressions, anyway.)
-  This decision simplifies derivations.
+  See Section~\ref{sec:nomenclature} in the appendix for complete nomenclature tables.
 }
 
-In our model,
-the upgraded device may contain more (or less) embodied final energy
-than the original device
-such that $\after{E}_{\femb} \ne \before{E}_{\femb}$.%
+
+
+
+
+**** Find other places for these sentences or delete. ****
+As final-energy-to-service efficiency~($\eta$) increases,
+a higher rate of service~($\rate{q}_s$) can be provided for the same
+rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
+Income to the device owner (in the form of reduced energy costs) 
+is derived from the investment in $U$. 
+Income is assumed to be spent in the broader economy.
+Provision of energy services with lower energy cost is productivity-enhancing at the macro level,
+just as any new technology to reduce input costs.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Preliminaries}
+\label{sec:preliminaries}
+%++++++++++++++++++++++++++++++
+
+Energy rebound for each effect $j \in [1, 5]$ can be calculated by
+$Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
+where expected energy savings are quantified at the device level
+in the absence of all other effects 
+(embodied energy, substitution, income, and productivity).
+Actual energy savings are given by
+$\mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
+Thus,
+%
+\begin{equation} \label{eq:rebound_1}
+  Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
+\end{equation}
+
+To simplify derivations, 
+we choose not to apply final-to-primary energy multipliers
+to final energy rates in the numerators and denominators of rebound expressions
+like Equation~\ref{eq:rebound_1}.
+(\Bt{} applied final-to-primary energy multipliers which divide out in rebound expressions, anyway.)
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Expected energy savings}
+\label{sec:expected_energy_savings}
+%++++++++++++++++++++++++++++++
+
+The final energy consumption rate of the device is
+$\ratebefore{E}_{\fdir} = \ratebefore{q}_s / \before{\eta}$
+prior to the energy efficiency upgrade~($U$) and
+$\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$
+after.
+(The rate of service consumption is assumed to be unchanged
+for the purposes of assessing expected energy savings, 
+i.e., $\rateafter{q}_s = \ratebefore{q}_s$.)
+The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{\fdir}$)
+due to $U$ is given by
+$\Delta \rate{E}_{\fdir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebefore{q}_s}{\before{\eta}}$,
+which can be rearranged as
+%
+\begin{equation}
+  \Delta \rate{E}_{\fdir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{\fdir} \, ,
+\end{equation}
+%
+using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
+When efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$,
+the rate of final energy consumption declines, and
+$\Delta \rate{E}_{\fdir} < 0$,
+as expected.
+As $\after{\eta} \rightarrow \infty$,
+all final energy consumption is eliminated, and
+$\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$.%
+\footnote{
+  Of course, $\after{\eta} \rightarrow \infty$ is impossible 
+  See \citet{Paoli:2020} for a recent discussion of upper limits to device efficiencies.
+}
+
+The expected, device-level energy savings is the negative of the change in direct, final energy consumption,
+or $-\Delta \rate{E}_{\fdir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{\fdir}$.
+Thus Equation~\ref{eq:rebound_1} can be rewritten as
+%
+\begin{equation} \label{eq:rebound_2}
+  Re_j = \frac{\mathrm{takeback}_j}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
+\end{equation}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Device-level effect}
+\label{sec:device_level_effect}
+%++++++++++++++++++++++++++++++
+
+When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$),
+the service price decreases ($\after{p}_s < \before{p}_s$), and
+the quantity of service demanded is likely to increase ($\rateafter{q}_s > \ratebefore{q}_s$).
+The service price elasticity of final energy demand ($\epsilon$) quantifies these dynamics such that
+$\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
+A negative value for $\epsilon$ is expected,
+such that a decrease in service price ($p_s$) yields
+an increase in service consumption ($\rate{q}_s$).
+After invoking the exogenous final energy price assumption
+(i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
+and using $p_s = p_{\Ef}/\eta$,
+the new quantity demanded can be expressed in terms of service price elasticity of demand as
+$\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
+
+As quantity of service demanded increases,
+direct energy consumption is gained
+at the device at the efficiency of the upgraded device~($\after{\eta}$),
+such that
+$\rate{E}_{\fgain} = (\rateafter{q}_s - \ratebefore{q}) / \after{\eta}$.
+Using $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$ and
+$\rateafter{E}_{\fdir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$,
+we find that
+$\rate{E}_{\fgain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right]
+                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$.
+If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
+If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
+
+$\rate{E}_{\fgain}$ represents energy savings taken back by the device-level effects.
+As such, $\rate{E}_{\fgain}$ is the source of device-level rebound ($Re_{dev}$).
+Applying Equation~\ref{eq:rebound_2} gives
+$Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
+After simplification, the expression for device-level rebound becomes
+%
+\begin{equation} \label{eq:Re_dev}
+  Re_{dev} = \Redevequation{} \, .
+\end{equation}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Embodied energy effect}
+\label{sec:embodied_energy_effect}
+%++++++++++++++++++++++++++++++
+
+The energy efficiency upgrade ($U$)
+causes the embodied final energy of the device to change
+from $E_{\femb}$ to $\after{E}_{\femb}$.%
 \footnote{
   We define embodied energy as the energy/exergy analysis literature
   to be the sum of all final energy consumed in the production of the device.
   \Bt{} discusses ``embodied energy,'' but uses the term to mean
   the primary energy equivalent of direct final energy consumed.
 }
-Similar to device costs, 
-we spread embodied energy across the expected life of the device to obtain a rate of embodied energy,
-such that
+We allocate embodied energy over the life of the original and upgraded devices
+($\before{t}$ and $\after{t}$, respectively)
+to obtain embodied energy rates, such that
 $\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$
 and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$.
+The change in embodied final energy due to $U$ (expressed as a rate) is given by
+%
+\begin{equation} \label{eq:delta_embodied}
+  \Delta \rate{E}_{\femb} = \left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}
+  \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{\femb} \, .
+\end{equation}
 
-$U$ reduces the service price $p_s$ (in km/\$) such that $\after{p}_s < \before{p}_s$,
-leading to substitution of spending
-away from other purchases
-toward final energy to operate the device.
-The strength of the substitution dynamic is described
-by the service price elasticity of final energy demand ($\epsilon$),
-where typically $\epsilon < 0$.
+Typically, but not always,
+increases in energy efficiency are associated with increased device complexity
+and more embodied energy,
+such that $\after{E}_{\femb} > \before{E}_{\femb}$.
+However, if the upgraded device has longer life than the original device
+($\after{t} > \before{t}$),
+$\Delta \rate{E}_{\femb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device.
+
+$\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
+Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
+%
+\begin{equation} \label{eq:Re_emb}
+  Re_{emb} = \Reembequation{} \, .
+\end{equation}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Substitution effect}
+\label{sec:substitution_effect}
+%++++++++++++++++++++++++++++++
+
+As discussed in Section~\ref{sec:device_level_effect} above,
+$U$ reduces the service price ($p_s$)
+leading to increased consumption of energy services provided by the device
+($\rateafter{q}_s > \ratebefore{q}_s$).
+However, increased energy service consumption 
+implies an increased direct final energy cost for the device.
+The device owner's budget constraint means that  
+increased direct final energy costs
+will be shifted from other expenditures elsewhere in the economy.
+The net energy change due to cost shifting 
+is called the substitution effect.
 Our approach to substitution effects is different from \Tt{}
 who used input-output methods and cross-price elasticities to
 ascertain the energy cost of both substitution and income effects.
-Our service price elasticity approach to substitution effects 
-is identical to \Bt{}.
+Our approach to substitution effects is identical to \Bt{}.
+
+The reduction of spending elsewhere in the economy is given by 
+$\rate{C}_{\shift} = \rate{E}_{\fgain} p_{\Ef}$.
+Assuming that $\rate{C}_{\shift}$ reduces energy consumption
+by the energy intensity of the economy gives
+$\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} \pI$.
+
+The net substition effect
+$\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{\floss}$.
+After substituting expressions for both
+$\rate{E}_{\fgain}$ and $\rate{E}_{\floss}$ 
+and some rearranging,
+the net change in final energy consumption 
+due to the substitution effect can be expressed as
+%
+\begin{equation} \label{eq:delta_sub}
+  \Delta \rate{E}_{\fsub} = (1 - \pI)
+                            \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon - 1 \right]
+                            \frac{\before{\eta}}{\after{\eta}} \,
+                            \rate{E}_{\fdir} \, .
+\end{equation}
+
+$\Delta \rate{E}_{\fsub}$ represents, on net, the energy savings taken back by substitution effects.
+Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
+$Re_{sub} = (1 - \pI) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right]
+                            / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$.
+After simplification, net substitution rebound can be expressed as
+%
+\begin{equation} \label{eq:Re_sub}
+  Re_{sub} = \Resubequation{} \, .
+\end{equation}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Income effect}
+\label{sec:income_effect}
+%++++++++++++++++++++++++++++++
 
 The service price decline resulting from $U$
-provides income (``freed cash'') to the device owner
-to be spent elsewhere in the economy at the economy's final energy intensity
-$I_{\Ef}$ (in MJ/\$).
+provides income%
+\footnote{
+  Energy cost savings are an ``income'' in the sense of a return on investment in energy efficiency.
+  The device user's income, in the sense of remuneration for labor, is presumably unchanged.
+}
+%
+to the device owner
+in the form of energy cost savings.
+Income ($\rate{G}$) is money that is no longer spent on energy to operate the upgraded device,
+assuming the same level of service from the device **** is this right? Should we use the higher service level? ****.
+Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
+Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
 Our approach to income effects is similar in practice to \Bt{}
 who developed his model using a basket of $N$ other goods,
 but who, in his numeric estimates, also assumed that freed cash has
 energy implications at the average energy intensity of the economy.
+Our approach is simpler than \Tt{}
+who used input-output techniques to assess 
+the energy implications of spending energy cost savings
+in the economy.
+
+To the device owner, energy cost savings come at a cost to 
+procure (capital cost), operate, maintain, and dispose 
+the energy-efficient device.
+But it cost money to procure, operate, maintain, and dispose the original device, too.
+These device costs can be expressed as a rate ($\rate{C}_{dev}$), which is
+typically, but not always, higher for the upgraded device
+than the original device
+($\rateafter{C}_{dev} > \ratebefore{C}_{dev}$).
+Our approach to capital and disposal costs is simlar to our approach to embodied energy, i.e.\
+we spread capital and disposal costs across the life of the original and upgraded devices
+to obtain device cost rates:
+$\rateafter{C}_{dev} = \after{C}_{cap} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
+$\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.%
+\footnote{
+  Note that neither $\rateafter{C}_{OM}$ nor $\ratebefore{C}_{OM}$ include direct energy costs
+  to operate the device.}
+%
+The change in device cost rate is given by
+$\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.%
+\footnote{
+  We choose not to apply time-value-of-money considerations to the financial aspects of the \name{}.
+  Our approach to discounting is in contrast to \Bt{} who discounted some cost streams in his examples.
+  This decision simplifies the derivation, provides consistency in the treatment of energy and money,
+  and avoids questions about whether time valuation should be applied to \emph{energy} as well as money.
+}
+% After rearrangement, 
+% $\Delta \rate{C}_{dev} = (\rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1) \ratebefore{C}_{dev}$.
+
+Freed cash ($FC$) is the difference between the income rate and
+the change in device cost rate.
+Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
+As shown by \citet{Antal:2014aa}, 
+it is reasonable to assume that 
+freed cash is spent in the economy at the average energy intensity of the economy.
+Thus, $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
+Thus, the change in final energy consumption due to income and respending can be written as
+$\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
+The discussion above yields
+%
+\begin{equation} \label{eq:delta_income}
+  \Delta \rate{E}_{\finc} = \left( 1 - \frac{\before{\eta}}{\after{\eta}}
+                                 - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{\Ef}} \right)
+                               \pI \ratebefore{E}_{\fdir} \, .
+\end{equation}
+
+Without the energy efficiency upgrade ($U$),
+$\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, and
+$\Delta \rate{E}_{\finc} = 0$, as expected.
+As $\after{\eta}$ increases relative to $\eta$, $\Delta \rate{E}_{\finc}$ goes up,
+because the efficiency gain yields more freed cash (from energy cost savings) to spend in the economy.
+Similarly, $\Delta \rate{E}_{\finc}$ goes up when
+$\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, because
+more freed cash is available
+to be spent in the economy
+(because the device costs less to procure, operate, maintain, and dispose).
+Higher energy prices ($p_{\Ef}$) yield greater income effect, because
+energy cost savings yield more freed cash.
+Similarly, higher energy intensity ($I_{\Ef}$) gives larger income effect, because
+each dollar of energy cost savings spent in the economy has higher energy implications.
+
+$\Delta \rate{E}_{\finc}$ represents energy savings taken back due to the income effect.
+Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression
+for rebound due to income and respending effects:
+$Re_i = \Delta \rate{E}_{\finc} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$.
+After simplification, and using the definition
+$\gamma \equiv \gammaequation{}$
+to represent the
+ratio of device cost rate increase to expected energy cost savings,
+rebound from income and respending effects can be written as
+%
+\begin{equation} \label{eq:Re_i}
+  Re_i = \Reiequation{} \, .
+\end{equation}
+
+Note that $\gamma < 1$ is expected, else $U$ will not be
+expected to be money saving for the device owner.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Productivity effect}
+\label{sec:placeholder_label}
+%++++++++++++++++++++++++++++++
+
+
+
+
+
+
+The effect of this respending can be represented by a technology multiplier~($k$).
+Although \Ba{} did not include a multiplier ($k$) in his model,
+we do so here.%
+\footnote{
+  Not including the multiplier, in effect, assumes $k = 1$.
+}
+
+
+
+Note that rebound from income only ($Re_i$) is obtained from Equation~\ref{eq:Re_ir} with $k = 1$,
+such that $Re_{ir} = k Re_i$.
+Rebound from respending only ($Re_r$) is given by $Re_r = (1 - \gamma) (k - 1) \pI$.
+Thus, income and respending rebound is given by
+$Re_{ir} = Re_i + Re_r$.
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Total rebound}
+\label{sec:total_rebound}
+%++++++++++++++++++++++++++++++
+
+
+
+
+(Note that Section~\ref{sec:model_verification} provides, where possible,
+verification of the explicit, symbolic expressions
+using data from the auto efficiency example in \Bt{}.)
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Extending the Borenstein model}
+\label{sec:extending_borenstein}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 
 Our derivations of
 explicit, symbolic expressions for the four rebound effects
 (device-level effects, embodied energy effects, substitution effects, and income and respending effects)
 are provided in the Appendix, Section~\ref{sec:model_derivation}.
 We summarize and discuss the expressions below.
-(Note that Section~\ref{sec:model_verification} provides, where possible,
-verification of the explicit, symbolic expressions
-using data from the auto efficiency example in \Bt{}.)
 
-Device-level rebound ($Re_{dev}$) is given by
-%
-\begin{equation} \label{eq:Re_dev}
-  Re_{dev} = \Redevequation{} \, .
-\end{equation}
-%
-Device-level rebound is often called ``direct rebound.''
 
 Embodied energy rebound ($Re_{emb}$) is given by
 %
@@ -898,113 +1266,73 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 \end{table}
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Model derivation}
-\label{sec:model_derivation}
-%++++++++++++++++++++++++++++++
+% %++++++++++++++++++++++++++++++
+% \subsection{Model derivation}
+% \label{sec:model_derivation}
+% %++++++++++++++++++++++++++++++
 
-This section shows the derivation of the symbolic rebound model.
-Like \Bt{}, we consider four contributing factors to rebound,
-device-level effects,
-embodied energy effects,
-substitution effects, and
-income effects.
-Energy rebound for each effect~($j$) can be calculated by
-$Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
-where expected energy savings are quantified at the device level
-assuming no change in the rate of service,
-no substitution,
-and no change of embodied energy.
-Actual energy savings are given by
-$\mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
-Thus,
-%
-\begin{equation} \label{eq:rebound_1}
-  Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
-\end{equation}
-
-
-%------------------------------
-\subsubsection{Preliminaries}
-\label{sec:preliminaries}
-%------------------------------
-
-Service price~($p_s$) is related to final energy price~($p_{\Ef}$) through
-final-energy-to-service efficiency~($\eta$) by
-$p_s = p_{\Ef}/\eta$.
-For an automobile efficiency upgrade,
-$p_s$ could be in \$/vehicle-km,
-$p_{\Ef}$ in \$/MJ, and
-$\eta$ in vehicle-km/MJ.
-The energy price ($p_{\Ef}$) is assumed to be exogenous,
-and the final energy purchaser is a price-taker.
-Thus, $\after{p}_{\Ef} = \before{p}_{\Ef}$.
-As final-energy-to-service efficiency~($\eta$) increases,
-service price~($p_s$) declines.
-(Relaxing the assumption that $\after{p}_{\Ef} = \before{p}_{\Ef}$
-would require a full-economy model that is beyond the scope of this paper.)
-Final-energy-to-service efficiency~($\before{\eta}$) is the inverse of
-$e$ in \Bt{},
-such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\widetilde{e}$.
-
-The rate of service provided by the device~($\rate{q}_s$) is related to
-final-energy-to-service efficiency~($\eta$) and
-the rate of direct final energy consumption by the device~($\rate{E}_{\fdir}$) by
-$\rate{q}_s = \eta \rate{E}_{\fdir}$, where
-$\rate{q}_s$ could be in vehicle-km/year and
-$\rate{E}_{\fdir}$ in MJ/year.
-As final-energy-to-service efficiency~($\eta$) increases,
-a higher rate of service~($\rate{q}_s$) can be provided for the same
-rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
-Also, $\rate{E}_{\fdir} = \rate{q}_s / \eta$.
+% This section shows the derivation of the symbolic rebound model.
+% Like \Bt{}, we consider four contributing factors to rebound,
+% device-level effects,
+% embodied energy effects,
+% substitution effects, and
+% income effects.
+% Energy rebound for each effect~($j$) can be calculated by
+% $Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
+% where expected energy savings are quantified at the device level
+% assuming no change in the rate of service,
+% no substitution,
+% and no change of embodied energy.
+% Actual energy savings are given by
+% $\mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
+% Thus,
+% %
+% \begin{equation} \label{eq:rebound_1}
+%   Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
+% \end{equation}
 
 
-%------------------------------
-\subsubsection{Expected energy savings}
-\label{sec:expected_energy_savings}
-%------------------------------
+% %------------------------------
+% \subsubsection{Preliminaries}
+% \label{sec:preliminaries}
+% %------------------------------
+% 
+% Service price~($p_s$) is related to final energy price~($p_{\Ef}$) through
+% final-energy-to-service efficiency~($\eta$) by
+% $p_s = p_{\Ef}/\eta$.
+% For an automobile efficiency upgrade,
+% $p_s$ could be in \$/vehicle-km,
+% $p_{\Ef}$ in \$/MJ, and
+% $\eta$ in vehicle-km/MJ.
+% The energy price ($p_{\Ef}$) is assumed to be exogenous,
+% and the final energy purchaser is a price-taker.
+% Thus, $\after{p}_{\Ef} = \before{p}_{\Ef}$.
+% As final-energy-to-service efficiency~($\eta$) increases,
+% service price~($p_s$) declines.
+% (Relaxing the assumption that $\after{p}_{\Ef} = \before{p}_{\Ef}$
+% would require a full-economy model that is beyond the scope of this paper.)
+% Final-energy-to-service efficiency~($\before{\eta}$) is the inverse of
+% $e$ in \Bt{},
+% such that $\before{\eta} = 1/e$ and $\after{\eta} = 1/\widetilde{e}$.
+% 
+% The rate of service provided by the device~($\rate{q}_s$) is related to
+% final-energy-to-service efficiency~($\eta$) and
+% the rate of direct final energy consumption by the device~($\rate{E}_{\fdir}$) by
+% $\rate{q}_s = \eta \rate{E}_{\fdir}$, where
+% $\rate{q}_s$ could be in vehicle-km/year and
+% $\rate{E}_{\fdir}$ in MJ/year.
+% As final-energy-to-service efficiency~($\eta$) increases,
+% a higher rate of service~($\rate{q}_s$) can be provided for the same
+% rate of final energy consumption by the device~($\rate{E}_{\fdir}$).
+% Also, $\rate{E}_{\fdir} = \rate{q}_s / \eta$.
+% 
+% 
+% %------------------------------
+% \subsubsection{Expected energy savings}
+% \label{sec:expected_energy_savings}
+% %------------------------------
 
-Expected energy savings are often called \emph{potential} energy savings.
-Prior to the energy efficiency upgrade~($U$),
-the device has final-energy-to-service efficiency of $\before{\eta}$, and
-the user of the energy conversion device consumes services
-provided by the device at a rate of $\ratebefore{q}_s$,
-which implies the final energy consumption rate of the device to be
-$\ratebefore{E}_{\fdir} = \ratebefore{q}_s / \before{\eta}$.
-After $U$, the rate of final energy consumption by the device is
-$\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$,
-because the rate of service consumption is assumed to be unchanged
-(i.e., $\rateafter{q}_s = \ratebefore{q}_s$)
-when assessing expected energy savings.
-The change in the direct energy consumption rate of the device~($\Delta \rate{E}_{\fdir}$)
-due to $U$ is given by
-$\Delta \rate{E}_{\fdir} = \frac{\ratebefore{q}_s}{\after{\eta}} - \frac{\ratebefore{q}_s}{\before{\eta}}$,
-which can be rearranged to be
-%
-\begin{equation}
-  \Delta \rate{E}_{\fdir} = \left( \frac{\before{\eta}}{\after{\eta}} - 1 \right) \ratebefore{E}_{\fdir} \, ,
-\end{equation}
-%
-using $\ratebefore{E}_{\fdir} = \frac{\ratebefore{q}_s}{\before{\eta}}$.
-If efficiency increases due to $U$ such that $\after{\eta} > \before{\eta}$,
-the rate of final energy consumption declines, and
-$\Delta \rate{E}_{\fdir} < 0$,
-as expected.
-As $\after{\eta} \rightarrow \infty$,
-all final energy consumption is eliminated, and
-$\Delta \rate{E}_{\fdir} = - \ratebefore{E}_{\fdir}$%
-\footnote{
-  Of course, $\after{\eta} \rightarrow \infty$ is impossible 
-  See \citet{Paoli:2020} for a recent discussion of upper limits to device efficiencies.
-}.
 
-The expected, device-level energy savings is the negative of the change in direct, final energy consumption,
-or $-\Delta \rate{E}_{\fdir} = (1 - \before{\eta} / \after{\eta}) \ratebefore{E}_{\fdir}$.
-Thus Equation~\ref{eq:rebound_1} can be rewritten as
-%
-\begin{equation} \label{eq:rebound_2}
-  Re_j = \frac{\mathrm{takeback}_j}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
-\end{equation}
 
 
 %------------------------------
@@ -1012,30 +1340,7 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \label{sec:embodied_effect_derivation}
 %------------------------------
 
-$U$ causes the embodied final energy of the device to change
-from $E_{\femb}$ to $\after{E}_{\femb}$.
-We allocate embodied energy over the life of the device ($\before{t}$ and $\after{t}$)
-to obtain embodied energy rates.
-The change in embodied final energy due to $U$ (expressed as a rate) is given by
-%
-\begin{equation} \label{eq:delta_embodied}
-  \Delta \rate{E}_{\femb} = \left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}
-  \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{\femb} \, .
-\end{equation}
-%
-Typically, increases in energy efficiency are associated with increased device complexity
-and more embodied energy such that $\after{E}_{\femb} > \before{E}_{\femb}$.
-However, if the upgraded device has longer life than the original device
-($\after{t} > \before{t}$),
-$\Delta \rate{E}_{\femb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device.
 
-$\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
-Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
-%
-\begin{equation}
-  Re_{emb} = \Reembequation{} \, . \tag{\ref{eq:Re_emb}}
-\end{equation}
 
 
 %------------------------------
@@ -1043,75 +1348,8 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 \label{sec:substitution_effect_derivation}
 %------------------------------
 
-When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta} > 0$),
-the service price decreases ($\after{p}_s < \before{p}_s$), and
-the quantity of service demanded is likely to increase ($\rateafter{q}_s > \ratebefore{q}_s$).
-The service price elasticity of final energy demand ($\epsilon$) quantifies these dynamics such that
-$\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
-$\epsilon < 0$ is expected,
-such that a decrease in service price ($p_s$) yields
-an increase in service consumption ($\rate{q}_s$).
-Assuming that the price of final energy does not change because of $U$
-(i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
-and using $p_s = p_{\Ef}/\eta$,
-the new quantity demanded can be expressed in terms of service price elasticity of demand as
-$\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
 
-As quantity of service demanded increases ($\rateafter{q}_s > \ratebefore{q}_s$),
-direct energy consumption is gained
-at the device at the efficiency of the upgraded device~($\after{\eta}$),
-such that
-$\rate{E}_{\fgain} = \left( \rateafter{q}_s - \ratebefore{q} \right) / \after{\eta}$.
-Using $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$ and
-$\rateafter{E}_{\fdir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$,
-we find that
-$\rate{E}_{\fgain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right]
-                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$.
-If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
-If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
 
-$\rate{E}_{\fgain}$ represents energy savings taken back by the substitution effect at the device.
-As such, $\rate{E}_{\fgain}$ is the source of device-level rebound ($Re_{dev}$).
-Applying Equation~\ref{eq:rebound_2} gives
-$Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
-After simplification, the explicit expression for device-level rebound becomes
-%
-\begin{equation}
-  Re_{dev} = \Redevequation{} \, . \tag{\ref{eq:Re_dev}}
-\end{equation}
-
-However, increased energy service consumption ($\rateafter{q}_s > \ratebefore{q}_s$)
-implies an increased energy cost for the device.
-The increased energy cost is shifted from other expenditures elsewhere in the economy
-such that $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{\Ef}$.
-Assuming that $\rate{C}_{\shift}$ reduces energy consumption
-by the energy intensity of the economy gives
-$\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} \pI$.
-
-The net substition effect ($\Delta \rate{E}_{\fsub}$) is given by
-$\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{floss}$.
-After substituting for both
-$\rate{E}_{\fgain}$ and $\rate{E}_{\floss}$ 
-and some rearranging,
-the net change in final energy consumption 
-due to the substitution effect can be expressed as
-%
-\begin{equation} \label{eq:delta_sub}
-  \Delta \rate{E}_{\fsub} = (1 - \pI)
-                            \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon - 1 \right]
-                            \frac{\before{\eta}}{\after{\eta}} \,
-                            \rate{E}_{\fdir} \, .
-\end{equation}
-
-$\Delta \rate{E}_{\fsub}$ represents, on net, the energy savings taken back by substitution effects.
-Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
-$Re_{sub} = (1 - \pI) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right]
-                            / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$.
-After simplification, substitution rebound can be expressed as
-%
-\begin{equation}
-  Re_{sub} = \Resubequation{} \, . \tag{\ref{eq:Re_sub}}
-\end{equation}
 
 
 %------------------------------
@@ -1119,88 +1357,7 @@ After simplification, substitution rebound can be expressed as
 \label{sec:income_effect_derivation}
 %------------------------------
 
-Energy cost savings~($\rate{G}$, in \$/year, known as ``income''%
-\footnote{
-  Energy cost savings are an ``income'' in the sense of a return on investment in energy efficiency.
-  The device user's income, in the sense of remuneration for labor, is unchanged.
-})
-are one result of the investment in $U$.
-$\rate{G}$ is money that is no longer spent on energy to operate the upgraded device,
-assuming the same service level from the device.
-Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
-Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
 
-It costs money to procure, operate, maintain, and dispose of the energy-efficient device.
-But it cost money to procure, operate, maintain, and dispose of the original device, too.
-If capital and disposal costs are spread across the life of the device, we obtain
-$\rateafter{C}_{dev} = \after{C}_{cap} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
-$\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.%
-\footnote{
-  Note that neither $\ratebefore{C}_{OM}$ nor $\rateafter{C}_{OM}$ include direct energy costs
-  to operate the device.
-}
-The change in device cost rate is given by
-$\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.
-After rearrangement, $\Delta \rate{C}_{dev} = \left( \rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1 \right) \ratebefore{C}_{dev}.$
-
-Freed cash ($FC$) is the difference between income and
-the change in cost rates for procuring, operating, maintaining, and disposing
-the upgraded device relative to the original device.
-Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
-
-Assuming that the freed cash is spent in the economy at the energy intensity of the economy gives
-$\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
-Freed cash can be respent in the economy in a manner
-``akin to the macroeconomic multiplier that might result
-following a new discovery of a natural resource deposit'' \Bp{p.~11}.
-As shown by \citet{Antal:2014aa}, 
-it is reasonable to assume that 
-freed cash is respent in the economy also at the energy intensity of the economy.
-The effect of this respending can be represented by a technology multiplier~($k$).
-Although \Ba{} did not include a multiplier ($k$) in his model,
-we do so here.%
-\footnote{
-  Not including the multiplier, in effect, assumes $k = 1$.
-}
-Thus, the change in final energy consumption due to income and respending can be written as
-$\Delta \rate{E}_{\fincres} = FC \, I_{\Ef} k$.
-The discussion above yields
-%
-\begin{equation} \label{eq:delta_income}
-  \Delta \rate{E}_{\fincres} = \left( 1 - \frac{\before{\eta}}{\after{\eta}}
-                                 - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{\Ef}} \right)
-                               k I_{\Ef} p_{\Ef} \ratebefore{E}_{\fdir} \, .
-\end{equation}
-
-Without the energy efficiency upgrade ($U$),
-$\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, and
-$\Delta \rate{E}_{\fincres} = 0$, as expected.
-As $\after{\eta}$ increases relative to $\eta$, $\Delta \rate{E}_{\fincres}$ goes up,
-because the efficiency gain yields more freed cash (from energy cost savings) to spend in the economy.
-Similarly, $\Delta \rate{E}_{\fincres}$ goes up when
-$\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, because
-more freed cash is available
-to be spent in the economy
-(because the device costs less to procure, operate, maintain, and dispose).
-
-$\Delta \rate{E}_{\fincres}$ represents energy savings taken back due to the income effect.
-Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression
-for rebound due to income and respending effects:
-$Re_{\incres} = \Delta \rate{E}_{\fincres} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$.
-After simplification, and using the definition
-$\gamma \equiv \gammaequation{}$
-to represent the nondimensional effect of device costs,
-rebound from income and respending effects can be written as
-%
-\begin{equation}
-  Re_{\incres} = \Reirequation{} \, . \tag{\ref{eq:Re_ir}}
-\end{equation}
-%
-Note that rebound from income only ($Re_i$) is obtained from Equation~\ref{eq:Re_ir} with $k = 1$,
-such that $Re_{ir} = k Re_i$.
-Rebound from respending only ($Re_r$) is given by $Re_r = (1 - \gamma) (k - 1) \pI$.
-Thus, income and respending rebound is given by 
-$Re_{ir} = Re_i + Re_r$.
 
 
 %------------------------------
