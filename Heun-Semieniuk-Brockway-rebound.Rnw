@@ -970,9 +970,15 @@ The following subsections explore these relationships.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Embodied energy effects ($Re_{emb}$)}
-\label{sec:embodied_effects}
+\subsection{Discussion}
+\label{sec:model_discussion}
 %++++++++++++++++++++++++++++++
+
+
+%------------------------------
+\subsubsection{Effect of embodied energy} 
+\label{sec:effect_of_embodied}
+%------------------------------
 
 Equation~\ref{eq:Re_tot} shows that
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
@@ -988,10 +994,10 @@ shorter device lifetimes ($\after{t} < \before{t}$)
 both increase embodied energy rebound.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Device cost effects ($\gamma$)}
-\label{sec:device_cost_effects}
-%++++++++++++++++++++++++++++++
+%------------------------------
+\subsubsection{Effect of device costs} 
+\label{sec:effect_of_device_costs}
+%------------------------------
 
 When costs for procuring, operating, maintaining, and disposing
 the energy efficient device
@@ -1039,10 +1045,10 @@ operations and maintenance costs and disposal costs
 can also affect respending-related indirect rebound.)
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Device-level rebound effects ($Re_{dev}$)}
-\label{sec:device_level_rebound_effects}
-%++++++++++++++++++++++++++++++
+%------------------------------
+\subsubsection{Effect of device-level rebound} 
+\label{sec:effect_of_device_level_rebound}
+%------------------------------
 
 While the effects of embodied energy and device costs on total rebound
 are straightforward and can be ascertained by inspection of Equation~\ref{eq:Re_tot},
@@ -1063,10 +1069,10 @@ Typically, $\pI < 1$, as shown in Section~\ref{sec:examples},
 so device-level rebound typically enhances total rebound.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Elasticity effects ($\epsilon$)}
-\label{sec:elasticity_effects}
-%++++++++++++++++++++++++++++++
+%------------------------------
+\subsubsection{Effect of elasticity} 
+\label{sec:effect_of_elasticity}
+%------------------------------
 
 Similar to device-level rebound, 
 the effect of service price elasticity of final energy demand ($\epsilon$)
@@ -1089,10 +1095,10 @@ a more-negative (less-negative) service price elasticity of final energy demand
 ($\epsilon$) leads to larger (smaller) rebound.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Multiplier, energy intensity, and energy price effects ($k$, $p_{\Ef}$, and $I_{\Ef}$)}
-\label{sec:k_I_p_effects}
-%++++++++++++++++++++++++++++++
+%------------------------------
+\subsubsection{Effect of economic parameters} 
+\label{sec:effect_of_economic_parameters}
+%------------------------------
 
 The third term of Equation~\ref{eq:Re_tot} shows that
 when $1 - Re_{dev}/k - \gamma > 0$,
@@ -1381,10 +1387,9 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
   $i$ & income \\
-  $ir$ & income and respending \\
   $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $OM$ & operation and maintenance costs \\
-  $r$ & respending \\
+  $p$ & productivity \\
   $s$ & service stage of the energy conversion chain \\
   \bottomrule
 \end{tabular}
