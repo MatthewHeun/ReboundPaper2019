@@ -276,7 +276,7 @@ beyond the device owner,
 but did not include it
 in his expressions or numeric estimates of rebound.
 And, he stopped short of obtaining explicit, symbolic expressions for
-rebound from embodied energy, substitution, and income effects.
+rebound from device-level, embodied energy, substitution, and income effects.
 
 Our approach has several important differences from the work of \Ta{} and \Ba{}.
 We include embodied energy effects, 
@@ -301,18 +301,19 @@ gathering several pieces hinted in previous papers
 into a new, unified, simple-to-understand, clearly derived model
 of direct, indirect, and macroeconomic rebound
 based on microeconomic fundamentals.
-The new model enables, via a case-study approach,
+We call our model the \name{} or the \shortname{} for short.
+The \shortname{} enables, via a case-study approach,
 assessment of
 the relative importance of several effects on total rebound, including, for the first time,
 embodied energy and device cost effects.
-And the model provides, for the first time,
-a way to understand economy-wide rebound (via a macroeconomic multiplier)
+And the \shortname{} provides, for the first time,
+a way to understand economy-wide rebound (via a productivity factor)
 in the context of microeconomic fundamentals.
 
 The rest of the paper proceeds as follows:
-the next section extends the \Bt{} model 
-to develop our new model.
-We also explicate the new model, demonstrating 
+the next section builds upon the \Bt{} model 
+to develop the \name{}.
+We also explicate the \shortname{}, demonstrating 
 it can be used to elucidate various rebound effects.
 Section~\ref{sec:examples} applies the new model to several energy efficeincy upgrades.
 Section~\ref{sec:discussion} discusses the results, and
@@ -324,15 +325,15 @@ Section~\ref{sec:conclusion} concludes.
 \label{sec:extended_framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-This section shows the derivation of the \name{}.
+This section derives the \name{}.
 We consider five rebound effects:
 %
 \begin{enumerate*}[label={(\arabic*)}]
 
+  \item embodied energy effects,
+
   \item device-level effects,
 
-  \item embodied energy effects,
-  
   \item substitution effects, 
   
   \item income effects, and 
@@ -347,11 +348,16 @@ substitution, and
 income effects are examples of direct rebound, and 
 the embodied energy effect is an example of indirect rebound.
 Both direct and indirect rebound are microeconomic in nature.
-The productivity effect is a macroeconomic rebound effect.
+Productivity effects are macroeconomic.
 
 We use, as our basis, the model of \Bt{},
-who considered only three effects: device-level, substitution, and income effects.
-Like \Ba{}, we assume a device (say, an automobile)
+who considered only three effects in his derivation and calculations:
+device-level, substitution, and income effects.%
+\footnote{
+  \Bt{} discussed embodied energy but didn't develop expressions for embodied energy rebound.
+  \Ba{} discussed a ``macroeconomic multiplier'' but did not include macroeconomic effects in his rebound calculations.
+}
+We assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}$ (in \$/MJ)
 to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle km/year)
@@ -360,7 +366,7 @@ The final energy price ($p_{\Ef}$) is assumed to be exogenous,
 and the final energy purchaser is a price-taker.
 Thus, $\after{p}_{\Ef} = \before{p}_{\Ef}$.%
 \footnote{
-  Relaxing the exogenous price assumption
+  Relaxing the exogenous final energy price assumption
   would require a full-economy model that is beyond the scope of this paper.
 }
 %
@@ -430,8 +436,8 @@ Thus,
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
 to final energy rates in the numerators and denominators of rebound expressions
-like Equation~\ref{eq:rebound_1}.
-(\Bt{} applied final-to-primary energy multipliers which divide out in rebound expressions, anyway.)
+derived from Equation~\ref{eq:rebound_1}.
+(\Bt{} applied final-to-primary energy multipliers, which divide out anyway.)
 
 
 %++++++++++++++++++++++++++++++
@@ -479,49 +485,6 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Device-level effect}
-\label{sec:device_level_effect}
-%++++++++++++++++++++++++++++++
-
-When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$),
-the service price decreases ($\after{p}_s < \before{p}_s$), and
-the quantity of service demanded is likely to increase ($\rateafter{q}_s > \ratebefore{q}_s$).
-The service price elasticity of final energy demand ($\epsilon$) quantifies these dynamics such that
-$\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
-A negative value for $\epsilon$ is expected,
-such that a decrease in service price ($p_s$) yields
-an increase in service consumption ($\rate{q}_s$).
-After invoking the exogenous final energy price assumption
-(i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
-and using $p_s = p_{\Ef}/\eta$,
-the new quantity demanded can be expressed in terms of service price elasticity of demand as
-$\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
-
-As quantity of service demanded increases,
-direct energy consumption is gained
-at the device at the efficiency of the upgraded device~($\after{\eta}$),
-such that
-$\rate{E}_{\fgain} = (\rateafter{q}_s - \ratebefore{q}) / \after{\eta}$.
-Using $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$ and
-$\rateafter{E}_{\fdir} = \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$,
-we find that
-$\rate{E}_{\fgain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right]
-                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$.
-If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
-If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
-
-$\rate{E}_{\fgain}$ represents energy savings taken back by the device-level effects.
-As such, $\rate{E}_{\fgain}$ is the source of device-level rebound ($Re_{dev}$).
-Applying Equation~\ref{eq:rebound_2} gives
-$Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
-After simplification, the expression for device-level rebound becomes
-%
-\begin{equation} \label{eq:Re_dev}
-  Re_{dev} = \Redevequation{} \, .
-\end{equation}
-
-
-%++++++++++++++++++++++++++++++
 \subsection{Embodied energy effect}
 \label{sec:embodied_energy_effect}
 %++++++++++++++++++++++++++++++
@@ -541,6 +504,9 @@ to obtain embodied energy rates, such that
 $\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$
 and $\rateafter{E}_{\femb} = \after{E}_{\femb} / \after{t}$.
 The change in embodied final energy due to $U$ (expressed as a rate) is given by
+$\Delta \rate{E}_{\femb} = \rateafter{E}_{\femb} - \ratebefore{E}_{\femb}$.
+After substitution and algebraic rearrangement, 
+the change in embodied energy rate due to $U$ can be expressed as
 %
 \begin{equation} \label{eq:delta_embodied}
   \Delta \rate{E}_{\femb} = \left( \frac{\after{E}_{\femb}}{\before{E}_{\femb}}
@@ -565,6 +531,50 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 
 
 %++++++++++++++++++++++++++++++
+\subsection{Device-level effect}
+\label{sec:device_level_effect}
+%++++++++++++++++++++++++++++++
+
+When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$),
+the service price decreases ($\after{p}_s < \before{p}_s$), and
+the quantity of service demanded is likely to increase ($\rateafter{q}_s > \ratebefore{q}_s$).
+The service price elasticity of final energy demand ($\epsilon$) quantifies these dynamics,
+such that
+$\rateafter{q}_s / \ratebefore{q}_s = \left( \after{p}_s/\before{p}_s \right)^\epsilon$.
+A negative value for $\epsilon$ is expected,
+such that a decrease in service price ($p_s$) yields
+an increase in service consumption ($\rate{q}_s$).
+After invoking the final energy price exogeneity assumption
+(i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
+and using $p_s = p_{\Ef}/\eta$,
+the new quantity demanded can be expressed in terms of service price elasticity of demand as
+$\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
+
+As quantity of service demanded increases,
+direct energy consumption is gained
+at the device at the efficiency of the upgraded device~($\after{\eta}$),
+such that
+$\rate{E}_{\fgain} = (\rateafter{q}_s - \ratebefore{q}) / \after{\eta}$.
+Using $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$ and
+$\rateafter{E}_{\fdir} = (\before{\eta}/\after{\eta}) \ratebefore{E}_{\fdir}$,
+we find that
+$\rate{E}_{\fgain} = \left[ \left( \before{\eta}/\after{\eta} \right)^\epsilon - 1  \right]
+                       \left( \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir}$.
+If $\before{\eta} = \after{\eta}$, $\rate{E}_{\fgain} = 0$, as expected.
+If $\epsilon = 0$, $\rate{E}_{\fgain} = 0$, as expected.
+
+$\rate{E}_{\fgain}$ represents energy savings taken back by device-level effects.
+As such, $\rate{E}_{\fgain}$ is the source of device-level rebound ($Re_{dev}$).
+Applying Equation~\ref{eq:rebound_2} gives
+$Re_{dev} = \rate{E}_{\fgain} / \left[ \left( 1 - \before{\eta}/\after{\eta} \right) \ratebefore{E}_{\fdir} \right]$.
+After simplification, the expression for device-level rebound becomes
+%
+\begin{equation} \label{eq:Re_dev}
+  Re_{dev} = \Redevequation{} \, .
+\end{equation}
+
+
+%++++++++++++++++++++++++++++++
 \subsection{Substitution effect}
 \label{sec:substitution_effect}
 %++++++++++++++++++++++++++++++
@@ -574,10 +584,10 @@ $U$ reduces the service price ($p_s$)
 leading to increased consumption of energy services provided by the device
 ($\rateafter{q}_s > \ratebefore{q}_s$).
 However, increased energy service consumption 
-implies an increased direct final energy cost for the device.
-The device owner's budget constraint means that  
+implies increased direct final energy cost for the device.
+The device owner's budget constraint requires that  
 increased direct final energy costs
-will be shifted from other expenditures elsewhere in the economy.
+will be shifted away from other expenditures elsewhere in the economy.
 The net energy change due to cost shifting 
 is called the substitution effect.
 Our approach to substitution effects is different from \Tt{}
@@ -591,7 +601,7 @@ Assuming that $\rate{C}_{\shift}$ reduces energy consumption
 by the energy intensity of the economy gives
 $\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} \pI$.
 
-The net substition effect
+The net substition effect is given by
 $\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{\floss}$.
 After substituting expressions for both
 $\rate{E}_{\fgain}$ and $\rate{E}_{\floss}$ 
@@ -610,7 +620,7 @@ $\Delta \rate{E}_{\fsub}$ represents, on net, the energy savings taken back by s
 Thus, Equation~\ref{eq:rebound_2} can be employed to write substitution-effect rebound as
 $Re_{sub} = (1 - \pI) \left[ \left( \frac{\before{\eta}}{\after{\eta}} \right)^\epsilon  - 1 \right]
                             / \left[ \left( \frac{\after{\eta}}{\before{\eta}} \right) - 1 \right]$.
-After simplification, net substitution rebound can be expressed as
+After simplification and use of Equation~\ref{eq:Re_dev}, net substitution rebound can be expressed as
 %
 \begin{equation} \label{eq:Re_sub}
   Re_{sub} = \Resubequation{} \, .
@@ -637,19 +647,19 @@ Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
 Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
 Our approach to income effects is similar in practice to \Bt{}
 who developed his model using a basket of $N$ other goods,
-but who, in his numeric estimates, also assumed that freed cash has
+but who, in his numeric estimates, also assumed that spent income has
 energy implications at the average energy intensity of the economy.
 Our approach is simpler than \Tt{}
 who used input-output techniques to assess 
 the energy implications of spending energy cost savings
 in the economy.
 
-To the device owner, energy cost savings come at a cost to 
+To the device owner, final energy cost savings come at a cost to 
 procure (capital cost), operate, maintain, and dispose 
-the energy-efficient device.
+the upgraded device.
 But it cost money to procure, operate, maintain, and dispose the original device, too.
-These device costs can be expressed as a rate ($\rate{C}_{dev}$), which is
-typically, but not always, higher for the upgraded device
+These device costs can be expressed as a rate ($\rateafter{C}_{dev}$ and $\ratebefore{C}_{dev}$, respectively),
+which is typically, but not always, higher for the upgraded device
 than the original device
 ($\rateafter{C}_{dev} > \ratebefore{C}_{dev}$).
 Our approach to capital and disposal costs is simlar to our approach to embodied energy, i.e.\
@@ -661,7 +671,7 @@ $\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \b
   Note that neither $\rateafter{C}_{OM}$ nor $\ratebefore{C}_{OM}$ include direct energy costs
   to operate the device.}
 %
-The change in device cost rate is given by
+The change in device cost rate due to $U$ is given by
 $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.%
 \footnote{
   We choose not to apply time-value-of-money considerations to the financial aspects of the \name{}.
@@ -669,8 +679,6 @@ $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.%
   This decision simplifies the derivation, provides consistency in the treatment of energy and money,
   and avoids questions about whether time valuation should be applied to \emph{energy} as well as money.
 }
-% After rearrangement, 
-% $\Delta \rate{C}_{dev} = (\rateafter{C}_{dev} / \ratebefore{C}_{dev} - 1) \ratebefore{C}_{dev}$.
 
 Freed cash ($FC$) is 
 the difference between the income rate and
@@ -678,9 +686,8 @@ the change in device cost rate, or net income.
 Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
 As shown by \citet{Antal:2014aa}, 
 it is reasonable to assume that 
-freed cash is spent in the economy at the average energy intensity of the economy.
-Thus, $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
-Thus, the change in final energy consumption due to income and respending can be written as
+freed cash is spent in the economy at the average energy intensity of the economy ($I_{\Ef}$).
+Thus, the change in the final energy consumption rate due to the income effect can be written as
 $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
 The discussion above yields
 %
@@ -713,29 +720,46 @@ After simplification, and using the definition
 $\gamma \equiv \gammaequation{}$
 to represent the
 ratio of device cost rate increase to expected energy cost savings,
-rebound from income and respending effects can be written as
+income effect rebound can be expressed as
 %
 \begin{equation} \label{eq:Re_i}
   Re_i = \Reiequation{} \, .
 \end{equation}
-
-$\gamma \equiv \gammaequation{}$ is the
+%
+Note that $\gamma$ is the
 ratio of device cost rate increase 
-to device-level expected energy cost savings.
-Note that $\gamma < 1$ is expected
+to expected device-level energy cost savings.
+$\gamma < 1$ is expected,
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
 
 
 %++++++++++++++++++++++++++++++
 \subsection{Productivity effect}
-\label{sec:placeholder_label}
+\label{sec:productivity_effect}
 %++++++++++++++++++++++++++++++
+
+**** 
+Note and question from Matt to Gregor:
+The passage from \Bt{p.~11} is as follows:
+``The magnitude of a macroeconomic multiplier for government expenditures is quite controversial, 
+though recent studies seem to suggest that it is probably not much above 1, 
+except in times of very high unemployment. 
+The multiplier in this case is somewhat different, however, 
+because it does not rely on expanding government expenditures and (generally associated) government debt. 
+This would be more akin to the macroeconomic multiplier that might result following a new discovery of a natural resource deposit.''
+So it seems that Borenstein \emph{also} realizes that this multiplier is not exactly like a Keynsian multiplier.
+Seems like we are in basic agreement with \Ba{} on this point, but 
+the text below is somewhat adversarial.
+Do you want to amend the discussion below to more fairly represent \Ba{}'s text?
+****
 
 The literature contains much discussion of the macroeconomic effects of
 the device owner's spending of freed cash.
-\Bt{} likens this to a ``multiplier'' effect,
-whereby the leftover purchasing power
+\Bt{p.~11} suggests the macroeconomic effects of freed cash are like a multiplier effect
+``more akin to the macroeconomic multiplier that might result 
+following a new discovery of a natural resource deposit.''
+In this approach, the device owner's leftover purchasing power
 acts like the multiplier from Keynesian theory.
 The idea runs as follows: with less than full utilisation of resources,
 the device owner spends freed cash on additional goods, thereby
@@ -800,9 +824,10 @@ there is chance that rather than increasing the rebound,
 a Keynsian ``macroeconomic'' effect may decrease rebound. 
 $U$ is a demand side, not supply side, shock.
 
-In fact, energy efficiency is a technological improvement, and 
+Indeed, energy efficiency is a technological improvement, and 
 empirical evidence supports the conceptual argument that technological improvements 
-that raise efficiency and reduce service price
+that raise efficiency ($\after{\eta} > \before{\eta}$) 
+and reduce service price ($\after{p}_s < \before{p}_s$)
 do not necessarily lead to short-run growth (i.e., in the same year). 
 Basu et al.\ (2006) **** need to incorporate reference into bib ****
 find that the contemporaneous change in output from an aggregate technology improvement is zero.
@@ -819,15 +844,18 @@ real income is changed by a drop in prices,
 because the energy service requires less energy input and hence is less costly to procure.%
 \footnote{
   But note that this drop in prices rules out any sticky-price explanation
-  for why output should stay constant and therefore one important rationalisation of Basu et al. of their results.
+  for why output should stay constant and therefore 
+  one important rationalisation of Basu et al. of their results. 
+  **** I don't understand the ``and therefore one important rational of their results portion of this sentence.
+  Clarify? ---MKH ****
 }
  
 It could be argued that the macroeconomic rebound 
 is also different from an aggregate technological shock
-as discussed by Basu et al. **** add reference *****
-$U$ is purely an energy-augmenting technical change, 
-moreover it can be very small relative to the macroeconomy. 
-For instance, if everyone in the US saved \$10 
+as discussed by Basu et al **** add reference ***** .
+$U$ is purely an energy-augmenting technical change;
+moreover $U$ can be very small relative to the macroeconomy. 
+For example, if everyone in the US saved \$10 
 on their annual energy bill by replacing incandescent lights with LED lights, 
 the resulting roughly \$3 billion in savings would be 
 roughly 0.015\% of GDP, not exactly a stimulus. 
@@ -838,8 +866,10 @@ The savings would also be significantly less than 1\% of utilites' revenue.%
 }
 Because the rebound effect even negates some of those energy savings,
 it could further be argued that the additional demand can be considered without negative consequences 
-in the utility sector (as perhaps the utility takes out a loan). 
-Under those circumstances, a multiplier effect might be a reasonable approximation 
+in the utility sector as, perhaps, the utility takes out a loan. 
+If the utility sector borrows to pay its employees,
+new money is created, and 
+a multiplier effect might be a reasonable approximation 
 to energy-augmenting technical change. 
 But a conceptually cleaner approach 
 takes Basu et al. **** add reference **** seriously 
@@ -855,10 +885,48 @@ we give its magnitude the symbol $k$ in our derivation.
 
 **** More here from Gregor about the magnitude of $k$. ****
 
+****
+MKH note to Gregor:
+We agreed to try splitting the productivity effect from the income effect
+in our narrative. 
+Now, I'm questioning that decision.
+I don't think it makes sense to have an income effect
+and an \emph{additional} productivity effect in which $0 \le k < \infty$.
+There is no ``income effect,'' per se!
+Or, more precisely, there is no ``income effect'' independent of macroeconomic dynamics!
+We claim that the device owner's spending of freed cash on other goods besides final energy
+is canceled out by the device owner's no longer spending money on final energy.
+Thus, the only rebound implications of the device-owner's freed cash is a macroeconomic effect.
+
+Seen in this light, we can now say that \Ba{}'s income effect is not an income effect at all!
+It is really a productivity effect with assumed magnitude 1.
+
+The argument I'm making here is a subtle one. 
+But I think it is aligned with our developing understanding of 
+the macroeconomic mechanisms at play here.
+
+So I propose a discussion about these subtleties at this point of the text.
+
+Do you agree?  
+
+If we make this change, I need to make some changes to the text.
+Our equation will become 
+
+$Re = Re_{emb} + Re_{sub} + Re_p$
+
+and the main equation will revert to its previous form (i.e., $k + 1$ terms will be replaced by $k$:
+
+$Re = Re_{emb} + Re_{dev} + \left( 1 - \gamma - \frac{Re_{dev}}{k} \right) \kpI$.
+
+What do you think? ---MKH
+****
+
+
+
 Because the productivity effect is driven by device owner income derived from energy cost savings, 
 we obtain an expression for productivity effect rebound
 by multiplying $Re_i$ by $k$. 
-Thus, 
+Thus,
 %
 \begin{equation} \label{eq:Re_p}
   Re_p = \Repequation{} \, .
@@ -876,7 +944,7 @@ Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_i$ + $Re_p$, or
   Re = \Reembequation{} + \Resubequation{} + \Reiequation{} + \Repequation{} \, .
 \end{equation}
 %
-After substituting and rearranging, we arrive at an expression
+After substituting and rearranging, we arrive at an equation
 for total rebound expressed in terms of
 embodied energy rebound~($Re_{emb}$),
 device-level rebound~($Re_{dev}$),
@@ -927,7 +995,7 @@ both increase embodied energy rebound.
 
 When costs for procuring, operating, maintaining, and disposing
 the energy efficient device
-($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_ir} and~\ref{eq:Re_tot})
+($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_i}--\ref{eq:Re_tot})
 go up (down),
 total rebound decreases (increases), because
 device costs reduce (increase) net freed cash available
@@ -938,7 +1006,7 @@ E.g., even if the capital cost of the upgraded device is larger than
 the capital cost of the original device,
 longer life for the upgraded device may outweigh capital costs
 leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
-which boosts $Re_{ir}$ in Equation~\ref{eq:Re_ir}
+which boosts $Re_{i}$ in Equation~\ref{eq:Re_i}
 and $Re$ in Equation~\ref{eq:Re_tot}.
 (This situation is not uncommon for lighting upgrades
 involving LED technology, as shown later.)
@@ -965,7 +1033,7 @@ the capital cost for the original device
 ($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
 assuming equal capital costs will tend to \emph{underestimate} $Re$.
 (Beyond that, it is not only capital costs that are important;
-Section~\ref{sec:income_effect_derivation} in the Appendix
+Section~\ref{sec:income_effect}
 shows that
 operations and maintenance costs and disposal costs
 can also affect respending-related indirect rebound.)
@@ -997,7 +1065,7 @@ so device-level rebound typically enhances total rebound.
 
 %++++++++++++++++++++++++++++++
 \subsection{Elasticity effects ($\epsilon$)}
-\label{sec:elasticity effects}
+\label{sec:elasticity_effects}
 %++++++++++++++++++++++++++++++
 
 Similar to device-level rebound, 
@@ -1242,6 +1310,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $G$ & income [\$] \\
   $I$ & energy intensity of economic activity [MJ/\$] \\
   $k$ & technology multiplier \\
+  $N$ & number of goods in a basket \\
   $p$ & price [\$] \\
   $q$ & quantity [--] \\
   $Re$ & rebound [--] \\
