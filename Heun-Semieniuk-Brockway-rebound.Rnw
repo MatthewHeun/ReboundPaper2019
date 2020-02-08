@@ -751,7 +751,7 @@ This would be more akin to the macroeconomic multiplier that might result follow
 So it seems that Borenstein \emph{also} realizes that this multiplier is not exactly like a Keynsian multiplier.
 Seems like we are in basic agreement with \Ba{} on this point, but 
 the text below is somewhat adversarial.
-Do you want to amend the discussion below to more fairly represent \Ba{}'s text?
+Do you want to amend the discussion below to more fairly represent \Ba{}'s views?
 ****
 
 The literature contains much discussion of the macroeconomic effects of
@@ -891,7 +891,7 @@ We agreed to try splitting the productivity effect from the income effect
 in our narrative. 
 Now, I'm questioning that decision.
 I don't think it makes sense to have an income effect
-and an \emph{additional} productivity effect in which $0 \le k < \infty$.
+and an \emph{additional} productivity effect for which $0 \le k < \infty$.
 There is no ``income effect,'' per se!
 Or, more precisely, there is no ``income effect'' independent of macroeconomic dynamics!
 We claim that the device owner's spending of freed cash on other goods besides final energy
@@ -899,7 +899,7 @@ is canceled out by the device owner's no longer spending money on final energy.
 Thus, the only rebound implications of the device-owner's freed cash is a macroeconomic effect.
 
 Seen in this light, we can now say that \Ba{}'s income effect is not an income effect at all!
-It is really a productivity effect with assumed magnitude 1.
+It is rather a productivity effect with assumed magnitude 1.
 
 The argument I'm making here is a subtle one. 
 But I think it is aligned with our developing understanding of 
