@@ -49,6 +49,16 @@
 \input{macros.tex}
 
 
+<<setup, echo = FALSE, message = FALSE, warning = FALSE>>=
+library(ggplot2)
+library(MacroGrowth)
+library(magrittr)
+library(openxlsx)
+library(rlang)
+library(scales)
+library(tibble)
+@
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \articletitle{Hiding in plain sight: MPC and its role in large, economy-wide rebound}
 
@@ -1131,6 +1141,88 @@ higher final energy intensity of the economy ($I_{\Ef}$).
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+<<case_study_calcs, echo = FALSE>>=
+
+# The next statement reads economic data from the file and converts it to 
+# variables in the global environment.
+# GDP, MPC, and TFC are all read here.
+# These variables are same for all energy efficiency projects.
+economic_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Economic data") %>% 
+  as.list()
+# economic_data[["k"]] <- economic_data[["MPC"]] / (1 - economic_data[["MPC"]])
+
+# Read the project data
+Heun_Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "EnergyEfficiencyData.xlsx"), sheet = "Project data") %>% 
+  tibble::as_tibble()
+ENGR333_Project_data <- openxlsx::read.xlsx(xlsxFile = file.path("data", "Group Wide Energy Input Sheet.xlsx"), sheet = "Heun Tab") %>% 
+  tibble::as_tibble()
+Project_data <- dplyr::bind_rows(Heun_Project_data, ENGR333_Project_data)
+
+# Add a column in Project_data for each item in the list of economic_data.
+for (i in 1:length(economic_data)) {
+  Project_data[[names(economic_data[i])]] <- economic_data[[i]]
+}
+# Delete the MPC column, as we will add a range of values next.
+Project_data[["MPC"]] <- NULL
+
+# Duplicate for different values of MPC
+MPC_vals <- c(0.95, 0.9, 0.85, 0.75)
+Project_data <- lapply(MPC_vals, function(mpc){
+  Project_data %>% 
+    dplyr::mutate(
+      MPC = mpc
+    )
+  }) %>% 
+  dplyr::bind_rows()
+
+# Perform calculations
+Project_data <- Project_data %>%
+  dplyr::mutate(
+    # Multiplier
+    k = 1 / (1 - MPC) - 1,
+    # Expected embodied energy cost at the device level [MJ/yr]
+    E_dot_cost_dev_emb = E_dot_emb_EE - E_dot_emb_base,
+    # Expected consumed energy savings at the device level [MJ/yr]
+    E_dot_sav_dev_dir_expected = E_dot_dir_base - E_dot_dir_EE,
+    # Implementation cost rate [$/yr]
+    C_dot_impl = C_dot_repl_EE - C_dot_repl_base,
+    # Expected device-level energy savings rate [MJ/yr]
+    E_dot_sav_dev_expected = E_dot_sav_dev_dir_expected - E_dot_cost_dev_emb,
+    # Actual device-level savings of consumed energy [MJ/yr]
+    E_dot_sav_dev_dir = (1 - Re_dev) * E_dot_sav_dev_dir_expected,
+    # Actual device-level energy savings rate [MJ/yr]
+    E_dot_sav_dev = E_dot_sav_dev_dir - E_dot_cost_dev_emb,
+    # Device-level net cost savings rate [$/yr]
+    C_dot_sav_dev_net = E_dot_sav_dev_dir * p_E + C_dot_impl,
+    # Energy intensity [MJ/$]
+    I = TFC / GDP,
+    # Rate of new demand for energy [MJ/yr]
+    E_dot_nd_EW = C_dot_sav_dev_net * k * I,
+    # Rate of net energy savings [MJ/yr]
+    E_dot_sav_EW_net = E_dot_sav_dev - E_dot_nd_EW,
+    # Expected unit cost of implementation [$/MJ]
+    c_impl = C_dot_impl / E_dot_sav_dev_dir_expected,
+    # Ratio of implementaion cost to energy price [-]
+    gamma = c_impl / p_E,
+    # Unit savings of the energy efficiency intervention [$/MJ]
+    s = p_E * (1 - gamma / (1 - Re_dev)),
+    # Ratio of embodied to expected consumed device-level energy savings
+    epsilon = E_dot_cost_dev_emb / E_dot_sav_dev_dir_expected,
+    # Economy-wide rebound
+    Re_EW = Re_dev + epsilon + (1 - Re_dev - gamma) * k * I * p_E, 
+    # Fractions (phi) of Re_EW for each component
+    phi_Re_dev = Re_dev / Re_EW,
+    phi_epsilon = epsilon / Re_EW,
+    phi_respend = ((1 - Re_dev - gamma) * k * I * p_E) / Re_EW,
+    # Rebound classification
+    rebound_type = dplyr::case_when(
+      Re_EW < 0 ~ "hyperconservation",
+      Re_EW >= 0 & Re_EW < 1 ~ "rebound",
+      TRUE ~ "backfire"
+    ),
+    rebound_type = factor(rebound_type, levels = c("backfire", "rebound", "hyperconservation"))
+  )
+@
 
 %++++++++++++++++++++++++++++++
 \subsection{Income and respending rebound}
@@ -1311,11 +1403,11 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \midrule
   $C$ & cost [\$] \\
   $E$ & energy [MJ] \\
-  $e$ & inverse of device efficiency ($\eta$); used by \Bt{}. \\
+  $e$ & inverse of final-energy-to-services efficiency ($\eta$); used by \Bt{}. \\
   $FC$ & freed cash [\$] \\
   $G$ & income [\$] \\
   $I$ & energy intensity of economic activity [MJ/\$] \\
-  $k$ & technology multiplier \\
+  $k$ & productivity multiplier \\
   $N$ & number of goods in a basket \\
   $p$ & price [\$] \\
   $q$ & quantity [--] \\
@@ -1588,6 +1680,23 @@ The match verifies the derivation of Equation~\ref{eq:Re_ir}.
 
 
 %++++++++++++++++++++++++++++++
+\subsection{Data for examples}
+\label{sec:examples_data}
+%++++++++++++++++++++++++++++++
+
+% Testing to get data into the paper. 
+% Not working yet.
+% Weird interaction with knitr is preventing this from working.
+% <<Examples_Table, results="asis">>=
+% Project_data %>%
+%   dplyr::filter(Source == "Heun", k == 3) %>%
+%   dplyr::select(Source, Re_dev) %>% 
+%   xtable::xtable() %>% 
+%   xtable::print.xtable()
+% @
+
+
+%++++++++++++++++++++++++++++++
 \subsection{Relationship between extended framework and microeconoic fundamentals}
 \label{sec:comparison_to_micro}
 %++++++++++++++++++++++++++++++
@@ -1617,6 +1726,9 @@ Place the acknowledgement text here
 %----------------------------------------------------------------------------------------
 
 \input{HSbib.tex}
+
+
+
 
 %----------------------------------------------------------------------------------------
 
