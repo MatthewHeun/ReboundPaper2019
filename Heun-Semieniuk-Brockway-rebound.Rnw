@@ -765,20 +765,11 @@ $\pI = \Sexpr{format(pI_electricity, digits = 3)}$.
 
 The effect of service price elasticity of final energy demand ($\epsilon$)
 on substitution rebound ($Re_{sub}$) is 
-similarly a function of the relationship between the product $\pI$ and 1.
-But under typical conditions%
-\footnote{
-  Typical conditions are%
-  \begin{enumerate*}[label={(\alph*)}]
-
-    \item $\epsilon < 0$,
-
-    \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$), and
-  
-    \item $0 < \pI < 1$.
-
-  \end{enumerate*}
-},
+similarly dependent upon the relationship between the product $\pI$ and 1.
+But under typical conditions of 
+$\epsilon < 0$,
+$\after{\eta} > \before{\eta}$, and
+$0 < \pI < 1$,
 a more-negative (less-negative) service price elasticity of final energy demand
 ($\epsilon$) leads to larger (smaller) substitution rebound.
 
