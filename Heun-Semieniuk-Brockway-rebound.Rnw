@@ -551,15 +551,6 @@ the change in embodied energy rate due to $U$ can be expressed as
   \frac{\before{t}}{\after{t}} - 1 \right) \ratebefore{E}_{\femb} \, .
 \end{equation}
 
-Typically, but not always,
-increases in energy efficiency are associated with increased device complexity
-and more embodied energy,
-such that $\after{E}_{\femb} > \before{E}_{\femb}$.
-However, if the upgraded device has longer life than the original device
-($\after{t} > \before{t}$),
-$\Delta \rate{E}_{\femb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device.
-
 $\Delta \rate{E}_{\femb}$ represents energy savings taken back due to embodied energy effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebound as
 %
@@ -571,12 +562,21 @@ Equation~\ref{eq:Re_tot_prelim} shows that
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
 and is independent of other rebound effects.
 
+Typically, but not always,
+increases in energy efficiency are associated with increased device complexity
+and more embodied energy,
+such that $\after{E}_{\femb} > \before{E}_{\femb}$.
+However, if the upgraded device has longer life than the original device
+($\after{t} > \before{t}$),
+$\Delta \rate{E}_{\femb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device.
+
 Equation~\ref{eq:Re_emb} shows that both
 increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
 and
 shorter device lifetimes ($\after{t} < \before{t}$)
 increase embodied energy rebound.
-Embodied energy rebound can be either positive or negative.
+But embodied energy rebound can be either positive or negative.
 When the embodied energy rate for a device
 goes up (down) due to $U$,
 total rebound also increases (decreases)
