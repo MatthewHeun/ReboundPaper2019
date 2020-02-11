@@ -430,12 +430,12 @@ just as any new technology to reduce input costs.
 \label{sec:preliminaries}
 %++++++++++++++++++++++++++++++
 
-Energy rebound for each effect $j$ (embodied energy, substitution, technology)
+Energy rebound for each rebound effect $j$ (embodied energy, substitution, technology)
 can be calculated by
 $Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
 where expected energy savings are quantified at the device level
 in the absence of all other effects 
-(embodied energy, substitution, income, and productivity).
+(embodied energy, substitution, and technology).
 Actual energy savings are given by
 $\mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
 Thus,
@@ -444,17 +444,19 @@ Thus,
   Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
 \end{equation}
 %
-Then, total rebound ($Re$) is given by 
+We define rebound at the final energy level, 
+because that is the point of energy purchase by the device owner.
+To simplify derivations, 
+we choose not to apply final-to-primary energy multipliers
+to final energy rates in the numerators and denominators of rebound expressions
+derived from Equation~\ref{eq:rebound_1};
+they divide out anyway.
+
+Total rebound ($Re$) is given by the sum of rebound from each effect:
 %
 \begin{equation} \label{eq:Re_tot_prelim}
   Re = Re_{emb} + Re_{sub} + Re_{tech} \, .
 \end{equation}
-
-To simplify derivations, 
-we choose not to apply final-to-primary energy multipliers
-to final energy rates in the numerators and denominators of rebound expressions
-derived from Equation~\ref{eq:rebound_1}.
-(\Bt{} applied final-to-primary energy multipliers, which divide out anyway.)
 
 
 %++++++++++++++++++++++++++++++
@@ -502,7 +504,8 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 %
 When $U$ leads to $\after{\eta} > \before{\eta}$ (as expected),
 the denominator of Equation~\ref{eq:rebound_2} is positive, and
-the sign of $Re_j$ is determined by the sign of the numerator, takeback$_j$.
+the sign of $Re_j$ is determined by the sign of the numerator, 
+namely $\mathrm{takeback}_j$.
 
 **** Pull discussions from later sections into derivation sections. ****
 
@@ -572,9 +575,9 @@ $\Delta \rate{E}_{\femb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device.
 
 Equation~\ref{eq:Re_emb} shows that both
-increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
+more embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
 and
-shorter device lifetimes ($\after{t} < \before{t}$)
+shorter device lifetime ($\after{t} < \before{t}$)
 increase embodied energy rebound.
 But embodied energy rebound can be either positive or negative.
 When the embodied energy rate for a device
@@ -583,12 +586,12 @@ total rebound also increases (decreases)
 by the same amount
 (but not usually by the same percentage).
 Whether $Re_{emb}$ is positive or negative is determined by the sign of 
-$(\after{E}_{emb}/\before{E}_{emb})(\before{t}/\after{t})$ - 1.
+$(\after{E}_{emb}/\before{E}_{emb})(\before{t}/\after{t}) - 1$.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Device-level effect}
-\label{sec:device_level_effect}
+\subsection{Substitution effect}
+\label{sec:substitution_effect}
 %++++++++++++++++++++++++++++++
 
 When a device is upgraded ($U$) to higher efficiency ($\after{\eta} > \before{\eta}$),
@@ -629,27 +632,11 @@ After simplification, the expression for device-level rebound becomes
   Re_{dev} = \Redevequation{} \, .
 \end{equation}
 
-
-%++++++++++++++++++++++++++++++
-\subsection{Substitution effect}
-\label{sec:substitution_effect}
-%++++++++++++++++++++++++++++++
-
-As discussed in Section~\ref{sec:device_level_effect} above,
-$U$ reduces the service price ($p_s$)
-leading to increased consumption of energy services provided by the device
-($\rateafter{q}_s > \ratebefore{q}_s$).
-However, increased energy service consumption 
-implies increased direct final energy cost for the device.
 The device owner's budget constraint requires that  
 increased direct final energy costs
 will be shifted away from other expenditures elsewhere in the economy.
 The net energy change due to cost shifting 
 is called the substitution effect.
-Our approach to substitution effects is different from \Tt{}
-who used input-output methods and cross-price elasticities to
-ascertain the energy cost of both substitution and income effects.
-Our approach to substitution effects is identical to \Bt{}.
 
 The reduction of spending elsewhere in the economy is given by 
 $\rate{C}_{\shift} = \rate{E}_{\fgain} p_{\Ef}$.
@@ -657,7 +644,7 @@ Assuming that $\rate{C}_{\shift}$ reduces energy consumption
 by the energy intensity of the economy gives
 $\rate{E}_{\floss} = \rate{C}_{\shift} I_{\Ef} = \rate{E}_{\fgain} \pI$.
 
-The net substition effect is given by
+The net substitution effect is given by
 $\Delta \rate{E}_{\fsub} = \rate{E}_{\fgain} - \rate{E}_{\floss}$.
 After substituting expressions for both
 $\rate{E}_{\fgain}$ and $\rate{E}_{\floss}$ 
@@ -681,6 +668,119 @@ After simplification and use of Equation~\ref{eq:Re_dev}, net substitution rebou
 \begin{equation} \label{eq:Re_sub}
   Re_{sub} = \Resubequation{} \, .
 \end{equation}
+
+While the effects of embodied energy on embodied energy rebound
+are straightforward and can be ascertained by inspection of Equation~\ref{eq:Re_emb},
+the effect of device-level rebound ($Re_{dev}$) and, therefore,
+on substitution rebound ($Re_{sub}$) 
+and, therefore, on overall rebound ($Re$),
+is less clear.
+Whether larger device-level rebound ($Re_{dev}$) increases or decreases overall rebound 
+is determined by the sign of $(1 - \pI)$.
+When $(\pI < 1)$, larger device level rebound ($Re_{dev}$) will serve to increase overall rebound.
+On the other hand, when $(\pI > 1)$, larger device level rebound ($Re_{dev}$) will serve to decrease overall rebound.
+
+The product $\pI$ provides a window on the economy,
+and a quick analysis provides a constraint on its value.
+When any well-functioning economy generates profits, 
+the value of its output exceeds the costs of its inputs.
+Energy is one input to an economy.
+Thus, we would expect the value of the outputs of an economy 
+to exceed the cost of energy to create its outputs.
+The term $1 / I_{\Ef}$ represents the economic value created by an economy
+per MJ of final energy consumed by it, and
+$p_{\Ef}$ is the cost of energy per MJ.
+Thus, we expect $1 / I_{\Ef} > p_{\Ef}$.
+Rearranging gives $\pI < 1$.
+Because both $p_{\Ef}$ and $I_{\Ef}$ are positive, 
+we expect $0 < \pI < 1$
+for any well-functioning economy.
+Thus, increases in device-level rebound ($Re_{dev}$)
+will serve to increase substitution rebound, 
+but not in 1:1 proportions,
+as $0 < (1 - \pI) < 1$ is expected.
+
+<<Conversion_Factors, echo=FALSE>>=
+PJ_per_Mtoe <- 41.868
+MJ_per_Mtoe <- PJ_per_Mtoe * 10^9 # MJ/PJ
+J_per_MJ <- 10^6
+E_content_gasoline_BTU_per_gallon <- 114000
+J_per_BTU <- 1055.06 # J/BTU
+@
+
+<<Energy_Intensity, echo=FALSE>>=
+# TFC of the US economy, 2017. From https://www.iea.org/sankey/
+TFC_US_2017_Mtoe <- 1521
+TFC_US_2017_MJ <- TFC_US_2017_Mtoe * MJ_per_Mtoe
+# GDP of the US economy, 2017. From https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=2#reqid=19&step=2&isuri=1&1921=survey
+GDP_US_2017_USD <- 19519424 * 10^6 # USD
+# Final energy intensity
+I_Ef_US_2017 <- TFC_US_2017_MJ / GDP_US_2017_USD
+@
+
+It is instructive to calculate the product $\pI$ under typical conditions.
+The average energy intensity of the economy ($I_{\Ef}$) is independent of energy carrier. 
+In 2017, total final energy consumption in the US was
+\Sexpr{TFC_US_2017_Mtoe}~Mtoe \citep{IEA2020:sankey} or
+\Sexpr{sfsmisc::pretty10exp(TFC_US_2017_MJ, digits = 4, lab.type = "latex", lab.sep = "times")}~MJ, and
+the size of the US economy was
+\Sexpr{sfsmisc::pretty10exp(GDP_US_2017_USD, digits = 4, lab.type = "latex", lab.sep = "times")}~USD \citep{BEA:2020}.
+Thus, the final energy intensity of the US economy in 2017 was
+$I_{\Ef}$ =
+\Sexpr{format(I_Ef_US_2017, digits = 4)} MJ/USD.
+
+<<Energy_Prices, echo=FALSE>>=
+# Gasoline price in 2017, from US EIA. From https://www.eia.gov/todayinenergy/detail.php?id=34392
+p_Ef_gasoline_2017_USD_per_gallon <- 2.41
+E_content_gasoline_MJ_per_gallon <- E_content_gasoline_BTU_per_gallon * J_per_BTU / J_per_MJ
+p_Ef_gasoline_2017_USD_per_MJ <- p_Ef_gasoline_2017_USD_per_gallon / E_content_gasoline_MJ_per_gallon
+pI_gasoline <- p_Ef_gasoline_2017_USD_per_MJ * I_Ef_US_2017
+
+# Electricity price in 2017, from US EIA.  From Table 2.4 at https://www.eia.gov/electricity/annual/html/epa_01_02.html
+p_Ef_electricity_2017_USD_per_kWhr <- 10.48 / 100 # Original is in cents/kW-hr
+E_content_electricity_MJ_per_kWhr <- 3.6
+p_Ef_electricity_2017_USD_per_MJ <- p_Ef_electricity_2017_USD_per_kWhr / E_content_electricity_MJ_per_kWhr
+pI_electricity <- p_Ef_electricity_2017_USD_per_MJ * I_Ef_US_2017
+@
+
+Final energy price ($p_{\Ef}$) varies by energy carrier.
+In 2017, the average price of gasoline in the US was
+\Sexpr{p_Ef_gasoline_2017_USD_per_gallon}~USD/gallon \citep{EIA:2018a}.
+Given that there are
+\Sexpr{format(E_content_gasoline_BTU_per_gallon, big.mark = ",")} BTU/gallon and
+\Sexpr{J_per_BTU} J/BTU,
+the price of gasoline is
+\Sexpr{format(p_Ef_gasoline_2017_USD_per_MJ, digits = 4)} USD/MJ.
+For energy efficiency upgrades to devices that consume gasoline,
+$\pI = \Sexpr{format(pI_gasoline, digits = 3)}$.
+
+In 2017, the averge price of electricity in the US was
+\Sexpr{format(p_Ef_electricity_2017_USD_per_kWhr, digits = 4)} USD/kW-hr \citep{EIA:2020}.
+Given that there are
+\Sexpr{E_content_electricity_MJ_per_kWhr} MJ/kW-hr,
+the price of electricity is
+\Sexpr{format(p_Ef_electricity_2017_USD_per_MJ, digits = 4)} USD/MJ.
+For energy efficiency upgrades to devices that consume electricity,
+$\pI = \Sexpr{format(pI_electricity, digits = 3)}$.
+
+The effect of service price elasticity of final energy demand ($\epsilon$)
+on substitution rebound ($Re_{sub}$) is 
+similarly a function of the relationship between the product $\pI$ and 1.
+But under typical conditions%
+\footnote{
+  Typical conditions are%
+  \begin{enumerate*}[label={(\alph*)}]
+
+    \item $\epsilon < 0$,
+
+    \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$), and
+  
+    \item $0 < \pI < 1$.
+
+  \end{enumerate*}
+},
+a more-negative (less-negative) service price elasticity of final energy demand
+($\epsilon$) leads to larger (smaller) substitution rebound.
 
 
 %++++++++++++++++++++++++++++++
@@ -1094,23 +1194,7 @@ can also affect respending-related indirect rebound.)
 \label{sec:effect_of_device_level_rebound}
 %------------------------------
 
-While the effects of embodied energy and device costs on total rebound
-are straightforward and can be ascertained by inspection of Equation~\ref{eq:Re_tot},
-the effect of device-level rebound ($Re_{dev}$) is less clear,
-as $Re_{dev}$ appears in two terms with the opposite sense.
-The first instance of $Re_{dev}$ (in the second term of the right side of Equation~\ref{eq:Re_tot})
-enhances total rebound directly.
-The second instance of $Re_{dev}$ (in the third term of the right side of Equation~\ref{eq:Re_tot})
-reduces total rebound,
-indicating that, as observed by \Tt{},
-income effect rebound is inversely related to device-level rebound.
-The inverse relationship arises because energy cost savings taken back by device-level rebound
-cannot be spent in the economy, thereby reducing rebound from the income effect.
-Which effect dominates on net is shown by Equation~\ref{eq:Re_sub}:
-device-level rebound
-enhances (reduces) total rebound when the product $\pI$ is less than (greater than) 1.
-Typically, $\pI < 1$, as shown in Section~\ref{sec:examples}, 
-so device-level rebound typically enhances total rebound.
+
 
 
 %------------------------------
@@ -1118,25 +1202,7 @@ so device-level rebound typically enhances total rebound.
 \label{sec:effect_of_elasticity}
 %------------------------------
 
-Similar to device-level rebound, 
-the effect of service price elasticity of final energy demand ($\epsilon$)
-on total rebound ($Re$) is 
-confounded by the relationship between the product $\pI$ and 1.
-But under typical conditions%
-\footnote{
-  Typical conditions are%
-  \begin{enumerate*}[label={(\alph*)}]
 
-    \item $\epsilon < 0$,
-
-    \item $U$ increases final-energy-to-service efficiency ($\after{\eta} > \before{\eta}$), and
-  
-    \item $0 < \pI < 1$ (see Section~\ref{sec:examples} below).
-
-  \end{enumerate*}
-},
-a more-negative (less-negative) service price elasticity of final energy demand
-($\epsilon$) leads to larger (smaller) rebound.
 
 
 %------------------------------
@@ -1276,91 +1342,7 @@ is obtained when
 %
 Under these conditions, income effect rebound (Equation~\ref{eq:Re_ir})
 simplifies to $Re_i = \pI$.
-The product $\pI$ provides a window on the economy,
-and clear thinking 
-provides a constraint on its value.
 
-When any well-functioning economy generates profits, 
-the value of its output exceeds the costs of its inputs.
-Energy is one input to an economy.
-Thus, we would expect the value created by an economy 
-to exceed the cost of energy to create its outputs.
-The term $1 / I_{\Ef}$ represents the economic value created by an economy
-per MJ of final energy consumed by it, and
-$p_{\Ef}$ is the cost of energy per MJ.
-Thus, we expect $1 / I_{\Ef} > p_{\Ef}$.
-Rearranging gives $\pI < 1$.
-Thus, we expect $\pI < 1$
-for any well-functioning economy.
-
-<<Conversion_Factors, echo=FALSE>>=
-PJ_per_Mtoe <- 41.868
-MJ_per_Mtoe <- PJ_per_Mtoe * 10^9 # MJ/PJ
-J_per_MJ <- 10^6
-E_content_gasoline_BTU_per_gallon <- 114000
-J_per_BTU <- 1055.06 # J/BTU
-@
-
-<<Energy_Intensity, echo=FALSE>>=
-# TFC of the US economy, 2017. From https://www.iea.org/sankey/
-TFC_US_2017_Mtoe <- 1521
-TFC_US_2017_MJ <- TFC_US_2017_Mtoe * MJ_per_Mtoe
-# GDP of the US economy, 2017. From https://apps.bea.gov/iTable/iTable.cfm?reqid=19&step=2#reqid=19&step=2&isuri=1&1921=survey
-GDP_US_2017_USD <- 19519424 * 10^6 # USD
-# Final energy intensity
-I_Ef_US_2017 <- TFC_US_2017_MJ / GDP_US_2017_USD
-@
-
-It is instructive to calculate the product $\pI$ under typical conditions.
-The average energy intensity of the economy ($I_{\Ef}$) is independent of energy carrier. 
-In 2017, total final energy consumption in the US was
-\Sexpr{TFC_US_2017_Mtoe}~Mtoe \citep{IEA2020:sankey} or
-\Sexpr{sfsmisc::pretty10exp(TFC_US_2017_MJ, digits = 4, lab.type = "latex", lab.sep = "times")}~MJ, and
-the size of the US economy was
-\Sexpr{sfsmisc::pretty10exp(GDP_US_2017_USD, digits = 4, lab.type = "latex", lab.sep = "times")}~USD \citep{BEA:2020}.
-Thus, the final energy intensity of the US economy in 2017 was
-$I_{\Ef}$ =
-\Sexpr{format(I_Ef_US_2017, digits = 4)} MJ/USD.
-
-<<Energy_Prices, echo=FALSE>>=
-# Gasoline price in 2017, from US EIA. From https://www.eia.gov/todayinenergy/detail.php?id=34392
-p_Ef_gasoline_2017_USD_per_gallon <- 2.41
-E_content_gasoline_MJ_per_gallon <- E_content_gasoline_BTU_per_gallon * J_per_BTU / J_per_MJ
-p_Ef_gasoline_2017_USD_per_MJ <- p_Ef_gasoline_2017_USD_per_gallon / E_content_gasoline_MJ_per_gallon
-pI_gasoline <- p_Ef_gasoline_2017_USD_per_MJ * I_Ef_US_2017
-
-# Electricity price in 2017, from US EIA.  From Table 2.4 at https://www.eia.gov/electricity/annual/html/epa_01_02.html
-p_Ef_electricity_2017_USD_per_kWhr <- 10.48 / 100 # Original is in cents/kW-hr
-E_content_electricity_MJ_per_kWhr <- 3.6
-p_Ef_electricity_2017_USD_per_MJ <- p_Ef_electricity_2017_USD_per_kWhr / E_content_electricity_MJ_per_kWhr
-pI_electricity <- p_Ef_electricity_2017_USD_per_MJ * I_Ef_US_2017
-@
-
-Final energy price ($p_{\Ef}$) varies by energy carrier.
-In 2017, the average price of gasoline in the US was
-\Sexpr{p_Ef_gasoline_2017_USD_per_gallon}~USD/gallon \citep{EIA:2018a}.
-Given that there are
-\Sexpr{format(E_content_gasoline_BTU_per_gallon, big.mark = ",")} BTU/gallon and
-\Sexpr{J_per_BTU} J/BTU,
-the price of gasoline is
-\Sexpr{format(p_Ef_gasoline_2017_USD_per_MJ, digits = 4)} USD/MJ.
-For energy efficiency upgrades to devices that consume gasoline,
-a quick estimate for income effect rebound is
-$Re_i \approx \pI$ =
-\Sexpr{format(pI_gasoline, digits = 3)} or 
-\Sexpr{format(pI_gasoline * 100, digits = 3)} \%.
-
-In 2017, the averge price of electricity in the US was
-\Sexpr{format(p_Ef_electricity_2017_USD_per_kWhr, digits = 4)} USD/kW-hr \citep{EIA:2020}.
-Given that there are
-\Sexpr{E_content_electricity_MJ_per_kWhr} MJ/kW-hr,
-the price of electricity is
-\Sexpr{format(p_Ef_electricity_2017_USD_per_MJ, digits = 4)} USD/MJ.
-For energy efficiency upgrades to devices that consume electricity,
-a quick estimate for income effect rebound is
-$Re_i \approx \pI$ =
-\Sexpr{format(pI_electricity, digits = 3)} or
-\Sexpr{format(pI_electricity * 100, digits = 3)} \%.
 
 Income \emph{and} respending rebound is found by multiplying $Re_i$ by $k$,
 such that $Re_{ir} = k Re_i$.
