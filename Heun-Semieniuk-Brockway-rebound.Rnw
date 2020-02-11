@@ -371,7 +371,7 @@ We assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}$ (in \$/MJ)
 to provide a rate of energy service $\ratebefore{q}_s$ (in vehicle km/year)
-with final-energy-to-service efficiency $\before{\eta}$ (in km/liter).
+with final-energy-to-service efficiency $\before{\eta}$ (in km/MJ).
 The final energy price ($p_{\Ef}$) is assumed to be exogenous,
 and the final energy purchaser is a price-taker.
 Thus, $\after{p}_{\Ef} = \before{p}_{\Ef}$.%
@@ -492,6 +492,21 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \begin{equation} \label{eq:rebound_2}
   Re_j = \frac{\mathrm{takeback}_j}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
 \end{equation}
+
+
+**** Pull discussions from later sections into derivation sections. ****
+
+**** Consider ``technology rebound'' and ``technology factor'' 
+instead of ``productivity,'' following van Benthem. ****
+
+**** GS says following is difficult from substitution effect onward. 
+Consider adding more steps? ****
+
+**** Collapse device-level and substitution effect into one section ****
+
+**** Eliminate references to B in the derivations. ****
+
+
 
 
 %++++++++++++++++++++++++++++++
