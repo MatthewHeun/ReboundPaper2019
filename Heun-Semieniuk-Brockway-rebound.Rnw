@@ -430,7 +430,8 @@ just as any new technology to reduce input costs.
 \label{sec:preliminaries}
 %++++++++++++++++++++++++++++++
 
-Energy rebound for each effect $j \in [1, 5]$ can be calculated by
+Energy rebound for each effect $j$ (embodied energy, substitution, technology)
+can be calculated by
 $Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
 where expected energy savings are quantified at the device level
 in the absence of all other effects 
@@ -441,6 +442,12 @@ Thus,
 %
 \begin{equation} \label{eq:rebound_1}
   Re_j = \frac{\mathrm{takeback}_j}{\mathrm{expected \, energy \, savings}} \, .
+\end{equation}
+%
+Then, total rebound ($Re$) is given by 
+%
+\begin{equation} \label{eq:Re_tot_prelim}
+  Re = Re_{emb} + Re_{sub} + Re_{tech} \, .
 \end{equation}
 
 To simplify derivations, 
@@ -492,7 +499,10 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 \begin{equation} \label{eq:rebound_2}
   Re_j = \frac{\mathrm{takeback}_j}{\left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir}} \, .
 \end{equation}
-
+%
+When $U$ leads to $\after{\eta} > \before{\eta}$ (as expected),
+the denominator of Equation~\ref{eq:rebound_2} is positive, and
+the sign of $Re_j$ is determined by the sign of the numerator, takeback$_j$.
 
 **** Pull discussions from later sections into derivation sections. ****
 
@@ -556,6 +566,24 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembequation{} \, .
 \end{equation}
+
+Equation~\ref{eq:Re_tot_prelim} shows that
+embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
+and is independent of other rebound effects.
+
+Equation~\ref{eq:Re_emb} shows that both
+increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
+and
+shorter device lifetimes ($\after{t} < \before{t}$)
+increase embodied energy rebound.
+Embodied energy rebound can be either positive or negative.
+When the embodied energy rate for a device
+goes up (down) due to $U$,
+total rebound also increases (decreases)
+by the same amount
+(but not usually by the same percentage).
+Whether $Re_{emb}$ is positive or negative is determined by the sign of 
+$(\after{E}_{emb}/\before{E}_{emb})(\before{t}/\after{t})$ - 1.
 
 
 %++++++++++++++++++++++++++++++
@@ -1008,18 +1036,6 @@ The following subsections explore these relationships.
 \label{sec:effect_of_embodied}
 %------------------------------
 
-Equation~\ref{eq:Re_tot} shows that
-embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
-and is independent of device-level rebound.
-When the embodied energy rate for a device
-goes up (down) due to $U$,
-total rebound also increases (decreases)
-by the same amount.
-Equation~\ref{eq:Re_emb} shows that
-increasing embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
-and
-shorter device lifetimes ($\after{t} < \before{t}$)
-both increase embodied energy rebound.
 
 
 %------------------------------
