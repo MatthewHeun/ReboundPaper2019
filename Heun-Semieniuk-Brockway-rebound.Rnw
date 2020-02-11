@@ -496,6 +496,9 @@ Thus Equation~\ref{eq:rebound_1} can be rewritten as
 
 **** Pull discussions from later sections into derivation sections. ****
 
+**** Say that embodied energy rebound could easily be negative, because
+$\Delta \rate{E}_{\femb}$ could be negative
+
 **** Consider ``technology rebound'' and ``technology factor'' 
 instead of ``productivity,'' following van Benthem. ****
 
