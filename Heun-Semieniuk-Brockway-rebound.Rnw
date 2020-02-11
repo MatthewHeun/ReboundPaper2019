@@ -880,6 +880,76 @@ $\gamma < 1$ is expected,
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
 
+When costs for procuring, operating, maintaining, and disposing
+the energy efficient device
+($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_i}--\ref{eq:Re_tot})
+go up (down),
+total rebound decreases (increases), because
+device costs reduce (increase) net freed cash available
+for spending in the economy.
+It is important to note that the device cost rate
+may go up \emph{or} down in response to $U$.
+E.g., even if the capital cost of the upgraded device is larger than
+the capital cost of the original device,
+longer life for the upgraded device may outweigh capital costs
+leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
+which boosts $Re_{i}$ in Equation~\ref{eq:Re_i}
+and $Re$ in Equation~\ref{eq:Re_tot}.
+(This situation is not uncommon for lighting upgrades
+involving LED technology, as shown later.)
+Thus, device cost effects may lead to spending-related indirect energy rebound
+\emph{independent of} device-level energy cost savings.
+
+In this respect, we see that \Tapp{} assumption of identical capital costs
+for the original and upgraded devices
+closes off the possibility of spending-related indirect rebound
+due to device cost savings.
+Furthermore, assuming identical capital costs
+for the original and upgraded devices
+does not necessarily provide an upper bound on indirect rebound effects
+as \citet[p.~200]{Thomas:2013aa} claimed.
+Equation~\ref{eq:Re_tot} shows that
+assuming identical capital costs
+for the original and upgraded devices
+provides an upper bound on $Re$
+if and only if the capital cost of the upgraded device is larger than
+the capital cost for the original device
+($\rateafter{C}_{cap} > \ratebefore{C}_{cap}$).
+When the capital cost for the upgraded device is less than
+the capital cost for the original device
+($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
+assuming equal capital costs will tend to \emph{underestimate} $Re$.
+(Beyond that, it is not only capital costs that are important;
+Section~\ref{sec:income_effect}
+shows that
+operations and maintenance costs and disposal costs
+can also affect respending-related indirect rebound.)
+
+The third term of Equation~\ref{eq:Re_tot} shows that
+when $1 - Re_{dev}/k - \gamma > 0$,
+total energy rebound is enhanced by
+%
+\begin{enumerate*}[label={(\alph*)}]
+
+  \item a larger multiplier ($k$) due to enhanced respending in the economy,
+
+  \item higher energy prices ($p_{\Ef}$), as greater energy cost savings from $U$ are spent in the economy, and
+
+  \item higher final energy intensity of the economy ($I_{\Ef}$), as respent energy cost savings demand additional energy in the economy.
+
+\end{enumerate*}
+%
+As discussed above,
+it is expected that $1 - \gamma > 0$,
+else $U$ would not be expected to be economic by the device owner.
+If device-level rebound ($Re_{dev}$) is not too large, 
+$1 - Re_{dev}/k - \gamma$ will also be positive. 
+If, unexpectedly, device-level rebound is so large that 
+$1 - Re_{dev}/k - \gamma < 0$,
+total energy rebound will be reduced by a larger multiplier ($k$),
+higher energy prices ($p_{\Ef}$), and
+higher final energy intensity of the economy ($I_{\Ef}$).
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Productivity effect}
@@ -1134,50 +1204,7 @@ The following subsections explore these relationships.
 \label{sec:effect_of_device_costs}
 %------------------------------
 
-When costs for procuring, operating, maintaining, and disposing
-the energy efficient device
-($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_i}--\ref{eq:Re_tot})
-go up (down),
-total rebound decreases (increases), because
-device costs reduce (increase) net freed cash available
-for spending in the economy.
-It is important to note that the device cost rate
-may go up \emph{or} down in response to $U$.
-E.g., even if the capital cost of the upgraded device is larger than
-the capital cost of the original device,
-longer life for the upgraded device may outweigh capital costs
-leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
-which boosts $Re_{i}$ in Equation~\ref{eq:Re_i}
-and $Re$ in Equation~\ref{eq:Re_tot}.
-(This situation is not uncommon for lighting upgrades
-involving LED technology, as shown later.)
-Thus, device cost effects may lead to spending-related indirect energy rebound
-\emph{independent of} device-level energy cost savings.
 
-In this respect, we see that \Tapp{} assumption of identical capital costs
-for the original and upgraded devices
-closes off the possibility of spending-related indirect rebound
-due to device cost savings.
-Furthermore, assuming identical capital costs
-for the original and upgraded devices
-does not necessarily provide an upper bound on indirect rebound effects
-as \citet[p.~200]{Thomas:2013aa} claimed.
-Equation~\ref{eq:Re_tot} shows that
-assuming identical capital costs
-for the original and upgraded devices
-provides an upper bound on $Re$
-if and only if the capital cost of the upgraded device is larger than
-the capital cost for the original device
-($\rateafter{C}_{cap} > \ratebefore{C}_{cap}$).
-When the capital cost for the upgraded device is less than
-the capital cost for the original device
-($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
-assuming equal capital costs will tend to \emph{underestimate} $Re$.
-(Beyond that, it is not only capital costs that are important;
-Section~\ref{sec:income_effect}
-shows that
-operations and maintenance costs and disposal costs
-can also affect respending-related indirect rebound.)
 
 
 %------------------------------
@@ -1201,30 +1228,7 @@ can also affect respending-related indirect rebound.)
 \label{sec:effect_of_economic_parameters}
 %------------------------------
 
-The third term of Equation~\ref{eq:Re_tot} shows that
-when $1 - Re_{dev}/k - \gamma > 0$,
-total energy rebound is enhanced by
-%
-\begin{enumerate*}[label={(\alph*)}]
 
-  \item a larger multiplier ($k$) due to enhanced respending in the economy,
-
-  \item higher energy prices ($p_{\Ef}$), as greater energy cost savings from $U$ are spent in the economy, and
-
-  \item higher final energy intensity of the economy ($I_{\Ef}$), as respent energy cost savings demand additional energy in the economy.
-
-\end{enumerate*}
-%
-As discussed above,
-it is expected that $1 - \gamma > 0$,
-else $U$ would not be expected to be economic by the device owner.
-If device-level rebound ($Re_{dev}$) is not too large, 
-$1 - Re_{dev}/k - \gamma$ will also be positive. 
-If, unexpectedly, device-level rebound is so large that 
-$1 - Re_{dev}/k - \gamma < 0$,
-total energy rebound will be reduced by a larger multiplier ($k$),
-higher energy prices ($p_{\Ef}$), and
-higher final energy intensity of the economy ($I_{\Ef}$).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
