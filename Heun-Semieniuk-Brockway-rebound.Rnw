@@ -297,6 +297,18 @@ We include non-energy operations and maintenance costs and disposal costs,
 whereas neither \Ta{} nor \Ba{} included them.
 We incorporate a macroeconomic multiplier to account for rebound effects in the broader economy,
 whereas \Ta{} did not include these effects and \Ba{} only mentioned them.
+We also clear up an important misconception about what has been called 
+macroeconomic ``multiplier" effect by \Bp{}
+and picked up in subsequent reviews \citep{Gillingham:2015aa, Gillingham2016a, Lange2019}.
+We show that this concept is inapplicable to the rebound problem, 
+when understood like a Keynesian multiplier. 
+Instead we suggest that a different economic growth effect from higher efficiency 
+is to be expected which does not, however, 
+operate like a multiplier. 
+Instead it acts on economic growth like other productivity growth, 
+via the supply side, as factor-augmenting technological change that cheapens production. 
+We call it the productivity effect.
+
 And we develop explicit, symbolic expressions for rebound,
 whereas \Ba{} did not.
 
@@ -971,136 +983,241 @@ the text below is somewhat adversarial.
 Do you want to amend the discussion below to more fairly represent \Ba{}'s views?
 ****
 
-The literature contains much discussion of the macroeconomic effects of
-the device owner's spending of freed cash.
-\Bt{p.~11} suggests the macroeconomic effects of freed cash are like a multiplier effect
-``more akin to the macroeconomic multiplier that might result 
-following a new discovery of a natural resource deposit.''
-In this approach, the device owner's leftover purchasing power
-acts like the multiplier from Keynesian theory.
-The idea runs as follows: with less than full utilisation of resources,
-the device owner spends freed cash on additional goods, thereby
-increasing effective demand,
-putting additional resources to work, and
-raising output from the economy as a whole.
-The increased output requires additional energy inputs,
-thereby boosting rebound beyond the level expected
-if the device owner's spending were the only spending considered.
-With a Keynsian multiplier of, say, 3,
-every \$1 of freed cash yields
-\$2 of additional purchases that require energy inputs.
-With a large value for the Keynsian multiplier,
-macroeconomic rebound effects could be significant.%
+Another macroeconomic rebound effect according to \Bt{}
+is a ``multiplier'' effect, 
+whereby the leftover purchasing power that the energy consumer has, 
+which is typically analyzed only as an indirect rebound effect, 
+acts like a spending multiplier from Keynesian theory. 
+The idea runs as follows: 
+with less than full utilization of resources, 
+the consumer spends part of the leftover money on additional goods, 
+i.e.\ raises effective demand, 
+puts additional resources to work, and, hence,
+raises output which requires additional energy inputs. 
+Several of these spending rounds occur,
+raising the rebound to a higher level than would have been the case
+had we only considered the effects of the consumer's re-spending. 
+With a multiplier of, say, 3, 
+not only is there an indirect rebound effect but also two additional dollars 
+that purchase goods and services which, in turn, require energy inputs.
+The multiplier rebound effect could be significant.
+This idea has also been promulgated by \citet{Gillingham:2015aa,Gillingham2016a,Lange2019}, 
+who cite \Ba{}.%
 \footnote{
-  A Keynsian multiplier has also been proposed by
-  \citet{Gillingham2016a} and \citet{Gillingham2016b}, who cite \Bt{}.
-  Interestingly, \citet{VanBenthem2015} cites \Bt{} and discusses
-  the macroeconomic rebound effect but does not refer to a Keynsian multiplier.
+  Interestingly, \citet{VanBenthem2015} cites \Ba{} and discusses the macroeconomic rebound effect 
+  but does not refer to the multiplier.
 }
 
-However, we believe the invocation of a Keynsian multiplier 
-to describe macroeconomic energy rebound is fallacious.
-The Keynesian multiplier is appropriate when \emph{additional} purchasing power
-is injected into the economy,
-such as when
-%
-\begin{enumerate*}[label={(\alph*)}]
+However, the invocation of a multiplier effect being caused directly 
+by the money savings of the consumer 
+is fallacious in this context. 
+The Keynesian multiplier **** Borenstein says specifically that energy efficiency 
+is \emph{different from} a Keynsian multiplier. ---MKH ****
+operates whenever \emph{additional} purchasing power
+is injected into the economy, 
+such as when the government makes additional purchases by taking on new debt 
+\citep[ch.\ 12]{Keynes1936}. 
+Another cause of purchasing power injection can be an unexpected tax reimbursement \citep{Agarwal2014a}. 
+These additional funds can mobilize additional resources. 
 
-  \item the government raises its debt and makes additional purchases
-        **** some classic reference here, possibly to Keynes himself **** or
-
-  \item consumers recieve an unexpected tax reimbursement \citep{Agarwal2014}.
-
-\end{enumerate*}
-
-However, in the case of an energy efficiency upgrade,
-there is no additional purchasing power added into the economy. 
-The device owner had the money anyway
-and merely spends it on a different basket of goods. 
-The contention that after $U$ the freed cash spent by the device owner to
-purchase non-energy goods 
+In contrast, an energy efficiency improvement on the contrary does \emph{not} add new purchasing power, 
+at least in the short-run, where the Keynesian multiplier operates.
+The consumer just redirects existing money and spends it on a different basket of goods.
+The contention that consumer purchases of additional goods in the efficient case
 must multiply through the economy 
-overlooks the fact that spending in the economy is circular. 
-Those funds spent on non-energy goods after $U$
-were spent on final energy before $U$, 
-so the final energy seller and its employees receive less income 
-and must curtail their spending. 
-In a closed economy, these purely monetary effects should cancel each other out.%
+overlooks the fact that spending in the economy is circular.
+Funds spent on new goods are not spent on energy, 
+so the energy provider (e.g., an electric utility) and its employees 
+receive less income and must curtail their spending. 
+In a closed economy,
+these purely monetary effects should cancel.
+In an open economy, 
+it may well be that the change in consumption basket
+leads to a change in net imports and 
+thereby to a growth or shrinkage effect.
+But there is no multiplier effect from savings. 
+In fact, since savings is a leakage
+(i.e.\ the consumer may not spend all leftover funds but save them),
+there is chance that rather than increasing energy rebound, 
+this ``macroeconomic'' effect decreases energy rebound.
+It is a supply side, not demand side shock.%
 \footnote{
-  In an open economy, it may well be that the change in consumption basket 
-  leads to a change in net imports and so leads to a macroeconomic growth or shrinkage effect.
+  The savings leakage is a macroeconomic effect too, 
+  because the microeconomic analysis always assumes full utilization of resources.
 }
 
-**** Need to signpost ``savings'' better. 
-Savings comes ``out of the blue'' here.
-Should we insert something like ``$U$ is more like \emph{savings} for the device owner.'' ****
-But there is no Keynsian multiplier effect from savings. 
-In fact, since savings is a leakage, 
-i.e.\ the consumer may not spend all freed cash but save some, 
-there is chance that rather than increasing the rebound,
-a Keynsian ``macroeconomic'' effect may decrease rebound. 
-$U$ is a demand side, not supply side, shock.
-
-Indeed, energy efficiency is a technological improvement, and 
-empirical evidence supports the conceptual argument that technological improvements 
-that raise efficiency ($\after{\eta} > \before{\eta}$) 
-and reduce service price ($\after{p}_s < \before{p}_s$)
-do not necessarily lead to short-run growth (i.e., in the same year). 
-Basu et al.\ (2006) **** need to incorporate reference into bib ****
-find that the contemporaneous change in output from an aggregate technology improvement is zero.
-Only a year after the technology improvement
-does the economy respond with positive growth. 
-Basu et al.\ (2006) **** need to incorporate reference into bib ****
-also find that contemporaneous work hours and employment fall,
-as fewer employees are needed to produce the same level of output. 
-In other words, the ``multiplier effect'' is a misnomer regarding energy rebound,
-because the Keynsian multiplier refers to changes in expenditure and real income 
-resulting from increasing monetary income.
-In contrast, in the case of $U$
-real income is changed by a drop in prices,
-because the energy service requires less energy input and hence is less costly to procure.%
+Empirical evidence supports the conceptual argument that 
+technological improvements that raise efficiency, 
+thereby reducing the price of energy services,
+do not necessarily lead to short-run growth (i.e.\ in the same year). 
+\citet{Basu2006} find that the contemporaneous change in output 
+from an aggregate technology improvement is zero. 
+Only a year after does it respond strongly positively.
+\citet{Basu2006} also find that contemporaneous work hours and employment fall,
+as fewer employees are needed to produce the output. 
+In other words, the ``multiplier effect'' understood in the Keynesian sense, 
+is a misnomer when applied to energy efficiency, 
+because the ``multiplier effect''
+refers to changes in expenditure and real income by changing the monetary \emph{income}, 
+whereas energy efficiency changes real income by reducing monetary \emph{expenses},
+in the sense that the energy service price is reduced.%
 \footnote{
-  But note that this drop in prices rules out any sticky-price explanation
+  But note that a reduction of energy service price rules out any sticky-price explanation 
   for why output should stay constant and therefore 
-  one important rationalisation of Basu et al. of their results. 
-  **** I don't understand the ``and therefore one important rational of their results portion of this sentence.
-  Clarify? ---MKH ****
+  also rules out one important rationalization **** Do you mean ``justification'' or ``explanation'' here? ---MKH 
+  **** of the \citet{Basu2006} results.
 }
- 
-It could be argued that the macroeconomic rebound 
-is also different from an aggregate technological shock
-as discussed by Basu et al **** add reference ***** .
-$U$ is purely an energy-augmenting technical change;
-moreover $U$ can be very small relative to the macroeconomy. 
-For example, if everyone in the US saved \$10 
-on their annual energy bill by replacing incandescent lights with LED lights, 
-the resulting roughly \$3 billion in savings would be 
-roughly 0.015\% of GDP, not exactly a stimulus. 
-The savings would also be significantly less than 1\% of utilites' revenue.%
-\footnote{
-  Gross output of the US utility sector in 2018 was roughly USD 500 billion, and
-  value added \$325 billion.
-}
-Because the rebound effect even negates some of those energy savings,
-it could further be argued that the additional demand can be considered without negative consequences 
-in the utility sector as, perhaps, the utility takes out a loan. 
-If the utility sector borrows to pay its employees,
-new money is created, and 
-a multiplier effect might be a reasonable approximation 
-to energy-augmenting technical change. 
-But a conceptually cleaner approach 
-takes Basu et al. **** add reference **** seriously 
-and observes that while output is unchanged in the first year, 
-output grows significantly in the second year and beyond.
-Outyear economic expansion is a manifestation 
-of the growth effect that operates on the supply side: 
-greater efficiency enables production of more things, and
-the energy rebound effect is magnified by macroeconomic interactions.
-(See also the discussion in \citet{VanBenthem2015}.)
-We call this growth the productivity effect on energy rebound, and
-we give its magnitude the symbol $k$ in our derivation.
 
-**** More here from Gregor about the magnitude of $k$. ****
+None of the above denies the importance of a macroeconomic effect. 
+Indeed, the macroeconomic effects of energy efficiency are productivity effects,
+just like other factor-augmenting productivity improvements. 
+Energy efficiency operates along the supply side by reducing the cost of inputs (specifically, energy)
+and thus allowing production on a greater scale. 
+This ***** what is antecedent for ``this?''? ****  can lead 
+to important counter tendencies in factor use reduction.
+Consider labor productivity: it has risen 20-fold 
+in Western Europe and the US since 1820 \citep{Maddison2001}, and
+yet today these countries employ more workers than ever before. 
+Of course, this generality to labor raises the question 
+whether it is appropriate to speak of a rebound effect at all. 
+Is all technological progress just a rebound effect? 
+We put it the opposite way: macroeconomic rebound effects
+are the consequences of technological change, 
+whether in utilization of labor or utilization of energy.
+**** Can we also include a capital example here? 
+Doing so would round out the illustrations and really drive home the point. ---MKH ****
+
+
+% The literature contains much discussion of the macroeconomic effects of
+% the device owner's spending of freed cash.
+% \Bt{p.~11} suggests the macroeconomic effects of freed cash are like a multiplier effect
+% ``more akin to the macroeconomic multiplier that might result 
+% following a new discovery of a natural resource deposit.''
+% In this approach, the device owner's leftover purchasing power
+% acts like the multiplier from Keynesian theory.
+% The idea runs as follows: with less than full utilisation of resources,
+% the device owner spends freed cash on additional goods, thereby
+% increasing effective demand,
+% putting additional resources to work, and
+% raising output from the economy as a whole.
+% The increased output requires additional energy inputs,
+% thereby boosting rebound beyond the level expected
+% if the device owner's spending were the only spending considered.
+% With a Keynsian multiplier of, say, 3,
+% every \$1 of freed cash yields
+% \$2 of additional purchases that require energy inputs.
+% With a large value for the Keynsian multiplier,
+% macroeconomic rebound effects could be significant.%
+% \footnote{
+%   A Keynsian multiplier has also been proposed by
+%   \citet{Gillingham:2015aa} and \citet{Gillingham2016a}, who cite \Bt{}.
+%   Interestingly, \citet{VanBenthem2015} cites \Bt{} and discusses
+%   the macroeconomic rebound effect but does not refer to a Keynsian multiplier.
+% }
+% 
+% However, we believe the invocation of a Keynsian multiplier 
+% to describe macroeconomic energy rebound is fallacious.
+% The Keynesian multiplier is appropriate when \emph{additional} purchasing power
+% is injected into the economy,
+% such as when
+% %
+% \begin{enumerate*}[label={(\alph*)}]
+% 
+%   \item the government raises its debt and makes additional purchases
+%         **** some classic reference here, possibly to Keynes himself **** or
+% 
+%   \item consumers recieve an unexpected tax reimbursement \citep{Agarwal2014}.
+% 
+% \end{enumerate*}
+% 
+% However, in the case of an energy efficiency upgrade,
+% there is no additional purchasing power added into the economy. 
+% The device owner had the money anyway
+% and merely spends it on a different basket of goods. 
+% The contention that after $U$ the freed cash spent by the device owner to
+% purchase non-energy goods 
+% must multiply through the economy 
+% overlooks the fact that spending in the economy is circular. 
+% Those funds spent on non-energy goods after $U$
+% were spent on final energy before $U$, 
+% so the final energy seller and its employees receive less income 
+% and must curtail their spending. 
+% In a closed economy, these purely monetary effects should cancel each other out.%
+% \footnote{
+%   In an open economy, it may well be that the change in consumption basket 
+%   leads to a change in net imports and so leads to a macroeconomic growth or shrinkage effect.
+% }
+% 
+% **** Need to signpost ``savings'' better. 
+% Savings comes ``out of the blue'' here.
+% Should we insert something like ``$U$ is more like \emph{savings} for the device owner.'' ****
+% But there is no Keynsian multiplier effect from savings. 
+% In fact, since savings is a leakage, 
+% i.e.\ the consumer may not spend all freed cash but save some, 
+% there is chance that rather than increasing the rebound,
+% a Keynsian ``macroeconomic'' effect may decrease rebound. 
+% $U$ is a demand side, not supply side, shock.
+% 
+% Indeed, energy efficiency is a technological improvement, and 
+% empirical evidence supports the conceptual argument that technological improvements 
+% that raise efficiency ($\after{\eta} > \before{\eta}$) 
+% and reduce service price ($\after{p}_s < \before{p}_s$)
+% do not necessarily lead to short-run growth (i.e., in the same year). 
+% Basu et al.\ (2006) **** need to incorporate reference into bib ****
+% find that the contemporaneous change in output from an aggregate technology improvement is zero.
+% Only a year after the technology improvement
+% does the economy respond with positive growth. 
+% Basu et al.\ (2006) **** need to incorporate reference into bib ****
+% also find that contemporaneous work hours and employment fall,
+% as fewer employees are needed to produce the same level of output. 
+% In other words, the ``multiplier effect'' is a misnomer regarding energy rebound,
+% because the Keynsian multiplier refers to changes in expenditure and real income 
+% resulting from increasing monetary income.
+% In contrast, in the case of $U$
+% real income is changed by a drop in prices,
+% because the energy service requires less energy input and hence is less costly to procure.%
+% \footnote{
+%   But note that this drop in prices rules out any sticky-price explanation
+%   for why output should stay constant and therefore 
+%   one important rationalisation of Basu et al. of their results. 
+%   **** I don't understand the ``and therefore one important rational of their results portion of this sentence.
+%   Clarify? ---MKH ****
+% }
+%  
+% It could be argued that the macroeconomic rebound 
+% is also different from an aggregate technological shock
+% as discussed by Basu et al **** add reference ***** .
+% $U$ is purely an energy-augmenting technical change;
+% moreover $U$ can be very small relative to the macroeconomy. 
+% For example, if everyone in the US saved \$10 
+% on their annual energy bill by replacing incandescent lights with LED lights, 
+% the resulting roughly \$3 billion in savings would be 
+% roughly 0.015\% of GDP, not exactly a stimulus. 
+% The savings would also be significantly less than 1\% of utilites' revenue.%
+% \footnote{
+%   Gross output of the US utility sector in 2018 was roughly USD 500 billion, and
+%   value added \$325 billion.
+% }
+% Because the rebound effect even negates some of those energy savings,
+% it could further be argued that the additional demand can be considered without negative consequences 
+% in the utility sector as, perhaps, the utility takes out a loan. 
+% If the utility sector borrows to pay its employees,
+% new money is created, and 
+% a multiplier effect might be a reasonable approximation 
+% to energy-augmenting technical change. 
+% But a conceptually cleaner approach 
+% takes Basu et al. **** add reference **** seriously 
+% and observes that while output is unchanged in the first year, 
+% output grows significantly in the second year and beyond.
+% Outyear economic expansion is a manifestation 
+% of the growth effect that operates on the supply side: 
+% greater efficiency enables production of more things, and
+% the energy rebound effect is magnified by macroeconomic interactions.
+% (See also the discussion in \citet{VanBenthem2015}.)
+% We call this growth the productivity effect on energy rebound, and
+% we give its magnitude the symbol $k$ in our derivation.
+% 
+% **** More here from Gregor about the magnitude of $k$. ****
 
 ****
 MKH note to Gregor:
