@@ -969,10 +969,21 @@ In contrast to the income and multiplier ideas,
 we claim that the macroeconomic effects of energy efficiency are, in fact,
 productivity effects,
 just like other factor-augmenting productivity improvements. 
-Energy efficiency operates along the supply side by reducing the cost of inputs (specifically, energy)
-and thus allowing production on a greater scale. 
-This ***** FS: what is antecedent for ``this?''? ---MKH ****  can lead 
-to important and surprising counter tendencies in factor use reduction.
+Implicitly, then, we are claiming that energy is a factor of production,
+alongside capital and labor.%
+\footnote{
+  In the energy-economy literature, 
+  there is a fraught history of including energy as a factor of production
+  in aggregate production functions. 
+  We think building a bridge from micro to macro is a better route to travel.
+  See \citet{Heun:2017} for details.
+}
+Energy efficiency operates along the supply side by reducing the cost of inputs 
+(in this case, final energy)
+and thereby allowing production on a greater scale. 
+
+In general, reducing cost of inputs at the micro level can lead 
+to important and surprising counter tendencies in factor consumption at the macro level.
 **** Can we also include a capital example here? 
 Doing so would round out the illustrations and really drive home the point. ---MKH ****
 Consider capital productivity: it has risen XX-fold, 
@@ -982,10 +993,12 @@ in Western Europe and the US since 1820 \citep{Maddison2001}, and
 yet today these countries employ more workers than ever before. 
 And so too with energy.
 While energy efficiency at the device-level has climbed in the past century, 
-energy consumption at the macro level also rises.
+energy consumption at the macro level has also risen.
+\citet{Heun:2019aa} show that increases in aggregate energy efficiency and
+increases in aggregate energy consumption go hand-in-hand.
 **** Pull numbers from the Ghana UK paper. ****
-Of course, this generality with capital and labor raises the question 
-whether it is appropriate to speak of a rebound effect at all. 
+Of course, this generality between energy on the one hand and capital and labor on the other
+raises the question whether it is appropriate to speak of a rebound effect at all. 
 Isn't all technological progress just a rebound effect? 
 We put it the opposite way: 
 macroeconomic rebound effects are the consequences of technological change, 
@@ -997,7 +1010,7 @@ Further, we claim that productivity effect rebound stems from technological impr
 (energy efficiency) 
 which are tied to energy service price reductions.
 As such, productivity effect rebound at the macro level scales with the net income (freed cash, $FC$)
-gained by the device owner at the micro level.
+gained by the device owners at the micro level.
 Gross income ($\rate{G}$) is money that is no longer spent on energy to operate the upgraded device,
 assuming the same level of service from the device **** is this right? Should we use the higher service level? ****.
 Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
@@ -1293,43 +1306,6 @@ higher final energy intensity of the economy ($I_{\Ef}$).
 % we give its magnitude the symbol $k$ in our derivation.
 % 
 % **** More here from Gregor about the magnitude of $k$. ****
-
-****
-MKH note to Gregor:
-We agreed to try splitting the productivity effect from the income effect
-in our narrative. 
-Now, I'm questioning that decision.
-I don't think it makes sense to have an income effect
-and an \emph{additional} productivity effect for which $0 \le k < \infty$.
-There is no ``income effect,'' per se!
-Or, more precisely, there is no ``income effect'' independent of macroeconomic dynamics!
-We claim that the device owner's spending of freed cash on other goods besides final energy
-is canceled out by the device owner's no longer spending money on final energy.
-Thus, the only rebound implications of the device-owner's freed cash is a macroeconomic effect.
-
-Seen in this light, we can now say that \Ba{}'s income effect is not an income effect at all!
-It is rather a productivity effect with assumed magnitude 1.
-
-The argument I'm making here is a subtle one. 
-But I think it is aligned with our developing understanding of 
-the macroeconomic mechanisms at play here.
-
-So I propose a discussion about these subtleties at this point of the text.
-
-Do you agree?  
-
-If we make this change, I need to make some changes to the text.
-Our equation will become 
-
-$Re = Re_{emb} + Re_{sub} + Re_p$
-
-and the main equation will revert to its previous form (i.e., $k + 1$ terms will be replaced by $k$:
-
-$Re = Re_{emb} + Re_{dev} + \left( 1 - \gamma - \frac{Re_{dev}}{k} \right) \kpI$.
-
-What do you think? ---MKH
-****
-
 
 
 Because the productivity effect is driven by device owner income derived from energy cost savings, 
