@@ -314,7 +314,7 @@ whereas \Ba{} did not.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Contribution of this work}
+\subsection{Contributions of this work}
 \label{sec:contribution}
 %++++++++++++++++++++++++++++++
 
