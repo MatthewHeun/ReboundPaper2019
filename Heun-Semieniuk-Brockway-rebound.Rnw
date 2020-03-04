@@ -859,8 +859,8 @@ who all cite \Ba{}.%
   but does not refer to a ``multiplier.''
 }
 
-We believe the use of the word ``multiplier'' in this context
-is unfortunate for four reasons.
+We believe the use of the word ``multiplier'' is unfortunate in this context
+for four reasons.
 
 **** We may want to combine or separate these reasons.
 Or add new. 
@@ -1639,7 +1639,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $dev$ & device \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
-  $i$ & income \\
+  % $i$ & income \\
   $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $OM$ & operation and maintenance costs \\
   $p$ & productivity \\
