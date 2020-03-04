@@ -859,10 +859,10 @@ who all cite \Ba{}.%
   but does not refer to a ``multiplier.''
 }
 
-We believe the use of the word ``multiplier'' 
-is unfortunate in this context for four reasons.
+We believe the use of the word ``multiplier'' in this context
+is unfortunate for four reasons.
 
-**** We may want to combine or separate these rebound effects.
+**** We may want to combine or separate these reasons.
 Or add new. 
 But this is my first shot at a structure for this discussion.
 ---MKH **** 
@@ -984,10 +984,11 @@ and thereby allowing production on a greater scale.
 
 In general, reducing cost of inputs at the micro level can lead 
 to important and surprising counter tendencies in factor consumption at the macro level.
-**** Can we also include a capital example here? 
+**** Can we also include examples of other inputs,
+while avoiding the capital controversy?
 Doing so would round out the illustrations and really drive home the point. ---MKH ****
-Consider capital productivity: it has risen XX-fold, 
-yet more capital is in service than ever before. **** Need statistic here. ---MKH ****
+Consider XXXXXX: it has risen YY-fold, 
+yet more XXXXXX is in service than ever before. **** Need statistics here. ---MKH ****
 Consider labor productivity: it has risen 20-fold 
 in Western Europe and the US since 1820 \citep{Maddison2001}, and
 yet today these countries employ more workers than ever before. 
@@ -997,32 +998,33 @@ energy consumption at the macro level has also risen.
 \citet{Heun:2019aa} show that increases in aggregate energy efficiency and
 increases in aggregate energy consumption go hand-in-hand.
 **** Pull numbers from the Ghana UK paper. ****
-Of course, this generality between energy on the one hand and capital and labor on the other
+Of course, this generality between energy on the one hand and other inputs (XXXXX and labor) on the other
 raises the question whether it is appropriate to speak of a rebound effect at all. 
 Isn't all technological progress just a rebound effect? 
 We put it the opposite way: 
 macroeconomic rebound effects are the consequences of technological change, 
-whether in utilization of capital, 
-utilization of labor, or 
-utilization of energy.
+whether 
+in utilization of XXXXXX, 
+in utilization of labor, or 
+in utilization of energy.
 
 Further, we claim that productivity effect rebound stems from technological improvements
 (energy efficiency) 
 which are tied to energy service price reductions.
 As such, productivity effect rebound at the macro level scales with the net income (freed cash, $FC$)
-gained by the device owners at the micro level.
+gained by device owners at the micro level.
 Gross income ($\rate{G}$) is money that is no longer spent on energy to operate the upgraded device,
 assuming the same level of service from the device **** is this right? Should we use the higher service level? ****.
 Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
 Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
-Our approach to income effects is similar in practice to \Bt{}
-who developed his model using a basket of $N$ other goods,
-but who, in his numeric estimates, also assumed that spent income has
-energy implications at the average energy intensity of the economy.
-Our approach is simpler than \Tt{}
-who used input-output techniques to assess 
-the energy implications of spending energy cost savings
-in the economy.
+% Our approach to productivity effects is similar in practice to \Bt{}
+% who developed his model using a basket of $N$ other goods,
+% but who, in his numeric estimates, also assumed that spent income has
+% energy implications at the average energy intensity of the economy.
+% Our approach is simpler than \Tt{}
+% who used input-output techniques to assess 
+% the energy implications of spending energy cost savings
+% in the economy.
 
 To the device owner, final energy cost savings come at a cost to 
 procure (capital cost), operate, maintain, and dispose 
@@ -1032,8 +1034,8 @@ These device costs can be expressed as a rate ($\rateafter{C}_{dev}$ and $\rateb
 which is typically, but not always, higher for the upgraded device
 than the original device
 ($\rateafter{C}_{dev} > \ratebefore{C}_{dev}$).
-Our approach to capital and disposal costs is similar to our approach to embodied energy, i.e.\
-we spread capital and disposal costs across the life of the original and upgraded devices
+Our approach to capital and disposal costs is similar to our approach to embodied energy,
+i.e., we spread capital and disposal costs across the life of the original and upgraded devices
 to obtain device cost rates:
 $\rateafter{C}_{dev} = \after{C}_{cap} / \after{t} + \rateafter{C}_{OM} + \after{C}_{disp} / \after{t}$ and
 $\ratebefore{C}_{dev} = \before{C}_{cap} / \before{t} + \ratebefore{C}_{OM} + \before{C}_{disp} / t$.%
@@ -1050,26 +1052,46 @@ $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.%
   and avoids questions about whether time valuation should be applied to \emph{energy} as well as money.
 }
 
-Freed cash ($FC$) is 
+Freed cash ($FC$), or net income, is 
 the difference between the income rate and
-the change in device cost rate, or net income.
+the change in device cost rate.
 Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
 As shown by \citet{Antal:2014aa}, 
 it is reasonable to assume that 
 freed cash is spent in the economy at the average energy intensity of the economy ($I_{\Ef}$).
 Thus, the change in the final energy consumption rate due to the income effect can be written as
 $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
+
+Scaling from freed cash ($FC$) at the device level
+and productivity-driven growth at the macro level is an unexplored area. 
+In the absence of better information, 
+we express this scaling simply with a multiplicative technology factor ($k$), 
+with $k \ge 0$ expected.
+$k = 0$ means two things:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the device owner's freed cash is simply redistributed to a new basket of goods
+        with no energy implications and 
+  
+  \item there is no macroeconomic productivity boost that results from the energy efficiency upgrade.
+    
+\end{enumerate*}
+%
+$k > 0$ means that productivity-driven macroeconomic growth has occurred
+with consequent implications for additional energy consumption at the macro level. 
 The discussion above yields
 %
 \begin{equation} \label{eq:delta_income}
   \Delta \rate{E}_{\finc} = \left( 1 - \frac{\before{\eta}}{\after{\eta}}
                                  - \frac{\rateafter{C}_{dev} - \ratebefore{C}_{dev}}{\ratebefore{E}_{\fdir} p_{\Ef}} \right)
-                               \pI \ratebefore{E}_{\fdir} \, .
+                               k \pI \ratebefore{E}_{\fdir} \, .
 \end{equation}
 
 Without the energy efficiency upgrade ($U$),
 $\after{\eta} = \before{\eta}$, $\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, and
 $\Delta \rate{E}_{\finc} = 0$, as expected.
+If $k = 0$, there are no productivity effects, and $\Delta \rate{E}_{\finc} = 0$, as expected.
 As $\after{\eta}$ increases relative to $\eta$, $\Delta \rate{E}_{\finc}$ goes up,
 because the efficiency gain yields more freed cash (from energy cost savings) to spend in the economy.
 Similarly, $\Delta \rate{E}_{\finc}$ goes up when
@@ -1077,23 +1099,24 @@ $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$, because
 more freed cash is available
 to be spent in the economy
 (because the device costs less to procure, operate, maintain, and dispose).
-Higher energy prices ($p_{\Ef}$) yield greater income effect, because
-energy cost savings yield more freed cash.
-Similarly, higher energy intensity ($I_{\Ef}$) gives larger income effect, because
+Higher final energy prices ($p_{\Ef}$) yield a greater productivity effect, because
+any energy cost savings yields more freed cash.
+Similarly, higher energy intensity ($I_{\Ef}$) gives a larger productivity effect, because
 each dollar of energy cost savings spent in the economy has higher energy implications.
 
-$\Delta \rate{E}_{\finc}$ represents energy savings taken back due to the income effect.
+$\Delta \rate{E}_{\finc}$ represents energy savings taken back due to 
+macroeconomic productivity effects.
 Thus, Equation~\ref{eq:rebound_2} can be employed to obtain an expression
-for rebound due to income and respending effects:
+for rebound due to productivity effects:
 $Re_i = \Delta \rate{E}_{\finc} / \left[ \left(1 - \frac{\before{\eta}}{\after{\eta}} \right) \ratebefore{E}_{\fdir} \right]$.
 After simplification, and using the definition
 $\gamma \equiv \gammaequation{}$
 to represent the
 ratio of device cost rate increase to expected energy cost savings,
-income effect rebound can be expressed as
+productivity effect rebound can be expressed as
 %
-\begin{equation} \label{eq:Re_i}
-  Re_i = \Reiequation{} \, .
+\begin{equation} \label{eq:Re_p}
+  Re_p = \Repequation{} \, .
 \end{equation}
 %
 Note that $\gamma$ is the
@@ -1103,75 +1126,6 @@ $\gamma < 1$ is expected,
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
 
-When costs for procuring, operating, maintaining, and disposing
-the energy efficient device
-($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_i}--\ref{eq:Re_tot})
-go up (down),
-total rebound decreases (increases), because
-device costs reduce (increase) net freed cash available
-for spending in the economy.
-It is important to note that the device cost rate
-may go up \emph{or} down in response to $U$.
-E.g., even if the capital cost of the upgraded device is larger than
-the capital cost of the original device,
-longer life for the upgraded device may outweigh capital costs
-leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
-which boosts $Re_{i}$ in Equation~\ref{eq:Re_i}
-and $Re$ in Equation~\ref{eq:Re_tot}.
-(This situation is not uncommon for lighting upgrades
-involving LED technology, as shown later.)
-Thus, device cost effects may lead to spending-related indirect energy rebound
-\emph{independent of} device-level energy cost savings.
-
-In this respect, we see that \Tapp{} assumption of identical capital costs
-for the original and upgraded devices
-closes off the possibility of spending-related indirect rebound
-due to device cost savings.
-Furthermore, assuming identical capital costs
-for the original and upgraded devices
-does not necessarily provide an upper bound on indirect rebound effects
-as \citet[p.~200]{Thomas:2013aa} claimed.
-Equation~\ref{eq:Re_tot} shows that
-assuming identical capital costs
-for the original and upgraded devices
-provides an upper bound on $Re$
-if and only if the capital cost of the upgraded device is larger than
-the capital cost for the original device
-($\rateafter{C}_{cap} > \ratebefore{C}_{cap}$).
-When the capital cost for the upgraded device is less than
-the capital cost for the original device
-($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
-assuming equal capital costs will tend to \emph{underestimate} $Re$.
-(Beyond that, it is not only capital costs that are important;
-Section~\ref{sec:income_effect}
-shows that
-operations and maintenance costs and disposal costs
-can also affect respending-related indirect rebound.)
-
-The third term of Equation~\ref{eq:Re_tot} shows that
-when $1 - Re_{dev}/k - \gamma > 0$,
-total energy rebound is enhanced by
-%
-\begin{enumerate*}[label={(\alph*)}]
-
-  \item a larger multiplier ($k$) due to enhanced respending in the economy,
-
-  \item higher energy prices ($p_{\Ef}$), as greater energy cost savings from $U$ are spent in the economy, and
-
-  \item higher final energy intensity of the economy ($I_{\Ef}$), as respent energy cost savings demand additional energy in the economy.
-
-\end{enumerate*}
-%
-As discussed above,
-it is expected that $1 - \gamma > 0$,
-else $U$ would not be expected to be economic by the device owner.
-If device-level rebound ($Re_{dev}$) is not too large, 
-$1 - Re_{dev}/k - \gamma$ will also be positive. 
-If, unexpectedly, device-level rebound is so large that 
-$1 - Re_{dev}/k - \gamma < 0$,
-total energy rebound will be reduced by a larger multiplier ($k$),
-higher energy prices ($p_{\Ef}$), and
-higher final energy intensity of the economy ($I_{\Ef}$).
 
 
 
@@ -1308,14 +1262,14 @@ higher final energy intensity of the economy ($I_{\Ef}$).
 % **** More here from Gregor about the magnitude of $k$. ****
 
 
-Because the productivity effect is driven by device owner income derived from energy cost savings, 
-we obtain an expression for productivity effect rebound
-by multiplying $Re_i$ by $k$. 
-Thus,
-%
-\begin{equation} \label{eq:Re_p}
-  Re_p = \Repequation{} \, .
-\end{equation}
+% Because the productivity effect is driven by device owner income derived from energy cost savings, 
+% we obtain an expression for productivity effect rebound
+% by multiplying $Re_i$ by $k$. 
+% Thus,
+% %
+% \begin{equation} \label{eq:Re_p}
+%   Re_p = \Repequation{} \, .
+% \end{equation}
 
 
 %++++++++++++++++++++++++++++++
@@ -1323,10 +1277,10 @@ Thus,
 \label{sec:total_rebound}
 %++++++++++++++++++++++++++++++
 
-Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_i$ + $Re_p$, or
+Total rebound is given by $Re = Re_{emb} + Re_{sub} + Re_p$, or
 %
 \begin{equation}
-  Re = \Reembequation{} + \Resubequation{} + \Reiequation{} + \Repequation{} \, .
+  Re = \Reembequation{} + \Resubequation{} + \Repequation{} \, .
 \end{equation}
 %
 After substituting and rearranging, we arrive at an equation
@@ -1344,59 +1298,87 @@ economic parameters ($k$, $p_{\Ef}$, and $I_{\Ef}$).
 verification of the explicit, symbolic expressions
 using data from the auto efficiency example in \Bt{}.)
 
-The explicit, symbolic expression for energy rebound in Equation~\ref{eq:Re_tot}
-allows explication of the factors that contribute to total energy rebound and
-thereby shows the benefits of extending the work of \Bt{}
-to develop these expressions.
-In particular, Equation~\ref{eq:Re_tot} allows us to
-identify the relationships among total rebound and device-level rebound
-as well as many other factors.
-The following subsections explore these relationships.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Discussion}
-\label{sec:model_discussion}
-%++++++++++++++++++++++++++++++
-
-
-%------------------------------
-\subsubsection{Effect of embodied energy} 
-\label{sec:effect_of_embodied}
-%------------------------------
+% The explicit, symbolic expression for energy rebound in Equation~\ref{eq:Re_tot}
+% allows explication of the factors that contribute to total energy rebound and
+% thereby shows the benefits of extending the work of \Bt{}
+% to develop these expressions.
+% In particular, Equation~\ref{eq:Re_tot} allows us to
+% identify the relationships among total rebound and device-level rebound
+% as well as many other factors.
+% The following subsections explore these relationships.
 
 
 
-%------------------------------
-\subsubsection{Effect of device costs} 
-\label{sec:effect_of_device_costs}
-%------------------------------
+When costs for procuring, operating, maintaining, and disposing
+the energy efficient device
+($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_p}--\ref{eq:Re_tot})
+go up (down),
+total rebound decreases (increases), because
+device costs reduce (increase) net freed cash available
+for spending in the economy.
+It is important to note that the device cost rate
+may go up \emph{or} down in response to $U$.
+E.g., even if the capital cost of the upgraded device is larger than
+the capital cost of the original device,
+longer life for the upgraded device may outweigh capital costs
+leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
+which boosts $Re_p$ in Equation~\ref{eq:Re_p}
+and $Re$ in Equation~\ref{eq:Re_tot}.
+(This situation is not uncommon for lighting upgrades
+involving LED technology, as shown later.)
+Thus, device cost effects may lead to productivity-related macroeconomic energy rebound
+\emph{independent of} device-level energy cost savings.
+In this respect, we see that \Tapp{} assumption of identical capital costs
+for the original and upgraded devices
+closes off the possibility of productivity-related macroeconomic rebound
+due to device cost savings.
 
+The third term of Equation~\ref{eq:Re_tot} shows that
+when $1 - \gamma - Re_{dev}/k > 0$,
+total energy rebound is enhanced by
+%
+\begin{enumerate*}[label={(\alph*)}]
 
+  \item a larger productivity factor ($k$) due to enhanced macroeconomic growth associated with technological improvements,
 
+  \item higher energy prices ($p_{\Ef}$), as greater energy cost savings from $U$ generate more productive growth, and
 
-%------------------------------
-\subsubsection{Effect of device-level rebound} 
-\label{sec:effect_of_device_level_rebound}
-%------------------------------
+  \item higher final energy intensity of the economy ($I_{\Ef}$), as larger energy cost savings 
+        have larger energy in the broader implications.
 
+\end{enumerate*}
+%
+As discussed above,
+it is expected that $1 - \gamma > 0$,
+else $U$ would not be expected to be economic by the device owner.
+If device-level rebound ($Re_{dev}$) is not too large, 
+$1 - \gamma - Re_{dev}/k$ will also be positive. 
+If, unexpectedly, device-level rebound is so large that 
+$1 - \gamma - Re_{dev}/k < 0$,
+total energy rebound will be reduced by a larger productivity factor ($k$),
+higher energy prices ($p_{\Ef}$), and
+higher final energy intensity of the economy ($I_{\Ef}$).
 
-
-
-%------------------------------
-\subsubsection{Effect of elasticity} 
-\label{sec:effect_of_elasticity}
-%------------------------------
-
-
-
-
-%------------------------------
-\subsubsection{Effect of economic parameters} 
-\label{sec:effect_of_economic_parameters}
-%------------------------------
-
-
+Given the above, we note that assuming identical capital costs
+for the original and upgraded devices
+does not necessarily provide an upper bound on indirect rebound effects
+as \citet[p.~200]{Thomas:2013aa} claimed.
+Equation~\ref{eq:Re_tot} shows that
+assuming identical capital costs
+for the original and upgraded devices
+provides an upper bound on $Re$
+if and only if the capital cost of the upgraded device is larger than
+the capital cost for the original device
+($\rateafter{C}_{cap} > \ratebefore{C}_{cap}$).
+When the capital cost for the upgraded device is less than
+the capital cost for the original device
+($\rateafter{C}_{cap} < \ratebefore{C}_{cap}$),
+assuming equal capital costs will tend to \emph{underestimate} $Re$.
+(Beyond that, it is not only capital costs that are important;
+Section~\ref{sec:productivity_effect}
+shows that
+operations and maintenance costs and disposal costs
+can also affect productivity-related macroeconomic rebound.)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
