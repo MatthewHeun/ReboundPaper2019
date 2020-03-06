@@ -787,7 +787,7 @@ a more-negative (less-negative) service price elasticity of final energy demand
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Mecroeconomic effects}
+\subsection{Macroeconomic effects}
 \label{sec:macroeconomic_effects}
 %++++++++++++++++++++++++++++++
 
@@ -816,15 +816,16 @@ it is reasonable to assume that
 freed cash is spent in the economy at the average energy intensity of the economy,
 thus giving rise to additional energy demand.
 
-But the income effect doesn't exist in a vacuum, and most authors 
-neglect the fact that the budget constraint applied to the substitution effect at the micro level
-also applies at the macro level. 
+But the income effect doesn't exist in a vacuum, and
+most authors neglect the fact that 
+the budget constraint applied to the substitution effect at the micro level
+also applies to income at the macro level. 
 When a consumer shifts spending away from energy to another portion of the economy,
 the workers at a utility or refinery earn less money and therefore demand less energy
 with their purchases. 
 To first order approximation, the loss of revenue in the energy sector
 (and resulting reduction of spending by refinery workers)
-cancels the increased spending by the device owner.
+cancels the device owner's spending increase elsewhere in the economy.
 
 
 %------------------------------
