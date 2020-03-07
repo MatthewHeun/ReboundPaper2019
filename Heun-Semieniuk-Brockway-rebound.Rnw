@@ -515,12 +515,11 @@ the denominator of Equation~\ref{eq:rebound_2} is positive, and
 the sign of $Re_j$ is determined by the sign of the numerator, 
 namely $\mathrm{takeback}_j$.
 
-**** Pull discussions from later sections into derivation sections. ****
-
 **** Say that embodied energy rebound could easily be negative, because
 $\Delta \rate{E}_{\femb}$ could be negative
 
-**** GS says following is difficult from substitution effect onward. 
+**** GS says following the derivation 
+is difficult from substitution effect onward. 
 Consider adding more steps? ****
 
 
