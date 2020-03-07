@@ -568,29 +568,18 @@ Thus, Equation~\ref{eq:rebound_2} can be employed to write embodied energy rebou
 Equation~\ref{eq:Re_tot_prelim} shows that
 embodied energy rebound ($Re_{emb}$) contributes additively to total rebound
 and is independent of other rebound effects.
-
+Embodied energy rebound can be either positive or negative.
+Whether $Re_{emb}$ is positive or negative is determined by the sign of 
+$(\after{E}_{emb}/\before{E}_{emb})(\before{t}/\after{t}) - 1$.
 Typically, but not always,
 increases in energy efficiency are associated with increased device complexity
 and more embodied energy,
-such that $\after{E}_{\femb} > \before{E}_{\femb}$.
+such that $\after{E}_{\femb} > \before{E}_{\femb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
 ($\after{t} > \before{t}$),
 $\Delta \rate{E}_{\femb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device.
-
-Equation~\ref{eq:Re_emb} shows that both
-more embodied energy ($\after{E}_{\femb} > \before{E}_{\femb}$)
-and
-shorter device lifetime ($\after{t} < \before{t}$)
-increase embodied energy rebound.
-But embodied energy rebound can be either positive or negative.
-When the embodied energy rate for a device
-goes up (down) due to $U$,
-total rebound also increases (decreases)
-by the same amount
-(but not usually by the same percentage).
-Whether $Re_{emb}$ is positive or negative is determined by the sign of 
-$(\after{E}_{emb}/\before{E}_{emb})(\before{t}/\after{t}) - 1$.
+meaning that the upgraded device has a lower embodied energy rate than the original device,
+yielding $Re_{emb} < 0$.
 
 
 %++++++++++++++++++++++++++++++
@@ -610,7 +599,7 @@ an increase in service consumption ($\rate{q}_s$).
 After invoking the final energy price exogeneity assumption
 (i.e., $\after{p}_{\Ef} = \before{p}_{\Ef}$)
 and using $p_s = p_{\Ef}/\eta$,
-the new quantity demanded can be expressed in terms of service price elasticity of demand as
+the new rate of service demanded can be expressed in terms of service price elasticity of demand as
 $\rateafter{q}_s = \ratebefore{q}_s \left( \before{\eta}/\after{\eta} \right)^\epsilon$.
 
 As quantity of service demanded increases,
@@ -673,11 +662,10 @@ After simplification and use of Equation~\ref{eq:Re_dev}, net substitution rebou
   Re_{sub} = \Resubequation{} \, .
 \end{equation}
 
-While the effects of embodied energy on embodied energy rebound
+Although the effects of embodied energy on embodied energy rebound
 are straightforward and can be ascertained by inspection of Equation~\ref{eq:Re_emb},
 the effect of device-level rebound ($Re_{dev}$) and, therefore,
-on substitution rebound ($Re_{sub}$) 
-and, therefore, on overall rebound ($Re$),
+on substitution rebound ($Re_{sub}$) and overall rebound ($Re$),
 is less clear.
 Whether larger device-level rebound ($Re_{dev}$) increases or decreases overall rebound 
 is determined by the sign of $(1 - \pI)$.
@@ -783,6 +771,16 @@ a more-negative (less-negative) service price elasticity of final energy demand
 \label{sec:macroeconomic_effects}
 %++++++++++++++++++++++++++++++
 
+We now set about the task of linking microeconomic effects 
+to additional energy demand in the broader macroeconomy.
+The starting point for this effort is net income gained by the device owner.
+But we soon note that the income effect does not operate in isolation
+and does not describe the micro-macro link well.
+Thereafter, we argue that a macroeconomic multiplier is also unhelpful 
+for describing the micro-macro link.
+Finally, we claim that energy-efficiency-driven productivity gains 
+provide the most fruitful way to describe macroeconomic rebound effects. 
+
 
 %------------------------------
 \subsubsection{Income effect} 
@@ -810,9 +808,9 @@ thus giving rise to additional energy demand.
 
 But the income effect doesn't exist in a vacuum, and
 most authors neglect the fact that 
-the budget constraint applied to the substitution effect at the micro level
-also applies to income at the macro level. 
-When a consumer shifts spending away from energy to another portion of the economy,
+budget constraints that applied to the substitution effect at the micro level
+also apply to income at the macro level. 
+When the device owner shifts spending away from energy to another portion of the economy,
 the workers at a utility or refinery earn less money and therefore demand less energy
 with their purchases. 
 To first order approximation, the loss of revenue in the energy sector
@@ -825,6 +823,8 @@ cancels the device owner's spending increase elsewhere in the economy.
 \label{sec:multiplier_effect}
 %------------------------------
 
+So the so-called ``income effect,'' properly understood, 
+has negligible effect on energy consumption in the broader economy.
 However, that is not to say that macroeconomic effects are unimportant.
 Other authors have speculated about a ``multiplier'' effect, 
 whereby the consumer's leftover purchasing power, 
