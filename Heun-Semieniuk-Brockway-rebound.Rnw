@@ -969,29 +969,29 @@ In contrast to the income and multiplier ideas,
 we claim that the macroeconomic effects of energy efficiency are, in fact,
 productivity effects,
 just like other factor-augmenting productivity improvements. 
-Implicitly, then, we are claiming that energy is a factor of production,
-alongside capital and labor.%
-\footnote{
-  In the energy-economy literature, 
-  there is a fraught history of including energy as a factor of production
-  in aggregate production functions. 
-  We think building a bridge from micro to macro is a better route to travel.
-  See \citet{Heun:2017} for details.
-}
-Energy efficiency operates along the supply side by reducing the cost of inputs 
-(in this case, final energy)
-and thereby allowing production on a greater scale. 
-
+Implicitly, then, we are claiming two things:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item that energy is a factor of production,
+        alongside capital and labor and 
+  
+  \item energy efficiency operates along the supply side by reducing the cost of inputs 
+        (in this case, final energy),
+        thereby allowing production on a greater scale.
+    
+\end{enumerate*}
+%
 In general, reducing cost of inputs at the micro level can lead 
 to important and surprising counter tendencies in factor consumption at the macro level.
+Consider labor productivity: it has risen 20-fold 
+in Western Europe and the US since 1820 \citep{Maddison2001}, and
+yet today these countries employ more workers than ever before. 
 **** Can we also include examples of other inputs,
 while avoiding the capital controversy?
 Doing so would round out the illustrations and really drive home the point. ---MKH ****
 Consider XXXXXX: it has risen YY-fold, 
 yet more XXXXXX is in service than ever before. **** Need statistics here. ---MKH ****
-Consider labor productivity: it has risen 20-fold 
-in Western Europe and the US since 1820 \citep{Maddison2001}, and
-yet today these countries employ more workers than ever before. 
 And so too with energy.
 While energy efficiency at the device-level has climbed in the past century, 
 energy consumption at the macro level has also risen.
