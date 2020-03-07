@@ -803,7 +803,7 @@ the difference between the income rate and
 the change in device cost rate.
 As shown by \citet{Antal:2014aa}, 
 it is reasonable to assume that 
-freed cash is spent in the economy at the average energy intensity of the economy,
+freed cash is spent in the economy at the average energy intensity of the economy ($I_{\Ef{}}$),
 thus giving rise to additional energy demand.
 
 But the income effect doesn't exist in a vacuum, and
@@ -832,7 +832,8 @@ which is typically analyzed only as an indirect rebound effect,
 acts like a spending multiplier. 
 The idea runs as follows: 
 with less than full utilization of resources, 
-the device owner spends freed cash (money left over after purchasing energy services with upgraded devices)
+the device owner spends freed cash 
+($FC$, money left over after purchasing energy services with upgraded devices)
 on additional goods, 
 which raises effective demand, 
 puts additional resources to work, and, hence,
@@ -845,27 +846,27 @@ if only the effects of the consumer's re-spending were considered.
 % not only is there an indirect rebound effect but also two additional dollars 
 % that purchase goods and services which, in turn, require energy inputs.
 % The multiplier rebound effect could be significant.
-This idea has also been promulgated by \citet{Gillingham:2015aa}, \citet{Gillingham2016a}, and \citet{Lange2019}, 
+The multiplier idea has also been promulgated by
+\citet{Gillingham:2015aa}, \citet{Gillingham2016a}, and \citet{Lange2019}, 
 who all cite \Ba{}.%
 \footnote{
   Interestingly, \citet{VanBenthem2015} also cites \Ba{} and discusses a macroeconomic rebound effect 
   but does not refer to a ``multiplier.''
 }
 
-We believe the use of the word ``multiplier'' is unfortunate in this context
-for four reasons.
-
 **** We may want to combine or separate these reasons.
 Or add new. 
 But this is my first shot at a structure for this discussion.
 ---MKH **** 
 
+We believe the use of the word ``multiplier'' is unfortunate in this context
+for four reasons.
 First, the word ``multiplier'' conjures short-run, Keynesian thoughts.
 In contrast, macroeconomic energy rebound effects are long-run effects brought about by changes
 to both the size and the productive structure of the economy.
 
 Second, the ``multiplier effect'' refers to changes in real income
-by changing the monetary \emph{income}, 
+by changing monetary \emph{income}, 
 whereas energy efficiency changes real income by reducing monetary \emph{expenses},
 because the energy service price is reduced.%
 \footnote{
@@ -880,9 +881,9 @@ is injected into the economy,
 such as when the government makes additional purchases by taking on new debt 
 \citep[ch.\ 12]{Keynes1936}.
 Another cause of purchasing power injection can be an unexpected tax reimbursement \citep{Agarwal2014a}. 
-Regardless of their source, these additional funds can mobilize additional resources
+Regardless of the source, these additional funds can mobilize additional resources
 and demand more energy, leading to rebound. 
-In contrast to the Keynesian multiplier, 
+However, in contrast to the Keynesian multiplier, 
 device-level energy efficiency upgrades do \emph{not} add new purchasing power, 
 at least in the short-run, where the Keynesian multiplier operates.
 The consumer simply redirects existing money away from energy purchases toward a different basket of goods.
@@ -892,7 +893,7 @@ must multiply through the economy
 overlooks the fact that spending in the economy is circular.
 Funds spent on new goods are not spent on energy, 
 so the energy provider (e.g., an electric utility) and its employees 
-receive less income and must curtail their spending. 
+receive less income and must curtail their personal spending. 
 In a closed economy,
 these purely monetary effects should cancel.
 In an open economy, 
@@ -905,12 +906,14 @@ In fact, since savings is a leakage
 (i.e.\ the consumer may not spend all leftover funds but save them),
 there is chance that rather than increasing energy rebound, 
 this ``macroeconomic'' effect decreases energy rebound.
-It is a supply side, not demand side shock.%
+
+Understood in this way, energy efficiency is a supply side, not demand side shock
+(as the Keynesian multiplier).%
 \footnote{
   The savings leakage is a macroeconomic effect too, 
   because the microeconomic analysis always assumes full utilization of resources.
 }
-Empirical evidence supports the conceptual argument that 
+Indeed, empirical evidence supports the conceptual argument that 
 device-level energy efficiency upgrades
 do not necessarily lead to short-run macroeconomic growth 
 (i.e., in the same year). 
@@ -934,8 +937,8 @@ a large-scale deposit
 of an already-usable primary energy resource
 with very low extraction costs. 
 The ``already-usable'' phrase is important, as it suggests that 
-existing infrastructure (e.g., refineries) could process the primary energy resource,
-without modification.
+unmodified, existing infrastructure (e.g., refineries) could process 
+the newly-discovered primary energy resource.
 The ``very low extraction costs'' phrase is very important, 
 for the resource would effectively, then,
 reduce the price of primary energy (say, crude oil) seen by refiners.
@@ -951,6 +954,10 @@ of the energy conversion chain (the primary stage),
 efficiency upgrades to consumer devices operate at the far downstream end
 of the energy conversion chain (the energy services stage).
 Both have the same effect of reducing the price of energy services.
+
+Given the four reasons above, 
+a macroeconomic multiplier is not a helpful way
+to conceptualize the link between microeconomic and macroeconomic rebound effects.
 
 
 %------------------------------
