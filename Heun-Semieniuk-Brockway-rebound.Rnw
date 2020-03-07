@@ -995,9 +995,10 @@ yet more XXXXXX is in service than ever before. **** Need statistics here. ---MK
 And so too with energy.
 While energy efficiency at the device-level has climbed in the past century, 
 energy consumption at the macro level has also risen.
-\citet{Heun:2019aa} show that increases in aggregate energy efficiency and
-increases in aggregate energy consumption go hand-in-hand.
-**** Pull numbers from the Ghana UK paper. ****
+\citet{Heun:2019aa} **** Heun et al.\ are not the best reference here. 
+Can PB provide an alternative? ****
+show that increases in energy efficiency at the micro level and
+increases in overall energy consumption at the macro level go hand-in-hand.
 Of course, this generality between energy on the one hand and other inputs (XXXXX and labor) on the other
 raises the question whether it is appropriate to speak of a rebound effect at all. 
 Isn't all technological progress just a rebound effect? 
