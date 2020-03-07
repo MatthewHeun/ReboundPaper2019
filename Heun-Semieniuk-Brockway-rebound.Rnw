@@ -348,19 +348,15 @@ Section~\ref{sec:conclusion} concludes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This section derives the \name{}.
-We consider five rebound effects:
+We consider three main rebound effects:
 %
 \begin{enumerate*}[label={(\arabic*)}]
 
   \item embodied energy effects,
 
-  \item device-level effects,
-
-  \item substitution effects, 
+  \item substitution effects (including device-level effects), and
   
-  \item income effects, and 
-  
-  \item productivity effects.
+  \item macroeconomic effects (including income effects, the multiplier effect, and a productivity effect).
 
 \end{enumerate*}
 %
@@ -371,14 +367,14 @@ income effects are examples of direct rebound, and
 the embodied energy effect is an example of indirect rebound.
 Both direct and indirect rebound are microeconomic in nature.
 Productivity effects are macroeconomic.
-
-We use, as our basis, the model of \Bt{},
-who considered only three effects in his derivation and calculations:
+Our work is most similar to the model of \Bt{},
+who considered only
 device-level, substitution, and income effects.%
 \footnote{
   \Bt{} discussed embodied energy but didn't develop expressions for embodied energy rebound.
   \Ba{} discussed a ``macroeconomic multiplier'' but did not include macroeconomic effects in his rebound calculations.
 }
+
 We assume a device (say, an automobile)
 that consumes final energy $\Ef$ (say, gasoline)
 available at price $p_{\Ef}$ (in \$/MJ)
@@ -442,12 +438,12 @@ just as any new technology to reduce input costs.
 \label{sec:preliminaries}
 %++++++++++++++++++++++++++++++
 
-Energy rebound for each rebound effect $j$ (embodied energy, substitution, technology)
+Energy rebound for each rebound effect $j$ (embodied energy, substitution, productivity)
 can be calculated by
 $Re_j = 1 - \frac{\mathrm{actual \, energy \, savings}_j}{\mathrm{expected \, energy \, savings}}$,
 where expected energy savings are quantified at the device level
 in the absence of all other effects 
-(embodied energy, substitution, and technology).
+(embodied energy, substitution, and productivity).
 Actual energy savings are given by
 $\mathrm{expected \, energy \, savings} - \mathrm{takeback}$.
 Thus,
@@ -467,7 +463,7 @@ they divide out anyway.
 Total rebound ($Re$) is given by the sum of rebound from each effect:
 %
 \begin{equation} \label{eq:Re_tot_prelim}
-  Re = Re_{emb} + Re_{sub} + Re_{tech} \, .
+  Re = Re_{emb} + Re_{sub} + Re_{p} \, .
 \end{equation}
 
 
@@ -476,7 +472,7 @@ Total rebound ($Re$) is given by the sum of rebound from each effect:
 \label{sec:expected_energy_savings}
 %++++++++++++++++++++++++++++++
 
-The final energy consumption rate of the device is
+The direct final energy consumption rate of the device is
 $\ratebefore{E}_{\fdir} = \ratebefore{q}_s / \before{\eta}$
 prior to the energy efficiency upgrade~($U$) and
 $\rateafter{E}_{\fdir} = \ratebefore{q}_s / \after{\eta}$
@@ -524,13 +520,9 @@ namely $\mathrm{takeback}_j$.
 **** Say that embodied energy rebound could easily be negative, because
 $\Delta \rate{E}_{\femb}$ could be negative
 
-**** Consider ``technology rebound'' and ``technology factor'' 
-instead of ``productivity,'' following van Benthem. ****
-
 **** GS says following is difficult from substitution effect onward. 
 Consider adding more steps? ****
 
-**** Collapse device-level and substitution effect into one section ****
 
 **** Eliminate references to B in the derivations. ****
 
@@ -546,9 +538,10 @@ The energy efficiency upgrade ($U$)
 causes the embodied final energy of the device to change
 from $E_{\femb}$ to $\after{E}_{\femb}$.%
 \footnote{
-  We define embodied energy as the energy/exergy analysis literature
-  to be the sum of all final energy consumed in the production of the device.
-  \Bt{} discusses ``embodied energy,'' but uses the term to mean
+  We define embodied energy consistent with the energy/exergy analysis literature
+  to be the sum of all final energy consumed (direct and indirect) 
+  in the production of the device.
+  In contrast, \Bt{} uses the term ``embodied energy'' to mean
   the primary energy equivalent of direct final energy consumed.
 }
 We allocate embodied energy over the life of the original and upgraded devices
@@ -1640,11 +1633,11 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $dev$ & device \\
   $emb$ & embodied \\
   $f$ & final energy stage of the energy conversion chain \\
-  % $i$ & income \\
   $j$ & an index for different rebound effects (embodied energy, substitution, income) \\
   $OM$ & operation and maintenance costs \\
   $p$ & productivity \\
   $s$ & service stage of the energy conversion chain \\
+  $sub$ & substitution \\
   \bottomrule
 \end{tabular}
 \label{tab:subscripts}
