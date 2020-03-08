@@ -1456,28 +1456,7 @@ Project_data <- Project_data %>%
   )
 @
 
-%++++++++++++++++++++++++++++++
-\subsection{Income and respending rebound}
-\label{sec:income_and_respending_example}
-%++++++++++++++++++++++++++++++
 
-As \Bt{} notes, a good first estimate for income effect rebound ($Re_i$)
-is obtained when
-%
-\begin{enumerate*}[label={(\alph*)}]
-
-  \item $U$ is cost-neutral ($\rateafter{C}_{dev} = \ratebefore{C}_{dev}$, leading to $\gamma = 0$) and
-  
-  \item $k = 1$.
-
-\end{enumerate*}
-%
-Under these conditions, income effect rebound (Equation~\ref{eq:Re_ir})
-simplifies to $Re_i = \pI$.
-
-
-Income \emph{and} respending rebound is found by multiplying $Re_i$ by $k$,
-such that $Re_{ir} = k Re_i$.
 
 
 %++++++++++++++++++++++++++++++
