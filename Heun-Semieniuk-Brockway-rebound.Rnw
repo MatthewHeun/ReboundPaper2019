@@ -779,8 +779,9 @@ But we will soon note that the income effect does not operate in isolation
 and does not describe the micro-macro link well.
 Thereafter, we argue that a macroeconomic multiplier is also unhelpful 
 for describing the micro-macro link.
-Finally, we claim that energy-efficiency-driven productivity gains 
+Next, we claim that energy-efficiency-driven productivity gains 
 provide the most fruitful way to conceptualize macroeconomic rebound effects. 
+Finally, we develop a mathematical expression for productivity rebound ($Re_p$).
 
 
 %------------------------------
