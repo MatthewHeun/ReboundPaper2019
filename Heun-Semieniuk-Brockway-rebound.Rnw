@@ -1723,14 +1723,14 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
 %++++++++++++++++++++++++++++++
 
 \Bt{} does not provide explicit expressions for 
-rebound terms, as we do in Section~\ref{sec:model_derivation}.
+rebound terms, as we do in Section~\ref{sec:extended_framework}.
 But he does provide example calculations for substitution effect rebound and income effect rebound 
 caused by increasing auto fuel economy~\Bp{pp.~15--17}.
 The details of \Ba{}'s
 fuel economy example provide the opportunity for numerical verification of
-the explicit rebound equations developed in Section~\ref{sec:model_derivation}.
-Only the expressions for income and substitution effects
-($Re_{sub}$ and $Re_{i}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_ir}
+the explicit rebound equations developed in Section~\ref{sec:extended_framework}.
+Only the expressions for substitution and income effects
+($Re_{sub}$ and $Re_{i}$) in Equations~\ref{eq:Re_sub} and~\ref{eq:Re_p}
 can be verified in this manner, because
 \Ba{} provided neither
 an expression for embodied energy effects nor example calculations for embodied energy rebound.
@@ -1774,21 +1774,24 @@ The near-match verifies the derivation of Equation~\ref{eq:Re_sub}.
 
 
 %------------------------------
-\subsubsection{Verification of income effect rebound ($Re_{i}$) expression}
-\label{sec:verification_income}
+\subsubsection{Verification of productivity effect rebound ($Re_{p}$) expression}
+\label{sec:verification_productivity}
 %------------------------------
 
-To verify the derivation of the explicit income effect rebound equation,
+We derived an explicit equation for productivity effect rebound in Equation~\ref{eq:Re_p}.
+The derivation is identical to the \Bt{} income effect with $k = 1$.
+Thus, \Ba{}'s income effect rebound ($Re_i$) is given by
+Equation~\ref{eq:Re_p} with $k = 1$, or 
+$Re_i = Re_p(k = 1)$.
+To verify the derivation of the explicit productivity effect rebound equation,
 we use numbers from \Ba{}'s
-fuel economy example to calculate $Re_{i}$ by Equation~\ref{eq:Re_ir}.
+fuel economy example to calculate $Re_{p}$ by Equation~\ref{eq:Re_p} assuming $k = 1$.
 Then, we compare our answer to
 \Ba{}'s numerical estimate for $Re_{i}$.
-Agreement will indicate that the derivation of Equation~\ref{eq:Re_ir} is consistent with \Ba{}'s 
+Agreement will indicate that the derivation of Equation~\ref{eq:Re_p} is consistent with \Ba{}'s 
 model for income effect rebound.
 
-The explicit equation for income effect rebound ($Re_{i}$) is given by
-Equation~\ref{eq:Re_ir} with $k = 1$.
-Numerical quantification of each term in Equation~\ref{eq:Re_ir} (except $\gamma$)
+Numerical quantification of each term in Equation~\ref{eq:Re_p} (except $\gamma$)
 is given in Section~\ref{sec:verification_substitution}.
 \Bt{} indicates that the fuel economy upgrade
 from $\before{\eta}$ to $\after{\eta}$
@@ -1800,10 +1803,10 @@ The pre-upgrade direct final energy consumption rate
 is calculated from expected usage (12,000 mi/yr) and the pre-upgrade efficiency ($\eta$) as
 $\ratebefore{E}_{\fdir} = (12,000 \, \mathrm{mi/yr})(1 \, \mathrm{gal}/25 \, \mathrm{mi}) (113,996 \, \mathrm{BTU/gal})
 = 5.472 \times 10^7 \, \mathrm{BTU/yr}$.
-Using the above numbers in Equation~\ref{eq:Re_ir} with $k = 1$,
+Using the above numbers in Equation~\ref{eq:Re_p} with $k = 1$,
 we obtain $Re_{i} = 0.110$,
 exactly matching the value of 0.11 reported in \Bt{p.~17, Table~2}.
-The match verifies the derivation of Equation~\ref{eq:Re_ir}.
+The match verifies the derivation of Equation~\ref{eq:Re_p}.
 
 
 %++++++++++++++++++++++++++++++
