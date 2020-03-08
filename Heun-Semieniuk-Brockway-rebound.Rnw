@@ -840,16 +840,12 @@ the device owner spends freed cash
 ($FC$, money left over after purchasing energy services with upgraded devices)
 on additional goods, 
 which raises effective demand, 
-puts additional resources to work, and, hence,
+puts idle resources to work, and, hence,
 raises output,
 which, in turn, requires additional energy inputs. 
 Several of these spending rounds occur,
-each raising rebound to a higher level than would have been the case
-if only the effects of the consumer's re-spending were considered. 
-% With a multiplier of, say, 3, 
-% not only is there an indirect rebound effect but also two additional dollars 
-% that purchase goods and services which, in turn, require energy inputs.
-% The multiplier rebound effect could be significant.
+each raising rebound to a level higher than would have been the case
+if only the effects of the consumer's spending were considered. 
 The multiplier idea has also been promulgated by
 \citet{Gillingham:2015aa}, \citet{Gillingham2016a}, and \citet{Lange2019}, 
 who all cite \Ba{}.%
