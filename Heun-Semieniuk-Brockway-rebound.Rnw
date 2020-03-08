@@ -811,13 +811,18 @@ thus giving rise to additional energy demand.
 But the income effect doesn't exist in a vacuum, and
 most authors neglect the fact that 
 budget constraints that applied to the substitution effect at the micro level
-also apply to income at the macro level. 
+also apply to income effects at the macro level. 
 When the device owner shifts spending away from energy to another portion of the economy,
 the workers at a utility or refinery earn less money and therefore demand less energy
 with their purchases. 
 To first order approximation, the loss of revenue in the energy sector
 (and resulting reduction of spending by refinery workers)
 cancels the device owner's spending increase elsewhere in the economy.
+So the so-called ``income effect,'' properly understood, 
+has negligible effect on energy consumption in the broader economy.
+And we argue that in isolation the microeconomic ``income effect''
+is not a good conceptual framework for understanding
+the impact of energy efficiency in the broader economy.
 
 
 %------------------------------
@@ -825,12 +830,9 @@ cancels the device owner's spending increase elsewhere in the economy.
 \label{sec:multiplier_effect}
 %------------------------------
 
-So the so-called ``income effect,'' properly understood, 
-has negligible effect on energy consumption in the broader economy.
-However, that is not to say that macroeconomic effects are unimportant.
+The above is not to say that macroeconomic effects are unimportant.
 Other authors have speculated about a ``multiplier'' effect, 
-whereby the consumer's leftover purchasing power, 
-which is typically analyzed only as an indirect rebound effect, 
+whereby the consumer's leftover purchasing power 
 acts like a spending multiplier. 
 The idea runs as follows: 
 with less than full utilization of resources, 
