@@ -865,11 +865,12 @@ First, the word ``multiplier'' conjures short-run, Keynesian thoughts.
 In contrast, macroeconomic energy rebound effects are long-run effects brought about by changes
 to both the size and the productive structure of the economy.
 
-Second, the ``multiplier effect'' refers to changes in real income
-by changing monetary \emph{income}, 
-whereas energy efficiency changes real income by reducing monetary \emph{expenses},
+Second, the Keynesian ``multiplier effect'' refers to changes in real income
+caused by changing \emph{income}, 
+whereas energy efficiency changes real income by reducing \emph{expenses},
 because the energy service price is reduced.%
 \footnote{
+  **** Do we need this footnote? Seems like a distraction. Or like we are picking a fight with \citet{Basu2006}. ---MKH ****
   But note that a reduction of energy service price rules out any sticky-price explanation 
   for why output should stay constant and therefore 
   also rules out one important rationalization **** Do you mean ``justification'' or ``explanation'' here? ---MKH 
