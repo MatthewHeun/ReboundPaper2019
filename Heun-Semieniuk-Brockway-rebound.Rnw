@@ -1011,21 +1011,13 @@ in utilization of energy.
 
 Further, we claim that productivity effect rebound stems from technological improvements
 (energy efficiency) 
-which are tied to energy service price reductions.
+which can be correlated to energy service price reductions.
 As such, productivity effect rebound at the macro level scales with the net income (freed cash, $FC$)
 gained by device owners at the micro level.
 Gross income ($\rate{G}$) is money that is no longer spent on energy to operate the upgraded device,
-assuming the same level of service from the device **** is this right? Should we use the higher service level? ****.
+assuming the same level of service from the device.
 Thus, $\rate{G} = -\Delta \rate{E}_{\fdir} p_{\Ef}$.
 Typically, $\Delta \rate{E}_{\fdir} < 0$, so $\rate{G}$ is positive.
-% Our approach to productivity effects is similar in practice to \Bt{}
-% who developed his model using a basket of $N$ other goods,
-% but who, in his numeric estimates, also assumed that spent income has
-% energy implications at the average energy intensity of the economy.
-% Our approach is simpler than \Tt{}
-% who used input-output techniques to assess 
-% the energy implications of spending energy cost savings
-% in the economy.
 
 To the device owner, final energy cost savings come at a cost to 
 procure (capital cost), operate, maintain, and dispose 
@@ -1033,7 +1025,7 @@ the upgraded device.
 But it cost money to procure, operate, maintain, and dispose the original device, too.
 These device costs can be expressed as a rate ($\rateafter{C}_{dev}$ and $\ratebefore{C}_{dev}$, respectively),
 which is typically, but not always, higher for the upgraded device
-than the original device
+compared to the original device
 ($\rateafter{C}_{dev} > \ratebefore{C}_{dev}$).
 Our approach to capital and disposal costs is similar to our approach to embodied energy,
 i.e., we spread capital and disposal costs across the life of the original and upgraded devices
@@ -1054,7 +1046,7 @@ $\Delta \rate{C}_{dev} = \rateafter{C}_{dev} - \ratebefore{C}_{dev}$.%
 }
 
 Freed cash ($FC$), or net income, is 
-the difference between the income rate and
+the difference between the gross income rate and
 the change in device cost rate.
 Thus, $FC = \rate{G} - \Delta \rate{C}_{dev}$.
 As shown by \citet{Antal:2014aa}, 
@@ -1066,7 +1058,7 @@ $\Delta \rate{E}_{\finc} = FC \, I_{\Ef}$.
 Scaling from freed cash ($FC$) at the device level
 and productivity-driven growth at the macro level is an unexplored area. 
 In the absence of better information, 
-we express this scaling simply with a multiplicative technology factor ($k$), 
+we express this scaling simply with a multiplicative productivity factor ($k$), 
 with $k \ge 0$ expected.
 $k = 0$ means two things:
 %
@@ -1120,14 +1112,33 @@ productivity effect rebound can be expressed as
   Re_p = \Repequation{} \, .
 \end{equation}
 %
-Note that $\gamma$ is the
-ratio of device cost rate increase 
-to expected device-level energy cost savings.
-$\gamma < 1$ is expected,
+Note that $\gamma < 1$ is expected,
 such that $(1 - \gamma) > 0$,
 else the device owner would view $U$ as uneconomic and likely not perform the upgrade.
 
-
+When costs for procuring, operating, maintaining, and disposing
+the energy efficient device
+($\rate{C}_{dev}$, represented by $\gamma$ in Equation~\ref{eq:Re_p})
+go up (down),
+productivity rebound decreases (increases), because
+device costs reduce (increase) net freed cash available
+for spending in the economy.
+It is important to note that the device cost rate
+may go up \emph{or} down in response to $U$.
+E.g., even if the capital cost of the upgraded device is larger than
+the capital cost of the original device,
+longer life for the upgraded device may outweigh capital costs
+leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
+which boosts $Re_p$ in Equation~\ref{eq:Re_p}
+and $Re$ in Equation~\ref{eq:Re_tot}.
+(This situation is not uncommon for lighting upgrades
+involving LED technology, as shown later.)
+Thus, device cost effects may lead to productivity-related macroeconomic energy rebound
+\emph{independent of} device-level energy cost savings.
+In this respect, we see that \Tapp{} assumption of identical capital costs
+for the original and upgraded devices
+closes off the possibility of productivity-related macroeconomic rebound
+due to device cost savings.
 
 
 
@@ -1308,31 +1319,6 @@ using data from the auto efficiency example in \Bt{}.)
 % as well as many other factors.
 % The following subsections explore these relationships.
 
-
-
-When costs for procuring, operating, maintaining, and disposing
-the energy efficient device
-($\rate{C}_{dev}$, represented by $\gamma$ in Equations~\ref{eq:Re_p}--\ref{eq:Re_tot})
-go up (down),
-total rebound decreases (increases), because
-device costs reduce (increase) net freed cash available
-for spending in the economy.
-It is important to note that the device cost rate
-may go up \emph{or} down in response to $U$.
-E.g., even if the capital cost of the upgraded device is larger than
-the capital cost of the original device,
-longer life for the upgraded device may outweigh capital costs
-leading to $\rateafter{C}_{dev} < \ratebefore{C}_{dev}$ and $\gamma < 0$,
-which boosts $Re_p$ in Equation~\ref{eq:Re_p}
-and $Re$ in Equation~\ref{eq:Re_tot}.
-(This situation is not uncommon for lighting upgrades
-involving LED technology, as shown later.)
-Thus, device cost effects may lead to productivity-related macroeconomic energy rebound
-\emph{independent of} device-level energy cost savings.
-In this respect, we see that \Tapp{} assumption of identical capital costs
-for the original and upgraded devices
-closes off the possibility of productivity-related macroeconomic rebound
-due to device cost savings.
 
 The third term of Equation~\ref{eq:Re_tot} shows that
 when $1 - \gamma - Re_{dev}/k > 0$,
@@ -1569,8 +1555,8 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $FC$ & freed cash [\$] \\
   $G$ & income [\$] \\
   $I$ & energy intensity of economic activity [MJ/\$] \\
-  $k$ & productivity multiplier \\
-  $N$ & number of goods in a basket \\
+  $k$ & productivity factor [--] \\
+  $N$ & number of goods in a basket [--] \\
   $p$ & price [\$] \\
   $q$ & quantity [--] \\
   $Re$ & rebound [--] \\
