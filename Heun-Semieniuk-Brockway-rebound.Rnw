@@ -881,39 +881,13 @@ Third, the Keynesian multiplier applies whenever \emph{additional} purchasing po
 is injected into the economy, 
 such as when the government makes additional purchases by taking on new debt 
 \citep[ch.\ 12]{Keynes1936}.
-Another cause of purchasing power injection can be an unexpected tax reimbursement \citep{Agarwal2014a}. 
-Regardless of the source, these additional funds can mobilize additional resources
+(Another cause of purchasing power injection can be an unexpected tax reimbursement \citep{Agarwal2014a}.)
+These additional funds can mobilize additional resources
 and demand more energy, leading to rebound. 
 However, in contrast to the Keynesian multiplier, 
 device-level energy efficiency upgrades do \emph{not} add new purchasing power, 
 at least in the short-run, where the Keynesian multiplier operates.
 The consumer simply redirects existing money away from energy purchases toward a different basket of goods.
-
-Fourth, the contention that consumer purchases of additional goods in the efficient case
-must multiply through the economy 
-overlooks the fact that spending in the economy is circular.
-Funds spent on new goods are not spent on energy, 
-so the energy provider (e.g., an electric utility) and its employees 
-receive less income and must curtail their personal spending. 
-In a closed economy,
-these purely monetary effects should cancel.
-In an open economy, 
-it may well be that the change in consumption basket
-leads to a change in net imports and 
-thereby to a growth or shrinkage effect.
-But there is no multiplier effect from savings 
-**** we need to signal ``savings'' better here. It comes out of the blue. Or delete! ---MKH ****. 
-In fact, since savings is a leakage
-(i.e.\ the consumer may not spend all leftover funds but save them),
-there is chance that rather than increasing energy rebound, 
-this ``macroeconomic'' effect decreases energy rebound.
-
-Understood in this way, energy efficiency is a supply side, not demand side shock
-(as the Keynesian multiplier).%
-\footnote{
-  The savings leakage is a macroeconomic effect too, 
-  because the microeconomic analysis always assumes full utilization of resources.
-}
 Indeed, empirical evidence supports the conceptual argument that 
 device-level energy efficiency upgrades
 do not necessarily lead to short-run macroeconomic growth 
@@ -924,9 +898,38 @@ Only a year after does it respond strongly positively.
 \citet{Basu2006} also find that contemporaneous work hours and employment fall,
 as fewer employees are needed to produce the output. 
 
-Despite using the word ``multiplier,'' 
-\Ba{} hints that the Keynesian multiplier is not a good way to describe the effect of energy efficiency upgrades 
-when he says 
+Fourth, the contention that consumer purchases of additional goods in the efficient case
+must multiply through the economy 
+overlooks the fact that spending in the economy is circular.
+Funds spent on new goods are not spent on energy, 
+so the energy provider (e.g., an electric utility) and its employees 
+receive less income and must curtail their personal spending. 
+In a closed economy,
+these purely monetary effects should cancel.
+**** Do we need this discussion of open economy? ---MKH ****
+In an open economy, 
+it may well be that the change in consumption basket
+leads to a change in net imports and 
+thereby to a growth or shrinkage effect.
+**** Do we need this discussion of savings here?
+It comes out of the blue!  
+If we keep it, we should probably signal better. ---MKH ****
+But there is no multiplier effect from savings 
+In fact, since savings is a leakage
+(i.e.\ the consumer may not spend all leftover funds but save them),
+there is chance that rather than increasing energy rebound, 
+this ``macroeconomic'' effect decreases energy rebound.
+Understood in this way, energy efficiency is a supply side shock, 
+while the Keynesian multiplier is a demand side shock.%
+\footnote{
+  The savings leakage is a macroeconomic effect too, 
+  because the microeconomic analysis always assumes full utilization of resources.
+}
+
+Given the four reasons above, 
+we argue that a macroeconomic multiplier is not a helpful way
+to conceptualize the link between device-level microeconomic effects and macroeconomic rebound.
+\Ba{} seems to agree when he says, 
 ``This would be more akin to the macroeconomic multiplier 
 that might result following a new discovery 
 of a natural resource deposit'' \Bp{p.~11}.
@@ -938,9 +941,9 @@ a large-scale deposit
 of an already-usable primary energy resource
 with very low extraction costs. 
 The ``already-usable'' phrase is important, as it suggests that 
-unmodified, existing infrastructure (e.g., refineries) could process 
+existing (unmodified) infrastructure (e.g., refineries) could process 
 the newly-discovered primary energy resource.
-The ``very low extraction costs'' phrase is very important, 
+The ``very low extraction costs'' phrase is also important, 
 for the resource would effectively, then,
 reduce the price of primary energy (say, crude oil) seen by refiners.
 \Ba{} implicitly assumes that low-extraction-cost primary energy 
@@ -954,11 +957,11 @@ While \Ba{}'s natural resource example reduces costs at the far upstream end
 of the energy conversion chain (the primary stage),
 efficiency upgrades to consumer devices operate at the far downstream end
 of the energy conversion chain (the energy services stage).
-Both have the same effect of reducing the price of energy services.
-
-Given the four reasons above, 
-a macroeconomic multiplier is not a helpful way
-to conceptualize the link between microeconomic and macroeconomic rebound effects.
+Both have the same effect of reducing the price of energy services
+by reducing the price of inputs.
+And reducing the price of inputs is a productivity enhancer, 
+not a macroeconomic multiplier,
+a point that we develop in the following section.
 
 
 %------------------------------
