@@ -771,15 +771,16 @@ a more-negative (less-negative) service price elasticity of final energy demand
 \label{sec:macroeconomic_effects}
 %++++++++++++++++++++++++++++++
 
-We now set about the task of linking microeconomic effects 
+We now set about the task of developing the conceptual framework 
+for linking microeconomic effects at the device level 
 to additional energy demand in the broader macroeconomy.
 The starting point for this effort is net income gained by the device owner.
-But we soon note that the income effect does not operate in isolation
+But we will soon note that the income effect does not operate in isolation
 and does not describe the micro-macro link well.
 Thereafter, we argue that a macroeconomic multiplier is also unhelpful 
 for describing the micro-macro link.
 Finally, we claim that energy-efficiency-driven productivity gains 
-provide the most fruitful way to describe macroeconomic rebound effects. 
+provide the most fruitful way to conceptualize macroeconomic rebound effects. 
 
 
 %------------------------------
