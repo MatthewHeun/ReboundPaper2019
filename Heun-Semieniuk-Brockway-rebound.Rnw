@@ -959,7 +959,8 @@ efficiency upgrades to consumer devices operate at the far downstream end
 of the energy conversion chain (the energy services stage).
 Both have the same effect of reducing the price of energy services
 by reducing the price of inputs.
-And reducing the price of inputs is a productivity enhancer, 
+
+Reducing the price of inputs is a productivity enhancer, 
 not a macroeconomic multiplier,
 a point that we develop in the following section.
 
@@ -985,9 +986,9 @@ Implicitly, then, we are claiming two things:
         thereby allowing production on a greater scale.
     
 \end{enumerate*}
-%
+
 In general, reducing cost of inputs at the micro level can lead 
-to important and surprising counter tendencies in factor consumption at the macro level.
+to important and surprising counter-tendencies in factor consumption at the macro level.
 Consider labor productivity: it has risen 20-fold 
 in Western Europe and the US since 1820 \citep{Maddison2001}, and
 yet today these countries employ more workers than ever before. 
@@ -1003,7 +1004,8 @@ energy consumption at the macro level has also risen.
 Can PB provide an alternative? ****
 show that increases in energy efficiency at the micro level and
 increases in overall energy consumption at the macro level go hand-in-hand.
-Of course, this generality between energy on the one hand and other inputs (XXXXX and labor) on the other
+Of course, this generality between energy on the one hand 
+and other inputs (XXXXX and labor) on the other hand
 raises the question whether it is appropriate to speak of a rebound effect at all. 
 Isn't all technological progress just a rebound effect? 
 We put it the opposite way: 
