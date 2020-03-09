@@ -833,7 +833,7 @@ the impact of energy efficiency in the broader economy.
 The above is not to say that macroeconomic effects are unimportant.
 Other authors have speculated about a ``multiplier'' effect, 
 whereby the consumer's leftover purchasing power 
-acts like a spending multiplier. 
+acts like a spending multiplier to enhance final energy rebound. 
 The idea runs as follows: 
 with less than full utilization of resources, 
 the device owner spends freed cash 
@@ -842,10 +842,10 @@ on additional goods,
 which raises effective demand, 
 puts idle resources to work, and, hence,
 raises output,
-which, in turn, requires additional energy inputs. 
+which, in turn, requires additional final energy consumption. 
 Several of these spending rounds occur,
 each raising rebound to a level higher than would have been the case
-if only the effects of the consumer's spending were considered. 
+if the consumer's initial spending were the only effect considered. 
 The multiplier idea has also been promulgated by
 \citet{Gillingham:2015aa}, \citet{Gillingham2016a}, and \citet{Lange2019}, 
 who all cite \Ba{}.%
