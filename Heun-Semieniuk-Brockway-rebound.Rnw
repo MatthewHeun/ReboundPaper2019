@@ -543,7 +543,28 @@ from $E_{\femb}$ to $\after{E}_{\femb}$.%
   In contrast, \Bt{} uses the term ``embodied energy'' to mean
   the primary energy equivalent of direct final energy consumed.
 }
-We allocate embodied energy over the life of the original and upgraded devices
+Energy is embodied in the device during manufacturing, distribution, and disposal processes,
+prior to consumer acquisition of the device and after the useful life of the device.
+Aside from maintenance effects, 
+no energy is embodied in the device while in service. 
+However, for simplicity, we spread all embodied energy
+over the lifetime of the device, 
+an equal amount assigned to every period. 
+
+We later take the same approach to device acquisition and disposal costs.
+In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition, 
+but others (automobiles) are not and paid off in installments.%
+\footnote{
+  Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
+}
+By spreading device acquisition and disposal costs across the life of the device, 
+we treat all purchase plans equally.
+Another justification for spreading purchase costs comes from considering
+staggered device replacements by many consumers across several years.  
+in the aggregate, staggered replacements 
+work out to about the same embodied energy and cost in every period.
+
+Thus, we allocate embodied energy over the life of the original and upgraded devices
 ($\before{t}$ and $\after{t}$, respectively)
 to obtain embodied energy rates, such that
 $\ratebefore{E}_{\femb} = \before{E}_{\femb} / \before{t}$
