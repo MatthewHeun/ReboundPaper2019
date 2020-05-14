@@ -4,69 +4,92 @@
 \modulolinenumbers[5]
 
 
+%% Package imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{hyperref}
+\usepackage[inline]{enumitem}   % For inline enumeration
+
+\usepackage{hyperref} % hyperref should be the last package loaded
+
+
+%% Macros defined by authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{macros.tex}
+
+
+%% Journal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \journal{Energy Economics}
 
-%%%%%%%%%%%%%%%%%%%%%%%
-%% Elsevier bibliography styles
-%%%%%%%%%%%%%%%%%%%%%%%
-%% To change the style, put a % in front of the second line of the current style and
-%% remove the % from the second line of the style you would like to use.
-%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Numbered
-%\bibliographystyle{model1-num-names}
+%% Bibliography style %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Numbered without titles
-%\bibliographystyle{model1a-num-names}
-
-%% Harvard
 \bibliographystyle{model2-names.bst}\biboptions{authoryear}
 
-%% Vancouver numbered
-%\usepackage{numcompress}\bibliographystyle{model3-num-names}
-
-%% Vancouver name/year
-%\usepackage{numcompress}\bibliographystyle{model4-names}\biboptions{authoryear}
-
-%% APA style
-%\bibliographystyle{model5-names}\biboptions{authoryear}
-
-%% AMA style
-%\usepackage{numcompress}\bibliographystyle{model6-num-names}
-
-%% `Elsevier LaTeX' style
-% \bibliographystyle{elsarticle-num}
-%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
 \begin{frontmatter}
 
-\title{Elsevier \LaTeX\ template\tnoteref{mytitlenote}}
-\tnotetext[mytitlenote]{Fully documented templates are available in the elsarticle package on \href{http://www.ctan.org/tex-archive/macros/latex/contrib/elsarticle}{CTAN}.}
+%% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Group authors per affiliation:
-\author{Elsevier\fnref{myfootnote}}
-\address{Radarweg 29, Amsterdam}
-\fntext[myfootnote]{Since 1880.}
+\title{A Comprehensive Energy-Economy Framework for\\
+       Energy Rebound}
 
-%% or include affiliations in footnotes:
-\author[mymainaddress,mysecondaryaddress]{Elsevier Inc}
-\ead[url]{www.elsevier.com}
 
-\author[mysecondaryaddress]{Global Customer Service\corref{mycorrespondingauthor}}
-\cortext[mycorrespondingauthor]{Corresponding author}
-\ead{support@elsevier.com}
+%% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\address[mymainaddress]{1600 John F Kennedy Boulevard, Philadelphia}
-\address[mysecondaryaddress]{360 Park Avenue South, New York}
+\author[MKH_address]{Matthew Kuperus Heun\corref{corr_author}}
+\cortext[corr_author]{Corresponding author}
+\ead{mkh2@calvin.edu}
+
+\author[GS_address]{Gregor Semienuik}
+\ead{gsemieniuk@umass.edu}
+
+\author[PB_address]{Paul E. Brockway}
+\ead{P.E.Brockway@leeds.ac.uk}
+
+
+%% Addresses %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[MKH_address]{Engineering Department,\\
+Calvin University, 3201 Burton St. SE,\\
+Grand Rapids, MI, 49546, USA.}
+
+\address[GS_address]{Political Economy Research Institute \& Department of Economics,\\
+University of Massachusetts at Amherst, 412 North Pleasant St.,\\
+Amherst, MA, 01002, USA}
+
+\address[PB_address]{Sustainability Research Institute, School of Earth and Environment,\\
+University of Leeds,\\
+Leeds, LS2 9JT, UK}
+
+
+%% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-This template helps you to create a properly formatted \LaTeX\ manuscript.
+A concise and factual abstract is required.
+The abstract should state briefly 
+the purpose of the research, 
+the principal results, and
+major conclusions. 
+An abstract is often presented separately from the article, 
+so it must be able to stand alone.
+For this reason, References should be avoided, but if essential, 
+then cite the author(s) and year(s).
+Also, non-standard or uncommon abbreviations should be avoided, but
+if essential they must be defined at their first mention in the abstract itself.
 \end{abstract}
+
+
+%% Keywords %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% maximum of 6 keywords, using American spelling and avoiding general and plural terms and multiple concepts 
+% (avoid, for example, 'and', 'of'). Be sparing with abbreviations: 
+% only abbreviations firmly established in the field may be eligible. 
+% These keywords will be used for indexing purposes.
+
+% Up to 6 standard JEL codes. The available codes may be accessed at JEL, 
+% https://www.aeaweb.org/jel/guide/jel.php   
 
 \begin{keyword}
 \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
@@ -77,40 +100,175 @@ This template helps you to create a properly formatted \LaTeX\ manuscript.
 
 \linenumbers
 
-\section{The Elsevier article class}
 
-\paragraph{Installation} If the document class \emph{elsarticle} is not available on your computer, you can download and install the system package \emph{texlive-publishers} (Linux) or install the \LaTeX\ package \emph{elsarticle} using the package manager of your \TeX\ installation, which is typically \TeX\ Live or Mik\TeX.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction (total: 1000 words)}
+\label{sec:introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Usage} Once the package is properly installed, you can use the document class \emph{elsarticle} to create a manuscript. Please make sure that your manuscript follows the guidelines in the Guide for Authors of the relevant journal. It is not necessary to typeset your manuscript in exactly the same way as an article, unless you are submitting to a camera-ready copy (CRC) journal.
+%++++++++++++++++++++++++++++++
+\subsection{Background (PB, 500 words)}
+\label{sec:background}
+%++++++++++++++++++++++++++++++
 
-\paragraph{Functionality} The Elsevier article class is based on the standard article class and supports almost all of the functionality of that class. In addition, it features commands and options to format the
-\begin{itemize}
-\item document style
-\item baselineskip
-\item front matter
-\item keywords and MSC codes
-\item theorems, definitions and proofs
-\item lables of enumerations
-\item citation style and labeling.
-\end{itemize}
+General discussion of the importance of rebound, 
+non-micro-economic references.
+Here are some references from Matt's database that you may want to include:
+\citet{Jevons:1866uy}, 
+\citet{Saunders:1992aa, Saunders:2000aa}, 
+\citet{Sorrell:2007um, Sorrell:2009cg, Sorrell:2010ul},
+\citet{Brockway:2017a}, 
+\citet{Tsao:2010},
+\citet{Chitnis:2015}, 
+\citet{Stapleton:2016}, 
+\cite{Sun:2018aa}
+etc.
 
-\section{Front matter}
 
-The author names and affiliations could be formatted in two ways:
-\begin{enumerate}[(1)]
-\item Group the authors per affiliation.
-\item Use footnotes to indicate the affiliations.
-\end{enumerate}
-See the front matter of this document for examples. You are recommended to conform your choice to the journal you are submitting to.
+%++++++++++++++++++++++++++++++
+\subsection{The microeconomimcs of rebound (GS, 500 words)}
+\label{sec:microecon_of_rebound}
+%++++++++++++++++++++++++++++++
 
-\section{Bibliography styles}
+Discussion of the micro-economics of rebound.
+Bring in \citet{Borenstein:2015aa}, 
+\citet{Thomas:2013aa,Thomas:2013ab}, 
+\citet{Gillingham:2013aa,Gillingham:2020aa,Gillingham2016,Gillingham2016a}, etc.
 
-There are various bibliography styles available. You can select the style of your choice in the preamble of this document. These styles are Elsevier styles based on standard styles like Harvard and Vancouver. Please use Bib\TeX\ to generate your bibliography and include DOIs whenever available.
+At the end, bring us right up to the question below.
 
-Here are two sample references: \citep{Borenstein:2015aa,Brockway:2017a}.
+
+%++++++++++++++++++++++++++++++
+\subsection{Question, contribution, and benefits (MKH, 100 words)}
+\label{sec:questions_contribution}
+%++++++++++++++++++++++++++++++
+
+This paper answers the question:
+\emph{Is it possible to develop a comprehensive framework for energy rebound?} 
+We believe the answer is ``yes.''
+Thus, this paper's contribution to the rebound literature is
+the presentation of a quantitative, micro-economic 
+energy-economy rebound analysis framework, 
+a ``comprehensive rebound framework'' for short.
+The comprehensive rebound framework provides the following benefits:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item it untangles and clarifies interrelated aspects of energy rebound,
+  
+  \item it unifies several concepts of energy rebound,
+  
+  \item it enables analysis of energy policy options, 
+        thereby providing insight to the energy policymaking process.
+    
+\end{enumerate*}
+%
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Structure of the paper (MKH, 100 words)}
+\label{sec:structure}
+%++++++++++++++++++++++++++++++
+
+The remainder of this paper is structured as follows.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methods: a comprehensive analytical framework (MKH, 1500 words)}
+\label{sec:framework}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Provide highlights of the framework here.
+Refer to \ref{sec:derivation} for the detailed mathematical derivation of the framework.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Calculations: an example (PB, 2000 words)}
+\label{sec:example}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Focus on automobiles with at least two options.
+Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters.
+The different options should yield large and small rebound
+to provide insulation from reviewers' nit-picking 
+about any specific rebound numbers that we calculate.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion (GS, 1000 words)}
+\label{sec:discussion}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Be sure to point out benefits to policy-making that emerge from the example.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusions (MKH, 500 words)}
+\label{sec:conclusions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Restate characteristics of the framework.
+Restate benefits.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Nomenclature}
+\label{sec:nomenclature}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Table of symbols here.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Competing interests}
+\label{sec:competing_interests}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The authors declare they have no conflicts of interest.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Acknowledgements}
+\label{sec:acknowledgements}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+List funding sources in this standard way to facilitate compliance to funder's requirements:
+Funding: This work was supported by the National Institutes of Health [grant numbers xxxx, yyyy]; 
+the Bill \& Melinda Gates Foundation, Seattle, WA [grant number zzzz];
+and the United States Institutes of Peace [grant number aaaa].
+
+It is not necessary to include detailed descriptions on the program or type of grants and awards.
+When funding is from a block grant or other resources available to
+a university, college, or other research institution, 
+submit the name of the institute or organization that provided the funding.
+
+If no funding has been provided for the research, please include the following sentence:
+This research did not receive any specific grant from funding agencies 
+in the public, commercial, or not-for-profit sectors.
+
+**** Also list internal reviewers. ****
+
+
 
 % \section*{References}
 
 \bibliography{HSB_refs}
+
+
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Derivation of comprehensive rebound framework (MKH)}
+\label{sec:derivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+Put detailed derivation here.
+
+
+
 
 \end{document}
