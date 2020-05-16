@@ -7,6 +7,7 @@
 %% Package imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[inline]{enumitem}   % For inline enumeration
+\usepackage{smartdiagram}       % For simple diagrams
 
 \usepackage{hyperref} % hyperref should be the last package loaded
 
@@ -32,7 +33,7 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{A Comprehensive Energy-Economy Framework for\\
+\title{A Comprehensive, Micro-economic, Energy-Economy, Analytical Framework for\\
        Energy Rebound}
 
 
@@ -268,6 +269,9 @@ in the public, commercial, or not-for-profit sectors.
 
 Put detailed derivation here.
 
+\begin{center}
+\smartdiagram[flow diagram:horizontal]{Set up,Run,Analyse,Modify~/ Add} 
+\end{center}
 
 
 
