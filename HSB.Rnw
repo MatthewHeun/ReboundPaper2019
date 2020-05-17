@@ -8,6 +8,8 @@
 
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage[inline]{enumitem}   % For inline enumeration
+\usepackage{multicol}           % For multi-column layout
+\usepackage{pdflscape}          % For landscape environment \begin{landscape} ... \end{landscape}
 \usepackage{tikz}               % For diagrams
 \usetikzlibrary{arrows,positioning}         
 
@@ -335,6 +337,40 @@ Put detailed derivation here.
 \end{figure}
 
 
+
+\begin{landscape}
+
+\begin{center}
+\bf{Device Effect}
+\end{center}
+
+\begin{multicols}{2}
+
+\begin{center}
+\emph{Energy} 
+\end{center}
+
+
+\begin{equation} \label{eq:E_acct_orig}
+  \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
+\end{equation}
+
+
+\columnbreak
+
+\begin{center}
+\emph{Financial}
+\end{center}
+
+%
+\begin{equation} \label{eq:M_acct_orig}
+  \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
+\end{equation}
+%
+
+
+\end{multicols}
+\end{landscape}
 
 
 \end{document}
