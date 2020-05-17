@@ -339,112 +339,43 @@ Put detailed derivation here.
 \end{figure}
 
 
-% 
-% % Add vertical rule between columns
-% \setlength{\columnsep}{0.5cm}
-% \setlength{\columnseprule}{0.4pt}  % Same as thickness of rules above footnotes
-% 
-% \begin{landscape}
-% 
-% \begin{center}
-% \bf{Device Effect}
-% \end{center}
-% 
-% \begin{multicols}{2}
-% 
-% \begin{center}
-% \emph{Energy} 
-% \end{center}
-% %
-% \begin{equation} \label{eq:E_acct_orig}
-%   \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
-% \end{equation}
-% 
-% 
-% \columnbreak
-% %
-% \begin{center}
-% \emph{Financial}
-% \end{center}
-% %
-% \begin{equation} \label{eq:M_acct_orig}
-%   \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
-% \end{equation}
-% %
-% 
-% 
-% \end{multicols}
-% \end{landscape}
-% 
-% 
-% 
-% 
-% 
-% % Second attempt: parcolumns
-% 
-% \begin{landscape}
-% 
-% \begin{parcolumns}[rulebetween = true, nofirstindent = true, colwidths = {1 = 0.1\linewidth, 2 = 0.45\linewidth}]{3}
-% 
-% \colchunk{%
-% original
-% }
-% 
-% \colchunk{%
-% \begin{equation} \label{eq:E_acct_orig}
-%   \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
-% \end{equation}
-% }
-% 
-% \colchunk{%
-% \begin{equation} \label{eq:M_acct_orig}
-%   \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
-% \end{equation}
-% }
-% 
-% \colplacechunks
-% 
-% 
-% \end{parcolumns}
-% 
-% \noindent\rule{1.0\textheight}{0.4pt}
-% 
-% \end{landscape}
-% 
 
-
-% Third attempt:  minipage and macros
-
+% Derivation pages
 
 \begin{landscape}
 
 \linespread{1}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Device Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \derivheader{Device Effect}
 
 \sectionsep{}
 
+%%%%%%%%%% Before Device Effect %%%%%%%%%%
 \derivsection{before}
 {
 % Original energy
 \begin{equation} \label{eq:E_acct_orig}
-  \rbdev{E} = \rbdev{E}_s + \rbdev{E}_{emb} + (\rbdev{C}_{\OMd} + \rbdev{C}_o) I_E
+  \Eacctorig{}
 \end{equation}
 }
 {
 % Original financial
 \begin{equation} \label{eq:M_acct_orig}
-  \rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o + \rbdev{N}
+  \Macctorig{}
 \end{equation}
 }
 
 \sectionsep{}
 
+%%%%%%%%%% After Device Effect %%%%%%%%%%
 \derivsection{after ($\adev{ }$)}
 {
 % After device energy
 \begin{equation} \label{eq:E_acct_adev}
-  \radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E
+  \Eacctadev{}
 \end{equation}
 }
 {
@@ -456,9 +387,11 @@ Put detailed derivation here.
 
 \sectionsep{}
 
+%%%%%%%%%% Derivations for Device Effect %%%%%%%%%%
 \derivsection{}
-{
 % Device effect: energy differences
+{
+%%%%%%%%%% Energy Device Effect %%%%%%%%%%
 ~
 
 Take differences to obtain
@@ -510,7 +443,7 @@ Thus, $Re_{dev} = 0$.
 %
 }
 {
-% Device effect: financial accounting
+%%%%%%%%%% Financial Device Effect %%%%%%%%%%
 ~
 
 Use the monetary constraint ($\rbdev{M} = \radev{M}$) to obtain
@@ -547,10 +480,100 @@ Thus,
 \end{equation}
 }
 
+\end{landscape}
 
 
+
+\begin{landscape}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Life cycle Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{Life cycle Effect}
+
+\sectionsep{}
+
+%%%%%%%%%% Before Life Cycle Effect %%%%%%%%%%
+\derivsection{before ($\blc{})$}
+{
+% Before life cycle energy
+\begin{equation}
+  \Eacctblc{}
+\end{equation}
+}
+{
+% Before life cycle financial
+\begin{equation}
+  \Macctblc{}
+\end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% After Life Cycle Effect %%%%%%%%%%
+\derivsection{after ($\alc{})$}
+{
+% After life cycle energy
+\begin{equation}
+  \Eacctalc{}
+\end{equation}
+}
+{
+% After life cycle financial
+\begin{equation}
+  \Macctalc{}
+\end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% Derivations for Life cycle Effect %%%%%%%%%%
+\derivsection{}
+% Life effect: energy differences
+{
+%%%%%%%%%% Energy Device Effect %%%%%%%%%%
+~
+
+Take differences to obtain
+%
+\begin{equation}
+  \Delta \ralc{E} = \cancelto{0}{\Delta \ralc{E}_s}
+                     + \Delta \ralc{E}_{emb}
+                     + (\Delta \ralc{C}_{\OMd} + \cancelto{0}{\Delta \ralc{C}_o}) I_E \; .
+\end{equation}
+%
+Thus, 
+%
+\begin{equation}
+  \Delta \ralc{E} = \Delta \ralc{E}_{emb} + \Delta \ralc{C}_{\OMd} I_E \; .
+\end{equation}
+%
+All terms are energy takeback terms.
+Divide by $\Sdot$ to form rebound terms.
+%
+\begin{equation}
+  \frac{\Delta \ralc{E}}{\Sdot} = \frac{\Delta \ralc{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
+\end{equation}
+%
+Define
+$Re_{lc} \equiv \frac{\Delta \ralc{E}}{\Sdot}$, 
+$Re_{emb} \equiv \frac{\Delta \ralc{E}_{emb}}{\Sdot}$, and
+$Re_{\OMd} \equiv \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}$,
+such that
+%
+\begin{equation}
+  Re_{lc} = Re_{emb} + Re_{\OMd} \; .
+\end{equation}
+%
+}
+{
+
+}
 
 \end{landscape}
+
+
+
 
 
 \end{document}

@@ -120,3 +120,30 @@
 }
 
 
+
+
+% Equations
+
+% Original
+\newcommand{\Eacctorig}{\rbdev{E} = \rbdev{E}_s + \rbdev{E}_{emb} + (\rbdev{C}_{\OMd} + \rbdev{C}_o) I_E}
+\newcommand{\Macctorig}{\rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o + \rbdev{N}}
+
+% Before device effect (save as original)
+\newcommand{\Eacctbdev}{\Eacctorig}
+\newcommand{\Macctbdev}{\Macctorig}
+
+% After device effect
+\newcommand{\Eacctadev}{\radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
+\newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}
+
+% Before life cycle effect (same as after device effect)
+\newcommand{\Eacctblc}{\Eacctadev}
+\newcommand{\Macctblc}{\Macctadev}
+
+% After life cycle effect
+\newcommand{\Eacctalc}{\ralc{E} = \ralc{E}_s + \ralc{E}_{emb} + (\ralc{C}_{\OMd} + \ralc{C}_o) I_E}
+\newcommand{\Macctalc}{\ralc{M} = p_E \ralc{E}_s + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o + \ralc{N}}
+
+% Before substitution effect (same as after life cycle effect)
+\newcommand{\Eacctbsub}{\Eacctalc}
+\newcommand{\Macctbsub}{\Macctalc}
