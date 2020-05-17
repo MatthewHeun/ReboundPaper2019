@@ -434,7 +434,7 @@ Put detailed derivation here.
 {
 % Original financial
 \begin{equation} \label{eq:M_acct_orig}
-  \rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o
+  \rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o + \rbdev{N}
 \end{equation}
 }
 
@@ -513,17 +513,19 @@ Thus, $Re_{dev} = 0$.
 % Device effect: financial accounting
 ~
 
-Use $\rbdev{M} = \radev{M}$ to obtain
+Use the monetary constraint ($\rbdev{M} = \radev{M}$) to obtain
 %
 \begin{align} \label{eq:M_dot_bal_device}
-  p_E &\rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o \nonumber \\
-      &= p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o  + \radev{N} \; .
+  p_E &\rbdev{E}_s + \cancel{\rbdev{C}_{cap}} + \cancel{\rbdev{C}_{\OMd}} + \cancel{\rbdev{C}_o} + \cancelto{0}{\rbdev{N}} \nonumber \\
+      &= p_E \radev{E}_s + \cancel{\radev{C}_{cap}} + \cancel{\radev{C}_{\OMd}} + \cancel{\radev{C}_o}  + \radev{N} \; .
 \end{align}
 %
-However, for the device effect 
-changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ are neglected, 
-and they cancel in Eq.~\ref{eq:M_dot_bal_device}.
-(These changes are applied with the life cycle effect.)
+Prior to the device effect, there are no monetary savings from the EEU, so $\rbdev{N} = 0$.
+For the device effect, 
+changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ are neglected.
+Thus, several terms are canceled in Eq.~\ref{eq:M_dot_bal_device}.
+(Changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ 
+are assigned later to the life cycle effect.)
 Thus, 
 %
 \begin{equation}
@@ -543,8 +545,6 @@ Thus,
 \begin{equation} \label{eq:G_dot}
   \rate{G} = p_E \Sdot \; .
 \end{equation}
-%
-%
 }
 
 
