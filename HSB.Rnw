@@ -278,7 +278,7 @@ Put detailed derivation here.
   \node(orig) at (0cm,0cm) {original};
   \node[right=0.2cm of orig] (dev)[draw,rounded corners] {device};
   \node[right=0.2cm of dev] (prime) {$^\prime$};
-  \node[right=0.2cm of prime] (lc)[draw,rounded corners] {lifecycle};
+  \node[right=0.2cm of prime] (lc)[draw, align=center, rounded corners] {lifecycle};
   \node[right=0.2cm of lc] (star) {$^*$};
   \node[right=0.2cm of star] (sub)[draw,rounded corners] {substitution};
   \node[right=0.2cm of sub] (hat) {$\hat{ }$};
@@ -286,6 +286,17 @@ Put detailed derivation here.
   \node[right=0.2cm of inc] (bar) {$\bar{ }$};
   \node[right=0.2cm of bar] (prod)[draw,rounded corners] {productivity};
   \node[right=0.2cm of prod] (tilde) {\textasciitilde};
+  % Draw arrows between main row boxes
+  \draw[->] (orig) -- (dev);
+  \draw[->] (dev) -- (prime);
+  \draw[->] (prime) -- (lc);
+  \draw[->] (lc) -- (star);
+  \draw[->] (star) -- (sub);
+  \draw[->] (sub) -- (hat);
+  \draw[->] (hat) -- (inc);
+  \draw[->] (inc) -- (bar);
+  \draw[->] (bar) -- (prod);
+  \draw[->] (prod) -- (tilde);
   % Add nodes for rebound terms beneath nodes
   \node[below=0.1cm of dev] {$Re_{dev} = 0$};
   \node[below=0.1cm of lc] {$Re_{lc}$};
@@ -296,7 +307,7 @@ Put detailed derivation here.
   \node[above=0.1cm of lc] {\tiny $Re_{emb}$,$Re_{OMd}$};
   \node[above=0.1cm of sub] {\tiny $Re_{dsub}$,$Re_{isub}$};
   \node[above=0.1cm of inc] {\tiny $Re_{dinc}$,$Re_{iinc}$};
-  % Add nodes for spelled-out decorations
+  % Add nodes for spelled-out decorations beneath nodes
   \node[below=0.9cm of orig] {no decoration};
   \node[below=0.9cm of prime] {prime};
   \node[below=0.9cm of star] {star};
@@ -316,17 +327,6 @@ Put detailed derivation here.
   \node[above=1.7cm of hat] {$\widehat{\eta} = \tilde{\eta}$};
   \node[above=1.7cm of bar] {$\bar{\eta} = \tilde{\eta}$};
   \node[above=1.7cm of tilde] {$\tilde{\eta}$};
-  % Draw arrows
-  \draw[->] (orig) -- (dev);
-  \draw[->] (dev) -- (prime);
-  \draw[->] (prime) -- (lc);
-  \draw[->] (lc) -- (star);
-  \draw[->] (star) -- (sub);
-  \draw[->] (sub) -- (hat);
-  \draw[->] (hat) -- (inc);
-  \draw[->] (inc) -- (bar);
-  \draw[->] (bar) -- (prod);
-  \draw[->] (prod) -- (tilde);
 \end{tikzpicture}
 
 \caption{Flowchart and decorations.}
