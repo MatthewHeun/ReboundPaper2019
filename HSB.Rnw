@@ -329,20 +329,11 @@ Put detailed derivation here.
   \node[above=1.7cm of tilde] {$\tilde{\eta}$};
 \end{tikzpicture}
 
-\caption{Flowchart and decorations.}
+\caption{Flowchart of effects and decorations.}
 \label{fig:flowchart}
 \end{figure}
 
-        % ++(1.6cm,0cm) node(dev)[draw,rounded corners] {device}
-        % ++(1.1cm,0cm) node(prime) {$^\prime$}
-        % ++(1.2cm,0cm) node(lc)[draw,rounded corners] {lifecycle}
-        % ++(1.2cm,0cm) node(star) {$^*$}
-        % ++(2cm,0cm) node(sub)[draw,rounded corners] {substitution};
 
-  % \draw[->] (dev) -- (prime);
-  % \draw[->] (prime) -- (lc);
-  % \draw[->] (lc) -- (star);
-  % \draw[->] (star) -- (sub);
 
 
 \end{document}
