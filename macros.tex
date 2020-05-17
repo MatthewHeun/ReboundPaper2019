@@ -1,3 +1,9 @@
+% The next command tells RStudio to do "Compile PDF" on book.Rnw,
+% instead of this chapter, thereby eliminating the need to switch back to book.Rnw 
+% before making the book.
+%!TEX root = HSB.Rnw
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % This file contains macros for
 % Heun, Semieniuk, Brockway, 
@@ -6,3 +12,41 @@
 % \input{macros.tex}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%% Decorations for symbols
+
+\newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
+
+% Create "after" commands
+\newcommand{\orig}[1]{#1}
+\newcommand{\adev}[1]{{#1}^\prime}
+\newcommand{\alc}[1]{{#1}^*}
+\newcommand{\asub}[1]{\hat{#1}}
+\newcommand{\ainc}[1]{\bar{#1}}
+\newcommand{\aprod}[1]{\tilde{#1}}
+
+% Create the "before" commands
+\newcommand{\bdev}[1]{\orig{#1}}
+\newcommand{\blc}[1]{\adev{#1}}
+\newcommand{\bsub}[1]{\alc{#1}}
+\newcommand{\binc}[1]{\asub{#1}}
+\newcommand{\bprod}[1]{\ainc{#1}}
+
+% Decoration combinations
+% Rates after
+\newcommand{\rateorig}[1]{\orig{\rate{#1}}}
+\newcommand{\rateadev}[1]{\adev{\rate{#1}}}
+\newcommand{\ratealc}[1]{\alc{\rate{#1}}}
+\newcommand{\rateasub}[1]{\asub{\rate{#1}}}
+\newcommand{\rateainc}[1]{\ainc{\rate{#1}}}
+\newcommand{\rateaprod}[1]{\aprod{\rate{#1}}}
+
+% Rates before
+\newcommand{\ratebdev}[1]{\rateorig{#1}}
+\newcommand{\rateblc}[1]{\rateadev{#1}}
+\newcommand{\ratebsub}[1]{\ratealc{#1}}
+\newcommand{\ratebinc}[1]{\rateasub{#1}}
+\newcommand{\ratebprod}[1]{\rateainc{#1}}
+
+%%%%% Subscript spacing
+
+\newcommand{\OMd}{O\!M\!d}
