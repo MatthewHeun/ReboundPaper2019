@@ -6,9 +6,11 @@
 
 %% Package imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage[inline]{enumitem}   % For inline enumeration
 \usepackage{multicol}           % For multi-column layout
+\usepackage{parcolumns}         % For multi-column layout
 \usepackage{pdflscape}          % For landscape environment \begin{landscape} ... \end{landscape}
 \usepackage{tikz}               % For diagrams
 \usetikzlibrary{arrows,positioning}         
@@ -318,11 +320,11 @@ Put detailed derivation here.
   \node[below=0.9cm of bar] {bar};
   \node[below=0.9cm of tilde] {tilde};
   % Add nodes for N_dot terms above decorations
-  \node[above=0.9cm of orig] {$\rateorig{N} = 0$};
-  \node[above=0.9cm of prime] {$\rateadev{N}$};
-  \node[above=0.9cm of star] {$\ratealc{N}$};
-  \node[above=0.9cm of hat] {$\rateasub{N}$};
-  \node[above=0.9cm of bar] {$\rateainc{N} = 0$};
+  \node[above=0.9cm of orig] {$\rorig{N} = 0$};
+  \node[above=0.9cm of prime] {$\radev{N}$};
+  \node[above=0.9cm of star] {$\ralc{N}$};
+  \node[above=0.9cm of hat] {$\rasub{N}$};
+  \node[above=0.9cm of bar] {$\rainc{N} = 0$};
   % Add nodes for eta terms above decorations
   \node[above=1.7cm of orig] {$\eta$};
   \node[above=1.7cm of prime] {$\adev{\eta} = \aprod{\eta}$};
@@ -337,39 +339,217 @@ Put detailed derivation here.
 \end{figure}
 
 
+% 
+% % Add vertical rule between columns
+% \setlength{\columnsep}{0.5cm}
+% \setlength{\columnseprule}{0.4pt}  % Same as thickness of rules above footnotes
+% 
+% \begin{landscape}
+% 
+% \begin{center}
+% \bf{Device Effect}
+% \end{center}
+% 
+% \begin{multicols}{2}
+% 
+% \begin{center}
+% \emph{Energy} 
+% \end{center}
+% %
+% \begin{equation} \label{eq:E_acct_orig}
+%   \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
+% \end{equation}
+% 
+% 
+% \columnbreak
+% %
+% \begin{center}
+% \emph{Financial}
+% \end{center}
+% %
+% \begin{equation} \label{eq:M_acct_orig}
+%   \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
+% \end{equation}
+% %
+% 
+% 
+% \end{multicols}
+% \end{landscape}
+% 
+% 
+% 
+% 
+% 
+% % Second attempt: parcolumns
+% 
+% \begin{landscape}
+% 
+% \begin{parcolumns}[rulebetween = true, nofirstindent = true, colwidths = {1 = 0.1\linewidth, 2 = 0.45\linewidth}]{3}
+% 
+% \colchunk{%
+% original
+% }
+% 
+% \colchunk{%
+% \begin{equation} \label{eq:E_acct_orig}
+%   \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
+% \end{equation}
+% }
+% 
+% \colchunk{%
+% \begin{equation} \label{eq:M_acct_orig}
+%   \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
+% \end{equation}
+% }
+% 
+% \colplacechunks
+% 
+% 
+% \end{parcolumns}
+% 
+% \noindent\rule{1.0\textheight}{0.4pt}
+% 
+% \end{landscape}
+% 
+
+
+% Third attempt:  minipage and macros
+
 
 \begin{landscape}
 
-\begin{center}
-\bf{Device Effect}
-\end{center}
+\linespread{1}
 
-\begin{multicols}{2}
+\derivheader{Device Effect}
 
-\begin{center}
-\emph{Energy} 
-\end{center}
+\sectionsep{}
 
-
+\derivsection{before}
+{
+% Original energy
 \begin{equation} \label{eq:E_acct_orig}
-  \rate{E} = \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{\OMd} + \rate{C}_o) I_E
+  \rbdev{E} = \rbdev{E}_s + \rbdev{E}_{emb} + (\rbdev{C}_{\OMd} + \rbdev{C}_o) I_E
 \end{equation}
-
-
-\columnbreak
-
-\begin{center}
-\emph{Financial}
-\end{center}
-
-%
+}
+{
+% Original financial
 \begin{equation} \label{eq:M_acct_orig}
-  \rate{M} = p_E \rate{E}_s + \rate{C}_{cap} + \rate{C}_{\OMd} + \rate{C}_o
+  \rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o
+\end{equation}
+}
+
+\sectionsep{}
+
+\derivsection{after ($\adev{ }$)}
+{
+% After device energy
+\begin{equation} \label{eq:E_acct_adev}
+  \radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E
+\end{equation}
+}
+{
+% After device financial
+\begin{equation} \label{eq:M_acct_adev}
+  \radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}
+\end{equation}
+}
+
+\sectionsep{}
+
+\derivsection{}
+{
+% Device effect: energy differences
+~
+
+Take differences to obtain
+%
+\begin{equation}
+  \Delta \radev{E} = \Delta \radev{E}_s
+                     + \cancelto{0}{\Delta \radev{E}_{emb}} 
+                      + (\cancelto{0}{\Delta \radev{C}_{\OMd}} 
+                      + \cancelto{0}{\Delta \radev{C}_o}) I_E \; .
 \end{equation}
 %
+Thus, 
+%
+\begin{equation}
+  \Delta \radev{E} = \Delta \radev{E}_s \; .
+\end{equation}
+%
+Define
+%
+\begin{equation} \label{eq:Sdot_def}
+  \Sdot \equiv -\Delta \radev{E}_s \; ,
+\end{equation}
+%
+such that
+%
+\begin{equation}
+  \Delta \radev{E} = -\Sdot \; .
+\end{equation}
+%
+Device rebound ($Re_{dev}$) is obtained from 
+%
+\begin{equation}
+  Re_{dev} = 1 - \frac{\mathrm{actual \; energy \; savings \; rate}}{\mathrm{expected \; energy \; savings \; rate}} \; ,
+\end{equation}
+%
+\begin{equation}
+  Re_{dev} = 1 - \frac{-\Delta \radev{E}}{\Sdot} = 1 - \frac{\rate{S}_{dev}}{\Sdot} \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+  Re_{dev} = 0 \; .
+\end{equation}
+%
+After only the device effect and before any other effects, 
+there are no energy takebacks. 
+Thus, $Re_{dev} = 0$.
+%
+}
+{
+% Device effect: financial accounting
+~
+
+Use $\rbdev{M} = \radev{M}$ to obtain
+%
+\begin{align} \label{eq:M_dot_bal_device}
+  p_E &\rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o \nonumber \\
+      &= p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o  + \radev{N} \; .
+\end{align}
+%
+However, for the device effect 
+changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ are neglected, 
+and they cancel in Eq.~\ref{eq:M_dot_bal_device}.
+(These changes are applied with the life cycle effect.)
+Thus, 
+%
+\begin{equation}
+  \Delta \radev{N} = \radev{N} - \cancelto{0}{\rbdev{N}} = p_E(\rbdev{E}_s - \radev{E}_s) = p_E (-\Delta \radev{E}_s) \; .
+\end{equation}
+%
+Substituting Eq.~\ref{eq:Sdot_def} gives
+%
+\begin{equation}
+  \Delta \radev{N} = p_E \Sdot \; .
+\end{equation}
+%
+$\Delta \radev{N}$ represents the gross energy cost savings ($\rate{G}$) from the EEU, 
+before any energy takeback occurs. 
+Thus, 
+%
+\begin{equation} \label{eq:G_dot}
+  \rate{G} = p_E \Sdot \; .
+\end{equation}
+%
+%
+}
 
 
-\end{multicols}
+
+
 \end{landscape}
 
 

@@ -33,20 +33,90 @@
 
 % Decoration combinations
 % Rates after
-\newcommand{\rateorig}[1]{\orig{\rate{#1}}}
-\newcommand{\rateadev}[1]{\adev{\rate{#1}}}
-\newcommand{\ratealc}[1]{\alc{\rate{#1}}}
-\newcommand{\rateasub}[1]{\asub{\rate{#1}}}
-\newcommand{\rateainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\rateaprod}[1]{\aprod{\rate{#1}}}
+\newcommand{\rorig}[1]{\orig{\rate{#1}}}
+\newcommand{\radev}[1]{\adev{\rate{#1}}}
+\newcommand{\ralc}[1]{\alc{\rate{#1}}}
+\newcommand{\rasub}[1]{\asub{\rate{#1}}}
+\newcommand{\rainc}[1]{\ainc{\rate{#1}}}
+\newcommand{\raprod}[1]{\aprod{\rate{#1}}}
 
 % Rates before
-\newcommand{\ratebdev}[1]{\rateorig{#1}}
-\newcommand{\rateblc}[1]{\rateadev{#1}}
-\newcommand{\ratebsub}[1]{\ratealc{#1}}
-\newcommand{\ratebinc}[1]{\rateasub{#1}}
-\newcommand{\ratebprod}[1]{\rateainc{#1}}
+\newcommand{\rbdev}[1]{\rorig{#1}}
+\newcommand{\rateblc}[1]{\radev{#1}}
+\newcommand{\rbsub}[1]{\ralc{#1}}
+\newcommand{\rbinc}[1]{\rasub{#1}}
+\newcommand{\rbprod}[1]{\rainc{#1}}
 
 %%%%% Subscript spacing
 
 \newcommand{\OMd}{O\!M\!d}
+
+
+%%%%% Convenient symbols
+
+\newcommand{\Sdot}{\rate{S}_{dev}}
+
+
+%%%%% Derivation pages
+
+% Column widths
+\newcommand{\derivtextsize}{\footnotesize}
+\newcommand{\derivpageleftcolwidth}{0.1\textwidth}
+\newcommand{\derivpageenergycolwidth}{0.7\textwidth}
+\newcommand{\derivpagefinancialcolwidth}{0.7\textwidth}
+
+% Horizontal rule between sections of derivations
+
+\newcommand{\sectionsep}{\noindent\rule{1.6\textwidth}{0.4pt}}
+
+
+%
+% Derivation section
+% Arguments:
+%   #1: accounting stage (original, prime, etc.)
+%   #2: energy column
+%   #3: financial column
+%
+\newcommand{\derivsection}[3]{%
+
+\derivtextsize{}
+
+\begin{minipage}[t]{\derivpageleftcolwidth}
+~\\#1
+\end{minipage}
+%
+%
+%
+\begin{minipage}[t]{\derivpageenergycolwidth}
+#2
+\end{minipage}
+%
+~
+%
+\begin{minipage}[t]{\derivpagefinancialcolwidth}
+#3
+\end{minipage}
+
+\normalsize{}
+
+}
+
+
+%
+% Derivation page header
+% Arguments:
+%   #1: Effect type (e.g., Device Effect)
+%
+\newcommand{\derivheader}[1]{
+
+\begin{center}
+  \bf{#1}
+\end{center}
+
+\derivsection{}
+{\begin{center}\emph{Energetic analysis}\end{center}}
+{\begin{center}\emph{Financial analysis}\end{center}}
+
+}
+
+
