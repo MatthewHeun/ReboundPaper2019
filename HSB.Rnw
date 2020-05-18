@@ -282,9 +282,9 @@ Put detailed derivation here.
   % Set up the nodes of the main path
   \node(orig) at (0cm,0cm) {original};
   \node[right=0.2cm of orig] (dev)[draw,rounded corners] {\strut device};
-  \node[right=0.2cm of dev] (prime) {$\adev{~}$};
+  \node[right=0.2cm of dev] (prime) {$\adev{}$};
   \node[right=0.2cm of prime] (lc)[draw, align=center, rounded corners] {\strut lifecycle};
-  \node[right=0.2cm of lc] (star) {$\alc{~}$};
+  \node[right=0.2cm of lc] (star) {$\alc{}$};
   \node[right=0.2cm of star] (sub)[draw,rounded corners] {\strut substitution};
   \node[right=0.2cm of sub] (hat) {$\asub{~}$};
   \node[right=0.2cm of hat] (inc)[draw,rounded corners] {\strut income};
