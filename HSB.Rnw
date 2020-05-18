@@ -342,19 +342,19 @@ Put detailed derivation here.
 
 % Derivation pages
 
-\input{deriv_device_effect.tex}
+\input{deriv1_device_effect.tex}
 
 
 
-\input{deriv_lifecycle_effect.tex}
+\input{deriv2_lifecycle_effect.tex}
 
 
 
-\input{deriv_substitution_effect.tex}
+\input{deriv3_substitution_effect.tex}
 
 
 
-\input{deriv_income_effect.tex}
+\input{deriv4_income_effect.tex}
 
 
 
