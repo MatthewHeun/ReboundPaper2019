@@ -468,15 +468,15 @@ Thus,
 Substituting Eq.~\ref{eq:Sdot_def} gives
 %
 \begin{equation}
-  \Delta \radev{N} = p_E \Sdot \; .
+  \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
 \end{equation}
 %
 $\Delta \radev{N}$ represents the gross energy cost savings ($\rate{G}$) from the EEU, 
-before any energy takeback occurs. 
+before any energy takeback. 
 Thus, 
 %
 \begin{equation} \label{eq:G_dot}
-  \rate{G} = p_E \Sdot \; .
+  \rate{G} = \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
 \end{equation}
 }
 
