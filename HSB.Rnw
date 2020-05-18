@@ -354,6 +354,7 @@ Put detailed derivation here.
 
 
 
+\input{deriv_income_effect.tex}
 
 
 
