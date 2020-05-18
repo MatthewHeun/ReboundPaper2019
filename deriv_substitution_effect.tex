@@ -1,0 +1,54 @@
+% The next command tells RStudio to do "Compile PDF" on book.Rnw,
+% instead of this chapter, thereby eliminating the need to switch back to book.Rnw 
+% before making the book.
+%!TEX root = HSB.Rnw
+
+% This file contains the derivation for substitution effect rebound and net income.
+
+\begin{landscape}
+
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Substitution Effect %%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{Substitution Effect}
+
+\sectionsep{}
+
+%%%%%%%%%% Before Substitution Effect %%%%%%%%%%
+  \derivsection{before ($\bsub{})$}
+{
+  % Before substitution energy
+  \begin{equation}
+  \Eacctbsub{}
+  \end{equation}
+}
+{
+  % Before substitution financial
+  \begin{equation}
+  \Macctbsub{}
+  \end{equation}
+}
+
+\sectionsep{}
+
+
+%%%%%%%%%% After Substitution Effect %%%%%%%%%%
+  \derivsection{after ($\asub{})$}
+{
+  % After substitution energy
+  \begin{equation}
+  \Eacctasub{}
+  \end{equation}
+}
+{
+  % After substitution financial
+  \begin{equation}
+  \Macctasub{}
+  \end{equation}
+}
+
+\sectionsep{}
+
+\end{landscape}

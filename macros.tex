@@ -61,7 +61,7 @@
 
 % Column widths
 \newcommand{\derivtextsize}{\footnotesize}
-\newcommand{\derivpageleftcolwidth}{0.1\textwidth}
+\newcommand{\derivpageleftcolwidth}{0.11\textwidth}
 \newcommand{\derivpageenergycolwidth}{0.7\textwidth}
 \newcommand{\derivpagefinancialcolwidth}{0.7\textwidth}
 
@@ -147,3 +147,7 @@
 % Before substitution effect (same as after life cycle effect)
 \newcommand{\Eacctbsub}{\Eacctalc}
 \newcommand{\Macctbsub}{\Macctalc}
+
+% After substitution effect
+\newcommand{\Eacctasub}{\rasub{E} = \rasub{E}_s + \rasub{E}_{emb} + (\rasub{C}_{\OMd} + \rasub{C}_o) I_E}
+\newcommand{\Macctasub}{\rasub{M} = p_E \rasub{E}_s + \rasub{C}_{cap} + \rasub{C}_{\OMd} + \rasub{C}_o + \rasub{N}}

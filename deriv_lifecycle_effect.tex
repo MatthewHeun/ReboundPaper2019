@@ -1,0 +1,121 @@
+% The next command tells RStudio to do "Compile PDF" on book.Rnw,
+% instead of this chapter, thereby eliminating the need to switch back to book.Rnw 
+% before making the book.
+%!TEX root = HSB.Rnw
+
+% This file contains the derivation for lifecycle effect rebound and net income.
+
+\begin{landscape}
+
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Life cycle Effect %%%%%%%%%%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{Life cycle Effect}
+
+\sectionsep{}
+
+%%%%%%%%%% Before Life Cycle Effect %%%%%%%%%%
+  \derivsection{before ($\blc{})$}
+{
+  % Before life cycle energy
+  \begin{equation}
+  \Eacctblc{}
+  \end{equation}
+}
+{
+  % Before life cycle financial
+  \begin{equation}
+  \Macctblc{}
+  \end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% After Life Cycle Effect %%%%%%%%%%
+  \derivsection{after ($\alc{})$}
+{
+  % After life cycle energy
+  \begin{equation}
+  \Eacctalc{}
+  \end{equation}
+}
+{
+  % After life cycle financial
+  \begin{equation}
+  \Macctalc{}
+  \end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% Derivations for Life cycle Effect %%%%%%%%%%
+  \derivsection{}
+% Life effect: energy differences
+{
+  %%%%%%%%%% Energy Life cycle Effect %%%%%%%%%%
+    ~
+    
+    Take differences to obtain
+  %
+  \begin{equation}
+  \Delta \ralc{E} = \cancelto{0}{\Delta \ralc{E}_s}
+  + \Delta \ralc{E}_{emb}
+  + (\Delta \ralc{C}_{\OMd} + \cancelto{0}{\Delta \ralc{C}_o}) I_E \; .
+  \end{equation}
+  %
+  Thus, 
+  %
+  \begin{equation}
+  \Delta \ralc{E} = \Delta \ralc{E}_{emb} + \Delta \ralc{C}_{\OMd} I_E \; .
+  \end{equation}
+  %
+  All terms are energy takeback terms.
+  Divide by $\Sdot$ to form rebound terms.
+  %
+  \begin{equation}
+  \frac{\Delta \ralc{E}}{\Sdot} = \frac{\Delta \ralc{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
+  \end{equation}
+  %
+  Define
+  $Re_{lc} \equiv \frac{\Delta \ralc{E}}{\Sdot}$, 
+  $Re_{emb} \equiv \frac{\Delta \ralc{E}_{emb}}{\Sdot}$, and
+  $Re_{\OMd} \equiv \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}$,
+  such that
+  %
+  \begin{equation}
+  Re_{lc} = Re_{emb} + Re_{\OMd} \; .
+  \end{equation}
+  %
+}
+{
+  %%%%%%%%%% Financial Life cycle Effect %%%%%%%%%%
+    ~
+    
+    Use the monetary constraint ($\rblc{M} = \ralc{M}$) to obtain
+  %
+  \begin{align} \label{M_dot_bal_lc}
+  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\OMd} + \rblc{C}_o + \rblc{N} \nonumber \\
+  &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o  + \ralc{N} \; .
+  \end{align}
+  %
+  For the life cycle effect, 
+  there is no change in energy consumption rate ($\rblc{E}_s = \ralc{E}_s$).
+  (The energy consumption rate change is accounted in the device effect.)
+  Solving for $\Delta \ralc{N} \equiv \ralc{N} - \rblc{N}$ gives
+  %
+  \begin{align}
+  \Delta \ralc{N} &= \rblc{C}_{cap} - \ralc{C}_{cap} + \rblc{C}_{\OMd} - \ralc{C}_{\OMd} \\
+  \Delta \ralc{N} &= - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{OMd} \; .
+  \end{align}
+  %
+  Using $\ralc{N} = \rblc{N} + \Delta \ralc{N}$, we find that
+  %
+  \begin{equation}
+  \ralc{N} = \rate{G} - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
+  \end{equation}
+  %
+}
+
+\end{landscape}
