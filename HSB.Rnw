@@ -381,7 +381,7 @@ Put detailed derivation here.
 {
 % After device financial
 \begin{equation} \label{eq:M_acct_adev}
-  \radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}
+  \Macctadev{}
 \end{equation}
 }
 
@@ -448,15 +448,15 @@ Thus, $Re_{dev} = 0$.
 
 Use the monetary constraint ($\rbdev{M} = \radev{M}$) to obtain
 %
-\begin{align} \label{eq:M_dot_bal_device}
-  p_E &\rbdev{E}_s + \cancel{\rbdev{C}_{cap}} + \cancel{\rbdev{C}_{\OMd}} + \cancel{\rbdev{C}_o} + \cancelto{0}{\rbdev{N}} \nonumber \\
-      &= p_E \radev{E}_s + \cancel{\radev{C}_{cap}} + \cancel{\radev{C}_{\OMd}} + \cancel{\radev{C}_o}  + \radev{N} \; .
+\begin{align} \label{eq:M_dot_bal_dev}
+  p_E \rbdev{E}_s &+ \cancel{\rbdev{C}_{cap}} + \cancel{\rbdev{C}_{\OMd}} + \cancel{\rbdev{C}_o} + \cancelto{0}{\rbdev{N}} \nonumber \\
+                  &= p_E \radev{E}_s + \cancel{\radev{C}_{cap}} + \cancel{\radev{C}_{\OMd}} + \cancel{\radev{C}_o}  + \radev{N} \; .
 \end{align}
 %
 Prior to the device effect, there are no monetary savings from the EEU, so $\rbdev{N} = 0$.
 For the device effect, 
 changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ are neglected.
-Thus, several terms are canceled in Eq.~\ref{eq:M_dot_bal_device}.
+Thus, several terms are canceled in Eq.~\ref{eq:M_dot_bal_dev}.
 (Changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ 
 are assigned later to the life cycle effect.)
 Thus, 
@@ -531,7 +531,7 @@ Thus,
 \derivsection{}
 % Life effect: energy differences
 {
-%%%%%%%%%% Energy Device Effect %%%%%%%%%%
+%%%%%%%%%% Energy Life cycle Effect %%%%%%%%%%
 ~
 
 Take differences to obtain
@@ -567,7 +567,32 @@ such that
 %
 }
 {
+%%%%%%%%%% Financial Life cycle Effect %%%%%%%%%%
+~
 
+Use the monetary constraint ($\rblc{M} = \ralc{M}$) to obtain
+%
+\begin{align} \label{M_dot_bal_lc}
+  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\OMd} + \rblc{C}_o + \rblc{N} \nonumber \\
+                          &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o  + \ralc{N} \; .
+\end{align}
+%
+For the life cycle effect, 
+there is no change in energy consumption rate ($\rblc{E}_s = \ralc{E}_s$).
+(The energy consumption rate change is accounted in the device effect.)
+Solving for $\Delta \ralc{N} \equiv \ralc{N} - \rblc{N}$ gives
+%
+\begin{align}
+  \Delta \ralc{N} &= \rblc{C}_{cap} - \ralc{C}_{cap} + \rblc{C}_{\OMd} - \ralc{C}_{\OMd} \\
+  \Delta \ralc{N} &= - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{OMd} \; .
+\end{align}
+%
+Using $\ralc{N} = \rblc{N} + \Delta \ralc{N}$, we find that
+%
+\begin{equation}
+  \ralc{N} = \rate{G} - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{OMd} \; .
+\end{equation}
+%
 }
 
 \end{landscape}
