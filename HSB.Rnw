@@ -345,6 +345,8 @@ Put detailed derivation here.
 \begin{landscape}
 
 \linespread{1}
+\setlength\abovedisplayskip{0pt}
+\setlength\belowdisplayskip{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Device Effect %%%%%%%%%%
@@ -485,6 +487,10 @@ Thus,
 
 
 \begin{landscape}
+
+\linespread{1}
+\setlength\abovedisplayskip{0pt}
+\setlength\belowdisplayskip{0pt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Life cycle Effect %%%%%%%%%%
