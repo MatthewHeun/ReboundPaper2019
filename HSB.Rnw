@@ -6,8 +6,9 @@
 
 %% Package imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage{amsmath}            % For better symbol decorations
+\usepackage{booktabs}           % For nice table rules
+\usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage[inline]{enumitem}   % For inline enumeration
 \usepackage{multicol}           % For multi-column layout
 \usepackage{parcolumns}         % For multi-column layout

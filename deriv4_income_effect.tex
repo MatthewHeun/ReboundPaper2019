@@ -19,16 +19,16 @@
 %%%%%%%%%% Before Income Effect %%%%%%%%%%
 \derivsection{before ($\binc{~})$}
 {
-  % Before income energy
-  \begin{equation}
-  \Eacctbinc{}
-  \end{equation}
+% Before income energy
+\begin{equation}
+\Eacctbinc{}
+\end{equation}
 }
 {
-  % Before income financial
-  \begin{equation}
-  \Macctbinc{}
-  \end{equation}
+% Before income financial
+\begin{equation}
+\Macctbinc{}
+\end{equation}
 }
 
 \sectionsep{}
@@ -36,16 +36,16 @@
 %%%%%%%%%% After Income Effect %%%%%%%%%%
 \derivsection{after ($\ainc{~})$}
 {
-  % After income energy
-  \begin{equation}
-  \Eacctainc{}
-  \end{equation}
+% After income energy
+\begin{equation}
+\Eacctainc{}
+\end{equation}
 }
 {
-  % After income financial
-  \begin{equation}
-  \Macctainc{}
-  \end{equation}
+% After income financial
+\begin{equation}
+\Macctainc{}
+\end{equation}
 }
 
 \sectionsep{}
@@ -54,18 +54,47 @@
 \derivsection{}
 % Income effect: energy differences
 {
-  %%%%%%%%%% Energy Income Effect %%%%%%%%%%
-  ~
+%%%%%%%%%% Energy Income Effect %%%%%%%%%%
+~
 
-  Take differences to obtain $\Delta \rainc{E} \equiv \rainc{E} - \rbinc{E}$.
-  %
-
+Take differences to obtain $\Delta \rainc{E} \equiv \rainc{E} - \rbinc{E}$.
+%
+\begin{equation}
+  \Delta \rainc{E} = \Delta \rainc{E}_s 
+                     + \cancelto{0}{\Delta \rainc{E}_{emb}}
+                     + (\cancelto{0}{\Delta \rainc{C}_{\OMd}} + \Delta \rainc{C}_o) I_E
+\end{equation}
+%
+Thus, 
+%
+\begin{equation}
+  \Delta \rainc{E} = \Delta \rainc{E}_s + \Delta \rainc{C}_o I_E
+\end{equation}
+%
+All terms are energy takeback terms.
+Divide by $\Sdot$
+to create rebound terms.
+%
+\begin{equation}
+  \frac{\Delta \rainc{E}}{\Sdot} = \frac{\Delta \rainc{E}_s}{\Sdot} + \frac{\Delta \rainc{C}_o I_E}{\Sdot}
+\end{equation}
+%
+Define 
+$Re_{inc} \equiv \frac{\Delta \rainc{E}}{\Sdot}$, 
+$Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot}$, and 
+$Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot}$,
+such that
+%
+\begin{equation}
+  Re_{inc} = Re_{dinc} + Re_{iinc} \; .
+\end{equation}
+%
 }
 {
-  %%%%%%%%%% Financial Income Effect %%%%%%%%%%
-  ~
+%%%%%%%%%% Financial Income Effect %%%%%%%%%%
+~
 
-  Use the monetary constraint ($\rbinc{M} = \rainc{M}$) to obtain
-  %
+Use the monetary constraint ($\rbinc{M} = \rainc{M}$) to obtain
+%
 }
 \end{landscape}
