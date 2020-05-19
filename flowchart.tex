@@ -6,15 +6,15 @@
 \begin{tikzpicture}[font=\sffamily]
   % Set up the nodes of the main path
   \node(orig) at (0cm,0cm) {original};
-  \node[right=0.2cm of orig] (dev)[draw,rounded corners, fill=red!25!white] {\strut device};
+  \node[right=0.2cm of orig] (dev)[draw,rounded corners, fill=device_color] {\strut device};
   \node[right=0.2cm of dev] (prime) {$\adev{}$};
-  \node[right=0.2cm of prime] (lc)[draw, align=center, rounded corners, fill=orange!25!white] {\strut lifecycle};
+  \node[right=0.2cm of prime] (lc)[draw, align=center, rounded corners, fill=lifecycle_color] {\strut lifecycle};
   \node[right=0.2cm of lc] (star) {$\alc{}$};
-  \node[right=0.2cm of star] (sub)[draw,rounded corners, fill=yellow!25!white] {\strut substitution};
+  \node[right=0.2cm of star] (sub)[draw,rounded corners, fill=substitution_color] {\strut substitution};
   \node[right=0.2cm of sub] (hat) {$\asub{~}$};
-  \node[right=0.2cm of hat] (inc)[draw,rounded corners, fill=green!25!white] {\strut income};
+  \node[right=0.2cm of hat] (inc)[draw,rounded corners, fill=income_color] {\strut income};
   \node[right=0.2cm of inc] (bar) {$\ainc{~}$};
-  \node[right=0.2cm of bar] (prod)[draw,rounded corners, fill=blue!25!white] {\strut productivity};
+  \node[right=0.2cm of bar] (prod)[draw,rounded corners, fill=productivity_color] {\strut productivity};
   \node[right=0.2cm of prod] (tilde) {$\aprod{~}$};
   % Draw arrows between main row boxes
   \draw[->] (orig) -- (dev);

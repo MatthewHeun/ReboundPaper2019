@@ -57,6 +57,15 @@
 \newcommand{\Sdot}{\rate{S}_{dev}}
 
 
+%%%%% Colors
+
+\colorlet{device_color}{red!25!white}
+\colorlet{lifecycle_color}{orange!25!white}
+\colorlet{substitution_color}{yellow!25!white}
+\colorlet{income_color}{green!25!white}
+\colorlet{productivity_color}{blue!25!white}
+
+
 %%%%% Derivation pages
 
 % Column widths
@@ -106,11 +115,13 @@
 % Derivation page header
 % Arguments:
 %   #1: Effect type (e.g., Device Effect)
+%   #2: Color
 %
-\newcommand{\derivheader}[1]{
+\newcommand{\derivheader}[2]{
 
 \begin{center}
-  \bf{#1}
+  \sethlcolor{#2}
+  \bf{\hl{#1}}
 \end{center}
 
 \derivsection{}
