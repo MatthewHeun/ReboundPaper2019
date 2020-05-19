@@ -60,6 +60,35 @@
   
 Take differences to obtain
 %
+\begin{equation}
+  \Delta \rasub{E} = \Delta \rasub{E}_s 
+                      + \cancelto{0}{\Delta \rasub{E}_{sub}} 
+                      + (\cancelto{0}{\Delta \rasub{C}_{\OMd}} + \Delta \rasub{C}_o) I_E \; .
+\end{equation}
+%
+Thus, 
+%
+\begin{equation}
+  \Delta \rasub{E} = \Delta \rasub{E}_s + \Delta \rasub{C}_o I_E \; .
+\end{equation}
+%
+All terms are energy takeback terms.
+Divide by $\Sdot$
+to create rebound terms.
+%
+\begin{equation}
+    \frac{\Delta \rasub{E}}{\Sdot} = \frac{\Delta \rasub{E}_s}{\Sdot} + \frac{\Delta \rasub{C}_o I_E}{\Sdot}
+\end{equation}
+%
+Define 
+$Re_{sub} \equiv \frac{\Delta \rasub{E}}{\Sdot}$, 
+$Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot}$, and
+$Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot}$,
+such that
+%
+\begin{equation}
+  Re_{sub} = Re_{dsub} + Re_{isub} \; .
+\end{equation}
 
 }
 {
@@ -67,6 +96,24 @@ Take differences to obtain
 ~
   
 Use the monetary constraint ($\rbsub{M} = \rasub{M}$) to obtain
+%
+\begin{align}
+  p_E \ralc{E}_s &+ \cancel{\ralc{C}_{cap}} + \cancel{\ralc{C}_{\OMd}} + \ralc{C}_o + \ralc{N} \nonumber \\
+                 &= p_E \rasub{E}_s + \cancel{\rasub{C}_{cap}} + \cancel{\rasub{C}_{\OMd}} + \rasub{C}_o + \rasub{N} \; .
+\end{align}
+%
+Solving for $\Delta \rasub{N} \equiv \rasub{N} - \rbsub{N}$ gives
+%
+\begin{equation}
+  \Delta \rasub{N} = - p_E \Delta \rasub{E}_s - \Delta \rasub{C}_o \; .
+\end{equation}
+%
+With $\rasub{N} = \rbsub{N} + \Delta \rasub{N}$, 
+we find that
+%
+\begin{equation}
+  \rasub{N} = \rate{G} - \Delta \rbsub{C}_{cap} - \Delta \rbsub{C}_{\OMd} - p_E \Delta \rasub{E}_s - \Delta \rasub{C}_o \; .
+\end{equation}
 %
 }
 
