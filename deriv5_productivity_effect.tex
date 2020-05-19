@@ -1,0 +1,90 @@
+% The next command tells RStudio to do "Compile PDF" on book.Rnw,
+% instead of this chapter, thereby eliminating the need to switch back to book.Rnw 
+% before making the book.
+%!TEX root = HSB.Rnw
+
+% This file contains the derivation for income effect rebound and net income.
+
+\begin{landscape}
+
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Productivity Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{Productivity Effect}{productivity_color}
+
+\sectionsep{}
+
+%%%%%%%%%% Before Productivity Effect %%%%%%%%%%
+\derivsection{before ($\bprod{~})$}
+{
+% Before productivity energy
+\begin{equation}
+  \rbprod{E}
+\end{equation}
+}
+{
+% Before productivity financial
+}
+
+\sectionsep{}
+
+%%%%%%%%%% After Productivity Effect %%%%%%%%%%
+\derivsection{after ($\aprod{~})$}
+{
+% After productivity energy
+\begin{equation}
+\raprod{E}
+\end{equation}
+}
+{
+% After productivity financial
+}
+
+\sectionsep{}
+
+%%%%%%%%%%% Derivations for productivty Effect %%%%%%%%%%
+\derivsection{}
+% Productivity effect: energy differences
+{
+%%%%%%%%%% Energy Productivity Effect %%%%%%%%%%
+~
+
+Take differences to obtain the change in energy consumption,
+%
+\begin{equation}
+  \Delta \raprod{E} \equiv \raprod{E} - \rbprod{E} \; .
+\end{equation}
+%
+The energy change due to the productivity effect ($\Delta \raprod{E}$) 
+is a scalar multiple ($k$) of net income ($\rbinc{N}$), 
+assumed to be spent at the energy intensity of the economy ($I_E$).
+%
+\begin{equation}
+  \Delta \raprod{E} = k \rbinc{N} I_E
+\end{equation}
+%
+All terms are energy takeback terms.
+Divide by $\Sdot$
+to create rebound terms.
+%
+\begin{equation}
+  \frac{\Delta \raprod{E}}{\Sdot} = \frac{k \rbinc{N} I_E}{\Sdot}
+\end{equation}
+%
+Define 
+$Re_{prod} \equiv \frac{\Delta \raprod{E}}{\Sdot}$, 
+such that
+%
+\begin{equation}
+  Re_{prod} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
+\end{equation}
+%
+}
+{
+%%%%%%%%%% Financial Productivity Effect %%%%%%%%%%
+~
+
+}
+\end{landscape}

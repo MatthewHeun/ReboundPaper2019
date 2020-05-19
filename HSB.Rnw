@@ -308,6 +308,8 @@ Put detailed derivation here.
 \input{deriv4_income_effect.tex}
 
 
+\input{deriv5_productivity_effect.tex}
+
 
 
 \end{document}

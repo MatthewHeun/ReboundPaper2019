@@ -17,35 +17,35 @@
 \sectionsep{}
 
 %%%%%%%%%% Before Life Cycle Effect %%%%%%%%%%
-  \derivsection{before ($\blc{})$}
+\derivsection{before ($\blc{})$}
 {
-  % Before life cycle energy
-  \begin{equation}
+% Before life cycle energy
+\begin{equation}
   \Eacctblc{}
-  \end{equation}
+\end{equation}
 }
 {
-  % Before life cycle financial
-  \begin{equation}
+% Before life cycle financial
+\begin{equation}
   \Macctblc{}
-  \end{equation}
+\end{equation}
 }
 
 \sectionsep{}
 
 %%%%%%%%%% After Life Cycle Effect %%%%%%%%%%
-  \derivsection{after ($\alc{})$}
+\derivsection{after ($\alc{})$}
 {
-  % After life cycle energy
-  \begin{equation}
+% After life cycle energy
+\begin{equation}
   \Eacctalc{}
-  \end{equation}
+\end{equation}
 }
 {
-  % After life cycle financial
-  \begin{equation}
+% After life cycle financial
+\begin{equation}
   \Macctalc{}
-  \end{equation}
+\end{equation}
 }
 
 \sectionsep{}
@@ -53,69 +53,70 @@
 %%%%%%%%%% Derivations for Life cycle Effect %%%%%%%%%%
 \derivsection{}
 {
-  %%%%%%%%%% Energy Life cycle Effect %%%%%%%%%%
-    ~
+%%%%%%%%%% Energy Life cycle Effect %%%%%%%%%%
+~
     
-Take differences to obtain $\Delta \ralc{E} \equiv \ralc{E} - \rblc{E}$.
-  %
-  \begin{equation}
+Take differences to obtain the change in energy consumption, $\Delta \ralc{E} \equiv \ralc{E} - \rblc{E}$.
+%
+\begin{equation}
   \Delta \ralc{E} = \cancelto{0}{\Delta \ralc{E}_s}
-  + \Delta \ralc{E}_{emb}
-  + (\Delta \ralc{C}_{\OMd} + \cancelto{0}{\Delta \ralc{C}_o}) I_E
-  \end{equation}
-  %
-  Thus, 
-  %
-  \begin{equation}
+                    + \Delta \ralc{E}_{emb}
+                    + (\Delta \ralc{C}_{\OMd} + \cancelto{0}{\Delta \ralc{C}_o}) I_E
+\end{equation}
+%
+Thus, 
+%
+\begin{equation}
   \Delta \ralc{E} = \Delta \ralc{E}_{emb} + \Delta \ralc{C}_{\OMd} I_E \; .
-  \end{equation}
-  %
+\end{equation}
+%
 All terms are energy takeback terms.
 Divide by $\Sdot$
 to create rebound terms.
-  %
-  \begin{equation}
+%
+\begin{equation}
   \frac{\Delta \ralc{E}}{\Sdot} = \frac{\Delta \ralc{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
-  \end{equation}
-  %
-  Define
-  $Re_{\life} \equiv \frac{\Delta \ralc{E}}{\Sdot}$, 
-  $Re_{emb} \equiv \frac{\Delta \ralc{E}_{emb}}{\Sdot}$, and
-  $Re_{\OMd} \equiv \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}$,
-  such that
-  %
-  \begin{equation}
+\end{equation}
+%
+Define
+$Re_{\life} \equiv \frac{\Delta \ralc{E}}{\Sdot}$, 
+$Re_{emb} \equiv \frac{\Delta \ralc{E}_{emb}}{\Sdot}$, and
+$Re_{\OMd} \equiv \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}$,
+such that
+%
+\begin{equation}
   Re_{\life} = Re_{emb} + Re_{\OMd} \; .
-  \end{equation}
-  %
+\end{equation}
+%
 }
 {
-  %%%%%%%%%% Financial Life cycle Effect %%%%%%%%%%
-    ~
-    
-    Use the monetary constraint ($\rblc{M} = \ralc{M}$) to obtain
-  %
-  \begin{align} \label{M_dot_bal_lc}
-  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\OMd} + \rblc{C}_o + \rblc{N} \nonumber \\
-  &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o  + \ralc{N} \; .
-  \end{align}
-  %
-  For the life cycle effect, 
-  there is no change in energy consumption rate ($\rblc{E}_s = \ralc{E}_s$).
-  (The energy consumption rate change is accounted in the device effect.)
-  Solving for $\Delta \ralc{N} \equiv \ralc{N} - \rblc{N}$ gives
-  %
-  \begin{align}
-  \Delta \ralc{N} &= \rblc{C}_{cap} - \ralc{C}_{cap} + \rblc{C}_{\OMd} - \ralc{C}_{\OMd} \\
-  \Delta \ralc{N} &= - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
-  \end{align}
-  %
-  Using $\ralc{N} = \rblc{N} + \Delta \ralc{N}$, we find that
-  %
-  \begin{equation}
+%%%%%%%%%% Financial Life cycle Effect %%%%%%%%%%
+~
+
+Use the monetary constraint ($\rblc{M} = \ralc{M}$) to obtain
+%
+\begin{align} \label{M_dot_bal_lc}
+  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\OMd} + \cancel{\rblc{C}_o} + \rblc{N} \nonumber \\
+                          &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \cancel{\ralc{C}_o}  + \ralc{N} \; .
+\end{align}
+%
+For the life cycle effect, 
+there is no change in device energy consumption rate or expenditures on other good in the economy 
+($\ralc{E}_s = \rblc{E}_s$, $\ralc{C}_o = \rblc{C}_o$).
+(The change in device energy consumption rate is accounted in the device effect.
+Changes in the rate of other purchases are accounted in substitution and income effects.)
+Solving for $\Delta \ralc{N} \equiv \ralc{N} - \rblc{N}$ gives
+%
+\begin{equation}
+  \Delta \ralc{N} = - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
+\end{equation}
+%
+Using $\ralc{N} = \rblc{N} + \Delta \ralc{N}$, we find that
+%
+\begin{equation}
   \ralc{N} = \rate{G} - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
-  \end{equation}
-  %
+\end{equation}
+%
 }
 
 \end{landscape}
