@@ -291,32 +291,15 @@ in the public, commercial, or not-for-profit sectors.
 \label{sec:nomenclature}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-We adopt nomenclature similar to that of \Bt{}.
+Comprehension of the comprehensive rebound framework is aided by
+careful attention paid to 
+the nomenclature that describes the various energy stages (Fig.~\ref{fig:flowchart}) and energy rebound effects.
 Table~\ref{tab:symbols} shows symbols and abbreviations, their meanings, and example units.
 Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
 Table~\ref{tab:decorations} shows symbol decorations and their meanings.
 Table~\ref{tab:subscripts} shows subscripts and their meanings.
-
-Decorations applied to difference terms ($\Delta$) 
-indicate differences relative to the previous stage of Fig.~\ref{fig:flowchart}.
-Thus, 
-$\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and 
-$\Delta \aprod{X} \equiv \aprod{X} - \bprod{X}$.
-Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}
-and is the sum of all differences across all stages of Fig.~\ref{fig:flowchart}.
-%
-\begin{align}
-\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \alc{X} + \Delta \adev{X} \nonumber \\
-\Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X}) 
-            + (\asub{X} - \bsub{X}) + (\alc{X} - \blc{X}) 
-            + (\adev{X} - \bdev{X}) \nonumber \\
-\Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}}) 
-            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\alc{X}} - \cancel{\blc{X}}) 
-            + (\cancel{\adev{X}} - \bdev{X}) \nonumber \\
-\Delta X &= \aprod{X} - \orig{X}
-\end{align}
-%
-
+The symbols, Greek letters, decorations, and subscripts 
+can be mixed to provide a rich and expressive ``language'' of energy rebound.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -421,6 +404,103 @@ and is the sum of all differences across all stages of Fig.~\ref{fig:flowchart}.
 \label{tab:subscripts}
 \end{table}
 
+%++++++++++++++++++++++++++++++
+\subsection{Differences}
+\label{sec:differences}
+%++++++++++++++++++++++++++++++
+
+Differences are indicated by the Greek letter $\Delta$ and always
+signify subtraction of a quantity at an earlier stage of Fig.~\ref{fig:flowchart}
+from the same quantity at a later stage of Fig.~\ref{fig:flowchart}.
+E.g., 
+$\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and 
+$\Delta \aprod{X} \equiv \aprod{X} - \bprod{X}$.
+Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}.
+E.g., $\Delta X \equiv \aprod{X} - \orig{X}$.
+$\Delta X$ is also the sum of differences across each stage in Fig.~\ref{fig:flowchart}, 
+as shown below.
+%
+\begin{align}
+\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \alc{X} + \Delta \adev{X} \nonumber \\
+\Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X}) 
+            + (\asub{X} - \bsub{X}) + (\alc{X} - \blc{X}) 
+            + (\adev{X} - \bdev{X}) \nonumber \\
+\Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}}) 
+            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\alc{X}} - \cancel{\blc{X}}) 
+            + (\cancel{\adev{X}} - \bdev{X}) \nonumber \\
+\Delta X &= \aprod{X} - \orig{X}
+\end{align}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Energy and cost relationships}
+\label{sec:energy_and_cost_relationships}
+%++++++++++++++++++++++++++++++
+
+With the definitions above, four typical relationships emerge.
+First, the consumption rate of the energy service~($\rate{q}_s$) 
+is the product of final-to-services efficiency~($\eta$) and 
+the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
+%
+\begin{align}
+  \rate{q}_s &= \eta \rate{E}_s \\
+  \text{pass-km/yr} &= (\text{pass-km/MJ}) (\text{MJ/yr}) \nonumber
+\end{align}
+%
+Second, the energy service price~($p_S$) is the ratio of energy price~($p_E$) and final-to-services efficiency~($\eta$).
+%
+\begin{align}
+  p_s &= \frac{p_E}{\eta} \\
+  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber
+\end{align}
+%
+Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption~($\rate{E}_s$).
+%
+\begin{align}
+  \rate{C} &= p_E \rate{E}_s \\
+  \text{\$/yr} &= (\text{\$/MJ})\text{(MJ/yr}) \nonumber
+\end{align}
+%
+Fourth, energy rates are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+%
+\begin{align}
+  \rate{E} &= \rate{C} I_E \\
+  \text{MJ/yr} &= (\text{\$/yr})(\text{MJ/\$}) \nonumber
+\end{align}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound relationships}
+\label{sec:rebound_relationships}
+%++++++++++++++++++++++++++++++
+
+Energy rebound is defined as
+%
+\begin{equation} \label{eq:Re_def}
+  Re \equiv 1 - \frac{\text{actual final energy savings rate}}{\text{expected final energy savings rate}} \; .
+\end{equation}
+%
+Final energy ``takeback'' is the rate at which energy savings are eroded by rebound effects,
+and the actual final energy savings rate is the expected energy savings rate less takeback.
+Thus,
+%
+\begin{equation}
+  Re = \frac{\text{expected energy savings rate} - \text{takeback}}{\text{expected energy savings rate}} \; ,
+\end{equation}
+%
+or
+%
+\begin{equation}
+  Re = 1 - 1 + \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
+\end{equation}
+%
+Simplifying gives
+%
+\begin{equation} \label{eq:Re_takeback}
+  Re = \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
+\end{equation}
+%
+Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -428,8 +508,38 @@ and is the sum of all differences across all stages of Fig.~\ref{fig:flowchart}.
 \label{sec:derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+For each stage of Fig.~\ref{fig:flowchart}, 
+energy and financial analysis must be performed.
+The purposes of the analyses are to determine for each stage 
+of Fig.~\ref{fig:flowchart} an expression
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item for energy rebound~($Re$) and
+  
+  \item for net income~($\rate{N}$).
+    
+\end{enumerate*}
 
-Put detailed derivation here.
+Analysis of the \sethlcolor{device_color}\hl{device effect} assumes the following:
+%
+\begin{itemize}
+
+  \item energy service efficiency moves from 
+
+  \item
+
+\end{itemize}
+%
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Derivations}
+\label{sec:placeholder_label}
+%++++++++++++++++++++++++++++++
+
+ 
 
 
 
