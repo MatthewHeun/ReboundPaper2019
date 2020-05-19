@@ -193,6 +193,14 @@ The remainder of this paper is structured as follows.
 Provide highlights of the framework here.
 Refer to \ref{sec:derivation} for the detailed mathematical derivation of the framework.
 
+\begin{figure}
+\centering
+  % The file is a Tikz picture.
+  \input{flowchart.tex}
+\caption{Flowchart of effects and decorations.}
+\label{fig:flowchart}
+\end{figure}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Calculations: an example (PB, 2000 words)}
@@ -271,6 +279,150 @@ in the public, commercial, or not-for-profit sectors.
 
 \appendix
 
+% Gives a helpful "Appendix" label
+\section*{Appendix}
+
+% Labels each appendix as A, B, C, etc. instead of Appendix A, Appendix B, Appendix C, etc.
+\renewcommand{\thesection}{\Alph{section}} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Nomenclature}
+\label{sec:nomenclature}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We adopt nomenclature similar to that of \Bt{}.
+Table~\ref{tab:symbols} shows symbols and abbreviations, their meanings, and example units.
+Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
+Table~\ref{tab:decorations} shows symbol decorations and their meanings.
+Table~\ref{tab:subscripts} shows subscripts and their meanings.
+
+Decorations applied to difference terms ($\Delta$) 
+indicate differences relative to the previous stage of Fig.~\ref{fig:flowchart}.
+Thus, 
+$\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and 
+$\Delta \aprod{X} \equiv \aprod{X} - \bprod{X}$.
+Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}
+and is the sum of all differences across all stages of Fig.~\ref{fig:flowchart}.
+%
+\begin{align}
+\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \alc{X} + \Delta \adev{X} \nonumber \\
+\Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X}) 
+            + (\asub{X} - \bsub{X}) + (\alc{X} - \blc{X}) 
+            + (\adev{X} - \bdev{X}) \nonumber \\
+\Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}}) 
+            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\alc{X}} - \cancel{\blc{X}}) 
+            + (\cancel{\adev{X}} - \bdev{X}) \nonumber \\
+\Delta X &= \aprod{X} - \orig{X}
+\end{align}
+%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Symbols and abbreviations.}
+\begin{tabular}{r l}
+  \toprule
+  Symbol & Meaning [example units] \\
+  \midrule
+  $C$ & cost [\$] \\
+  $E$ & final energy [MJ] \\
+  EEU & energy efficiency upgrade \\
+  $e$ & inverse of final-energy-to-services efficiency ($\eta$); used by \Bt{}. \\
+  $G$ & gross income [\$] \\
+  $I$ & energy intensity of economic activity [MJ/\$] \\
+  $k$ & productivity effect factor [--] \\
+  $N$ & net income [\$] \\
+  $p$ & price [\$] \\
+  $q$ & quantity [--] \\
+  $Re$ & rebound [--] \\
+  $S$ & energy cost savings \\
+  $t$ & device lifetime [years] \\
+  $u$ & utility [-] \\
+  \bottomrule
+\end{tabular}
+\label{tab:symbols}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Greek
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Greek letters.}
+\begin{tabular}{r l}
+  \toprule
+  Greek letter & Meaning [example units] \\
+  \midrule
+  $\Delta$ & difference (later $-$ earlier) \\
+  $\epsilon$ & elasticity [--] \\
+  $\eta$ & final-energy-to-service efficiency [vehicle-km/MJ] \\
+  \bottomrule
+\end{tabular}
+\label{tab:greek}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Decorations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Decorations.}
+\begin{tabular}{r l}
+  \toprule
+  Decoration & Meaning [example units] \\
+  \midrule
+  $\orig{X}$ & $X$ before the device effect \\
+  $\adev{X}$ & $X$ after the device effect (before the lifecycle effect) \\
+  $\alc{X}$  & $X$ after the lifecycle effect (before the substitution effect) \\
+  $\asub{X}$ & $X$ after the substitution effect (before the income effect) \\
+  $\ainc{X}$ & $X$ after the income effect (before the productivity effect) \\
+  $\aprod{X}$ & $X$ after the productivity effect \\
+  $\rate{X}$ & rate of $X$ [X/year] \\
+  \bottomrule
+\end{tabular}
+\label{tab:decorations}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subscripts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering
+\caption{Subscripts.}
+\begin{tabular}{r l}
+  \toprule
+  Subscript & Meaning \\
+  \midrule
+  $cap$ & capital costs \\
+  $dev$ & device \\
+  $dinc$ & direct income effect \\
+  $dsub$ & direct substitution effect \\
+  $emb$ & embodied \\
+  $iinc$ & indirect income effect \\
+  $isub$ & indirect substitution effect \\
+  $\life$ & life cycle effect \\
+  $\OMd$ & operations, maintenance, and disposal costs \\
+  $\productivity$ & productivity effect \\
+  $s$ & service stage of the energy conversion chain \\
+  \bottomrule
+\end{tabular}
+\label{tab:subscripts}
+\end{table}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Derivation of comprehensive rebound framework (MKH)}
 \label{sec:derivation}
@@ -278,15 +430,6 @@ in the public, commercial, or not-for-profit sectors.
 
 
 Put detailed derivation here.
-
-
-\begin{figure}
-\centering
-  % The file is a Tikz picture.
-  \input{flowchart.tex}
-\caption{Flowchart of effects and decorations.}
-\label{fig:flowchart}
-\end{figure}
 
 
 
@@ -309,6 +452,32 @@ Put detailed derivation here.
 
 
 \input{deriv5_productivity_effect.tex}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound expressions}
+\label{sec:rebound_expressions}
+%++++++++++++++++++++++++++++++
+
+All that remains is to determine expressions for each rebound term,
+starting with $\Sdot$, the denominator for all rebound expressions.
+
+
+%------------------------------
+\subsubsection{$\Sdot$} 
+\label{sec:expected_energy_savings}
+%------------------------------
+
+The expected final energy savings are the reduction of energy consumption rate
+by the device as a result of the EEU.
+No other effects are considered.
+The energy consumption rates are given by the ratio of energy service 
+%
+\begin{equation}
+  \Sdot \equiv \rbdev{E}_s - \radev{E}_s = -\Delta \radev{E}_s
+\end{equation}
+%
+
 
 
 
