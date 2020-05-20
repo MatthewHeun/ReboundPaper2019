@@ -358,12 +358,12 @@ can be mixed to provide a rich and expressive ``language'' of energy rebound.
   \toprule
   Decoration & Meaning [example units] \\
   \midrule
-  $\orig{X}$ & $X$ before the device effect \\
-  $\adev{X}$ & $X$ after the device effect (before the lifecycle effect) \\
-  $\alc{X}$  & $X$ after the lifecycle effect (before the substitution effect) \\
-  $\asub{X}$ & $X$ after the substitution effect (before the income effect) \\
-  $\ainc{X}$ & $X$ after the income effect (before the productivity effect) \\
-  $\aprod{X}$ & $X$ after the productivity effect \\
+  $\orig{X}$ & $X$ before the \deveffect{} \\
+  $\adev{X}$ & $X$ after the \deveffect{} (before the \lceffect{}) \\
+  $\alc{X}$  & $X$ after the \lceffect{} (before the \subeffect{}) \\
+  $\asub{X}$ & $X$ after the \subeffect{} (before the \inceffect{}) \\
+  $\ainc{X}$ & $X$ after the \inceffect{} (before the \prodeffect{}) \\
+  $\aprod{X}$ & $X$ after the \prodeffect{} \\
   $\rate{X}$ & rate of $X$ [X/year] \\
   \bottomrule
 \end{tabular}
@@ -440,13 +440,13 @@ beginning with some typical energy, efficiency, and cost relationships.
 \label{sec:energy_and_cost_relationships}
 %++++++++++++++++++++++++++++++
 
-With the definitions above, four typical relationships emerge.
+With the definitions of Section~\ref{sec:nomenclature}, four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
 the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
 Typical units for automotive transport are provided.
 %
-\begin{align}
+\begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
   \text{pass-km/yr} &= (\text{pass-km/MJ}) (\text{MJ/yr}) \nonumber
 \end{align}
@@ -509,6 +509,14 @@ Simplifying gives
 %
 Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
 
+We define rebound at the final energy level, 
+because that is the point of energy purchase by the device owner.
+To simplify derivations, 
+we choose not to apply final-to-primary energy multipliers
+to final energy rates in the numerators and denominators of rebound expressions
+derived from Eqs.~\ref{eq:Re_def} and~\ref{eq:Re_takeback};
+they divide out anyway.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Relationship for stages}
@@ -549,10 +557,6 @@ will all increase.
 \input{assumptions_table.tex}
 
 
-
-
-
-
 %++++++++++++++++++++++++++++++
 \subsection{Derivations}
 \label{sec:placeholder_label}
@@ -563,13 +567,10 @@ will all increase.
 \input{deriv1_device_effect.tex}
 
 
-
 \input{deriv2_lifecycle_effect.tex}
 
 
-
 \input{deriv3_substitution_effect.tex}
-
 
 
 \input{deriv4_income_effect.tex}
@@ -583,24 +584,158 @@ will all increase.
 \label{sec:rebound_expressions}
 %++++++++++++++++++++++++++++++
 
-All that remains is to determine expressions for each rebound term,
-starting with $\Sdot$, the denominator for all rebound expressions.
-
-
-%------------------------------
-\subsubsection{$\Sdot$}
-\label{sec:expected_energy_savings}
-%------------------------------
-
-The expected final energy savings are the reduction of energy consumption rate
-by the device as a result of the EEU.
+All that remains is to determine expressions for each rebound term, 
+beginning with the expected energy savings rate~($\Sdot$), which
+appears in the denominator of all rebound expressions.
+$\Sdot$ is the reduction of energy consumption rate
+by the device due to the EEU.
 No other effects are considered.
-The energy consumption rates are given by the ratio of energy service
 %
 \begin{equation}
-  \Sdot \equiv \rbdev{E}_s - \radev{E}_s = -\Delta \radev{E}_s
+  \Sdot \equiv \rbdev{E}_s - \radev{E}_s
 \end{equation}
 %
+The final energy consumption rates ($\rbdev{E}_s$ and $\radev{E}_s$) 
+are given by ratios of energy service consumption rates~($\rbdev{q}_s$ and $\radev{q}_s$)
+to energy service efficiency~($\rbdev{\eta}$ and $\radev{\eta}$, respectively), 
+as shown in Eq.~\ref{eq:typ_qs_eta_Edot}.
+%
+\begin{equation}
+  \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\radev{q}_s}{\adev{\eta}}
+\end{equation}
+%
+With reference to Table~\ref{tab:analysis_assumptions}, 
+we use $\rbdev{q}_s = \radev{q}_s$ and $\radev{\eta} = \aprod{\eta}$ to obtain
+%
+\begin{equation}
+  \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\rbdev{q}_s}{\aprod{\eta}} \; .
+\end{equation}
+%
+After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, we obtain
+%
+\begin{equation} \label{eq:Sdot}
+  \Sdot = \left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right) \frac{\bdev{\eta}}{\aprod{\eta }} \rbdev{E}_s \; .
+\end{equation}
+
+When efficiency increases due to the EEU such that $\aprod{\eta} > \bdev{\eta}$,
+the rate of final energy consumption declines, and
+$\Sdot > 0$,
+as expected.
+As $\aprod{\eta} \rightarrow \infty$,
+all final energy consumption is eliminated, and
+$\Sdot = \rbdev{E}_s$.
+(Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
+See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
+
+Note that as energy service efficiency becomes large ($\aprod{\eta} \rightarrow \infty$),
+the expected energy savings rate that device level ($\Sdot$) approaches $\rbdev{q}_s / \bdev{\eta}$,
+showing that all energy is saved when efficiency is large.
+
+
+%------------------------------
+\subsubsection{\Deveffect} 
+\label{sec:Re_dev}
+%------------------------------
+
+As shown in Eq.~\ref{eq:Re_dev0}, 
+rebound from the device effect is 0.
+
+%------------------------------
+\subsubsection{\Lceffect{}} 
+\label{sec:Re_lc}
+%------------------------------
+
+Energy rebound from the life cycle effect comprises two rebound effects, 
+an embodied energy effect ($Re_{emb}$) and 
+an operations, maintenance, and disposal effect ($Re_{\OMd}$).
+
+We define embodied energy consistent with the energy/exergy analysis literature
+to be the sum of all final energy consumed (direct and indirect)
+in the production of the device.
+The EEU
+causes the embodied final energy of the device to change
+from $\rblc{E}_{emb}$ to $\ralc{E}_{emb}$.
+
+Energy is embodied in the device during manufacturing, distribution, and disposal processes,
+prior to consumer acquisition of the device and after the useful life of the device.
+Aside from maintenance effects,
+no energy is embodied in the device while in service.
+However, for simplicity, we spread all embodied energy
+over the lifetime of the device,
+an equal amount assigned to every period.
+We later take the same approach to capital, operation and maintenance, and disposal costs.
+
+In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
+but others (automobiles) are paid off in installments.
+Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
+By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
+we treat all purchase plans equally.
+Another justification for spreading purchase costs comes from considering
+staggered device replacements by many consumers across several years.
+in the aggregate, staggered replacements
+work out to about the same embodied energy and cost in every period.
+
+Thus, we allocate embodied energy over the life of the original and upgraded devices
+($\blc{t}$ and $\alc{t}$, respectively)
+to obtain embodied energy rates, such that
+$\rblc{E}_{emb} = \blc{E}_{emb} / \blc{t}$
+and 
+$\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
+The change in embodied final energy due to the EEU (expressed as a rate) is given by
+$\Delta \ralc{E}_{emb} = \ralc{E}_{emb} - \rblc{E}_{emb}$.
+After substitution and algebraic rearrangement,
+the change in embodied energy rate due to the EEU can be expressed as
+%
+\begin{equation} \label{eq:delta_embodied}
+  \Delta \ralc{E}_{emb} = \left( \frac{\alc{E}_{emb}}{\blc{E}_{emb}}
+  \frac{\blc{t}}{\alc{t}} - 1 \right) \rblc{E}_{emb} \, .
+\end{equation}
+
+$\Delta \ralc{E}_{emb}$ represents energy savings taken back due to embodied energy effects.
+Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy rebound as
+%
+\begin{equation} \label{eq:Re_emb}
+  Re_{emb} = \Reembequation{} \, .
+\end{equation}
+
+Embodied energy rebound can be either positive or negative.
+Whether $Re_{emb}$ is positive or negative is determined by the sign of the term\\
+$(\alc{E}_{emb}/\blc{E}_{emb})(\blc{t}/\alc{t}) - 1$.
+Typically, but not always,
+increases in energy efficiency are associated with increased device complexity
+and more embodied energy,
+such that $\alc{E}_{emb} > \blc{E}_{emb}$ and $Re_{emb} > 0$.
+However, if the upgraded device has longer life than the original device
+($\alc{t} > \blc{t}$),
+$\Delta \ralc{E}_{emb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device,
+yielding $Re_{emb} < 0$.
+
+**** OMd rebound here. ****
+
+
+
+%------------------------------
+\subsubsection{\Subeffect{}} 
+\label{sec:Re_sub}
+%------------------------------
+
+
+
+
+%------------------------------
+\subsubsection{\Inceffect{}} 
+\label{sec:Re_inc}
+%------------------------------
+
+
+
+
+%------------------------------
+\subsubsection{\Prodeffect{}} 
+\label{sec:Re_prod}
+%------------------------------
+
 
 
 
