@@ -515,10 +515,10 @@ Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:R
 \label{sec:relationships_for_stages}
 %++++++++++++++++++++++++++++++
 
-For each stage of Fig.~\ref{fig:flowchart},
+For each energy rebound effect in Fig.~\ref{fig:flowchart},
 energy and financial analysis must be performed.
-The purposes of the analyses are to determine for each stage
-of Fig.~\ref{fig:flowchart} an expression
+The purposes of the analyses are to determine for each effect
+an expression
 %
 \begin{enumerate*}[label={(\alph*)}]
 
@@ -528,46 +528,27 @@ of Fig.~\ref{fig:flowchart} an expression
 
 \end{enumerate*}
 
-Analysis of the \deveffect{} assumes the following:
+Analysis of each stage involves a set of assumptions and constraints
+as shown in Table~\ref{tab:analysis_assumptions}.
+In Table~\ref{tab:analysis_assumptions}, 
+relationships for \lceffect{} 
+embodied energy rates, 
+capital expenditure rates, and 
+OM and disposal expenditure rates
+are typical, and
+inequalities could switch direction for a specific EEU.
+\Prodeffect{} relationships are given for a single device only.
+If the EEU is deployed at scale across the economy, 
+the energy service consumption rate~($\rate{q}_s$), 
+device energy consumption rate~($\rate{E}_s$), 
+embodied energy rate~($\rate{E}_{emb}$),
+capital expenditure rate~($\rate{C}_{cap}$), and 
+OM and disposal expenditure rate~($\rate{C}_{\OMd}$)
+will all increase.
 
-\begin{table}
-\centering
-\caption{Assumptions and constraints for the \deveffect{}.}
-\label{tab:device_assumptions}
-\begin{tabular}{l c}
-\toprule
-Constraint & Equation \\
-\midrule
-No change in energy service consumption rate & \mptable{0.3}{\radev{q}_s = \rbdev{q}_s} \\
-No change in other goods consumption rate & \mptable{0.3}{\radev{q}_o = \rbdev{q}_o} \\
-No change in OM and disposal expenditure rate & \mptable{0.3}{\radev{C}_{\OMd} = \rbdev{C}_{\OMd}} \\
-No change in other goods expenditure rate & \mptable{0.3}{\radev{C}_o = \rbdev{C}_o} \\
-\bottomrule
-\end{tabular}
-
-\end{table}
+\input{assumptions_table.tex}
 
 
-
-
-\begin{table}
-\centering
-\caption{Assumptions and constraints for the \deveffect{}.}
-\label{tab:device_assumptions}
-
-\rule{\textwidth}{\heavyrulewidth}
-
-\vspace{-\baselineskip}
-
-\begin{flalign}
-& \text{No change in energy service consumption rate}  &\radev{q}_s &= \rbdev{q}_s  &&&\label{continuity_1} \\
-& \text{No change in other goods consumption rate} &\radev{q}_o &= \rbdev{q}_o  &&&\label{energy_1}
-\end{flalign}
-\vspace{-\baselineskip}
-
-\rule{\textwidth}{\heavyrulewidth}
-
-\end{table}
 
 
 
