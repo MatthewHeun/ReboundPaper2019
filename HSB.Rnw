@@ -538,11 +538,37 @@ Analysis of the \deveffect{} assumes the following:
 \toprule
 Constraint & Equation \\
 \midrule
-No change in service consumption rate & \begin{minipage}{0.4\linewidth} \useshortskip{} \begin{equation} \radev{q}_s = \rbdev{q}_s \end{equation} \end{minipage}    \\
+No change in energy service consumption rate & \mptable{0.3}{\radev{q}_s = \rbdev{q}_s} \\
+No change in other goods consumption rate & \mptable{0.3}{\radev{q}_o = \rbdev{q}_o} \\
+No change in OM and disposal expenditure rate & \mptable{0.3}{\radev{C}_{\OMd} = \rbdev{C}_{\OMd}} \\
+No change in other goods expenditure rate & \mptable{0.3}{\radev{C}_o = \rbdev{C}_o} \\
 \bottomrule
 \end{tabular}
 
 \end{table}
+
+
+
+
+\begin{table}
+\centering
+\caption{Assumptions and constraints for the \deveffect{}.}
+\label{tab:device_assumptions}
+
+\rule{\textwidth}{\heavyrulewidth}
+
+\vspace{-\baselineskip}
+
+\begin{flalign}
+& \text{No change in energy service consumption rate}  &\radev{q}_s &= \rbdev{q}_s  &&&\label{continuity_1} \\
+& \text{No change in other goods consumption rate} &\radev{q}_o &= \rbdev{q}_o  &&&\label{energy_1}
+\end{flalign}
+\vspace{-\baselineskip}
+
+\rule{\textwidth}{\heavyrulewidth}
+
+\end{table}
+
 
 
 

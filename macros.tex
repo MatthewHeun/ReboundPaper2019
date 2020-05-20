@@ -70,6 +70,12 @@
 
 %%%%% Coloration of text background
 
+%
+% Inline color box around text
+% Arguments:
+%   [#1]: background color for the box
+%   {#2}: text inside the box
+%
 \newtcbox{\inlinebox}[1][]{on line, 
 colback=#1,
 colframe=#1,
@@ -108,6 +114,16 @@ bottom=2pt}
 \newcommand{\prodeffect}{\inlinebox[\prodcolor]{productivity effect}}
 \newcommand{\Prodeffect}{\inlinebox[\prodcolor]{Productivity effect}}
 \newcommand{\ProdEffect}{\inlinebox[\prodcolor]{Productivity Effect}}
+
+
+
+%%%%% minipage for assumptions and constraints tables
+% Arguments:
+%   #1: Width (multiple of \linewidth
+%   #2: text inside the minipage
+%
+\newcommand{\mptable}[2]{\begin{minipage}{#1\linewidth} \useshortskip{} \begin{equation} #2 \end{equation} \end{minipage}}
+
 
 
 %%%%% Oft-used references
