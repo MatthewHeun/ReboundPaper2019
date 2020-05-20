@@ -61,12 +61,53 @@
 
 %%%%% Colors
 
-\colorlet{device_color}{red!25!white}
-\colorlet{lifecycle_color}{orange!25!white}
-\colorlet{substitution_color}{yellow!25!white}
-\colorlet{income_color}{green!25!white}
-\colorlet{productivity_color}{blue!25!white}
+\newcommand{\devcolor}{red!25!white}
+\newcommand{\lccolor}{orange!25!white}
+\newcommand{\subcolor}{yellow!25!white}
+\newcommand{\inccolor}{green!25!white}
+\newcommand{\prodcolor}{blue!25!white}
 
+
+%%%%% Coloration of text background
+
+\newtcbox{\inlinebox}[1][]{on line, 
+colback=#1,
+colframe=#1,
+before upper={\rule[-2pt]{0pt}{10pt}},
+boxrule=1pt,
+boxsep=0pt,
+left=3pt,
+right=3pt,
+top=2pt,
+bottom=2pt}
+
+
+%%%%% Colored phrases
+
+% Device effect
+\newcommand{\deveffect}{\inlinebox[\devcolor]{device effect}}
+\newcommand{\Deveffect}{\inlinebox[\devcolor]{Device effect}}
+\newcommand{\DevEffect}{\inlinebox[\devcolor]{Device Effect}}
+
+% Life cycle effect
+\newcommand{\lceffect}{\inlinebox[\lccolor]{life cycle effect}}
+\newcommand{\Lceffect}{\inlinebox[\lccolor]{Life cycle effect}}
+\newcommand{\LcEffect}{\inlinebox[\lccolor]{Life cycle Effect}}
+
+% Substitution effect
+\newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
+\newcommand{\Subeffect}{\inlinebox[\subcolor]{Substitution effect}}
+\newcommand{\SubEffect}{\inlinebox[\subcolor]{Substitution Effect}}
+
+% Income effect
+\newcommand{\inceffect}{\inlinebox[\inccolor]{income effect}}
+\newcommand{\Inceffect}{\inlinebox[\inccolor]{Income effect}}
+\newcommand{\IncEffect}{\inlinebox[\inccolor]{Income Effect}}
+
+% Productivity effect
+\newcommand{\prodeffect}{\inlinebox[\prodcolor]{productivity effect}}
+\newcommand{\Prodeffect}{\inlinebox[\prodcolor]{Productivity effect}}
+\newcommand{\ProdEffect}{\inlinebox[\prodcolor]{Productivity Effect}}
 
 
 %%%%% Oft-used references
@@ -134,14 +175,12 @@
 %
 % Derivation page header
 % Arguments:
-%   #1: Effect type (e.g., Device Effect)
-%   #2: Color
+%   #1: Effect type header text (e.g., Device Effect)
 %
-\newcommand{\derivheader}[2]{
+\newcommand{\derivheader}[1]{
 
 \begin{center}
-  \sethlcolor{#2}
-  \bf{\hl{#1}}
+  #1
 \end{center}
 
 \derivsection{}
