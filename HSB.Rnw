@@ -642,7 +642,7 @@ $\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
 $\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
 gives 
 %
-\begin{equation}
+\begin{equation} \label{eq:q_ratio_func_of_eps}
   \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} \; .
 \end{equation}
 
@@ -659,14 +659,37 @@ we introduce a utility ($\rate{u}$) constraint.
 \end{equation}
 
 We assume a utility function of the general form
-$\rate{u} = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$.
+$\rate{u} = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
+where both $\alpha$ and $\beta$ are positive.
 Applying the utility constraint gives
 %
 \begin{equation}
-  (\rbsub{q}_s)^\alpha (\rbsub{q}_0)^\beta = (\rasub{q}_s)^\alpha (\rasub{q}_0)^\beta
+  (\rbsub{q}_s)^\alpha (\rbsub{q}_0)^\beta = (\rasub{q}_s)^\alpha (\rasub{q}_0)^\beta \; .
 \end{equation}
 %
-
+Rearrangement gives
+%
+\begin{equation}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)^{-\alpha / \beta } 
+\end{equation}
+%
+and
+%
+\begin{equation}
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\rasub{q}_o}{\rbsub{q}_o} \right) ^ {- \beta / \alpha } \; .
+\end{equation}
+%
+Equating to Eq.~\ref{eq:q_ratio_func_of_eps} and rearranging gives
+%
+\begin{equation}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} \alpha / \beta} \; .
+\end{equation}
+%
+Note that the service price elasticity of consumption ($\epsilon_{p_s}$)
+is negative and utility function exponents ($\alpha$ and $\beta$) are positive, such that
+as energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
+the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
+as expected for the substitution effect.
 
 
 
