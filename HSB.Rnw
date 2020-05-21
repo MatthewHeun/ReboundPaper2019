@@ -645,10 +645,21 @@ rebound from the device effect is 0.
 \label{sec:Re_lc}
 %------------------------------
 
-Energy rebound from the life cycle effect comprises two rebound effects, 
-an embodied energy effect ($Re_{emb}$) and 
-an operations, maintenance, and disposal effect ($Re_{\OMd}$).
-
+Rebound effects can occur at any point in the life cycle of an energy conversion machine,
+from manufacturing and distribution 
+to the use phase (operations and maintenance)
+and finally to disposal.
+For simplicity, we group operations and maintenance with disposal to form
+two distinct life cycle rebound effects:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item an embodied energy effect ($Re_{emb}$) and 
+  
+  \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
+    
+\end{enumerate*}
+%
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
 in the production of the device.
@@ -656,24 +667,18 @@ The EEU
 causes the embodied final energy of the device to change
 from $\rblc{E}_{emb}$ to $\ralc{E}_{emb}$.
 
-Energy is embodied in the device during manufacturing, distribution, and disposal processes,
-prior to consumer acquisition of the device and after the useful life of the device.
-Aside from maintenance effects,
-no energy is embodied in the device while in service.
+Energy is embodied in the device during manufacturing and distribution supply chains
+prior to consumer acquisition of the device.
+No energy is embodied in the device while in service.
 However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
-an equal amount assigned to every period.
-We later take the same approach to capital, operation and maintenance, and disposal costs.
-
-In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
-but others (automobiles) are paid off in installments.
-Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
-By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
-we treat all purchase plans equally.
-Another justification for spreading purchase costs comes from considering
+an equal amount assigned to each period.
+We later take the same approach to capital costs and
+operations, maintenance, and disposal costs.
+A justification for spreading embodied energy purchase costs comes from considering
 staggered device replacements by many consumers across several years.
-in the aggregate, staggered replacements
-work out to about the same embodied energy and cost in every period.
+In the aggregate, staggered replacements
+work out to about the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
 ($\blc{t}$ and $\alc{t}$, respectively)
@@ -698,11 +703,11 @@ Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy reb
   Re_{emb} = \Reembequation{} \, .
 \end{equation}
 
-Embodied energy rebound can be either positive or negative.
-Whether $Re_{emb}$ is positive or negative is determined by the sign of the term\\
+Embodied energy rebound can be either positive or negative, depending on 
+the sign of the term
 $(\alc{E}_{emb}/\blc{E}_{emb})(\blc{t}/\alc{t}) - 1$.
 Typically, but not always,
-increases in energy efficiency are associated with increased device complexity
+rising in energy efficiency is associated with increased device complexity
 and more embodied energy,
 such that $\alc{E}_{emb} > \blc{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
@@ -711,7 +716,42 @@ $\Delta \ralc{E}_{emb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device,
 yielding $Re_{emb} < 0$.
 
-**** OMd rebound here. ****
+In addition to embodied energy effects, 
+rebound can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
+Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rblc{C}_{\OM}$).
+Disposal costs (e.g., $\blc{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
+Like embodied energy, we spread disposal costs across the lifetime 
+of the original and upgraded devices ($\blc{t}$ and $\alc{t}$, respectively)
+to form cost rates such that $\rblc{C}_{\OMd} = \rblc{C}_{\OM} + \blc{C}_d/\blc{t}$
+and
+$\ralc{C}_{\OMd} = \ralc{C}_{\OM} + \alc{C}_d/\alc{t}$.
+
+
+We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
+elsewhere in the economy at its energy intensity~($I_E$).
+Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
+is given by $\Delta \ralc{C}_{\OMd} I_E$.
+This term represents energy takeback, so operations, maintenance, and disposal rebound is given by
+%
+\begin{equation}
+  Re_{\OMd} = \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot} \; ,
+\end{equation}
+%
+as shown in Table~\ref{tab:lceffect}.
+Slight rearrangement gives
+%
+\begin{equation}
+  Re_{\OMd} = \frac{\left( \frac{\ralc{C}_{\OMd}}{\rblc{C}_{\OMd}} - 1 \right) \rblc{C}_{\OMd} I_E}{\Sdot} \; .
+\end{equation}
+
+Rebound from operations, maintenance, and disposal can be positive or negative,
+depending on the sign of the term $\ralc{C}_{\OMd}/\rblc{C}_{\OMd} - 1$.
+
+
+
+
+
+
 
 
 
@@ -727,6 +767,16 @@ yielding $Re_{emb} < 0$.
 \subsubsection{\Inceffect{}} 
 \label{sec:Re_inc}
 %------------------------------
+
+
+
+
+
+In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
+but others (automobiles) are paid off in installments.
+Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
+By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
+we treat all purchase plans equally.
 
 
 
