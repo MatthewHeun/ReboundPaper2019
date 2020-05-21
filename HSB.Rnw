@@ -748,13 +748,6 @@ Rebound from operations, maintenance, and disposal can be positive or negative,
 depending on the sign of the term $\ralc{C}_{\OMd}/\rblc{C}_{\OMd} - 1$.
 
 
-
-
-
-
-
-
-
 %------------------------------
 \subsubsection{\Subeffect{}} 
 \label{sec:Re_sub}
