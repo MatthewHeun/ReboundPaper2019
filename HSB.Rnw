@@ -710,6 +710,9 @@ is negative and utility function exponents ($\alpha$ and $\beta$) are positive, 
 when energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
 the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
 as expected for the substitution effect.
+Note, too, that if the device owner derives relatively more utility 
+from the energy service compared to other purchases ($\alpha > \beta$), 
+the reduction in other purchases is enhanced, because $\frac{\alpha}{\beta} > 1$.
 
 Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
@@ -766,6 +769,11 @@ and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
 \begin{equation}
   Re_{dsub} = \Redsubeqn \; .
 \end{equation}
+
+Note that the price elasticity of energy service consumption is
+expected to be negative ($\epsilon_{p_s} < 0$).
+When $\epsilon_{p_s} \in (-1, 0)$, as expected,
+the direct substitution rebound will be positive but less than 1 ($0 < Re_{dsub} < 1$).
 
 Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
 
@@ -834,7 +842,17 @@ Noting that $\rbsub{C}_o = \rbdev{C}_o$ and rearranging yields
 \begin{equation}
   Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
-%
+
+Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$), 
+the service efficiency ratio is greater than 1 ($\aprod{\eta} > \bdev{\eta}$), 
+and
+the ratio of utility exponents is positive ($\alpha / \beta > 0$),
+indirect substitution rebound will be negative always ($Re_{isub} < 0$), 
+as expected.
+Negative rebound indicates that indirect substitution reduces the energy takeback from direct substitution.
+Indirect substitution rebound goes more negative 
+when the ratio of utility exponents ($\alpha / \beta$) gets larger.
+
 
 %------------------------------
 \subsubsection{\Inceffect{}} 
