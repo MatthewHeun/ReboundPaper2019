@@ -701,7 +701,7 @@ Rearrangement gives
 %
 Equating to Eq.~\ref{eq:q_ratio_func_of_eps} and rearranging gives
 %
-\begin{equation}
+\begin{equation} \label{eq:qohat_qostar}
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
 \end{equation}
 %
@@ -775,9 +775,66 @@ Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$)
 \label{sec:Re_isub}
 %..............................
 
-As shown in 
-
-
+As shown in Table~\ref{tab:subeffect}, 
+%
+\begin{equation}
+  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
+\end{equation}
+%
+Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging the numerator gives
+%
+\begin{equation} \label{eq:Re_isub_prelim}
+  Re_{isub} = \frac{\left( \frac{\rasub{C}_o}{\rbsub{C}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
+\end{equation}
+%
+We assume a basket of other goods purchased in the economy, 
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($q_{o,i}$), 
+such that the average price of all other good purchased in the economy~($p_o$) is given by
+%
+\begin{equation}
+  p_o = \frac{\sum\limits_i \bdev{p}_{o,i} \rbdev{q}_{o,i}}{\sum\limits_i \rbdev{q}_{o,i}} \; .
+\end{equation}
+%
+Then, the cost rate of other purchases in the economy can be given as
+%
+\begin{equation}
+  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
+\end{equation}
+%
+Assuming that the average price is unchanged across the substitution effect, 
+such that $\asub{p}_o = \bsub{p}_o$, 
+the preceding two equations can be set equal to find
+%
+\begin{equation}
+  \frac{\rasub{C}_o}{\rbsub{C}_o} = \frac{\rasub{q}_o}{\rbsub{q}_o} \; .
+\end{equation}
+%
+Substituting into Eq.~\ref{eq:Re_isub_prelim} gives
+%
+\begin{equation}
+  Re_{isub} = \frac{\left( \frac{\rasub{q}_o}{\rbsub{q}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
+\end{equation}
+% %
+Substituting Eqs.~\ref{eq:qohat_qostar} and~\ref{eq:Sdot} gives
+%
+\begin{equation}
+  Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bdev{\eta}} \right)
+                  ^{\epsilon_{p_s} (\alpha / \beta )} - 1  \right] \rbsub{C}_o I_E}
+                  {\Sdoteqn} \; .
+\end{equation}
+%
+Noting that $\rbsub{C}_o = \rbdev{C}_o$ and rearranging yields
+%
+\begin{equation}
+  Re_{isub} = \Reisubeqn{} \; .
+\end{equation}
+%
 
 %------------------------------
 \subsubsection{\Inceffect{}} 
