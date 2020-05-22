@@ -476,7 +476,7 @@ we use $\rbdev{q}_s = \radev{q}_s$ and $\radev{\eta} = \aprod{\eta}$ to obtain
 After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, we obtain
 %
 \begin{equation} \label{eq:Sdot}
-  \Sdot = \left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right) \frac{\bdev{\eta}}{\aprod{\eta }} \rbdev{E}_s \; .
+  \Sdot = \Sdoteqn \; .
 \end{equation}
 
 When efficiency increases due to the EEU such that $\aprod{\eta} > \bdev{\eta}$,
@@ -615,6 +615,16 @@ depending on the sign of the term $\ralc{C}_{\OMd}/\rblc{C}_{\OMd} - 1$.
 \label{sec:Re_sub}
 %------------------------------
 
+Two terms comprise substitution effect rebound, 
+direct substitution rebound ($Re_{dsub}$) and 
+indirect substitution rebound ($Re_{isub}$).
+This section derives each in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
+the service price elasticity of consumption ($\epsilon_{p_s}$), and 
+utility function parameters ($\alpha$ and $\beta$).
+We begin with derivation of two ratios that are helpful later, 
+$\frac{\rasub{q}_s}{\rbsub{q}_s}$ and 
+$\frac{\rasub{q}_o}{\rbsub{q}_o}$.
+
 The EEU's energy efficiency increase
 ($\aprod{\eta} > \bdev{\eta}$) 
 causes the price of the energy service provided by the device to fall
@@ -685,6 +695,52 @@ is negative and utility function exponents ($\alpha$ and $\beta$) are positive, 
 when energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
 the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
 as expected for the substitution effect.
+
+Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
+
+As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
+$Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot}$.
+Expansion of the difference term and 
+substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form **** and **** gives
+%
+\begin{equation}
+   Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bdev{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Substitution of Eq.~\ref{eq:Sdot} gives
+%
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bdev{\eta}}}
+              {\Sdoteqn} \; .
+\end{equation}
+%
+Rearrangement of the numerator and canceling terms gives
+%
+\begin{equation}
+  Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\aprod{\eta}}} }
+              {\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)\!\frac{\bdev{\eta}}{\cancel{\aprod{\eta}}} \rbdev{E}_s} \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; \; 
+                \frac{\cancelto{\rbdev{E}_s}{\frac{\rbsub{q}_s}{\bdev{\eta}}}}{\rbdev{E}_s} \; .
+\end{equation}
+%
+Canceling $\rbdev{E}_s$ terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
+%
+\begin{equation}
+  Re_{dsub} = \Redsubeqn \; .
+\end{equation}
+
+Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
 
 
 
