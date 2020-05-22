@@ -458,40 +458,37 @@ No other effects are considered.
 \end{equation}
 %
 The final energy consumption rates ($\rbdev{E}_s$ and $\radev{E}_s$) 
-are given by ratios of energy service consumption rates~($\rbdev{q}_s$ and $\radev{q}_s$)
-to energy service efficiency~($\rbdev{\eta}$ and $\radev{\eta}$, respectively), 
-as shown in Eq.~\ref{eq:typ_qs_eta_Edot}.
+can be written as the typical relationship in Eq.~\ref{eq:typ_qs_eta_Edot} as
+$\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$ and 
+$\radev{E}_s = \frac{\radev{q}_s}{\adev{\eta}}$. 
 %
 \begin{equation}
   \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\radev{q}_s}{\adev{\eta}}
 \end{equation}
 %
 With reference to Table~\ref{tab:analysis_assumptions}, 
-we use $\rbdev{q}_s = \radev{q}_s$ and $\radev{\eta} = \aprod{\eta}$ to obtain
+we use $\radev{q}_s = \rbdev{q}_s$ and $\radev{\eta} = \aprod{\eta}$ to obtain
 %
 \begin{equation}
   \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\rbdev{q}_s}{\aprod{\eta}} \; .
 \end{equation}
 %
-After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, we obtain
-%
-\begin{equation} \label{eq:Sdot}
-  \Sdot = \Sdoteqn \; .
-\end{equation}
-
 When efficiency increases due to the EEU such that $\aprod{\eta} > \bdev{\eta}$,
 the rate of final energy consumption declines, and
 $\Sdot > 0$,
 as expected.
 As $\aprod{\eta} \rightarrow \infty$,
 all final energy consumption is eliminated, and
-$\Sdot = \rbdev{E}_s$.
+$\Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} = \rbdev{E}_s$.
 (Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
 
-Note that as energy service efficiency becomes large ($\aprod{\eta} \rightarrow \infty$),
-the expected energy savings rate that device level ($\Sdot$) approaches $\rbdev{q}_s / \bdev{\eta}$,
-showing that all energy is saved when efficiency is large.
+After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, 
+we obtain a convenient form
+%
+\begin{equation} \label{eq:Sdot}
+  \Sdot = \Sdoteqn \; .
+\end{equation}
 
 
 %------------------------------
@@ -507,9 +504,9 @@ rebound from the device effect is 0.
 \label{sec:Re_lc}
 %------------------------------
 
-Rebound effects can occur at any point in the life cycle of an energy conversion machine,
+Rebound effects can occur at any point in the life cycle of an energy conversion device,
 from manufacturing and distribution 
-to the use phase (operations and maintenance)
+to the use phase (operations and maintenance),
 and finally to disposal.
 For simplicity, we group operations and maintenance with disposal to form
 two distinct life cycle rebound effects:
@@ -521,7 +518,13 @@ two distinct life cycle rebound effects:
   \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
     
 \end{enumerate*}
-%
+
+
+%..............................
+\paragraph{$Re_{emb}$}
+\label{sec:Re_emb}
+%..............................
+
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
 in the production of the device.
@@ -578,6 +581,12 @@ $\Delta \ralc{E}_{emb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device,
 yielding $Re_{emb} < 0$.
 
+
+%..............................
+\paragraph{$Re_{\OMd}$} 
+\label{sec:Re_OMd}
+%..............................
+
 In addition to embodied energy effects, 
 rebound can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
 Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rblc{C}_{\OM}$).
@@ -624,6 +633,12 @@ utility function parameters ($\alpha$ and $\beta$).
 We begin with derivation of two ratios that are helpful later, 
 $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and 
 $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
+
+
+%..............................
+\paragraph{Two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$} 
+\label{sec:two_ratios}
+%..............................
 
 The EEU's energy efficiency increase
 ($\aprod{\eta} > \bdev{\eta}$) 
@@ -687,7 +702,7 @@ Rearrangement gives
 Equating to Eq.~\ref{eq:q_ratio_func_of_eps} and rearranging gives
 %
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} \alpha / \beta} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
 \end{equation}
 %
 Note that the service price elasticity of consumption ($\epsilon_{p_s}$)
@@ -698,10 +713,20 @@ as expected for the substitution effect.
 
 Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
+
+%..............................
+\paragraph{$Re_{dsub}$} 
+\label{sec:Re_dsub}
+%..............................
+
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
 $Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot}$.
 Expansion of the difference term and 
-substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form **** and **** gives
+substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form 
+$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$ 
+and 
+$\rbsub{E}_s = \frac{\rbsub{q}_s}{\bdev{\eta}}$ 
+gives
 %
 \begin{equation}
    Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; ,
@@ -731,16 +756,26 @@ and
 %
 \begin{equation}
     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; \; 
-                \frac{\cancelto{\rbdev{E}_s}{\frac{\rbsub{q}_s}{\bdev{\eta}}}}{\rbdev{E}_s} \; .
+                \frac{\frac{\rbsub{q}_s}{\bdev{\eta}}}{\rbdev{E}_s} \; .
 \end{equation}
 %
-Canceling $\rbdev{E}_s$ terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
+Noting that $\frac{\rbsub{q}_s}{\rbdev{\eta}} = \frac{\rbdev{q}_s}{\rbdev{\eta}} = \rbdev{E}_s$,
+canceling $\rbdev{E}_s$ terms,
+and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
 %
 \begin{equation}
   Re_{dsub} = \Redsubeqn \; .
 \end{equation}
 
 Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
+
+
+%..............................
+\paragraph{$Re_{isub}$} 
+\label{sec:Re_isub}
+%..............................
+
+As shown in 
 
 
 
