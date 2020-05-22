@@ -723,7 +723,12 @@ Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 %..............................
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
-$Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot}$.
+
+%
+\begin{equation}
+  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
+\end{equation}
+%
 Expansion of the difference term and 
 substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form 
 $\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$ 
@@ -770,10 +775,12 @@ and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
   Re_{dsub} = \Redsubeqn \; .
 \end{equation}
 
-Note that the price elasticity of energy service consumption is
+Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
 When $\epsilon_{p_s} \in (-1, 0)$, as expected,
 the direct substitution rebound will be positive but less than 1 ($0 < Re_{dsub} < 1$).
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$, 
+$Re_{dsub} = 0.15$.
 
 Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
 
@@ -783,7 +790,15 @@ Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$)
 \label{sec:Re_isub}
 %..............................
 
-As shown in Table~\ref{tab:subeffect}, 
+The increase in consumption of the energy service after its price drop
+substitutes for consumption of other goods in the economy, 
+subject to a utility constraint. 
+The reduction in spending on other good in the economy 
+is captured by indirect substitution rebound~($Re_{isub}$).
+
+To derive an expression for indirect substitution rebound, 
+we begin with the definition of $Re_{isub}$ 
+from Table~\ref{tab:subeffect}:
 %
 \begin{equation}
   Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
@@ -849,8 +864,8 @@ and
 the ratio of utility exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$), 
 as expected.
-Negative rebound indicates that indirect substitution reduces the energy takeback from direct substitution.
-Indirect substitution rebound goes more negative 
+Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
+Indirect substitution rebound becomes more negative 
 when the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 
