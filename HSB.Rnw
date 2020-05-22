@@ -449,6 +449,13 @@ will all increase.
 All that remains is to determine expressions for each rebound term, 
 beginning with the expected energy savings rate~($\Sdot$), which
 appears in the denominator of all rebound expressions.
+
+
+%------------------------------
+\subsubsection{Expected energy savings ($\Sdot$)} 
+\label{sec:Sdot}
+%------------------------------
+
 $\Sdot$ is the reduction of energy consumption rate
 by the device due to the EEU.
 No other effects are considered.
@@ -458,7 +465,7 @@ No other effects are considered.
 \end{equation}
 %
 The final energy consumption rates ($\rbdev{E}_s$ and $\radev{E}_s$) 
-can be written as the typical relationship in Eq.~\ref{eq:typ_qs_eta_Edot} as
+can be written as the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the forms
 $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$ and 
 $\radev{E}_s = \frac{\radev{q}_s}{\adev{\eta}}$. 
 %
@@ -467,18 +474,18 @@ $\radev{E}_s = \frac{\radev{q}_s}{\adev{\eta}}$.
 \end{equation}
 %
 With reference to Table~\ref{tab:analysis_assumptions}, 
-we use $\radev{q}_s = \rbdev{q}_s$ and $\radev{\eta} = \aprod{\eta}$ to obtain
+we use $\radev{q}_s = \rbdev{q}_s$ and $\adev{\eta} = \aprod{\eta}$ to obtain
 %
 \begin{equation}
   \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\rbdev{q}_s}{\aprod{\eta}} \; .
 \end{equation}
 %
-When efficiency increases due to the EEU such that $\aprod{\eta} > \bdev{\eta}$,
-the rate of final energy consumption declines, and
-$\Sdot > 0$,
+When the EEU increases efficiency such that $\aprod{\eta} > \bdev{\eta}$,
+expected energy savings grows ($\Sdot > 0$)
+as the rate of final energy consumption declines,
 as expected.
 As $\aprod{\eta} \rightarrow \infty$,
-all final energy consumption is eliminated, and
+all final energy consumption is eliminated ($\radev{E}_s \rightarrow 0$), and
 $\Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} = \rbdev{E}_s$.
 (Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
