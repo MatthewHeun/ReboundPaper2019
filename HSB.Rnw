@@ -194,7 +194,7 @@ The remainder of this paper is structured as follows.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Provide highlights of the framework here.
-Refer to \ref{sec:derivation} for the detailed mathematical derivation of the framework.
+Refer to Appendix~\ref{sec:derivation} for the detailed mathematical derivation of the framework.
 
 \begin{figure}
 \centering
@@ -302,7 +302,7 @@ beginning with some typical energy, efficiency, and cost relationships.
 \label{sec:energy_and_cost_relationships}
 %++++++++++++++++++++++++++++++
 
-With the definitions of Section~\ref{sec:nomenclature}, four typical relationships emerge.
+With the definitions of Appendix~\ref{sec:nomenclature}, four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
 the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
@@ -310,10 +310,10 @@ Typical units for automotive transport are provided.
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
-  \text{pass-km/yr} &= (\text{pass-km/MJ}) (\text{MJ/yr}) \nonumber
+  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber
 \end{align}
 %
-Second, the energy service price~($p_S$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
+Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
 %
 \begin{align} \label{eq:ps_pE_eta}
   p_s &= \frac{p_E}{\eta} \\
@@ -324,14 +324,14 @@ Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and devic
 %
 \begin{align}
   \rate{C} &= p_E \rate{E}_s \\
-  \text{\$/yr} &= (\text{\$/MJ})\text{(MJ/yr}) \nonumber
+  \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
 \end{align}
 %
 Fourth, energy rates are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
 %
 \begin{align}
   \rate{E} &= \rate{C} I_E \\
-  \text{MJ/yr} &= (\text{\$/yr})(\text{MJ/\$}) \nonumber
+  \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
 
@@ -381,20 +381,19 @@ they divide out anyway.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Relationship for stages}
+\subsection{Relationships for stages}
 \label{sec:relationships_for_stages}
 %++++++++++++++++++++++++++++++
 
 For each energy rebound effect in Fig.~\ref{fig:flowchart},
 energy and financial analysis must be performed.
 The purposes of the analyses are to determine for each effect
-an expression
 %
 \begin{enumerate*}[label={(\alph*)}]
 
-  \item for energy rebound~($Re$) and
+  \item a definition for energy rebound~($Re$) and
 
-  \item for net income~($\rate{N}$).
+  \item an equation for net income~($\rate{N}$).
 
 \end{enumerate*}
 
