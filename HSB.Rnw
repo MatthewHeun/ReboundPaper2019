@@ -423,6 +423,12 @@ will all increase.
 \label{sec:placeholder_label}
 %++++++++++++++++++++++++++++++
 
+Derivations for rebound definitions and net income equations
+are presented in Tables~\ref{tab:deveffect}--\ref{tab:prodeffect},
+one for each stage in Fig.~\ref{fig:flowchart}.
+Energy and financial analyses are shown side by side, because
+each informs the other.
+
 % Derivation pages
 
 \input{deriv1_device_effect.tex}
