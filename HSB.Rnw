@@ -643,7 +643,7 @@ $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
 
 
 %..............................
-\paragraph{Two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$} 
+\paragraph{Expressions for two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$} 
 \label{sec:two_ratios}
 %..............................
 
@@ -725,7 +725,7 @@ Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
 
 %..............................
-\paragraph{$Re_{dsub}$} 
+\paragraph{Expression for $Re_{dsub}$} 
 \label{sec:Re_dsub}
 %..............................
 
@@ -793,7 +793,7 @@ Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$)
 
 
 %..............................
-\paragraph{$Re_{isub}$} 
+\paragraph{Expression for $Re_{isub}$} 
 \label{sec:Re_isub}
 %..............................
 
@@ -881,7 +881,79 @@ when the ratio of utility exponents ($\alpha / \beta$) gets larger.
 \label{sec:Re_inc}
 %------------------------------
 
+Rebound from the income effect rebound quantifies the amount of additional energy demand 
+that arises when the device owner spends net
+income from the EEU.
+Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+\deveffect{} ($\rate{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:deveffect}--\ref{tab:subeffect}.
+Gross income from the EEU is given by \ref{eq:G_dot}
+as $\radev{G} = p_E \Sdot$. 
+In combination, the life cycle effect and the substitution effect leave the device owner with
+\emph{net} income ($\rasub{N}$) from the EEU,
+as shown in Eq.~\ref{eq:N_dot_after_sub}.
+Total income before the EEU is $\rbdev{M}$.
+Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
 
+In this model, all net income ($\rasub{N}$) is spent on either 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
+  
+  \item additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+    
+\end{enumerate*}
+%
+The direct income elasticity of consumption ($\epsilon_{dinc}$) 
+quantifies the amount of net income spent 
+on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
+The budget constraint for the income effect (Eq.~\ref{eq:inc_budget_constraint}) 
+means that leftover income is spent on other goods.
+
+The purpose of this section is derivation of expressions for 
+direct income rebound~($Re_{dinc}$) and indirect income rebound~($Re_{iinc}$).
+But we first derive an expression for the ratio 
+of energy service consumed across the income effect ($\rainc{q}_s/\rbinc{q}_s$).
+
+
+%..............................
+\paragraph{Expression for $\frac{\rainc{q}_s}{\rbinc{q}_s}$}
+\label{sec:qs_ratio}
+%..............................
+
+The ratio of rates of energy service consumed across the income effect is given by
+%
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\epsilon_{dinc}} \; .
+\end{equation}
+%
+Recognizing that $\rbinc{M} = \rbsub{M} = \rblc{M} = \rbdev{M}$ and rearranging slightly gives
+%
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; .
+\end{equation}
+
+The next step is to develop an expression for $Re_{dinc}$
+using the direct income elasticity of consumption.
+
+
+%..............................
+\paragraph{Expression for $Re_{dinc}$}
+\label{sec:Re_dinc}
+%..............................
+
+****
+Start here. 
+****
+
+The next step is to develop an expression for $Re_{iinc}$
+using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
+
+%..............................
+\paragraph{Expression for $Re_{iinc}$}
+\label{sec:Re_iinc}
+%..............................
 
 
 
