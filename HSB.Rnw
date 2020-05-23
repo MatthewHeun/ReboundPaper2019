@@ -730,7 +730,6 @@ Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 %..............................
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
-
 %
 \begin{equation}
   Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
@@ -930,9 +929,35 @@ The ratio of rates of energy service consumed across the income effect is given 
 %
 Recognizing that $\rbinc{M} = \rbsub{M} = \rblc{M} = \rbdev{M}$ and rearranging slightly gives
 %
-\begin{equation}
+\begin{equation} \label{eq:q_ratio_across_inc}
   \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; .
 \end{equation}
+
+
+%..............................
+\paragraph{Expression for $\rbinc{E}_s$} 
+\label{sec:placeholder_label}
+%..............................
+
+An expression for $\rbinc{E}_s$ that will be helpful later
+begins with
+%
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{E}_s}{\rbsub{E}_s} \right)
+                \left( \frac{\ralc{E}_s}{\rblc{E}_s} \right)
+                \left( \frac{\radev{E}_s}{\rbdev{E}_s} \right)
+                \rbdev{E}_s \; .
+\end{equation}
+%
+Substituting the typical relationship from Eq.~\ref{eq:typ_qs_eta_Edot} gives
+%
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
+                \left( \frac{\ralc{q}_s / \cancel{\aprod{\eta}}}{\rblc{q}_s / \cancel{\aprod{\eta}}} \right)
+                \left( \frac{\radev{q}_s / \aprod{\eta}}{\rbdev{q}_s / \bdev{\eta}} \right)
+                \rbdev{E}_s \; .
+\end{equation}
+%
 
 The next step is to develop an expression for $Re_{dinc}$
 using the direct income elasticity of consumption.
@@ -943,9 +968,41 @@ using the direct income elasticity of consumption.
 \label{sec:Re_dinc}
 %..............................
 
-****
-Start here. 
-****
+As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
+%
+\begin{equation}
+  Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Expanding the difference and rearranging gives
+%
+\begin{equation}
+  Re_{dinc} = \frac{\rainc{E}_s - \rbinc{E}_s}{\Sdot} \; , 
+\end{equation}
+%
+and
+%
+\begin{equation} \label{eq:}
+  Re_{dinc} = \frac{\left( \frac{\rainc{E}_s}{\rbinc{E}_s} - 1  \right) \rbinc{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Substituting the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} as
+$\rainc{E}_s = \frac{\rainc{q}_s}{\aprod{\eta}}$ and  
+$\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
+%
+\begin{equation}
+  Re_{dinc} = \frac{\left( \frac{\rainc{q}_s / \cancel{\aprod{\eta}}}{\rbinc{q}_s / \cancel{\aprod{\eta}}} - 1  \right) \rbinc{E}_s} 
+              {\Sdot} \; .
+\end{equation}
+%
+Canceling terms and substituting Eqs.~\ref{eq:Sdot} and~\ref{eq:q_ratio_across_inc} gives
+%
+\begin{equation}
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
+              {\Sdoteqn} \; .
+\end{equation}
+
+
 
 The next step is to develop an expression for $Re_{iinc}$
 using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
