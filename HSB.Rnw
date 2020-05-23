@@ -949,7 +949,8 @@ begins with
                 \rbdev{E}_s \; .
 \end{equation}
 %
-Substituting the typical relationship from Eq.~\ref{eq:typ_qs_eta_Edot} gives
+Substituting the typical relationship from Eq.~\ref{eq:typ_qs_eta_Edot} and noting efficiency ($\eta$)
+equalities from Table~\ref{tab:analysis_assumptions} gives
 %
 \begin{equation}
   \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
@@ -958,6 +959,23 @@ Substituting the typical relationship from Eq.~\ref{eq:typ_qs_eta_Edot} gives
                 \rbdev{E}_s \; .
 \end{equation}
 %
+Canceling terms yields
+%
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
+                \left( \cancel{\frac{\ralc{q}_s}{\rblc{q}_s}} \right)
+                \left( \cancel{\frac{\radev{q}_s}{\rbdev{q}_s}} \right)
+                \left( \frac{\bdev{\eta}}{\aprod{\eta}}  \right)
+                \rbdev{E}_s \; .
+\end{equation}
+%
+Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} gives
+%
+\begin{equation} \label{eq:E_dot_s_hat}
+  \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
+                \frac{\bdev{\eta}}{\aprod{\eta}}
+                \rbdev{E}_s \; .
+\end{equation}
 
 The next step is to develop an expression for $Re_{dinc}$
 using the direct income elasticity of consumption.
@@ -982,7 +1000,7 @@ Expanding the difference and rearranging gives
 %
 and
 %
-\begin{equation} \label{eq:}
+\begin{equation}
   Re_{dinc} = \frac{\left( \frac{\rainc{E}_s}{\rbinc{E}_s} - 1  \right) \rbinc{E}_s}{\Sdot} \; .
 \end{equation}
 %
@@ -1001,8 +1019,28 @@ Canceling terms and substituting Eqs.~\ref{eq:Sdot} and~\ref{eq:q_ratio_across_i
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
+%
+Substituting Eq.~\ref{eq:E_dot_s_hat} gives
+%
+\begin{equation}
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
+                  \frac{\rasub{q}_s}{\rbsub{q}_s}
+                \cancel{\frac{\bdev{\eta}}{\aprod{\eta}}}
+                \cancel{\rbdev{E}_s}}
+              {\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)\! \cancel{\frac{\bdev{\eta}}{\aprod{\eta}}} \cancel{\rbdev{E}_s}} \; .
+\end{equation}
+%
+Canceling terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
+%
+\begin{equation} \label{eq:Re_dinc}
+  Re_{dinc} = \Redinceqn{} \; .
+\end{equation}
 
-
+If there is no net income ($\rasub{N} = 0$), 
+direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
+As either of the elasticities get stronger 
+($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ gets more negative), 
+direct income rebound~($Re_{dinc}$) gets larger.
 
 The next step is to develop an expression for $Re_{iinc}$
 using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
