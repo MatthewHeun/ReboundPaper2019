@@ -912,8 +912,7 @@ means that leftover income is spent on other goods.
 
 The purpose of this section is derivation of expressions for 
 direct income rebound~($Re_{dinc}$) and indirect income rebound~($Re_{iinc}$).
-But we first derive an expression for the ratio 
-of energy service consumed across the income effect ($\rainc{q}_s/\rbinc{q}_s$).
+But we first derive expressions for later use.
 
 
 %..............................
@@ -969,7 +968,7 @@ Canceling terms yields
                 \rbdev{E}_s \; .
 \end{equation}
 %
-Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} gives
+Noting energy service consumption rate ($\rate{q}_s$) equalities from Table~\ref{tab:analysis_assumptions} gives
 %
 \begin{equation} \label{eq:E_dot_s_hat}
   \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
@@ -1040,7 +1039,7 @@ If there is no net income ($\rasub{N} = 0$),
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
 ($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ gets more negative), 
-direct income rebound~($Re_{dinc}$) gets larger.
+direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
 using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
@@ -1050,7 +1049,9 @@ using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
 \label{sec:Re_iinc}
 %..............................
 
-
+****
+Start here. 
+****
 
 In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
 but others (automobiles) are paid off in installments.
