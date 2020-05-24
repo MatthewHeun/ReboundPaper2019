@@ -884,7 +884,7 @@ when the ratio of utility exponents ($\alpha / \beta$) gets larger.
 \label{sec:Re_inc}
 %------------------------------
 
-Rebound from the income effect rebound quantifies the amount of additional energy demand 
+Rebound from the income effect rebound quantifies the rate of additional energy demand 
 that arises when the device owner spends net
 income from the EEU.
 Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
@@ -989,7 +989,7 @@ Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
 We begin by substituting Eq.~\ref{eq:N_dot_after_sub} for net income~($\rbinc{N}$).
 %
 \begin{equation}
-  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\radev{G} I_E}{\Sdot}
                                 - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
                                 - \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
                                 - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
@@ -1117,7 +1117,7 @@ Splitting the terms and substituting Eq.~\ref{eq:Re_dinc_def} gives
 \begin{equation}
   Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
 \end{equation}
-
+%
 Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives 
 %
 \begin{equation}
@@ -1137,9 +1137,6 @@ Any negative rebound effects enhance the indirect income effect rebound, because
 they add to the net income available to the device owner to spend on other goods in the economy.
 
 
-
-
-
 % In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
 % but others (automobiles) are paid off in installments.
 % Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
@@ -1154,6 +1151,13 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:Re_prod}
 %------------------------------
 
+Productivity rebound~($Re_prod$) is given by Eq.~\ref{eq:Re_prod_def}.
+Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives
+%
+\begin{equation}
+  Re_{prod} = \Reprodeqn{} \; .
+\end{equation}
+%
 
 
 
