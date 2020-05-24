@@ -509,7 +509,7 @@ we obtain a convenient form
 %------------------------------
 
 As shown in Eq.~\ref{eq:Re_dev0}, 
-rebound from the device effect is 0.
+rebound from the device effect is $Re_{dev} = 0$.
 
 %------------------------------
 \subsubsection{\Lceffect{}} 
