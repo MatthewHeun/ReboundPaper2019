@@ -46,8 +46,9 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{A Comprehensive, Micro-economic, Energy-Economy Analytical Framework for\\
-       Energy Rebound}
+\title{A Comprehensive Energy-Economy \\
+        Analytical Framework for\\
+        Energy Rebound}
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -510,6 +511,7 @@ we obtain a convenient form
 
 As shown in Eq.~\ref{eq:Re_dev0}, 
 rebound from the device effect is $Re_{dev} = 0$.
+
 
 %------------------------------
 \subsubsection{\Lceffect{}} 
