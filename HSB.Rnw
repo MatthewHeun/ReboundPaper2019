@@ -429,7 +429,7 @@ one for each stage in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
 each informs the other.
 
-% Derivation pages
+% Derivation tables
 
 \input{deriv1_device_effect.tex}
 
@@ -609,14 +609,13 @@ to form cost rates such that $\rblc{C}_{\OMd} = \rblc{C}_{\OM} + \blc{C}_d/\blc{
 and
 $\ralc{C}_{\OMd} = \ralc{C}_{\OM} + \alc{C}_d/\alc{t}$.
 
-
 We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
 is given by $\Delta \ralc{C}_{\OMd} I_E$.
 This term represents energy takeback, so operations, maintenance, and disposal rebound is given by
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_OMd_def}
   Re_{\OMd} = \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot} \; ,
 \end{equation}
 %
@@ -736,7 +735,7 @@ Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
 \end{equation}
 %
@@ -811,7 +810,7 @@ To derive an expression for indirect substitution rebound,
 we begin with the definition of $Re_{isub}$ 
 from Table~\ref{tab:subeffect}:
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_isub_dev}
   Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
@@ -981,6 +980,42 @@ Noting energy service consumption rate ($\rate{q}_s$) equalities from Table~\ref
                 \rbdev{E}_s \; .
 \end{equation}
 
+%..............................
+\paragraph{Expression for $\frac{\rbinc{N} I_E}{\Sdot}$}
+\label{sec:N_dot_hat_I_E_over_Sdot}
+%..............................
+
+Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
+We begin by substituting Eq.~\ref{eq:N_dot_after_sub} for net income~($\rbinc{N}$).
+%
+\begin{equation}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
+                                - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
+                                - \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
+                                - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
+                                - \frac{\Delta \rasub{C}_o I_E}{\Sdot}
+\end{equation}
+%
+Substituting Eqs.~\ref{eq:G_dot}, \ref{eq:Re_OMd_def}, \ref{eq:Re_dsub_def}, \ref{eq:Re_isub_dev} gives
+%
+\begin{equation}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{p_E \cancel{\Sdot} I_E}{\cancel{\Sdot}}
+                                - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
+                                - Re_{\OMd}
+                                - p_E I_E Re_{dsub}
+                                - Re_{isub} \; .
+\end{equation}
+%
+Canceling terms and defining $Re_{cap} \equiv \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}$ gives
+%
+\begin{equation} \label{eq:N_dot_I_E_Sdot}
+  \frac{\rbinc{N} I_E}{\Sdot} = p_E I_E
+                                - Re_{cap}
+                                - Re_{\OMd}
+                                - p_E I_E Re_{dsub}
+                                - Re_{isub} \; .
+\end{equation}
+
 The next step is to develop an expression for $Re_{dinc}$
 using the direct income elasticity of consumption.
 
@@ -992,7 +1027,7 @@ using the direct income elasticity of consumption.
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_dinc_def}
   Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
 \end{equation}
 %
@@ -1054,15 +1089,62 @@ using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
 \label{sec:Re_iinc}
 %..............................
 
-****
-Start here. 
-****
+In this framework,
+any net income not spent on procuring more of the energy service
+goes toward other goods in the economy.
+Rebound from the indirect income effect involves 
+the energy implications of spending net income ($\rbinc{N}$)
+on those other goods in the economy.
 
-In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
-but others (automobiles) are paid off in installments.
-Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
-By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
-we treat all purchase plans equally.
+As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
+%
+\begin{equation}
+  Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
+\end{equation}
+%
+The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
+can be found by rearranging the budget constraint for the income effect 
+(Eq.~\ref{eq:inc_budget_constraint}) to be 
+$\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
+Substituting gives
+%
+\begin{equation}
+  Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Splitting the terms and substituting Eq.~\ref{eq:Re_dinc_def} gives
+%
+\begin{equation}
+  Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
+\end{equation}
+
+Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives 
+%
+\begin{equation}
+  Re_{iinc} = \Reiinceqn{} \; .
+\end{equation}
+
+This equation shows that a good first estimate for indirect income rebound
+is $Re_{iinc} = p_E I_E$.
+Positive rebound from capital expenditures~($Re_{cap}$), 
+operations, maintenance, and disposal~($Re_{\OMd}$),
+direct substitution~($Re_{dsub}$), 
+indirect substitution~($Re_{isub}$), and 
+direct income~($Re_{dinc}$)
+reduce the indirect income effect rebound, 
+because they reduce net income available to the device owner to spend on other goods in the economy.
+Any negative rebound effects enhance the indirect income effect rebound, because 
+they add to the net income available to the device owner to spend on other goods in the economy.
+
+
+
+
+
+% In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
+% but others (automobiles) are paid off in installments.
+% Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
+% By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
+% we treat all purchase plans equally.
 
 
 
