@@ -46,7 +46,7 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{A Comprehensive Energy-Economy \\
+\title{A Comprehensive Energy-Economy \\{}
         Analytical Framework for\\
         Energy Rebound}
 
@@ -421,7 +421,7 @@ will all increase.
 
 %++++++++++++++++++++++++++++++
 \subsection{Derivations}
-\label{sec:placeholder_label}
+\label{sec:derivations}
 %++++++++++++++++++++++++++++++
 
 Derivations for rebound definitions and net income equations
@@ -941,7 +941,7 @@ Recognizing that $\rbinc{M} = \rbsub{M} = \rblc{M} = \rbdev{M}$ and rearranging 
 
 %..............................
 \paragraph{Expression for $\rbinc{E}_s$} 
-\label{sec:placeholder_label}
+\label{sec:E_dot_s_hat_expression}
 %..............................
 
 An expression for $\rbinc{E}_s$ that will be helpful later
@@ -1122,7 +1122,7 @@ Splitting the terms and substituting Eq.~\ref{eq:Re_dinc_def} gives
 %
 Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives 
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_iinc_in_terms_of_other_Re}
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
@@ -1153,15 +1153,45 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:Re_prod}
 %------------------------------
 
-Productivity rebound~($Re_prod$) is given by Eq.~\ref{eq:Re_prod_def}.
+Productivity rebound~($Re_{prod}$) is given by Eq.~\ref{eq:Re_prod_def}.
 Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives
 %
-\begin{equation}
+\begin{equation} \label{eq:Re_prod_in_terms_of_other_Re}
   Re_{prod} = \Reprodeqn{} \; .
 \end{equation}
+
+
+%------------------------------
+\subsubsection{Total rebound} 
+\label{sec:total_rebound}
+%------------------------------
+
+Total rebound is the sum of all rebound effects.
+%
+\begin{equation}
+  Re_{tot} = \cancelto{0}{Re_{dev}} + Re_{lc} + Re_{sub} + Re_{inc} + Re{prod}
+\end{equation}
+%
+Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
+%
+\begin{align}
+  Re_{tot} = \; &Re_{emb} + Re_{\OMd}      & \text{life cycle}   \nonumber \\
+                &+ Re_{dsub} + Re_{isub}   & \text{substitution}  \nonumber \\
+                &+ Re_{dinc} + Re_{iinc}   & \text{income}        \nonumber \\
+                &+ Re_{prod}               & \text{productivity}
+\end{align}
+%
+Substituting Eqs.~\ref{eq:Re_iinc_in_terms_of_other_Re} and~\ref{eq:Re_prod_in_terms_of_other_Re} gives
+%
+\begin{align}
+  Re_{tot} = \; &Re_{emb} + Re_{\OMd}      & \text{life cycle}   \nonumber \\
+                &+ Re_{dsub} + Re_{isub}   & \text{substitution}  \nonumber \\
+                &+ Re_{dinc} + p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} 
+                             - Re_{isub} - p_E I_E Re_{dinc}   & \text{income}        \nonumber \\
+                &+ k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub}  & \text{productivity}
+\end{align}
 %
 
-
-
+% p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}
 
 \end{document}
