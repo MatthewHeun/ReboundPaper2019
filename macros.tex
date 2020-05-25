@@ -248,7 +248,7 @@ bottom=2pt}
 \newcommand{\Macctainc}{\rainc{M} = p_E \rainc{E}_s + \rainc{C}_{cap} + \rainc{C}_{\OMd} + \rainc{C}_o + \rainc{N}}
 
 % Embodied energy rebound
-\newcommand{\Reembequation}{\frac{\left( \frac{\alc{E}_{emb}}{\blc{E}_{emb}}
+\newcommand{\Reembeqn}{\frac{\left( \frac{\alc{E}_{emb}}{\blc{E}_{emb}}
   \frac{\blc{t}}{\alc{t}} - 1 \right) \rblc{E}_{emb}}{\Sdot}}
 
 % Equation for S_dot_dev
@@ -274,3 +274,8 @@ bottom=2pt}
 
 % Equation for Re_prod
 \newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub}}
+
+% Equation for Re_tot
+\newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\OMd}         \nonumber \\
+                       &+ [1 - (1+k) p_E I_E] Re_{dsub} - k Re_{isub}   \nonumber \\
+                       &+ (1 - p_E I_E) Re_{dinc} + (1 + k) p_E I_E}
