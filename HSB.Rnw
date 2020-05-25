@@ -27,7 +27,7 @@
 
 %% Macros defined by authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{macros.tex}
+\input{pieces/macros.tex}
 
 
 %% Journal %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -221,7 +221,7 @@ can be mixed to provide a rich and expressive ``language'' of energy rebound.
 \begin{figure}
 \centering
   % The file is a Tikz picture.
-  \input{flowchart.tex}
+  \input{pieces/flowchart.tex}
 \caption{Flowchart of effects and decorations.}
 \label{fig:flowchart}
 \end{figure}
@@ -432,7 +432,7 @@ in the public, commercial, or not-for-profit sectors.
 \label{sec:nomenclature}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{nomenclature.tex}
+\input{pieces/nomenclature.tex}
 
 
 
@@ -441,7 +441,7 @@ in the public, commercial, or not-for-profit sectors.
 \label{sec:derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{derivation.tex}
+\input{pieces/derivation.tex}
 
 
 
