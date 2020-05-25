@@ -107,8 +107,8 @@ if essential they must be defined at their first mention in the abstract itself.
 % https://www.aeaweb.org/jel/guide/jel.php   
 
 \begin{keyword}
-\texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
-\MSC[2010] 00-01\sep  99-00
+Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
 \end{keyword}
 
 \end{frontmatter}
@@ -151,6 +151,9 @@ Bring in \citet{Borenstein:2015aa},
 \citet{Gillingham:2013aa,Gillingham:2020aa,Gillingham2016,Gillingham2016a}, etc.
 
 At the end, bring us right up to the question below.
+Or modify the question if you see fit.
+
+What is needed is a comprehensive energy-economy analytical framework for energy rebound.
 
 
 %++++++++++++++++++++++++++++++
