@@ -231,6 +231,7 @@ is given in Appendix~\ref{sec:derivation}.
 We provide an overview of the framework here.
 
 Each effect shown in Fig.~\ref{fig:flowchart} has energy rebound associated with it.
+The subsections below discuss each rebound effect and provide an expression for it.
 
 
 %++++++++++++++++++++++++++++++
