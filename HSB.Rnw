@@ -238,7 +238,9 @@ Each effect shown in Fig.~\ref{fig:flowchart} has energy rebound associated with
 \label{sec:dev_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-Define device effect.
+****
+Define the device effect.
+****
 
 %
 \begin{equation} \label{eq:Re_dev0}
@@ -253,35 +255,99 @@ Define device effect.
 \label{sec:lc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-Define life cycle effect.
+****
+Define the life cycle effect.
+****
 
 %
-\begin{equation} \label{eq:}
+\begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembeqn{}
 \end{equation}
 %
 
+%
+\begin{equation} \label{eq:Re_OMd}
+  Re_{\OMd} = \ReOMdeqn{}
+\end{equation}
+%
 
 %++++++++++++++++++++++++++++++
 \subsection{\Subeffect}
 \label{sec:sub_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
+****
+Define the substitution effect.
+****
 
+%
+\begin{equation} \label{eq:Re_dsub}
+  Re_{dsub} = \Redsubeqn{}
+\end{equation}
+%
+
+%
+\begin{equation} \label{eq:Re_isub}
+  Re_{isub} = \Reisubeqn{}
+\end{equation}
+%
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}
 \label{sec:inc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
+****
+Define the income effect.
+****
 
+%
+\begin{equation} \label{eq:Re_dinc}
+  Re_{dinc} = \Redinceqn{}
+\end{equation}
+%
+
+%
+\begin{equation} \label{eq:Re_iinc}
+  Re_{iinc} = \Reiinceqn{}
+\end{equation}
+%
+
+%
+\begin{equation} \label{eq:Re_cap}
+  Re_{cap} = \Recapeqn{}
+\end{equation}
+%
 
 %++++++++++++++++++++++++++++++
 \subsection{\Prodeffect}
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
+****
+Define the productivity effect.
+****
 
+%
+\begin{equation} \label{eq:Re_prod}
+  Re_{prod} = \Reprodeqn{}
+\end{equation}
+%
+
+%++++++++++++++++++++++++++++++
+\subsection{Total rebound}
+\label{sec:total_rebound_main_paper}
+%++++++++++++++++++++++++++++++
+
+****
+Define total rebound.
+****
+
+%
+\begin{align} \label{eq:Re_tot}  
+  Re_{tot} = \Retoteqn{}
+\end{align}
+%
 
 
 

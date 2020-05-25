@@ -287,8 +287,8 @@ the change in embodied energy rate due to the EEU can be expressed as
 $\Delta \ralc{E}_{emb}$ represents energy savings taken back due to embodied energy effects.
 Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy rebound as
 %
-\begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \Reembeqn{} \, .
+\begin{equation} 
+  Re_{emb} = \Reembeqn{} \, . \tag{\ref{eq:Re_emb}}
 \end{equation}
 
 Embodied energy rebound can be either positive or negative, depending on 
@@ -333,8 +333,8 @@ This term represents energy takeback, so operations, maintenance, and disposal r
 as shown in Table~\ref{tab:lceffect}.
 Slight rearrangement gives
 %
-\begin{equation} \label{eq:Re_OMd}
-  Re_{\OMd} = \frac{\left( \frac{\ralc{C}_{\OMd}}{\rblc{C}_{\OMd}} - 1 \right) \rblc{C}_{\OMd} I_E}{\Sdot} \; .
+\begin{equation}
+  Re_{\OMd} = \ReOMdeqn{} \; . \tag{\ref{eq:Re_OMd}}
 \end{equation}
 
 Rebound from operations, maintenance, and disposal can be positive or negative,
@@ -492,8 +492,8 @@ Noting that $\frac{\rbsub{q}_s}{\rbdev{\eta}} = \frac{\rbdev{q}_s}{\rbdev{\eta}}
 canceling $\rbdev{E}_s$ terms,
 and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
 %
-\begin{equation} \label{eq:Re_dsub}
-  Re_{dsub} = \Redsubeqn \; .
+\begin{equation}
+  Re_{dsub} = \Redsubeqn \; . \tag{\ref{eq:Re_dsub}}
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
@@ -575,8 +575,8 @@ Substituting Eqs.~\ref{eq:qohat_qostar} and~\ref{eq:Sdot} gives
 %
 Noting that $\rbsub{C}_o = \rbdev{C}_o$ and rearranging yields
 %
-\begin{equation} \label{eq:Re_isub}
-  Re_{isub} = \Reisubeqn{} \; .
+\begin{equation}
+  Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
 \end{equation}
 
 Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$), 
@@ -719,8 +719,8 @@ Substituting Eqs.~\ref{eq:G_dot}, \ref{eq:Re_OMd_def}, \ref{eq:Re_dsub_def}, \re
 %
 Canceling terms and defining $Re_{cap}$ as
 %
-\begin{equation} \label{eq:Re_cap}
-  Re_{cap} \equiv \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot} \; ,
+\begin{equation}
+  Re_{cap} \equiv \Recapeqn{} \; , \tag{\ref{eq:Re_cap}}
 \end{equation}
 %
 gives
@@ -788,8 +788,8 @@ Substituting Eq.~\ref{eq:E_dot_s_hat} gives
 %
 Canceling terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
 %
-\begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqn{} \; .
+\begin{equation} 
+  Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 
@@ -837,8 +837,8 @@ Splitting the terms and substituting Eq.~\ref{eq:Re_dinc_def} gives
 %
 Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives 
 %
-\begin{equation} \label{eq:Re_iinc_in_terms_of_other_Re}
-  Re_{iinc} = \Reiinceqn{} \; .
+\begin{equation}
+  Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
 
 This equation shows that a good first estimate for indirect income rebound
@@ -854,15 +854,6 @@ Any negative rebound effects enhance the indirect income effect rebound, because
 they add to the net income available to the device owner to spend on other goods in the economy.
 
 
-% In reality, some devices (typically, light bulbs) are paid in full at the time of acquisition,
-% but others (automobiles) are paid off in installments.
-% Since we are interested in energy consumption and not welfare effects, we abstract from discounting.
-% By spreading device capital costs and operations, maintenance, and disposal costs across the life of the device,
-% we treat all purchase plans equally.
-
-
-
-
 %------------------------------
 \subsubsection{\Prodeffect{}} 
 \label{sec:Re_prod}
@@ -871,8 +862,8 @@ they add to the net income available to the device owner to spend on other goods
 Productivity rebound~($Re_{prod}$) is given by Eq.~\ref{eq:Re_prod_def}.
 Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives
 %
-\begin{equation} \label{eq:Re_prod_in_terms_of_other_Re}
-  Re_{prod} = \Reprodeqn{} \; .
+\begin{equation}
+  Re_{prod} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
 \end{equation}
 
 
@@ -897,7 +888,7 @@ Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
 \end{align}
 %
 Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc_in_terms_of_other_Re}) and
+indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
 productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod_in_terms_of_other_Re})
 are expressed in terms of other rebound effects.
 Substituting Eqs.~\ref{eq:Re_iinc_in_terms_of_other_Re} and~\ref{eq:Re_prod_in_terms_of_other_Re} gives
@@ -914,8 +905,8 @@ Rearranging distributes many indirect income effect and productivity effect term
 to other life cycle, substitution, and income effect terms.
 This last rearrangement gives the final expression for total rebound.
 %
-\begin{align} \label{eq:Re_tot}
-  Re_{tot} = \; \Retoteqn{}
+\begin{align}
+  Re_{tot} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
 \end{align}
 
 Eq.~\ref{eq:Re_tot} shows that determining six rebound values,
