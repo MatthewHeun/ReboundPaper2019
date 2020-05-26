@@ -18,7 +18,6 @@
 \usepackage[most]{tcolorbox}    % For color highlighting of text
 \usepackage{tikz}               % For diagrams
 \usetikzlibrary{arrows,positioning}
-\PassOptionsToPackage{svgnames,x11names,dvipsnames}{xcolor}
 \usepackage{xcolor}             % For ... colors
 
 
