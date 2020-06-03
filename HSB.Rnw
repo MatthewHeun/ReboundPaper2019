@@ -218,24 +218,18 @@ Provide highlights of the framework here.
 Refer to Appendix~\ref{sec:derivation} for the detailed mathematical derivation of the framework.
 ****
 
-Fig.~\ref{fig:flowchart} illustrates both
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item named rebound effects
-        (\deveffect, \lceffect, \subeffect, \inceffect, and \prodeffect) and
-  
-  \item energy stages between each effect.
-    
-\end{enumerate*}
-%
-We use colored backgrounds throughout this paper for visual convenience. 
-
-The vocabulary and mathematical notation around rebound is extensive.
-We adopt the notation shown in 
-Appendix~\ref{sec:nomenclature} and illustrated in Fig.~\ref{fig:flowchart}.
+Fig.~\ref{fig:flowchart} provides a map 
+for the presentation of the comprehensive rebound framework, 
+showing the order of discussion for rebound effects below.
+(It does not represent 
+the progression of rebound effects through time.)
+The vocabulary and mathematical notation around rebound is extensive, and 
+Fig.~\ref{fig:flowchart} also provides a guide to decorations
+used throughout the paper.
+(See Appendix~\ref{sec:nomenclature} for notation details.)
 The symbols, Greek letters, decorations, and subscripts
-can be mixed to provide a rich and expressive ``language'' of energy rebound.
+can be mixed to comprise a rich and expressive ``language'' of energy rebound.
+We use colored backgrounds on rebound effects for visual convenience. 
 
 \begin{figure}
 \centering
