@@ -138,6 +138,15 @@ Here are some references from Matt's database that you may want to include:
 \cite{Sun:2018aa}
 etc.
 
+More studies on large rebound.
+What is missing is an overall framework for rebound to catch all aspects.
+Some people have captured parts.
+
+We develop framework itself. 
+Follow-on question: need for a case-study example of exercising the framework.
+We provide a guide for application.
+We make it operational.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{The microeconomimcs of rebound (GS, 500 words)}
@@ -159,6 +168,10 @@ What is needed is a comprehensive energy-economy analytical framework for energy
 \subsection{Question, contribution, and benefits (MKH, 100 words)}
 \label{sec:questions_contribution}
 %++++++++++++++++++++++++++++++
+
+****
+Not a question, rather filling a gap (need).
+****
 
 This paper answers the question:
 \emph{Is it possible to develop a comprehensive framework for energy rebound?} 
