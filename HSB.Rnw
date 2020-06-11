@@ -460,7 +460,8 @@ The substitution effect involves
 Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
-This section derives each in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
+Substitution effect rebound  
+can be expressed in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
 utility function parameters ($\alpha$ and $\beta$).
 
@@ -492,7 +493,7 @@ is negative ($\epsilon_{p_s} < 0$), so
 as energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-To quantify the substitution effect on other purchases,
+To quantify the \subeffect{} on other purchases,
 we introduce a utility ($\rate{u}$) constraint.
 %
 \begin{equation}
@@ -508,10 +509,6 @@ After substitution and rearrangement, we find
 \begin{equation} \label{eq:qohat_qostar}
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
 \end{equation}
-
-
-
-
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
 %
@@ -535,7 +532,7 @@ $Re_{dsub} = 0.15$.
 
 The increase in consumption of the energy service after its price drop
 substitutes for consumption of other goods in the economy,
-subject to a utility constraint.
+subject to the utility constraint.
 The reduction in spending on other good in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
@@ -574,9 +571,43 @@ when the ratio of utility exponents ($\alpha / \beta$) gets larger.
 \label{sec:inc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define the income effect.
-****
+Rebound from the income effect rebound quantifies the rate of additional energy demand 
+that arises when the energy conversion device owner spends net
+income from the EEU.
+Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+\deveffect{} ($\rate{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:deveffect}--\ref{tab:subeffect}.
+Gross income from the EEU is given by \ref{eq:G_dot}
+as $\radev{G} = p_E \Sdot$. 
+In combination, the life cycle effect and the substitution effect leave the device owner with
+\emph{net} income ($\rasub{N}$) from the EEU,
+as shown in Eq.~\ref{eq:N_dot_after_sub}.
+Total income before the EEU is $\rbdev{M}$.
+Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
+
+In this model, all net income ($\rasub{N}$) is spent on either 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
+  
+  \item additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+    
+\end{enumerate*}
+%
+The direct income elasticity of consumption ($\epsilon_{dinc}$) 
+quantifies the amount of net income spent 
+on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
+The budget constraint for the income effect (Eq.~\ref{eq:inc_budget_constraint}) 
+means that leftover income is spent on other goods.
+
+
+
+
+
+
+
+
 
 %
 \begin{equation} \label{eq:Re_dinc}
