@@ -507,7 +507,7 @@ indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 Indirect substitution rebound becomes more negative
-when the ratio of utility exponents ($\alpha / \beta$) gets larger.
+as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 
 %------------------------------
@@ -521,21 +521,21 @@ income from the EEU.
 Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
 \deveffect{} ($\rate{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
 are presented in Tables~\ref{tab:deveffect}--\ref{tab:subeffect}.
-Gross income from the EEU is given by \ref{eq:G_dot}
+Gross income from the EEU is given by Eq.~\ref{eq:G_dot}
 as $\radev{G} = p_E \Sdot$. 
-In combination, the life cycle effect and the substitution effect leave the device owner with
+In combination, the \lceffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~\ref{eq:N_dot_after_sub}.
 Total income before the EEU is $\rbdev{M}$.
 Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
 
-In this model, all net income ($\rasub{N}$) is spent on either 
+In this framework, all net income ($\rasub{N}$) is spent either 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
+  \item on additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
   
-  \item additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+  \item on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
     
 \end{enumerate*}
 %
@@ -563,8 +563,9 @@ The ratio of rates of energy service consumed across the income effect is given 
 %
 Recognizing that $\rbinc{M} = \rbsub{M} = \rblc{M} = \rbdev{M}$ and rearranging slightly gives
 %
-\begin{equation} \label{eq:q_ratio_across_inc}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; .
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; . 
+                                                                                \tag{\ref{eq:q_ratio_across_inc}}
 \end{equation}
 
 
@@ -664,8 +665,8 @@ using the direct income elasticity of consumption.
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 %
-\begin{equation} \label{eq:Re_dinc_def}
-  Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
+\begin{equation}
+  Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dinc_def}}
 \end{equation}
 %
 Expanding the difference and rearranging gives
@@ -715,7 +716,7 @@ Canceling terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
-($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ gets more negative), 
+($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
@@ -728,7 +729,7 @@ using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
 
 In this framework,
 any net income not spent on procuring more of the energy service
-goes toward other goods in the economy.
+goes toward consumption of other goods in the economy.
 Rebound from the indirect income effect involves 
 the energy implications of spending net income ($\rbinc{N}$)
 on those other goods in the economy.
@@ -736,7 +737,7 @@ on those other goods in the economy.
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 %
 \begin{equation}
-  Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
+  Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
 \end{equation}
 %
 The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
@@ -769,7 +770,7 @@ direct substitution~($Re_{dsub}$),
 indirect substitution~($Re_{isub}$), and 
 direct income~($Re_{dinc}$)
 reduce the indirect income effect rebound, 
-because they reduce net income available to the device owner to spend on other goods in the economy.
+because each reduces net income available to the device owner to spend on other goods in the economy.
 Any negative rebound effects enhance the indirect income effect rebound, because 
 they add to the net income available to the device owner to spend on other goods in the economy.
 
