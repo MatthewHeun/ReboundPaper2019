@@ -213,15 +213,10 @@ Section~\ref{sec:conclusion} concludes.
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-**** 
-Provide highlights of the framework here.
-Refer to Appendix~\ref{sec:derivation} for the detailed mathematical derivation of the framework.
-****
-
 Fig.~\ref{fig:flowchart} provides a map 
 for the presentation of the comprehensive rebound framework, 
 showing the order of discussion for rebound effects below.
-(It does not represent 
+(Fig.~\ref{fig:flowchart} does not represent 
 the progression of rebound effects through time.)
 The vocabulary and mathematical notation around rebound is extensive, and 
 Fig.~\ref{fig:flowchart} also provides a guide to decorations
@@ -239,12 +234,98 @@ We use colored backgrounds on rebound effects for visual convenience.
 \label{fig:flowchart}
 \end{figure}
 
-A detailed derivation of all expressions in the comprehensive rebound framework
-is given in Appendix~\ref{sec:derivation}.
-We provide an overview of the framework here.
-
 Each effect shown in Fig.~\ref{fig:flowchart} has energy rebound associated with it.
-The subsections below discuss each rebound effect and provide an expression for it.
+The subsections below define each rebound effect and
+provide rebound expressions.
+Detailed derivations of all expressions in the comprehensive rebound framework
+are given in Appendix~\ref{sec:derivation}.
+In particular, see Tables~\ref{tab:deveffect}--\ref{tab:prodeffect}
+which provide the structure for energy and financial accounting.
+We begin with typical energy and cost relationships 
+encountered in energy rebound analysis.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Typical energy and cost relationships}
+\label{sec:energy_and_cost_relationships}
+%++++++++++++++++++++++++++++++
+
+With the definitions of Appendix~\ref{sec:nomenclature}, four typical relationships emerge.
+First, the consumption rate of the energy service~($\rate{q}_s$)
+is the product of final-to-services efficiency~($\eta$) and
+the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
+Typical units for automotive transport are provided.
+%
+\begin{align} \label{eq:typ_qs_eta_Edot}
+  \rate{q}_s &= \eta \rate{E}_s \\
+  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber
+\end{align}
+%
+Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
+%
+\begin{align} \label{eq:ps_pE_eta}
+  p_s &= \frac{p_E}{\eta} \\
+  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber
+\end{align}
+%
+Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption~($\rate{E}_s$).
+%
+\begin{align}
+  \rate{C} &= p_E \rate{E}_s \\
+  \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
+\end{align}
+%
+Fourth, energy rates are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+%
+\begin{align}
+  \rate{E} &= \rate{C} I_E \\
+  \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
+\end{align}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound relationships}
+\label{sec:rebound_relationships}
+%++++++++++++++++++++++++++++++
+
+Energy rebound is defined as
+%
+\begin{equation} \label{eq:Re_def}
+  Re \equiv 1 - \frac{\text{actual final energy savings rate}}{\text{expected final energy savings rate}} \; ,
+\end{equation}
+%
+where both actual and expected energy savings rates are expected positive.
+Final energy ``takeback'' is the rate at which energy savings are eroded by rebound effects,
+and the actual final energy savings rate is the expected energy savings rate less takeback.
+Note that takeback can be negative, indicating in increase in the energy savings rate
+relative to the expected energy savings rate.
+Thus,
+%
+\begin{equation}
+  Re = 1 - \frac{\text{expected energy savings rate} - \text{takeback}}{\text{expected energy savings rate}} \; ,
+\end{equation}
+%
+or
+%
+\begin{equation}
+  Re = 1 - 1 + \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
+\end{equation}
+%
+Simplifying gives
+%
+\begin{equation} \label{eq:Re_takeback}
+  Re = \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
+\end{equation}
+%
+Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
+
+We define rebound at the final energy level, 
+because that is the point of energy purchase by the device owner.
+To simplify derivations, 
+we choose not to apply final-to-primary energy multipliers
+to final energy rates in the numerators and denominators of rebound expressions
+derived from Eqs.~\ref{eq:Re_def} and~\ref{eq:Re_takeback};
+they divide out anyway.
 
 
 %++++++++++++++++++++++++++++++
@@ -252,16 +333,29 @@ The subsections below discuss each rebound effect and provide an expression for 
 \label{sec:dev_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define the device effect.
-****
+The \deveffect{} involves performance of the EEU, but
+no other changes are considered.
+Because no other changes are considered,
+actual and expected energy savings are identical
+across the \deveffect{}, namely
+%
+\begin{equation} \label{eq:S_dot_def}
+  \Sdot \equiv \rbdev{E}_s - \radev{E}_s
+\end{equation}
+%
+Appendix~\ref{sec:Sdot} shows that
+%
+\begin{equation} \label{eq:Sdot}
+  \Sdot = \Sdoteqn \; .
+\end{equation}
 
+Because actual and expected energy savings are identical,
+\deveffectadj{} rebound is zero, 
+as shown in Table~\ref{tab:deveffect}.
 %
 \begin{equation} \label{eq:Re_dev0}
   Re_{dev} = 0 
 \end{equation}
-%
-
 
 
 %++++++++++++++++++++++++++++++
@@ -269,42 +363,211 @@ Define the device effect.
 \label{sec:lc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define the life cycle effect.
-****
+The \lceffect{} assesses the rebound implications of aspects
+of the life cycle of the energy conversion device, including 
+energy embodied by manufacturing ($emb$) and
+operations, maintenance, and disposal ($\OMd$).
 
+We define embodied energy consistent with the energy/exergy analysis literature
+to be the sum of all final energy consumed (direct and indirect)
+in the production of the device.
+Energy is embodied in the device within manufacturing and distribution supply chains
+prior to consumer acquisition of the device.
+No energy is embodied in the device while in service.
+The EEU
+causes the embodied final energy of the device to change
+from $\blc{E}_{emb}$ to $\alc{E}_{emb}$.
+
+However, for simplicity, we spread all embodied energy
+over the lifetime of the device,
+an equal amount assigned to each period.
+(We later take the same approach to capital costs and
+operations, maintenance, and disposal costs.)
+A justification for spreading embodied energy purchase costs comes from considering
+staggered device replacements by many consumers across several years.
+In the aggregate, staggered replacements
+work out to about the same embodied energy in every period.
+
+Thus, we allocate embodied energy over the life of the original and upgraded devices
+($\blc{t}$ and $\alc{t}$, respectively)
+to obtain embodied energy rates, such that
+$\rblc{E}_{emb} = \blc{E}_{emb} / \blc{t}$
+and 
+$\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
+The change in embodied final energy due to the EEU (expressed as a rate) is given by
+$\Delta \ralc{E}_{emb} = \ralc{E}_{emb} - \rblc{E}_{emb}$.
+The expression for embodied energy rebound is 
 %
 \begin{equation} \label{eq:Re_emb}
-  Re_{emb} = \Reembeqn{}
+  Re_{emb} = \Reembeqn{} \; .
 \end{equation}
-%
 
+Embodied energy rebound can be either positive or negative, depending on 
+the sign of the term
+$(\alc{E}_{emb}/\blc{E}_{emb})(\blc{t}/\alc{t}) - 1$.
+Typically, but not always,
+rising energy efficiency is associated with increased device complexity
+and more embodied energy,
+such that $\alc{E}_{emb} > \blc{E}_{emb}$ and $Re_{emb} > 0$.
+However, if the upgraded device has longer life than the original device
+($\alc{t} > \blc{t}$),
+$\Delta \ralc{E}_{emb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device,
+yielding $Re_{emb} < 0$.
+See Appendix~\ref{sec:Re_emb} for details.
+
+In addition to embodied energy effects, 
+rebound can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
+Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rblc{C}_{\OM}$).
+Disposal costs (e.g., $\blc{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
+Like embodied energy, we spread disposal costs across the lifetime 
+of the original and upgraded devices ($\blc{t}$ and $\alc{t}$, respectively)
+to form cost rates such that $\rblc{C}_{\OMd} = \rblc{C}_{\OM} + \blc{C}_d/\blc{t}$
+and
+$\ralc{C}_{\OMd} = \ralc{C}_{\OM} + \alc{C}_d/\alc{t}$.
+
+We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
+elsewhere in the economy at its energy intensity~($I_E$).
+Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
+is given by $\Delta \ralc{C}_{\OMd} I_E$.
+Rebound from operations, maintenance, and disposal
+is given by 
 %
 \begin{equation} \label{eq:Re_OMd}
-  Re_{\OMd} = \ReOMdeqn{}
+  Re_{\OMd} = \ReOMdeqn{} \; .
 \end{equation}
 %
+See Appendix~\ref{sec:Re_OMd} for details.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{\Subeffect}
 \label{sec:sub_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define the substitution effect.
-****
+The substitution effect involves
+%
+\begin{enumerate*}[label={(\alph*)}]
 
+  \item an increase in consumption of the energy service due to its lower price,
+        called direct substitution ($dsub$) and
+
+  \item a constant-utility reduction in consumption of other goods,
+        called indirect substitution ($isub$).
+
+\end{enumerate*}
+%
+Thus, two terms comprise substitution effect rebound,
+direct substitution rebound ($Re_{dsub}$) and
+indirect substitution rebound ($Re_{isub}$).
+This section derives each in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
+the service price elasticity of consumption ($\epsilon_{p_s}$), and
+utility function parameters ($\alpha$ and $\beta$).
+
+The relationship between energy service price and energy service consumption rate
+is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
+such that
+%
+\begin{equation}
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bdev{p}_s} \right)^{\epsilon_{p_s}} \; .
+\end{equation}
+%
+We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
+from service prices only.
+Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
+such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
+the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
+
+Substituting the typical relationship of Eq.~\ref{eq:ps_pE_eta} in the form
+$\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
+$\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
+gives
+%
+\begin{equation} \label{eq:q_ratio_func_of_eps}
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} \; .
+\end{equation}
+%
+Again, note that the energy service price elasticity of consumption
+is negative ($\epsilon_{p_s} < 0$), so
+as energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
+the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
+
+To quantify the substitution effect on other purchases,
+we introduce a utility ($\rate{u}$) constraint.
+%
+\begin{equation}
+  \rbsub{u} = \rasub{u}
+\end{equation}
+%
+We assume a utility function of the general form
+$\frac{\rate{u}}{\rate{u}_0}
+      = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
+where both $\alpha$ and $\beta$ are positive.
+After substitution and rearrangement, we find
+%
+\begin{equation} \label{eq:qohat_qostar}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
+\end{equation}
+
+
+
+
+
+As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
+%
+\begin{equation} \label{eq:Re_dsub_def}
+  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Expansion and substitution of terms (details can be found in Appendix~\ref{sec:Re_dsub})
+gives
 %
 \begin{equation} \label{eq:Re_dsub}
-  Re_{dsub} = \Redsubeqn{}
+  Re_{dsub} = \Redsubeqn{} \; .
 \end{equation}
-%
 
+Note that the service price elasticity of energy service consumption is
+expected to be negative ($\epsilon_{p_s} < 0$).
+When $\epsilon_{p_s} \in (-1, 0)$, as expected,
+the direct substitution rebound will be positive but less than 1 ($Re_{dsub} \in (0, 1)$).
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$,
+$Re_{dsub} = 0.15$.
+
+The increase in consumption of the energy service after its price drop
+substitutes for consumption of other goods in the economy,
+subject to a utility constraint.
+The reduction in spending on other good in the economy
+is captured by indirect substitution rebound~($Re_{isub}$).
+
+To derive an expression for indirect substitution rebound,
+we begin with the definition of $Re_{isub}$
+from Table~\ref{tab:subeffect}:
+%
+\begin{equation} \label{eq:Re_isub_dev}
+  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
+\end{equation}
+
+We assume a basket of other goods purchased in the economy,
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$).
+We further assume that the average price is unchanged across the substitution effect,
+such that $\asub{p}_o = \bsub{p}_o$.
+After substitution and rearrangement (see Appendix~\ref{sec:Re_isub}),
+we find
 %
 \begin{equation} \label{eq:Re_isub}
-  Re_{isub} = \Reisubeqn{}
+  Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
-%
+
+Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
+the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bdev{\eta}$),
+and
+the ratio of utility exponents is positive ($\alpha / \beta > 0$),
+indirect substitution rebound will be negative always ($Re_{isub} < 0$),
+as expected.
+Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
+Indirect substitution rebound becomes more negative
+when the ratio of utility exponents ($\alpha / \beta$) gets larger.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}

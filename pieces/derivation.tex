@@ -4,94 +4,11 @@
 %!TEX root = ../HSB.Rnw
 
 This section provides a detailed derivation of the comprehensive rebound framework,
-beginning with some typical energy, efficiency, and cost relationships.
+beginning with relationships for each rebound effect.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Energy and cost relationships}
-\label{sec:energy_and_cost_relationships}
-%++++++++++++++++++++++++++++++
-
-With the definitions of Appendix~\ref{sec:nomenclature}, four typical relationships emerge.
-First, the consumption rate of the energy service~($\rate{q}_s$)
-is the product of final-to-services efficiency~($\eta$) and
-the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
-Typical units for automotive transport are provided.
-%
-\begin{align} \label{eq:typ_qs_eta_Edot}
-  \rate{q}_s &= \eta \rate{E}_s \\
-  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber
-\end{align}
-%
-Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
-%
-\begin{align} \label{eq:ps_pE_eta}
-  p_s &= \frac{p_E}{\eta} \\
-  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber
-\end{align}
-%
-Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption~($\rate{E}_s$).
-%
-\begin{align}
-  \rate{C} &= p_E \rate{E}_s \\
-  \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
-\end{align}
-%
-Fourth, energy rates are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
-%
-\begin{align}
-  \rate{E} &= \rate{C} I_E \\
-  \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
-\end{align}
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Rebound relationships}
-\label{sec:rebound_relationships}
-%++++++++++++++++++++++++++++++
-
-Energy rebound is defined as
-%
-\begin{equation} \label{eq:Re_def}
-  Re \equiv 1 - \frac{\text{actual final energy savings rate}}{\text{expected final energy savings rate}} \; ,
-\end{equation}
-%
-where both actual and expected energy savings rates are expected positive.
-Final energy ``takeback'' is the rate at which energy savings are eroded by rebound effects,
-and the actual final energy savings rate is the expected energy savings rate less takeback.
-Note that takeback can be negative, indicating in increase in the energy savings rate
-relative to the expected energy savings rate.
-Thus,
-%
-\begin{equation}
-  Re = 1 - \frac{\text{expected energy savings rate} - \text{takeback}}{\text{expected energy savings rate}} \; ,
-\end{equation}
-%
-or
-%
-\begin{equation}
-  Re = 1 - 1 + \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
-\end{equation}
-%
-Simplifying gives
-%
-\begin{equation} \label{eq:Re_takeback}
-  Re = \frac{\text{takeback}}{\text{expected energy savings rate}} \; .
-\end{equation}
-%
-Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
-
-We define rebound at the final energy level, 
-because that is the point of energy purchase by the device owner.
-To simplify derivations, 
-we choose not to apply final-to-primary energy multipliers
-to final energy rates in the numerators and denominators of rebound expressions
-derived from Eqs.~\ref{eq:Re_def} and~\ref{eq:Re_takeback};
-they divide out anyway.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Relationships for stages}
+\subsection{Relationships for rebound effects}
 \label{sec:relationships_for_stages}
 %++++++++++++++++++++++++++++++
 
@@ -176,7 +93,7 @@ by the device due to the EEU.
 No other effects are considered.
 %
 \begin{equation}
-  \Sdot \equiv \rbdev{E}_s - \radev{E}_s
+  \Sdot \equiv \rbdev{E}_s - \radev{E}_s  \tag{\ref{eq:S_dot_def}}
 \end{equation}
 %
 The final energy consumption rates ($\rbdev{E}_s$ and $\radev{E}_s$) 
@@ -208,8 +125,8 @@ See \citet{Paoli:2020aa} for a recent discussion of upper limits to device effic
 After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, 
 we obtain a convenient form
 %
-\begin{equation} \label{eq:Sdot}
-  \Sdot = \Sdoteqn \; .
+\begin{equation}
+  \Sdot = \Sdoteqn \; .  \tag{\ref{eq:Sdot}}
 \end{equation}
 
 
@@ -255,7 +172,7 @@ The EEU
 causes the embodied final energy of the device to change
 from $\rblc{E}_{emb}$ to $\ralc{E}_{emb}$.
 
-Energy is embodied in the device during manufacturing and distribution supply chains
+Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 However, for simplicity, we spread all embodied energy
@@ -295,7 +212,7 @@ Embodied energy rebound can be either positive or negative, depending on
 the sign of the term
 $(\alc{E}_{emb}/\blc{E}_{emb})(\blc{t}/\alc{t}) - 1$.
 Typically, but not always,
-rising in energy efficiency is associated with increased device complexity
+rising energy efficiency is associated with increased device complexity
 and more embodied energy,
 such that $\alc{E}_{emb} > \blc{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
@@ -346,52 +263,53 @@ depending on the sign of the term $\ralc{C}_{\OMd}/\rblc{C}_{\OMd} - 1$.
 \label{sec:Re_sub}
 %------------------------------
 
-Two terms comprise substitution effect rebound, 
-direct substitution rebound ($Re_{dsub}$) and 
+Two terms comprise substitution effect rebound,
+direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 This section derives each in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
-the service price elasticity of consumption ($\epsilon_{p_s}$), and 
+the service price elasticity of consumption ($\epsilon_{p_s}$), and
 utility function parameters ($\alpha$ and $\beta$).
-We begin with derivation of two ratios that are helpful later, 
-$\frac{\rasub{q}_s}{\rbsub{q}_s}$ and 
+We begin with derivation of two ratios that are helpful later,
+$\frac{\rasub{q}_s}{\rbsub{q}_s}$ and
 $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
 
 
 %..............................
-\paragraph{Expressions for two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$} 
+\paragraph{Expressions for two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$}
 \label{sec:two_ratios}
 %..............................
 
 The EEU's energy efficiency increase
-($\aprod{\eta} > \bdev{\eta}$) 
+($\aprod{\eta} > \bdev{\eta}$)
 causes the price of the energy service provided by the device to fall
-($\aprod{p}_s < \bdev{p}_s$). 
-The substitution effect quantifies the amount by which 
-the device owner, in response, 
-increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and 
+($\aprod{p}_s < \bdev{p}_s$).
+The substitution effect quantifies the amount by which
+the device owner, in response,
+increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
 decreases the consumption rate of other goods ($\rasub{q}_o < \rbsub{q}_o$).
 
 The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of consumption~($\epsilon_{p_s}$), 
+is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
 such that
 %
 \begin{equation}
   \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bdev{p}_s} \right)^{\epsilon_{p_s}} \; .
 \end{equation}
 %
-We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable 
-from service prices only. 
+We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
+from service prices only.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
-such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$), 
+such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting the typical relationship of Eq.~\ref{eq:ps_pE_eta} in the form
 $\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
 $\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
-gives 
+gives
 %
-\begin{equation} \label{eq:q_ratio_func_of_eps}
+\begin{equation}
   \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} \; .
+                                                                        \tag{\ref{eq:q_ratio_func_of_eps}}
 \end{equation}
 %
 Again, note that the energy service price elasticity of consumption
@@ -407,7 +325,7 @@ we introduce a utility ($\rate{u}$) constraint.
 \end{equation}
 %
 We assume a utility function of the general form
-$\frac{\rate{u}}{\rate{u}_0} 
+$\frac{\rate{u}}{\rate{u}_0}
       = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
 where both $\alpha$ and $\beta$ are positive.
 Applying the utility constraint gives
@@ -424,38 +342,39 @@ Rearrangement gives
 %
 Substituting Eq.~\ref{eq:q_ratio_func_of_eps} and rearranging gives
 %
-\begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
+\begin{equation}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; . 
+                                                                                              \tag{\ref{eq:qohat_qostar}}
 \end{equation}
-%
+
 Note that the service price elasticity of consumption ($\epsilon_{p_s}$)
 is negative and utility function exponents ($\alpha$ and $\beta$) are positive, such that
 when energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
 the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
 as expected for the substitution effect.
-Note, too, that if the device owner derives relatively more utility 
-from the energy service compared to other purchases ($\alpha > \beta$), 
+Note, too, that if the device owner derives relatively more utility
+from the energy service compared to other purchases ($\alpha > \beta$),
 the reduction in other purchases is enhanced, because $\frac{\alpha}{\beta} > 1$.
 
 Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
 
 %..............................
-\paragraph{Expression for $Re_{dsub}$} 
+\paragraph{Expression for $Re_{dsub}$}
 \label{sec:Re_dsub}
 %..............................
 
-As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as 
+As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
 %
-\begin{equation} \label{eq:Re_dsub_def}
-  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
+\begin{equation}
+  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dsub_def}}
 \end{equation}
 %
-Expansion of the difference term and 
-substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form 
-$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$ 
-and 
-$\rbsub{E}_s = \frac{\rbsub{q}_s}{\bdev{\eta}}$ 
+Expansion of the difference term and
+substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form
+$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$
+and
+$\rbsub{E}_s = \frac{\rbsub{q}_s}{\bdev{\eta}}$
 gives
 %
 \begin{equation}
@@ -485,7 +404,7 @@ Rearrangement of the numerator and canceling terms gives
 and
 %
 \begin{equation}
-    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; \; 
+    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; \;
                 \frac{\frac{\rbsub{q}_s}{\bdev{\eta}}}{\rbdev{E}_s} \; .
 \end{equation}
 %
@@ -501,29 +420,29 @@ Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
 When $\epsilon_{p_s} \in (-1, 0)$, as expected,
 the direct substitution rebound will be positive but less than 1 ($Re_{dsub} \in (0, 1)$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$, 
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
 
 
 %..............................
-\paragraph{Expression for $Re_{isub}$} 
+\paragraph{Expression for $Re_{isub}$}
 \label{sec:Re_isub}
 %..............................
 
 The increase in consumption of the energy service after its price drop
-substitutes for consumption of other goods in the economy, 
-subject to a utility constraint. 
-The reduction in spending on other good in the economy 
+substitutes for consumption of other goods in the economy,
+subject to a utility constraint.
+The reduction in spending on other good in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
-To derive an expression for indirect substitution rebound, 
-we begin with the definition of $Re_{isub}$ 
+To derive an expression for indirect substitution rebound,
+we begin with the definition of $Re_{isub}$
 from Table~\ref{tab:subeffect}:
 %
-\begin{equation} \label{eq:Re_isub_dev}
-  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
+\begin{equation}
+  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .  \tag{\ref{eq:Re_isub_dev}}
 \end{equation}
 %
 Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging the numerator gives
@@ -532,8 +451,8 @@ Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging 
   Re_{isub} = \frac{\left( \frac{\rasub{C}_o}{\rbsub{C}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 %
-We assume a basket of other goods purchased in the economy, 
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($q_{o,i}$), 
+We assume a basket of other goods purchased in the economy,
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
 such that the average price of all other good purchased in the economy~($p_o$) is given by
 %
 \begin{equation}
@@ -552,8 +471,8 @@ and
   \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
 \end{equation}
 %
-Assuming that the average price is unchanged across the substitution effect, 
-such that $\asub{p}_o = \bsub{p}_o$, 
+Assuming that the average price is unchanged across the substitution effect,
+such that $\asub{p}_o = \bsub{p}_o$,
 the preceding two equations can be set equal to find
 %
 \begin{equation}
@@ -580,14 +499,14 @@ Noting that $\rbsub{C}_o = \rbdev{C}_o$ and rearranging yields
   Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
 \end{equation}
 
-Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$), 
-the service efficiency ratio is greater than 1 ($\aprod{\eta} > \bdev{\eta}$), 
+Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
+the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bdev{\eta}$),
 and
 the ratio of utility exponents is positive ($\alpha / \beta > 0$),
-indirect substitution rebound will be negative always ($Re_{isub} < 0$), 
+indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
-Indirect substitution rebound becomes more negative 
+Indirect substitution rebound becomes more negative
 when the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 
