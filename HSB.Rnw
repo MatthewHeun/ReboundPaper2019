@@ -350,12 +350,13 @@ Appendix~\ref{sec:Sdot} shows that
 \end{equation}
 
 Because actual and expected energy savings are identical,
-\deveffectadj{} rebound is zero, 
-as shown in Table~\ref{tab:deveffect}.
+\deveffectadj{} rebound is
 %
 \begin{equation} \label{eq:Re_dev0}
-  Re_{dev} = 0 
+  Re_{dev} = 0 \; ,
 \end{equation}
+%
+as shown in Table~\ref{tab:deveffect}.
 
 
 %++++++++++++++++++++++++++++++
@@ -363,7 +364,7 @@ as shown in Table~\ref{tab:deveffect}.
 \label{sec:lc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The \lceffect{} assesses the rebound implications of aspects
+The \lceffect{} addresses the rebound implications of aspects
 of the life cycle of the energy conversion device, including 
 energy embodied by manufacturing ($emb$) and
 operations, maintenance, and disposal ($\OMd$).
@@ -488,10 +489,10 @@ gives
   \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} \; .
 \end{equation}
 %
-Again, note that the energy service price elasticity of consumption
-is negative ($\epsilon_{p_s} < 0$), so
-as energy service efficiency increases ($\aprod{\eta} > \bdev{\eta}$),
-the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
+Because the energy service price elasticity of consumption
+is negative ($\epsilon_{p_s} < 0$),
+an energy service efficiency increase ($\aprod{\eta} > \bdev{\eta}$),
+implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the \subeffect{} on other purchases,
 we introduce a utility ($\rate{u}$) constraint.
@@ -516,7 +517,7 @@ As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
   Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
 \end{equation}
 %
-Expansion and substitution of terms (details can be found in Appendix~\ref{sec:Re_dsub})
+Expansion and substitution of terms (see Appendix~\ref{sec:Re_dsub})
 gives
 %
 \begin{equation} \label{eq:Re_dsub}
@@ -768,16 +769,35 @@ we arrive at an expression for \prodeffectadj{} rebound:
 \label{sec:total_rebound_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define total rebound.
-****
-
+In comprehensive framework,
+total rebound emerges from the five rebound effects
+(\deveffect{}, \lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{})
+and is the sum of all previous rebound expressions.
+Interestingly, 
+indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
+productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod})
+are expressed in terms of other rebound effects.
+(Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
+After algebra and canceling of terms,
+we find
 %
 \begin{align} \label{eq:Re_tot}  
-  Re_{tot} = \Retoteqn{}
+  Re_{tot} = \Retoteqn{} \; .
 \end{align}
-%
 
+Eq.~\ref{eq:Re_tot} shows that determining six rebound values
+[$Re_{emb}$ (Eq.~\ref{eq:Re_emb}), 
+$Re_{cap}$ (Eq.~\ref{eq:Re_cap}), 
+$Re_{\OMd}$ (Eq.~\ref{eq:Re_OMd}),
+$Re_{dsub}$ (Eq.~\ref{eq:Re_dsub}),
+$Re_{isub}$ (Eq.~\ref{eq:Re_isub}), and
+$Re_{dinc}$ (Eq.~\ref{eq:Re_dinc})]
+is sufficient to calculate total rebound, 
+provided that 
+the productivity factor~($k$),
+the price of energy~($p_E$), and
+the energy intensity of the economy~($I_E$) 
+are known.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
