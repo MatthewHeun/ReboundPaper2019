@@ -673,13 +673,93 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-****
-Define the productivity effect.
-****
+The previous effects
+(\deveffect{}, \lceffect{}, \subeffect{}, and \inceffect{})
+are microeconomic in nature.
+In contrast, the productivity effect is macroeconomic.
+At the macro level, we claim that the effect of energy efficiency is expansionary,
+just like other factor-augmenting productivity improvements.
+This argument implicitly assumes two things:
+%
+\begin{enumerate*}[label={(\alph*)}]
 
+  \item that, together with capital and labor, energy is a factor of production, and
+
+  \item energy efficiency operates along the supply side by reducing the cost of inputs
+        (in this case, final energy),
+        thereby allowing production on a greater scale.
+
+\end{enumerate*}
+
+In general, reducing cost of inputs at the micro level can lead
+to important and surprising counter-tendencies in factor consumption at the macro level.
+Consider labor productivity: it has risen 20-fold
+in Western Europe and the US since 1820 \citep{Maddison:2001aa}, and
+yet today these countries employ more workers than ever before.
+**** Can we also include examples of other inputs,
+while avoiding the capital controversy?
+Doing so would round out the illustrations and really drive home the point. ---MKH ****
+Consider XXXXXX: it has risen YY-fold,
+yet more XXXXXX is in service than ever before. **** Need statistics here. ---MKH ****
+And so too with energy.
+While energy efficiency at the device-level has climbed in the past century,
+energy consumption at the macro level has also risen.
+\citet{Heun:2019aa} **** Heun et al.\ are not the best reference here.
+Can PB provide an alternative? ****
+show that increases in energy efficiency at the micro level
+go hand-in-hand. with 
+increases in overall energy consumption at the macro level.
+Of course, this generality between energy on the one hand
+and other inputs (XXXXX and labor) on the other hand
+raises the question whether it is appropriate to speak of a rebound effect at all.
+Isn't all technological progress just a rebound effect?
+We put it the opposite way:
+macroeconomic rebound effects are the consequences of technological change,
+whether
+in utilization of XXXXXX,
+in utilization of labor, or
+in utilization of energy.
+
+Further, we claim that productivity effect rebound stems from technological improvements
+(energy efficiency)
+which can be correlated to energy service price reductions.
+As such, productivity effect rebound at the macro level scales with the net income~($\rasub{N}$)
+gained by device owners at the micro level.
+As shown by \citet{Antal:2014aa},
+it is reasonable to assume that
+net income ($\rasub{N}$) is spent in the economy at the average energy intensity of the economy ($I_E$).
+
+Scaling from net income ($\rasub{N}$) at the device level
+to productivity-driven growth at the macro level is an unexplored area.
+In the absence of better information,
+we express this scaling simply by a productivity factor ($k$)
+with $k \ge 0$ expected.
+$k = 0$ means two things:
+%
+\begin{enumerate*}[label={(\alph*)}]
+
+  \item the device owner's freed cash is simply redistributed to a new basket of goods
+        with no energy implications and
+
+  \item there is no macroeconomic productivity boost that results from the energy efficiency upgrade.
+
+\end{enumerate*}
+%
+$k > 0$ means that productivity-driven macroeconomic growth has occurred
+with consequent implications for additional energy consumption at the macro level.
+
+As shown in Table~\ref{tab:prodeffect}, 
+productivity rebound is given by
+%
+\begin{equation} \label{eq:Re_prod_def}
+  Re_{prod} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
+\end{equation}
+%
+After some algebra (see Appendix~\ref{sec:Re_prod}), 
+we arrive at an expression for \prodeffectadj{} rebound:
 %
 \begin{equation} \label{eq:Re_prod}
-  Re_{prod} = \Reprodeqn{}
+  Re_{prod} = \Reprodeqn{} \; .
 \end{equation}
 %
 
