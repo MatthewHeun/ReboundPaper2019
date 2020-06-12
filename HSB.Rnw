@@ -209,7 +209,7 @@ Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods: a comprehensive analytical framework (MKH, 1500 words)}
+\section{Methods: development of the comprehensive analytical framework (MKH, currently at 2222 words, target was 1500 words)}
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
