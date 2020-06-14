@@ -135,7 +135,8 @@ Here are some references from Matt's database that you may want to include:
 \citet{Tsao:2010},
 \citet{Chitnis:2015}, 
 \citet{Stapleton:2016}, 
-\cite{Sun:2018aa}
+\citet{Sun:2018aa}, 
+\citet{Fullerton:2019aa},
 etc.
 
 More studies on large rebound.
