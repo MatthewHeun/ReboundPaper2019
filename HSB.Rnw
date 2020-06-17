@@ -226,14 +226,14 @@ An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\aprod{\eta} > \bdev{\eta}$,
 typically, but not always,
-**** PB: GS suggests a citation here that indicates upgrades are usually more costly. ---MKH ****
 at an increased financial cost rate to
-procure (capital cost), operate, maintain, and dispose of the device,
+procure (capital cost), operate, maintain, and dispose of the device
+**** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
 $\raprod{C}_{cap} > \rbdev{C}_{cap}$ and 
 $\raprod{C}_{\OMd} > \rbdev{C}_{\OMd}$.
 As final-energy-to-service efficiency~($\eta$) increases,
-the energy service price~($p_s$) declines.
+the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
 ($\aprod{p}_E = \bdev{p}_E$),
 so the final energy purchaser is a price-taker.
@@ -241,16 +241,31 @@ so the final energy purchaser is a price-taker.
 would require a full-economy model that is beyond the scope of this paper.)
 
 Note that
-the vocabulary and mathematical notation around rebound is extensive;
+the vocabulary and mathematical notation for rebound is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
 notation elements (symbols, Greek letters, decorations, and subscripts)
 used throughout the paper.
 The notation elements 
 can be mixed to comprise a rich and expressive ``language'' of energy rebound.
 We use colored backgrounds on rebound effects for visual convenience. 
+(Note that Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
+it does not necessarily represent 
+the progression of rebound effects through time.)
 
-Before discussing the rebound effects
+\begin{figure}
+\centering
+  % The file is a Tikz picture.
+  \input{pieces/flowchart.tex}
+\caption{Flowchart of effects and decorations.}
+\label{fig:flowchart}
+\end{figure}
+
+Later in this section
 (Sections~\ref{sec:dev_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
+we walk through the several conceptual stages of rebound, including
+the device upgrade and four rebound effects.
+We derive rebound expressions for each. 
+But first 
 we define rebound relationships 
 (Section~\ref{sec:rebound_relationships}) and 
 typical energy and cost relationships found throughout the analysis
@@ -303,19 +318,6 @@ because that is the point of energy purchase by the device owner.
 Henceforth, we drop the adjective ``final'' 
 unless there is reason to indicate a specific energy conversion chain stage.
 
-We proceed through rebound effects shown in Fig.~\ref{fig:flowchart}.
-Note that Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
-it does not necessarily represent 
-the progression of rebound effects through time.
-
-\begin{figure}
-\centering
-  % The file is a Tikz picture.
-  \input{pieces/flowchart.tex}
-\caption{Flowchart of effects and decorations.}
-\label{fig:flowchart}
-\end{figure}
-
 
 %++++++++++++++++++++++++++++++
 \subsection{Typical energy and cost relationships}
@@ -354,8 +356,10 @@ Fourth, energy rates are the product of cost rates~($\rate{C}$) and energy inten
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
-Each effect shown in Fig.~\ref{fig:flowchart} has energy rebound associated with it, and 
-subsections below both
+In the subsections that follow, 
+we discuss sequentially the device upgrade and four rebound effects.
+Each has an associated energy rebound.
+In each subsection, we 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -365,8 +369,8 @@ subsections below both
     
 \end{enumerate*}
 %
-Detailed derivations of all expressions in the comprehensive rebound framework
-are given in Appendix~\ref{sec:derivation}.
+Detailed derivations of all rebound expressions 
+can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:deveffect}--\ref{tab:prodeffect}
 which provide a structure for energy and financial accounting.
 We begin with the \deveffect{}.
@@ -378,7 +382,7 @@ We begin with the \deveffect{}.
 %++++++++++++++++++++++++++++++
 
 The \deveffect{} involves performance of the EEU, but
-no other changes are considered.
+no other changes.
 Because no other changes are considered,
 actual and expected energy savings are identical
 across the \deveffect{}, namely
@@ -519,8 +523,10 @@ such that
   \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bdev{p}_s} \right)^{\epsilon_{p_s}} \; .
 \end{equation}
 %
-We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
-from service prices only.
+% We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
+% from service prices only.
+We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is 
+no greater than zero under standard assumptions on convex preferences.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
 such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
@@ -579,7 +585,7 @@ $Re_{dsub} = 0.15$.
 The increase in consumption of the energy service after its price drop
 substitutes for consumption of other goods in the economy,
 subject to the utility constraint.
-The reduction in spending on other good in the economy
+The reduction in spending on other goods in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
 To derive an expression for indirect substitution rebound,
@@ -617,16 +623,17 @@ as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 \label{sec:inc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-Rebound from the income effect rebound quantifies the rate of additional energy demand 
+Rebound from the \inceffect{} quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
 income from the EEU.
-Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+Derivations of expressions for gross and net monetary savings
+($\rate{G}$ and $\rate{N}$, respectively) from the 
 \deveffect{} ($\radev{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
 are presented in the appendix (Tables~\ref{tab:deveffect}--\ref{tab:subeffect}).
 Gross income from the EEU is given by Eq.~\ref{eq:G_dot}
 as $\radev{G} = p_E \Sdot$. 
 In combination, the \lceffect{} and the \subeffect{} leave the device owner with
-\emph{net} income ($\rasub{N}$) from the EEU,
+\emph{net} monetary savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~\ref{eq:N_dot_after_sub}.
 Total income before the EEU is $\rbdev{M}$.
 Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
@@ -672,10 +679,10 @@ As either of the elasticities get stronger
 ($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
-Any net income not spent on procuring more of the energy service
+Any net monetary savings not spent on procuring more of the energy service
 goes toward consumption of other goods in the economy.
 Rebound from the indirect income effect involves 
-the energy implications of spending net income ($\rbinc{N}$)
+the energy implications of spending net monetary savings ($\rbinc{N}$)
 on those other goods in the economy.
 
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
@@ -695,14 +702,23 @@ an expression for indirect income effect rebound is
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
+Eq.~\ref{eq:Re_iinc} shows that a good first estimate for indirect income rebound
+is $p_E I_E$.
+Intuitively, this result is sensible.
+\$1 of energy cost savings implies that $\$1 \frac{1}{p_E}$ of energy is expected to be saved.
+Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
+By Eq.~\ref{eq:Re_takeback}, rebound is
+%
+\begin{equation} \label{eq:intuituve_Re_iinc}
+  Re = \frac{\cancel{\$1} \frac{1}{p_E}}{\cancel{\$1} I_E} = p_E I_E \; .
+\end{equation}
+
 In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
 %
 \begin{equation} \label{eq:Re_cap}
   Re_{cap} = \Recapeqn{} \; .
 \end{equation}
 
-Eq.~\ref{eq:Re_iinc} shows that a good first estimate for indirect income rebound
-is $Re_{iinc} = p_E I_E$.
 Positive rebound from capital expenditures~($Re_{cap}$), 
 operations, maintenance, and disposal~($Re_{\OMd}$),
 direct substitution~($Re_{dsub}$), 
@@ -815,8 +831,8 @@ we arrive at an expression for \prodeffectadj{} rebound:
 %++++++++++++++++++++++++++++++
 
 In comprehensive framework,
-the sum of all rebound emerges from the five rebound effects
-(\deveffect{}, \lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{})
+the sum of all rebound emerges from the four rebound effects
+(\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{})
 and is the sum of all previous rebound expressions.
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
