@@ -3,7 +3,14 @@
 % before making the book.
 %!TEX root = ../HSB.Rnw
 
-This section provides a detailed derivation of the comprehensive rebound framework,
+
+**** 
+We may want to delete (or comment out)
+paragraphs of this appendix which are duplicated
+in the body of the paper.---MKH
+****
+
+This appendix provides a detailed derivation of the comprehensive rebound framework,
 beginning with relationships for each rebound effect.
 
 
@@ -789,20 +796,20 @@ Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives
 
 
 %------------------------------
-\subsubsection{Total rebound} 
+\subsubsection{Rebound sum} 
 \label{sec:total_rebound}
 %------------------------------
 
-Total rebound is the sum of all rebound effects.
+The sum of all rebound effects is 
 %
 \begin{equation}
-  Re_{tot} = \cancelto{0}{Re_{dev}} + Re_{lc} + Re_{sub} + Re_{inc} + Re{prod}
+  Re_{sum} = \cancelto{0}{Re_{dev}} + Re_{lc} + Re_{sub} + Re_{inc} + Re{prod} \; .
 \end{equation}
 %
 Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
 %
 \begin{align}
-  Re_{tot} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\lceffect}   \nonumber \\
+  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\lceffect}   \nonumber \\
                 &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}  \nonumber \\
                 &+ Re_{dinc} + Re_{iinc}   & \mathrm{\inceffect}  \nonumber \\
                 &+ Re_{prod}               & \mathrm{\prodeffect}
@@ -815,7 +822,7 @@ are expressed in terms of other rebound effects.
 Substituting Eqs.~\ref{eq:Re_iinc} and~\ref{eq:Re_prod} gives
 %
 \begin{align}
-  Re_{tot} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\lceffect}                             \nonumber \\
+  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\lceffect}                             \nonumber \\
                 &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}                            \nonumber \\
                 &+ Re_{dinc} + p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} 
                              - Re_{isub} - p_E I_E Re_{dinc}   & \mathrm{\inceffect}        \nonumber \\
@@ -827,7 +834,7 @@ to other life cycle, substitution, and income effect terms.
 This last rearrangement gives the final expression for total rebound.
 %
 \begin{align}
-  Re_{tot} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
+  Re_{sum} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
 \end{align}
 
 Eq.~\ref{eq:Re_tot} shows that determining six rebound values,

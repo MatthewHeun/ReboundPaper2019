@@ -705,12 +705,12 @@ an expression for indirect income effect rebound is
 Eq.~\ref{eq:Re_iinc} shows that a good first estimate for indirect income rebound
 is $p_E I_E$.
 Intuitively, this result is sensible.
-\$1 of energy cost savings implies that $\$1 \frac{1}{p_E}$ of energy is expected to be saved.
+\$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
 Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
 By Eq.~\ref{eq:Re_takeback}, rebound is
 %
 \begin{equation} \label{eq:intuituve_Re_iinc}
-  Re = \frac{\cancel{\$1} \frac{1}{p_E}}{\cancel{\$1} I_E} = p_E I_E \; .
+  Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
 \end{equation}
 
 In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
@@ -735,8 +735,8 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The previous effects
-(\deveffect{}, \lceffect{}, \subeffect{}, and \inceffect{})
+The \deveffect{} and previous rebound effects
+(\lceffect{}, \subeffect{}, and \inceffect{})
 are microeconomic in nature.
 In contrast, the productivity effect is macroeconomic.
 At the macro level, we claim that the effect of energy efficiency is expansionary,
@@ -830,10 +830,9 @@ we arrive at an expression for \prodeffectadj{} rebound:
 \label{sec:total_rebound_main_paper}
 %++++++++++++++++++++++++++++++
 
-In comprehensive framework,
+In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
-(\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{})
-and is the sum of all previous rebound expressions.
+(\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
 productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod})
