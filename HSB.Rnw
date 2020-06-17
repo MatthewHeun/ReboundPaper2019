@@ -236,7 +236,7 @@ As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
 ($\aprod{p}_E = \bdev{p}_E$),
-so the final energy purchaser is a price-taker.
+so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
 
@@ -245,12 +245,12 @@ the vocabulary and mathematical notation for rebound is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
 notation elements (symbols, Greek letters, decorations, and subscripts)
 used throughout the paper.
-The notation elements 
-can be mixed to comprise a rich and expressive ``language'' of energy rebound.
-We use colored backgrounds on rebound effects for visual convenience. 
 (Note that Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
 it does not necessarily represent 
 the progression of rebound effects through time.)
+The notation elements 
+can be mixed to comprise a rich and expressive ``language'' of energy rebound.
+We use colored backgrounds on rebound effects for visual convenience. 
 
 \begin{figure}
 \centering
@@ -263,8 +263,8 @@ the progression of rebound effects through time.)
 Later in this section
 (Sections~\ref{sec:dev_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
-the device upgrade and four rebound effects.
-We derive rebound expressions for each. 
+the device upgrade and four rebound effects, and 
+we derive rebound expressions for each. 
 But first 
 we define rebound relationships 
 (Section~\ref{sec:rebound_relationships}) and 
