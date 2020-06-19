@@ -188,11 +188,50 @@ with envisaged lower energy use maybe misplaced:
 the interactions between energy rebound
 and increased requirements for materials and other resources
 are significant~\citep{VandenBergh2009, FontVivanco2018}.
-% By considering both energy and materials in the supply-chain, 
-% citet\{Magee2017} find little evidence of dematerialization. 
-% Finally, energy rebound is rarely included in either policy~\cite{fontvivanco2016} 
-% or energy models **** Brockway2020REF ****. 
-% Therefore, resolving the size and magnitude of energy rebound is an important goal. 
+By considering both energy and materials in the supply-chain,
+\citet{Magee2017} found little evidence of dematerialization.
+Finally, energy rebound is rarely included in either policy~\cite{fontvivanco2016}
+or energy models **** Brockway2020REF ****.
+Therefore, resolving the size and magnitude of energy rebound is an important goal.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound typologies}
+\label{sec:rebound_typologies}
+%++++++++++++++++++++++++++++++
+
+The most common rebound typologies 
+distinguish between direct and indirect (microeconomic) and then 
+macro/economy-wide effects~\citep{greening2000, Barker2009, FontVivanco2018}. 
+\citet{greening2000} split rebound effects into two parts:
+Microeconomic rebound (direct and indirect) and
+macroeconomic (economy-wide effects and transformational effects).
+\citet{Jenkins2011} break up microeconomic rebound effects into
+direct (income and substitution effects) and 
+indirect (respending and embodied effects), 
+while \citet{Sorrell:2009cg} expands the macroeconomic rebound 
+to include a wider set of (five) macroeconomic rebound effects. 
+That said, there are many more variants.
+\citet{Santarius2016} and \citet{Lange2019} introduce 
+meso (i.e., sector) level rebound,
+distinct from micro and macro rebound.
+\citet{VandenBergh2011} distinguishes 14 types of rebound, 
+perhaps as the greatest complexity. 
+\citet{madlener2016}, 
+reviewing 35 years of rebound research, 
+noted regarding typologies that 
+``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
+by the many different versions.'' 
+Table~\ref{tab:typology} summarizes the typologies.
+
+\begin{figure}
+\centering
+\includegraphics[width=1\linewidth]{figure_other/typology.pdf}
+\caption{Rebound typology based on \citet{greening2000} and \citet{Jenkins2011}.}
+\label{tab:typology}
+\end{figure}
+
+
 
 
 %++++++++++++++++++++++++++++++
