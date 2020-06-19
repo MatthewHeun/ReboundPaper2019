@@ -231,6 +231,34 @@ Table~\ref{tab:typology} summarizes the typologies.
 \label{tab:typology}
 \end{figure}
 
+%++++++++++++++++++++++++++++++
+\subsection{Empirical studies on the magnitude of energy rebound}
+\label{sec:empirical_studies}
+%++++++++++++++++++++++++++++++
+
+\citet{Sorrell:2007um} provided an important systematic review of energy rebound estimates.
+They found that the evidence at that time suggested that microeconomic (direct and indirect)
+rebound was small (10--30~\%),
+but that evidence for macroeconomic rebound was much weaker,
+with more variable estimates.
+Empirical rebound estimates for household-level energy rebound
+continue to suggest low microeconomic rebound magnitudes
+of less than 40~\%~\citep{Greene2012, Thomas:2013ab, Chitnis2014, Stapleton:2016}.
+Commonly such microeconomic estimations are based on own sector (direct)
+and cross-sector (indirect, respending) price elasticities,
+as set out by \citet{Gillingham2016}.
+
+More broadly, empirical estimates at a macro level are increasing. 
+Commonly these are estimated using energy intensities 
+(e.g.,~\citet{Schipper2000, Antal:2014aa, VanBenthem2015})
+or via an aggregate production function approaches 
+\citep{Saunders2008, Wei2010}. 
+Their results vary more widely, 
+but suggest that rebound at the macroeconomic level could be large in some cases,
+particularly at the producer side~\citep{Saunders2013a}, and for developing countries (REF). 
+
+
+
 
 
 
