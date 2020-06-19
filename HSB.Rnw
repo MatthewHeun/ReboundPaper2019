@@ -237,15 +237,15 @@ Table~\ref{tab:typology} summarizes the typologies.
 %++++++++++++++++++++++++++++++
 
 \citet{Sorrell:2007um} provided an important systematic review of energy rebound estimates.
-They found that the evidence at that time suggested that microeconomic (direct and indirect)
+They found that the evidence at that time suggested that micro-economic (direct and indirect)
 rebound was small (10--30~\%),
 but that evidence for macroeconomic rebound was much weaker,
 with more variable estimates.
 Empirical rebound estimates for household-level energy rebound
 continue to suggest low microeconomic rebound magnitudes
 of less than 40~\%~\citep{Greene2012, Thomas:2013ab, Chitnis2014, Stapleton:2016}.
-Commonly such microeconomic estimations are based on own sector (direct)
-and cross-sector (indirect, respending) price elasticities,
+Commonly such micro-economic estimations are based on own sector (direct)
+and cross-sector (indirect, re-spending) price elasticities,
 as set out by \citet{Gillingham2016}.
 
 More broadly, empirical estimates at a macro level are increasing. 
