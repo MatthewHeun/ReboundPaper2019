@@ -148,20 +148,21 @@ Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
 % We provide a guide for application.
 % We make it operational.
 
-Energy rebound an effect whereby 
+Energy rebound is a phenomenon whereby 
 some expected energy savings do not materialize after an energy efficiency upgrade (EEU).
-The roots of energy rebound can be traced back to William Stanley Jevons~\citet{Jevons:1866uy}, 
-who in his 1865 report \emph{The Coal Question} suggested that
-``It is wholly a confusion of ideas to suppose that the economical use of fuel 
+The roots of energy rebound can be traced back to William Stanley Jevons~\citet{Jevons:1866uy}
+who, in an 1865 report entitled \emph{The Coal Question},
+suggested that
+``[i]t is wholly a confusion of ideas to suppose that the economical use of fuel 
 is equivalent to a diminished consumption. 
 The very contrary is the truth.''
 A hundred years later, the 1970s oil crises returned the focus to energy efficiency
-and the heated debate over the size and magnitude of energy rebound. 
+and the debate over the size and magnitude of rebound heated up. 
 On one side, \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested that energy rebound could be large, 
 while others, 
 including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
-claimed that rebound magnitude was small.
+claimed that rebound was small.
 
 The so-called \emph{Khazzoom-Brookes Postulate}~\citep{Saunders:1992aa}
 is restated by \citet[p.~212]{Herring1999} as
@@ -169,22 +170,40 @@ is restated by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-The scale of the macroeconomic feedback effects get to the heart of the debate,
-which continues today, through advocates of low rebound such as
-\citet{Gillingham:2013aa, Gillingham2016} 
-who suggests ``the rebound effect is overplayed,'' 
-set against those such as \citet{Saunders2015}, 
-who suggests that the evidence for large rebound is growing.
+The scale of macroeconomic feedback gets to the heart of the debate,
+which continues today.
+Advocates of low rebound,
+such as \citet{Gillingham:2013aa, Gillingham2016},
+suggest ``the rebound effect is overplayed,'' 
+while others, 
+such as \citet{Saunders2015}, 
+claim the evidence for large rebound is growing.
 
-The topic of energy rebound is not just an academic debate.
-Significant reductions in energy use via energy efficiency
-are envisaged to help meet our Paris carbon reduction targets~\citep{masson-delmotte2018}.
+The topic of energy rebound is not merely an academic debate.
+To meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
+increasing energy efficiency is expected to deliver 
+decreasing primary energy consumption and 
+decreasing CO$_2$ emissions
+amidst continued economic growth.
+To take just one example,
+by 2040
+energy efficiency contributes 44~\% of total carbon emissions reductions in
+the International Energy Agency's Sustainable Development scenario relative to
+its New Policies scenario~\citep[Fig.~3.15, p.~139]{International-Energy-Agency:2017b}.
+
 However as **** Brockway2020REF **** note,
-such reductions would represent a structural break with the historical record
+such reductions in primary energy consumption 
+would represent a structural break with the historical record
 of close energy-GDP coupling,
-assuming that economic growth continues.
-At the same time, the faith in new IT-based technologies
-with envisaged lower energy use maybe misplaced:
+assuming continued economic growth.
+**** The next bit about IT and dematerialization
+comes out of the blue. 
+There are connections in your mind to rebound,
+but those connections have not been made for the reader.
+And they may not be germane to rebound.
+Consider connecting/signposting better or delete.---MKH ****
+At the same time, faith in new IT-based technologies
+to reduce primary energy consumption may be misplaced, and
 the interactions between energy rebound
 and increased requirements for materials and other resources
 are significant~\citep{VandenBergh2009, FontVivanco2018}.
@@ -200,6 +219,8 @@ Therefore, resolving the size and magnitude of energy rebound is an important go
 \label{sec:rebound_typologies}
 %++++++++++++++++++++++++++++++
 
+One of the challenges to better understanding energy rebound is its many
+aspects, mechanisms, and effects.
 The most common rebound typologies 
 distinguish between direct and indirect (microeconomic) and then 
 macro/economy-wide effects~\citep{greening2000, Barker2009, FontVivanco2018}. 
@@ -210,26 +231,29 @@ macroeconomic (economy-wide effects and transformational effects).
 direct (income and substitution effects) and 
 indirect (respending and embodied effects), 
 while \citet{Sorrell:2009cg} expands the macroeconomic rebound 
-to include a wider set of (five) macroeconomic rebound effects. 
-That said, there are many more variants.
+to include a wider set of five macroeconomic rebound effects. 
 \citet{Santarius2016} and \citet{Lange2019} introduce 
 meso (i.e., sector) level rebound,
 distinct from micro and macro rebound.
 \citet{VandenBergh2011} distinguishes 14 types of rebound, 
-perhaps as the greatest complexity. 
-\citet{madlener2016}, 
-reviewing 35 years of rebound research, 
-noted regarding typologies that 
-``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
-by the many different versions.'' 
+providing, perhaps, the greatest complexity. 
 Table~\ref{tab:typology} summarizes the typologies.
 
 \begin{figure}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-\caption{Rebound typology based on \citet{greening2000} and \citet{Jenkins2011}.}
+\caption{Rebound typology based on \citet{greening2000} and \citet{Jenkins2011}.
+         **** Should we replace this table with our topology?---MKH ****
+         **** Need to convert from a figure to a table.---MKH ****}
 \label{tab:typology}
 \end{figure}
+
+\citet{madlener2016}, 
+reviewing 35 years of rebound research, noted that 
+``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
+by the many different versions'' of rebound. 
+It's enough to make your head spin!
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Empirical studies on the magnitude of energy rebound}
@@ -237,29 +261,103 @@ Table~\ref{tab:typology} summarizes the typologies.
 %++++++++++++++++++++++++++++++
 
 \citet{Sorrell:2007um} provided an important systematic review of energy rebound estimates.
-They found that the evidence at that time suggested that micro-economic (direct and indirect)
-rebound was small (10--30~\%),
-but that evidence for macroeconomic rebound was much weaker,
-with more variable estimates.
+He found evidence suggesting micro-economic (direct and indirect)
+rebound was small (10--30~\%)
+and noted that evidence for macroeconomic rebound was much weaker,
+with divergent estimates.
 Empirical rebound estimates for household-level energy rebound
 continue to suggest low microeconomic rebound magnitudes
 of less than 40~\%~\citep{Greene2012, Thomas:2013ab, Chitnis2014, Stapleton:2016}.
-Commonly such micro-economic estimations are based on own sector (direct)
+Commonly, such micro-economic estimations are based on own sector (direct)
 and cross-sector (indirect, re-spending) price elasticities,
 as set out by \citet{Gillingham2016}.
 
-More broadly, empirical estimates at a macro level are increasing. 
-Commonly these are estimated using energy intensities 
+In recent years, empirical estimates at the macro level have appeared. 
+Commonly, macro level rebound is estimated using energy intensities 
 (e.g.,~\citet{Schipper2000, Antal:2014aa, VanBenthem2015})
 or via an aggregate production function approaches 
 \citep{Saunders2008, Wei2010}. 
-Their results vary more widely, 
-but suggest that rebound at the macroeconomic level could be large in some cases,
-particularly at the producer side~\citep{Saunders2013a}, and for developing countries (REF). 
+Estimates of macro level rebound vary more widely, 
+but they suggest that rebound at the macroeconomic level could be large
+****
+Can we put a number on ``large''?
+****
+in some cases,
+particularly on the producer side~\citep{Saunders2013a} and for developing countries (REF). 
 
 
+%++++++++++++++++++++++++++++++
+\subsection{The need for a more comprehensive energy rebound analytical framework}
+\label{sec:need_comprehensive}
+%++++++++++++++++++++++++++++++
 
+**** 
+Can we also say/do we want to say that
+we need to connect engineers and economists?
+Connecting the micro and the macro 
+is a way to connect the engineers (who usually focus on micro efficiency and the device level)
+and the economists (some of whom focus on the macro level).
+****
 
+Much of the early work on rebound theory was at the micro-economic level, 
+focusing on direct and indirect rebound via price elasticities (e.g.,~\citet{Schipper2000}).
+Other micro-economic advances include those by \citet{Borenstein:2015aa},
+who provided a detailed treatment of rebound into income and substitution effects,
+and \citet{Sun:2018aa}, who considered direct rebound including device effects.
+
+At the macroeconomic level,
+\citet{Saunders:1992aa} made the earliest attempt
+at a theoretical framework for rebound,
+based on neo-classical aggregate production functions (APFs).
+Later works followed the APF approach, including
+\citet{Saunders:2000aa, Saunders2008},
+\citet{Wei2017}, and
+\citet{Brockway:2017a}.
+\citet{Grepperud2004} provide one of the first
+general equilibrium frameworks for rebound
+(overcoming previous criticisms of partial equilibrium frameworks **** REF ****),
+and were followed, among others, by general equilibrium models, including
+\citet{Wei2010},
+\citet{Lemoine2019}, and
+\citet{Fullerton:2019aa}.
+A key issue with these macroeconomic frameworks is that they are,
+by virtue of their being macroeconomic models,
+working in aggregate variable space
+and, therefore, lack details of the various components of macroeconomic rebound or
+connection to micro-economic foundations.
+A second issue is that estimates of macroeconomic rebound effects
+generated by macroeconomic frameworks
+are contingent upon the type of production function assumed
+(Cobb-Douglas, CES, etc.) and
+choice of substitution elasticity.
+As Saunders~\citet[p.~2207-2208]{Saunders2008} noted,
+``choice of production/cost function can pre-determine the results related to rebound\ldots{}
+[and choosing] values for these [elasticity of substitution] parameters
+is tantamount to assuming rebound results.''
+
+What is missing, therefore,
+is a more detailed and comprehensive theoretical framework, 
+one that is
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item built from micro-economic foundations and
+  
+  \item catches up with the complexity of rebound typology mechanisms,
+        including many of the macroeconomic mechanisms. 
+        **** We don't actually do this! Maybe restate/rethink a bit here.
+        Maybe we can say, instead, ``carefully distinguishes rebound mechanisms found in most typologies.''---MKH ****
+    
+\end{enumerate*}
+%
+Our paper seeks to fill this gap.
+We build on the microeconomic foundations laid by \citet{Borenstein:2015aa}
+to construct a detailed analytical framework for energy rebound using the
+nine components of rebound (4 microeconomic, 5 macroeconomic) 
+shown in Table~\ref{tab:typology}.
+We also demonstrate application of the framework
+by calculating energy rebound associated with 
+purchase and use of a fuel-efficient automobile.   
 
 
 %++++++++++++++++++++++++++++++
@@ -873,7 +971,8 @@ in Western Europe and the US since 1820 \citep{Maddison:2001aa}, and
 yet today these countries employ more workers than ever before.
 **** Can we also include examples of other inputs,
 while avoiding the capital controversy?
-Doing so would round out the illustrations and really drive home the point. ---MKH ****
+Doing so would round out the illustrations and really drive home the point. 
+Does \citet{Magee2017} help with this?---MKH ****
 Consider XXXXXX: it has risen YY-fold,
 yet more XXXXXX is in service than ever before. **** Need statistics here. ---MKH ****
 And so too with energy.
