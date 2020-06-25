@@ -229,7 +229,8 @@ bottom=2pt}
 \newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}
 
 % Before life cycle effect (same as after device effect)
-\newcommand{\Eacctblc}{\Eacctadev}
+% \newcommand{\Eacctblc}{\Eacctadev}
+\newcommand{\Eacctblc}{\radev{E} = \radev{E}_s + \rbdev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
 \newcommand{\Macctblc}{\Macctadev}
 
 % After life cycle effect
