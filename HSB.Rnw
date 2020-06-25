@@ -148,6 +148,17 @@ Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
 % We provide a guide for application.
 % We make it operational.
 
+
+Notes from 25 June 2020 meeting:
+
+We will rely upon other papers to make the argument FOR the productivity effect.
+Options include \citet{Magee2017} and Paul's recent systematic review papers, including
+\url{https://iopscience.iop.org/article/10.1088/1748-9326/ab842a}
+and
+\url{https://www.nature.com/articles/s41467-020-16941-y}
+
+
+
 Energy rebound is a phenomenon whereby 
 some expected energy savings do not materialize after an energy efficiency upgrade (EEU).
 The roots of energy rebound can be traced back to William Stanley Jevons~\citet{Jevons:1866uy}
