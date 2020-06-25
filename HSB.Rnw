@@ -391,7 +391,6 @@ The comprehensive rebound framework provides the following benefits:
         thereby providing insight to the energy policymaking process.
     
 \end{enumerate*}
-%
 
 The remainder of this paper is structured as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
