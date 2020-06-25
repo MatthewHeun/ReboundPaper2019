@@ -636,7 +636,7 @@ prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 The EEU
 causes the embodied final energy of the device to change
-from $\blc{E}_{emb}$ to $\alc{E}_{emb}$.
+from $\bdev{E}_{emb}$ to $\alc{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
@@ -644,18 +644,18 @@ an equal amount assigned to each period.
 (We later take the same approach to capital costs and
 operations, maintenance, and disposal costs.)
 A justification for spreading embodied energy purchase costs comes from considering
-staggered device replacements by many consumers across several years.
-In the aggregate, staggered replacements
-work out to about the same embodied energy in every period.
+device replacements by many consumers across several years.
+In the aggregate, evenly-spaced (in time) replacements
+work out to the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
-($\blc{t}$ and $\alc{t}$, respectively)
+($\bdev{t}$ and $\alc{t}$, respectively)
 to obtain embodied energy rates, such that
-$\rblc{E}_{emb} = \blc{E}_{emb} / \blc{t}$
+$\rbdev{E}_{emb} = \bdev{E}_{emb} / \bdev{t}$
 and 
 $\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\Delta \ralc{E}_{emb} = \ralc{E}_{emb} - \rblc{E}_{emb}$.
+$\ralc{E}_{emb} - \rbdev{E}_{emb}$.
 The expression for embodied energy rebound is 
 %
 \begin{equation} \label{eq:Re_emb}
@@ -664,16 +664,15 @@ The expression for embodied energy rebound is
 
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
-$(\alc{E}_{emb}/\blc{E}_{emb})(\blc{t}/\alc{t}) - 1$.
+$(\alc{E}_{emb}/\bdev{E}_{emb})(\bdev{t}/\alc{t}) - 1$.
 Typically, but not always,
 rising energy efficiency is associated with increased device complexity
 and more embodied energy,
-such that $\alc{E}_{emb} > \blc{E}_{emb}$ and $Re_{emb} > 0$.
+such that $\alc{E}_{emb} > \bdev{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
-($\alc{t} > \blc{t}$),
-$\Delta \ralc{E}_{emb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device,
-yielding $Re_{emb} < 0$.
+($\alc{t} > \bdev{t}$),
+$\ralc{E}_{emb} - \rbdev{E}_{emb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device.
 See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
