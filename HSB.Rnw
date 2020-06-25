@@ -396,7 +396,7 @@ The comprehensive rebound framework provides the following benefits:
 The remainder of this paper is structured as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
 Section~\ref{sec:example} provides an example.
-Section~\ref{sec:discussion} provides discussion and 
+Section~\ref{sec:discussion} provides discussion, and 
 Section~\ref{sec:conclusion} concludes.
 
 
