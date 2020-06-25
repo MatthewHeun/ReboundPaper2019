@@ -346,7 +346,7 @@ As Saunders~\citet[p.~2207-2208]{Saunders2008} noted,
 [and choosing] values for these [elasticity of substitution] parameters
 is tantamount to assuming rebound results.''
 
-What is missing, therefore,
+What is missing, however,
 is a more detailed and comprehensive theoretical framework, 
 one that is
 %
@@ -360,47 +360,23 @@ one that is
         Maybe we can say, instead, ``carefully distinguishes rebound mechanisms found in most typologies.''---MKH ****
     
 \end{enumerate*}
-%
-Our paper seeks to fill this gap.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Aim, contribution, and structure of the paper (MKH, 100 words)}
+\label{sec:structure}
+%++++++++++++++++++++++++++++++
+
+The aim of this paper is to fill the gap in the literature identified above.
 We build on the microeconomic foundations laid by \citet{Borenstein:2015aa}
-to construct a detailed analytical framework for energy rebound using the
-nine components of rebound (4 microeconomic, 5 macroeconomic) 
+to include nine components of rebound (4 microeconomic, 5 macroeconomic **** Do we have these numbers right?---MKH ****) 
 shown in Table~\ref{tab:typology}.
 We also demonstrate application of the framework
 by calculating energy rebound associated with 
 purchase and use of a fuel-efficient automobile.   
 
-
-%++++++++++++++++++++++++++++++
-\subsection{The microeconomimcs of rebound (GS, 500 words)}
-\label{sec:microecon_of_rebound}
-%++++++++++++++++++++++++++++++
-
-Discussion of the micro-economics of rebound.
-Bring in \citet{Borenstein:2015aa}, 
-\citet{Thomas:2013aa,Thomas:2013ab}, 
-\citet{Gillingham:2013aa,Gillingham:2020aa,Gillingham2016,Gillingham2016a}, etc.
-
-At the end, bring us right up to the question below.
-Or modify the question if you see fit.
-
-What is needed is a comprehensive energy-economy analytical framework for energy rebound.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Question, contribution, and benefits (MKH, 100 words)}
-\label{sec:questions_contribution}
-%++++++++++++++++++++++++++++++
-
-****
-Not a question, rather filling a gap (need).
-****
-
-This paper answers the question:
-\emph{Is it possible to develop a comprehensive framework for energy rebound?} 
-We believe the answer is ``yes.''
 Thus, this paper's contribution to the rebound literature is
-the presentation of a quantitative, micro-economic 
+the development and presentation of a more-comprehensive
 energy-economy rebound analysis framework, 
 a ``comprehensive rebound framework'' for short.
 The comprehensive rebound framework provides the following benefits:
@@ -416,12 +392,6 @@ The comprehensive rebound framework provides the following benefits:
     
 \end{enumerate*}
 %
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Structure of the paper (MKH, 100 words)}
-\label{sec:structure}
-%++++++++++++++++++++++++++++++
 
 The remainder of this paper is structured as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
