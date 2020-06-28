@@ -1,0 +1,145 @@
+% The next command tells RStudio to do "Compile PDF" on book.Rnw,
+% instead of this chapter, thereby eliminating the need to switch back to book.Rnw 
+% before making the book.
+%!TEX root = ../HSB.Rnw
+
+% This file contains the derivation for device effect rebound and net income.
+
+\begin{landscape}
+
+\linespread{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Device Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{\refstepcounter{table} Table~\thetable \label{tab:empeffect}. \bf{\DevEffect}}
+
+\sectionsep{}
+
+%%%%%%%%%% Before Device Effect %%%%%%%%%%
+\derivsection{before}
+{
+% Original energy
+\begin{equation} \label{eq:E_acct_orig}
+  \Eacctorig{}
+\end{equation}
+}
+{
+% Original financial
+\begin{equation} \label{eq:M_acct_orig}
+  \Macctorig{}
+\end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% After Device Effect %%%%%%%%%%
+\derivsection{after ($\adev{ }$)}
+{
+% After device energy
+\begin{equation} \label{eq:E_acct_adev}
+  \Eacctadev{}
+\end{equation}
+}
+{
+% After device financial
+\begin{equation} \label{eq:M_acct_adev}
+  \Macctadev{}
+\end{equation}
+}
+
+\sectionsep{}
+
+%%%%%%%%%% Derivations for Device Effect %%%%%%%%%%
+\derivsection{}
+% Device effect: energy differences
+{
+%%%%%%%%%% Energy Device Effect %%%%%%%%%%
+~
+  
+Take differences to obtain the change in energy consumption, $\Delta \radev{E} \equiv \radev{E} - \rbdev{E}$.
+%
+\begin{equation}
+  \Delta \radev{E} = \Delta \radev{E}_s
+                     + \cancelto{0}{\Delta \radev{E}_{emb}} 
+                     + (\cancelto{0}{\Delta \radev{C}_{\OMd}} 
+                     + \cancelto{0}{\Delta \radev{C}_o}) I_E
+\end{equation}
+%
+Thus, 
+%
+\begin{equation}
+\Delta \radev{E} = \Delta \radev{E}_s \; .
+\end{equation}
+%
+Define
+%
+\begin{equation} \label{eq:Sdot_def}
+\Sdot \equiv -\Delta \radev{E}_s \; ,
+\end{equation}
+%
+such that
+%
+\begin{equation}
+\Delta \radev{E} = -\Sdot \; .
+\end{equation}
+%
+Device effect rebound ($Re_{dev}$) is obtained from 
+%
+\begin{equation}
+Re_{dev} = 1 - \frac{\mathrm{actual \; energy \; savings \; rate}}{\mathrm{expected \; energy \; savings \; rate}} \; .
+\end{equation}
+%
+\begin{equation}
+Re_{dev} = 1 - \frac{-\Delta \radev{E}}{\Sdot} = 1 - \frac{\rate{S}_{dev}}{\Sdot} \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+Re_{dev} = 0 \; . \tag{\ref{eq:Re_dev0}}
+\end{equation}
+%
+After only the device effect and before any other effects, 
+there are no energy takebacks. 
+Thus, $Re_{dev} = 0$.
+%
+}
+{
+%%%%%%%%%% Financial Device Effect %%%%%%%%%%
+~
+    
+Use the monetary constraint ($\rbdev{M} = \radev{M}$) to obtain
+%
+\begin{align}
+  p_E \rbdev{E}_s &+ \cancel{\rbdev{C}_{cap}} + \cancel{\rbdev{C}_{\OMd}} + \cancel{\rbdev{C}_o} + \cancelto{0}{\rbdev{N}} \nonumber \\
+                  &= p_E \radev{E}_s + \cancel{\radev{C}_{cap}} + \cancel{\radev{C}_{\OMd}} + \cancel{\radev{C}_o}  + \radev{N} \; .
+\end{align}
+%
+Prior to the device effect, there are no monetary savings from the EEU ($\rbdev{N} = 0$).
+For the device effect itself, 
+changes in capital; operations, maintenance, and disposal, and other costs are neglected
+($\radev{C}_{cap} = \rbdev{C}_{cap}$, $\radev{C}_{\OMd} = \rbdev{C}_{\OMd}$, and $\radev{C}_o = \rbdev{C}_o$).
+(Changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ 
+are assigned later to the life cycle effect.)
+Solving for $\Delta \radev{N} \equiv \radev{N} - \cancelto{0}{\rbdev{N}}$ gives 
+%
+\begin{equation}
+  \Delta \radev{N} = \radev{N} = p_E(\rbdev{E}_s - \radev{E}_s) = p_E (-\Delta \radev{E}_s) \; .
+\end{equation}
+%
+Substituting Eq.~\ref{eq:Sdot_def} gives
+%
+\begin{equation}
+  \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
+\end{equation}
+%
+$\Delta \radev{N}$ represents the gross monetary savings (energy cost savings, $\rate{G}$) from the EEU, 
+before any energy takeback, thus
+%
+\begin{equation} \label{eq:G_dot}
+  \radev{G} = \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
+\end{equation}
+}
+
+\end{landscape}
