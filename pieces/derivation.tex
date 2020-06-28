@@ -67,10 +67,11 @@ each informs the other.
 
 \input{pieces/deriv1_emplacement_effect.tex}
 
-\input{pieces/deriv1_device_effect.tex}
+
+\input{pieces/deriv1_device_effect.tex}       % Delete later.
 
 
-\input{pieces/deriv2_lifecycle_effect.tex}
+\input{pieces/deriv2_lifecycle_effect.tex}    % Delete later.
 
 
 \input{pieces/deriv3_substitution_effect.tex}
@@ -144,6 +145,8 @@ we obtain a convenient form
 \label{sec:Re_dev}
 %------------------------------
 
+**** Delete later. ****
+
 As shown in Table~\ref{tab:deveffect} and Eq.~\ref{eq:Re_dev0}, 
 rebound from the device effect is $Re_{dev} = 0$.
 
@@ -152,6 +155,8 @@ rebound from the device effect is $Re_{dev} = 0$.
 \subsubsection{\Lceffect{}} 
 \label{sec:Re_lc}
 %------------------------------
+
+**** Delete later. ****
 
 Rebound effects can occur at any point in the life cycle of an energy conversion device,
 from manufacturing and distribution 
@@ -169,17 +174,47 @@ two distinct life cycle rebound effects:
 \end{enumerate*}
 
 
+%------------------------------
+\subsubsection{\Empleffect{}}
+\label{sec:Re_emp}
+%------------------------------
+
+The emplacement effect accounts for emplacing the device in service.
+No behavior changes occur.
+The direct effect of the EEU is energy savings and energy cost savings.
+The indirect effects of the EEU are changes in the embodied energy rate and
+the operations, maintenance, and disposal cost rates.
+Both direct and indirect emplacement effects have rebound. 
+as discussed below.
+
+
+%..............................
+\paragraph{$Re_{dempl}$}
+\label{sec:Re_dempl}
+%..............................
+
+As shown in Table~\ref{tab:empeffect},
+the direct rebound from the emplacement effect is
+$Re_{dempl} = 0$.
+This result is expected, 
+because in the absence of behavior changes
+there is no takeback of energy savings
+at the upgraded device.
+
+
 %..............................
 \paragraph{$Re_{emb}$}
 \label{sec:Re_emb}
 %..............................
 
+The first component of indirect rebound for the emplacement effect
+involves embodied energy.
 We define embodied energy consistent with the energy/exergy analysis literature
-to be the sum of all final energy consumed (direct and indirect)
-in the production of the device.
+to be the sum of all final energy consumed
+in the production of the energy conversion device.
 The EEU
 causes the embodied final energy of the device to change
-from $\rblc{E}_{emb}$ to $\ralc{E}_{emb}$.
+from $\rbempl{E}_{emb}$ to $\raempl{E}_{emb}$.
 
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
@@ -195,9 +230,9 @@ In the aggregate, staggered replacements
 work out to about the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
-($\bdev{t}$ and $\alc{t}$, respectively)
+($\bempl{t}$ and $\aempl{t}$, respectively)
 to obtain embodied energy rates, such that
-$\rbdev{E}_{emb} = \bdev{E}_{emb} / \bdev{t}$
+$\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}$
 and 
 $\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by

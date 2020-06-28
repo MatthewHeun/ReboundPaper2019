@@ -18,7 +18,7 @@
 
 % Create "after" commands
 \newcommand{\orig}[1]{#1}
-\newcommand{\aemp}[1]{{#1}^*}
+\newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\adev}[1]{{#1}^\prime}  % Delete later
 \newcommand{\alc}[1]{{#1}^*}        % Delete later
 \newcommand{\asub}[1]{\hat{#1}}
@@ -26,7 +26,7 @@
 \newcommand{\aprod}[1]{\tilde{#1}}
 
 % Create the "before" commands
-\newcommand{\bemp}[1]{\orig{#1}}
+\newcommand{\bempl}[1]{\orig{#1}}
 \newcommand{\bdev}[1]{\orig{#1}}   % Delete later
 \newcommand{\blc}[1]{\adev{#1}}    % Delete later
 \newcommand{\bsub}[1]{\alc{#1}}
@@ -36,7 +36,7 @@
 % Decoration combinations
 % Rates after
 \newcommand{\rorig}[1]{\orig{\rate{#1}}}
-\newcommand{\raemp}[1]{\aemp{\rate{#1}}}
+\newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\radev}[1]{\adev{\rate{#1}}}    % Delete later
 \newcommand{\ralc}[1]{\alc{\rate{#1}}}      % Delete later
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
@@ -44,14 +44,14 @@
 \newcommand{\raprod}[1]{\aprod{\rate{#1}}}
 
 % Rates before
-\newcommand{\rbemp}[1]{\rorig{#1}}
+\newcommand{\rbempl}[1]{\rorig{#1}}
 \newcommand{\rbdev}[1]{\rorig{#1}}        % Delete later
 \newcommand{\rblc}[1]{\radev{#1}}         % Delete later
 \newcommand{\rbsub}[1]{\ralc{#1}}
 \newcommand{\rbinc}[1]{\rasub{#1}}
 \newcommand{\rbprod}[1]{\rainc{#1}}
 
-%%%%% Subscript spacing
+%%%%% Subscript kerning
 
 \newcommand{\life}{li\!f\!e}      % Delete later
 \newcommand{\OM}{O\!M}
@@ -66,7 +66,7 @@
 
 %%%%% Colors
 
-\newcommand{\empcolor}{red!25!white}
+\newcommand{\emplcolor}{red!25!white}
 \newcommand{\devcolor}{red!25!white}          % Delete later
 \newcommand{\lccolor}{orange!25!white}        % Delete later
 \newcommand{\subcolor}{orange!25!white}
@@ -97,10 +97,10 @@ bottom=2pt}
 %%%%% Colored phrases
 
 % Emplacement effect
-\newcommand{\empeffect}{\inlinebox[\empcolor]{emplacement effect}}
-\newcommand{\empeffectadj}{\inlinebox[\empcolor]{emplacement-effect}}
-\newcommand{\Empeffect}{\inlinebox[\empcolor]{Emplacement effect}}
-\newcommand{\EmpEffect}{\inlinebox[\empcolor]{Emplacement Effect}}
+\newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
+\newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
+\newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
+\newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
 
 % Device effect
 \newcommand{\deveffect}{\inlinebox[\devcolor]{device upgrade}}        % Delete later
@@ -228,16 +228,16 @@ bottom=2pt}
 % Equations
 
 % Original
-\newcommand{\Eacctorig}{\rbemp{E} = \rbemp{E}_s + \rbemp{E}_{emb} + (\rbemp{C}_{\OMd} + \rbemp{C}_o) I_E}
-\newcommand{\Macctorig}{\rbemp{M} = p_E \rbemp{E}_s + \rbemp{C}_{cap} + \rbemp{C}_{\OMd} + \rbemp{C}_o + \rbemp{N}}
+\newcommand{\Eacctorig}{\rbempl{E} = \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{\OMd} + \rbempl{C}_o) I_E}
+\newcommand{\Macctorig}{\rbempl{M} = p_E \rbempl{E}_s + \rbempl{C}_{cap} + \rbempl{C}_{\OMd} + \rbempl{C}_o + \rbempl{N}}
 
 % Before emplacement effect (same as original)
 \newcommand{\Eacctbemp}{\Eacctorig}      
 \newcommand{\Macctbemp}{\Macctorig}      
 
 % After emplacement effect
-\newcommand{\Eacctaemp}{\raemp{E} = \raemp{E}_s + \raemp{E}_{emb} + (\raemp{C}_{\OMd} + \raemp{C}_o) I_E}                  
-\newcommand{\Macctaemp}{\raemp{M} = p_E \raemp{E}_s + \raemp{C}_{cap} + \raemp{C}_{\OMd} + \raemp{C}_o + \raemp{N}}         
+\newcommand{\Eacctaemp}{\raempl{E} = \raempl{E}_s + \raempl{E}_{emb} + (\raempl{C}_{\OMd} + \raempl{C}_o) I_E}                  
+\newcommand{\Macctaemp}{\raempl{M} = p_E \raempl{E}_s + \raempl{C}_{cap} + \raempl{C}_{\OMd} + \raempl{C}_o + \raempl{N}}         
 
 
 
