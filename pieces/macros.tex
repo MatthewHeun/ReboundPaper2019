@@ -18,15 +18,17 @@
 
 % Create "after" commands
 \newcommand{\orig}[1]{#1}
-\newcommand{\adev}[1]{{#1}^\prime}
-\newcommand{\alc}[1]{{#1}^*}
+\newcommand{\aemp}[1]{{#1}^*}
+\newcommand{\adev}[1]{{#1}^\prime}  % Delete later
+\newcommand{\alc}[1]{{#1}^*}        % Delete later
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
 \newcommand{\aprod}[1]{\tilde{#1}}
 
 % Create the "before" commands
-\newcommand{\bdev}[1]{\orig{#1}}
-\newcommand{\blc}[1]{\adev{#1}}
+\newcommand{\bemp}[1]{\orig{#1}}
+\newcommand{\bdev}[1]{\orig{#1}}   % Delete later
+\newcommand{\blc}[1]{\adev{#1}}    % Delete later
 \newcommand{\bsub}[1]{\alc{#1}}
 \newcommand{\binc}[1]{\asub{#1}}
 \newcommand{\bprod}[1]{\ainc{#1}}
@@ -34,22 +36,24 @@
 % Decoration combinations
 % Rates after
 \newcommand{\rorig}[1]{\orig{\rate{#1}}}
-\newcommand{\radev}[1]{\adev{\rate{#1}}}
-\newcommand{\ralc}[1]{\alc{\rate{#1}}}
+\newcommand{\raemp}[1]{\aemp{\rate{#1}}}
+\newcommand{\radev}[1]{\adev{\rate{#1}}}    % Delete later
+\newcommand{\ralc}[1]{\alc{\rate{#1}}}      % Delete later
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
 \newcommand{\raprod}[1]{\aprod{\rate{#1}}}
 
 % Rates before
-\newcommand{\rbdev}[1]{\rorig{#1}}
-\newcommand{\rblc}[1]{\radev{#1}}
+\newcommand{\rbemp}[1]{\rorig{#1}}
+\newcommand{\rbdev}[1]{\rorig{#1}}        % Delete later
+\newcommand{\rblc}[1]{\radev{#1}}         % Delete later
 \newcommand{\rbsub}[1]{\ralc{#1}}
 \newcommand{\rbinc}[1]{\rasub{#1}}
 \newcommand{\rbprod}[1]{\rainc{#1}}
 
 %%%%% Subscript spacing
 
-\newcommand{\life}{li\!f\!e}
+\newcommand{\life}{li\!f\!e}      % Delete later
 \newcommand{\OM}{O\!M}
 \newcommand{\OMd}{O\!M\!d}
 \newcommand{\productivity}{pr\!od}
@@ -62,9 +66,10 @@
 
 %%%%% Colors
 
-\newcommand{\devcolor}{red!25!white}
-\newcommand{\lccolor}{orange!25!white}
-\newcommand{\subcolor}{yellow!25!white}
+\newcommand{\empcolor}{red!25!white}
+\newcommand{\devcolor}{red!25!white}          % Delete later
+\newcommand{\lccolor}{orange!25!white}        % Delete later
+\newcommand{\subcolor}{orange!25!white}
 \newcommand{\inccolor}{green!25!white}
 \newcommand{\prodcolor}{blue!25!white}
 
@@ -91,17 +96,23 @@ bottom=2pt}
 
 %%%%% Colored phrases
 
+% Emplacement effect
+\newcommand{\empeffect}{\inlinebox[\empcolor]{emplacement effect}}
+\newcommand{\empeffectadj}{\inlinebox[\empcolor]{emplacement-effect}}
+\newcommand{\Empeffect}{\inlinebox[\empcolor]{Emplacement effect}}
+\newcommand{\EmpEffect}{\inlinebox[\empcolor]{Emplacement Effect}}
+
 % Device effect
-\newcommand{\deveffect}{\inlinebox[\devcolor]{device upgrade}}
-\newcommand{\deveffectadj}{\inlinebox[\devcolor]{device-upgrade}}
-\newcommand{\Deveffect}{\inlinebox[\devcolor]{Device upgrade}}
-\newcommand{\DevEffect}{\inlinebox[\devcolor]{Device Upgrade}}
+\newcommand{\deveffect}{\inlinebox[\devcolor]{device upgrade}}        % Delete later
+\newcommand{\deveffectadj}{\inlinebox[\devcolor]{device-upgrade}}     % Delete later
+\newcommand{\Deveffect}{\inlinebox[\devcolor]{Device upgrade}}        % Delete later
+\newcommand{\DevEffect}{\inlinebox[\devcolor]{Device Upgrade}}        % Delete later
 
 % Life cycle effect
-\newcommand{\lceffect}{\inlinebox[\lccolor]{life cycle effect}}
-\newcommand{\lceffectadj}{\inlinebox[\lccolor]{life-cycle-effect}}
-\newcommand{\Lceffect}{\inlinebox[\lccolor]{Life cycle effect}}
-\newcommand{\LcEffect}{\inlinebox[\lccolor]{Life cycle Effect}}
+\newcommand{\lceffect}{\inlinebox[\lccolor]{life cycle effect}}       % Delete later
+\newcommand{\lceffectadj}{\inlinebox[\lccolor]{life-cycle-effect}}    % Delete later
+\newcommand{\Lceffect}{\inlinebox[\lccolor]{Life cycle effect}}       % Delete later
+\newcommand{\LcEffect}{\inlinebox[\lccolor]{Life cycle Effect}}       % Delete later
 
 % Substitution effect
 \newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
@@ -217,29 +228,44 @@ bottom=2pt}
 % Equations
 
 % Original
-\newcommand{\Eacctorig}{\rbdev{E} = \rbdev{E}_s + \rbdev{E}_{emb} + (\rbdev{C}_{\OMd} + \rbdev{C}_o) I_E}
-\newcommand{\Macctorig}{\rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o + \rbdev{N}}
+\newcommand{\Eacctorig}{\rbemp{E} = \rbemp{E}_s + \rbemp{E}_{emb} + (\rbemp{C}_{\OMd} + \rbemp{C}_o) I_E}
+\newcommand{\Macctorig}{\rbemp{M} = p_E \rbemp{E}_s + \rbemp{C}_{cap} + \rbemp{C}_{\OMd} + \rbemp{C}_o + \rbemp{N}}
 
-% Before device effect (save as original)
-\newcommand{\Eacctbdev}{\Eacctorig}
-\newcommand{\Macctbdev}{\Macctorig}
+% Before emplacement effect (same as original)
+\newcommand{\Eacctbemp}{\Eacctorig}      
+\newcommand{\Macctbemp}{\Macctorig}      
+
+% After emplacement effect
+\newcommand{\Eacctaemp}{\raemp{E} = \raemp{E}_s + \raemp{E}_{emb} + (\raemp{C}_{\OMd} + \raemp{C}_o) I_E}                  
+\newcommand{\Macctaemp}{\raemp{M} = p_E \raemp{E}_s + \raemp{C}_{cap} + \raemp{C}_{\OMd} + \raemp{C}_o + \raemp{N}}         
+
+
+
+% Before device effect (same as original)
+\newcommand{\Eacctbdev}{\Eacctorig}      % Delete later
+\newcommand{\Macctbdev}{\Macctorig}      % Delete later
 
 % After device effect
-\newcommand{\Eacctadev}{\radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
-\newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}
+\newcommand{\Eacctadev}{\radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}             % Delete later
+\newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}   % Delete later
 
 % Before life cycle effect (same as after device effect)
 % \newcommand{\Eacctblc}{\Eacctadev}
-\newcommand{\Eacctblc}{\radev{E} = \radev{E}_s + \rbdev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
-\newcommand{\Macctblc}{\Macctadev}
+\newcommand{\Eacctblc}{\radev{E} = \radev{E}_s + \rbdev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}             % Delete later
+\newcommand{\Macctblc}{\Macctadev}       % Delete later
 
 % After life cycle effect
-\newcommand{\Eacctalc}{\ralc{E} = \ralc{E}_s + \ralc{E}_{emb} + (\ralc{C}_{\OMd} + \ralc{C}_o) I_E}
-\newcommand{\Macctalc}{\ralc{M} = p_E \ralc{E}_s + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o + \ralc{N}}
+\newcommand{\Eacctalc}{\ralc{E} = \ralc{E}_s + \ralc{E}_{emb} + (\ralc{C}_{\OMd} + \ralc{C}_o) I_E}                  % Delete later
+\newcommand{\Macctalc}{\ralc{M} = p_E \ralc{E}_s + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o + \ralc{N}}         % Delete later
 
 % Before substitution effect (same as after life cycle effect)
-\newcommand{\Eacctbsub}{\Eacctalc}
-\newcommand{\Macctbsub}{\Macctalc}
+% \newcommand{\Eacctbsub}{\Eacctalc}                    % Delete later
+% \newcommand{\Macctbsub}{\Macctalc}                    % Delete later
+
+% Before substitution effect (same as after emplacement effect)
+\newcommand{\Eacctbsub}{\Eacctaemp}                    % Delete later
+\newcommand{\Macctbsub}{\Macctaemp}                    % Delete later
+
 
 % After substitution effect
 \newcommand{\Eacctasub}{\rasub{E} = \rasub{E}_s + \rasub{E}_{emb} + (\rasub{C}_{\OMd} + \rasub{C}_o) I_E}

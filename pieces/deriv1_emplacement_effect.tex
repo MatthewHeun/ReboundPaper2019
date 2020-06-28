@@ -3,20 +3,20 @@
 % before making the book.
 %!TEX root = ../HSB.Rnw
 
-% This file contains the derivation for device effect rebound and net income.
+% This file contains the derivation for emplacement effect rebound terms and net income.
 
 \begin{landscape}
 
 \linespread{1}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% Device Effect %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\derivheader{\refstepcounter{table} Table~\thetable \label{tab:empeffect}. \bf{\DevEffect}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Emplacement Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\derivheader{\refstepcounter{table} Table~\thetable \label{tab:empeffect}. \bf{\EmpEffect}}
 
 \sectionsep{}
 
-%%%%%%%%%% Before Device Effect %%%%%%%%%%
+%%%%%%%%%% Before Emplacement Effect %%%%%%%%%%
 \derivsection{before}
 {
 % Original energy
@@ -33,77 +33,69 @@
 
 \sectionsep{}
 
-%%%%%%%%%% After Device Effect %%%%%%%%%%
-\derivsection{after ($\adev{ }$)}
+%%%%%%%%%% After Emplacement Effect %%%%%%%%%%
+\derivsection{after ($\aemp{ }$)}
 {
 % After device energy
-\begin{equation} \label{eq:E_acct_adev}
-  \Eacctadev{}
+\begin{equation} \label{eq:E_acct_aemp}
+  \Eacctaemp{}
 \end{equation}
 }
 {
 % After device financial
-\begin{equation} \label{eq:M_acct_adev}
-  \Macctadev{}
+\begin{equation} \label{eq:M_acct_aemp}
+  \Macctaemp{}
 \end{equation}
 }
 
 \sectionsep{}
 
-%%%%%%%%%% Derivations for Device Effect %%%%%%%%%%
+%%%%%%%%%% Derivations for Emplacement Effect %%%%%%%%%%
 \derivsection{}
-% Device effect: energy differences
+% Emplacement effect: energy differences
 {
-%%%%%%%%%% Energy Device Effect %%%%%%%%%%
+%%%%%%%%%% Energy Emplacement Effect %%%%%%%%%%
 ~
   
-Take differences to obtain the change in energy consumption, $\Delta \radev{E} \equiv \radev{E} - \rbdev{E}$.
+Take differences to obtain the change in energy consumption, $\Delta \raemp{E} \equiv \raemp{E} - \rbemp{E}$.
 %
 \begin{equation}
-  \Delta \radev{E} = \Delta \radev{E}_s
-                     + \cancelto{0}{\Delta \radev{E}_{emb}} 
-                     + (\cancelto{0}{\Delta \radev{C}_{\OMd}} 
-                     + \cancelto{0}{\Delta \radev{C}_o}) I_E
+  \Delta \raemp{E} = \Delta \raemp{E}_s
+                     + \Delta \raemp{E}_{emb}
+                     + (\Delta \raemp{C}_{\OMd}
+                     + \cancelto{0}{\Delta \raemp{C}_o}) I_E
 \end{equation}
 %
 Thus, 
 %
 \begin{equation}
-\Delta \radev{E} = \Delta \radev{E}_s \; .
+\Delta \raemp{E} = \Delta \raemp{E}_s + \Delta \raemp{E}_{emb} + \Delta \raemp{C}_{\OMd} I_E \; .
 \end{equation}
 %
-Define
+Use Eq.~(\ref{eq:Re_def}) and define
 %
 \begin{equation} \label{eq:Sdot_def}
-\Sdot \equiv -\Delta \radev{E}_s \; ,
+\Sdot \equiv -\Delta \raemp{E}_s
 \end{equation}
 %
+to obtain
+%
+\begin{equation}
+Re_{emp} = 1 - \frac{-\Delta \raemp{E}}{\Sdot} 
+         = 1 - \frac{-\Delta \raemp{E}_s}{\Sdot} 
+             - \frac{-\Delta \raemp{E}_{emb}}{\Sdot}
+             - \frac{-\Delta \raemp{C}_{\OMd} I_E}{\Sdot} \; .
+\end{equation}
+%
+Define $Re_{demp} \equiv 1 - \frac{-\Delta \raemp{E}_s}{\Sdot} = 0$, 
+$Re_{iemp} \equiv Re_{emb} + Re_{\OMd}$, 
+$Re_{emb} \equiv \frac{\Delta \raemp{E}_{emb}}{\Sdot}$, and
+$Re_{\OMd} \equiv \frac{\Delta \raemp{C}_{\OMd} I_E}{\Sdot}$, 
 such that
 %
 \begin{equation}
-\Delta \radev{E} = -\Sdot \; .
+Re_{emp} = Re_{demp} + Re_{iemp} \; .
 \end{equation}
-%
-Device effect rebound ($Re_{dev}$) is obtained from 
-%
-\begin{equation}
-Re_{dev} = 1 - \frac{\mathrm{actual \; energy \; savings \; rate}}{\mathrm{expected \; energy \; savings \; rate}} \; .
-\end{equation}
-%
-\begin{equation}
-Re_{dev} = 1 - \frac{-\Delta \radev{E}}{\Sdot} = 1 - \frac{\rate{S}_{dev}}{\Sdot} \; ,
-\end{equation}
-%
-and
-%
-\begin{equation}
-Re_{dev} = 0 \; . \tag{\ref{eq:Re_dev0}}
-\end{equation}
-%
-After only the device effect and before any other effects, 
-there are no energy takebacks. 
-Thus, $Re_{dev} = 0$.
-%
 }
 {
 %%%%%%%%%% Financial Device Effect %%%%%%%%%%
