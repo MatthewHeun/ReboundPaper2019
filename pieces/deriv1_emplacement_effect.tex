@@ -98,39 +98,42 @@ Re_{emp} = Re_{demp} + Re_{iemp} \; .
 \end{equation}
 }
 {
-%%%%%%%%%% Financial Device Effect %%%%%%%%%%
+%%%%%%%%%% Financial Emplacement Effect %%%%%%%%%%
 ~
     
-Use the monetary constraint ($\rbdev{M} = \radev{M}$) to obtain
+Use the monetary constraint ($\rbemp{M} = \raemp{M}$)
+and constant spending on other items ($\rbemp{C}_o = \raemp{C}_o$) to cancel terms to obtain
 %
 \begin{align}
-  p_E \rbdev{E}_s &+ \cancel{\rbdev{C}_{cap}} + \cancel{\rbdev{C}_{\OMd}} + \cancel{\rbdev{C}_o} + \cancelto{0}{\rbdev{N}} \nonumber \\
-                  &= p_E \radev{E}_s + \cancel{\radev{C}_{cap}} + \cancel{\radev{C}_{\OMd}} + \cancel{\radev{C}_o}  + \radev{N} \; .
+  p_E \rbemp{E}_s &+ \rbemp{C}_{cap} + \rbemp{C}_{\OMd} + \cancel{\rbemp{C}_o} + \cancelto{0}{\rbemp{N}} \nonumber \\
+                  &= p_E \raemp{E}_s + \raemp{C}_{cap} + \raemp{C}_{\OMd} + \cancel{\raemp{C}_o}  + \raemp{N} \; .
 \end{align}
 %
-Prior to the device effect, there are no monetary savings from the EEU ($\rbdev{N} = 0$).
-For the device effect itself, 
-changes in capital; operations, maintenance, and disposal, and other costs are neglected
-($\radev{C}_{cap} = \rbdev{C}_{cap}$, $\radev{C}_{\OMd} = \rbdev{C}_{\OMd}$, and $\radev{C}_o = \rbdev{C}_o$).
-(Changes in $\rate{C}_{cap}$, $\rate{C}_{\OMd}$, and $\rate{C}_o$ 
-are assigned later to the life cycle effect.)
-Solving for $\Delta \radev{N} \equiv \radev{N} - \cancelto{0}{\rbdev{N}}$ gives 
+Solving for $\Delta \raemp{N} \equiv \raemp{N} - \cancelto{0}{\rbemp{N}}$ gives 
 %
 \begin{equation}
-  \Delta \radev{N} = \radev{N} = p_E(\rbdev{E}_s - \radev{E}_s) = p_E (-\Delta \radev{E}_s) \; .
+  \Delta \raemp{N} = p_E(\rbemp{E}_s - \raemp{E}_s) 
+                     + \rbemp{C}_{cap} - \raemp{C}_{cap}
+                     + \rbemp{C}_{\OMd} - \raemp{C}_{\OMd} \; .
+\end{equation}
+%
+Rewriting with $\Delta$ terms gives
+%
+\begin{equation}
+  \Delta \raemp{N} = - p_E \Delta \raemp{E}_s - \Delta \raemp{C}_{cap} - \Delta \raemp{C}_{\OMd} \; .
 \end{equation}
 %
 Substituting Eq.~\ref{eq:Sdot_def} gives
 %
 \begin{equation}
-  \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
+  \Delta \raemp{N} = \raemp{N} = p_E \Sdot - \Delta \raemp{C}_{cap} - \Delta \raemp{C}_{\OMd} \; .
 \end{equation}
 %
-$\Delta \radev{N}$ represents the gross monetary savings (energy cost savings, $\rate{G}$) from the EEU, 
-before any energy takeback, thus
+Gross monetary savings ($\rate{G}$) resulting from the EEU, 
+before any energy takeback, is given by 
 %
 \begin{equation} \label{eq:G_dot}
-  \radev{G} = \Delta \radev{N} = \radev{N} = p_E \Sdot \; .
+  \rate{G} = p_E \Sdot \; .
 \end{equation}
 }
 
