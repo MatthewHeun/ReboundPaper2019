@@ -35,7 +35,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $q$ & quantity [--] \\
   $Re$ & rebound [--] \\
   $S$ & energy cost savings [\$] \\
-  $t$ & device lifetime [years] \\
+  $t$ & energy conversion device lifetime [years] \\
   $u$ & utility [utils] \\
   \bottomrule
 \end{tabular}
@@ -76,9 +76,9 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Decoration & Meaning [example units] \\
   \midrule
-  $\orig{X}$ & $X$ originally (before the \deveffect{}) \\
-  $\adev{X}$ & $X$ after the \deveffect{} (before the \lceffect{}) \\
-  $\alc{X}$  & $X$ after the \lceffect{} (before the \subeffect{}) \\
+  $\orig{X}$ & $X$ originally (before the \empleffect{}) \\
+  % $\adev{X}$ & $X$ after the \deveffect{} (before the \lceffect{}) \\
+  $\aempl{X}$  & $X$ after the \empleffect{} (before the \subeffect{}) \\
   $\asub{X}$ & $X$ after the \subeffect{} (before the \inceffect{}) \\
   $\ainc{X}$ & $X$ after the \inceffect{} (before the \prodeffect{}) \\
   $\aprod{X}$ & $X$ after the \prodeffect{} \\
@@ -103,13 +103,14 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $0$ & quantity at an initial time \\
   $cap$ & capital costs \\
   $dev$ & device \\
+  $dempl$ & direct emplacement effect \\
   $dinc$ & direct income effect \\
   $dsub$ & direct substitution effect \\
   $emb$ & embodied \\
   $i$ & index for an other good purchased in the economy \\
+  $iempl$ & indirect emplacement effects \\
   $iinc$ & indirect income effect \\
   $isub$ & indirect substitution effect \\
-  $\life$ & life cycle effect \\
   $o$ & other expenditures (besides energy) in the economy \\
   $\OMd$ & operations, maintenance, and disposal costs \\
   $\productivity$ & productivity effect \\
@@ -138,12 +139,10 @@ $\Delta X$ is also the sum of differences across each stage in Fig.~\ref{fig:flo
 as shown below.
 %
 \begin{align}
-\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \alc{X} + \Delta \adev{X} \nonumber \\
+\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \aempl{X} \nonumber \\
 \Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X})
-            + (\asub{X} - \bsub{X}) + (\alc{X} - \blc{X})
-            + (\adev{X} - \bdev{X}) \nonumber \\
+            + (\asub{X} - \bsub{X}) + (\aempl{X} - \bempl{X}) \nonumber \\
 \Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
-            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\alc{X}} - \cancel{\blc{X}})
-            + (\cancel{\adev{X}} - \bdev{X}) \nonumber \\
+            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\aempl{X}} - \bempl{X}) \nonumber \\
 \Delta X &= \aprod{X} - \orig{X}
 \end{align}

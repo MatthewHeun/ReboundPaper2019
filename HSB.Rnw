@@ -561,9 +561,9 @@ In each subsection, we
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:deveffect}--\ref{tab:prodeffect}
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
 which provide a structure for energy and financial accounting.
-We begin with the \deveffect{}.
+We begin with the \empleffect{}.
 
 
 %++++++++++++++++++++++++++++++
@@ -924,9 +924,10 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The \deveffect{} and previous rebound effects
-(\lceffect{}, \subeffect{}, and \inceffect{})
+The previous rebound effects
+(\empleffect{}, \subeffect{}, and \inceffect{})
 are microeconomic in nature.
+**** Revisit this statement after we finalize our topology.---MKH ****
 In contrast, the productivity effect is macroeconomic.
 At the macro level, we claim that the effect of energy efficiency is expansionary,
 just like other factor-augmenting productivity improvements.
