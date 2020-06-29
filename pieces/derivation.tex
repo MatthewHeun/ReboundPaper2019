@@ -140,30 +140,81 @@ we obtain a convenient form
 \end{equation}
 
 
+% %------------------------------
+% \subsubsection{\Deveffect} 
+% \label{sec:Re_dev}
+% %------------------------------
+% 
+% **** Delete later. ****
+% 
+% As shown in Table~\ref{tab:deveffect} and Eq.~\ref{eq:Re_dev0}, 
+% rebound from the device effect is $Re_{dev} = 0$.
+
+
+% %------------------------------
+% \subsubsection{\Lceffect{}} 
+% \label{sec:Re_lc}
+% %------------------------------
+% 
+% **** Delete later. ****
+% 
+% Rebound effects can occur at any point in the life cycle of an energy conversion device,
+% from manufacturing and distribution 
+% to the use phase (operations and maintenance),
+% and finally to disposal.
+% For simplicity, we group operations and maintenance with disposal to form
+% two distinct life cycle rebound effects:
+% %
+% \begin{enumerate*}[label={(\alph*)}]
+% 	
+%   \item an embodied energy effect ($Re_{emb}$) and 
+%   
+%   \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
+%     
+% \end{enumerate*}
+
+
 %------------------------------
-\subsubsection{\Deveffect} 
-\label{sec:Re_dev}
+\subsubsection{\Empleffect{}}
+\label{sec:Re_emp}
 %------------------------------
 
-**** Delete later. ****
+The emplacement effect accounts for entering the energy conversion device into service only.
+No behavior changes occur.
+The direct emplacement effect of the EEU is device energy savings and energy cost savings.
+The indirect emplacement effects of the EEU produce changes in the embodied energy rate and
+the operations, maintenance, and disposal cost rates.
+By definition, the direct emplacement effect has no rebound. 
+However, indirect emplacement effects may incur energy rebound.
+Both direct and indirect emplacement effects are discussed below.
 
-As shown in Table~\ref{tab:deveffect} and Eq.~\ref{eq:Re_dev0}, 
-rebound from the device effect is $Re_{dev} = 0$.
+
+%..............................
+\paragraph{$Re_{dempl}$}
+\label{sec:Re_dempl}
+%..............................
+
+As shown in Table~\ref{tab:empleffect},
+the direct rebound from the emplacement effect is
+$Re_{dempl} = 0$.
+This result is expected, 
+because, in the absence of behavior changes,
+there is no takeback of energy savings
+at the upgraded device.
 
 
-%------------------------------
-\subsubsection{\Lceffect{}} 
-\label{sec:Re_lc}
-%------------------------------
+%..............................
+\paragraph{$Re_{iempl}$} 
+\label{sec:Re_iempl}
+%..............................
 
-**** Delete later. ****
-
-Rebound effects can occur at any point in the life cycle of an energy conversion device,
+Indirect emplacement rebound effects 
+can occur at any point in the life cycle of an energy conversion device,
 from manufacturing and distribution 
 to the use phase (operations and maintenance),
 and finally to disposal.
 For simplicity, we group operations and maintenance with disposal to form
-two distinct life cycle rebound effects:
+two distinct indirect emplacement rebound effects:
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -172,34 +223,6 @@ two distinct life cycle rebound effects:
   \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
     
 \end{enumerate*}
-
-
-%------------------------------
-\subsubsection{\Empleffect{}}
-\label{sec:Re_emp}
-%------------------------------
-
-The emplacement effect accounts for emplacing the device in service.
-No behavior changes occur.
-The direct effect of the EEU is energy savings and energy cost savings.
-The indirect effects of the EEU are changes in the embodied energy rate and
-the operations, maintenance, and disposal cost rates.
-Both direct and indirect emplacement effects have rebound. 
-as discussed below.
-
-
-%..............................
-\paragraph{$Re_{dempl}$}
-\label{sec:Re_dempl}
-%..............................
-
-As shown in Table~\ref{tab:empeffect},
-the direct rebound from the emplacement effect is
-$Re_{dempl} = 0$.
-This result is expected, 
-because in the absence of behavior changes
-there is no takeback of energy savings
-at the upgraded device.
 
 
 %..............................
@@ -234,13 +257,13 @@ Thus, we allocate embodied energy over the life of the original and upgraded dev
 to obtain embodied energy rates, such that
 $\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}$
 and 
-$\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
+$\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\ralc{E}_{emb} - \rbdev{E}_{emb}$.
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$.
 After substitution and algebraic rearrangement,
 the change in embodied energy rate due to the EEU can be expressed as
-$\left( \frac{\alc{E}_{emb}}{\bdev{E}_{emb}}
-  \frac{\bdev{t}}{\alc{t}} - 1 \right) \rbdev{E}_{emb}$, 
+$\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
+  \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}$, 
 a term that represents energy savings taken back due to embodied energy effects.
 Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy rebound as
 %
@@ -250,14 +273,14 @@ Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy reb
 
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
-$(\alc{E}_{emb}/\bdev{E}_{emb})(\bdev{t}/\alc{t}) - 1$.
+$(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}/\aempl{t}) - 1$.
 Typically, but not always,
 rising energy efficiency is associated with increased device complexity
 and more embodied energy,
-such that $\alc{E}_{emb} > \bdev{E}_{emb}$ and $Re_{emb} > 0$.
+such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
-($\alc{t} > \bdev{t}$),
-$\ralc{E}_{emb} - \rbdev{E}_{emb}$ can be negative,
+($\aempl{t} > \bempl{t}$),
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device.
 
 
@@ -267,26 +290,28 @@ meaning that the upgraded device has a lower embodied energy rate than the origi
 %..............................
 
 In addition to embodied energy effects, 
-rebound can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
-Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rblc{C}_{\OM}$).
-Disposal costs (e.g., $\blc{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
+indirect emplacement rebound 
+can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
+Operations and maintenance expenditures are typically modeled as a per-year expense, 
+a rate (e.g., $\rbempl{C}_{\OM}$).
+Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
-of the original and upgraded devices ($\blc{t}$ and $\alc{t}$, respectively)
-to form cost rates such that $\rblc{C}_{\OMd} = \rblc{C}_{\OM} + \blc{C}_d/\blc{t}$
+of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
+to form cost rates such that $\rbempl{C}_{\OMd} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
 and
-$\ralc{C}_{\OMd} = \ralc{C}_{\OM} + \alc{C}_d/\alc{t}$.
+$\raempl{C}_{\OMd} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
 
 We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
-is given by $\Delta \ralc{C}_{\OMd} I_E$.
+is given by $\Delta \raempl{C}_{\OMd} I_E$.
 This term represents energy takeback, so operations, maintenance, and disposal rebound is given by
 %
 \begin{equation} \label{eq:Re_OMd_def}
-  Re_{\OMd} = \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot} \; ,
+  Re_{\OMd} = \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot} \; ,
 \end{equation}
 %
-as shown in Table~\ref{tab:lceffect}.
+as shown in Table~\ref{tab:empleffect}.
 Slight rearrangement gives
 %
 \begin{equation}
@@ -294,7 +319,7 @@ Slight rearrangement gives
 \end{equation}
 
 Rebound from operations, maintenance, and disposal can be positive or negative,
-depending on the sign of the term $\ralc{C}_{\OMd}/\rblc{C}_{\OMd} - 1$.
+depending on the sign of the term $\raempl{C}_{\OMd}/\rbempl{C}_{\OMd} - 1$.
 
 
 %------------------------------
