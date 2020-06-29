@@ -45,7 +45,6 @@
 
 %%%%% Subscript kerning
 
-\newcommand{\life}{li\!f\!e}      % Delete later
 \newcommand{\OM}{O\!M}
 \newcommand{\OMd}{O\!M\!d}
 \newcommand{\productivity}{pr\!od}
@@ -118,7 +117,6 @@ bottom=2pt}
 %   #2: text inside the minipage
 %
 \newcommand{\mptable}[2]{\begin{minipage}{#1\linewidth} \useshortskip{} \begin{equation} #2 \end{equation} \end{minipage}}
-
 
 
 %%%%% Oft-used references
@@ -201,8 +199,6 @@ bottom=2pt}
 }
 
 
-
-
 % Equations
 
 % Original
@@ -210,40 +206,16 @@ bottom=2pt}
 \newcommand{\Macctorig}{\rbempl{M} = p_E \rbempl{E}_s + \rbempl{C}_{cap} + \rbempl{C}_{\OMd} + \rbempl{C}_o + \rbempl{N}}
 
 % Before emplacement effect (same as original)
-\newcommand{\Eacctbemp}{\Eacctorig}      
-\newcommand{\Macctbemp}{\Macctorig}      
+\newcommand{\Eacctbempl}{\Eacctorig}      
+\newcommand{\Macctbempl}{\Macctorig}      
 
 % After emplacement effect
-\newcommand{\Eacctaemp}{\raempl{E} = \raempl{E}_s + \raempl{E}_{emb} + (\raempl{C}_{\OMd} + \raempl{C}_o) I_E}                  
-\newcommand{\Macctaemp}{\raempl{M} = p_E \raempl{E}_s + \raempl{C}_{cap} + \raempl{C}_{\OMd} + \raempl{C}_o + \raempl{N}}         
-
-
-
-% Before device effect (same as original)
-\newcommand{\Eacctbdev}{\Eacctorig}      % Delete later
-\newcommand{\Macctbdev}{\Macctorig}      % Delete later
-
-% After device effect
-\newcommand{\Eacctadev}{\radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}             % Delete later
-\newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}   % Delete later
-
-% Before life cycle effect (same as after device effect)
-% \newcommand{\Eacctblc}{\Eacctadev}
-\newcommand{\Eacctblc}{\radev{E} = \radev{E}_s + \rbdev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}             % Delete later
-\newcommand{\Macctblc}{\Macctadev}       % Delete later
-
-% After life cycle effect
-\newcommand{\Eacctalc}{\ralc{E} = \ralc{E}_s + \ralc{E}_{emb} + (\ralc{C}_{\OMd} + \ralc{C}_o) I_E}                  % Delete later
-\newcommand{\Macctalc}{\ralc{M} = p_E \ralc{E}_s + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o + \ralc{N}}         % Delete later
-
-% Before substitution effect (same as after life cycle effect)
-% \newcommand{\Eacctbsub}{\Eacctalc}                    % Delete later
-% \newcommand{\Macctbsub}{\Macctalc}                    % Delete later
+\newcommand{\Eacctaempl}{\raempl{E} = \raempl{E}_s + \raempl{E}_{emb} + (\raempl{C}_{\OMd} + \raempl{C}_o) I_E}                  
+\newcommand{\Macctaempl}{\raempl{M} = p_E \raempl{E}_s + \raempl{C}_{cap} + \raempl{C}_{\OMd} + \raempl{C}_o + \raempl{N}}         
 
 % Before substitution effect (same as after emplacement effect)
-\newcommand{\Eacctbsub}{\Eacctaemp}                    % Delete later
-\newcommand{\Macctbsub}{\Macctaemp}                    % Delete later
-
+\newcommand{\Eacctbsub}{\Eacctaempl}
+\newcommand{\Macctbsub}{\Macctaempl}
 
 % After substitution effect
 \newcommand{\Eacctasub}{\rasub{E} = \rasub{E}_s + \rasub{E}_{emb} + (\rasub{C}_{\OMd} + \rasub{C}_o) I_E}
