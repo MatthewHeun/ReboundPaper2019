@@ -1022,7 +1022,7 @@ we arrive at an expression for \prodeffectadj{} rebound:
 
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
-(\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
+(\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.(~\ref{eq:Re_iinc})) and
 productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
