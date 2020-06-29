@@ -407,25 +407,25 @@ Section~\ref{sec:conclusion} concludes.
 In this section, we develop a mathematical model 
 for the comprehensive rebound framework.
 We assume a device (say, an automobile)
-that consumes final energy (say, gasoline) at a rate $\rbdev{E}$ (in MJ/year).
+that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $p_E$ (in \$/MJ).
-The device provides a rate of energy service $\rbdev{q}_s$ (in vehicle km/year)
-with final-energy-to-service efficiency $\bdev{\eta}$ (in km/MJ).
+The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
+with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
-$\aprod{\eta} > \bdev{\eta}$,
+$\aprod{\eta} > \bempl{\eta}$,
 typically, but not always,
 at an increased financial cost rate to
 procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
-$\raprod{C}_{cap} > \rbdev{C}_{cap}$ and 
-$\raprod{C}_{\OMd} > \rbdev{C}_{\OMd}$.
+$\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
+$\raprod{C}_{\OMd} > \rbempl{C}_{\OMd}$.
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
-($\aprod{p}_E = \bdev{p}_E$),
+($\aprod{p}_E = \bempl{p}_E$),
 so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
@@ -496,7 +496,7 @@ Simplifying gives
   Re = \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
-Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
+Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
 
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
@@ -561,24 +561,28 @@ In each subsection, we
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:deveffect}--\ref{tab:prodeffect}
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
 which provide a structure for energy and financial accounting.
-We begin with the \deveffect{}.
+We begin with the \empleffect{}.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{\Deveffect}
-\label{sec:dev_effect_main_paper}
+\subsection{\Empleffect}
+\label{sec:empl_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The \deveffect{} involves performance of the EEU, but
-no other changes.
-Because no other changes are considered,
+The emplacement effect accounts for performance of the EEU only.
+No behavior changes occur.
+The direct effect of emplacement of the EEU is device energy savings and energy cost savings.
+The indirect effects of emplacement of the EEU are changes in the embodied energy rate and
+the operations, maintenance, and disposal cost rates.
+
+Because no behavior changes are considered,
 actual and expected energy savings are identical
-across the \deveffect{}, namely
+across the direct emplacement effect namely
 %
 \begin{equation} \label{eq:S_dot_def}
-  \Sdot \equiv \rbdev{E}_s - \radev{E}_s
+  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s
 \end{equation}
 %
 Appendix~\ref{sec:Sdot} shows that
@@ -587,23 +591,17 @@ Appendix~\ref{sec:Sdot} shows that
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-Because actual and expected energy savings are identical,
-\deveffectadj{} rebound is
+By definition, the direct emplacement effect has no rebound, 
+because actual and expected energy savings are identical.
+(See Table~\ref{tab:empleffect}.)
 %
-\begin{equation} \label{eq:Re_dev0}
-  Re_{dev} = 0 \; ,
+\begin{equation} \label{eq:Re_dempl0}
+  Re_{dempl} = 0
 \end{equation}
-%
-as shown in Table~\ref{tab:deveffect}.
 
-
-%++++++++++++++++++++++++++++++
-\subsection{\Lceffect}
-\label{sec:lc_effect_main_paper}
-%++++++++++++++++++++++++++++++
-
-The \lceffect{} addresses the rebound implications of aspects
-of the life cycle of the energy conversion device, including 
+On the other hand, energy rebound may be caused by indirect emplacement effects, which
+account for implications of
+the life cycle of the energy conversion device, including 
 energy embodied by manufacturing ($emb$) and
 operations, maintenance, and disposal ($\OMd$).
 
@@ -615,7 +613,7 @@ prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 The EEU
 causes the embodied final energy of the device to change
-from $\bdev{E}_{emb}$ to $\alc{E}_{emb}$.
+from $\bempl{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
@@ -628,13 +626,13 @@ In the aggregate, evenly-spaced (in time) replacements
 work out to the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
-($\bdev{t}$ and $\alc{t}$, respectively)
+($\bempl{t}$ and $\aempl{t}$, respectively)
 to obtain embodied energy rates, such that
-$\rbdev{E}_{emb} = \bdev{E}_{emb} / \bdev{t}$
+$\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}$
 and 
-$\ralc{E}_{emb} = \alc{E}_{emb} / \alc{t}$.
+$\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\ralc{E}_{emb} - \rbdev{E}_{emb}$.
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$.
 The expression for embodied energy rebound is 
 %
 \begin{equation} \label{eq:Re_emb}
@@ -643,32 +641,33 @@ The expression for embodied energy rebound is
 
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
-$(\alc{E}_{emb}/\bdev{E}_{emb})(\bdev{t}/\alc{t}) - 1$.
+$(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}/\aempl{t}) - 1$.
 Typically, but not always,
 rising energy efficiency is associated with increased device complexity
 and more embodied energy,
-such that $\alc{E}_{emb} > \bdev{E}_{emb}$ and $Re_{emb} > 0$.
+such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
-($\alc{t} > \bdev{t}$),
-$\ralc{E}_{emb} - \rbdev{E}_{emb}$ can be negative,
+($\aempl{t} > \bempl{t}$),
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device.
 See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
-\lceffect{} rebound accounts for
+indirect emplacement effect rebound accounts for
 energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
-Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rblc{C}_{\OM}$).
-Disposal costs (e.g., $\blc{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
+Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_{\OM}$).
+Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
+at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
-of the original and upgraded devices ($\blc{t}$ and $\alc{t}$, respectively)
-to form cost rates such that $\rblc{C}_{\OMd} = \rblc{C}_{\OM} + \blc{C}_d/\blc{t}$
+of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
+to form cost rates such that $\rbempl{C}_{\OMd} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
 and
-$\ralc{C}_{\OMd} = \ralc{C}_{\OM} + \alc{C}_d/\alc{t}$.
+$\raempl{C}_{\OMd} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
 
 We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
-is given by $\Delta \ralc{C}_{\OMd} I_E$.
+is given by $\Delta \raempl{C}_{\OMd} I_E$.
 Rebound from operations, maintenance, and disposal
 is given by 
 %
@@ -700,7 +699,7 @@ Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 Substitution effect rebound  
-can be expressed in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
+can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
 utility function parameters ($\alpha$ and $\beta$).
 
@@ -709,7 +708,7 @@ is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
 such that
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bdev{p}_s} \right)^{\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
 \end{equation}
 %
 % We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
@@ -717,21 +716,21 @@ such that
 We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is 
 no greater than zero under standard assumptions on convex preferences.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
-such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
+such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-Substituting the typical relationship of Eq.~\ref{eq:ps_pE_eta} in the form
-$\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
-$\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
+Substituting the typical relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
+$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
+$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
 %
 \begin{equation} \label{eq:q_ratio_func_of_eps}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} \; .
 \end{equation}
 %
 Because the energy service price elasticity of consumption
 is negative ($\epsilon_{p_s} < 0$),
-an energy service efficiency increase ($\aprod{\eta} > \bdev{\eta}$),
+an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the \subeffect{} on other purchases,
@@ -748,7 +747,7 @@ where both $\alpha$ and $\beta$ are positive.
 After substitution and rearrangement, we find
 %
 \begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
 \end{equation}
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
@@ -768,7 +767,7 @@ Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
 When $\epsilon_{p_s} \in (-1, 0)$, as expected,
 the direct substitution rebound will be positive but less than 1 ($Re_{dsub} \in (0, 1)$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$,
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 The increase in consumption of the energy service after its price drop
@@ -797,7 +796,7 @@ we find
 \end{equation}
 
 Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
-the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bdev{\eta}$),
+the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
 and
 the ratio of utility exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
@@ -817,15 +816,15 @@ that arises when the energy conversion device owner spends net
 income from the EEU.
 Derivations of expressions for gross and net monetary savings
 ($\rate{G}$ and $\rate{N}$, respectively) from the 
-\deveffect{} ($\radev{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
-are presented in the appendix (Tables~\ref{tab:deveffect}--\ref{tab:subeffect}).
-Gross income from the EEU is given by Eq.~\ref{eq:G_dot}
-as $\radev{G} = p_E \Sdot$. 
-In combination, the \lceffect{} and the \subeffect{} leave the device owner with
+\empleffect{}~($\raempl{N}$) and the \subeffect{} ($\rasub{N}$)
+are presented in the appendix (Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}).
+Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
+as $\rate{G} = p_E \Sdot$. 
+In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} monetary savings ($\rasub{N}$) from the EEU,
-as shown in Eq.~\ref{eq:N_dot_after_sub}.
-Total income before the EEU is $\rbdev{M}$.
-Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
+as shown in Eq.~(\ref{eq:N_dot_after_sub}).
+Total income before the EEU is $\rbempl{M}$.
+Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
 %
@@ -840,13 +839,13 @@ In this framework, all net income ($\rasub{N}$) is spent either
 The direct income elasticity of consumption ($\epsilon_{dinc}$) 
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.~\ref{eq:inc_budget_constraint}) 
+The budget constraint for the income effect (Eq.(~\ref{eq:inc_budget_constraint})) 
 means that leftover income is spent on other goods.
 
 The ratio of rates of energy service consumed across the income effect is given by
 %
 \begin{equation} \label{eq:q_ratio_across_inc}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; .
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\epsilon_{dinc}} \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
@@ -882,7 +881,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 %
 The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
 can be found by rearranging the budget constraint for the income effect 
-(Eq.~\ref{eq:inc_budget_constraint}) to be 
+(Eq.(~\ref{eq:inc_budget_constraint})) to be 
 $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
 After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
@@ -891,12 +890,12 @@ an expression for indirect income effect rebound is
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
-Eq.~\ref{eq:Re_iinc} shows that a good first estimate for indirect income rebound
+Eq.~(\ref{eq:Re_iinc}) shows that a good first estimate for indirect income rebound
 is $p_E I_E$.
 Intuitively, this result is sensible.
 \$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
 Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
-By Eq.~\ref{eq:Re_takeback}, rebound is
+By Eq.(~\ref{eq:Re_takeback}), rebound is
 %
 \begin{equation} \label{eq:intuituve_Re_iinc}
   Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
@@ -924,9 +923,10 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The \deveffect{} and previous rebound effects
-(\lceffect{}, \subeffect{}, and \inceffect{})
+The previous rebound effects
+(\empleffect{}, \subeffect{}, and \inceffect{})
 are microeconomic in nature.
+**** Revisit this statement after we finalize our topology.---MKH ****
 In contrast, the productivity effect is macroeconomic.
 At the macro level, we claim that the effect of energy efficiency is expansionary,
 just like other factor-augmenting productivity improvements.
@@ -1022,10 +1022,10 @@ we arrive at an expression for \prodeffectadj{} rebound:
 
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
-(\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
+(\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
-productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod})
+indirect income effect rebound~($Re_{iinc}$, Eq.(~\ref{eq:Re_iinc})) and
+productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
 are expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
@@ -1035,13 +1035,13 @@ we find
   Re_{sum} = \Retoteqn{} \; .
 \end{align}
 
-Eq.~\ref{eq:Re_tot} shows that determining six rebound values
-[$Re_{emb}$ (Eq.~\ref{eq:Re_emb}), 
-$Re_{cap}$ (Eq.~\ref{eq:Re_cap}), 
-$Re_{\OMd}$ (Eq.~\ref{eq:Re_OMd}),
-$Re_{dsub}$ (Eq.~\ref{eq:Re_dsub}),
-$Re_{isub}$ (Eq.~\ref{eq:Re_isub}), and
-$Re_{dinc}$ (Eq.~\ref{eq:Re_dinc})]
+Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values
+[$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+$Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
+$Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
+$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
+$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
 is sufficient to calculate the sum of all rebound, 
 provided that 
 the productivity factor~($k$),

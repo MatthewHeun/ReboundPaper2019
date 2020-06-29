@@ -18,38 +18,33 @@
 
 % Create "after" commands
 \newcommand{\orig}[1]{#1}
-\newcommand{\adev}[1]{{#1}^\prime}
-\newcommand{\alc}[1]{{#1}^*}
+\newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
 \newcommand{\aprod}[1]{\tilde{#1}}
 
 % Create the "before" commands
-\newcommand{\bdev}[1]{\orig{#1}}
-\newcommand{\blc}[1]{\adev{#1}}
-\newcommand{\bsub}[1]{\alc{#1}}
+\newcommand{\bempl}[1]{\orig{#1}}
+\newcommand{\bsub}[1]{\aempl{#1}}
 \newcommand{\binc}[1]{\asub{#1}}
 \newcommand{\bprod}[1]{\ainc{#1}}
 
 % Decoration combinations
 % Rates after
 \newcommand{\rorig}[1]{\orig{\rate{#1}}}
-\newcommand{\radev}[1]{\adev{\rate{#1}}}
-\newcommand{\ralc}[1]{\alc{\rate{#1}}}
+\newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
 \newcommand{\raprod}[1]{\aprod{\rate{#1}}}
 
 % Rates before
-\newcommand{\rbdev}[1]{\rorig{#1}}
-\newcommand{\rblc}[1]{\radev{#1}}
-\newcommand{\rbsub}[1]{\ralc{#1}}
+\newcommand{\rbempl}[1]{\rorig{#1}}
+\newcommand{\rbsub}[1]{\raempl{#1}}
 \newcommand{\rbinc}[1]{\rasub{#1}}
 \newcommand{\rbprod}[1]{\rainc{#1}}
 
-%%%%% Subscript spacing
+%%%%% Subscript kerning
 
-\newcommand{\life}{li\!f\!e}
 \newcommand{\OM}{O\!M}
 \newcommand{\OMd}{O\!M\!d}
 \newcommand{\productivity}{pr\!od}
@@ -62,9 +57,8 @@
 
 %%%%% Colors
 
-\newcommand{\devcolor}{red!25!white}
-\newcommand{\lccolor}{orange!25!white}
-\newcommand{\subcolor}{yellow!25!white}
+\newcommand{\emplcolor}{red!25!white}
+\newcommand{\subcolor}{orange!25!white}
 \newcommand{\inccolor}{green!25!white}
 \newcommand{\prodcolor}{blue!25!white}
 
@@ -91,17 +85,11 @@ bottom=2pt}
 
 %%%%% Colored phrases
 
-% Device effect
-\newcommand{\deveffect}{\inlinebox[\devcolor]{device upgrade}}
-\newcommand{\deveffectadj}{\inlinebox[\devcolor]{device-upgrade}}
-\newcommand{\Deveffect}{\inlinebox[\devcolor]{Device upgrade}}
-\newcommand{\DevEffect}{\inlinebox[\devcolor]{Device Upgrade}}
-
-% Life cycle effect
-\newcommand{\lceffect}{\inlinebox[\lccolor]{life cycle effect}}
-\newcommand{\lceffectadj}{\inlinebox[\lccolor]{life-cycle-effect}}
-\newcommand{\Lceffect}{\inlinebox[\lccolor]{Life cycle effect}}
-\newcommand{\LcEffect}{\inlinebox[\lccolor]{Life cycle Effect}}
+% Emplacement effect
+\newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
+\newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
+\newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
+\newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
 
 % Substitution effect
 \newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
@@ -129,7 +117,6 @@ bottom=2pt}
 %   #2: text inside the minipage
 %
 \newcommand{\mptable}[2]{\begin{minipage}{#1\linewidth} \useshortskip{} \begin{equation} #2 \end{equation} \end{minipage}}
-
 
 
 %%%%% Oft-used references
@@ -197,7 +184,7 @@ bottom=2pt}
 %
 % Derivation page header
 % Arguments:
-%   #1: Effect type header text (e.g., Device Effect)
+%   #1: Effect type header text (e.g., Emplacement Effect)
 %
 \newcommand{\derivheader}[1]{
 
@@ -212,34 +199,23 @@ bottom=2pt}
 }
 
 
-
-
 % Equations
 
 % Original
-\newcommand{\Eacctorig}{\rbdev{E} = \rbdev{E}_s + \rbdev{E}_{emb} + (\rbdev{C}_{\OMd} + \rbdev{C}_o) I_E}
-\newcommand{\Macctorig}{\rbdev{M} = p_E \rbdev{E}_s + \rbdev{C}_{cap} + \rbdev{C}_{\OMd} + \rbdev{C}_o + \rbdev{N}}
+\newcommand{\Eacctorig}{\rbempl{E} = \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{\OMd} + \rbempl{C}_o) I_E}
+\newcommand{\Macctorig}{\rbempl{M} = p_E \rbempl{E}_s + \rbempl{C}_{cap} + \rbempl{C}_{\OMd} + \rbempl{C}_o + \rbempl{N}}
 
-% Before device effect (save as original)
-\newcommand{\Eacctbdev}{\Eacctorig}
-\newcommand{\Macctbdev}{\Macctorig}
+% Before emplacement effect (same as original)
+\newcommand{\Eacctbempl}{\Eacctorig}      
+\newcommand{\Macctbempl}{\Macctorig}      
 
-% After device effect
-\newcommand{\Eacctadev}{\radev{E} = \radev{E}_s + \radev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
-\newcommand{\Macctadev}{\radev{M} = p_E \radev{E}_s + \radev{C}_{cap} + \radev{C}_{\OMd} + \radev{C}_o + \radev{N}}
+% After emplacement effect
+\newcommand{\Eacctaempl}{\raempl{E} = \raempl{E}_s + \raempl{E}_{emb} + (\raempl{C}_{\OMd} + \raempl{C}_o) I_E}                  
+\newcommand{\Macctaempl}{\raempl{M} = p_E \raempl{E}_s + \raempl{C}_{cap} + \raempl{C}_{\OMd} + \raempl{C}_o + \raempl{N}}         
 
-% Before life cycle effect (same as after device effect)
-% \newcommand{\Eacctblc}{\Eacctadev}
-\newcommand{\Eacctblc}{\radev{E} = \radev{E}_s + \rbdev{E}_{emb} + (\radev{C}_{\OMd} + \radev{C}_o) I_E}
-\newcommand{\Macctblc}{\Macctadev}
-
-% After life cycle effect
-\newcommand{\Eacctalc}{\ralc{E} = \ralc{E}_s + \ralc{E}_{emb} + (\ralc{C}_{\OMd} + \ralc{C}_o) I_E}
-\newcommand{\Macctalc}{\ralc{M} = p_E \ralc{E}_s + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \ralc{C}_o + \ralc{N}}
-
-% Before substitution effect (same as after life cycle effect)
-\newcommand{\Eacctbsub}{\Eacctalc}
-\newcommand{\Macctbsub}{\Macctalc}
+% Before substitution effect (same as after emplacement effect)
+\newcommand{\Eacctbsub}{\Eacctaempl}
+\newcommand{\Macctbsub}{\Macctaempl}
 
 % After substitution effect
 \newcommand{\Eacctasub}{\rasub{E} = \rasub{E}_s + \rasub{E}_{emb} + (\rasub{C}_{\OMd} + \rasub{C}_o) I_E}
@@ -254,32 +230,32 @@ bottom=2pt}
 \newcommand{\Macctainc}{\rainc{M} = p_E \rainc{E}_s + \rainc{C}_{cap} + \rainc{C}_{\OMd} + \rainc{C}_o + \rainc{N}}
 
 % Embodied energy rebound
-\newcommand{\Reembeqn}{\frac{\left( \frac{\alc{E}_{emb}}{\bdev{E}_{emb}}
-  \frac{\bdev{t}}{\alc{t}} - 1 \right) \rbdev{E}_{emb}}{\Sdot}}
+\newcommand{\Reembeqn}{\frac{\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
+  \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}}{\Sdot}}
   
 % Ops, Maintenance, and disposal energy rebound
-\newcommand{\ReOMdeqn}{\frac{\left( \frac{\ralc{C}_{\OMd}}{\rblc{C}_{\OMd}} - 1 \right) \rblc{C}_{\OMd} I_E}{\Sdot}}
+\newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\OMd}}{\rbempl{C}_{\OMd}} - 1 \right) \rbempl{C}_{\OMd} I_E}{\Sdot}}
 
 % Equation for S_dot_dev
-\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)\!\frac{\bdev{\eta}}{\aprod{\eta}} \rbdev{E}_s}
+\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
-\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}} - 1}
-                        {\frac{\aprod{\eta}}{\bdev{\eta}} - 1}}
+\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
+                        {\frac{\aprod{\eta}}{\bempl{\eta}} - 1}}
                         
 % Equation for Re_isub
-\newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bdev{\eta}}  \right)}
-                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; 
-                          \frac{\aprod{\eta}}{\bdev{\eta}} \; 
-                          \frac{\rbdev{C}_o I_E}{\rbdev{E}_s}}
+\newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bempl{\eta}}  \right)}
+                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
+                          \frac{\aprod{\eta}}{\bempl{\eta}} \; 
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
-\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
-                  \left( \frac{\aprod{\eta}}{\bdev{\eta}} \right)^{-\epsilon_{p_s}}}
-              {\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)}}
+\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
+                  \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
+              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
 
 % Equation for Re_cap
-\newcommand{\Recapeqn}{\frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}}
+\newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
 
 % Equation for Re_iinc
 \newcommand{\Reiinceqn}{p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}}
