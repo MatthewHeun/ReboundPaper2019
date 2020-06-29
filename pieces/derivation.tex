@@ -106,33 +106,33 @@ No other effects are considered.
   \Sdot \equiv \rbdev{E}_s - \radev{E}_s  \tag{\ref{eq:S_dot_def}}
 \end{equation}
 %
-The final energy consumption rates ($\rbdev{E}_s$ and $\radev{E}_s$) 
-can be written as the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the forms
-$\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$ and 
-$\radev{E}_s = \frac{\radev{q}_s}{\adev{\eta}}$. 
+The final energy consumption rates ($\rbempl{E}_s$ and $\raempl{E}_s$) 
+can be written as the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot}) in the forms
+$\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$ and 
+$\raempl{E}_s = \frac{\raempl{q}_s}{\aempl{\eta}}$. 
 %
 \begin{equation}
-  \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\radev{q}_s}{\adev{\eta}}
+  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\raempl{q}_s}{\aempl{\eta}}
 \end{equation}
 %
 With reference to Table~\ref{tab:analysis_assumptions}, 
-we use $\radev{q}_s = \rbdev{q}_s$ and $\adev{\eta} = \aprod{\eta}$ to obtain
+we use $\raempl{q}_s = \rbempl{q}_s$ and $\aempl{\eta} = \aprod{\eta}$ to obtain
 %
 \begin{equation}
-  \Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} - \frac{\rbdev{q}_s}{\aprod{\eta}} \; .
+  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\rbempl{q}_s}{\aprod{\eta}} \; .
 \end{equation}
 %
-When the EEU increases efficiency such that $\aprod{\eta} > \bdev{\eta}$,
+When the EEU increases efficiency such that $\aprod{\eta} > \bempl{\eta}$,
 expected energy savings grows ($\Sdot > 0$)
 as the rate of final energy consumption declines,
 as expected.
 As $\aprod{\eta} \rightarrow \infty$,
-all final energy consumption is eliminated ($\radev{E}_s \rightarrow 0$), and
-$\Sdot = \frac{\rbdev{q}_s}{\bdev{\eta}} = \rbdev{E}_s$.
+all final energy consumption is eliminated ($\raempl{E}_s \rightarrow 0$), and
+$\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbdev{E}_s$.
 (Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
 
-After rearrangement and using $\rbdev{E}_s = \frac{\rbdev{q}_s}{\bdev{\eta}}$, 
+After rearrangement and using $\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$, 
 we obtain a convenient form
 %
 \begin{equation}
@@ -265,7 +265,7 @@ the change in embodied energy rate due to the EEU can be expressed as
 $\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
   \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}$, 
 a term that represents energy savings taken back due to embodied energy effects.
-Thus, Equation~\ref{eq:Re_takeback} can be employed to write embodied energy rebound as
+Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy rebound as
 %
 \begin{equation} 
   Re_{emb} = \Reembeqn{} \, . \tag{\ref{eq:Re_emb}}
@@ -366,7 +366,7 @@ Note that a negative value for the service price elasticity of consumption is ex
 such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-Substituting the typical relationship of Eq.~\ref{eq:ps_pE_eta} in the form
+Substituting the typical relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
 $\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
 gives
@@ -404,7 +404,7 @@ Rearrangement gives
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right) ^ {- \alpha / \beta} \; .
 \end{equation}
 %
-Substituting Eq.~\ref{eq:q_ratio_func_of_eps} and rearranging gives
+Substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) and rearranging gives
 %
 \begin{equation}
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bdev{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; . 
@@ -435,7 +435,7 @@ As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
 \end{equation}
 %
 Expansion of the difference term and
-substitution of the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} in the form
+substitution of the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot}) in the form
 $\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$
 and
 $\rbsub{E}_s = \frac{\rbsub{q}_s}{\bdev{\eta}}$
@@ -451,7 +451,7 @@ and
      Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bdev{\eta}}}{\Sdot} \; .
 \end{equation}
 %
-Substitution of Eq.~\ref{eq:Sdot} gives
+Substitution of Eq.~(\ref{eq:Sdot}) gives
 %
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bdev{\eta}}}
@@ -474,7 +474,7 @@ and
 %
 Noting that $\frac{\rbsub{q}_s}{\rbdev{\eta}} = \frac{\rbdev{q}_s}{\rbdev{\eta}} = \rbdev{E}_s$,
 canceling $\rbdev{E}_s$ terms,
-and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
+and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 %
 \begin{equation}
   Re_{dsub} = \Redsubeqn \; . \tag{\ref{eq:Re_dsub}}
@@ -543,7 +543,7 @@ the preceding two equations can be set equal to find
   \frac{\rasub{C}_o}{\rbsub{C}_o} = \frac{\rasub{q}_o}{\rbsub{q}_o} \; .
 \end{equation}
 %
-Substituting into Eq.~\ref{eq:Re_isub_prelim} gives
+Substituting into Eq.~(\ref{eq:Re_isub_prelim}) gives
 %
 \begin{equation}
   Re_{isub} = \frac{\left( \frac{\rasub{q}_o}{\rbsub{q}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
@@ -585,11 +585,11 @@ income from the EEU.
 Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
 \deveffect{} ($\rate{G}$), through the \lceffect{} ($\ralc{N}$), to the \subeffect{} ($\rasub{N}$)
 are presented in Tables~\ref{tab:deveffect}--\ref{tab:subeffect}.
-Gross income from the EEU is given by Eq.~\ref{eq:G_dot}
+Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\radev{G} = p_E \Sdot$. 
 In combination, the \lceffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
-as shown in Eq.~\ref{eq:N_dot_after_sub}.
+as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Total income before the EEU is $\rbdev{M}$.
 Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
 
@@ -606,7 +606,7 @@ In this framework, all net income ($\rasub{N}$) is spent either
 The direct income elasticity of consumption ($\epsilon_{dinc}$) 
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.~\ref{eq:inc_budget_constraint}) 
+The budget constraint for the income effect (Eq.~(\ref{eq:inc_budget_constraint})) 
 means that leftover income is spent on other goods.
 
 The purpose of this section is derivation of expressions for 
@@ -648,7 +648,7 @@ begins with
                 \rbdev{E}_s \; .
 \end{equation}
 %
-Substituting the typical relationship from Eq.~\ref{eq:typ_qs_eta_Edot} and noting efficiency ($\eta$)
+Substituting the typical relationship from Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
 equalities from Table~\ref{tab:analysis_assumptions} gives
 %
 \begin{equation}
@@ -682,7 +682,7 @@ Noting energy service consumption rate ($\rate{q}_s$) equalities from Table~\ref
 %..............................
 
 Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
-We begin by substituting Eq.~\ref{eq:N_dot_after_sub} for net income~($\rbinc{N}$).
+We begin by substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$).
 %
 \begin{equation}
   \frac{\rbinc{N} I_E}{\Sdot} = \frac{\radev{G} I_E}{\Sdot}
@@ -745,7 +745,7 @@ and
   Re_{dinc} = \frac{\left( \frac{\rainc{E}_s}{\rbinc{E}_s} - 1  \right) \rbinc{E}_s}{\Sdot} \; .
 \end{equation}
 %
-Substituting the typical relationship of Eq.~\ref{eq:typ_qs_eta_Edot} as
+Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot}) as
 $\rainc{E}_s = \frac{\rainc{q}_s}{\aprod{\eta}}$ and  
 $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
 %
@@ -761,7 +761,7 @@ Canceling terms and substituting Eqs.~\ref{eq:Sdot} and~\ref{eq:q_ratio_across_i
               {\Sdoteqn} \; .
 \end{equation}
 %
-Substituting Eq.~\ref{eq:E_dot_s_hat} gives
+Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
 %
 \begin{equation}
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
@@ -771,7 +771,7 @@ Substituting Eq.~\ref{eq:E_dot_s_hat} gives
               {\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)\! \cancel{\frac{\bdev{\eta}}{\aprod{\eta}}} \cancel{\rbdev{E}_s}} \; .
 \end{equation}
 %
-Canceling terms and substituting Eq.~\ref{eq:q_ratio_func_of_eps} gives
+Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 %
 \begin{equation} 
   Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
@@ -784,7 +784,7 @@ As either of the elasticities get stronger
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
-using the budget constraint of Eq.~\ref{eq:inc_budget_constraint}.
+using the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
 
 %..............................
 \paragraph{Expression for $Re_{iinc}$}
@@ -806,7 +806,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 %
 The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
 can be found by rearranging the budget constraint for the income effect 
-(Eq.~\ref{eq:inc_budget_constraint}) to be 
+(Eq.~(\ref{eq:inc_budget_constraint})) to be 
 $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
 Substituting gives
 %
@@ -814,20 +814,20 @@ Substituting gives
   Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
 \end{equation}
 %
-Splitting the terms and substituting Eq.~\ref{eq:Re_dinc_def} gives
+Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
 %
 \begin{equation}
   Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
 \end{equation}
 %
-Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives 
+Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
 %
 \begin{equation}
   Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
 
 This equation shows that a good first estimate for indirect income rebound
-is $Re_{iinc} = p_E I_E$.
+is $p_E I_E$.
 Positive rebound from capital expenditures~($Re_{cap}$), 
 operations, maintenance, and disposal~($Re_{\OMd}$),
 direct substitution~($Re_{dsub}$), 
@@ -844,8 +844,8 @@ they add to the net income available to the device owner to spend on other goods
 \label{sec:Re_prod}
 %------------------------------
 
-Productivity rebound~($Re_{prod}$) is given by Eq.~\ref{eq:Re_prod_def}.
-Substituting Eq.~\ref{eq:N_dot_I_E_Sdot} gives
+Productivity rebound~($Re_{prod}$) is given by Eq.~(\ref{eq:Re_prod_def}).
+Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
 %
 \begin{equation}
   Re_{prod} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
@@ -873,8 +873,8 @@ Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
 \end{align}
 %
 Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
-productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod})
+indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
+productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
 are expressed in terms of other rebound effects.
 Substituting Eqs.~\ref{eq:Re_iinc} and~\ref{eq:Re_prod} gives
 %
@@ -894,21 +894,21 @@ This last rearrangement gives the final expression for total rebound.
   Re_{sum} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
 \end{align}
 
-Eq.~\ref{eq:Re_tot} shows that determining six rebound values,
+Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values,
 %
 \begin{itemize}
 
-  \item $Re_{emb}$ (Eq.~\ref{eq:Re_emb}), 
+  \item $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
 
-  \item $Re_{cap}$ (Eq.~\ref{eq:Re_cap}), 
+  \item $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
   
-  \item $Re_{\OMd}$ (Eq.~\ref{eq:Re_OMd}),
+  \item $Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
   
-  \item $Re_{dsub}$ (Eq.~\ref{eq:Re_dsub}),
+  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
   
-  \item $Re_{isub}$ (Eq.~\ref{eq:Re_isub}), and
+  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
   
-  \item $Re_{dinc}$ (Eq.~\ref{eq:Re_dinc}),
+  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 
 \end{itemize}
 %

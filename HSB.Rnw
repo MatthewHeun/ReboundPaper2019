@@ -496,7 +496,7 @@ Simplifying gives
   Re = \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
-Thus, energy rebound can be given by either Eq.~\ref{eq:Re_def} or Eq.~\ref{eq:Re_takeback}.
+Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
 
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
@@ -719,7 +719,7 @@ Note that a negative value for the service price elasticity of consumption is ex
 such that when the energy service price decreases ($\aprod{p}_s < \bdev{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-Substituting the typical relationship of Eq.~\ref{eq:ps_pE_eta} in the form
+Substituting the typical relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bdev{p}_s = \frac{\bdev{p}_E}{\bdev{\eta}}$ and
 $\aprod{p}_s = \frac{\bdev{p}_E}{\aprod{\eta}}$
 gives
@@ -818,11 +818,11 @@ Derivations of expressions for gross and net monetary savings
 ($\rate{G}$ and $\rate{N}$, respectively) from the 
 \empleffect{}~($\raempl{N}$) and the \subeffect{} ($\rasub{N}$)
 are presented in the appendix (Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}).
-Gross income from the EEU is given by Eq.~\ref{eq:G_dot}
+Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} monetary savings ($\rasub{N}$) from the EEU,
-as shown in Eq.~\ref{eq:N_dot_after_sub}.
+as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Total income before the EEU is $\rbdev{M}$.
 Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
 
@@ -839,7 +839,7 @@ In this framework, all net income ($\rasub{N}$) is spent either
 The direct income elasticity of consumption ($\epsilon_{dinc}$) 
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.~\ref{eq:inc_budget_constraint}) 
+The budget constraint for the income effect (Eq.(~\ref{eq:inc_budget_constraint})) 
 means that leftover income is spent on other goods.
 
 The ratio of rates of energy service consumed across the income effect is given by
@@ -881,7 +881,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 %
 The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
 can be found by rearranging the budget constraint for the income effect 
-(Eq.~\ref{eq:inc_budget_constraint}) to be 
+(Eq.(~\ref{eq:inc_budget_constraint})) to be 
 $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
 After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
@@ -890,12 +890,12 @@ an expression for indirect income effect rebound is
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
-Eq.~\ref{eq:Re_iinc} shows that a good first estimate for indirect income rebound
+Eq.~(\ref{eq:Re_iinc}) shows that a good first estimate for indirect income rebound
 is $p_E I_E$.
 Intuitively, this result is sensible.
 \$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
 Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
-By Eq.~\ref{eq:Re_takeback}, rebound is
+By Eq.(~\ref{eq:Re_takeback}), rebound is
 %
 \begin{equation} \label{eq:intuituve_Re_iinc}
   Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
@@ -1024,8 +1024,8 @@ In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
 (\lceffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~\ref{eq:Re_iinc}) and
-productivity effect rebound~($Re_{prod}$, Eq.~\ref{eq:Re_prod})
+indirect income effect rebound~($Re_{iinc}$, Eq.(~\ref{eq:Re_iinc})) and
+productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
 are expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
@@ -1035,13 +1035,13 @@ we find
   Re_{sum} = \Retoteqn{} \; .
 \end{align}
 
-Eq.~\ref{eq:Re_tot} shows that determining six rebound values
-[$Re_{emb}$ (Eq.~\ref{eq:Re_emb}), 
-$Re_{cap}$ (Eq.~\ref{eq:Re_cap}), 
-$Re_{\OMd}$ (Eq.~\ref{eq:Re_OMd}),
-$Re_{dsub}$ (Eq.~\ref{eq:Re_dsub}),
-$Re_{isub}$ (Eq.~\ref{eq:Re_isub}), and
-$Re_{dinc}$ (Eq.~\ref{eq:Re_dinc})]
+Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values
+[$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+$Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
+$Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
+$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
+$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
 is sufficient to calculate the sum of all rebound, 
 provided that 
 the productivity factor~($k$),
