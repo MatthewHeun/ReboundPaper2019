@@ -103,7 +103,7 @@ by the device due to the EEU.
 No other effects are considered.
 %
 \begin{equation}
-  \Sdot \equiv \rbdev{E}_s - \radev{E}_s  \tag{\ref{eq:S_dot_def}}
+  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s  \tag{\ref{eq:S_dot_def}}
 \end{equation}
 %
 The final energy consumption rates ($\rbempl{E}_s$ and $\raempl{E}_s$) 
@@ -128,7 +128,7 @@ as the rate of final energy consumption declines,
 as expected.
 As $\aprod{\eta} \rightarrow \infty$,
 all final energy consumption is eliminated ($\raempl{E}_s \rightarrow 0$), and
-$\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbdev{E}_s$.
+$\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$.
 (Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
 
@@ -330,7 +330,7 @@ depending on the sign of the term $\raempl{C}_{\OMd}/\rbempl{C}_{\OMd} - 1$.
 Two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
-This section derives each in terms of energy service efficiencies ($\bdev{\eta}$ and $\aprod{\eta}$),
+This section derives each in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
 utility function parameters ($\alpha$ and $\beta$).
 We begin with derivation of two ratios that are helpful later,
@@ -344,9 +344,9 @@ $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
 %..............................
 
 The EEU's energy efficiency increase
-($\aprod{\eta} > \bdev{\eta}$)
+($\aprod{\eta} > \bempl{\eta}$)
 causes the price of the energy service provided by the device to fall
-($\aprod{p}_s < \bdev{p}_s$).
+($\aprod{p}_s < \bempl{p}_s$).
 The substitution effect quantifies the amount by which
 the device owner, in response,
 increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
@@ -357,7 +357,7 @@ is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
 such that
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bdev{p}_s} \right)^{\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
 \end{equation}
 %
 We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
@@ -462,17 +462,17 @@ Rearrangement of the numerator and canceling terms gives
 %
 \begin{equation}
   Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\aprod{\eta}}} }
-              {\left( \frac{\aprod{\eta}}{\bdev{\eta}} - 1 \right)\!\frac{\bdev{\eta}}{\cancel{\aprod{\eta}}} \rbdev{E}_s} \; ,
+              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\cancel{\aprod{\eta}}} \rbempl{E}_s} \; ,
 \end{equation}
 %
 and
 %
 \begin{equation}
     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bdev{\eta}} - 1} \; \;
-                \frac{\frac{\rbsub{q}_s}{\bdev{\eta}}}{\rbdev{E}_s} \; .
+                \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bdev{\eta}}}}{\rbdev{E}_s} \; .
 \end{equation}
 %
-Noting that $\frac{\rbsub{q}_s}{\rbdev{\eta}} = \frac{\rbdev{q}_s}{\rbdev{\eta}} = \rbdev{E}_s$,
+Noting that $\frac{\rbsub{q}_s}{\bempl{\eta}} = \frac{\rbdev{q}_s}{\bempl{\eta}} = \rbdev{E}_s$,
 canceling $\rbdev{E}_s$ terms,
 and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 %
@@ -484,7 +484,7 @@ Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
 When $\epsilon_{p_s} \in (-1, 0)$, as expected,
 the direct substitution rebound will be positive but less than 1 ($Re_{dsub} \in (0, 1)$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bdev{\eta}} = 2$,
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
@@ -625,7 +625,7 @@ The ratio of rates of energy service consumed across the income effect is given 
   \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\epsilon_{dinc}} \; .
 \end{equation}
 %
-Recognizing that $\rbinc{M} = \rbsub{M} = \rblc{M} = \rbdev{M}$ and rearranging slightly gives
+Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
 %
 \begin{equation}
   \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; . 
@@ -643,9 +643,8 @@ begins with
 %
 \begin{equation}
   \rbinc{E}_s = \left( \frac{\rasub{E}_s}{\rbsub{E}_s} \right)
-                \left( \frac{\ralc{E}_s}{\rblc{E}_s} \right)
-                \left( \frac{\radev{E}_s}{\rbdev{E}_s} \right)
-                \rbdev{E}_s \; .
+                \left( \frac{\raempl{E}_s}{\rbempl{E}_s} \right)
+                \rbempl{E}_s \; .
 \end{equation}
 %
 Substituting the typical relationship from Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
@@ -653,22 +652,21 @@ equalities from Table~\ref{tab:analysis_assumptions} gives
 %
 \begin{equation}
   \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
-                \left( \frac{\ralc{q}_s / \cancel{\aprod{\eta}}}{\rblc{q}_s / \cancel{\aprod{\eta}}} \right)
-                \left( \frac{\radev{q}_s / \aprod{\eta}}{\rbdev{q}_s / \bdev{\eta}} \right)
-                \rbdev{E}_s \; .
+                \left( \frac{\raempl{q}_s / \aprod{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
+                \rbempl{E}_s \; .
 \end{equation}
 %
 Canceling terms yields
 %
 \begin{equation}
   \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
-                \left( \cancel{\frac{\ralc{q}_s}{\rblc{q}_s}} \right)
-                \left( \cancel{\frac{\radev{q}_s}{\rbdev{q}_s}} \right)
+                \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
                 \left( \frac{\bdev{\eta}}{\aprod{\eta}}  \right)
                 \rbdev{E}_s \; .
 \end{equation}
 %
-Noting energy service consumption rate ($\rate{q}_s$) equalities from Table~\ref{tab:analysis_assumptions} gives
+Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} 
+($\raempl{q}_s = \rbempl{q}_s$) gives
 %
 \begin{equation} \label{eq:E_dot_s_hat}
   \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
@@ -685,7 +683,7 @@ Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
 We begin by substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$).
 %
 \begin{equation}
-  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\radev{G} I_E}{\Sdot}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
                                 - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
                                 - \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
                                 - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
