@@ -469,11 +469,11 @@ and
 %
 \begin{equation}
     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; \;
-                \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bempl{\eta}}}}{\rbdev{E}_s} \; .
+                \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bempl{\eta}}}}{\rbempl{E}_s} \; .
 \end{equation}
 %
-Noting that $\frac{\rbsub{q}_s}{\bempl{\eta}} = \frac{\rbdev{q}_s}{\bempl{\eta}} = \rbdev{E}_s$,
-canceling $\rbdev{E}_s$ terms,
+Noting that $\frac{\rbsub{q}_s}{\bempl{\eta}} = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$,
+canceling $\rbempl{E}_s$ terms,
 and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 %
 \begin{equation}
@@ -520,7 +520,7 @@ each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,
 such that the average price of all other good purchased in the economy~($p_o$) is given by
 %
 \begin{equation}
-  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbdev{q}_{o,i}}{\sum\limits_i \rbdev{q}_{o,i}} \; .
+  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
 \end{equation}
 %
 Then, the cost rate of other purchases in the economy can be given as
@@ -557,7 +557,7 @@ Substituting Eqs.~\ref{eq:qohat_qostar} and~\ref{eq:Sdot} gives
                   {\Sdoteqn} \; .
 \end{equation}
 %
-Noting that $\rbsub{C}_o = \rbdev{C}_o$ and rearranging yields
+Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
 %
 \begin{equation}
   Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
@@ -586,12 +586,12 @@ Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, 
 \empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
-as $\radev{G} = p_E \Sdot$. 
+as $\rate{G} = p_E \Sdot$. 
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Total income before the EEU is $\rbdev{M}$.
-Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
+Total income before the EEU is $\rbempl{M}$.
+Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
 %
@@ -628,7 +628,7 @@ The ratio of rates of energy service consumed across the income effect is given 
 Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
 %
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; . 
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\epsilon_{dinc}} \; . 
                                                                                 \tag{\ref{eq:q_ratio_across_inc}}
 \end{equation}
 
@@ -662,7 +662,7 @@ Canceling terms yields
   \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
                 \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
                 \left( \frac{\bempl{\eta}}{\aprod{\eta}}  \right)
-                \rbdev{E}_s \; .
+                \rbempl{E}_s \; .
 \end{equation}
 %
 Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} 
@@ -671,7 +671,7 @@ Noting energy service consumption rate equalities from Table~\ref{tab:analysis_a
 \begin{equation} \label{eq:E_dot_s_hat}
   \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
                 \frac{\bempl{\eta}}{\aprod{\eta}}
-                \rbdev{E}_s \; .
+                \rbempl{E}_s \; .
 \end{equation}
 
 %..............................
@@ -684,8 +684,8 @@ We begin by substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{
 %
 \begin{equation}
   \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
-                                - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
-                                - \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
+                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
+                                - \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot}
                                 - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
                                 - \frac{\Delta \rasub{C}_o I_E}{\Sdot}
 \end{equation}
@@ -694,7 +694,7 @@ Substituting Eqs.~\ref{eq:G_dot}, \ref{eq:Re_OMd_def}, \ref{eq:Re_dsub_def}, \re
 %
 \begin{equation}
   \frac{\rbinc{N} I_E}{\Sdot} = \frac{p_E \cancel{\Sdot} I_E}{\cancel{\Sdot}}
-                                - \frac{\Delta \ralc{C}_{cap} I_E}{\Sdot}
+                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
                                 - Re_{\OMd}
                                 - p_E I_E Re_{dsub}
                                 - Re_{isub} \; .
@@ -755,18 +755,18 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
 Canceling terms and substituting Eqs.~\ref{eq:Sdot} and~\ref{eq:q_ratio_across_inc} gives
 %
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
 %
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
                   \frac{\rasub{q}_s}{\rbsub{q}_s}
                 \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}
-                \cancel{\rbdev{E}_s}}
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\! \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbdev{E}_s}} \; .
+                \cancel{\rbempl{E}_s}}
+              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\! \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
 Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives

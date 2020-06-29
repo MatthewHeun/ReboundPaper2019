@@ -407,9 +407,9 @@ Section~\ref{sec:conclusion} concludes.
 In this section, we develop a mathematical model 
 for the comprehensive rebound framework.
 We assume a device (say, an automobile)
-that consumes final energy (say, gasoline) at a rate $\rbdev{E}$ (in MJ/year).
+that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $p_E$ (in \$/MJ).
-The device provides a rate of energy service $\rbdev{q}_s$ (in vehicle km/year)
+The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 
 An energy efficiency upgrade (EEU) increases
@@ -420,8 +420,8 @@ at an increased financial cost rate to
 procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
-$\raprod{C}_{cap} > \rbdev{C}_{cap}$ and 
-$\raprod{C}_{\OMd} > \rbdev{C}_{\OMd}$.
+$\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
+$\raprod{C}_{\OMd} > \rbempl{C}_{\OMd}$.
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
@@ -823,8 +823,8 @@ as $\rate{G} = p_E \Sdot$.
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} monetary savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Total income before the EEU is $\rbdev{M}$.
-Total income after the substitution effect is $\rbdev{M} + \rasub{N}$.
+Total income before the EEU is $\rbempl{M}$.
+Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
 %
@@ -845,7 +845,7 @@ means that leftover income is spent on other goods.
 The ratio of rates of energy service consumed across the income effect is given by
 %
 \begin{equation} \label{eq:q_ratio_across_inc}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbdev{M}} \right) ^ {\epsilon_{dinc}} \; .
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\epsilon_{dinc}} \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
