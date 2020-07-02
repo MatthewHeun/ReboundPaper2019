@@ -156,12 +156,16 @@ Options include \citet{Magee2017} and Paul's recent systematic review papers, in
 \url{https://iopscience.iop.org/article/10.1088/1748-9326/ab842a}
 and
 \url{https://www.nature.com/articles/s41467-020-16941-y}
-
+%MKH: I have added these three refs now in relation to coupling of materials in section 1.1. if you agree you can delete this text and the MKH comment above
 
 
 Energy rebound is a phenomenon whereby 
-some expected energy savings do not materialize after an energy efficiency upgrade (EEU).
+some expected energy savings do not materialize 
+%MKH: PB doesn’t like materialise. (confusing with Magee/materialisation later. Can we change for another word:occur?
+after an energy efficiency upgrade (EEU).
+%MKH: PB suggests we add a reason why. The text previously said...some of the expected energy savings do not occur, due to a ‘rebound effect’ that increases energy use. Can we reinstate, or copy in a rebound definition from another paper?
 The roots of energy rebound can be traced back to William Stanley Jevons~\citet{Jevons:1866uy}
+%MKH: double Jevons in the PDF, cant quite see why that happens
 who, in an 1865 report entitled \emph{The Coal Question},
 suggested that
 ``[i]t is wholly a confusion of ideas to suppose that the economical use of fuel 
@@ -178,32 +182,49 @@ claimed that rebound was small.
 The so-called \emph{Khazzoom-Brookes Postulate}~\citep{Saunders:1992aa}
 is restated by \citet[p.~212]{Herring1999} as
 ``increased energy-efficiency at the micro-economic level,
+%MKH: PB thinks it should be microeconomic, with no hyphen. We have macroeconomic, with no hyphen. There are multiple places microeconomic has a hyphen. Please consider and revise throughout the paper if you agree.
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
 The scale of macroeconomic feedback gets to the heart of the debate,
 which continues today.
 Advocates of low rebound,
+%MKH: PB thinks we should agree on rebound magnitudes in the paper can be written as small/large, but not low/high. We should also suggest what we mean by small rebound (<50%?) and large rebound (>50%, where >100% = Backfire?)
 such as \citet{Gillingham:2013aa, Gillingham2016},
 suggest ``the rebound effect is overplayed,'' 
 while others, 
 such as \citet{Saunders2015}, 
-claim the evidence for large rebound is growing.
+claim the evidence for large rebound 
+%MKH: if you agree with small and large, we can also state what we mean by large here (>50%, and in some case above 100% = ‘backfire’) 
+is growing.
 
 The topic of energy rebound is not merely an academic debate.
+%MKH: PB suggests amending the line above as follows:
+%The topic of energy rebound has significant importance, well beyond a mere academic debate. Firstly, to meet…
+
 To meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
 increasing energy efficiency is expected to deliver 
-decreasing primary energy consumption and 
-decreasing CO$_2$ emissions
+decreasing primary 
+%MKH: suggest at this stage that we don’t introduce primary or final energy, just keep to energy. Suggest delete primary 
+energy consumption and 
+decreasing 
+%MKH: 2 x decreasing in the same sentence above. Suggested change to ‘energy consumption and associated ..
+CO$_2$ emissions
 amidst continued economic growth.
 To take just one example,
 by 2040
-energy efficiency contributes 44~\% of total carbon emissions reductions in
+energy efficiency contributes 44~\% of 
+%MKH: PB suggests add ‘energy-related global’ below and delete ‘total’
+total carbon emissions reductions in
 the International Energy Agency's Sustainable Development scenario relative to
 its New Policies scenario~\citep[Fig.~3.15, p.~139]{International-Energy-Agency:2017b}.
 
-However as **** Brockway2020REF **** note,
-such reductions in primary energy consumption 
+However as **** Brockway2020REF **** 
+%MKH: see refs I sent through, i have added a draft ref for Brockway2020. if you agree can you replace ***Brockway2020REF*** with
+%~\citet{Brockway2020}
+note,such reductions in primary 
+%MKH: same here see above, we find the same disconnect at primary and final energy level. So we can remove primary, just say energy
+energy consumption 
 would represent a structural break with the historical record
 of close energy-GDP coupling,
 assuming continued economic growth.
@@ -213,15 +234,26 @@ There are connections in your mind to rebound,
 but those connections have not been made for the reader.
 And they may not be germane to rebound.
 Consider connecting/signposting better or delete.---MKH ****
-At the same time, faith in new IT-based technologies
-to reduce primary energy consumption may be misplaced, and
+%MKH: ok agreed above. I propose to remove ICT sentence and amend text. see below. if you agree with my text you can delete your ***comment*** above.
+%MKH: I propose to delete the following text:
+%At the same time, faith in new IT-based technologies to reduce primary energy consumption may be misplaced, and
+%MKH: add word to start sentence below by removing comment%: 
+%Secondly, 
 the interactions between energy rebound
 and increased requirements for materials and other resources
-are significant~\citep{VandenBergh2009, FontVivanco2018}.
-By considering both energy and materials in the supply-chain,
-\citet{Magee2017} found little evidence of dematerialization.
-Finally, energy rebound is rarely included in either policy~\cite{fontvivanco2016}
-or energy models **** Brockway2020REF ****.
+are significant~\citep{VandenBergh2009, FontVivanco2018},
+%MKH: add/release text below: 
+%which, given the also-acknowledged global coupling of materials to economic growth ~\citep{Haberl2020, Wiedmann2020}, is also of key concern.
+%MKH: PB suggests to delete the following text:
+%By considering both energy and materials in the supply-chain,\citet{Magee2017} found little evidence of dematerialization.
+%MKH: insert/release this text/row below:
+%Third, compounding these two issues is the fact that 
+%MKH: suggest delete the word Finally, below: 
+%Finally, 
+energy rebound is rarely included in either policy~\cite{fontvivanco2016}
+or energy models 
+%MKH: suggest replace ****Brockway20202REF*** with ~\citet{Brockway2020}
+**** Brockway2020REF ****.
 Therefore, resolving the size and magnitude of energy rebound is an important goal.
 
 
@@ -233,22 +265,46 @@ Therefore, resolving the size and magnitude of energy rebound is an important go
 One of the challenges to better understanding energy rebound is its many
 aspects, mechanisms, and effects.
 The most common rebound typologies 
-distinguish between direct and indirect (microeconomic) and then 
-macro/economy-wide effects~\citep{greening2000, Barker2009, FontVivanco2018}. 
+distinguish between 
+%MKH: suggest we amend and place microeconomic first and put direct and indirect in brackets
+%MKH: if you agree, change: 
+direct and indirect (microeconomic)
+%MKH: to become:
+%microeconomic (direct and indirect) 
+and 
+%MKH: suggest above we delete ‘then’ below
+then 
+macro/economy-wide effects
+%MKH: suggest above we change macro/economy-wide to ‘macroeconomic’ as in our Table 1 we have economy-wide rebound as part of macroeconomic rebound
+~\citep{greening2000, Barker2009, FontVivanco2018}. 
 \citet{greening2000} split rebound effects into two parts:
 Microeconomic rebound (direct and indirect) and
 macroeconomic (economy-wide effects and transformational effects).
 \citet{Jenkins2011} break up microeconomic rebound effects into
 direct (income and substitution effects) and 
 indirect (respending and embodied effects), 
-while \citet{Sorrell:2009cg} expands the macroeconomic rebound 
-to include a wider set of five macroeconomic rebound effects. 
-\citet{Santarius2016} and \citet{Lange2019} introduce 
+while \citet{Sorrell:2009cg} 
+%MKH: suggest delete next line:
+expands the macroeconomic rebound to include a wider set of 
+%MKH: instead, add next line
+%sets out
+five macroeconomic rebound effects.
+%MKH: suggest we state these five effects from Sorrell 2009, as the macro effects are important, if you agree release/add the text below:
+%:embodied energy effects, re-spending effects, output effects, energy market effects, composition effects.
+\citet{Santarius2016} and \citet{Lange2019} introduce
+%MKH: suggest we delete next word ‘introduce’ and replace with
+%distinguish
 meso (i.e., sector) level rebound,
-distinct from micro and macro rebound.
+%MKH: suggest we delete the next word 'distinct'
+distinct
+from micro and macro rebound.
 \citet{VandenBergh2011} distinguishes 14 types of rebound, 
 providing, perhaps, the greatest complexity. 
-Table~\ref{tab:typology} summarizes the typologies.
+Table~\ref{tab:typology} 
+%MKH: suggest we delete next line:
+summarizes the typologies.
+%MKH: and instead, add/release this line
+%attempts to summarise and reconcile some of the existing typologies.
 
 \begin{figure}
 \centering
@@ -262,7 +318,12 @@ Table~\ref{tab:typology} summarizes the typologies.
 \citet{madlener2016}, 
 reviewing 35 years of rebound research, noted that 
 ``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
-by the many different versions'' of rebound. 
+by the many different versions'' of rebound
+%MKH: suggest we add the following word:
+%typologies. 
+: suggest we add 
+%typologies. 
+%MKH: suggest we delete next line (was maybe too jokey, given how important we just said rebound was!)
 It's enough to make your head spin!
 
 
@@ -272,17 +333,50 @@ It's enough to make your head spin!
 %++++++++++++++++++++++++++++++
 
 \citet{Sorrell:2007um} provided an important systematic review of energy rebound estimates.
-He found evidence suggesting micro-economic (direct and indirect)
-rebound was small (10--30~\%)
-and noted that evidence for macroeconomic rebound was much weaker,
-with divergent estimates.
-Empirical rebound estimates for household-level energy rebound
-continue to suggest low microeconomic rebound magnitudes
+%MKH: suggest we delete the full stop above, and add next line:
+%,considering over 500 studies and reports from around the world.
+He found 
+% MKH suggest we add these lines:
+%that the most prevalent type of study focussed on direct (microeconomic) rebound at the household level, with studies typically estimating small rebound magnitudes (10-30%). 
+%MKH: suggest we delete next line
+% evidence suggesting micro-economic (direct and indirect) rebound was small (10--30~\%)
+%MKH: suggest we delete the next two lines:
+and noted that evidence for macroeconomic rebound was much weaker, with divergent estimates.
+%MKH: and replace with a longer sentence like this:
+% In contrast, Sorrell noted that evidence for macroeconomic rebound was much weaker but could produce larger magnitudes, stating ``there are few published studies and these have a number of flaws…[and].. While little confidence can be placed in the available estimates, several studies suggest that economy-wide [i.e. macroeconomic] rebound effects may frequently exceed 50%’’
+
+%MKH: suggest we add
+% In the intervening period since ~\citet{Sorrell2007}'s review, 
+empirical rebound estimates 
+% MKH suggest we add next line:
+% at the microeconomic (direct and indirect)  
+%MKH delete the next word:
+for 
+household-level energy rebound
+continue to suggest low 
+%MKH: suggest we delete
+%low 
+%MKH and replace with 
+%relatively small
+microeconomic rebound magnitudes
 of less than 40~\%~\citep{Greene2012, Thomas:2013ab, Chitnis2014, Stapleton:2016}.
-Commonly, such micro-economic estimations are based on own sector (direct)
-and cross-sector (indirect, re-spending) price elasticities,
+%MKH add in the list above:
+%~\citet{antal:2014aa} 
+
+Commonly, such micro-economic 
+%MKH: change to microeconomic
+estimations are based on own sector (direct)
+%MKH: remove the next word
+and 
+%MKH: replace with 
+%and/or
+cross-sector (indirect, re-spending) price elasticities,
 as set out by \citet{Gillingham2016}.
 
+%MKH: suggest we add this text below, which adds more detail to the macroeconomic rebound estimates, and links to the Brockway2020 ref (I've left in one block, thought it was easier to release)
+%Meantime, estimates of macroeconomic rebound (or total rebound, being the sum of microeconomic and macroeconomic rebound) have progressed in terms of numbers of studies and methods. A recent review of studies by ~\citet{Brockway2020} found two broad modelling approaches had been pursued. First, is a dominant group of CGE-based studies, such as ~\citet{Lecca2014} and ~\citet{Wei2017}, with a mean total rebound estimate (from 21 reviewed studies) of around 60%. Second, is a group of other macroeconomic models, which split into three sub-methods: macroeconomic models  e.g. ~\citet{Barker2009} and ~\citet{Lemoine2019}; econometric analysis e.g. ~\citet{Wei2019} and ~\citet{Bruns2019} and productivity or growth accounting studies, e.g. ~\citet{Lin2015}. The magnitude of total energy rebound from the second group was also found to be over 50%, leading the authors to conclude that overall, or total rebound effects were ``larger than commonly assumed’’
+
+%MKH: PB has added text above. Therefore PB suggests to delete the text below down to next %MKH: comment:
 In recent years, empirical estimates at the macro level have appeared. 
 Commonly, macro level rebound is estimated using energy intensities 
 (e.g.,~\citet{Schipper2000, Antal:2014aa, VanBenthem2015})
@@ -293,8 +387,15 @@ but they suggest that rebound at the macroeconomic level could be large
 ****
 Can we put a number on ``large''?
 ****
+
+%MKH: add this next line:
+%Finally, evidence is emerging of even larger energy macroeconomic or total rebound 
 in some cases,
-particularly on the producer side~\citep{Saunders2013a} and for developing countries (REF). 
+particularly on the producer side~\citep{Saunders2013a} and for developing countries 
+%MKH: remove (REF)
+(REF). 
+%MKH: add:
+~\citet{VanBenthem2015}.
 
 
 %++++++++++++++++++++++++++++++
@@ -309,14 +410,27 @@ Connecting the micro and the macro
 is a way to connect the engineers (who usually focus on micro efficiency and the device level)
 and the economists (some of whom focus on the macro level).
 ****
+%MKH. Good point. I have included this now at the bottom of section 1.4. so you can delete this *** text above***
 
-Much of the early work on rebound theory was at the micro-economic level, 
+Much of the early work on rebound theory was at the micro-economic
+%MKH: change to microeconomic
+level,
+%MKH: suggest we use (microeconomic and macroeconomic) scale rather than level
 focusing on direct and indirect rebound via price elasticities (e.g.,~\citet{Schipper2000}).
-Other micro-economic advances include those by \citet{Borenstein:2015aa},
+Other micro-economic 
+%MKH: change to microeconomic
+advances include those by 
+%MKH: add ref and text on next line 
+%~\citet{thomas:2013aa}, who set out a detailed framework of direct and indirect microeconomic effects; 
+\citet{Borenstein:2015aa},
 who provided a detailed treatment of rebound into income and substitution effects,
 and \citet{Sun:2018aa}, who considered direct rebound including device effects.
+%MKH: add next line of text:
+%However, lifecycle and end of life device effects are still not typically considered. 
+
 
 At the macroeconomic level,
+%MKH: PB suggest we change level to macroeconomic scale:
 \citet{Saunders:1992aa} made the earliest attempt
 at a theoretical framework for rebound,
 based on neo-classical aggregate production functions (APFs).
@@ -331,45 +445,72 @@ and were followed, among others, by general equilibrium models, including
 \citet{Wei2010},
 \citet{Lemoine2019}, and
 \citet{Fullerton:2019aa}.
+%MKH: suggest we add here the following text:
+%Also relevant at the macroeconomic scale is the study by ~\citet{magee2017}, who extended rebound theory to study the material impacts of ICT, and found little evidence of dematerialization.
+
 A key issue with these macroeconomic frameworks is that they are,
 by virtue of their being macroeconomic models,
 working in aggregate variable space
 and, therefore, lack details of the various components of macroeconomic rebound or
-connection to micro-economic foundations.
+connection to micro-economic
+%MKH: change to microeconomic
+foundations.
+%MKH: suggest we add the text below:
+%For example, further exploration and linkage to microeconomic theory of the macroeconomic or productivity ‘multiplier’ effect would be advantageous, which ~\citet{Borenstein:2015aa} states (p.11) is where ``the economy will expand by more than the private income gain enjoyed by the owner of the upgraded appliance’’.  
+
 A second issue is that estimates of macroeconomic rebound effects
 generated by macroeconomic frameworks
 are contingent upon the type of production function assumed
 (Cobb-Douglas, CES, etc.) and
 choice of substitution elasticity.
-As Saunders~\citet[p.~2207-2208]{Saunders2008} noted,
+As Saunders~\citet[p.~2207-2208]{Saunders2008} 
+%MKH: not quite sure why we have 2 x Saunders in the PDF
+noted,
 ``choice of production/cost function can pre-determine the results related to rebound\ldots{}
 [and choosing] values for these [elasticity of substitution] parameters
 is tantamount to assuming rebound results.''
 
-What is missing, however,
-is a more detailed and comprehensive theoretical framework, 
+%MKH: suggest we add the line below:
+%In summary, we find there is a strategic need for 
+%MKH: suggest we delete the ‘missing’ line below: 
+What is missing, however,is
+a more detailed and comprehensive theoretical framework, 
 one that is
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item built from micro-economic foundations and
+  \item built from microeconomic foundations and
   
+  %MKH: delete this item:
   \item catches up with the complexity of rebound typology mechanisms,
-        including many of the macroeconomic mechanisms. 
-        **** We don't actually do this! Maybe restate/rethink a bit here.
+  %MKH: add these two items (b) and (c):
+  %\item carefully distinguishes between the microeconomic components shown in Table 1, and
+  %\item links to macroeconomic multiplier effects also shown in Table 1. 
+  %MKH: delete this next line:
+  including many of the macroeconomic mechanisms. 
+%MKH: the revised text above may mean now you would delete your ****comment***below:
+**** We don't actually do this! Maybe restate/rethink a bit here.
         Maybe we can say, instead, ``carefully distinguishes rebound mechanisms found in most typologies.''---MKH ****
-    
+    %MKH: please add the text below:
+%The development of a more comprehensive rebound framework would have benefits by connecting the micro and the macro rebound effects,, in that it would present a way to connect the engineers (who usually focus on micro efficiency and the device level) and the economists (some of whom focus on the macro level).
+
 \end{enumerate*}
 
 
 %++++++++++++++++++++++++++++++
 \subsection{Aim, contribution, and structure of the paper (MKH, 100 words)}
+%MKH: delete (MKH, 100 words) above)
 \label{sec:structure}
 %++++++++++++++++++++++++++++++
 
 The aim of this paper is to fill the gap in the literature identified above.
 We build on the microeconomic foundations laid by \citet{Borenstein:2015aa}
-to include nine components of rebound (4 microeconomic, 5 macroeconomic **** Do we have these numbers right?---MKH ****) 
+%MKH: add this next line
+%by defining six microeconomic components of rebound (two each for direct, indirect and emplacement/device effects, as shown in table 1), and linkage to a macroeconomic component via a multiplier effect.
+%MKH: delete this next line:
+to include nine components of rebound (4 microeconomic, 5 macroeconomic **** Do we have these numbers right?---MKH ****)
+%MKH: add next word/line
+%as
 shown in Table~\ref{tab:typology}.
 We also demonstrate application of the framework
 by calculating energy rebound associated with 
