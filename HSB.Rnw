@@ -164,6 +164,9 @@ Energy rebound is a phenomenon whereby
 some expected energy savings do not occur 
 after an energy efficiency upgrade (EEU)
 due to a rebound effect that increases energy use.
+****
+The first sentence sounds circular.---MKH
+****
 The roots of energy rebound can be traced back to William Stanley \citet{Jevons:1866uy}
 who, in an 1865 report entitled \emph{The Coal Question},
 suggested that
@@ -184,7 +187,11 @@ is restated by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-The scale of macroeconomic feedback gets to the heart of the debate,
+The scale
+****
+magnitude?---MKH
+****
+of macroeconomic feedback gets to the heart of the debate,
 which continues today.
 Advocates of small rebound (say, less than 50~\%),
 such as \citet{Gillingham:2013aa, Gillingham2016},
@@ -201,7 +208,10 @@ because there is a lot at stake.
 We see three areas of rebound concern: 
 hampering of carbon reduction efforts, 
 increases to resource and material use, 
-and lack of rebound inclusion within policy.
+and lack of rebound inclusion within policy
+****
+policy-making that neglects rebound?---MKH
+****.
 First, to meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
 increasing energy efficiency is expected to deliver 
 decreasing energy consumption and CO$_2$ emissions
@@ -225,6 +235,10 @@ to economic growth ~\citep{Haberl2020, Wiedmann2020},
 it may not possible to separate energy rebound from rising material consumption and resource extraction.
 Third, energy rebound is rarely included in either policy~\citep{fontvivanco2016}
 or energy~\citep{Brockway2020} models, 
+****
+Should this really be ``policy models and energy models'' or 
+``policy-making and energy models''?---MKH
+****
 limiting our ability to assess the interactions among
 rebound, 
 carbon emissions, and
@@ -268,16 +282,15 @@ reviewing 35 years of rebound research, noted that
 ``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
 by the many different versions'' of rebound typologies.
 
-\begin{figure}
+\begin{table}
+\caption{Rebound typology based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.
+         **** We need to move Emplacement effects ahead of substitution and income effects 
+              to maintain same order as rest of paper.---MKH ****
+         **** Convert to a \LaTeX{} table?---MKH ****}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-\caption{Rebound typology based on \citet{greening2000}, \citet{Jenkins2011},and 
-\citet{Thomas:2013ab}
-         **** Should we replace this table with our topology?---MKH **** 
-         **** Yes, agreed. I have added a PDF of the latest table with our typology in dropbox and given also a copy via email to MKH---PEB
-         **** Need to convert from a figure to a table.---MKH ****}
 \label{tab:typology}
-\end{figure}
+\end{table}
 
 
 %++++++++++++++++++++++++++++++
