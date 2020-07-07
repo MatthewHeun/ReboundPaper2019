@@ -327,7 +327,10 @@ Instead, more common -- but still quite rare -- are studies
 which estimate total rebound
 [i.e., sum of microeconomic and macroeconomic rebound 
 as shown in Table~\ref{tab:typology}]
-have progressed in terms of numbers of studies and methods. 
+have progressed in terms of numbers of studies and methods.
+****
+Is the preceding sentence complete?---MKH
+****
 A recent review of studies by \citet{Brockway2020} 
 found 
 the most common method is via a dominant group of CGE-based studies, 
@@ -341,10 +344,11 @@ The magnitude of total energy rebound from these non-CGE methods
 was also found to be over 50~\%,
 leading the review authors \citet{Brockway2020} 
 to conclude that total rebound magnitudes 
-were ``larger than commonly assumed''.
+were ``larger than commonly assumed.''
 Finally, increasing empirical support is emerging for 
 even larger total rebound estimates from 
-the producer side~\citep{Saunders2013a} and for developing and industrialising countries~\citet{VanBenthem2015}~\citet{Brockway:2017a}
+the producer side \citep{Saunders2013a} and for developing and 
+industrializing countries~\citep{VanBenthem2015, Brockway:2017a}.
 
 
 %++++++++++++++++++++++++++++++
@@ -357,7 +361,7 @@ focusing on direct and indirect rebound via price elasticities (e.g.,~\citet{Sch
 Other microeconomic advances include those by 
 \citet{thomas:2013aa}, who set out a detailed framework of direct and indirect microeconomic effects;
 \citet{Borenstein:2015aa},
-who provided a detailed treatment of rebound into income and substitution effects,
+who provided a detailed treatment of rebound into income and substitution effects;
 and \citet{Sun:2018aa}, who considered direct rebound including device effects.
 However, lifecycle and end of life device effects are still not typically considered. 
 
@@ -365,7 +369,7 @@ At the macroeconomic scale,
 \citet{Saunders:1992aa} made the earliest attempt
 at a theoretical framework for total energy rebound
 based on neo-classical aggregate production functions (APFs).
-Later works followed the APF approach, including
+Later works continued the APF approach, including
 \citet{Saunders:2000aa, Saunders2008},
 \citet{Wei2017}, and
 \citet{Brockway:2017a}.
@@ -382,35 +386,27 @@ who extended rebound theory to study the material impacts of
 information and communications technology (ICT),
 finding little evidence of dematerialization.
 
-Despite the growth of macroeconomic modelling frameworks to 
+Despite the growth of macroeconomic modeling frameworks to 
 estimate overall, or total rebound, three key issues remain. 
-First, is that
-by virtue of being macroeconomic models,
-they work in aggregate variable space 
-estimating total rebound
-and, therefore, commonly lack details of the splits between microeconomic and macroeconomic rebound components.
-Second, following on, is therefore the lack of linkage
-from micro to macroeconomic effects. 
+First, by definition macroeconomic models
+work in aggregate variable space when estimating total rebound.
+Therefore, macroeconomic models rarely discriminate microeconomic and macroeconomic rebound components.
+Second, following on, macroeconomic models of rebound lack linkages
+between microeconomic and macroeconomic effects. 
 The potential amplification from smaller, microeconomic rebound effects to
-a larger, macroeconomic effect has been described as the energy productivity effect
-%~\citep{Dimitropoulos2007}
-~\citep{Sorrell:2010ul}
-or simply, a multiplier effect 
-~\citep{Borenstein:2015aa}
-~\citep{Lange2019}
-, which ~\citep[p.~11]{Borenstein:2015aa} describes as occuring when
+a larger, macroeconomic effect has been described as the energy productivity effect~\citep{Dimitropoulos2007, Sorrell:2010ul}
+or simply, a multiplier effect ~\citep{Borenstein:2015aa, Lange2019},
+which~\citet[p.~11]{Borenstein:2015aa} describes as occurring when
 ``the economy [expands] by more than the private income gain
 enjoyed by the owner of the upgraded appliance''.
 Whilst the magnitude of the multiplier effect is still subject of much debate.
+****
+The preceding sentence isn't.---MKH 
+****
 The size of this productivity multiplier remains probably the most central of all issues within rebound the debate.
-On one side,
-~\citet{Schipper2000}
-%~\citet{Howarth1997}
+On one side, \citet{Howarth1997} and \citet{Schipper2000}
 claim that the multiplier is small. 
-On the other, 
-%~\citet{Aucott2014}, 
-%~\citet{Enflo2009}, and 
-%~\citet{Bataille2017}
+On the other, \citet{Aucott2014}, \citet{Enflo2009}, and \citet{Bataille2017}
 are among those that claim the macroeconomic multiplier effect is much larger. 
 %~\cite{Dimitropoulos2007}
 suggested that ``One of the main reasons behind the debate is the lack of a rigorous theoretical framework
