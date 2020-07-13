@@ -46,7 +46,7 @@
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Toward a Comprehensive Energy-Economy \\{}
-        Analytical Framework for\\
+        Analytical Framework for \\
         Energy Rebound}
 
 
