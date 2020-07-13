@@ -161,12 +161,18 @@ and
 
 
 Energy rebound is a phenomenon whereby 
-some expected energy savings do not occur 
-after an energy efficiency upgrade (EEU)
-due to a rebound effect that increases energy use.
+some of the expected energy savings do not occur 
+after an energy efficiency upgrade (EEU), 
+due to various behavorial and market responses that serve to 
+increase energy use.
+%due to a rebound effect that increases energy use.
 ****
 The first sentence sounds circular.---MKH
 ****
+****
+I have amended this now. reads better?---PEB
+****
+
 The roots of energy rebound can be traced back to William Stanley \citet{Jevons:1866uy}
 who, in an 1865 report entitled \emph{The Coal Question},
 suggested that
@@ -187,11 +193,15 @@ is restated by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
+%The macroeconomic feedback mechanisms and their
+%size lie at
 The scale
 ****
 magnitude?---MKH
 ****
-of macroeconomic feedback gets to the heart of the debate,
+of macroeconomic feedback gets to 
+***I placed some alternative text above in comments---PEB***
+the heart of the debate,
 which continues today.
 Advocates of small rebound (say, less than 50~\%),
 such as \citet{Gillingham:2013aa, Gillingham2016},
@@ -208,10 +218,13 @@ because there is a lot at stake.
 We see three areas of rebound concern: 
 hampering of carbon reduction efforts, 
 increases to resource and material use, 
-and lack of rebound inclusion within policy
-****
-policy-making that neglects rebound?---MKH
-****.
+and 
+policy-making that largely neglects rebound.
+%*** I amended above and commented out below---PEB***
+%lack of rebound inclusion within policy
+%****
+%policy-making that neglects rebound?---MKH
+%****.
 First, to meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
 increasing energy efficiency is expected to deliver 
 decreasing energy consumption and CO$_2$ emissions
@@ -233,12 +246,14 @@ are significant~\citep{VandenBergh2009, FontVivanco2018}.
 Given the global coupling of material consumption
 to economic growth ~\citep{Haberl2020, Wiedmann2020}, 
 it may not possible to separate energy rebound from rising material consumption and resource extraction.
-Third, energy rebound is rarely included in either policy~\citep{fontvivanco2016}
+Third, energy rebound is rarely included in either 
+policy-making~\citep{fontvivanco2016}
 or energy~\citep{Brockway2020} models, 
-****
-Should this really be ``policy models and energy models'' or 
-``policy-making and energy models''?---MKH
-****
+%agreed, policy-making is OK, so i commented out. if you agreed MKH you can delete---PEB
+%****
+%Should this really be ``policy models and energy models'' or 
+%``policy-making and energy models''?---MKH
+%****
 limiting our ability to assess the interactions among
 rebound, 
 carbon emissions, and
@@ -385,7 +400,9 @@ linkage to resource and material use, such as the study by ~\citet{Magee2017},
 who extended rebound theory to study the material impacts of 
 information and communications technology (ICT),
 finding little evidence of dematerialization.
-
+*** here is where I think we can add the Zink 2017 
+%~\citet{Zink2017}
+circular economy reference---PEB***
 Despite the growth of macroeconomic modeling frameworks to 
 estimate overall, or total rebound, three key issues remain. 
 First, by definition macroeconomic models
@@ -403,6 +420,9 @@ Whilst the magnitude of the multiplier effect is still subject of much debate.
 ****
 The preceding sentence isn't a complete sentence.---MKH 
 ****
+***
+I agree, it conflicts also with the next sentence. I suggest we delete the partial sentence above.---PEB
+***
 The size of this productivity multiplier remains probably the most central of all issues within rebound the debate.
 On one side, \citet{Howarth1997} and \citet{Schipper2000}
 claim that the macroeconomic rebound multiplier is small. 
