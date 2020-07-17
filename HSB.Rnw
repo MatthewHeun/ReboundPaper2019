@@ -1169,9 +1169,8 @@ $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
 is sufficient to calculate the sum of all rebound, 
 provided that 
-the productivity factor~($k$),
-the price of energy~($p_E$), and
-the energy intensity of the economy~($I_E$) 
+the productivity factor~($k$) and
+the the product of energy price and energy intensity ($p_E I_E$)
 are known.
 
 
