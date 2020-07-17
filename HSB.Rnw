@@ -149,29 +149,10 @@ Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
 % We make it operational.
 
 
-Notes from 25 June 2020 meeting:
-
-%MKH: I have added these three refs now in relation to coupling of materials in section 1.1. if you agree you can delete/comment this text below: 
-We will rely upon other papers to make the argument FOR the productivity effect.
-Options include \citet{Magee2017} and Paul's recent systematic review papers, including
-\url{https://iopscience.iop.org/article/10.1088/1748-9326/ab842a}
-and
-\url{https://www.nature.com/articles/s41467-020-16941-y}
-
-
-
 Energy rebound is a phenomenon whereby 
-some of the expected energy savings do not occur 
+some of expected energy savings do not occur 
 after an energy efficiency upgrade (EEU), 
-due to various behavorial and market responses that serve to 
-increase energy use.
-%due to a rebound effect that increases energy use.
-****
-The first sentence sounds circular.---MKH
-****
-****
-I have amended this now. reads better?---PEB
-****
+due to various behavior and market responses.
 
 The roots of energy rebound can be traced back to William Stanley \citet{Jevons:1866uy}
 who, in an 1865 report entitled \emph{The Coal Question},
@@ -217,14 +198,9 @@ it is much more than an academic debate,
 because there is a lot at stake.
 We see three areas of rebound concern: 
 hampering of carbon reduction efforts, 
-increases to resource and material use, 
+increases to resource and material consumption rates, 
 and 
 policy-making that largely neglects rebound.
-%*** I amended above and commented out below---PEB***
-%lack of rebound inclusion within policy
-%****
-%policy-making that neglects rebound?---MKH
-%****.
 First, to meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
 increasing energy efficiency is expected to deliver 
 decreasing energy consumption and CO$_2$ emissions
@@ -249,11 +225,6 @@ it may not possible to separate energy rebound from rising material consumption 
 Third, energy rebound is rarely included in either 
 policy-making~\citep{fontvivanco2016}
 or energy~\citep{Brockway2020} models, 
-%agreed, policy-making is OK, so i commented out. if you agreed MKH you can delete---PEB
-%****
-%Should this really be ``policy models and energy models'' or 
-%``policy-making and energy models''?---MKH
-%****
 limiting our ability to assess the interactions among
 rebound, 
 carbon emissions, and
@@ -275,9 +246,8 @@ and
 macroeconomic effects
 ~\citep{greening2000, Barker2009, FontVivanco2018}. 
 ~\citet{greening2000} split total rebound 
-%***MKH: i added total rebound = micro + macro effects in here,to address a comment later. I have also amended the latest Table to note/add a TOTAL rebound ***
 into two parts:
-Microeconomic rebound (direct and indirect) and
+microeconomic rebound (direct and indirect) and
 macroeconomic (economy-wide effects and transformational effects).
 \citet{Jenkins2011} break up microeconomic rebound effects into
 direct (income and substitution effects) and 
@@ -291,7 +261,7 @@ from micro and macro rebound.
 \citet{VandenBergh2011} distinguishes 14 types of rebound, 
 providing, perhaps, the greatest complexity. 
 Table~\ref{tab:typology} 
-attempts to summarise and reconcile some of the existing typologies.
+attempts to summarize and reconcile some of the existing typologies.
 \citet{madlener2016}, 
 reviewing 35 years of rebound research, noted that 
 ``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
@@ -400,9 +370,10 @@ linkage to resource and material use, such as the study by ~\citet{Magee2017},
 who extended rebound theory to study the material impacts of 
 information and communications technology (ICT),
 finding little evidence of dematerialization.
-*** here is where I think we can add the Zink 2017 
-%~\citet{Zink2017}
-circular economy reference---PEB***
+**** Here is where I think we can add the  
+~\citet{Zink2017}
+circular economy reference.---PEB
+Need a sentence around the Zink reference to show how it fits with the rest of the paragraph.---MKH ****
 Despite the growth of macroeconomic modeling frameworks to 
 estimate overall, or total rebound, three key issues remain. 
 First, by definition macroeconomic models
@@ -416,14 +387,8 @@ or, simply, a multiplier effect ~\citep{Borenstein:2015aa, Lange2019},
 which occurs when
 ``the economy [expands] by more than the private income gain
 enjoyed by the owner of the upgraded appliance'' \citep[p.~11]{Borenstein:2015aa}.
-Whilst the magnitude of the multiplier effect is still subject of much debate.
-****
-The preceding sentence isn't a complete sentence.---MKH 
-****
-***
-I agree, it conflicts also with the next sentence. I suggest we delete the partial sentence above.---PEB
-***
-The size of this productivity multiplier remains probably the most central of all issues within rebound the debate.
+The size of this productivity multiplier remains probably the most central of all issues
+within the rebound debate.
 On one side, \citet{Howarth1997} and \citet{Schipper2000}
 claim that the macroeconomic rebound multiplier is small. 
 On the other, \citet{Aucott2014}, \citet{Enflo2009}, and \citet{Bataille2017}
@@ -512,7 +477,8 @@ The comprehensive rebound framework provides the following benefits:
         Do we like this benefit?
         (Although this is important to me, personally, 
         we don't really speak much about this benefit elsewhere in the paper.
-        It seems like we should re-connect to each of these benefits later in the paper.)---MKH
+        It seems like we should re-connect to each of these benefits later in the paper.
+        If we don't re-connect, maybe that means we should delete the benefit?)---MKH
         ****
   
   \item it enables consideration of the potential energy rebound of prospective energy policy options, 
@@ -523,7 +489,7 @@ The comprehensive rebound framework provides the following benefits:
 The remainder of this paper is structured as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
 Section~\ref{sec:example} provides an example.
-Section~\ref{sec:discussion} provides discussion, and 
+Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
 
@@ -1232,8 +1198,13 @@ in the public, commercial, or not-for-profit sectors.
 
 **** Also list internal reviewers. ****
 
+Internal reviewers
+Adam Marquardt (Calvin University), 
+Paul Steenwyk (Calvin University), and 
+****
+contributed substantially to the quality of the framework and the manuscript.
 
-
+% No need for this section label, because BibTeX already provides a "References" heading.
 % \section*{References}
 
 \bibliography{HSB_refs}
