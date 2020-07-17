@@ -160,16 +160,16 @@ we obtain a convenient form
 % 
 % Rebound effects can occur at any point in the life cycle of an energy conversion device,
 % from manufacturing and distribution 
-% to the use phase (operations and maintenance),
+% to the use phase (maintenance),
 % and finally to disposal.
-% For simplicity, we group operations and maintenance with disposal to form
+% For simplicity, we group maintenance with disposal to form
 % two distinct life cycle rebound effects:
 % %
 % \begin{enumerate*}[label={(\alph*)}]
 % 	
 %   \item an embodied energy effect ($Re_{emb}$) and 
 %   
-%   \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
+%   \item a maintenance and disposal effect ($Re_{\OMd}$).
 %     
 % \end{enumerate*}
 
@@ -183,7 +183,7 @@ The emplacement effect accounts for performance of the EEU only.
 No behavior changes occur.
 The direct emplacement effect of the EEU is device energy savings and energy cost savings.
 The indirect emplacement effects of the EEU produce changes in the embodied energy rate and
-the operations, maintenance, and disposal cost rates.
+the maintenance and disposal cost rates.
 By definition, the direct emplacement effect has no rebound. 
 However, indirect emplacement effects may cause energy rebound.
 Both direct and indirect emplacement effects are discussed below.
@@ -211,16 +211,16 @@ at the upgraded device.
 Indirect emplacement rebound effects 
 can occur at any point in the life cycle of an energy conversion device,
 from manufacturing and distribution 
-to the use phase (operations and maintenance),
+to the use phase (maintenance),
 and finally to disposal.
-For simplicity, we group operations and maintenance with disposal to form
+For simplicity, we group maintenance with disposal to form
 two distinct indirect emplacement rebound effects:
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
   \item an embodied energy effect ($Re_{emb}$) and 
   
-  \item an operations, maintenance, and disposal effect ($Re_{\OMd}$).
+  \item a maintenance and disposal effect ($Re_{\OMd}$).
     
 \end{enumerate*}
 
@@ -246,7 +246,7 @@ However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
 an equal amount assigned to each period.
 We later take the same approach to capital costs and
-operations, maintenance, and disposal costs.
+maintenance and disposal costs.
 A justification for spreading embodied energy purchase costs comes from considering
 staggered device replacements by many consumers across several years.
 In the aggregate, staggered replacements
@@ -291,9 +291,9 @@ meaning that the upgraded device has a lower embodied energy rate than the origi
 
 In addition to embodied energy effects, 
 indirect emplacement rebound 
-can be associated with energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
-Operations and maintenance expenditures are typically modeled as a per-year expense, 
-a rate (e.g., $\rbempl{C}_{\OM}$).
+can be associated with energy demanded by maintenance and disposal~($\OMd$) expenditures.
+Maintenance expenditures are typically modeled as a per-year expense, 
+a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
@@ -305,7 +305,7 @@ We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
 is given by $\Delta \raempl{C}_{\OMd} I_E$.
-This term represents energy takeback, so operations, maintenance, and disposal rebound is given by
+This term represents energy takeback, so maintenance and disposal rebound is given by
 %
 \begin{equation} \label{eq:Re_OMd_def}
   Re_{\OMd} = \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot} \; ,
@@ -318,7 +318,7 @@ Slight rearrangement gives
   Re_{\OMd} = \ReOMdeqn{} \; . \tag{\ref{eq:Re_OMd}}
 \end{equation}
 
-Rebound from operations, maintenance, and disposal can be positive or negative,
+Rebound from maintenance and disposal can be positive or negative,
 depending on the sign of the term $\raempl{C}_{\OMd}/\rbempl{C}_{\OMd} - 1$.
 
 
@@ -838,7 +838,7 @@ Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
 This equation shows that a good first estimate for indirect income rebound
 is $p_E I_E$.
 Positive rebound from capital expenditures~($Re_{cap}$), 
-operations, maintenance, and disposal~($Re_{\OMd}$),
+maintenance and disposal~($Re_{\OMd}$),
 direct substitution~($Re_{dsub}$), 
 indirect substitution~($Re_{isub}$), and 
 direct income~($Re_{dinc}$)

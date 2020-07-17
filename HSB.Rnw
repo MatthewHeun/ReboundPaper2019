@@ -667,7 +667,7 @@ The emplacement effect accounts for performance of the EEU only.
 No behavior changes occur.
 The direct effect of emplacement of the EEU is device energy savings and energy cost savings.
 The indirect effects of emplacement of the EEU are changes in the embodied energy rate and
-the operations, maintenance, and disposal cost rates.
+the maintenance and disposal cost rates.
 
 Because no behavior changes are considered,
 actual and expected energy savings rates~($\Sdot$) are identical
@@ -694,7 +694,7 @@ because actual and expected energy savings are identical.
 On the other hand, energy rebound may be caused by indirect emplacement effects, which
 account for the life cycle of the energy conversion device, including 
 energy embodied by manufacturing (subscript $emb$) and
-operations, maintenance, and disposal (subscript $\OMd$).
+maintenance and disposal (subscript $\OMd$).
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
@@ -710,7 +710,7 @@ However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
 an equal amount assigned to each period.
 (We later take the same approach to capital costs and
-operations, maintenance, and disposal costs.)
+maintenance and disposal costs.)
 A justification for spreading embodied energy purchase costs comes from considering
 device replacements by many consumers across several years.
 In the aggregate, evenly-spaced (in time) replacements
@@ -745,8 +745,8 @@ See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
-energy demanded by operations, maintenance, and disposal~($\OMd$) expenditures.
-Operations and maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_{\OM}$).
+energy demanded by maintenance and disposal~($\OMd$) expenditures.
+Maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
@@ -759,7 +759,7 @@ For simplicity, we assume that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
 is given by $\Delta \raempl{C}_{\OMd} I_E$.
-Rebound from operations, maintenance, and disposal
+Rebound from maintenance and disposal
 is given by 
 %
 \begin{equation} \label{eq:Re_OMd}
@@ -999,7 +999,7 @@ In the midst of the \inceffect{} analysis, a capital expenses rebound term appea
 \end{equation}
 
 Positive rebound from capital expenditures~($Re_{cap}$), 
-operations, maintenance, and disposal~($Re_{\OMd}$),
+maintenance and disposal~($Re_{\OMd}$),
 direct substitution~($Re_{dsub}$), 
 indirect substitution~($Re_{isub}$), and 
 direct income~($Re_{dinc}$)
