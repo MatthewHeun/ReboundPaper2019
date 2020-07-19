@@ -810,7 +810,7 @@ Note that a negative value for the service price elasticity of consumption is ex
 such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-Substituting the typical relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
+Substituting the relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
 $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
@@ -856,10 +856,24 @@ gives
 
 Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
-When $\epsilon_{p_s} \in (-1, 0)$, as expected,
-the direct substitution rebound will be positive but less than 1 ($Re_{dsub} \in (0, 1)$).
 For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
+Furthermore, L'H\^{o}pital's rule can be invoked to find
+%
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\epsilon_{p_s} \; ,
+\end{equation}
+%
+and
+%
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} = 0 \; .
+\end{equation}
+%
+With $\epsilon_{p_s} \in (-1, 0)$ expected,
+direct substitution rebound will never be larger than 1.
+The direct substitution effect alone
+can never cause backfire. 
 
 The increase in consumption of the energy service after its price drop
 substitutes for consumption of other goods in the economy,
@@ -895,6 +909,14 @@ as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 Indirect substitution rebound becomes more negative
 as the ratio of utility exponents ($\alpha / \beta$) gets larger.
+
+Invoking L'H\^{o}pital's rule gives
+%
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{isub} 
+        = \epsilon_{p_s} \frac{\alpha}{\beta} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+\end{equation}
+%
 
 
 %++++++++++++++++++++++++++++++
