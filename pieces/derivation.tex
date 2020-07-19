@@ -486,16 +486,16 @@ For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}}
 $Re_{dsub} = 0.15$.
 
 To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
-$\etaratioinline{} \to \infty$, we invoke L'H\^{o}pital's rule to find
+$\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
+of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
 %
 \begin{equation}
   \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\epsilon_{p_s}}  \right]}
            {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
-    = -\epsilon_{p_s} \left( \etaratiostacked{} \right)^{-(\epsilon_{p_s} + 1)} \; ,
+    = -\epsilon_{p_s} \left( \etaratiostacked{} \right)^{-(\epsilon_{p_s} + 1)}
 \end{equation}
 %
-which leads to 
-%
+Substituting 1 and $\infty$ for $\etaratioinline$ gives
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
     = -\epsilon_{p_s} ( 1 )^{-(\epsilon_{p_s} + 1)}
@@ -614,14 +614,50 @@ Negative rebound indicates that indirect substitution reduces the energy takebac
 Indirect substitution rebound becomes more negative
 as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
-Invoking L'H\^{o}pital's rule gives
+We can take derivatives of numerator and invoke L'H\^{o}pital's rule
+to find limits for $Re_{isub}$ when
+$\etaratioinline{} \to 1^{\! +}$ and when
+$\etaratioinline{} \to \infty$.
+First, rearranging Eq.~(\ref{eq:Re_isub}) gives
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{isub} 
-        = \epsilon_{p_s} \frac{\alpha}{\beta} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+  Re_{isub} = \frac{x^m - x}{x - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
-and
+where $m \equiv \epsilon_{p_s} \alpha/\beta + 1$.
+Taking derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub}) gives
+%
+\begin{equation}
+  \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - x \right]}
+            {\dbydetaeta{}\left[ \left( \etaratiostacked{} \right)  - 1 \right] } \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} 
+       = \left[ m \left( \etaratiostacked{} \right)^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Substituting $\etaratioinline = 1$ and invoking L'H\^{o}pital's rule gives
+%
+\begin{equation}
+  \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
+        = \left[ m ( 1 )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
+        = [m - 1] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Substituting for $m$ gives
+%
+\begin{equation}
+  \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
+        = \epsilon_{p_s} \alpha/\beta \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
+\end{equation}
+
+Similarly, 
+substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
+%
+\begin{equation}
+  \lim_{\etaratioinline \to \infty} Re_{isub} 
+        = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+The result depends on the value of $m$ ($\epsilon_{p_s} \alpha/\beta + 1$)
+such that a piecewise definition is required:
 %
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
@@ -629,8 +665,12 @@ and
     -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} \alpha/\beta + 1 < 1 \\
     0 \; ,                                      & \text{for } \epsilon_{p_s} \alpha/\beta + 1 = 1 \\
     \infty \; ,                                 & \text{for } \epsilon_{p_s} \alpha/\beta + 1 > 1 \\
-  \end{cases} \; .
+  \end{cases} \; . \tag{\ref{eq:lim_Reisub_infty}}
 \end{equation}
+%
+% The result for $\epsilon_{p_s} \alpha/\beta + 1 > 1$ is included for completeness.
+% Because $\epsilon_{p_s} \in (-1, 0)$, $\alpha > 0$, and $\beta > 0$, 
+% $\epsilon_{p_s} \alpha/\beta + 1 > 1$ is impossible.
 
 
 %------------------------------

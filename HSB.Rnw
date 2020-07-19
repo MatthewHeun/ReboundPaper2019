@@ -1018,7 +1018,7 @@ is $p_E I_E$.
 Intuitively, this result is sensible.
 \$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
 Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
-By Eq.(~\ref{eq:Re_takeback}), rebound is
+By Eq.~(\ref{eq:Re_takeback}), rebound is
 %
 \begin{equation} \label{eq:intuituve_Re_iinc}
   Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
