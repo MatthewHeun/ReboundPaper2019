@@ -927,7 +927,7 @@ and
     \infty \; ,                                 & \text{for } \epsilon_{p_s} \alpha/\beta + 1 > 1 \\
   \end{cases} \; .
 \end{equation}
-%
+
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}
