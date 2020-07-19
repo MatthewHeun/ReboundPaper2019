@@ -484,18 +484,34 @@ Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
 For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
-Furthermore, L'H\^{o}pital's rule can be invoked to find
+
+To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
+$\etaratioinline{} \to \infty$, we invoke L'H\^{o}pital's rule to find
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\epsilon_{p_s} \; ,
+  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\epsilon_{p_s}}  \right]}
+           {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
+    = -\epsilon_{p_s} \left( \etaratiostacked{} \right)^{-(\epsilon_{p_s} + 1)} \; ,
+\end{equation}
+%
+which leads to 
+%
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
+    = -\epsilon_{p_s} ( 1 )^{-(\epsilon_{p_s} + 1)}
+    = -\epsilon_{p_s} \; ,                               \tag{\ref{eq:lim_Redsub_1}}
 \end{equation}
 %
 and
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} = 0 \; .
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
+    = -\epsilon_{p_s} ( \infty )^{-(\epsilon_{p_s} + 1)}
+    = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
 \end{equation}
 %
+because $\epsilon_{p_s} \in (-1, 0)$ and, therefore, $(\epsilon_{p_s} + 1) > 0$.
+
 With $\epsilon_{p_s} \in (-1, 0)$ expected,
 direct substitution rebound will never be larger than 1.
 The direct substitution effect alone

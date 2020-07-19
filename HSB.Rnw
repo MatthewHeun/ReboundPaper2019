@@ -860,13 +860,13 @@ For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}}
 $Re_{dsub} = 0.15$.
 Furthermore, L'H\^{o}pital's rule can be invoked to find
 %
-\begin{equation}
+\begin{equation} \label{eq:lim_Redsub_1}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\epsilon_{p_s} \; ,
 \end{equation}
 %
 and
 %
-\begin{equation}
+\begin{equation} \label{eq:lim_Redsub_infty}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} = 0 \; .
 \end{equation}
 %
@@ -912,14 +912,14 @@ as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 Invoking L'H\^{o}pital's rule gives
 %
-\begin{equation}
+\begin{equation} \label{eq:lim_Reisub_1}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{isub} 
         = \epsilon_{p_s} \frac{\alpha}{\beta} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
 and
 %
-\begin{equation}
+\begin{equation} \label{eq:lim_Reisub_infty}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
   \begin{cases}
     -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} \alpha/\beta + 1 < 1 \\
