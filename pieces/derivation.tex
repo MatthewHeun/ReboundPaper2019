@@ -621,11 +621,12 @@ $\etaratioinline{} \to \infty$.
 First, rearranging Eq.~(\ref{eq:Re_isub}) gives
 %
 \begin{equation}
-  Re_{isub} = \frac{x^m - x}{x - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+  Re_{isub} = \frac{\left( \etaratiostacked{} \right)^m - \etaratiostacked{}}{\left( \etaratiostacked{} \right) - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
-where $m \equiv \epsilon_{p_s} \alpha/\beta + 1$.
-Taking derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub}) gives
+where $m \equiv \epsilon_{p_s} (\alpha/\beta) + 1$.
+Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
+with respect to $\etaratioinline{}$ gives
 %
 \begin{equation}
   \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - x \right]}
@@ -645,7 +646,7 @@ Substituting for $m$ gives
 %
 \begin{equation}
   \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
-        = \epsilon_{p_s} \alpha/\beta \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
+        = \epsilon_{p_s} (\alpha/\beta) \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
 \end{equation}
 
 Similarly, 
@@ -656,23 +657,24 @@ substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
         = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
 %
-The result depends on the value of $m$ ($\epsilon_{p_s} \alpha/\beta + 1$),
+The result depends on the value of $m$ ($\epsilon_{p_s} (\alpha/\beta) + 1$),
 such that a piecewise definition is required:
 %
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
   \begin{cases}
-    -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} \alpha/\beta + 1 < 1 \\
-    0 \; ,                                      & \text{for } \epsilon_{p_s} \alpha/\beta + 1 = 1 \\
-    \infty \; ,                                 & \text{for } \epsilon_{p_s} \alpha/\beta + 1 > 1 \\
+    -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 < 1 \\
+    0 \; ,                                      & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 = 1 \\
+    \infty \; ,                                 & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 > 1 \\
   \end{cases} \; . \tag{\ref{eq:lim_Reisub_infty}}
 \end{equation}
 %
 In Eq.~(\ref{eq:lim_Reisub_infty}), 
-the result for $\epsilon_{p_s} \alpha/\beta + 1 > 1$ is included for completeness.
+the result for the case where $\epsilon_{p_s} (\alpha/\beta) + 1 > 1$ 
+is included for completeness.
 Because $\epsilon_{p_s} \in (-1, 0)$, $\alpha > 0$, and $\beta > 0$,
 the case where
-$\epsilon_{p_s} \alpha/\beta + 1 > 1$ is impossible.
+$\epsilon_{p_s} (\alpha/\beta) + 1 > 1$ is impossible.
 
 
 %------------------------------
