@@ -40,6 +40,7 @@
 
 
 \begin{document}
+\SweaveOpts{concordance=TRUE}
 
 \begin{frontmatter}
 
@@ -167,6 +168,10 @@ due to a rebound effect that increases energy use.
 ****
 The first sentence sounds circular.---MKH
 ****
++++
+How about ``some expected energy savings
+after an energy efficiency upgrade (EEU) are offset by behavioral reactions to this upgrade." ---GS
++++
 The roots of energy rebound can be traced back to William Stanley \citet{Jevons:1866uy}
 who, in an 1865 report entitled \emph{The Coal Question},
 suggested that
@@ -264,6 +269,9 @@ macroeconomic effects
 into two parts:
 Microeconomic rebound (direct and indirect) and
 macroeconomic (economy-wide effects and transformational effects).
++++
+Greening et al actually talk about a 'macroeconomic view' (p.390) and 'macroeconomic implications' (p.399) but not a macroeconomic rebound ---GS
++++ 
 \citet{Jenkins2011} break up microeconomic rebound effects into
 direct (income and substitution effects) and 
 indirect (respending and embodied effects), 
@@ -390,6 +398,9 @@ Despite the growth of macroeconomic modeling frameworks to
 estimate overall, or total rebound, three key issues remain. 
 First, by definition macroeconomic models
 work in aggregate variable space when estimating total rebound.
++++
+Are you excluding general equilibrium models from macroeconomic modeling frameworks? If so, I am confused by this exclusion and would like to understand your argument better. ---GS
++++ 
 Therefore, macroeconomic models rarely discriminate microeconomic and macroeconomic rebound components.
 Second, following on, macroeconomic models of rebound lack linkages
 between microeconomic and macroeconomic effects. 
@@ -788,14 +799,17 @@ See Appendix~\ref{sec:Re_OMd} for details.
 \label{sec:sub_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-The substitution effect involves
+The substitution effect alters compensated demand, which is
+defined as the expenditure minimizing consumption bundle for
+a given level of payoff (or utility). It involves
 %
 \begin{enumerate*}[label={(\alph*)}]
 
   \item an increase in consumption of the energy service due to its lower price,
-        called direct substitution ($dsub$) and
+        called direct substitution ($dsub$) indicating it relationship
+        with the direct rebound effect and
 
-  \item a constant-utility reduction in consumption of other goods,
+  \item a compensating reduction in consumption of other goods,
         called indirect substitution ($isub$).
 
 \end{enumerate*}
@@ -806,7 +820,7 @@ indirect substitution rebound ($Re_{isub}$).
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
-utility function parameters ($\alpha$ and $\beta$).
+payoff function parameters ($\alpha$ and $\beta$).
 
 The relationship between energy service price and energy service consumption rate
 is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
@@ -823,8 +837,16 @@ no greater than zero under standard assumptions on convex preferences.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
 such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
-
-Substituting the typical relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
++++
+Could possible delete this sentence as it's really implied
+by the foregoing and we can argue in the example that $\epsilon_{p_s} < 0$
+for that application---GS
++++
+Substituting the typical
++++
+Why typical?---GS
++++
+relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
 $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
@@ -839,13 +861,13 @@ an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the \subeffect{} on other purchases,
-we introduce a utility ($\rate{u}$) constraint.
+we introduce a payoff ($\rate{u}$) constraint.
 %
 \begin{equation}
   \rbsub{u} = \rasub{u}
 \end{equation}
 %
-We assume a utility function of the general form
+We assume a payoff function of the form
 $\frac{\rate{u}}{\rate{u}_0}
       = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
 where both $\alpha$ and $\beta$ are positive.
@@ -877,7 +899,7 @@ $Re_{dsub} = 0.15$.
 
 The increase in consumption of the energy service after its price drop
 substitutes for consumption of other goods in the economy,
-subject to the utility constraint.
+subject to the payoff constraint.
 The reduction in spending on other goods in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
@@ -903,13 +925,15 @@ we find
 Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
 the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
 and
-the ratio of utility exponents is positive ($\alpha / \beta > 0$),
+the ratio of payoff exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 Indirect substitution rebound becomes more negative
-as the ratio of utility exponents ($\alpha / \beta$) gets larger.
-
+as the ratio of payoff exponents ($\alpha / \beta$) gets larger.
++++
+Note to self: replace with MRS?---GS
++++
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}
@@ -928,10 +952,13 @@ as $\rate{G} = p_E \Sdot$.
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} monetary savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Total income before the EEU is $\rbempl{M}$.
-Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
+%Total income before the EEU is $\rbempl{M}$.
+%Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
+%+++
+%But total monetary income never changes. I'd stick to only discussing savings and have commented this out. ---GS
+%+++
 
-In this framework, all net income ($\rasub{N}$) is spent either 
+In the microeconomic framework, all net income ($\rasub{N}$) is spent either 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -941,11 +968,9 @@ In this framework, all net income ($\rasub{N}$) is spent either
     
 \end{enumerate*}
 %
-The direct income elasticity of consumption ($\epsilon_{dinc}$) 
+The income elasticity of energy service consumption ($\epsilon_{dinc}$), where d is for direct, 
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.(~\ref{eq:inc_budget_constraint})) 
-means that leftover income is spent on other goods.
 
 The ratio of rates of energy service consumed across the income effect is given by
 %
@@ -1018,10 +1043,14 @@ direct substitution~($Re_{dsub}$),
 indirect substitution~($Re_{isub}$), and 
 direct income~($Re_{dinc}$)
 reduce the indirect income effect rebound, 
-because each reduces net income available to the device owner to spend on other goods in the economy.
+because each reduces net monetary savings available to the device owner to spend on other goods in the economy.
 Any negative rebound effects enhance the indirect income effect rebound, because 
-they add to the net income available to the device owner to spend on other goods in the economy.
-
+they add to the net monetary savings available to the device owner to spend on other goods in the economy.
++++
+Should we add a subsection here on `economy-wide effects',
+that is changes in prices, including a lower energy price,
+so we get the `price effect'?---GS
++++
 
 %++++++++++++++++++++++++++++++
 \subsection{\Prodeffect}
@@ -1033,19 +1062,34 @@ The previous rebound effects
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
 In contrast, the productivity effect is macroeconomic.
-At the macro level, we claim that the effect of energy efficiency is expansionary,
-just like other factor-augmenting productivity improvements.
-This argument implicitly assumes two things:
+%At the macro level, we claim that the effect of energy efficiency is expansionary,
+%just like other factor-augmenting productivity improvements.
+%This argument implicitly assumes two things:
 %
-\begin{enumerate*}[label={(\alph*)}]
+%\begin{enumerate*}[label={(\alph*)}]
 
-  \item that, together with capital and labor, energy is a factor of production, and
+%  \item that, together with capital and labor, energy is a factor of production, and
 
-  \item energy efficiency operates along the supply side by reducing the cost of inputs
-        (in this case, final energy),
-        thereby allowing production on a greater scale.
+%  \item energy efficiency operates along the supply side by reducing the cost of inputs
+%        (in this case, final energy),
+%        thereby allowing production on a greater scale.
 
-\end{enumerate*}
+%\end{enumerate*}
+Like other factor-augmenting technical change, energy-augmenting
+technical change reduces production costs and so allows more efficient
+production (process innovation) that typically results in growth.
+Additionally, cheaper energy services could facilitate the
+development and deployment of new products (product innovation),
+and important driver of rising aggregate demand (Szostack 1995).
+The upshot is that while energy efficiency is higher, the more 
+efficient economy is growing more than one without the improvement,
+taking back part of the expected energy savings. We call this the
+productivity effect.
++++
+If we follow my argument that there is only one growth effect,
+we could also call it growth effect, which is more intuitive
+---GS
++++
 
 In general, reducing cost of inputs at the micro level can lead
 to important and surprising counter-tendencies in factor consumption at the macro level.
@@ -1066,16 +1110,22 @@ Can PB provide an alternative? ****
 show that increases in energy efficiency at the micro level
 go hand-in-hand. with 
 increases in overall energy consumption at the macro level.
-Of course, this generality between energy on the one hand
-and other inputs (XXXXX and labor) on the other hand
-raises the question whether it is appropriate to speak of a rebound effect at all.
-Isn't all technological progress just a rebound effect?
-We put it the opposite way:
-macroeconomic rebound effects are the consequences of technological change,
-whether
-in utilization of XXXXXX,
-in utilization of labor, or
-in utilization of energy.
+It is important to recognise the generality of this result.
+Typically focus is less interested in overall savings of an input,
+but once expected savings are of interested, all factor-augmenting
+technical change that accelerates economic growth can be analyzed
+in terms of its contribution to rebound relative to counterfactual
+scenario of lower growth.
+%Of course, this generality between energy on the one hand
+%and other inputs (XXXXX and labor) on the other hand
+%raises the question whether it is appropriate to speak of a rebound effect at all.
+%Isn't all technological progress just a rebound effect?
+%We put it the opposite way:
+%macroeconomic rebound effects are the consequences of technological change,
+%whether
+%in utilization of XXXXXX,
+%in utilization of labor, or
+%in utilization of energy.
 
 Further, we claim that productivity effect rebound stems from technological improvements
 (energy efficiency)
@@ -1104,6 +1154,8 @@ $k = 0$ means two things:
 %
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption at the macro level.
+This should not be confused with a ``multiplier" from Keynesian economics,
+on which more in the discussion.
 
 As shown in Table~\ref{tab:prodeffect}, 
 productivity rebound is given by
@@ -1173,7 +1225,12 @@ about any specific rebound numbers that we calculate.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Be sure to point out benefits to policy-making that emerge from the example.
-
++++
+I'd suggest putting the criticism of 'multiplier effects'
+in place of productivity effects
+here as opposed to in the section with the derivation. ---GS
++++
+Gregor wants to do some discussing.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions (MKH, 500 words)}
