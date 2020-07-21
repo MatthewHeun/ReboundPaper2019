@@ -151,23 +151,14 @@ Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
 
 
 Energy rebound is a phenomenon whereby 
-<<<<<<< HEAD
 some expected energy savings do not occur 
-after an energy efficiency upgrade (EEU)
-due to a rebound effect that increases energy use.
-****
-The first sentence sounds circular.---MKH
-****
-+++
-How about ``some expected energy savings
-after an energy efficiency upgrade (EEU) are offset by behavioral reactions to this upgrade." ---GS
-+++
-=======
-some of expected energy savings do not occur 
 after an energy efficiency upgrade (EEU), 
 due to various behavior and market responses.
 
->>>>>>> 916c5540a4c1fcb0df0808c69a5488a74f7f5bb2
++++
+This is the merged edit of MKH's and my suggested changes to avoid circularity. ---GS
++++
+
 The roots of energy rebound can be traced back to William Stanley \citet{Jevons:1866uy}
 who, in an 1865 report entitled \emph{The Coal Question},
 suggested that
@@ -832,21 +823,15 @@ no greater than zero under standard assumptions on convex preferences.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
 such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
-<<<<<<< HEAD
+
 +++
 Could possible delete this sentence as it's really implied
 by the foregoing and we can argue in the example that $\epsilon_{p_s} < 0$
 for that application---GS
 +++
-Substituting the typical
-+++
-Why typical?---GS
-+++
-relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
-=======
 
 Substituting the relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
->>>>>>> 916c5540a4c1fcb0df0808c69a5488a74f7f5bb2
+
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
 $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
@@ -944,13 +929,7 @@ indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 Indirect substitution rebound becomes more negative
-<<<<<<< HEAD
 as the ratio of payoff exponents ($\alpha / \beta$) gets larger.
-+++
-Note to self: replace with MRS?---GS
-+++
-=======
-as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 Invoking L'H\^{o}pital's rule gives
 %
@@ -969,8 +948,6 @@ and
     \infty \; ,                                 & \text{for } \epsilon_{p_s} \alpha/\beta + 1 > 1 \\
   \end{cases} \; .
 \end{equation}
-
->>>>>>> 916c5540a4c1fcb0df0808c69a5488a74f7f5bb2
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}
