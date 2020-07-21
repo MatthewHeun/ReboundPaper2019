@@ -46,7 +46,8 @@
 %%%%% Subscript kerning
 
 \newcommand{\OM}{O\!M}
-\newcommand{\OMd}{O\!M\!d}
+% \newcommand{\OMd}{O\!M\!d}
+\newcommand{\OMd}{md}
 \newcommand{\productivity}{pr\!od}
 
 
@@ -201,6 +202,14 @@ bottom=2pt}
 
 % Equations
 
+% Efficiency ratios
+\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+
+% Derivative with respect to efficiency ratio
+\newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
+
+
 % Original
 \newcommand{\Eacctorig}{\rbempl{E} = \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{\OMd} + \rbempl{C}_o) I_E}
 \newcommand{\Macctorig}{\rbempl{M} = p_E \rbempl{E}_s + \rbempl{C}_{cap} + \rbempl{C}_{\OMd} + \rbempl{C}_o + \rbempl{N}}
@@ -267,3 +276,4 @@ bottom=2pt}
 \newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\OMd}         \nonumber \\
                        &+ [1 - (1+k) p_E I_E] Re_{dsub} - k Re_{isub}   \nonumber \\
                        &+ (1 - p_E I_E) Re_{dinc} + (1 + k) p_E I_E}
+                       
