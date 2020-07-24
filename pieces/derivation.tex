@@ -37,7 +37,7 @@ In Table~\ref{tab:analysis_assumptions},
 relationships for \empleffect{} 
 embodied energy rates, 
 capital expenditure rates, and 
-OM and disposal expenditure rates
+maintenance and disposal expenditure rates
 are typical, and
 inequalities could switch direction for a specific EEU.
 \Prodeffect{} relationships are given for a single device only.
@@ -46,7 +46,7 @@ the energy service consumption rate~($\rate{q}_s$),
 device energy consumption rate~($\rate{E}_s$), 
 embodied energy rate~($\rate{E}_{emb}$),
 capital expenditure rate~($\rate{C}_{cap}$), and 
-OM and disposal expenditure rate~($\rate{C}_{\OMd}$)
+maintenance and disposal expenditure rate~($\rate{C}_{\OMd}$)
 will all increase.
 
 \input{pieces/assumptions_table.tex}
@@ -567,7 +567,7 @@ and
 %
 Assuming that the average price is unchanged across the substitution effect,
 such that $\asub{p}_o = \bsub{p}_o$,
-the preceding two equations can be set equal and Eq.~\ref{eq:qohat_qostar} can be added to find
+the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can be added to find
 %
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
@@ -575,7 +575,7 @@ the preceding two equations can be set equal and Eq.~\ref{eq:qohat_qostar} can b
       = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)}  \; .
 \end{equation}
 %
-Note that Eq.~\ref{eq:Cdot_o_ratio} 
+Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
 (along with $\rbsub{C}_o = \rbempl{C}_o$)
 can be used to determine the rate of expenditures 
 on other goods in the economy~($\rasub{C}_o$) by
@@ -855,7 +855,7 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
               {\Sdot} \; .
 \end{equation}
 %
-Canceling terms and substituting Eqs.~\ref{eq:Sdot} and~\ref{eq:q_ratio_across_inc} gives
+Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:q_ratio_across_inc}) gives
 %
 \begin{equation}
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
@@ -961,10 +961,10 @@ Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
 The sum of all rebound effects is 
 %
 \begin{equation}
-  Re_{sum} = \cancelto{0}{Re_{dev}} + Re_{lc} + Re_{sub} + Re_{inc} + Re{prod} \; .
+  Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re{prod} \; .
 \end{equation}
 %
-Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
+Substituting Eqs.~(\ref{eq:Re_empl_def}), (\ref{eq:Re_sub_def}), and~(\ref{eq:Re_inc_def}) gives
 %
 \begin{align}
   Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect} \nonumber \\
@@ -976,8 +976,8 @@ Substituting Eqs.~\ref{eq:Re_lc_def}, \ref{eq:Re_sub_def}, \ref{eq:Re_inc_def}
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
 productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
-are expressed in terms of other rebound effects.
-Substituting Eqs.~\ref{eq:Re_iinc} and~\ref{eq:Re_prod} gives
+can be expressed in terms of other rebound effects.
+Substituting Eqs.~(\ref{eq:Re_iinc}) and~(\ref{eq:Re_prod}) gives
 %
 \begin{align}
   Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect}                           \nonumber \\

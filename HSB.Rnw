@@ -605,7 +605,7 @@ Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{e
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
 to final energy rates in the numerators and denominators of rebound expressions
-derived from Eqs.~\ref{eq:Re_def} and~\ref{eq:Re_takeback};
+derived from Eqs.~(\ref{eq:Re_def}) and~(\ref{eq:Re_takeback});
 they divide out anyway.
 We define rebound at the final energy level, 
 because that is the point of energy purchase by the device owner.
@@ -1025,7 +1025,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 %
 The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
 can be found by rearranging the budget constraint for the income effect 
-(Eq.(~\ref{eq:inc_budget_constraint})) to be 
+(Eq.~(\ref{eq:inc_budget_constraint})) to be 
 $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
 After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
@@ -1195,7 +1195,7 @@ In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
 (\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.(~\ref{eq:Re_iinc})) and
+indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
 productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
 are expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
