@@ -785,13 +785,22 @@ See Appendix~\ref{sec:Re_OMd} for details.
 \label{sec:sub_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
+The direct rebound effect is split into substitution and
+income effects, following neoclassical consumer theory. That
+framework distinguishes substituting the energy service for
+other consumption items whose relative price increases due to the 
+higher efficiency and hence lower price of producing the energy 
+service, and respending the higher real income. Since other goods'
+consumption is altered, substitution and income effects affect 
+both direct and indirect rebound effects.
+
 The substitution effect alters compensated demand, which is
 defined as the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). It involves
 %
 \begin{enumerate*}[label={(\alph*)}]
 
-  \item an increase in consumption of the energy service due to its lower price,
+  \item an increase in consumption of the energy service,
         called direct substitution ($dsub$) indicating it relationship
         with the direct rebound effect and
 
@@ -807,6 +816,11 @@ Substitution effect rebound
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
 payoff function parameters ($\alpha$ and $\beta$).
+
++++ Here we'll want to include the Slutsky equation 
+to discuss decomposing the own price elasticity into 
+compensated own price elasticity and income elasticity. 
+Some of the below will have to give --- GS +++
 
 The relationship between energy service price and energy service consumption rate
 is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
