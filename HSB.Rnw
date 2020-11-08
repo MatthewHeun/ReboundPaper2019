@@ -1340,5 +1340,13 @@ using an early version of this framework.
 \input{pieces/derivation.tex}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elasticities (GS)}
+\label{sec:elasticities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/elasticities.tex}
+
+
 
 \end{document}
