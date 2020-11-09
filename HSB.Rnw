@@ -796,12 +796,13 @@ both direct and indirect rebound effects.
 
 The substitution effect alters compensated demand, which is
 defined as the expenditure minimizing consumption bundle for
-a given level of payoff (or utility). It involves
+a given level of payoff (or utility). 
+It involves
 %
 \begin{enumerate*}[label={(\alph*)}]
 
   \item an increase in consumption of the energy service,
-        called direct substitution ($dsub$) indicating it relationship
+        called direct substitution ($dsub$) indicating its relationship
         with the direct rebound effect and
 
   \item a compensating reduction in consumption of other goods,
@@ -814,8 +815,9 @@ direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
-the service price elasticity of consumption ($\epsilon_{p_s}$), and
-payoff function parameters ($\alpha$ and $\beta$).
+the service price elasticity of energy service consumption ($\eqsps$) and
+the service price elasticity of other goods consumption ($\eqops$).
+See Appendix~\ref{sec:elasticities} for further details about elasticities.
 
 +++ Here we'll want to include the Slutsky equation 
 to discuss decomposing the own price elasticity into 
@@ -823,91 +825,82 @@ compensated own price elasticity and income elasticity.
 Some of the below will have to give --- GS +++
 
 The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
+is given by the service price elasticity of energy service consumption~($\eqsps$),
 such that
-%
+
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
 \end{equation}
 %
-% We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
-% from service prices only.
-We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is 
-no greater than zero under standard assumptions on convex preferences.
-Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
-such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
-the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
-
-+++
-Could possible delete this sentence as it's really implied
-by the foregoing and we can argue in the example that $\epsilon_{p_s} < 0$
-for that application---GS
-+++
+We assume that the service price elasticity of consumption is 
+no greater than zero ($\eqsps < 0$)
+under standard assumptions on convex preferences.
+% Note that a negative value for the service price elasticity of energy service consumption 
+% means that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
+% the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting the relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
-
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
 $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
-%
+
 \begin{equation} \label{eq:q_ratio_func_of_eps}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
 \end{equation}
 %
-Because the energy service price elasticity of consumption
-is negative ($\epsilon_{p_s} < 0$),
+Because the energy service price elasticity of energy service consumption
+is negative ($\eqsps < 0$),
 an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the \subeffect{} on other purchases,
-we introduce a payoff ($\rate{u}$) constraint.
-%
-\begin{equation}
-  \rbsub{u} = \rasub{u}
-\end{equation}
-%
-We assume a payoff function of the form
-$\frac{\rate{u}}{\rate{u}_0}
-      = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
-where both $\alpha$ and $\beta$ are positive.
-After substitution and rearrangement, we find
-%
+we introduce another elasticity:
+the energy service price elasticity of other goods consumption~($\eqops$).
+Appendix~\ref{sec:derivation} shows that
+
 \begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {-\eqops} \; .
 \end{equation}
+%
+(See Appendix~\ref{sec:elasticities} for relationships among the elasticities.)
+Because the energy service price elasticity of other goods consumption
+is positive ($\eqops > 0$),
+an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$)
+implies a reduction in the rate of consumption of other goods ($\rasub{q}_o > \rbsub{q}_o$).
 
 As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
-%
+
 \begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
 \end{equation}
 %
 Expansion and substitution of terms (see Appendix~\ref{sec:Re_dsub})
 gives
-%
+
 \begin{equation} \label{eq:Re_dsub}
   Re_{dsub} = \Redsubeqn{} \; .
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
-expected to be negative ($\epsilon_{p_s} < 0$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+expected to be negative ($\eqsps < 0$).
+For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
+
 Furthermore, L'H\^{o}pital's rule can be invoked to find
-%
+
 \begin{equation} \label{eq:lim_Redsub_1}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\epsilon_{p_s} \; ,
+  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\eqsps \; ,
 \end{equation}
 %
 and
-%
+
 \begin{equation} \label{eq:lim_Redsub_infty}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} = 0 \; .
 \end{equation}
 %
-With $\epsilon_{p_s} \in (-1, 0)$ expected,
+With $\eqsps \in (-1, 0)$ expected,
 direct substitution rebound will never be larger than 1.
-The direct substitution effect alone
+Thus, the direct substitution effect alone
 can never cause backfire. 
 
 The increase in consumption of the energy service after its price drop
@@ -919,7 +912,7 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 To derive an expression for indirect substitution rebound,
 we begin with the definition of $Re_{isub}$
 from Table~\ref{tab:subeffect}:
-%
+
 \begin{equation} \label{eq:Re_isub_dev}
   Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
 \end{equation}
@@ -930,38 +923,30 @@ We further assume that the average price is unchanged across the substitution ef
 such that $\asub{p}_o = \bsub{p}_o$.
 After substitution and rearrangement (see Appendix~\ref{sec:Re_isub}),
 we find
-%
+
 \begin{equation} \label{eq:Re_isub}
   Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
 
-Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
+Because the service price elasticity of energy service consumption is negative ($\eqsps < 0$) and
 the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
-and
-the ratio of payoff exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
-Indirect substitution rebound becomes more negative
-as the ratio of payoff exponents ($\alpha / \beta$) gets larger.
 
 Invoking L'H\^{o}pital's rule gives
-%
+
 \begin{equation} \label{eq:lim_Reisub_1}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{isub} 
-        = \epsilon_{p_s} \frac{\alpha}{\beta} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
 and
-%
+
 \begin{equation} \label{eq:lim_Reisub_infty}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
-  \begin{cases}
-    -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} \alpha/\beta + 1 < 1 \\
-    0 \; ,                                      & \text{for } \epsilon_{p_s} \alpha/\beta + 1 = 1 \\
-    \infty \; ,                                 & \text{for } \epsilon_{p_s} \alpha/\beta + 1 > 1 \\
-  \end{cases} \; .
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} = - \frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
 \end{equation}
+
 
 %++++++++++++++++++++++++++++++
 \subsection{\Inceffect}
@@ -996,14 +981,14 @@ In the microeconomic framework, all net income ($\rasub{N}$) is spent either
     
 \end{enumerate*}
 %
-The income elasticity of energy service consumption ($\epsilon_{dinc}$), where d is for direct, 
+The income elasticity of energy service consumption ($\eqsM$)
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 
 The ratio of rates of energy service consumed across the income effect is given by
 %
 \begin{equation} \label{eq:q_ratio_across_inc}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\epsilon_{dinc}} \; .
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
@@ -1014,7 +999,7 @@ As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 %
 After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_dinc}), 
 an expression for direct income rebound is
-%
+
 \begin{equation} \label{eq:Re_dinc}
   Re_{dinc} = \Redinceqn{} \; .
 \end{equation}
@@ -1022,7 +1007,7 @@ an expression for direct income rebound is
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
-($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ becomes more negative), 
+($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 Any net monetary savings not spent on procuring more of the energy service

@@ -56,6 +56,13 @@
 \newcommand{\Sdot}{\rate{S}_{dev}}
 
 
+%%%%% Elasticities
+
+\newcommand{\eqsps}{\epsilon_{\dot{q}_s\!,p_s}}
+\newcommand{\eqops}{\epsilon_{\dot{q}_o\!,p_s}}
+\newcommand{\eqsM}{\epsilon_{\dot{q}_s\!,M}}
+
+
 %%%%% Colors
 
 \newcommand{\emplcolor}{red!25!white}
@@ -249,18 +256,18 @@ bottom=2pt}
 \newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
-\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
+\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} - 1}
                         {\frac{\aprod{\eta}}{\bempl{\eta}} - 1}}
                         
 % Equation for Re_isub
 \newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bempl{\eta}}  \right)}
-                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
+                          ^{-\eqops} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
                           \frac{\aprod{\eta}}{\bempl{\eta}} \; 
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
-\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
-                  \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
+\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
+                  \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps}}
               {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
 
 % Equation for Re_cap
@@ -276,4 +283,7 @@ bottom=2pt}
 \newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\OMd}         \nonumber \\
                        &+ [1 - (1+k) p_E I_E] Re_{dsub} - k Re_{isub}   \nonumber \\
                        &+ (1 - p_E I_E) Re_{dinc} + (1 + k) p_E I_E}
-                       
+                 
+
+
+

@@ -351,18 +351,18 @@ The substitution effect quantifies the amount by which
 the device owner, in response,
 increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
 decreases the consumption rate of other goods ($\rasub{q}_o < \rbsub{q}_o$).
+(See Appendix~\ref{sec:elasticities} for information about elasticities.)
 
 The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
+is given by the service price elasticity of energy service consumption~($\eqsps$),
 such that
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
 \end{equation}
 %
-We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
-from service prices only.
-Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
+Note that a negative value for the service price elasticity of energy service consumption
+is expected ($\eqsps < 0$),
 such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
@@ -372,63 +372,43 @@ $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
                                                                         \tag{\ref{eq:q_ratio_func_of_eps}}
 \end{equation}
 %
-Again, note that the energy service price elasticity of consumption
-is negative ($\epsilon_{p_s} < 0$), so
+Again, note that the energy service price elasticity of energy service consumption
+is negative ($\eqsps < 0$), so that
 as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the substitution effect on other purchases,
-we introduce a utility ($\rate{u}$) constraint.
-%
-\begin{equation}
-  \rbsub{u} = \rasub{u}
-\end{equation}
-%
-We assume a utility function of the general form
-$\frac{\rate{u}}{\rate{u}_0}
-      = A \left( \frac{\rate{q}_s}{\rate{q}_{s,0}} \right)^\alpha \left( \frac{\rate{q}_o}{\rate{q}_{o,0}} \right)^\beta$,
-where both $\alpha$ and $\beta$ are positive.
+we introduce a second elasticity, 
+the service price elasticity of other goods consumption~($\eqops$).
+See Appendix~\ref{sec:elasticities} for constraints on the relationship between the
+energy service price elasticity of energy service consumption~($\eqsps$) and the
+energy service price elasticity of other goods consumption~($\eqops$).
 
-****
-Gregor: paragraph here about values for $\alpha$ and $\beta$ for each example.
-We said that we want to consider the importance of the energy good relative to the basket of goods. 
-As such, $\alpha$ is likely small. 
-We may need different $\alpha/\beta$ values for transport vs.\ lighting.
-Let's consider this location a placeholder for now.
-We may want to move it elsewhere.---MKH
-****
-
-Applying the utility constraint gives
+The ratio of other goods consumption on both sides of the substitution effect is given by
 %
 \begin{equation}
-  (\rbsub{q}_s)^\alpha (\rbsub{q}_o)^\beta = (\rasub{q}_s)^\alpha (\rasub{q}_o)^\beta \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; . 
 \end{equation}
 %
-Rearrangement gives
+Note that the service price elasticity of other good consumption
+is expected to be positive ($\eqops > 0$).
+As the energy service price decreases~($\aprod{p}_s < \bempl{p_s}$), 
+consumption of other goods is expected to decrease, 
+because constant utility is assumed across the substitution effect.
+(See Appendix~\ref{sec:elasticities}.)
+Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
+$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
+$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+gives
 %
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right) ^ {- \alpha / \beta} \; .
-\end{equation}
-%
-Substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) and rearranging gives
-%
-\begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; . 
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right) ^ {-\eqops} \; . 
                                                                                               \tag{\ref{eq:qohat_qostar}}
 \end{equation}
-
-Note that the service price elasticity of consumption ($\epsilon_{p_s}$)
-is negative and utility function exponents ($\alpha$ and $\beta$) are positive, such that
-when energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
-the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
-as expected for the substitution effect.
-Note, too, that if the device owner derives relatively more utility
-from the energy service compared to other purchases ($\alpha > \beta$),
-the reduction in other purchases is enhanced, because $\frac{\alpha}{\beta} > 1$.
 
 Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
 
@@ -491,8 +471,8 @@ and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
-expected to be negative ($\epsilon_{p_s} < 0$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+expected to be negative ($\eqsps < 0$).
+For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
@@ -500,29 +480,30 @@ $\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
 of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
 %
 \begin{equation}
-  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\epsilon_{p_s}}  \right]}
+  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqsps}  \right]}
            {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
-    = -\epsilon_{p_s} \left( \etaratiostacked{} \right)^{-(\epsilon_{p_s} + 1)}
+    = -\eqsps \left( \etaratiostacked{} \right)^{-(\eqsps + 1)}
 \end{equation}
 %
 Substituting 1 and $\infty$ for $\etaratioinline$ gives
+%
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
-    = -\epsilon_{p_s} ( 1 )^{-(\epsilon_{p_s} + 1)}
-    = -\epsilon_{p_s} \; ,                               \tag{\ref{eq:lim_Redsub_1}}
+    = -\eqsps ( 1 )^{-(\eqsps + 1)}
+    = -\eqsps \; ,                               \tag{\ref{eq:lim_Redsub_1}}
 \end{equation}
 %
 and
 %
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
-    = -\epsilon_{p_s} ( \infty )^{-(\epsilon_{p_s} + 1)}
+    = -\eqsps ( \infty )^{-(\eqsps + 1)}
     = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
 \end{equation}
 %
-because $\epsilon_{p_s} \in (-1, 0)$ and, therefore, $(\epsilon_{p_s} + 1) > 0$.
+because $\eqsps \in [-1, 0)$ and, therefore, $(\eqsps + 1) > 0$.
 
-With $\epsilon_{p_s} \in (-1, 0)$ expected,
+With $\eqsps \in (-1, 0)$ expected,
 direct substitution rebound will never be larger than 1.
 The direct substitution effect alone
 can never cause backfire. 
@@ -582,7 +563,7 @@ the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
       = \frac{\rasub{q}_o}{\rbsub{q}_o} 
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)}  \; .
+      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
 \end{equation}
 %
 Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
@@ -591,20 +572,20 @@ can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 %
 \begin{equation}
-  \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} \; .
+  \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
 \end{equation}
 
 Substituting Eq.~\ref{eq:Cdot_o_ratio} into Eq.~(\ref{eq:Re_isub_prelim}) gives
 %
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
+  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 % %
 Substituting Eq.~\ref{eq:Sdot} gives
 %
 \begin{equation}
   Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
-                  ^{\epsilon_{p_s} (\alpha / \beta )} - 1  \right] \rbsub{C}_o I_E}
+                  ^{-\eqops} - 1  \right] \rbsub{C}_o I_E}
                   {\Sdoteqn} \; .
 \end{equation}
 %
@@ -614,15 +595,11 @@ Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
   Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
 \end{equation}
 
-Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
+Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
 the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
-and
-the ratio of utility exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
-Indirect substitution rebound becomes more negative
-as the ratio of utility exponents ($\alpha / \beta$) gets larger.
 
 We can take derivatives of numerator and invoke L'H\^{o}pital's rule
 to find limits for $Re_{isub}$ when
@@ -634,7 +611,7 @@ First, rearranging Eq.~(\ref{eq:Re_isub}) gives
   Re_{isub} = \frac{\left( \etaratiostacked{} \right)^m - \etaratiostacked{}}{\left( \etaratiostacked{} \right) - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
-where $m \equiv \epsilon_{p_s} (\alpha/\beta) + 1$.
+where $m \equiv 1 - \eqops$.
 Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
 with respect to $\etaratioinline{}$ gives
 %
@@ -656,7 +633,7 @@ Substituting for $m$ gives
 %
 \begin{equation}
   \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
-        = \epsilon_{p_s} (\alpha/\beta) \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
+        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
 \end{equation}
 
 Similarly, 
@@ -667,24 +644,12 @@ substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
         = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
 %
-The result depends on the value of $m$ ($\epsilon_{p_s} (\alpha/\beta) + 1$),
-such that a piecewise definition is required:
+Because $\eqops \in (0, 1)$ is expected **** Check with Gregor.  Is this true? ****,
+$0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
-  \begin{cases}
-    -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 < 1 \\
-    0 \; ,                                      & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 = 1 \\
-    \infty \; ,                                 & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 > 1 \\
-  \end{cases} \; . \tag{\ref{eq:lim_Reisub_infty}}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} = -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
 \end{equation}
-%
-In Eq.~(\ref{eq:lim_Reisub_infty}), 
-the result for the case where $\epsilon_{p_s} (\alpha/\beta) + 1 > 1$ 
-is included for completeness.
-Because $\epsilon_{p_s} \in (-1, 0)$, $\alpha > 0$, and $\beta > 0$,
-the case where
-$\epsilon_{p_s} (\alpha/\beta) + 1 > 1$ is impossible.
 
 
 %------------------------------
@@ -735,13 +700,14 @@ But we first derive expressions for later use.
 The ratio of rates of energy service consumed across the income effect is given by
 %
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\epsilon_{dinc}} \; .
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\eqsM} \; ,
 \end{equation}
 %
+where $\eqsM$ is the income elasticity of energy service consumption.
 Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
 %
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\epsilon_{dinc}} \; . 
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; . 
                                                                                 \tag{\ref{eq:q_ratio_across_inc}}
 \end{equation}
 
@@ -868,14 +834,14 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
 Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:q_ratio_across_inc}) gives
 %
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] \rbinc{E}_s} 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
 %
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
                   \frac{\rasub{q}_s}{\rbsub{q}_s}
                 \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}
                 \cancel{\rbempl{E}_s}}
@@ -891,7 +857,7 @@ Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
-($\epsilon_{dinc}$ becomes more positive or $\epsilon_{p_s}$ becomes more negative), 
+($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
