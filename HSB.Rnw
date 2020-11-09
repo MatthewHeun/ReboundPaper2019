@@ -856,7 +856,7 @@ implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$
 To quantify the \subeffect{} on other purchases,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$).
-Appendix~\ref{sec:derivation} shows that
+Appendix~\ref{sec:Re_sub} shows that
 
 \begin{equation} \label{eq:qohat_qostar}
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {-\eqops} \; .
