@@ -1,0 +1,148 @@
+% The next command tells RStudio to do "Compile PDF" on HSB.Rnw,
+% instead of this file, thereby eliminating the need to switch back to HSB.Rnw 
+% before building the paper.
+%!TEX root = ../HSB.Rnw
+
+Presentation of the comprehensive rebound framework is aided by a 
+nomenclature that describes energy stages and rebound effects.
+Table~\ref{tab:symbols} shows symbols and abbreviations, their meanings, and example units.
+Table~\ref{tab:greek} shows Greek letters, their meanings, and example units.
+Table~\ref{tab:decorations} shows symbol decorations and their meanings.
+Table~\ref{tab:subscripts} shows subscripts and their meanings.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Symbols
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Symbols and abbreviations.}
+\begin{tabular}{r l}
+  \toprule
+  Symbol & Meaning [example units] \\
+  \midrule
+  $A$ & coefficient on utility function \\
+  $C$ & cost [\$] \\
+  $E$ & final energy [MJ] \\
+  EEU & energy efficiency upgrade \\
+  $e$ & inverse of final-energy-to-services efficiency ($\eta$); used by \Bt{} [MJ/vehicle-km] \\
+  $G$ & gross income [\$] \\
+  $I$ & energy intensity of economic activity [MJ/\$] \\
+  $k$ & productivity effect factor [--] \\
+  $m$ & temporary variable for $\epsilon_{p_s}\alpha/\beta + 1$ [--] \\
+  $N$ & net income [\$] \\
+  $p$ & price [\$] \\
+  $q$ & quantity [--] \\
+  $Re$ & rebound [--] \\
+  $S$ & energy cost savings [\$] \\
+  $t$ & energy conversion device lifetime [years] \\
+  $u$ & utility [utils] \\
+  \bottomrule
+\end{tabular}
+\label{tab:symbols}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Greek
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Greek letters.}
+\begin{tabular}{r l}
+  \toprule
+  Greek letter & Meaning [example units] \\
+  \midrule
+  $\alpha$ & exponent on energy service consumption rate in utility function [--] \\
+  $\beta$  & exponent on other goods consumption rate in utility function [--] \\
+  $\Delta$ & difference (later quantity $-$ earlier quantity, see Table~\ref{tab:analysis_assumptions}) \\
+  $\epsilon$ & elasticity [--] \\
+  $\eta$ & final-energy-to-service efficiency [vehicle-km/MJ] \\
+  \bottomrule
+\end{tabular}
+\label{tab:greek}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Decorations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering % Centered table
+\caption{Decorations.}
+\begin{tabular}{r l}
+  \toprule
+  Decoration & Meaning [example units] \\
+  \midrule
+  $\orig{X}$ & $X$ originally (before the \empleffect{}) \\
+  $\aempl{X}$  & $X$ after the \empleffect{} (before the \subeffect{}) \\
+  $\asub{X}$ & $X$ after the \subeffect{} (before the \inceffect{}) \\
+  $\ainc{X}$ & $X$ after the \inceffect{} (before the \prodeffect{}) \\
+  $\aprod{X}$ & $X$ after the \prodeffect{} \\
+  $\rate{X}$ & rate of $X$ [units of X/year] \\
+  \bottomrule
+\end{tabular}
+\label{tab:decorations}
+\end{table}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Subscripts
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{table}
+\centering
+\caption{Subscripts.}
+\begin{tabular}{r l}
+  \toprule
+  Subscript & Meaning \\
+  \midrule
+  $0$ & quantity at an initial time \\
+  $cap$ & capital costs \\
+  $dev$ & device \\
+  $dempl$ & direct emplacement effect \\
+  $dinc$ & direct income effect \\
+  $dsub$ & direct substitution effect \\
+  $emb$ & embodied \\
+  $i$ & index for an other good purchased in the economy \\
+  $iempl$ & indirect emplacement effects \\
+  $iinc$ & indirect income effect \\
+  $isub$ & indirect substitution effect \\
+  $o$ & other expenditures (besides energy) in the economy \\
+  $\OMd$ & maintenance and disposal costs \\
+  $\productivity$ & productivity effect \\
+  $s$ & service stage of the energy conversion chain \\
+  $sum$ & sum of rebound effects \\
+  \bottomrule
+\end{tabular}
+\label{tab:subscripts}
+\end{table}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Differences}
+\label{sec:differences}
+%++++++++++++++++++++++++++++++
+
+Differences are indicated by the Greek letter $\Delta$ and always
+signify subtraction of a quantity at an earlier stage of Fig.~\ref{fig:flowchart}
+from the same quantity at a later stage of Fig.~\ref{fig:flowchart}.
+E.g.,
+$\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and
+$\Delta \aprod{X} \equiv \aprod{X} - \bprod{X}$.
+Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}.
+E.g., $\Delta X \equiv \aprod{X} - \orig{X}$.
+$\Delta X$ is also the sum of differences across each stage in Fig.~\ref{fig:flowchart},
+as shown below.
+%
+\begin{align}
+\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \aempl{X} \nonumber \\
+\Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X})
+            + (\asub{X} - \bsub{X}) + (\aempl{X} - \bempl{X}) \nonumber \\
+\Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
+            + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\aempl{X}} - \bempl{X}) \nonumber \\
+\Delta X &= \aprod{X} - \orig{X}
+\end{align}
