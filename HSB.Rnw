@@ -1210,7 +1210,7 @@ $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
 is sufficient to calculate the sum of all rebound, 
 provided that 
 the productivity factor~($k$) and
-the the product of energy price and energy intensity ($p_E I_E$)
+the product of energy price and energy intensity ($p_E I_E$)
 are known.
 
 
