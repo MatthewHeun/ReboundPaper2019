@@ -60,7 +60,7 @@
 
 \newcommand{\eqsps}{\epsilon_{\dot{q}_s\!,p_s}}
 \newcommand{\eqops}{\epsilon_{\dot{q}_o\!,p_s}}
-\newcommand{\eqsM}{\epsilon_{\dot{q}_s\!,M}}
+\newcommand{\eqsM}{\epsilon_{\dot{q}_s\!,\dot{M}}}
 
 
 %%%%% Colors
@@ -268,7 +268,8 @@ bottom=2pt}
 % Equation for Re_dinc
 \newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
                   \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps}}
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
+              % {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
+              { \frac{\aprod{\eta}}{\bempl{\eta}} - 1 }}
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}

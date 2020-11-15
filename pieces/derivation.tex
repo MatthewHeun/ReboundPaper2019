@@ -478,7 +478,7 @@ $Re_{dsub} = 0.15$.
 To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
 $\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
 of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
-%
+
 \begin{equation}
   \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqsps}  \right]}
            {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
@@ -486,7 +486,7 @@ of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o
 \end{equation}
 %
 Substituting 1 and $\infty$ for $\etaratioinline$ gives
-%
+
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
     = -\eqsps ( 1 )^{-(\eqsps + 1)}
@@ -494,7 +494,7 @@ Substituting 1 and $\infty$ for $\etaratioinline$ gives
 \end{equation}
 %
 and
-%
+
 \begin{equation}
   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
     = -\eqsps ( \infty )^{-(\eqsps + 1)}
@@ -753,6 +753,7 @@ Noting energy service consumption rate equalities from Table~\ref{tab:analysis_a
                 \rbempl{E}_s \; .
 \end{equation}
 
+
 %..............................
 \paragraph{Expression for $\frac{\rbinc{N} I_E}{\Sdot}$}
 \label{sec:N_dot_hat_I_E_over_Sdot}
@@ -914,6 +915,38 @@ reduce the indirect income effect rebound,
 because each reduces net income available to the device owner to spend on other goods in the economy.
 Any negative rebound effects enhance the indirect income effect rebound, because 
 they add to the net income available to the device owner to spend on other goods in the economy.
+
+
+%------------------------------
+\subsubsection{Expression for total direct rebound ($Re_d$)} 
+\label{sec:Re_d}
+%------------------------------
+
+Total direct rebound is the sum of 
+direct substitution rebound ($Re_{dsub}$, Eq.~(\ref{eq:Re_dsub})) and
+direct income rebound ($Re_{dinc}$, Eq.~(\ref{eq:Re_dinc})).
+
+\begin{align} 
+  Re_d &= Re_{dsub} + Re_{dinc} \nonumber \\
+       &= \Redsubeqn + \Redinceqn
+\end{align}
+%
+Simplification gives
+
+\begin{equation} \label{eq:Red}
+  Re_d = \frac{ \left( \frac{\aprod{\eta}}{\eta} \right)^{-\eqsps}
+             \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
+         {\frac{\aprod{\eta}}{\eta} - 1} \; .
+\end{equation}
+%
+It is instructive to compare Eq.~(\ref{eq:Re_dsub}) and Eq.~(\ref{eq:Red}).
+Because 
+$\frac{\rasub{N}}{\rbempl{M}} > 0$ and 
+$\eqsM > 0$,
+total direct rebound~($Re_d$) is greater than 
+direct substitution rebound~($Re_{dsub}$) by a factor
+that is associated with direct income rebound, namely
+$\left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}$.
 
 
 %------------------------------
