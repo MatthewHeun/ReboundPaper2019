@@ -845,7 +845,7 @@ $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
 gives
 
 \begin{equation} \label{eq:q_ratio_func_of_eps}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \etaratiostacked \right)^{-\eqsps} \; .
 \end{equation}
 %
 Because the energy service price elasticity of energy service consumption
@@ -859,7 +859,7 @@ the energy service price elasticity of other goods consumption~($\eqops$).
 Appendix~\ref{sec:Re_sub} shows that
 
 \begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {-\eqops} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
 \end{equation}
 %
 (See Appendix~\ref{sec:elasticities} for relationships among the elasticities.)
@@ -883,19 +883,19 @@ gives
 
 Note that the service price elasticity of energy service consumption is
 expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+For example, when $\eqsps = -0.2$ and $\etaratiostacked = 2$,
 $Re_{dsub} = 0.15$.
 
 Furthermore, L'H\^{o}pital's rule can be invoked to find
 
 \begin{equation} \label{eq:lim_Redsub_1}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} = -\eqsps \; ,
+  \lim_{\etaratioinline \to 1^{\!+}} Re_{dsub} = -\eqsps \; ,
 \end{equation}
 %
 and
 
 \begin{equation} \label{eq:lim_Redsub_infty}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} = 0 \; .
+  \lim_{\etaratioinline \to \infty} Re_{dsub} = 0 \; .
 \end{equation}
 %
 With $\eqsps \in (-1, 0)$ expected,
@@ -937,14 +937,14 @@ Negative rebound indicates that indirect substitution reduces the energy takebac
 Invoking L'H\^{o}pital's rule gives
 
 \begin{equation} \label{eq:lim_Reisub_1}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{isub} 
+  \lim_{\etaratioinline \to 1^{\!+}} Re_{isub} 
         = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
 and
 
 \begin{equation} \label{eq:lim_Reisub_infty}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} = - \frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
+  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
 \end{equation}
 
 
@@ -965,11 +965,6 @@ as $\rate{G} = p_E \Sdot$.
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} monetary savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-%Total income before the EEU is $\rbempl{M}$.
-%Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
-%+++
-%But total monetary income never changes. I'd stick to only discussing savings and have commented this out. ---GS
-%+++
 
 In the microeconomic framework, all net income ($\rasub{N}$) is spent either 
 %
