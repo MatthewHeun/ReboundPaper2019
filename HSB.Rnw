@@ -572,7 +572,7 @@ typical energy and cost relationships found throughout the analysis
 %++++++++++++++++++++++++++++++
 
 Energy rebound is defined as
-%
+
 \begin{equation} \label{eq:Re_def}
   Re \equiv 1 - \frac{\text{actual final energy savings rate}}{\text{expected final energy savings rate}} \; ,
 \end{equation}
@@ -583,19 +583,19 @@ and the actual final energy savings rate is the expected final energy savings ra
 Note that takeback can be negative, indicating in increase in the final energy savings rate
 relative to the expected final energy savings rate.
 Thus,
-%
+
 \begin{equation}
   Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; ,
 \end{equation}
 %
 or
-%
+
 \begin{equation}
   Re = 1 - 1 + \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
 Simplifying gives
-%
+
 \begin{equation} \label{eq:Re_takeback}
   Re = \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
@@ -683,13 +683,13 @@ the maintenance and disposal cost rates.
 Because no behavior changes are considered,
 actual and expected energy savings rates~($\Sdot$) are identical
 across the direct emplacement effect, namely
-%
+
 \begin{equation} \label{eq:S_dot_def}
   \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
 \end{equation}
 %
 Appendix~\ref{sec:Sdot} shows that
-%
+
 \begin{equation} \label{eq:Sdot}
   \Sdot = \Sdoteqn \; .
 \end{equation}
@@ -697,7 +697,7 @@ Appendix~\ref{sec:Sdot} shows that
 By definition, the direct emplacement effect has no rebound, 
 because actual and expected energy savings are identical.
 (See Table~\ref{tab:empleffect}.)
-%
+
 \begin{equation} \label{eq:Re_dempl0}
   Re_{dempl} = 0
 \end{equation}
@@ -736,7 +736,7 @@ $\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$.
 The expression for embodied energy rebound is 
-%
+
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembeqn{} \; .
 \end{equation}
@@ -772,7 +772,7 @@ Therefore, the change in energy consumption rate caused by a change in $\OMd$ ex
 is given by $\Delta \raempl{C}_{\OMd} I_E$.
 Rebound from maintenance and disposal
 is given by 
-%
+
 \begin{equation} \label{eq:Re_OMd}
   Re_{\OMd} = \ReOMdeqn{} \; .
 \end{equation}
@@ -986,13 +986,13 @@ quantifies the amount of net income spent
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 
 The ratio of rates of energy service consumed across the income effect is given by
-%
+
 \begin{equation} \label{eq:q_ratio_across_inc}
   \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
-%
+
 \begin{equation} \label{eq:Re_dinc_def}
   Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
 \end{equation}
@@ -1017,7 +1017,7 @@ the energy implications of spending net monetary savings ($\rbinc{N}$)
 on those other goods in the economy.
 
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
-%
+
 \begin{equation} \label{eq:Re_iinc_def}
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
 \end{equation}
@@ -1028,7 +1028,7 @@ can be found by rearranging the budget constraint for the income effect
 $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
 After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
-%
+
 \begin{equation} \label{eq:Re_iinc}
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
@@ -1039,13 +1039,13 @@ Intuitively, this result is sensible.
 \$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
 Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
 By Eq.~(\ref{eq:Re_takeback}), rebound is
-%
+
 \begin{equation} \label{eq:intuituve_Re_iinc}
   Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
 \end{equation}
 
 In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
-%
+
 \begin{equation} \label{eq:Re_cap}
   Re_{cap} = \Recapeqn{} \; .
 \end{equation}
@@ -1172,14 +1172,14 @@ on which more in the discussion.
 
 As shown in Table~\ref{tab:prodeffect}, 
 productivity rebound is given by
-%
+
 \begin{equation} \label{eq:Re_prod_def}
   Re_{prod} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
 we arrive at an expression for \prodeffectadj{} rebound:
-%
+
 \begin{equation} \label{eq:Re_prod}
   Re_{prod} = \Reprodeqn{} \; .
 \end{equation}

@@ -253,16 +253,16 @@ bottom=2pt}
 \newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\OMd}}{\rbempl{C}_{\OMd}} - 1 \right) \rbempl{C}_{\OMd} I_E}{\Sdot}}
 
 % Equation for S_dot_dev
-\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
+\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\etaratiostacked \rbempl{E}_s}
 
 % Equation for Re_dsub
-\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} - 1}
-                        {\frac{\aprod{\eta}}{\bempl{\eta}} - 1}}
+\newcommand{\Redsubeqn}{\frac{\left( \etaratiostacked \right)^{-\eqsps} - 1}
+                        {\etaratiostacked - 1}}
                         
 % Equation for Re_isub
-\newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bempl{\eta}}  \right)}
-                          ^{-\eqops} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
-                          \frac{\aprod{\eta}}{\bempl{\eta}} \; 
+\newcommand{\Reisubeqn}{\frac{{\left( \etaratiostacked  \right)}
+                          ^{-\eqops} - 1}{\etaratiostacked - 1} \; 
+                          \etaratiostacked \; 
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
@@ -276,6 +276,11 @@ bottom=2pt}
 
 % Equation for Re_iinc
 \newcommand{\Reiinceqn}{p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}}
+
+% Equation for Re_d (total direct rebound)
+\newcommand{\Redeqn}{\frac{ \left( \etaratiostacked \right)^{-\eqsps}
+             \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
+         {\etaratiostacked - 1}}
 
 % Equation for Re_prod
 \newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub}}
