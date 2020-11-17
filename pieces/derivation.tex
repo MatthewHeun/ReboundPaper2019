@@ -290,9 +290,11 @@ depending on the sign of the term $\raempl{C}_{\OMd}/\rbempl{C}_{\OMd} - 1$.
 Two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
-This section derives each in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
-the service price elasticity of consumption ($\epsilon_{p_s}$), and
-utility function parameters ($\alpha$ and $\beta$).
+This section derives each in terms of 
+energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$) and
+the service price elasticities 
+of energy service consumption ($\eqsps$) and
+other goods consumption ($\eqops$).
 We begin with derivation of two ratios that are helpful later,
 $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and
 $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
@@ -357,7 +359,7 @@ The ratio of other goods consumption on both sides of the substitution effect is
 Note that the service price elasticity of other good consumption
 is expected to be positive ($\eqops > 0$).
 As the energy service price decreases~($\aprod{p}_s < \bempl{p_s}$), 
-consumption of other goods is expected to decrease, 
+consumption of other goods is expected to decrease ($\rasub{q}_o < \rbsub{q}_o$), 
 because constant utility is assumed across the substitution effect.
 (See Appendix~\ref{sec:elasticities}.)
 Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
@@ -479,7 +481,7 @@ Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$)
 The increase in consumption of the energy service after its price drop
 substitutes for consumption of other goods in the economy,
 subject to a utility constraint.
-The reduction in spending on other good in the economy
+The reduction in spending on other goods in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
 To derive an expression for indirect substitution rebound,
@@ -498,7 +500,7 @@ Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging 
 %
 We assume a basket of other goods purchased in the economy,
 each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
-such that the average price of all other good purchased in the economy~($p_o$) is given by
+such that the average price of all other goods purchased in the economy~($p_o$) is given by
 
 \begin{equation}
   p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
@@ -561,7 +563,8 @@ indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 
-We can take derivatives of numerator and invoke L'H\^{o}pital's rule
+We can take derivatives of numerator and denominator and
+invoke L'H\^{o}pital's rule
 to find limits for $Re_{isub}$ when
 $\etaratioinline{} \to 1^{\! +}$ and when
 $\etaratioinline{} \to \infty$.
@@ -576,7 +579,7 @@ Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
 with respect to $\etaratioinline{}$ gives
 
 \begin{equation}
-  \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - x \right]}
+  \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - \etaratiostacked \right]}
             {\dbydetaeta{}\left[ \left( \etaratiostacked{} \right)  - 1 \right] } \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} 
        = \left[ m \left( \etaratiostacked{} \right)^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
