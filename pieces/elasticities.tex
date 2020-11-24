@@ -4,4 +4,88 @@
 %!TEX root = ../HSB.Rnw
 
 
-**** Gregor: place information about how to determine elasticities in this file. ---MKH ****
+%**** Gregor: place information about how to determine elasticities in this file. ---MKH ****
+
+The rebound framework employs four elasticities.
+In general their value depends on consumer preferences.
+A common theoretical representation is the constant elasticity
+of substitution utility map, CES (Lemoine 2020 -- to be cited properly).
+
+Here we derive the elasticities analytically for CES utility
+\begin{equation}
+U(\rbempl{q}_s,\rbempl{q}_o) = 
+\left( a \rbempl{q}_s^{\frac{\sigma-1}{\sigma}} + (1-a) \rbempl{q}_o^{\frac{\sigma-1}{\sigma}}\right) ^{\frac{\sigma}{\sigma-1}}
+\end{equation}
+Elasticities explain (compensated) demand behavior as a function of varying prices or income.
+We first derive uncompensasted (Marshallian) price and the income elasticities
+and then use Slutsky's equation and some identities to derive the
+compensated (Hicksian) price elasticities.
+Since utility is maximized subject to 
+\begin{equation}
+\rbempl{M} = p_s \rbempl{q}_s + p_o\rbempl{q}_o 
+\end{equation}
++++ check with Matt what to subtract from M --- GS +++
+at any chosen consumption bundle, the marginal rate of substitution will
+equal the price ratio
+\begin{equation}
+ \frac {\partial U / \partial \rbempl{q}_s}{\partial U / \partial \rbempl{q}_o} =
+ \frac{ p_s }{ p_o}
+\end{equation}
+Some algebra shows this is  
+\begin{equation}
+ \left( \frac {a \rbempl{q}_o}{(1-a) \rbempl{q}_s} \right ) ^ {1/\sigma} =
+ \frac{ p_s }{ p_o}
+\end{equation}
+Substituting the income constraint variously for $\rbempl{q}_o$ and solving
+for $ \rbempl{q}_s$ gives its uncompensated demand as a function of 
+prices and income
+\begin{equation}
+ \rbempl{q}_s(p_s, p_o, \rbempl{M}) = \frac{ \rbempl{M}}{ p_s +
+ \left (\frac{(1-a)p_s}{a p_o}\right)^\sigma p_o }
+\end{equation}
+The uncompensated (UC) price elasticity, for which empirical estimates are
+often available, is
+\begin{equation}
+  \eqspsUC = \frac {\partial \rbempl{q}_s(p_s, p_o, \rbempl{M})}{\partial p_s} \; 
+  \frac{p_s}{\rbempl{q}_s} = \frac{(\sigma - 1)p_s}{p_s +
+  \left (\frac{(1-a)p_s}{a p_o}\right)^\sigma p_o} - \sigma 
+\end{equation}
+and the income elasticity, $\eqsM$, is unitary due to homotheticity of CES function.
+This information along with knowledge about the share of income spent on the
+energy service is sufficient to derive the compensated price elasticity for
+the substitution effect. The Slutsky equation in elasticity form is
+\begin{equation}
+  \eqspsUC = \eqsps - h_{\rbempl{q}_s} \eqsM
+\end{equation}
+where $h_{\rbempl{q}_s}$ is the share of income spent on $h_{\rbempl{q}_s}$.
+The compensated elasticity is found by simply rearranging and substituting the known 
+income elasticity
+\begin{equation}
+  \eqsps = \eqspsUC + h_{\rbempl{q}_s}
+\end{equation}
+It is possible to derive the compensated cross price elasticity, $\eqops$, based
+on the restriction that CES imposes on behavior.
+First, note that $\eqoM$ is also unitary.
+Then with Allen (1934) note that
+\begin{equation}
+  \eqopsUC = h_{\rbempl{q}_s} ( \sigma - \eqoM) = h_{\rbempl{q}_s} ( \sigma - 1)
+  \label{Allen}
+\end{equation}
+But $\sigma$ is constrained in the CES. As Gortz (1977) shows the elasticity 
+of substition equals
+\begin{equation}
+  \sigma  = \frac{h_{\rbempl{q}_s} + \eqspsUC}{h_{\rbempl{q}_s} -1 }
+\end{equation}
+Therefore (\ref{Allen}) expands to 
+\begin{equation}
+  \eqopsUC =  \frac{h_{\rbempl{q}_s} (1 + \eqspsUC)}{h_{\rbempl{q}_s}-1}
+\end{equation}
+which allows to use the cross-price version of the Slutsky equation
+\begin{equation}
+  \eqopsUC = \eqops - h_{\rbempl{q}_s} \eqoM
+\end{equation}
+to solve for the compensated cross price elasticity
+\begin{equation}
+  \eqops = \frac{h_{\rbempl{q}_s} (h_{\rbempl{q}_s} + \eqspsUC)}{h_{\rbempl{q}_s}-1}
+\end{equation}
+where $\eqoM = 1$.
