@@ -815,14 +815,9 @@ direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
-the service price elasticity of energy service consumption ($\eqsps$) and
+the service price elasticity of energy service consumption ($\eqsps$), and
 the service price elasticity of other goods consumption ($\eqops$).
 See Appendix~\ref{sec:elasticities} for further details about elasticities.
-
-+++ Here we'll want to include the Slutsky equation 
-to discuss decomposing the own price elasticity into 
-compensated own price elasticity and income elasticity. 
-Some of the below will have to give --- GS +++
 
 The relationship between energy service price and energy service consumption rate
 is given by the service price elasticity of energy service consumption~($\eqsps$),
@@ -928,7 +923,7 @@ we find
   Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
 
-Because the service price elasticity of energy service consumption is negative ($\eqsps < 0$) and
+Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
 the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
@@ -979,6 +974,7 @@ In the microeconomic framework, all net income ($\rasub{N}$) is spent either
 The income elasticity of energy service consumption ($\eqsM$)
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
+(See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
 
 The ratio of rates of energy service consumed across the income effect is given by
 
