@@ -25,7 +25,7 @@ utility map \citep{Lemoine:2020aa}%
 \footnote{
   Note the Cobb-Douglas special case of CES cannot be used, because
   it is restricted to 100\% direct rebound effect: 
-  the uncompensated own price elasticity is 1.
+  the uncompensated own price elasticity ($\eqspsUC$) is 1.
 }
 
 \begin{equation}
@@ -33,7 +33,7 @@ utility map \citep{Lemoine:2020aa}%
       \left( a \rbempl{q}_s^{\frac{\sigma-1}{\sigma}} + (1-a) \rbempl{q}_o^{\frac{\sigma-1}{\sigma}}\right)                ^{\frac{\sigma}{\sigma-1}} \; ,
 \end{equation}
 %
-where $a$ is a weight and $\sigma$ is the elasticity of substitution 
+where $a$ is a weight and $\sigma$ is the elasticity of substitution between 
 the energy service (s) and other goods (o). 
 +++ check with Matt what to subtract from M --- GS +++
 Analytical expressions for the CES elasticities can be derived using the Slutsky equation, 
@@ -55,7 +55,8 @@ the income elasticity ($\eqsM$) is equal to one.
   \eqsps = \eqspsUC + f_{\rbempl{q}_s}
 \end{equation}
 
-CES restrictions on behavior also allow straightforward derivation of the cross price elasticity ($\eqops$).
+CES restrictions on behavior also allow straightforward derivation 
+of the cross price elasticity ($\eqops$).
 With Allen (1934 **** Need the bibtex here ****), 
 note that uncompensated cross price elasticity can generally be expressed as
 
@@ -85,16 +86,16 @@ the cross-price version of the Slutsky equation
   \eqopsUC = \eqops - f_{\rbempl{q}_s} \eqoM
 \end{equation}
 %
-and solve for $\eqops$.
+and solve for $\eqops$ to find
 
 \begin{equation} \label{eq:eqops}
-  \eqops = \frac{f_{\rbempl{q}_s} (f_{\rbempl{q}_s} + \eqspsUC)}{f_{\rbempl{q}_s}-1}
+  \eqops = \frac{f_{\rbempl{q}_s} (f_{\rbempl{q}_s} + \eqspsUC)}{f_{\rbempl{q}_s}-1} \; .
 \end{equation}
 
-Note finally that the income elasticity of other goods' consumption
-is also unitary ($\eqoM = 1$) for CES utility. 
+Finally, note that for CES utility the income elasticity of other goods consumption
+is also unitary ($\eqoM = 1$). 
 
-Thus, the four elasticities in the rebound framework for are given by
+Thus, the four elasticities in the rebound framework are given by
 Eq.~(\ref{eq:eqsps}), 
 Eq.~(\ref{eq:eqops}), 
 $\eqsM = 1$, and 
