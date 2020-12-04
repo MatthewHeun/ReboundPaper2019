@@ -8,9 +8,9 @@ The rebound framework employs four elasticities:
 %
 \begin{itemize}
 
-  \item the energy service price elasticity of energy service consumption ($\eqsps$),
+  \item the energy service price elasticity of energy service consumption (own price elasticity) ($\eqsps$),
 
-  \item the energy service price elasticity of other goods consumption ($\eqops$), 
+  \item the energy service price elasticity of other goods consumption (cross price elasticity) ($\eqops$), 
   
   \item the income elasticity of energy service consumption ($\eqsM$), and 
   
@@ -20,120 +20,71 @@ The rebound framework employs four elasticities:
 %
 In general, their values depend on consumer preferences.
 A common theoretical representation is the constant elasticity
-of substitution utility map, CES (Lemoine 2020 -- to be cited properly).
-
-Here we derive the elasticities analytically for CES utility
+of substitution utility map, CES (Lemoine 2020 -- to be cited properly).\footnote{Note the Cobb-Douglas special case of CES cannot be used as it is restricted to a 100\% direct rebound effect: the uncompensated own price elasticity is 1.}
 
 \begin{equation}
   U(\rbempl{q}_s,\rbempl{q}_o) = 
       \left( a \rbempl{q}_s^{\frac{\sigma-1}{\sigma}} + (1-a) \rbempl{q}_o^{\frac{\sigma-1}{\sigma}}\right)                ^{\frac{\sigma}{\sigma-1}}
 \end{equation}
 
-Elasticities explain (compensated) demand behavior as a function of varying prices or income.
-We first derive uncompensasted (Marshallian) price and the income elasticities
-and then use Slutsky's equation and some identities to derive the
-compensated (Hicksian) price elasticities.
-Since utility is maximized subject to 
-
-\begin{equation}
-  \rbempl{M} = p_s \rbempl{q}_s + p_o\rbempl{q}_o 
-\end{equation}
-%
+where `a' is a weight and $\sigma$ is the elasticity of substitution between goods.
 +++ check with Matt what to subtract from M --- GS +++
-at any chosen consumption bundle, the marginal rate of substitution will
-equal the price ratio
+Analytical expressions for the CES elasticities can be derived using the Slutsky equation, whereby the uncompensated (UC) own price elasticity of the energy service, $\eqspsUC$, is decomposed into compensated price and income elasticity
 
 \begin{equation}
- \frac {\partial U / \partial \rbempl{q}_s}{\partial U / \partial \rbempl{q}_o} =
- \frac{ p_s }{ p_o}
-\end{equation}
-
-Some algebra shows this equation can be simplified to 
-
-\begin{equation}
- \left( \frac {a \rbempl{q}_o}{(1-a) \rbempl{q}_s} \right ) ^ {1/\sigma} =
-           \frac{ p_s }{ p_o} \; .
-\end{equation}
-
-Substituting the income constraint variously for $\rbempl{q}_o$ and solving
-for $ \rbempl{q}_s$ gives its uncompensated demand as a function of 
-prices and income:
-
-\begin{equation}
- \rbempl{q}_s(p_s, p_o, \rbempl{M}) = \frac{ \rbempl{M}}{ p_s +
- \left (\frac{(1-a)p_s}{a p_o}\right)^\sigma p_o }
-\end{equation}
-
-The uncompensated (UC) price elasticity, for which empirical estimates are
-often available, is
-
-\begin{equation}
-  \eqspsUC = \frac {\partial \rbempl{q}_s(p_s, p_o, \rbempl{M})}{\partial p_s} \; 
-  \frac{p_s}{\rbempl{q}_s} = \frac{(\sigma - 1)p_s}{p_s +
-  \left (\frac{(1-a)p_s}{a p_o}\right)^\sigma p_o} - \sigma 
+  \eqspsUC = \eqsps - f_{\rbempl{q}_s} \eqsM \; ,
 \end{equation}
 %
-and the income elasticity is unitary ($\eqsM = 1$) due to homotheticity of CES function.
-This information, along with knowledge about the share of income spent on the
-energy service, is sufficient to derive the compensated price elasticity for
-the substitution effect. 
+%and the income elasticity is unitary ($\eqsM = 1$) due to homotheticity of CES function.
+%This information, along with knowledge about the share of income spent on the
+%energy service, is sufficient to derive the compensated price elasticity for
+%the substitution effect. 
 
-The Slutsky equation in elasticity form is
-
-\begin{equation}
-  \eqspsUC = \eqsps - h_{\rbempl{q}_s} \eqsM \; ,
-\end{equation}
-%
-where $h_{\rbempl{q}_s}$ is the share of income spent 
-on the energy service ($\rbempl{q}_s$).
-The compensated elasticity is found by simply rearranging and substituting the known 
-income elasticity ($\eqsM = 1$).
+where $f_{\rbempl{q}_s}$ is the share of income spent 
+on the energy service ($\rbempl{q}_s$). The compensated elasticity is found by simply rearranging and noting that, in the case of CES utility, the income elasticity is equal to one 
 
 \begin{equation} \label{eq:eqsps}
-  \eqsps = \eqspsUC + h_{\rbempl{q}_s}
+  \eqsps = \eqspsUC + f_{\rbempl{q}_s} \;.
 \end{equation}
 
-It is possible to derive the compensated cross price elasticity ($\eqops$)
-using the restriction that CES imposes on behavior.
-First, note that 
-the income elasticity of other goods consumption is also unitary ($\eqoM = 1$).
-Then with Allen (1934) note that
+CES restrictions on behavior also allow straightforward derivation of the cross price elasticity ($\eqops$).
+With Allen (1934) note that uncompensated cross price elasticity can generally be expressed as
 
 \begin{equation} \label{eq:Allen}
-  \eqopsUC = h_{\rbempl{q}_s} ( \sigma - \eqoM) = h_{\rbempl{q}_s} ( \sigma - 1) \; .
+  \eqopsUC = f_{\rbempl{q}_s} ( \sigma - \eqoM) \; .
 \end{equation}
 %
-But $\sigma$ is constrained in the CES description of utility. 
 As Gortz (1977) shows, the elasticity 
-of substition ($\sigma$) is given by
+of substition ($\sigma$) for CES utiliy is given by
 
 \begin{equation} \label{eq:sigma}
-  \sigma  = \frac{h_{\rbempl{q}_s} + \eqspsUC}{h_{\rbempl{q}_s} -1 } \; .
+  \sigma  = \frac{f_{\rbempl{q}_s} + \eqspsUC}{f_{\rbempl{q}_s} -1 } \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:sigma}) into Eq.~(\ref{eq:Allen}) yields, 
-after simplification,
 
 \begin{equation} \label{eq:eps_uncompensated}
-  \eqopsUC =  \frac{h_{\rbempl{q}_s} (1 + \eqspsUC)}{h_{\rbempl{q}_s}-1} \; .
+  \eqopsUC = f_{\rbempl{q}_s} \left( \frac{f_{\rbempl{q}_s} + \eqspsUC}{f_{\rbempl{q}_s} -1 } - \eqoM \right) \; .
 \end{equation}
 %
 We set Eq.~(\ref{eq:eps_uncompensated}) equal to 
 the cross-price version of the Slutsky equation,
 
 \begin{equation}
-  \eqopsUC = \eqops - h_{\rbempl{q}_s} \eqoM \; ,
+  \eqopsUC = \eqops - f_{\rbempl{q}_s} \eqoM \; ,
 \end{equation}
 %
-solve for $\eqops$, 
-substitute unitary income elasticity ($\eqoM = 1$), and 
-simplify to obtain
+ and solve for $\eqops$ 
 
 \begin{equation} \label{eq:eqops}
-  \eqops = \frac{h_{\rbempl{q}_s} (h_{\rbempl{q}_s} + \eqspsUC)}{h_{\rbempl{q}_s}-1} \; .
+  \eqops = \frac{f_{\rbempl{q}_s} (f_{\rbempl{q}_s} + \eqspsUC)}{f_{\rbempl{q}_s}-1} \; .
 \end{equation}
 
-Thus, the four elasticities in the rebound framework are given by
+Note finally that the income elasticity of other goods' consumption
+is also unitary ($\eqoM = 1$) for CES utility. 
+
+
+Thus, the four elasticities in the rebound framework for are given by
 Eq.~(\ref{eq:eqsps}), 
 Eq.~(\ref{eq:eqops}), 
 $\eqsM = 1$, and 
@@ -142,17 +93,9 @@ Values of only two parameters are required:
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item the uncompensated energy service price elasticity of energy service consumption~($\eqsps$) and
+  \item the uncompensated energy service price elasticity of energy service consumption~($\eqspsUC$) and
   
-  \item and the fraction of income spent on the energy service ($h_{\rbempl{q}_s}$).
+  \item and the fraction of income spent on the energy service ($f_{\rbempl{q}_s}$).
     
 \end{enumerate*}
 
-
-***** 
-Gregor:  I think you should derive these equations WITHOUT assuming 
-unitary income elasticities from CES, 
-thereby making the derivation more general. 
-After the derivation, you could substitute 1 in for the income elasticities 
-to show the equations we will be using. --- MKH 
-****

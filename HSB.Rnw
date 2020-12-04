@@ -1281,7 +1281,9 @@ Internal reviewers
 Adam Marquardt (Calvin University), 
 Paul Steenwyk (Calvin University), and 
 ****
-contributed substantially to the quality of the framework and the manuscript.
+contributed substantially to the quality of the framework and the manuscript. 
+
+The authors benefitted from discussions with Daniele Girardi.
 
 The authors thank the students of M.K.H.'s Fall 2019 Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
