@@ -19,7 +19,49 @@ The rebound framework employs four elasticities:
 \end{itemize}
 %
 In general, their values depend on consumer preferences.
-A common theoretical representation is
+Analytical expressions for the elasticities can be derived using the Slutsky equation, 
+whereby the uncompensated (UC) own price elasticity 
+of the energy service ($\eqspsUC$) 
+is decomposed into compensated price and income elasticities
+
+\begin{equation}
+  \eqspsUC = \eqsps - f_{\rbempl{q}_s} \eqsM \; ,
+\end{equation}
+%
+where $f_{\rbempl{q}_s}$ is the share of income spent 
+on the energy service ($\rbempl{q}_s$). 
+Solving for the compensated elasticity 
+
+\begin{equation} \label{eq:eqsps}
+  \eqsps = \eqspsUC + f_{\rbempl{q}_s} \eqsM
+\end{equation}
+ shows that given empirical information on the uncompensated own price elasticity and share of income spent on goods (as is available for our examples above) preferences must only impose restrictions on the income elasticity ($\eqsM$) to determine the own price elasticity.
+ 
+A similar argument allows straightforward derivation 
+of the cross price elasticity ($\eqops$).
+With \citet{Hicks1934}, 
+note that uncompensated cross price elasticity can generally be expressed as
+
+\begin{equation} \label{eq:Allen}
+  \eqopsUC = f_{\rbempl{q}_s} (\sigma - \eqoM) \; ,
+\end{equation}
+%
+where $\sigma$ is the elasticity of substitution between the energy service (s) and other goods (o). 
+We set Eq.~(\ref{eq:Allen}) equal to 
+the cross-price version of the Slutsky equation
+
+\begin{equation} \label{eq:slutsky_cross}
+  \eqopsUC = \eqops - f_{\rbempl{q}_s} \eqoM
+\end{equation}
+%
+and solve for $\eqops$ to find
+
+\begin{equation} \label{eq:eqops_general}
+  \eqops = f_{\rbempl{q}_s} \sigma \; .
+\end{equation}
+which shows that preferences must also place a restriction on the elasticity of substitution to make progress.
+
+A common theoretical representation of preferences is
 the constant elasticity of substitution (CES)
 utility map \citep{Lemoine:2020aa}%
 \footnote{
@@ -33,41 +75,13 @@ utility map \citep{Lemoine:2020aa}%
       \left( a \rbempl{q}_s^{\frac{\sigma-1}{\sigma}} + (1-a) \rbempl{q}_o^{\frac{\sigma-1}{\sigma}}\right)                ^{\frac{\sigma}{\sigma-1}} \; ,
 \end{equation}
 %
-where $a$ is a weight and $\sigma$ is the elasticity of substitution between 
-the energy service (s) and other goods (o). 
-+++ check with Matt what to subtract from M --- GS +++
-Analytical expressions for the CES elasticities can be derived using the Slutsky equation, 
-whereby the uncompensated (UC) own price elasticity 
-of the energy service ($\eqspsUC$) 
-is decomposed into compensated price and income elasticities
-
-\begin{equation}
-  \eqspsUC = \eqsps - f_{\rbempl{q}_s} \eqsM \; ,
-\end{equation}
-%
-where $f_{\rbempl{q}_s}$ is the share of income spent 
-on the energy service ($\rbempl{q}_s$). 
-The compensated elasticity is found by rearranging and noting that, 
-in the case of CES utility, 
-the income elasticity ($\eqsM$) is equal to one. 
-
-\begin{equation} \label{eq:eqsps}
-  \eqsps = \eqspsUC + f_{\rbempl{q}_s}
-\end{equation}
-
-CES restrictions on behavior also allow straightforward derivation 
-of the cross price elasticity ($\eqops$).
-With \citet{Hicks1934}, 
-note that uncompensated cross price elasticity can generally be expressed as
-
-\begin{equation} \label{eq:Allen}
-  \eqopsUC = f_{\rbempl{q}_s} (\sigma - \eqoM) \; ,
-\end{equation}
-%
-where $\sigma$ is the elasticity of substitution 
-between the energy service and other goods.
-As G{\o}rtz (1977) shows, the elasticity 
-of substition ($\sigma$) for CES utiliy is given by
+where $a$ is a weight. First note that due to homotheticity,
+all income elasticities are equal to one. Therefore
+the compenseated own price elasticity \ref{eq:eqsps} can be 
+determined with empirically available information.
+For the cross price elasticity, G{\o}rtz (1977) show that
+the elasticity of substitution ($\sigma$) 
+for CES utiliy is given by
 
 \begin{equation} \label{eq:sigma}
   \sigma  = \frac{f_{\rbempl{q}_s} + \eqspsUC}{f_{\rbempl{q}_s} -1 } \; .
@@ -78,22 +92,15 @@ Substituting Eq.~(\ref{eq:sigma}) into Eq.~(\ref{eq:Allen}) yields,
 \begin{equation} \label{eq:eps_uncompensated}
   \eqopsUC = f_{\rbempl{q}_s} \left( \frac{f_{\rbempl{q}_s} + \eqspsUC}{f_{\rbempl{q}_s} -1 } - \eqoM \right) \; .
 \end{equation}
-%
-We set Eq.~(\ref{eq:eps_uncompensated}) equal to 
-the cross-price version of the Slutsky equation
 
-\begin{equation}
-  \eqopsUC = \eqops - f_{\rbempl{q}_s} \eqoM
-\end{equation}
-%
-and solve for $\eqops$ to find
+Setting Eq.~(\ref{eq:eps_uncompensated}) again equal to 
+the cross-price version of the Slutsky Eq.~\ref{eq:slutsky_cross}
+and solving for $\eqops$ yields a result in terms only
+of empirically available parameters
 
 \begin{equation} \label{eq:eqops}
   \eqops = \frac{f_{\rbempl{q}_s} (f_{\rbempl{q}_s} + \eqspsUC)}{f_{\rbempl{q}_s}-1} \; .
 \end{equation}
-
-Finally, note that for CES utility the income elasticity of other goods consumption
-is also unitary ($\eqoM = 1$). 
 
 Thus, the four elasticities in the rebound framework are given by
 Eq.~(\ref{eq:eqsps}), 
