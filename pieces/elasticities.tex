@@ -21,7 +21,7 @@ The rebound framework employs four elasticities:
 The values of these elasticities reflect consumer preferences regarding 
 consumption of the energy service and consumption of other goods.
 In the context of the rebound framework presented here, 
-we wish to ensure that elasticities are consistent with each other
+we wish to ensure that the elasticities are consistent with each other
 and determinable from a small set 
 of readily-available, empirically-estimated data. 
 
@@ -32,7 +32,7 @@ is decomposed into the compensated price elasticity ($\eqsps$) and
 the income elasticity ($\eqsM$) as follows:
 
 \begin{equation}
-  \eqspsUC = \eqsps - f_{\rbempl{q}_s} \eqsM \; ,
+  \eqspsUC = \eqsps - \fqs \eqsM \; ,
 \end{equation}
 %
 where $f_{\rbempl{q}_s}$ is the share of income spent 
@@ -40,21 +40,21 @@ on the energy service ($\rbempl{q}_s$).
 Solving for the compensated own price elasticity ($\eqsps$) gives
 
 \begin{equation} \label{eq:eqsps}
-  \eqsps = \eqspsUC + f_{\rbempl{q}_s} \eqsM \; .
+  \eqsps = \eqspsUC + \fqs \eqsM \; .
 \end{equation}
 %
 The compensated own price elasticity ($\eqsps$)
-can be determined from readily-available empirical information
+can be determined from two sources:
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item the uncompensated own price elasticity ($\eqspsUC$) and 
+  \item readily-available empirical information
+        (the uncompensated own price elasticity, $\eqspsUC$, and 
+        the share of income spent on the energy service, $f_{\rbempl{q}_s}$)
+        and 
   
-  \item the share of income spent on the energy service ($f_{\rbempl{q}_s}$)
-        as well as
-        
-  \item the income elasticity of energy service consumption ($\eqsM$), which 
-        comes from a model of consumer utility, discussed below.
+  \item the income elasticity of energy service consumption 
+        ($\eqsM$, which comes from a model of consumer utility, discussed below).
     
 \end{enumerate*}
 
@@ -64,23 +64,23 @@ With \citet{Hicks1934},
 note that uncompensated cross price elasticity can generally be expressed as
 
 \begin{equation} \label{eq:Allen}
-  \eqopsUC = f_{\rbempl{q}_s} (\sigma - \eqoM) \; ,
+  \eqopsUC = \fqs (\sigma - \eqoM) \; ,
 \end{equation}
 %
 where $\sigma$ is the elasticity of substitution 
 between the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods ($\rate{q}_o$). 
 We set Eq.~(\ref{eq:Allen}) equal to 
-the cross-price version of the Slutsky equation:
+the cross-price version of the Slutsky equation
 
 \begin{equation} \label{eq:slutsky_cross}
-  \eqopsUC = \eqops - f_{\rbempl{q}_s} \eqoM \; ,
+  \eqopsUC = \eqops - \fqs \eqoM \; ,
 \end{equation}
 %
 and solve for $\eqops$ to find
 
 \begin{equation} \label{eq:eqops_general}
-  \eqops = f_{\rbempl{q}_s} \sigma \; .
+  \eqops = \fqs \sigma \; .
 \end{equation}
 %
 The elasticity of substitution ($\sigma$)
@@ -98,7 +98,7 @@ A very common model of utility takes the form of a Cobb-Douglas function
 where $A$ is a proportionality constant and 
 $\alpha \in (0,1)$ gives the relative importance to utility 
 of consumption of the energy service ($\rate{q}_s$)
-and consumption of other goods ($\rate{q}_o$). 
+relative to consumption of other goods ($\rate{q}_o$). 
 However, the uncompensated own-price elasticity ($\eqspsUC$) 
 in the Cobb-Douglas utility model is $-1$, 
 causing $Re_{dsub} = 1$ always,
@@ -124,51 +124,52 @@ the more-general CES function~\citep{Lemoine:2020aa}:
                                    ^{\frac{\sigma}{\sigma-1}} \; ,
 \end{equation}
 %
-where $a$ is the weighting between 
+where $a$ is the weighting between
 consumption of the energy service ($\rate{q}_s$)
-and consumption of other goods ($\rate{q}_o$). 
+and consumption of other goods ($\rate{q}_o$).
 Due to homotheticity,
 all income elasticities are unitary in the CES utility model
 ($\eqsM = 1$ and $\eqoM = 1$).
 Therefore,
-the compenseated own price elasticity ($\eqsps$) can be 
+the compenseated own price elasticity ($\eqsps$) can be
 determined from empirically available information
-(namely, $\eqspsUC$ and $f_{\rate{q}_s}$) 
+(namely, $\eqspsUC$ and $f_{\rate{q}_s}$)
 after substituting $\eqsM = 1$ into Eq.~(\ref{eq:eqsps}):
 
 \begin{equation} \label{eq:eqsps_final}
-  \eqsps = \eqspsUC + f_{\rbempl{q}_s} \; .
+  \eqsps = \eqspsUC + \fqs \; .
 \end{equation}
-%
 
-For the cross price elasticity ($\eqops$), 
+For the cross price elasticity ($\eqops$),
 \citet{Gortz1977} shows that
-the elasticity of substitution ($\sigma$) 
+the elasticity of substitution ($\sigma$)
 for the CES utility model is given by
 
 \begin{equation} \label{eq:sigma}
-  \sigma  = \frac{f_{\rbempl{q}_s} + \eqspsUC}{f_{\rbempl{q}_s} -1 } \; .
+  \sigma  = \frac{\fqs + \eqspsUC}{\fqs - 1} \; . 
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:sigma}) into Eq.~(\ref{eq:eqops_general}) yields
 
 \begin{equation} \label{eq:eqops}
-  \eqops = \frac{f_{\rbempl{q}_s} (f_{\rbempl{q}_s} + \eqspsUC)}{f_{\rbempl{q}_s}-1} \; .
+  \eqops = \frac{\fqs (\fqs + \eqspsUC)}{\fqs - 1} \; .
 \end{equation}
 
 Thus, assuming the CES utility model,
-the four elasticities in the rebound framework can be estimated by
+the four elasticities in the rebound framework can be determined by
 $\eqsM = 1$,
-$\eqoM = 1$, 
+$\eqoM = 1$,
 Eq.~(\ref{eq:eqsps_final}), and
 Eq.~(\ref{eq:eqops}).
-Readily-available, empirically-estimated values are required for only two parameters:
+To calculate values for $\eqsps$ and $\eqops$, 
+estimates of only two parameters are needed:
 %
 \begin{enumerate*}[label={(\alph*)}]
-	
-  \item the uncompensated energy service price elasticity of energy service consumption~($\eqspsUC$) and
-  
-  \item the fraction of income spent on the energy service ($f_{\rbempl{q}_s}$).
-    
-\end{enumerate*}
 
+  \item the uncompensated energy service price elasticity of energy service consumption~($\eqspsUC$) and
+
+  \item the fraction of income spent on the energy service ($\fqs$).
+
+\end{enumerate*}
+%
+$\eqsps$ is empirically estimable and $\fqs$ is readily available.
