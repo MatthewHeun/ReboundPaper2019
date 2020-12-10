@@ -756,7 +756,7 @@ See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
-energy demanded by maintenance and disposal~($\OMd$) expenditures.
+energy demanded by maintenance and disposal~($\OMd$) activities.
 Maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
@@ -786,12 +786,14 @@ See Appendix~\ref{sec:Re_OMd} for details.
 %++++++++++++++++++++++++++++++
 
 The direct rebound effect is split into substitution and
-income effects, following neoclassical consumer theory. That
-framework distinguishes substituting the energy service for
+income effects, following neoclassical consumer theory. 
+Neoclassical consumer theory distinguishes
+substituting the energy service for
 other consumption items whose relative price increases due to the 
 higher efficiency and hence lower price of producing the energy 
-service, and respending the higher real income. Since other goods'
-consumption is altered, substitution and income effects affect 
+service, and respending the higher real income. 
+Because the rate of consuming other goods is altered, 
+substitution and income effects affect 
 both direct and indirect rebound effects.
 
 The substitution effect alters compensated demand, which is
@@ -1080,11 +1082,12 @@ In contrast, the productivity effect is macroeconomic.
 
 %\end{enumerate*}
 Like other factor-augmenting technical change, energy-augmenting
-technical change reduces production costs and so allows more efficient
+technical change reduces production costs and thereby enables more efficient
 production (process innovation) that typically results in growth.
 Additionally, cheaper energy services could facilitate the
 development and deployment of new products (product innovation),
-and important driver of rising aggregate demand (Szostack 1995).
+an important driver of rising aggregate demand (Szostack 1995)
+**** This references needs to go into BibTeX ****.
 The upshot is that while energy efficiency is higher, the more 
 efficient economy is growing more than one without the improvement,
 taking back part of the expected energy savings. We call this the
@@ -1112,11 +1115,11 @@ energy consumption at the macro level has also risen.
 \citet{Heun:2019aa} **** Heun et al.\ are not the best reference here.
 Can PB provide an alternative? ****
 show that increases in energy efficiency at the micro level
-go hand-in-hand. with 
+go hand-in-hand with 
 increases in overall energy consumption at the macro level.
 It is important to recognise the generality of this result.
 Typically focus is less interested in overall savings of an input,
-but once expected savings are of interested, all factor-augmenting
+but once expected savings are of interest, all factor-augmenting
 technical change that accelerates economic growth can be analyzed
 in terms of its contribution to rebound relative to counterfactual
 scenario of lower growth.
