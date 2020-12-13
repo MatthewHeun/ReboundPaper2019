@@ -6,6 +6,7 @@
 
 %% Package imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{amsfonts}           % For access to \checkmark.
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage{booktabs}           % For nice table rules
 \usepackage[makeroom]{cancel}   % To show terms go to zero
