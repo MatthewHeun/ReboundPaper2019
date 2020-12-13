@@ -107,7 +107,7 @@ Substituting Eq.~(\ref{eq:effective_income}) gives
 Expanding differences yields
 
 \begin{equation}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\OMd} - \rate{G} 
             + p_E \rasub{E}_s - p_E \rbsub{E}_s + \rasub{C}_o - \rbsub{C}_o \; .
 \end{equation}
 %
@@ -115,10 +115,36 @@ Recognizing that $\raempl{M} = \rbempl{M}$ and substituting Eq.~(\ref{eq:before_
 leads to 
 
 \begin{align}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=}  & \cancel{p_E \rbsub{E}_s} + \rbsub{C}_{cap} + \rbsub{C}_{md} 
-                                              + \cancel{\rbsub{C}_o} + \rbsub{N} \\
-                                            & - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
-                                              + p_E \rasub{E}_s - \cancel{p_E \rbsub{E}_s} 
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} & \cancel{p_E \rbsub{E}_s} + \rbsub{C}_{cap} + \rbsub{C}_{md}
+                                              + \cancel{\rbsub{C}_o} + \rbsub{N} \nonumber \\
+                                            & - \rbempl{C}_{cap} - \rbempl{C}_{\OMd} - \rate{G}
+                                              + p_E \rasub{E}_s - \cancel{p_E \rbsub{E}_s}
                                               + \rasub{C}_o - \cancel{\rbsub{C}_o} \; .
 \end{align}
 %
+Cancelling terms and substituting Eq.~(\ref{eq:G_dot}) gives
+
+\begin{equation}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} p_E \rasub{E}_s + \rasub{C}_o
+                                            + \Delta \rbsub{C}_{cap} + \Delta \rbsub{C}_{\OMd}
+                                            - p_E \Sdot + \rbsub{N} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:N_dot_star_empl}) gives 
+
+\begin{align}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} p_E \rasub{E}_s + \rasub{C}_o
+        & + \cancel{\Delta \rbsub{C}_{cap}} + \cancel{\Delta \rbsub{C}_{\OMd}} - \cancel{p_E \Sdot} \nonumber \\
+        & - \cancel{\Delta \rbsub{C}_{cap}} - \cancel{\Delta \rbsub{C}_{\OMd}} + \cancel{p_E \Sdot} \; .
+\end{align}
+%
+Finally, cancelling terms and recognizing that $p_E \rbinc{E}_s = \rbinc{C}_s$ gives
+
+\begin{equation}
+  \rbinc{C}_s + \rbinc{C}_o = \rbinc{C}_s + \rbinc{C}_o \; ,
+\end{equation}
+%
+thereby completing the proof that the income preference equations
+(Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
+satisfy the budget constraint
+(Eq.~(\ref{eq:inc_budget_constraint})).
