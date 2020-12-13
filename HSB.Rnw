@@ -1330,4 +1330,13 @@ using an early version of this framework.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Proof: Income elasticity expressions satisfy budget constraint (MKH)}
+\label{sec:proof_income_elasticities}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/proof_income_elasticities.tex}
+
+
+
 \end{document}
