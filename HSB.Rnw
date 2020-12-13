@@ -1331,7 +1331,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Proof: Income elasticity expressions satisfy budget constraint (MKH)}
+\section{Proof: Income preference equations satisfy budget constraint (MKH)}
 \label{sec:proof_income_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

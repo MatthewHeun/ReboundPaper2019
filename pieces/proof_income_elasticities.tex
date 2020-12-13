@@ -31,7 +31,7 @@ and
 %
 where
 
-\begin{equation}
+\begin{equation} \label{eq:effective_income}
   \Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
                        - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
 \end{equation}
@@ -43,7 +43,7 @@ The first step in this proof is to convert
 the income preference equations
 to $\rbempl{C}_s$ and $\rbempl{C}_o$ ratios.
 For Eq.~(\ref{eq:qsrat_eqsM}), 
-multiply numerator and denominator of the left-hand side by $p_s = p_E / \aprod{\eta}$
+multiply numerator and denominator of the left-hand side by $\aprod{p}_s = p_E / \aprod{\eta}$
 (Eq.~(\ref{eq:ps_pE_eta}))
 to obtain $\rainc{C}_s / \rbinc{C}_s$.
 For Eq.~(\ref{eq:qorat_eqoM}), 
@@ -97,5 +97,28 @@ Dividing by $\rbinc{N}$ and multiplying by $\Mdothatprime$ gives
   \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \Mdothatprime \; .
 \end{equation}
 %
+Substituting Eq.~(\ref{eq:effective_income}) gives
 
+\begin{equation}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+                       - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
+\end{equation}
+%
+Expanding differences yields
 
+\begin{equation}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
+            + p_E \rasub{E}_s - p_E \rbsub{E}_s + \rasub{C}_o - \rbsub{C}_o \; .
+\end{equation}
+%
+Recognizing that $\raempl{M} = \rbempl{M}$ and substituting Eq.~(\ref{eq:before_substitution_financial})
+leads to 
+
+\begin{align}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=}  & \cancel{p_E \rbsub{E}_s} + \rbsub{C}_{cap} + \rbsub{C}_{md} 
+                                              + \cancel{\rbsub{C}_o} + \rbsub{N} \\
+                                            & - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
+                                              + p_E \rasub{E}_s - \cancel{p_E \rbsub{E}_s} 
+                                              + \rasub{C}_o - \cancel{\rbsub{C}_o} \; .
+\end{align}
+%
