@@ -452,9 +452,11 @@ one that
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Aim, contribution, and structure of the paper}
-\label{sec:structure}
+\subsection{Need, aim, contributions, and structure}
+\label{sec:aim_contribution_structure}
 %++++++++++++++++++++++++++++++
+
+**** Be sure we hit all of need, aim, contributions, and structure. ****
 
 The aim of this paper is to fill the gap in the literature identified above.
 We build on the microeconomic foundations laid by \citet{Borenstein:2015aa}
@@ -623,7 +625,8 @@ With the rebound notation of Appendix~\ref{sec:nomenclature}, four typical relat
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
 the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
-Typical units for automotive transport are provided.
+Typical units for automotive transport and illumination are provided.
+**** Add illumination units. ---MKH ****
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -994,6 +997,8 @@ where effective income ($\Mdothatprime$) is given by
   \effinceqn{} \; .
 \end{equation}
 %
+Homotheticity means that $\eqsM = 1$ and $\eqoM = 1$.
+
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
 \begin{equation} \label{eq:Re_dinc_def}
@@ -1177,14 +1182,14 @@ As shown in Table~\ref{tab:prodeffect},
 productivity rebound is given by
 
 \begin{equation} \label{eq:Re_prod_def}
-  Re_{prod} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
+  Re_{\productivity} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
 we arrive at an expression for \prodeffectadj{} rebound:
 
 \begin{equation} \label{eq:Re_prod}
-  Re_{prod} = \Reprodeqn{} \; .
+  Re_{\productivity} = \Reprodeqn{} \; .
 \end{equation}
 %
 
@@ -1196,10 +1201,8 @@ we arrive at an expression for \prodeffectadj{} rebound:
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
 (\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
-Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
-productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
-are expressed in terms of other rebound effects.
+Productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
+is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
 we find
@@ -1324,7 +1327,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of comprehensive rebound framework (MKH)}
+\section{Derivation of comprehensive rebound framework}
 \label{sec:derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1332,7 +1335,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Elasticities (GS)}
+\section{Elasticities}
 \label{sec:elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1341,7 +1344,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Proof: Income preference equations satisfy budget constraint (MKH)}
+\section{Proof: Income preference equations satisfy the budget constraint}
 \label{sec:proof_income_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
