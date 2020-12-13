@@ -981,8 +981,8 @@ on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 
 The ratio of rates of energy service consumed across the income effect is given by
 
-\begin{equation} \label{eq:q_ratio_across_inc}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; .
+\begin{equation} \label{eq:qsrat_eqsM}
+  \incprefseqn \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as

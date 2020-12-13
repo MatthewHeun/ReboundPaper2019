@@ -621,18 +621,20 @@ $0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
 %------------------------------
 
 Rebound from the income effect rebound quantifies the rate of additional energy demand 
-that arises when the energy conversion device owner spends net
+that arises because the energy conversion device owner spends net
 income from the EEU.
-Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
-\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
-are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
+The income of the device owner is $\rbempl{M}$, 
+which remains unchanged across the rebound effects, 
+such that
+$\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Total income before the EEU is $\rbempl{M}$.
-Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
+Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
 %
@@ -644,35 +646,50 @@ In this framework, all net income ($\rasub{N}$) is spent either
     
 \end{enumerate*}
 %
-The direct income elasticity of consumption ($\epsilon_{dinc}$) 
-quantifies the amount of net income spent 
-on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.~(\ref{eq:inc_budget_constraint})) 
-means that leftover income is spent on other goods.
-
-The purpose of this section is derivation of expressions for 
-direct income rebound~($Re_{dinc}$) and indirect income rebound~($Re_{iinc}$).
-But we first derive expressions for later use.
-
-
-%..............................
-\paragraph{Expression for $\frac{\rainc{q}_s}{\rbinc{q}_s}$}
-\label{sec:qs_ratio}
-%..............................
-
-The ratio of rates of energy service consumed across the income effect is given by
+The income elasticity of energy service consumption and 
+the income elasticity of other goods consumption 
+($\eqsM$ and $\eqoM$, respectively)
+quantify income preferences of the device owner according to the following expressions:
 
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\eqsM} \; ,
+  \incprefseqn \tag{\ref{eq:qsrat_eqsM}}
 \end{equation}
 %
-where $\eqsM$ is the income elasticity of energy service consumption.
-Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
+and
 
-\begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; . 
-                                                                                \tag{\ref{eq:q_ratio_across_inc}}
+\begin{equation} \label{eq:qorat_eqoM}
+  \incprefoeqn \; ,
 \end{equation}
+%
+where effective income ($\Mdothatprime$) is
+
+\begin{equation} \label{eq:effective_income}
+  \effinceqn \; .
+\end{equation}
+
+The budget constraint across the \inceffect{} (Eq.~(\ref{eq:inc_budget_constraint})) 
+ensures that all net income available after the substitution effect ($\rasub{N}$) 
+is re-spent across the income effect, 
+such that $\rainc{N} = 0$.
+Appendix~\ref{sec:proof_income_elasticities} proves that
+the income preference equations (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM})) 
+satsify the budget constraint (Eq.~\ref{eq:inc_budget_constraint}).
+
+The purpose of this section is derivation of expressions for 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item direct income rebound~($Re_{dinc}$) 
+        arising from increased consumption of the energy service 
+        ($\rainc{q}_s > \rbinc{q}_s$) and
+  
+  \item indirect income rebound~($Re_{iinc}$) 
+        arising from increased consumption of other goods 
+        ($\rainc{q}_o > \rbinc{q}_o$).
+    
+\end{enumerate*}
+%
+But we first derive several helpful expressions for later use.
 
 
 %..............................
@@ -795,17 +812,17 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
               {\Sdot} \; .
 \end{equation}
 %
-Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:q_ratio_across_inc}) gives
+Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:qsrat_eqsM}) gives
 
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
 
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] 
                   \frac{\rasub{q}_s}{\rbsub{q}_s}
                 \cancel{\etaratiostacked}
                 \cancel{\rbempl{E}_s}}
