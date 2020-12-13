@@ -17,15 +17,15 @@ The budget constraint is captured in Eq.~(\ref{eq:inc_budget_constraint}):
   \rbinc{N} = p_E \Delta \rainc{E}_s + \Delta \rainc{C}_o \; . \tag{\ref{eq:inc_budget_constraint}}
 \end{equation}
 
-The additional spending due to the \inceffect{} is given by income elasticity equations
+The additional spending due to the \inceffect{} is given by income preference equations
 
-\begin{equation}
+\begin{equation} \label{eq:qsrat_eqsM}
   \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqsM}
 \end{equation}
 %
 and
 
-\begin{equation}
+\begin{equation} \label{eq:qorat_eqoM}
   \frac{\rainc{q}_o}{\rbinc{q}_o} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqoM} \; ,
 \end{equation}
 %
@@ -36,5 +36,64 @@ where
                        - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
 \end{equation}
 %
-This appendix proves that the income elasticity equations
+This appendix proves that the income preference equations
 satisfy the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
+
+The first step in this proof is to convert 
+the income preference equations
+to $\rbempl{C}_s$ and $\rbempl{C}_o$ ratios.
+For Eq.~(\ref{eq:qsrat_eqsM}), 
+multiply numerator and denominator of the left-hand side by $p_s = p_E / \aprod{\eta}$
+(Eq.~(\ref{eq:ps_pE_eta}))
+to obtain $\rainc{C}_s / \rbinc{C}_s$.
+For Eq.~(\ref{eq:qorat_eqoM}), 
+multiply numerator and denominator of the left-hand side by $p_o$
+to obtain $\rainc{C}_o / \rbinc{C}_o$.
+Set $\eqsM = 1$ and $\eqoM = 1$ due to homotheticity to obtain
+
+\begin{equation}
+    \frac{\rainc{C}_s}{\rbinc{C}_s} = 1 + \frac{\rbinc{N}}{\Mdothatprime}
+\end{equation}
+%
+and
+
+\begin{equation}
+  \frac{\rainc{C}_o}{\rbinc{C}_o} = 1 + \frac{\rbinc{N}}{\Mdothatprime} \; .
+\end{equation}
+%
+
+The second step in the proof is to obtain expressions 
+for $\Delta \rainc{C}_s$ and $\Delta \rainc{C}_o$
+from the income preference equations.
+Multiply the equations above by $\Delta \rbinc{C}_s$ and $\Delta \rbinc{C}_o$, respectively.
+Then subtract $\Delta \rbinc{C}_s$ and $\Delta \rbinc{C}_o$, respectively, from both equations to obtain
+
+\begin{equation}
+  \Delta \rainc{C}_s = \frac{\rbinc{C}_s}{\Mdothatprime} \rbinc{N}
+\end{equation}
+%
+and
+
+\begin{equation}
+  \Delta \rainc{C}_o = \frac{\rbinc{C}_o}{\Mdothatprime} \rbinc{N} \; .
+\end{equation}
+
+The above income preference equations can be substituted into the budget constraint
+(Eq.~(\ref{eq:inc_budget_constraint})) to obtain
+
+\begin{equation}
+  \rbinc{N} \stackrel{?}{=} \frac{\rbinc{C}_s}{\Mdothatprime} \rbinc{N} 
+                            + \frac{\rbinc{C}_o}{\Mdothatprime}  \rbinc{N} \; ,
+\end{equation}
+%
+where $\stackrel{?}{=}$ indicates that equality
+proves that the income preference equations satisfy the budget constraint.
+
+Dividing by $\rbinc{N}$ and multiplying by $\Mdothatprime$ gives
+
+\begin{equation}
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \Mdothatprime \; .
+\end{equation}
+%
+
+
