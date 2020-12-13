@@ -4,6 +4,37 @@
 %!TEX root = ../HSB.Rnw
 
 
-Income elasticities proof. 
+The \inceffect{} must satisfy the budget constraint
+such that net income is zero afterward ($\rainc{N} = 0$).
+After the substitution effect, 
+a rate of net income is available ($\rasub{N}$), 
+all of which is spent on
+additional energy service ($\Delta \rainc{q}_s$, $\Delta \rainc{C}_s$) or 
+additional other goods ($\Delta \rainc{q}_o$, $\Delta \rainc{C}_o$).
+The budget constraint is captured in Eq.~(\ref{eq:inc_budget_constraint}): 
 
+\begin{equation}
+  \rbinc{N} = p_E \Delta \rainc{E}_s + \Delta \rainc{C}_o \; . \tag{\ref{eq:inc_budget_constraint}}
+\end{equation}
 
+The additional spending due to the \inceffect{} is given by income elasticity equations
+
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqsM}
+\end{equation}
+%
+and
+
+\begin{equation}
+  \frac{\rainc{q}_o}{\rbinc{q}_o} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqoM} \; ,
+\end{equation}
+%
+where
+
+\begin{equation}
+  \Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+                       - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
+\end{equation}
+%
+This appendix proves that the income elasticity equations
+satisfy the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
