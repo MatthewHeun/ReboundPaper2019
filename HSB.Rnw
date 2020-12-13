@@ -954,17 +954,20 @@ and
 Rebound from the \inceffect{} quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
 income from the EEU.
-Derivations of expressions for gross and net monetary savings
-($\rate{G}$ and $\rate{N}$, respectively) from the 
-\empleffect{}~($\raempl{N}$) and the \subeffect{} ($\rasub{N}$)
-are presented in the appendix (Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}).
+The income rate of the device owner is $\rbempl{M}$, 
+which remains unchanged across the rebound effects, 
+such that
+$\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
-\emph{net} monetary savings ($\rasub{N}$) from the EEU,
+\emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
+Derivations of expressions for gross and net income from the 
+\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
-In the microeconomic framework, all net income ($\rasub{N}$) is spent either 
+In this framework, all net income ($\rasub{N}$) is spent either 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -982,7 +985,13 @@ on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 The ratio of rates of energy service consumed across the income effect is given by
 
 \begin{equation} \label{eq:qsrat_eqsM}
-  \incprefseqn \; .
+  \incprefseqn \; ,
+\end{equation}
+%
+where effective income ($\Mdothatprime$) is given by 
+
+\begin{equation} \label{eq:effective_income}
+  \effinceqn{} \; .
 \end{equation}
 %
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
@@ -992,7 +1001,7 @@ As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 \end{equation}
 %
 After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_dinc}), 
-an expression for direct income rebound is
+the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
   Re_{dinc} = \Redinceqn{} \; .
@@ -1004,38 +1013,28 @@ As either of the elasticities get stronger
 ($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
-Any net monetary savings not spent on procuring more of the energy service
-goes toward consumption of other goods in the economy.
-Rebound from the indirect income effect involves 
-the energy implications of spending net monetary savings ($\rbinc{N}$)
-on those other goods in the economy.
+The income elasticity of other goods consumption ($\eqoM$)
+quantifies the amount of net income spent 
+on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+(See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
 
+The ratio of rates of other goods consumed across the income effect is given by
+
+\begin{equation} \label{eq:qorat_eqoM}
+  \incprefoeqn \; .
+\end{equation}
+%
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
 \begin{equation} \label{eq:Re_iinc_def}
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
-The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
-can be found by rearranging the budget constraint for the income effect 
-(Eq.~(\ref{eq:inc_budget_constraint})) to be 
-$\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
-After some additional algebra (see Section~\ref{sec:Re_iinc}),
-an expression for indirect income effect rebound is
+After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_iinc}), 
+the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
   Re_{iinc} = \Reiinceqn{} \; .
-\end{equation}
-
-Eq.~(\ref{eq:Re_iinc}) shows that a good first estimate for indirect income rebound
-is $p_E I_E$.
-Intuitively, this result is sensible.
-\$1 of energy cost savings implies that $\frac{\$1}{p_E}$ of energy is expected to be saved.
-Spending the saved \$1 in the economy implies $\$1 I_E$ of energy savings takeback.
-By Eq.~(\ref{eq:Re_takeback}), rebound is
-
-\begin{equation} \label{eq:intuituve_Re_iinc}
-  Re = \frac{\text{takeback}}{\text{expected savings}} = \frac{\cancel{\$1} I_E}{\frac{\cancel{\$1}}{p_E}} = p_E I_E \; .
 \end{equation}
 
 In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
@@ -1044,20 +1043,29 @@ In the midst of the \inceffect{} analysis, a capital expenses rebound term appea
   Re_{cap} = \Recapeqn{} \; .
 \end{equation}
 
-Positive rebound from capital expenditures~($Re_{cap}$), 
-maintenance and disposal~($Re_{\OMd}$),
-direct substitution~($Re_{dsub}$), 
-indirect substitution~($Re_{isub}$), and 
-direct income~($Re_{dinc}$)
-reduce the indirect income effect rebound, 
-because each reduces net monetary savings available to the device owner to spend on other goods in the economy.
-Any negative rebound effects enhance the indirect income effect rebound, because 
-they add to the net monetary savings available to the device owner to spend on other goods in the economy.
+% Positive rebound from capital expenditures~($Re_{cap}$), 
+% maintenance and disposal~($Re_{\OMd}$),
+% direct substitution~($Re_{dsub}$), 
+% indirect substitution~($Re_{isub}$), and 
+% direct income~($Re_{dinc}$)
+% reduce the indirect income effect rebound, 
+% because each reduces net monetary savings available to the device owner to spend on other goods in the economy.
+% Any negative rebound effects enhance the indirect income effect rebound, because 
+% they add to the net monetary savings available to the device owner to spend on other goods in the economy.
+
+The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:qorat_eqoM}))
+must satisfy the budget constraint
+such that net income is zero after
+the \inceffect{} ($\rainc{N} = 0$).
+See Appendix~\ref{sec:proof_income_elasticities}
+for a proof demonstrating that the income preference equations satisfies the budget constraint.
+
 +++
 Should we add a subsection here on `economy-wide effects',
 that is changes in prices, including a lower energy price,
 so we get the `price effect'?---GS
 +++
+
 
 %++++++++++++++++++++++++++++++
 \subsection{\Prodeffect}
@@ -1197,17 +1205,18 @@ After algebra and canceling of terms,
 we find
 %
 \begin{align} \label{eq:Re_tot}  
-  Re_{sum} = \Retoteqn{} \; .
+  Re_{sum} = \; \Retoteqn{} \; .
 \end{align}
 
-Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values
+Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values
 [$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
 $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
 $Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
 $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
-$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
-is sufficient to calculate the sum of all rebound, 
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and 
+$Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc}))]
+is sufficient to calculate the rebound sum, 
 provided that 
 the productivity factor~($k$) and
 the product of energy price and energy intensity ($p_E I_E$)

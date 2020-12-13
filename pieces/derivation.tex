@@ -621,9 +621,9 @@ $0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
 %------------------------------
 
 Rebound from the income effect rebound quantifies the rate of additional energy demand 
-that arises because the energy conversion device owner spends net
+that arises because the owner of the energy conversion device spends net
 income from the EEU.
-The income of the device owner is $\rbempl{M}$, 
+The income rate of the device owner is $\rbempl{M}$, 
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
@@ -632,7 +632,7 @@ as $\rate{G} = p_E \Sdot$.
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+Derivations of expressions for gross and net income from the 
 \empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
@@ -657,14 +657,14 @@ quantify the income preferences of the device owner according to the following e
 %
 and
 
-\begin{equation} \label{eq:qorat_eqoM}
-  \incprefoeqn \; ,
+\begin{equation}
+  \incprefoeqn \; , \tag{\ref{eq:qorat_eqoM}}
 \end{equation}
 %
 where effective income ($\Mdothatprime$) is
 
-\begin{equation} \label{eq:effective_income}
-  \effinceqn \; .
+\begin{equation}
+  \effinceqn{} \; . \tag{\ref{eq:effective_income}}
 \end{equation}
 
 The budget constraint across the \inceffect{} (Eq.~(\ref{eq:inc_budget_constraint})) 
@@ -688,50 +688,52 @@ The purpose of this section is derivation of expressions for
         ($\rainc{q}_o > \rbinc{q}_o$).
     
 \end{enumerate*}
+
+But first, we derive a helpful expression to be used later.
+
+%..............................
+\paragraph{Expression for $\rbinc{E}_s$}
+\label{sec:E_dot_s_hat_expression}
+%..............................
+
+An expression for $\rbinc{E}_s$ that will be helpful later
+begins with
+
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{E}_s}{\rbsub{E}_s} \right)
+                \left( \frac{\raempl{E}_s}{\rbempl{E}_s} \right)
+                \rbempl{E}_s \; .
+\end{equation}
 %
-But we first derive several helpful expressions for later use.
+Substituting Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
+equalities from Table~\ref{tab:analysis_assumptions} gives
 
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
+                \left( \frac{\raempl{q}_s / \aprod{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
+                \rbempl{E}_s \; .
+\end{equation}
+%
+Canceling terms yields
 
-% %..............................
-% \paragraph{Expression for $\rbinc{E}_s$} 
-% \label{sec:E_dot_s_hat_expression}
-% %..............................
-% 
-% An expression for $\rbinc{E}_s$ that will be helpful later
-% begins with
-% 
-% \begin{equation}
-%   \rbinc{E}_s = \left( \frac{\rasub{E}_s}{\rbsub{E}_s} \right)
-%                 \left( \frac{\raempl{E}_s}{\rbempl{E}_s} \right)
-%                 \rbempl{E}_s \; .
-% \end{equation}
-% %
-% Substituting Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
-% equalities from Table~\ref{tab:analysis_assumptions} gives
-% 
-% \begin{equation}
-%   \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
-%                 \left( \frac{\raempl{q}_s / \aprod{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
-%                 \rbempl{E}_s \; .
-% \end{equation}
-% %
-% Canceling terms yields
-% 
-% \begin{equation}
-%   \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
-%                 \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
-%                 \left( \frac{\bempl{\eta}}{\aprod{\eta}}  \right)
-%                 \rbempl{E}_s \; .
-% \end{equation}
-% %
-% Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} 
-% ($\raempl{q}_s = \rbempl{q}_s$) gives
-% 
-% \begin{equation} \label{eq:E_dot_s_hat}
-%   \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
-%                 \frac{\bempl{\eta}}{\aprod{\eta}}
-%                 \rbempl{E}_s \; .
-% \end{equation}
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
+                \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
+                \left( \frac{\bempl{\eta}}{\aprod{\eta}}  \right)
+                \rbempl{E}_s \; .
+\end{equation}
+%
+Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions}
+($\raempl{q}_s = \rbempl{q}_s$) gives
+
+\begin{equation} \label{eq:E_dot_s_hat}
+  \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
+                \frac{\bempl{\eta}}{\aprod{\eta}}
+                \rbempl{E}_s \; .
+\end{equation}
+
+The next step is to develop an expression for $Re_{dinc}$
+using the income preference for energy service consumption.
 
 
 %..............................
@@ -766,14 +768,15 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
               {\Sdot} \; .
 \end{equation}
 %
-Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:qsrat_eqsM}) gives
+Eliminating terms and substituting Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ and
+Eq.~(\ref{eq:qsrat_eqsM}) for $\rainc{q}_s / \rbinc{q}_s$ gives
 
 \begin{equation}
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
+Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
 
 \begin{equation}
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] 
@@ -783,7 +786,8 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
               {\left( \etaratiostacked - 1 \right)\! \cancel{\etaratiostacked} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
+Eliminating terms and substituting
+Eq.~(\ref{eq:q_ratio_func_of_eps}) for $\rasub{q}_s / \rbsub{q}_s$ gives
 
 \begin{equation} 
   Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
@@ -791,12 +795,12 @@ Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities get stronger 
+As either of the elasticities gets stronger 
 ($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
-using the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
+using the income preference for other goods consumption.
 
 
 %..............................
@@ -804,7 +808,7 @@ using the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
 \label{sec:Re_iinc}
 %..............................
 
-As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
+As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
 \begin{equation}
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
@@ -830,7 +834,8 @@ cancelling terms gives
 \end{equation}
 %
 Substituting the income preference equation for other goods consumption (Eq.~(\ref{eq:qorat_eqoM}) 
-and Eq.~(\ref{eq:Sdot}) yields
+for $\rainc{q}_o / \rbinc{q}_o$
+and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
 
 \begin{equation}
   Re_{iinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1  \right] 
@@ -848,14 +853,12 @@ Recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final fo
 of the indirect income rebound expression:
 
 \begin{equation}
-  Re_{iinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1  \right] 
-                    \left( \etaratiostacked \right)^{-\eqops - 1}}{\etaratiostacked - 1} 
-              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+  Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
-As either of the elasticities get stronger 
+As either of the elasticities gets stronger 
 ($\eqoM$ becomes more positive or $\eqops$ becomes more negative), 
 indirect income rebound~($Re_{iinc}$) grows.
 
