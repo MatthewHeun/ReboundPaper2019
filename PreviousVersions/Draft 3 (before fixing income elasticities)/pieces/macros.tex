@@ -1,0 +1,298 @@
+% The next command tells RStudio to do "Compile PDF" on HSB.Rnw,
+% instead of this file, thereby eliminating the need to switch back to HSB.Rnw 
+% before building the paper.
+%!TEX root = ../HSB.Rnw
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This file contains macros for
+% Heun, Semieniuk, Brockway, 
+% A Comprehensive Analytical Framework for Energy Rebound. 
+% It is incorporated into the main file by the command
+% \input{macros.tex}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% Decorations for symbols
+
+\newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
+
+% Create "after" commands
+\newcommand{\orig}[1]{#1}
+\newcommand{\aempl}[1]{{#1}^*}
+\newcommand{\asub}[1]{\hat{#1}}
+\newcommand{\ainc}[1]{\bar{#1}}
+\newcommand{\aprod}[1]{\tilde{#1}}
+
+% Create the "before" commands
+\newcommand{\bempl}[1]{\orig{#1}}
+\newcommand{\bsub}[1]{\aempl{#1}}
+\newcommand{\binc}[1]{\asub{#1}}
+\newcommand{\bprod}[1]{\ainc{#1}}
+
+% Decoration combinations
+% Rates after
+\newcommand{\rorig}[1]{\orig{\rate{#1}}}
+\newcommand{\raempl}[1]{\aempl{\rate{#1}}}
+\newcommand{\rasub}[1]{\asub{\rate{#1}}}
+\newcommand{\rainc}[1]{\ainc{\rate{#1}}}
+\newcommand{\raprod}[1]{\aprod{\rate{#1}}}
+
+% Rates before
+\newcommand{\rbempl}[1]{\rorig{#1}}
+\newcommand{\rbsub}[1]{\raempl{#1}}
+\newcommand{\rbinc}[1]{\rasub{#1}}
+\newcommand{\rbprod}[1]{\rainc{#1}}
+
+%%%%% Subscript kerning
+
+\newcommand{\OM}{O\!M}
+% \newcommand{\OMd}{O\!M\!d}
+\newcommand{\OMd}{md}
+\newcommand{\productivity}{pr\!od}
+
+
+%%%%% Convenient symbols
+
+\newcommand{\Sdot}{\rate{S}_{dev}}
+\newcommand{\Mdothatprime}{\rbinc{M}^\prime}
+
+
+%%%%% Elasticities and income shares
+
+\newcommand{\eqsps}{\epsilon_{\rate{q}_s\!,p_s}}
+\newcommand{\eqops}{\epsilon_{\rate{q}_o\!,p_s}}
+\newcommand{\eqsM}{\epsilon_{\rate{q}_s\!,\rate{M}}}
+\newcommand{\eqoM}{\epsilon_{\rate{q}_o\!,\rate{M}}}
+\newcommand{\eqspsUC}{\epsilon_{\rate{q}_s\!,p_s\!,U\!C}}
+\newcommand{\eqopsUC}{\epsilon_{\rate{q}_o\!,p_s\!,U\!C}}
+\newcommand{\fqs}{f_{\rbempl{q}_s}}
+
+%%%%% Colors
+
+\newcommand{\emplcolor}{red!25!white}
+\newcommand{\subcolor}{orange!25!white}
+\newcommand{\inccolor}{green!25!white}
+\newcommand{\prodcolor}{blue!25!white}
+
+
+%%%%% Coloration of text background
+
+%
+% Inline color box around text
+% Arguments:
+%   [#1]: background color for the box
+%   {#2}: text inside the box
+%
+\newtcbox{\inlinebox}[1][]{on line, 
+colback=#1,
+colframe=#1,
+before upper={\rule[-2pt]{0pt}{10pt}},
+boxrule=1pt,
+boxsep=0pt,
+left=3pt,
+right=3pt,
+top=2pt,
+bottom=2pt}
+
+
+%%%%% Colored phrases
+
+% Emplacement effect
+\newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
+\newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
+\newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
+\newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
+
+% Substitution effect
+\newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
+\newcommand{\subeffectadj}{\inlinebox[\subcolor]{substitution-effect}}
+\newcommand{\Subeffect}{\inlinebox[\subcolor]{Substitution effect}}
+\newcommand{\SubEffect}{\inlinebox[\subcolor]{Substitution Effect}}
+
+% Income effect
+\newcommand{\inceffect}{\inlinebox[\inccolor]{income effect}}
+\newcommand{\inceffectadj}{\inlinebox[\inccolor]{income-effect}}
+\newcommand{\Inceffect}{\inlinebox[\inccolor]{Income effect}}
+\newcommand{\IncEffect}{\inlinebox[\inccolor]{Income Effect}}
+
+% Productivity effect
+\newcommand{\prodeffect}{\inlinebox[\prodcolor]{productivity effect}}
+\newcommand{\prodeffectadj}{\inlinebox[\prodcolor]{productivity-effect}}
+\newcommand{\Prodeffect}{\inlinebox[\prodcolor]{Productivity effect}}
+\newcommand{\ProdEffect}{\inlinebox[\prodcolor]{Productivity Effect}}
+
+
+
+%%%%% minipage for assumptions and constraints tables
+% Arguments:
+%   #1: Width (multiple of \linewidth
+%   #2: text inside the minipage
+%
+\newcommand{\mptable}[2]{\begin{minipage}{#1\linewidth} \useshortskip{} \begin{equation} #2 \end{equation} \end{minipage}}
+
+
+%%%%% Oft-used references
+
+\newcommand{\Ba}[1]{\citeauthor[#1]{Borenstein:2015aa}}
+\newcommand{\Bapp}[1]{\citeauthor[#1]{Borenstein:2015aa}'s \citeyearpar{Borenstein:2015aa}}
+\newcommand{\Bp}[1]{\citep[#1]{Borenstein:2015aa}}
+\newcommand{\Bt}[1]{\citet[#1]{Borenstein:2015aa}}
+
+\newcommand{\Ta}[1]{\citeauthor[#1]{Thomas:2013aa}}
+\newcommand{\Tapp}[1]{\citeauthor[#1]{Thomas:2013aa}'s \citeyearpar{Thomas:2013aa}}
+\newcommand{\Tp}[1]{\citep[#1]{Thomas:2013aa, Thomas:2013ab}}
+\newcommand{\Tpone}[1]{\citep[#1]{Thomas:2013aa}}
+\newcommand{\Tptwo}[1]{\citep[#1]{Thomas:2013ab}}
+\newcommand{\Tt}[1]{\citet[#1]{Thomas:2013aa, Thomas:2013ab}}
+\newcommand{\Ttone}[1]{\citet[#1]{Thomas:2013aa}}
+\newcommand{\Tttwo}[1]{\citet[#1]{Thomas:2013ab}}
+
+
+%%%%% Derivation pages
+
+% Column widths
+\newcommand{\derivtextsize}{\footnotesize}
+\newcommand{\derivpageleftcolwidth}{0.11\textwidth}
+\newcommand{\derivpageenergycolwidth}{0.7\textwidth}
+\newcommand{\derivpagefinancialcolwidth}{0.7\textwidth}
+
+% Horizontal rule between sections of derivations
+
+\newcommand{\sectionsep}{\noindent\rule{1.6\textwidth}{0.4pt}}
+
+
+%
+% Derivation section
+% Arguments:
+%   #1: accounting stage (original, prime, etc.)
+%   #2: energy column
+%   #3: financial column
+%
+\newcommand{\derivsection}[3]{%
+
+\derivtextsize{}
+
+\begin{minipage}[t]{\derivpageleftcolwidth}
+~\\#1
+\end{minipage}
+%
+%
+%
+\begin{minipage}[t]{\derivpageenergycolwidth}
+#2
+\end{minipage}
+%
+~
+%
+\begin{minipage}[t]{\derivpagefinancialcolwidth}
+#3
+\end{minipage}
+
+\normalsize{}
+
+}
+
+
+%
+% Derivation page header
+% Arguments:
+%   #1: Effect type header text (e.g., Emplacement Effect)
+%
+\newcommand{\derivheader}[1]{
+
+\begin{center}
+  #1
+\end{center}
+
+\derivsection{}
+{\begin{center}\emph{Energy analysis}\end{center}}
+{\begin{center}\emph{Financial analysis}\end{center}}
+
+}
+
+
+% Equations
+
+% Efficiency ratios
+\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+
+% Derivative with respect to efficiency ratio
+\newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
+
+
+% Original
+\newcommand{\Eacctorig}{\rbempl{E} = \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{\OMd} + \rbempl{C}_o) I_E}
+\newcommand{\Macctorig}{\rbempl{M} = p_E \rbempl{E}_s + \rbempl{C}_{cap} + \rbempl{C}_{\OMd} + \rbempl{C}_o + \rbempl{N}}
+
+% Before emplacement effect (same as original)
+\newcommand{\Eacctbempl}{\Eacctorig}      
+\newcommand{\Macctbempl}{\Macctorig}      
+
+% After emplacement effect
+\newcommand{\Eacctaempl}{\raempl{E} = \raempl{E}_s + \raempl{E}_{emb} + (\raempl{C}_{\OMd} + \raempl{C}_o) I_E}                  
+\newcommand{\Macctaempl}{\raempl{M} = p_E \raempl{E}_s + \raempl{C}_{cap} + \raempl{C}_{\OMd} + \raempl{C}_o + \raempl{N}}         
+
+% Before substitution effect (same as after emplacement effect)
+\newcommand{\Eacctbsub}{\Eacctaempl}
+\newcommand{\Macctbsub}{\Macctaempl}
+
+% After substitution effect
+\newcommand{\Eacctasub}{\rasub{E} = \rasub{E}_s + \rasub{E}_{emb} + (\rasub{C}_{\OMd} + \rasub{C}_o) I_E}
+\newcommand{\Macctasub}{\rasub{M} = p_E \rasub{E}_s + \rasub{C}_{cap} + \rasub{C}_{\OMd} + \rasub{C}_o + \rasub{N}}
+
+% Before income effect (same as after substitution effect)
+\newcommand{\Eacctbinc}{\Eacctasub}
+\newcommand{\Macctbinc}{\Macctasub}
+
+% After income effect
+\newcommand{\Eacctainc}{\rainc{E} = \rainc{E}_s + \rainc{E}_{emb} + (\rainc{C}_{\OMd} + \rainc{C}_o) I_E}
+\newcommand{\Macctainc}{\rainc{M} = p_E \rainc{E}_s + \rainc{C}_{cap} + \rainc{C}_{\OMd} + \rainc{C}_o + \rainc{N}}
+
+% Embodied energy rebound
+\newcommand{\Reembeqn}{\frac{\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
+  \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}}{\Sdot}}
+  
+% Ops, Maintenance, and disposal energy rebound
+\newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\OMd}}{\rbempl{C}_{\OMd}} - 1 \right) \rbempl{C}_{\OMd} I_E}{\Sdot}}
+
+% Equation for S_dot_dev
+\newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\!\etaratiostacked \rbempl{E}_s}
+
+% Equation for Re_dsub
+\newcommand{\Redsubeqn}{\frac{\left( \etaratiostacked \right)^{-\eqsps} - 1}
+                        {\etaratiostacked - 1}}
+                        
+% Equation for Re_isub
+\newcommand{\Reisubeqn}{\frac{{\left( \etaratiostacked  \right)}
+                          ^{-\eqops} - 1}{\etaratiostacked - 1} \; 
+                          \etaratiostacked \; 
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+
+% Equation for Re_dinc
+\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
+                  \left( \etaratiostacked \right)^{-\eqsps}}
+              { \etaratiostacked - 1 }}
+
+% Equation for Re_cap
+\newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
+
+% Equation for Re_iinc
+\newcommand{\Reiinceqn}{p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}}
+
+% Equation for Re_d (total direct rebound)
+\newcommand{\Redeqn}{\frac{ \left( \etaratiostacked \right)^{-\eqsps}
+             \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
+         {\etaratiostacked - 1}}
+
+% Equation for Re_prod
+\newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub}}
+
+% Equation for Re_tot
+\newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\OMd}         \nonumber \\
+                       &+ [1 - (1+k) p_E I_E] Re_{dsub} - k Re_{isub}   \nonumber \\
+                       &+ (1 - p_E I_E) Re_{dinc} + (1 + k) p_E I_E}
+                 
+
+
+

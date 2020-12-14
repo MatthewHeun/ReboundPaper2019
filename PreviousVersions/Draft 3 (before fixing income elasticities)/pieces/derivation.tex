@@ -1,0 +1,993 @@
+% The next command tells RStudio to do "Compile PDF" on HSB.Rnw,
+% instead of this file, thereby eliminating the need to switch back to HSB.Rnw 
+% before building the paper.
+%!TEX root = ../HSB.Rnw
+
+
+**** 
+We may want to delete (or comment out)
+paragraphs of this appendix that are duplicated
+in the body of the paper.---MKH
+****
+
+This appendix provides a detailed derivation of the comprehensive rebound framework,
+beginning with relationships for each rebound effect.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Relationships for rebound effects}
+\label{sec:relationships_for_stages}
+%++++++++++++++++++++++++++++++
+
+For each energy rebound effect in Fig.~\ref{fig:flowchart},
+energy and financial analysis must be performed.
+The purposes of the analyses are to determine for each effect
+%
+\begin{enumerate*}[label={(\alph*)}]
+
+  \item a definition for energy rebound~($Re$) and
+
+  \item an equation for net income~($\rate{N}$).
+
+\end{enumerate*}
+
+Analysis of each stage involves a set of assumptions and constraints
+as shown in Table~\ref{tab:analysis_assumptions}.
+In Table~\ref{tab:analysis_assumptions}, 
+relationships for \empleffect{} 
+embodied energy rates, 
+capital expenditure rates, and 
+maintenance and disposal expenditure rates
+are typical, and
+inequalities could switch direction for a specific EEU.
+\Prodeffect{} relationships are given for a single device only.
+If the EEU is deployed at scale across the economy, 
+the energy service consumption rate~($\rate{q}_s$), 
+device energy consumption rate~($\rate{E}_s$), 
+embodied energy rate~($\rate{E}_{emb}$),
+capital expenditure rate~($\rate{C}_{cap}$), and 
+maintenance and disposal expenditure rate~($\rate{C}_{\OMd}$)
+will all increase.
+
+\input{pieces/assumptions_table.tex}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Derivations}
+\label{sec:derivations}
+%++++++++++++++++++++++++++++++
+
+Derivations for rebound definitions and net income equations
+are presented in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect},
+one for each stage in Fig.~\ref{fig:flowchart}.
+Energy and financial analyses are shown side by side, because
+each informs the other.
+
+% Derivation tables
+
+\input{pieces/deriv1_emplacement_effect.tex}
+
+
+\input{pieces/deriv3_substitution_effect.tex}
+
+
+\input{pieces/deriv4_income_effect.tex}
+
+
+\input{pieces/deriv5_productivity_effect.tex}
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound expressions}
+\label{sec:rebound_expressions}
+%++++++++++++++++++++++++++++++
+
+All that remains is to determine expressions for each rebound term, 
+beginning with the expected energy savings rate~($\Sdot$), which
+appears in the denominator of all rebound expressions.
+
+
+%------------------------------
+\subsubsection{Expected energy savings ($\Sdot$)} 
+\label{sec:Sdot}
+%------------------------------
+
+$\Sdot$ is the reduction of energy consumption rate
+by the device due to the EEU.
+No other effects are considered.
+
+\begin{equation}
+  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s  \tag{\ref{eq:S_dot_def}}
+\end{equation}
+%
+The final energy consumption rates ($\rbempl{E}_s$ and $\raempl{E}_s$) 
+can be written as Eq.~(\ref{eq:typ_qs_eta_Edot}) in the forms
+$\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$ and 
+$\raempl{E}_s = \frac{\raempl{q}_s}{\aempl{\eta}}$. 
+
+\begin{equation}
+  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\raempl{q}_s}{\aempl{\eta}}
+\end{equation}
+%
+With reference to Table~\ref{tab:analysis_assumptions}, 
+we use $\raempl{q}_s = \rbempl{q}_s$ and $\aempl{\eta} = \aprod{\eta}$ to obtain
+
+\begin{equation}
+  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\rbempl{q}_s}{\aprod{\eta}} \; .
+\end{equation}
+%
+When the EEU increases efficiency such that $\aprod{\eta} > \bempl{\eta}$,
+expected energy savings grows ($\Sdot > 0$)
+as the rate of final energy consumption declines,
+as expected.
+As $\aprod{\eta} \rightarrow \infty$,
+all final energy consumption is eliminated ($\raempl{E}_s \rightarrow 0$), and
+$\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$.
+(Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
+See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
+
+After rearrangement and using $\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$, 
+we obtain a convenient form
+
+\begin{equation}
+  \Sdot = \Sdoteqn \; .  \tag{\ref{eq:Sdot}}
+\end{equation}
+
+
+%------------------------------
+\subsubsection{\Empleffect{}}
+\label{sec:Re_emp}
+%------------------------------
+
+The emplacement effect accounts for performance of the EEU only.
+No behavior changes occur.
+The direct emplacement effect of the EEU is device energy savings and energy cost savings.
+The indirect emplacement effects of the EEU produce changes in the embodied energy rate and
+the maintenance and disposal cost rates.
+By definition, the direct emplacement effect has no rebound. 
+However, indirect emplacement effects may cause energy rebound.
+Both direct and indirect emplacement effects are discussed below.
+
+
+%..............................
+\paragraph{$Re_{dempl}$}
+\label{sec:Re_dempl}
+%..............................
+
+As shown in Table~\ref{tab:empleffect},
+the direct rebound from the emplacement effect is
+$Re_{dempl} = 0$.
+This result is expected, 
+because, in the absence of behavior changes,
+there is no takeback of energy savings
+at the upgraded device.
+
+
+%..............................
+\paragraph{$Re_{iempl}$} 
+\label{sec:Re_iempl}
+%..............................
+
+Indirect emplacement rebound effects 
+can occur at any point in the life cycle of an energy conversion device,
+from manufacturing and distribution 
+to the use phase (maintenance),
+and finally to disposal.
+For simplicity, we group maintenance with disposal to form
+two distinct indirect emplacement rebound effects:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item an embodied energy effect ($Re_{emb}$) and 
+  
+  \item a maintenance and disposal effect ($Re_{\OMd}$).
+    
+\end{enumerate*}
+
+
+%..............................
+\paragraph{$Re_{emb}$}
+\label{sec:Re_emb}
+%..............................
+
+The first component of indirect emplacement effect rebound
+involves embodied energy.
+We define embodied energy consistent with the energy/exergy analysis literature
+to be the sum of all final energy consumed
+in the production of the energy conversion device.
+The EEU
+causes the embodied final energy of the device to change
+from $\rbempl{E}_{emb}$ to $\raempl{E}_{emb}$.
+
+Energy is embodied in the device within manufacturing and distribution supply chains
+prior to consumer acquisition of the device.
+No energy is embodied in the device while in service.
+However, for simplicity, we spread all embodied energy
+over the lifetime of the device,
+an equal amount assigned to each period.
+We later take the same approach to capital costs and
+maintenance and disposal costs.
+A justification for spreading embodied energy purchase costs comes from considering
+staggered device replacements by many consumers across several years.
+In the aggregate, staggered replacements
+work out to about the same embodied energy in every period.
+
+Thus, we allocate embodied energy over the life of the original and upgraded devices
+($\bempl{t}$ and $\aempl{t}$, respectively)
+to obtain embodied energy rates, such that
+$\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}$
+and 
+$\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}$.
+The change in embodied final energy due to the EEU (expressed as a rate) is given by
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$.
+After substitution and algebraic rearrangement,
+the change in embodied energy rate due to the EEU can be expressed as
+$\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
+  \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}$, 
+a term that represents energy savings taken back due to embodied energy effects.
+Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy rebound as
+%
+\begin{equation} 
+  Re_{emb} = \Reembeqn{} \, . \tag{\ref{eq:Re_emb}}
+\end{equation}
+
+Embodied energy rebound can be either positive or negative, depending on 
+the sign of the term
+$(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}/\aempl{t}) - 1$.
+Typically, but not always,
+rising energy efficiency is associated with increased device complexity
+and more embodied energy,
+such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
+However, if the upgraded device has longer life than the original device
+($\aempl{t} > \bempl{t}$),
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
+meaning that the upgraded device has a lower embodied energy rate than the original device.
+
+
+%..............................
+\paragraph{$Re_{\OMd}$} 
+\label{sec:Re_OMd}
+%..............................
+
+In addition to embodied energy effects, 
+indirect emplacement rebound 
+can be associated with energy demanded by maintenance and disposal~($\OMd$) expenditures.
+Maintenance expenditures are typically modeled as a per-year expense, 
+a rate (e.g., $\rbempl{C}_m$).
+Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
+Like embodied energy, we spread disposal costs across the lifetime 
+of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
+to form cost rates such that $\rbempl{C}_{\OMd} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
+and
+$\raempl{C}_{\OMd} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
+
+We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
+elsewhere in the economy at its energy intensity~($I_E$).
+Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
+is given by $\Delta \raempl{C}_{\OMd} I_E$.
+This term represents energy takeback, so maintenance and disposal rebound is given by
+
+\begin{equation} \label{eq:Re_OMd_def}
+  Re_{\OMd} = \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot} \; ,
+\end{equation}
+%
+as shown in Table~\ref{tab:empleffect}.
+Slight rearrangement gives
+
+\begin{equation}
+  Re_{\OMd} = \ReOMdeqn{} \; . \tag{\ref{eq:Re_OMd}}
+\end{equation}
+
+Rebound from maintenance and disposal can be positive or negative,
+depending on the sign of the term $\raempl{C}_{\OMd}/\rbempl{C}_{\OMd} - 1$.
+
+
+%------------------------------
+\subsubsection{\Subeffect{}} 
+\label{sec:Re_sub}
+%------------------------------
+
+Two terms comprise substitution effect rebound,
+direct substitution rebound ($Re_{dsub}$) and
+indirect substitution rebound ($Re_{isub}$).
+This section derives each in terms of 
+energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$) and
+the service price elasticities 
+of energy service consumption ($\eqsps$) and
+other goods consumption ($\eqops$).
+We begin with derivation of two ratios that are helpful later,
+$\frac{\rasub{q}_s}{\rbsub{q}_s}$ and
+$\frac{\rasub{q}_o}{\rbsub{q}_o}$.
+
+
+%..............................
+\paragraph{Expressions for two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$}
+\label{sec:two_ratios}
+%..............................
+
+The EEU's energy efficiency increase
+($\aprod{\eta} > \bempl{\eta}$)
+causes the price of the energy service provided by the device to fall
+($\aprod{p}_s < \bempl{p}_s$).
+The substitution effect quantifies the amount by which
+the device owner, in response,
+increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
+decreases the consumption rate of other goods ($\rasub{q}_o < \rbsub{q}_o$).
+(See Appendix~\ref{sec:elasticities} for information about elasticities.)
+
+The relationship between energy service price and energy service consumption rate
+is given by the service price elasticity of energy service consumption~($\eqsps$),
+such that
+
+\begin{equation}
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
+\end{equation}
+%
+Note that a negative value for the service price elasticity of energy service consumption
+is expected ($\eqsps < 0$),
+such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
+the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
+
+Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
+$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
+$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+gives
+
+\begin{equation}
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
+                                                                        \tag{\ref{eq:q_ratio_func_of_eps}}
+\end{equation}
+%
+Again, note that the energy service price elasticity of energy service consumption
+is negative ($\eqsps < 0$), so that
+as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
+the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
+
+To quantify the substitution effect on other purchases,
+we introduce a second elasticity, 
+the service price elasticity of other goods consumption~($\eqops$).
+See Appendix~\ref{sec:elasticities} for constraints on the relationship between the
+energy service price elasticity of energy service consumption~($\eqsps$) and the
+energy service price elasticity of other goods consumption~($\eqops$).
+
+The ratio of other goods consumption on both sides of the substitution effect is given by
+
+\begin{equation}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; . 
+\end{equation}
+%
+Note that the service price elasticity of other good consumption
+is expected to be positive ($\eqops > 0$).
+As the energy service price decreases~($\aprod{p}_s < \bempl{p_s}$), 
+consumption of other goods is expected to decrease ($\rasub{q}_o < \rbsub{q}_o$), 
+because constant utility is assumed across the substitution effect.
+(See Appendix~\ref{sec:elasticities}.)
+Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
+$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
+$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+gives
+
+\begin{equation}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right) ^ {-\eqops} \; . 
+                                                                                              \tag{\ref{eq:qohat_qostar}}
+\end{equation}
+
+Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
+
+
+%..............................
+\paragraph{Expression for $Re_{dsub}$}
+\label{sec:Re_dsub}
+%..............................
+
+As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
+
+\begin{equation}
+  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dsub_def}}
+\end{equation}
+%
+Expansion of the difference term and
+substitution of Eq.~(\ref{eq:typ_qs_eta_Edot}) in the form
+$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$
+and
+$\rbsub{E}_s = \frac{\rbsub{q}_s}{\bempl{\eta}}$
+gives
+
+\begin{equation}
+   Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; ,
+\end{equation}
+%
+and
+
+\begin{equation}
+     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Substitution of Eq.~(\ref{eq:Sdot}) gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}
+              {\Sdoteqn} \; .
+\end{equation}
+%
+Rearrangement of the numerator and canceling terms gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\aprod{\eta}}} }
+              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\cancel{\aprod{\eta}}} \rbempl{E}_s} \; ,
+\end{equation}
+%
+and
+
+\begin{equation}
+    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; \;
+                \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bempl{\eta}}}}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Noting that $\frac{\rbsub{q}_s}{\bempl{\eta}} = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$,
+canceling $\rbempl{E}_s$ terms,
+and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
+
+\begin{equation}
+  Re_{dsub} = \Redsubeqn \; . \tag{\ref{eq:Re_dsub}}
+\end{equation}
+
+Note that the service price elasticity of energy service consumption is
+expected to be negative ($\eqsps < 0$).
+For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+$Re_{dsub} = 0.15$.
+
+To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
+$\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
+of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
+
+\begin{equation}
+  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqsps}  \right]}
+           {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
+    = -\eqsps \left( \etaratiostacked{} \right)^{-(\eqsps + 1)}
+\end{equation}
+%
+Substituting 1 and $\infty$ for $\etaratioinline$ gives
+
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
+    = -\eqsps ( 1 )^{-(\eqsps + 1)}
+    = -\eqsps \; ,                               \tag{\ref{eq:lim_Redsub_1}}
+\end{equation}
+%
+and
+
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
+    = -\eqsps ( \infty )^{-(\eqsps + 1)}
+    = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
+\end{equation}
+%
+because $\eqsps \in [-1, 0)$ and, therefore, $(\eqsps + 1) > 0$.
+
+With $\eqsps \in (-1, 0)$ expected,
+direct substitution rebound will never be larger than 1.
+The direct substitution effect alone
+can never cause backfire. 
+
+Finally, we derive an expression for indirect substitution rebound ($Re_{isub}$).
+
+
+%..............................
+\paragraph{Expression for $Re_{isub}$}
+\label{sec:Re_isub}
+%..............................
+
+The increase in consumption of the energy service after its price drop
+substitutes for consumption of other goods in the economy,
+subject to a utility constraint.
+The reduction in spending on other goods in the economy
+is captured by indirect substitution rebound~($Re_{isub}$).
+
+To derive an expression for indirect substitution rebound,
+we begin with the definition of $Re_{isub}$
+from Table~\ref{tab:subeffect}:
+
+\begin{equation}
+  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .  \tag{\ref{eq:Re_isub_dev}}
+\end{equation}
+%
+Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging the numerator gives
+
+\begin{equation} \label{eq:Re_isub_prelim}
+  Re_{isub} = \frac{\left( \frac{\rasub{C}_o}{\rbsub{C}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
+\end{equation}
+%
+We assume a basket of other goods purchased in the economy,
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
+such that the average price of all other goods purchased in the economy~($p_o$) is given by
+
+\begin{equation}
+  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
+\end{equation}
+%
+Then, the cost rate of other purchases in the economy can be given as
+
+\begin{equation}
+  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
+\end{equation}
+%
+and
+
+\begin{equation}
+  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
+\end{equation}
+%
+Assuming that the average price is unchanged across the substitution effect,
+such that $\asub{p}_o = \bsub{p}_o$,
+the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can be added to find
+
+\begin{equation} \label{eq:Cdot_o_ratio}
+  \frac{\rasub{C}_o}{\rbsub{C}_o} 
+      = \frac{\rasub{q}_o}{\rbsub{q}_o} 
+      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
+\end{equation}
+%
+Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
+(along with $\rbsub{C}_o = \rbempl{C}_o$)
+can be used to determine the rate of expenditures 
+on other goods in the economy~($\rasub{C}_o$) by
+
+\begin{equation}
+  \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
+\end{equation}
+
+Substituting Eq.~\ref{eq:Cdot_o_ratio} into Eq.~(\ref{eq:Re_isub_prelim}) gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
+\end{equation}
+%
+Substituting Eq.~\ref{eq:Sdot} gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
+                  ^{-\eqops} - 1  \right] \rbsub{C}_o I_E}
+                  {\Sdoteqn} \; .
+\end{equation}
+%
+Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
+
+\begin{equation}
+  Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
+\end{equation}
+
+Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
+the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
+indirect substitution rebound will be negative always ($Re_{isub} < 0$),
+as expected.
+Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
+
+We can take derivatives of numerator and denominator and
+invoke L'H\^{o}pital's rule
+to find limits for $Re_{isub}$ when
+$\etaratioinline{} \to 1^{\! +}$ and when
+$\etaratioinline{} \to \infty$.
+First, rearranging Eq.~(\ref{eq:Re_isub}) gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left( \etaratiostacked{} \right)^m - \etaratiostacked{}}{\left( \etaratiostacked{} \right) - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+\end{equation}
+%
+where $m \equiv 1 - \eqops$.
+Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
+with respect to $\etaratioinline{}$ gives
+
+\begin{equation}
+  \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - \etaratiostacked \right]}
+            {\dbydetaeta{}\left[ \left( \etaratiostacked{} \right)  - 1 \right] } \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} 
+       = \left[ m \left( \etaratiostacked{} \right)^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Substituting $\etaratioinline = 1$ and invoking L'H\^{o}pital's rule gives
+
+\begin{equation}
+  \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
+        = \left[ m ( 1 )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
+        = [m - 1] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Substituting for $m$ gives
+
+\begin{equation}
+  \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
+        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
+\end{equation}
+
+Similarly, 
+substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
+
+\begin{equation}
+  \lim_{\etaratioinline \to \infty} Re_{isub} 
+        = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+\end{equation}
+%
+Because $\eqops \in (0, 1)$ is expected **** Check with Gregor.  Is this true? ****,
+$0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
+
+\begin{equation}
+  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} = -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
+\end{equation}
+
+
+%------------------------------
+\subsubsection{\Inceffect{}} 
+\label{sec:Re_inc}
+%------------------------------
+
+Rebound from the income effect rebound quantifies the rate of additional energy demand 
+that arises when the energy conversion device owner spends net
+income from the EEU.
+Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
+\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
+Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
+as $\rate{G} = p_E \Sdot$. 
+In combination, the \empleffect{} and the \subeffect{} leave the device owner with
+\emph{net} income ($\rasub{N}$) from the EEU,
+as shown in Eq.~(\ref{eq:N_dot_after_sub}).
+Total income before the EEU is $\rbempl{M}$.
+Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
+
+In this framework, all net income ($\rasub{N}$) is spent either 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item on additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
+  
+  \item on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+    
+\end{enumerate*}
+%
+The direct income elasticity of consumption ($\epsilon_{dinc}$) 
+quantifies the amount of net income spent 
+on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
+The budget constraint for the income effect (Eq.~(\ref{eq:inc_budget_constraint})) 
+means that leftover income is spent on other goods.
+
+The purpose of this section is derivation of expressions for 
+direct income rebound~($Re_{dinc}$) and indirect income rebound~($Re_{iinc}$).
+But we first derive expressions for later use.
+
+
+%..............................
+\paragraph{Expression for $\frac{\rainc{q}_s}{\rbinc{q}_s}$}
+\label{sec:qs_ratio}
+%..............................
+
+The ratio of rates of energy service consumed across the income effect is given by
+
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\eqsM} \; ,
+\end{equation}
+%
+where $\eqsM$ is the income elasticity of energy service consumption.
+Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
+
+\begin{equation}
+  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; . 
+                                                                                \tag{\ref{eq:q_ratio_across_inc}}
+\end{equation}
+
+
+%..............................
+\paragraph{Expression for $\rbinc{E}_s$} 
+\label{sec:E_dot_s_hat_expression}
+%..............................
+
+An expression for $\rbinc{E}_s$ that will be helpful later
+begins with
+
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{E}_s}{\rbsub{E}_s} \right)
+                \left( \frac{\raempl{E}_s}{\rbempl{E}_s} \right)
+                \rbempl{E}_s \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
+equalities from Table~\ref{tab:analysis_assumptions} gives
+
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
+                \left( \frac{\raempl{q}_s / \aprod{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
+                \rbempl{E}_s \; .
+\end{equation}
+%
+Canceling terms yields
+
+\begin{equation}
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
+                \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
+                \left( \frac{\bempl{\eta}}{\aprod{\eta}}  \right)
+                \rbempl{E}_s \; .
+\end{equation}
+%
+Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} 
+($\raempl{q}_s = \rbempl{q}_s$) gives
+
+\begin{equation} \label{eq:E_dot_s_hat}
+  \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
+                \frac{\bempl{\eta}}{\aprod{\eta}}
+                \rbempl{E}_s \; .
+\end{equation}
+
+
+%..............................
+\paragraph{Expression for $\frac{\rbinc{N} I_E}{\Sdot}$}
+\label{sec:N_dot_hat_I_E_over_Sdot}
+%..............................
+
+Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
+We begin by substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$).
+
+\begin{equation}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
+                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
+                                - \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot}
+                                - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
+                                - \frac{\Delta \rasub{C}_o I_E}{\Sdot}
+\end{equation}
+%
+Substituting Eqs.~\ref{eq:G_dot}, \ref{eq:Re_OMd_def}, \ref{eq:Re_dsub_def}, \ref{eq:Re_isub_dev} gives
+
+\begin{equation}
+  \frac{\rbinc{N} I_E}{\Sdot} = \frac{p_E \cancel{\Sdot} I_E}{\cancel{\Sdot}}
+                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
+                                - Re_{\OMd}
+                                - p_E I_E Re_{dsub}
+                                - Re_{isub} \; .
+\end{equation}
+%
+Canceling terms and defining $Re_{cap}$ as
+
+\begin{equation}
+  Re_{cap} \equiv \Recapeqn{} \; , \tag{\ref{eq:Re_cap}}
+\end{equation}
+%
+gives
+
+\begin{equation} \label{eq:N_dot_I_E_Sdot}
+  \frac{\rbinc{N} I_E}{\Sdot} = p_E I_E
+                                - Re_{cap}
+                                - Re_{\OMd}
+                                - p_E I_E Re_{dsub}
+                                - Re_{isub} \; .
+\end{equation}
+
+The next step is to develop an expression for $Re_{dinc}$
+using the direct income elasticity of consumption.
+
+
+%..............................
+\paragraph{Expression for $Re_{dinc}$}
+\label{sec:Re_dinc}
+%..............................
+
+As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
+
+\begin{equation}
+  Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dinc_def}}
+\end{equation}
+%
+Expanding the difference and rearranging gives
+
+\begin{equation}
+  Re_{dinc} = \frac{\rainc{E}_s - \rbinc{E}_s}{\Sdot} \; , 
+\end{equation}
+%
+and
+
+\begin{equation}
+  Re_{dinc} = \frac{\left( \frac{\rainc{E}_s}{\rbinc{E}_s} - 1  \right) \rbinc{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Substituting the Eq.~(\ref{eq:typ_qs_eta_Edot}) as
+$\rainc{E}_s = \frac{\rainc{q}_s}{\aprod{\eta}}$ and  
+$\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
+
+\begin{equation}
+  Re_{dinc} = \frac{\left( \frac{\rainc{q}_s / \cancel{\aprod{\eta}}}{\rbinc{q}_s / \cancel{\aprod{\eta}}} - 1  \right) \rbinc{E}_s} 
+              {\Sdot} \; .
+\end{equation}
+%
+Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:q_ratio_across_inc}) gives
+
+\begin{equation}
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
+              {\Sdoteqn} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
+
+\begin{equation}
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
+                  \frac{\rasub{q}_s}{\rbsub{q}_s}
+                \cancel{\etaratiostacked}
+                \cancel{\rbempl{E}_s}}
+              {\left( \etaratiostacked - 1 \right)\! \cancel{\etaratiostacked} \cancel{\rbempl{E}_s}} \; .
+\end{equation}
+%
+Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
+
+\begin{equation} 
+  Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
+\end{equation}
+
+If there is no net income ($\rasub{N} = 0$), 
+direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
+As either of the elasticities get stronger 
+($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
+direct income rebound~($Re_{dinc}$) grows.
+
+The next step is to develop an expression for $Re_{iinc}$
+using the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
+
+%..............................
+\paragraph{Expression for $Re_{iinc}$}
+\label{sec:Re_iinc}
+%..............................
+
+In this framework,
+any net income not spent on procuring more of the energy service
+goes toward consumption of other goods in the economy.
+Rebound from the indirect income effect involves 
+the energy implications of spending net income ($\rbinc{N}$)
+on those other goods in the economy.
+
+As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
+
+\begin{equation}
+  Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
+\end{equation}
+%
+The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
+can be found by rearranging the budget constraint for the income effect 
+(Eq.~(\ref{eq:inc_budget_constraint})) to be 
+$\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
+Substituting gives
+
+\begin{equation}
+  Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
+
+\begin{equation}
+  Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
+
+\begin{equation}
+  Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
+\end{equation}
+
+This equation shows that a good first estimate for indirect income rebound
+is $p_E I_E$.
+Positive rebound from capital expenditures~($Re_{cap}$), 
+maintenance and disposal~($Re_{\OMd}$),
+direct substitution~($Re_{dsub}$), 
+indirect substitution~($Re_{isub}$), and 
+direct income~($Re_{dinc}$)
+reduce the indirect income effect rebound, 
+because each reduces net income available to the device owner to spend on other goods in the economy.
+Any negative rebound effects enhance the indirect income effect rebound, because 
+they add to the net income available to the device owner to spend on other goods in the economy.
+
+
+%------------------------------
+\subsubsection{Expression for total direct rebound ($Re_d$)} 
+\label{sec:Re_d}
+%------------------------------
+
+Total direct rebound is the sum of 
+direct substitution rebound ($Re_{dsub}$, Eq.~(\ref{eq:Re_dsub})) and
+direct income rebound ($Re_{dinc}$, Eq.~(\ref{eq:Re_dinc})).
+
+\begin{align} 
+  Re_d &= Re_{dsub} + Re_{dinc} \nonumber \\
+       &= \Redsubeqn + \Redinceqn
+\end{align}
+%
+Simplification gives
+
+\begin{equation} \label{eq:Re_d}
+  Re_d = \frac{ \left( \etaratiostacked \right)^{-\eqsps}
+             \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
+         {\etaratiostacked - 1} \; .
+\end{equation}
+
+It is instructive to compare Eq.~(\ref{eq:Re_dsub}) and Eq.~(\ref{eq:Re_d}).
+Because 
+$\frac{\rasub{N}}{\rbempl{M}} > 0$ and 
+$\eqsM > 0$,
+total direct rebound~($Re_d$) is greater than 
+direct substitution rebound~($Re_{dsub}$) by a factor
+that is associated with direct income rebound, namely
+$\left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}$.
+
+
+%------------------------------
+\subsubsection{\Prodeffect{}} 
+\label{sec:Re_prod}
+%------------------------------
+
+Productivity rebound~($Re_{prod}$) is given by Eq.~(\ref{eq:Re_prod_def}).
+Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
+
+\begin{equation}
+  Re_{prod} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
+\end{equation}
+
+
+%------------------------------
+\subsubsection{Rebound sum} 
+\label{sec:total_rebound}
+%------------------------------
+
+The sum of all rebound effects is 
+
+\begin{equation}
+  Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re_{prod} \; .
+\end{equation}
+%
+Substituting Eqs.~(\ref{eq:Re_empl_def}), (\ref{eq:Re_sub_def}), and~(\ref{eq:Re_inc_def}) gives
+
+\begin{align}
+  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect} \nonumber \\
+                &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}  \nonumber \\
+                &+ Re_{dinc} + Re_{iinc}   & \mathrm{\inceffect}  \nonumber \\
+                &+ Re_{prod}               & \mathrm{\prodeffect}
+\end{align}
+%
+Interestingly, 
+indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
+productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
+can be expressed in terms of other rebound effects.
+Substituting Eqs.~(\ref{eq:Re_iinc}) and~(\ref{eq:Re_prod}) gives
+
+\begin{align}
+  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect}                           \nonumber \\
+                &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}                            \nonumber \\
+                &+ Re_{dinc} + p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} 
+                             - Re_{isub} - p_E I_E Re_{dinc}   & \mathrm{\inceffect}        \nonumber \\
+                &+ k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub} \; .  & \mathrm{\prodeffect}
+\end{align}
+%
+Rearranging distributes many indirect income effect and productivity effect terms 
+to other emplacement, substitution, and income effect terms.
+This last rearrangement gives the final expression for total rebound.
+
+\begin{align}
+  Re_{sum} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
+\end{align}
+
+Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values,
+
+\begin{itemize}
+
+  \item $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+
+  \item $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
+  
+  \item $Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
+  
+  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+  
+  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
+  
+  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
+
+\end{itemize}
+%
+is sufficient to calculate total rebound, 
+provided that 
+the productivity factor~($k$),
+the price of energy~($p_E$), and
+the energy intensity of the economy~($I_E$) 
+are known.
