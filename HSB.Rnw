@@ -565,8 +565,8 @@ we derive rebound expressions for each.
 But first 
 we define rebound relationships 
 (Section~\ref{sec:rebound_relationships}) and 
-typical energy and cost relationships found throughout the analysis
-(Section~\ref{sec:energy_and_cost_relationships}).
+typical energy and cost relationships (Section~\ref{sec:energy_and_cost_relationships})
+for the analysis.
 
 
 %++++++++++++++++++++++++++++++
@@ -583,8 +583,8 @@ Energy rebound is defined as
 where both actual and expected final energy savings rates are expected positive.
 Final energy ``takeback'' is the rate at which final energy savings are eroded by rebound effects,
 and the actual final energy savings rate is the expected final energy savings rate less takeback.
-Note that takeback can be negative, indicating in increase in the final energy savings rate
-relative to the expected final energy savings rate.
+Note that takeback can be negative, indicating an increase in the final energy savings rate
+relative to the expected final energy savings rate, sometimes called hyperconservation.
 Thus,
 
 \begin{equation}
@@ -605,15 +605,15 @@ Simplifying gives
 %
 Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
 
+We define rebound at the final energy stage, 
+because that is the point of energy purchase by the device owner.
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
 to final energy rates in the numerators and denominators of rebound expressions
 derived from Eqs.~(\ref{eq:Re_def}) and~(\ref{eq:Re_takeback});
 they divide out anyway.
-We define rebound at the final energy level, 
-because that is the point of energy purchase by the device owner.
 Henceforth, we drop the adjective ``final'' 
-unless there is reason to indicate a specific energy conversion chain stage.
+unless there is reason to indicate a specific stage of the energy conversion chain.
 
 
 %++++++++++++++++++++++++++++++
