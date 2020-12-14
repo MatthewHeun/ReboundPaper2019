@@ -1014,7 +1014,7 @@ the expression for direct income rebound is
 
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities get stronger 
+As either of the elasticities gets stronger 
 ($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
