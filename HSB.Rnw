@@ -823,6 +823,10 @@ Substitution effect rebound
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of energy service consumption ($\eqsps$), and
 the service price elasticity of other goods consumption ($\eqops$).
+
+****
+Add information here about elasticities.
+****
 See Appendix~\ref{sec:elasticities} for further details about elasticities.
 
 The relationship between energy service price and energy service consumption rate
