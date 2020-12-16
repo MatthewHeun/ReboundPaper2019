@@ -257,7 +257,9 @@ bottom=2pt}
 \newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\OMd}}{\rbempl{C}_{\OMd}} - 1 \right) \rbempl{C}_{\OMd} I_E}{\Sdot}}
 
 % Equation for S_dot_dev
-\newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\!\etaratiostacked \rbempl{E}_s}
+% \newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\!\etaratiostacked \rbempl{E}_s}
+\newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\! 
+                            \frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
 \newcommand{\Redsubeqn}{\frac{\left( \etaratiostacked \right)^{-\eqsps} - 1}
@@ -270,15 +272,16 @@ bottom=2pt}
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
-\newcommand{\Redinceqn}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
-                  \left( \etaratiostacked \right)^{-\eqsps}}
-              { \etaratiostacked - 1 }}
+\newcommand{\Redinceqn}{\frac{ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1}
+              { \etaratiostacked - 1 } \left( \etaratiostacked \right)^{-\eqsps}}
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
 
 % Equation for Re_iinc
-\newcommand{\Reiinceqn}{p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}}
+\newcommand{\Reiinceqn}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+              \left( \etaratiostacked \right)^{1 - \eqops}
+              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_d (total direct rebound)
 \newcommand{\Redeqn}{\frac{ \left( \etaratiostacked \right)^{-\eqsps}
@@ -289,10 +292,19 @@ bottom=2pt}
 \newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub}}
 
 % Equation for Re_tot
-\newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\OMd}         \nonumber \\
-                       &+ [1 - (1+k) p_E I_E] Re_{dsub} - k Re_{isub}   \nonumber \\
-                       &+ (1 - p_E I_E) Re_{dinc} + (1 + k) p_E I_E}
+\newcommand{\Retoteqn}{&Re_{emb} - k Re_{cap} + (1-k) Re_{\OMd}         \nonumber \\
+                       &+ (1 - k p_E I_E) Re_{dsub} + (1 - k) Re_{isub}   \nonumber \\
+                       &+ Re_{dinc} + Re_{iinc} +  k p_E I_E}
                  
 
+%%%% Income preference equations
 
+% Equation for energy service income preferences
+\newcommand{\incprefseqn}{\frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqsM}}
 
+% Equation for other goods income preferences
+\newcommand{\incprefoeqn}{\frac{\rainc{q}_o}{\rbinc{q}_o} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqoM}}
+
+% Equation for effective income
+\newcommand{\effinceqn}{\Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+                        - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o}

@@ -621,18 +621,20 @@ $0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
 %------------------------------
 
 Rebound from the income effect rebound quantifies the rate of additional energy demand 
-that arises when the energy conversion device owner spends net
+that arises because the owner of the energy conversion device spends net
 income from the EEU.
-Derivations of expressions for gross and net income ($\rate{G}$ and $\rate{N}$, respectively) from the 
-\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
-are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
+The income rate of the device owner is $\rbempl{M}$, 
+which remains unchanged across the rebound effects, 
+such that
+$\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the \empleffect{} and the \subeffect{} leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Total income before the EEU is $\rbempl{M}$.
-Total income after the substitution effect is $\rbempl{M} + \rasub{N}$.
+Derivations of expressions for gross and net income from the 
+\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
 %
@@ -644,39 +646,55 @@ In this framework, all net income ($\rasub{N}$) is spent either
     
 \end{enumerate*}
 %
-The direct income elasticity of consumption ($\epsilon_{dinc}$) 
-quantifies the amount of net income spent 
-on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-The budget constraint for the income effect (Eq.~(\ref{eq:inc_budget_constraint})) 
-means that leftover income is spent on other goods.
-
-The purpose of this section is derivation of expressions for 
-direct income rebound~($Re_{dinc}$) and indirect income rebound~($Re_{iinc}$).
-But we first derive expressions for later use.
-
-
-%..............................
-\paragraph{Expression for $\frac{\rainc{q}_s}{\rbinc{q}_s}$}
-\label{sec:qs_ratio}
-%..............................
-
-The ratio of rates of energy service consumed across the income effect is given by
+The income elasticity of energy service consumption and 
+the income elasticity of other goods consumption 
+($\eqsM$ and $\eqoM$, respectively)
+quantify the income preferences of the device owner according to the following expressions:
 
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( \frac{\rbinc{M} + \rbinc{N}}{\rbinc{M}} \right) ^ {\eqsM} \; ,
+  \incprefseqn \tag{\ref{eq:qsrat_eqsM}}
 \end{equation}
 %
-where $\eqsM$ is the income elasticity of energy service consumption.
-Recognizing that $\rbinc{M} = \rbsub{M} = \rbempl{M}$ and rearranging slightly gives
+and
 
 \begin{equation}
-  \frac{\rainc{q}_s}{\rbinc{q}_s} = \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^ {\eqsM} \; . 
-                                                                                \tag{\ref{eq:q_ratio_across_inc}}
+  \incprefoeqn \; , \tag{\ref{eq:qorat_eqoM}}
 \end{equation}
+%
+where effective income ($\Mdothatprime$) is
 
+\begin{equation}
+  \effinceqn{} \; . \tag{\ref{eq:effective_income}}
+\end{equation}
+%
+Homotheticity means that $\eqsM = 1$ and $\eqoM = 1$.
+
+The budget constraint across the \inceffect{} (Eq.~(\ref{eq:inc_budget_constraint})) 
+ensures that all net income available after the substitution effect ($\rasub{N}$) 
+is re-spent across the income effect, 
+such that $\rainc{N} = 0$.
+Appendix~\ref{sec:proof_income_elasticities} proves that
+the income preference equations (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM})) 
+satsify the budget constraint (Eq.~\ref{eq:inc_budget_constraint}).
+
+The purpose of this section is derivation of expressions for 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item direct income rebound~($Re_{dinc}$) 
+        arising from increased consumption of the energy service 
+        ($\rainc{q}_s > \rbinc{q}_s$) and
+  
+  \item indirect income rebound~($Re_{iinc}$) 
+        arising from increased consumption of other goods 
+        ($\rainc{q}_o > \rbinc{q}_o$).
+    
+\end{enumerate*}
+
+But first, we derive a helpful expression to be used later.
 
 %..............................
-\paragraph{Expression for $\rbinc{E}_s$} 
+\paragraph{Expression for $\rbinc{E}_s$}
 \label{sec:E_dot_s_hat_expression}
 %..............................
 
@@ -707,7 +725,7 @@ Canceling terms yields
                 \rbempl{E}_s \; .
 \end{equation}
 %
-Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions} 
+Noting energy service consumption rate equalities from Table~\ref{tab:analysis_assumptions}
 ($\raempl{q}_s = \rbempl{q}_s$) gives
 
 \begin{equation} \label{eq:E_dot_s_hat}
@@ -716,51 +734,8 @@ Noting energy service consumption rate equalities from Table~\ref{tab:analysis_a
                 \rbempl{E}_s \; .
 \end{equation}
 
-
-%..............................
-\paragraph{Expression for $\frac{\rbinc{N} I_E}{\Sdot}$}
-\label{sec:N_dot_hat_I_E_over_Sdot}
-%..............................
-
-Another term of use later is $\frac{\rbinc{N} I_E}{\Sdot}$.
-We begin by substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$).
-
-\begin{equation}
-  \frac{\rbinc{N} I_E}{\Sdot} = \frac{\rate{G} I_E}{\Sdot}
-                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
-                                - \frac{\Delta \raempl{C}_{\OMd} I_E}{\Sdot}
-                                - \frac{p_E I_E \Delta \rasub{E}_s}{\Sdot}
-                                - \frac{\Delta \rasub{C}_o I_E}{\Sdot}
-\end{equation}
-%
-Substituting Eqs.~\ref{eq:G_dot}, \ref{eq:Re_OMd_def}, \ref{eq:Re_dsub_def}, \ref{eq:Re_isub_dev} gives
-
-\begin{equation}
-  \frac{\rbinc{N} I_E}{\Sdot} = \frac{p_E \cancel{\Sdot} I_E}{\cancel{\Sdot}}
-                                - \frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}
-                                - Re_{\OMd}
-                                - p_E I_E Re_{dsub}
-                                - Re_{isub} \; .
-\end{equation}
-%
-Canceling terms and defining $Re_{cap}$ as
-
-\begin{equation}
-  Re_{cap} \equiv \Recapeqn{} \; , \tag{\ref{eq:Re_cap}}
-\end{equation}
-%
-gives
-
-\begin{equation} \label{eq:N_dot_I_E_Sdot}
-  \frac{\rbinc{N} I_E}{\Sdot} = p_E I_E
-                                - Re_{cap}
-                                - Re_{\OMd}
-                                - p_E I_E Re_{dsub}
-                                - Re_{isub} \; .
-\end{equation}
-
 The next step is to develop an expression for $Re_{dinc}$
-using the direct income elasticity of consumption.
+using the income preference for energy service consumption.
 
 
 %..............................
@@ -795,24 +770,27 @@ $\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
               {\Sdot} \; .
 \end{equation}
 %
-Canceling terms and substituting Eqs.~(\ref{eq:Sdot}) and~(\ref{eq:q_ratio_across_inc}) gives
+Eliminating terms and substituting Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ and
+Eq.~(\ref{eq:qsrat_eqsM}) for $\rainc{q}_s / \rbinc{q}_s$ gives
 
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] \rbinc{E}_s} 
               {\Sdoteqn} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
+Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
 
 \begin{equation}
-  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\eqsM} - 1  \right] 
+  Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1  \right] 
                   \frac{\rasub{q}_s}{\rbsub{q}_s}
-                \cancel{\etaratiostacked}
+                \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}
                 \cancel{\rbempl{E}_s}}
-              {\left( \etaratiostacked - 1 \right)\! \cancel{\etaratiostacked} \cancel{\rbempl{E}_s}} \; .
+              {\left( \etaratiostacked - 1 \right)\! 
+                  \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
+Eliminating terms and substituting
+Eq.~(\ref{eq:q_ratio_func_of_eps}) for $\rasub{q}_s / \rbsub{q}_s$ gives
 
 \begin{equation} 
   Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
@@ -820,24 +798,18 @@ Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities get stronger 
+As either of the elasticities gets stronger 
 ($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
-using the budget constraint of Eq.~(\ref{eq:inc_budget_constraint}).
+using the income preference for other goods consumption.
+
 
 %..............................
 \paragraph{Expression for $Re_{iinc}$}
 \label{sec:Re_iinc}
 %..............................
-
-In this framework,
-any net income not spent on procuring more of the energy service
-goes toward consumption of other goods in the economy.
-Rebound from the indirect income effect involves 
-the energy implications of spending net income ($\rbinc{N}$)
-on those other goods in the economy.
 
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
@@ -845,39 +817,102 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
 \end{equation}
 %
-The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
-can be found by rearranging the budget constraint for the income effect 
-(Eq.~(\ref{eq:inc_budget_constraint})) to be 
-$\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
-Substituting gives
+Expanding the difference and rearranging gives
 
 \begin{equation}
-  Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
+  Re_{iinc} = \frac{(\rainc{C}_o - \rbinc{C}_o) I_E}{\Sdot} \; , 
 \end{equation}
 %
-Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
+and
 
 \begin{equation}
-  Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
+  Re_{iinc} = \frac{\left( \frac{\rainc{C}_o}{\rbinc{C}_o} - 1  \right) \rbinc{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
+Substituting $\rainc{C}_o = p_o \rainc{q}_o$ and $\rbinc{C}_o = p_o \rbinc{q}_o$ and
+cancelling terms gives
 
 \begin{equation}
-  Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
+  Re_{iinc} = \frac{\left( \frac{\rainc{q}_o}{\rbinc{q}_o} - 1  \right) \rbinc{C}_o I_E}{\Sdot} \; .
+\end{equation}
+%
+Substituting the income preference equation for other goods consumption (Eq.~(\ref{eq:qorat_eqoM}) 
+for $\rainc{q}_o / \rbinc{q}_o$
+and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
+
+\begin{equation}
+  Re_{iinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1  \right] 
+              \rbinc{C}_o I_E}{\Sdoteqn} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:Cdot_o_ratio}) for $\rbinc{C}_o$ gives
+
+\begin{equation}
+  Re_{iinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1  \right] 
+              \rbsub{C}_o \left( \etaratiostacked \right)^{-\eqops} I_E}{\Sdoteqn} \; .
+\end{equation}
+%
+Recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final form 
+of the indirect income rebound expression:
+
+\begin{equation}
+  Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
-This equation shows that a good first estimate for indirect income rebound
-is $p_E I_E$.
-Positive rebound from capital expenditures~($Re_{cap}$), 
-maintenance and disposal~($Re_{\OMd}$),
-direct substitution~($Re_{dsub}$), 
-indirect substitution~($Re_{isub}$), and 
-direct income~($Re_{dinc}$)
-reduce the indirect income effect rebound, 
-because each reduces net income available to the device owner to spend on other goods in the economy.
-Any negative rebound effects enhance the indirect income effect rebound, because 
-they add to the net income available to the device owner to spend on other goods in the economy.
+If there is no net income ($\rasub{N} = 0$), 
+indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
+As either of the elasticities gets stronger 
+($\eqoM$ becomes more positive or $\eqops$ becomes more negative), 
+indirect income rebound~($Re_{iinc}$) grows.
+
+% ===========================
+% 
+% In this framework,
+% any net income not spent on procuring more of the energy service
+% goes toward consumption of other goods in the economy.
+% Rebound from the indirect income effect involves 
+% the energy implications of spending net income ($\rbinc{N}$)
+% on those other goods in the economy.
+% 
+% As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
+% 
+% \begin{equation}
+%   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
+% \end{equation}
+% %
+% The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
+% can be found by rearranging the budget constraint for the income effect 
+% (Eq.~(\ref{eq:inc_budget_constraint})) to be 
+% $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
+% Substituting gives
+% 
+% \begin{equation}
+%   Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
+% \end{equation}
+% %
+% Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
+% 
+% \begin{equation}
+%   Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
+% \end{equation}
+% %
+% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
+% 
+% \begin{equation}
+%   Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
+% \end{equation}
+% 
+% This equation shows that a good first estimate for indirect income rebound
+% is $p_E I_E$.
+% Positive rebound from capital expenditures~($Re_{cap}$), 
+% maintenance and disposal~($Re_{\OMd}$),
+% direct substitution~($Re_{dsub}$), 
+% indirect substitution~($Re_{isub}$), and 
+% direct income~($Re_{dinc}$)
+% reduce the indirect income effect rebound, 
+% because each reduces net income available to the device owner to spend on other goods in the economy.
+% Any negative rebound effects enhance the indirect income effect rebound, because 
+% they add to the net income available to the device owner to spend on other goods in the economy.
 
 
 %------------------------------
@@ -898,18 +933,29 @@ Simplification gives
 
 \begin{equation} \label{eq:Re_d}
   Re_d = \frac{ \left( \etaratiostacked \right)^{-\eqsps}
-             \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
+             \left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqsM}   - 1}
          {\etaratiostacked - 1} \; .
 \end{equation}
 
 It is instructive to compare Eq.~(\ref{eq:Re_dsub}) and Eq.~(\ref{eq:Re_d}).
 Because 
-$\frac{\rasub{N}}{\rbempl{M}} > 0$ and 
+$\frac{\rasub{N}}{\Mdothatprime} > 0$ and 
 $\eqsM > 0$,
 total direct rebound~($Re_d$) is greater than 
 direct substitution rebound~($Re_{dsub}$) by a factor
 that is associated with direct income rebound, namely
-$\left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}$.
+$\left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqsM}$.
+
+
+%------------------------------
+\subsubsection{Expression for total indirect rebound ($Re_i$)} 
+\label{sec:Re_i}
+%------------------------------
+
+****
+Do we want to have this section? 
+We don't get a nice, simplified expression like we do for $Re_{d}$.
+****
 
 
 %------------------------------
@@ -917,11 +963,49 @@ $\left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}$.
 \label{sec:Re_prod}
 %------------------------------
 
-Productivity rebound~($Re_{prod}$) is given by Eq.~(\ref{eq:Re_prod_def}).
-Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
+Productivity rebound~($Re_{\productivity}$) is given by Eq.~(\ref{eq:Re_prod_def}).
+Substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$) gives
 
 \begin{equation}
-  Re_{prod} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
+  Re_{\productivity} = \frac{k \rate{G} I_E}{\Sdot}
+                                - \frac{k \Delta \raempl{C}_{cap} I_E}{\Sdot}
+                                - \frac{k \Delta \raempl{C}_{\OMd} I_E}{\Sdot}
+                                - \frac{k p_E I_E \Delta \rasub{E}_s}{\Sdot}
+                                - \frac{k \Delta \rasub{C}_o I_E}{\Sdot} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$
+and Eqs.~(\ref{eq:Re_OMd_def}), (\ref{eq:Re_dsub_def}), and (\ref{eq:Re_isub_dev})
+for rebound terms gives
+
+\begin{equation}
+  Re_{\productivity} = \frac{k p_E \cancel{\Sdot} I_E}{\cancel{\Sdot}}
+                                - \frac{k \Delta \raempl{C}_{cap} I_E}{\Sdot}
+                                - k Re_{\OMd}
+                                - k p_E I_E Re_{dsub}
+                                - k Re_{isub} \; .
+\end{equation}
+%
+Canceling terms and defining $Re_{cap}$ as
+
+\begin{equation}
+  Re_{cap} \equiv \Recapeqn{}  \tag{\ref{eq:Re_cap}}
+\end{equation}
+%
+gives
+
+% \begin{equation} \label{eq:N_dot_I_E_Sdot}
+%   Re_{\productivity} = k p_E I_E
+%                                 - k Re_{cap}
+%                                 - k Re_{\OMd}
+%                                 - k p_E I_E Re_{dsub}
+%                                 - k Re_{isub} \; .
+% \end{equation}
+% 
+% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) into Eq.~(\ref{eq:Re_prod_def}) gives
+
+\begin{equation}
+  Re_{\productivity} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
 \end{equation}
 
 
@@ -933,7 +1017,7 @@ Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
 The sum of all rebound effects is 
 
 \begin{equation}
-  Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re_{prod} \; .
+  Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re_{\productivity} \; .
 \end{equation}
 %
 Substituting Eqs.~(\ref{eq:Re_empl_def}), (\ref{eq:Re_sub_def}), and~(\ref{eq:Re_inc_def}) gives
@@ -942,32 +1026,29 @@ Substituting Eqs.~(\ref{eq:Re_empl_def}), (\ref{eq:Re_sub_def}), and~(\ref{eq:Re
   Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect} \nonumber \\
                 &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}  \nonumber \\
                 &+ Re_{dinc} + Re_{iinc}   & \mathrm{\inceffect}  \nonumber \\
-                &+ Re_{prod}               & \mathrm{\prodeffect}
+                &+ Re_{\productivity}      & \mathrm{\prodeffect}
 \end{align}
 %
-Interestingly, 
-indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
-productivity effect rebound~($Re_{prod}$, Eq.~(\ref{eq:Re_prod}))
+Productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
 can be expressed in terms of other rebound effects.
-Substituting Eqs.~(\ref{eq:Re_iinc}) and~(\ref{eq:Re_prod}) gives
+Substituting Eq.~(\ref{eq:Re_prod}) gives
 
 \begin{align}
-  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect}                           \nonumber \\
-                &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}                            \nonumber \\
-                &+ Re_{dinc} + p_E I_E - Re_{cap} - Re_{\OMd} - p_E I_E Re_{dsub} 
-                             - Re_{isub} - p_E I_E Re_{dinc}   & \mathrm{\inceffect}        \nonumber \\
+  Re_{sum} = \; &Re_{emb} + Re_{\OMd}      & \mathrm{\empleffect}       \nonumber \\
+                &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}        \nonumber \\
+                &+ Re_{dinc} + Re_{iinc}   & \mathrm{\inceffect}        \nonumber \\
                 &+ k p_E I_E - k Re_{cap} - k Re_{\OMd} - k p_E I_E Re_{dsub} - k Re_{isub} \; .  & \mathrm{\prodeffect}
 \end{align}
 %
-Rearranging distributes many indirect income effect and productivity effect terms 
-to other emplacement, substitution, and income effect terms.
+Rearranging distributes productivity effect terms 
+to emplacement and substitution effect terms.
 This last rearrangement gives the final expression for total rebound.
 
 \begin{align}
   Re_{sum} = \; \Retoteqn{} \tag{\ref{eq:Re_tot}}
 \end{align}
 
-Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values,
+Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values,
 
 \begin{itemize}
 
@@ -979,9 +1060,11 @@ Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values,
   
   \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
   
-  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
+  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
   
-  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
+  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and
+  
+  \item $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})),
 
 \end{itemize}
 %
