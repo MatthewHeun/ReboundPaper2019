@@ -1242,6 +1242,23 @@ to provide insulation from reviewers' nit-picking
 about any specific rebound numbers that we calculate.
 
 
+**** Example table for PB. ****
+
+
+\begin{center}
+\begin{tabular}{ r c c l }
+  \toprule
+                 & Ford Fusion & Ford Fusion & \\ 
+                 & (gasoline) & (hybrid EV) & Notes \\
+  \midrule
+  $\bempl{\eta}$, $\aprod{\eta}$ [mpg] & 25 & 42 & Notes here \\  
+   next row & cell7 & cell8 & cell9 \\
+  \bottomrule
+\end{tabular}
+\end{center}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion (GS, 1000 words)}
 \label{sec:discussion}
