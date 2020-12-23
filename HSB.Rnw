@@ -1244,19 +1244,23 @@ about any specific rebound numbers that we calculate.
 
 **** Example table for PB. ****
 
+Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency upgrade (EEU).
 
+\begin{table}
 \begin{center}
+\caption{Car parameters}
+\label{tab:car_parameters}
 \begin{tabular}{ r c c l }
   \toprule
-                 & Ford Fusion & Ford Fusion & \\ 
-                 & (gasoline) & (hybrid EV) & Notes \\
+                      & Ford Fusion & Ford Fusion & \\ 
+                      & (gasoline) & (hybrid EV) & Notes \\
   \midrule
   $\bempl{\eta}$, $\aprod{\eta}$ [mpg] & 25 & 42 & Notes here \\  
    next row & cell7 & cell8 & cell9 \\
   \bottomrule
 \end{tabular}
 \end{center}
-
+\end{table}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
