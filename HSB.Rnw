@@ -1352,7 +1352,7 @@ using an early version of this framework.
 \label{sec:proof_income_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \input{pieces/proof_income_elasticities.tex}
+\input{pieces/proof_income_elasticities.tex}
 
 
 
