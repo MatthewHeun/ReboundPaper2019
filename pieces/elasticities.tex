@@ -36,7 +36,7 @@ the income elasticity ($\eqsM$) as follows:
 \end{equation}
 %
 where $f_{\rbempl{q}_s}$ is the share of income spent 
-on the energy service ($\rbempl{q}_s$). 
+on the energy service ($\rate{q}_s$). 
 Solving for the compensated own price elasticity ($\eqsps$) gives
 
 \begin{equation} \label{eq:eqsps}
@@ -92,36 +92,36 @@ in the rebound framework.
 A very common model of utility takes the form of a Cobb-Douglas function
 
 \begin{equation} \label{eq:CD_utility}
-  \rate{u}(\rbempl{q}_s,\rbempl{q}_o) = A \rate{q}_s^\alpha \rate{q}_o^{1 - \alpha} \; ,
+  \rate{u}(\rate{q}_s,\rate{q}_o) = A \rate{q}_s^\alpha \rate{q}_o^{1 - \alpha} \; ,
 \end{equation}
 %
-where $A$ is a proportionality constant and 
-$\alpha \in (0,1)$ gives the relative importance to utility 
+where $A$ is a proportionality constant and
+$\alpha \in (0,1)$ gives the relative importance to utility
 of consumption of the energy service ($\rate{q}_s$)
-relative to consumption of other goods ($\rate{q}_o$). 
-However, the uncompensated own-price elasticity ($\eqspsUC$) 
-in the Cobb-Douglas utility model is $-1$, 
+relative to consumption of other goods ($\rate{q}_o$).
+However, the uncompensated own-price elasticity ($\eqspsUC$)
+in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always,
 by Eq.~(\ref{eq:Re_dsub}).
 
-**** Gregor: Is the uncompensated own-price elasticity ($\eqspsUC$) $-1$ 
+**** Gregor: Is the uncompensated own-price elasticity ($\eqspsUC$) $-1$
 or is the compensated own-price elasticity ($\eqsps$) $-1$?
-Eq.~(\ref{eq:Re_dsub}) shows that direct substitution rebound is a function of the 
+Eq.~(\ref{eq:Re_dsub}) shows that direct substitution rebound is a function of the
 compensated own-price elasticity ($\eqsps$), which, if -1, gives unitary direct substitution rebound.
 ****
 
 I.e, a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
-which is inappropriate for an analytical framework that purports to 
+which is inappropriate for an analytical framework that purports to
 estimate the magnitude of rebound effects.
 **** Gregor to review and clean up. ---MKH ****
 
-An alternative to the Cobb-Douglas utility model employs 
+An alternative to the Cobb-Douglas utility model employs
 the more-general CES function~\citep{Lemoine:2020aa}:
 
 \begin{equation}
-  \rate{u}(\rbempl{q}_s,\rbempl{q}_o) = 
-      \left[ a \rbempl{q}_s^{\frac{\sigma-1}{\sigma}} 
-            + (1-a) \rbempl{q}_o^{\frac{\sigma-1}{\sigma}} \right]                
+  \rate{u}(\rate{q}_s,\rate{q}_o) =
+      \left[ a {\rate{q}_s}^{\frac{\sigma-1}{\sigma}} 
+            + (1-a) {\rate{q}_o}^{\frac{\sigma-1}{\sigma}} \right]
                                    ^{\frac{\sigma}{\sigma-1}} \; ,
 \end{equation}
 %
@@ -147,7 +147,7 @@ the elasticity of substitution ($\sigma$)
 for the CES utility model is given by
 
 \begin{equation} \label{eq:sigma}
-  \sigma  = \frac{\fqs + \eqspsUC}{\fqs - 1} \; . 
+  \sigma  = \frac{\fqs + \eqspsUC}{\fqs - 1} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:sigma}) into Eq.~(\ref{eq:eqops_general}) yields
@@ -162,7 +162,7 @@ $\eqsM = 1$,
 $\eqoM = 1$,
 Eq.~(\ref{eq:eqsps_final}), and
 Eq.~(\ref{eq:eqops}).
-To calculate values for $\eqsps$ and $\eqops$, 
+To calculate values for $\eqsps$ and $\eqops$,
 estimates of only two parameters are needed:
 %
 \begin{enumerate*}[label={(\alph*)}]

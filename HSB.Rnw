@@ -516,7 +516,7 @@ In this section, we develop a mathematical model
 for the comprehensive rebound framework.
 We assume a device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
-The final energy is available at price $p_E$ (in \$/MJ).
+The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
 The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 
@@ -1352,7 +1352,7 @@ using an early version of this framework.
 \label{sec:proof_income_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/proof_income_elasticities.tex}
+% \input{pieces/proof_income_elasticities.tex}
 
 
 
