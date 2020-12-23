@@ -1,3 +1,6 @@
+% Energy Economics Author Guide: 
+% https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
+
 \documentclass[review]{elsarticle}
 
 \usepackage{lineno}
@@ -110,6 +113,7 @@ if essential they must be defined at their first mention in the abstract itself.
 \begin{keyword}
 % Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
 % Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
+% JEL codes: https://www.aeaweb.org/jel/guide/jel.php
 Energy rebound \sep Conservation \sep Backfire \sep 
 Energy efficiency \sep Energy economics \sep Elasticity of substitution
 \end{keyword}
@@ -1325,6 +1329,14 @@ Investigation,
 Validation, 
 Roles/Writing--original draft,
 Writing--review \& editing.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Data repository}
+\label{sec:data_repository}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+All data and calculations are stored at **** Leeds data repository URL. ****.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
