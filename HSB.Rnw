@@ -108,8 +108,10 @@ if essential they must be defined at their first mention in the abstract itself.
 % https://www.aeaweb.org/jel/guide/jel.php   
 
 \begin{keyword}
-Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
-Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
+% Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+% Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
+Energy rebound \sep Conservation \sep Backfire \sep 
+Energy efficiency \sep Energy economics \sep Elasticity of substitution
 \end{keyword}
 
 \end{frontmatter}
@@ -1290,7 +1292,39 @@ Re-visit the benefits discussed in Section~\ref{sec:structure}.
 \label{sec:competing_interests}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The authors declare they have no conflicts of interest.
+Declarations of interest: none
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Author contributions}
+\label{sec:author_contributions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Matthew Kuperus Heun}: 
+Conceptualization, 
+Formal analysis, 
+Resources, 
+Software, 
+Supervision, 
+Validation,
+Visualization,
+Roles/Writing--original draft,
+Writing--review \& editing.
+
+\textbf{Gregor Semienuik}: 
+Conceptualization, 
+Formal analysis, 
+Roles/Writing--original draft,
+Writing--review \& editing.
+
+\textbf{Paul Brockway}: 
+Conceptualization, 
+Data curation, 
+Formal analysis, 
+Investigation, 
+Validation, 
+Roles/Writing--original draft,
+Writing--review \& editing.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
