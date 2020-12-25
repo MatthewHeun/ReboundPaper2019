@@ -1288,7 +1288,7 @@ Gregor wants to do some discussing.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Restate characteristics of the framework.
-Re-visit the benefits discussed in Section~\ref{sec:structure}.
+Re-visit the benefits discussed in Section~\ref{sec:aim_contribution_structure}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
