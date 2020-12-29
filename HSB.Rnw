@@ -1241,12 +1241,14 @@ are known.
 \label{sec:example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Focus on automobiles with at least two options.
-Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters.
-The different options should yield large and small rebound
-to provide insulation from reviewers' nit-picking 
-about any specific rebound numbers that we calculate.
+%Focus on automobiles with at least two options.
+%Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters.
+%The different options should yield large and small rebound
+%to provide insulation from reviewers' nit-picking 
+%about any specific rebound numbers that we calculate.
 
+%Checking refs work in this section
+\citet{Argonne_National_Laboratory:2010},
 
 **** Example table for PB. ****
 
