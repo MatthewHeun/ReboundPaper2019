@@ -1247,8 +1247,26 @@ are known.
 %to provide insulation from reviewers' nit-picking 
 %about any specific rebound numbers that we calculate.
 
-%Checking refs work in this section
+***Checking refs work in this section***
 \citet{Argonne_National_Laboratory:2010},
+\citet{BusinessWire:2015},
+\citet{Berla:2016},
+\citet{Car_Connection:2020}, 
+\citet{Car_Insurance:2019},
+\citet{Edmunds:2019_energi_fusion},
+\citet{Edmunds:2019_gasoline_fusion}, 
+\citet{Home_Depot:2020_Inc_bulb},
+\citet{Home_Depot:2020_LED_bulb},
+\citet{nordelof2014environmental},
+\citet{onat2015conventional},
+\citet{SMMT:2020},
+\citet{St_Louis_Fed:2019},
+\citet{US_BEA:2020},
+\citet{US_DoE:2012},
+\citet{US_DoT:2018},
+\citet{US_EIA:2020_gasoline},
+
+
 
 **** Example table for PB. ****
 
