@@ -526,7 +526,7 @@ procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
 $\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
-$\raprod{C}_{\OMd} > \rbempl{C}_{\OMd}$.
+$\raprod{C}_{\md} > \rbempl{C}_{\md}$.
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
@@ -705,7 +705,7 @@ because actual and expected energy savings are identical.
 On the other hand, energy rebound may be caused by indirect emplacement effects, which
 account for the life cycle of the energy conversion device, including 
 energy embodied by manufacturing (subscript $emb$) and
-maintenance and disposal (subscript $\OMd$).
+maintenance and disposal (subscript $\md$).
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
@@ -756,25 +756,25 @@ See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
-energy demanded by maintenance and disposal~($\OMd$) expenditures.
+energy demanded by maintenance and disposal~($\md$) expenditures.
 Maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
-to form cost rates such that $\rbempl{C}_{\OMd} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
+to form cost rates such that $\rbempl{C}_{\md} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
 and
-$\raempl{C}_{\OMd} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
+$\raempl{C}_{\md} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
 
-For simplicity, we assume that $\OMd$ expenditures indicate energy consumption
+For simplicity, we assume that $\md$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
-Therefore, the change in energy consumption rate caused by a change in $\OMd$ expenditures
-is given by $\Delta \raempl{C}_{\OMd} I_E$.
+Therefore, the change in energy consumption rate caused by a change in $\md$ expenditures
+is given by $\Delta \raempl{C}_{\md} I_E$.
 Rebound from maintenance and disposal
 is given by 
 %
 \begin{equation} \label{eq:Re_OMd}
-  Re_{\OMd} = \ReOMdeqn{} \; .
+  Re_{\md} = \ReOMdeqn{} \; .
 \end{equation}
 %
 See Appendix~\ref{sec:Re_OMd} for details.
@@ -1066,7 +1066,7 @@ In the midst of the \inceffect{} analysis, a capital expenses rebound term appea
 \end{equation}
 
 Positive rebound from capital expenditures~($Re_{cap}$), 
-maintenance and disposal~($Re_{\OMd}$),
+maintenance and disposal~($Re_{\md}$),
 direct substitution~($Re_{dsub}$), 
 indirect substitution~($Re_{isub}$), and 
 direct income~($Re_{dinc}$)
@@ -1223,7 +1223,7 @@ we find
 Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values
 [$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
 $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
-$Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
+$Re_{\md}$ (Eq.~(\ref{eq:Re_OMd})),
 $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
 $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]

@@ -62,14 +62,14 @@ Take differences to obtain the change in energy consumption, $\Delta \ralc{E} \e
   \Delta \ralc{E} = \cancelto{0}{\Delta \ralc{E}_s}
                     % + \Delta \ralc{E}_{emb}
                     + \ralc{E}_{emb} - \rbdev{E}_{emb}
-                    + (\Delta \ralc{C}_{\OMd} + \cancelto{0}{\Delta \ralc{C}_o}) I_E
+                    + (\Delta \ralc{C}_{\md} + \cancelto{0}{\Delta \ralc{C}_o}) I_E
 \end{equation}
 %
 Thus, 
 %
 \begin{equation}
-  % \Delta \ralc{E} = \Delta \ralc{E}_{emb} + \Delta \ralc{C}_{\OMd} I_E \; .
-  \Delta \ralc{E} = \ralc{E}_{emb} - \rbdev{E}_{emb} + \Delta \ralc{C}_{\OMd} I_E \; .
+  % \Delta \ralc{E} = \Delta \ralc{E}_{emb} + \Delta \ralc{C}_{\md} I_E \; .
+  \Delta \ralc{E} = \ralc{E}_{emb} - \rbdev{E}_{emb} + \Delta \ralc{C}_{\md} I_E \; .
 \end{equation}
 %
 All terms are energy takeback terms.
@@ -77,19 +77,19 @@ Divide by $\Sdot$
 to create rebound terms.
 %
 \begin{equation}
-  % \frac{\Delta \ralc{E}}{\Sdot} = \frac{\Delta \ralc{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
-  \frac{\Delta \ralc{E}}{\Sdot} = \frac{\ralc{E}_{emb} - \rbdev{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}
+  % \frac{\Delta \ralc{E}}{\Sdot} = \frac{\Delta \ralc{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\md} I_E}{\Sdot}
+  \frac{\Delta \ralc{E}}{\Sdot} = \frac{\ralc{E}_{emb} - \rbdev{E}_{emb}}{\Sdot} + \frac{\Delta \ralc{C}_{\md} I_E}{\Sdot}
 \end{equation}
 %
 Define
 $Re_{\life} \equiv \frac{\Delta \ralc{E}}{\Sdot}$, 
 % $Re_{emb} \equiv \frac{\Delta \ralc{E}_{emb}}{\Sdot}$, and
 $Re_{emb} \equiv \frac{\ralc{E}_{emb} - \rbdev{E}_{emb}}{\Sdot}$, and
-$Re_{\OMd} \equiv \frac{\Delta \ralc{C}_{\OMd} I_E}{\Sdot}$,
+$Re_{\md} \equiv \frac{\Delta \ralc{C}_{\md} I_E}{\Sdot}$,
 such that
 %
 \begin{equation} \label{eq:Re_lc_def}
-  Re_{\life} = Re_{emb} + Re_{\OMd} \; .
+  Re_{\life} = Re_{emb} + Re_{\md} \; .
 \end{equation}
 %
 }
@@ -100,8 +100,8 @@ such that
 Use the monetary constraint ($\rblc{M} = \ralc{M}$) to obtain
 %
 \begin{align} \label{M_dot_bal_lc}
-  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\OMd} + \cancel{\rblc{C}_o} + \rblc{N} \nonumber \\
-                          &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\OMd} + \cancel{\ralc{C}_o}  + \ralc{N} \; .
+  \cancel{p_E \rblc{E}_s} &+ \rblc{C}_{cap} + \rblc{C}_{\md} + \cancel{\rblc{C}_o} + \rblc{N} \nonumber \\
+                          &= \cancel{p_E \ralc{E}_s} + \ralc{C}_{cap} + \ralc{C}_{\md} + \cancel{\ralc{C}_o}  + \ralc{N} \; .
 \end{align}
 %
 For the life cycle effect, 
@@ -112,13 +112,13 @@ Changes in the rate of other purchases are accounted in substitution and income 
 Solving for $\Delta \ralc{N} \equiv \ralc{N} - \rblc{N}$ gives
 %
 \begin{equation}
-  \Delta \ralc{N} = - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
+  \Delta \ralc{N} = - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\md} \; .
 \end{equation}
 %
 Using $\ralc{N} = \rblc{N} + \Delta \ralc{N}$, we find that
 %
 \begin{equation}
-  \ralc{N} = \radev{G} - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\OMd} \; .
+  \ralc{N} = \radev{G} - \Delta \ralc{C}_{cap} - \Delta \ralc{C}_{\md} \; .
 \end{equation}
 %
 }
