@@ -774,7 +774,7 @@ is given by $\Delta \raempl{C}_{\md} I_E$.
 Rebound from maintenance and disposal
 is given by 
 
-\begin{equation} \label{eq:Re_OMd}
+\begin{equation} \label{eq:Re_md}
   Re_{\md} = \ReOMdeqn{} \; .
 \end{equation}
 %
@@ -1203,7 +1203,7 @@ we find
 Eq.~(\ref{eq:Re_tot}) shows that determining six rebound values
 [$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
 $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
-$Re_{\md}$ (Eq.~(\ref{eq:Re_OMd})),
+$Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
 $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
 $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), and
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc}))]
