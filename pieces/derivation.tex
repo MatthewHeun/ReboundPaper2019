@@ -213,17 +213,17 @@ In the aggregate, staggered replacements
 work out to about the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
-($\bempl{t}$ and $\aempl{t}$, respectively)
+($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
 to obtain embodied energy rates, such that
-$\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}$
+$\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}_{\life}$
 and 
-$\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}$.
+$\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}_{\life}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$.
 After substitution and algebraic rearrangement,
 the change in embodied energy rate due to the EEU can be expressed as
 $\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
-  \frac{\bempl{t}}{\aempl{t}} - 1 \right) \rbempl{E}_{emb}$, 
+  \frac{\bempl{t}_{\life}}{\aempl{t}_{\life}} - 1 \right) \rbempl{E}_{emb}$, 
 a term that represents energy savings taken back due to embodied energy effects.
 Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy rebound as
 %
@@ -233,13 +233,13 @@ Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy reboun
 
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
-$(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}/\aempl{t}) - 1$.
+$(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
 Typically, but not always,
 rising energy efficiency is associated with increased device complexity
 and more embodied energy,
 such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
-($\aempl{t} > \bempl{t}$),
+($\aempl{t}_{\life} > \bempl{t}_{\life}$),
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device.
 
@@ -256,10 +256,11 @@ Maintenance expenditures are typically modeled as a per-year expense,
 a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
-of the original and upgraded devices ($\bempl{t}$ and $\aempl{t}$, respectively)
-to form cost rates such that $\rbempl{C}_{\OMd} = \rbempl{C}_{\OM} + \bempl{C}_d/\bempl{t}$
+of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
+to form cost rates such that 
+$\rbempl{C}_{\OMd} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
-$\raempl{C}_{\OMd} = \raempl{C}_{\OM} + \aempl{C}_d/\aempl{t}$.
+$\raempl{C}_{\OMd} = \raempl{C}_m + \aempl{C}_d/\aempl{t}_{\life}$.
 
 We assume, for simplicity, that $\OMd$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
