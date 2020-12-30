@@ -1241,35 +1241,59 @@ are known.
 \label{sec:example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%Focus on automobiles with at least two options.
-%Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters.
-%The different options should yield large and small rebound
-%to provide insulation from reviewers' nit-picking 
-%about any specific rebound numbers that we calculate.
+% ***Matt: I think we can delete this text below, we dont need it now. if you agree, just delete it. Paul****
 
-***Checking refs work in this section***
-\citet{Argonne_National_Laboratory:2010},
-\citet{Borenstein:2015aa},
-\citet{BusinessWire:2015},
-\citet{Berla:2016},
-\citet{Car_Connection:2020}, 
-\citet{Car_Insurance:2019},
-\citet{Edmunds:2019_energi_fusion},
-\citet{Edmunds:2019_gasoline_fusion}, 
-\citet{Home_Depot:2020_Inc_bulb},
-\citet{Home_Depot:2020_LED_bulb},
-\citet{nordelof2014environmental},
-\citet{onat2015conventional},
-\citet{SMMT:2020},
-\citet{St_Louis_Fed:2019},
-\citet{US_BEA:2020},
-\citet{US_DoE:2012},
-\citet{US_DoT:2018},
-\citet{US_EIA:2020_gasoline},
+%Focus on automobiles with at least two options.Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters. The different options should yield large and small rebound to provide insulation from reviewers' nit-picking about any specific rebound numbers that we calculate.
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Calculation Overview}
+\label{sec:calc_overview}
+%++++++++++++++++++++++++++++++
 
-**** Example table for PB. ****
+% Matt: the text below overlaps quite a lot with the end of the text in the previous section. your text above suggests that we will produce the values in your 7 rebound equations. whereas my list of 7 equations is slightly different - i dont include Re_cap but instead want Re_prod values, i.e. i want to produce values for each component of rebound. would you be offended if we amended (or even deleted) your text in the end of the section above?***PEB
+
+We select two case studies (case study 1 – Car, case study 2 – light bulb) 
+for numerical analysis, using the framework developed in Section 2. 
+We require to collate all the required parameter values 
+for input into the equations for 
+the following seven rebound components:
+
+$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+$Re_{\OMd}$ (Eq.~(\ref{eq:Re_OMd})),
+$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), 
+$Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
+$Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
+
+The total rebound sum is given by the sum of these individual components,
+which can also be checked against the collated equation 
+($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
+ 
+
+%++++++++++++++++++++++++++++++
+\subsection{Case 1 – Car:  rationale and input data}
+\label{sec:Car_input_data}
+%++++++++++++++++++++++++++++++
+
+For the first example, 
+we select the option of buying a more fuel efficient car (Ford Fusion Energi), 
+versus the incumbent (Ford Fusion SE). 
+Both cars are matched as closely as possible, 
+except for the inclusion of an electric battery 
+in the hybrid Energi car.  
+This case study presents an example whereby 
+the initial capital investment cost for the more energy efficient device is higher,
+but with the long-term benefit of decreased running costs. 
+
+%Matt: I want to make a sub-sub section (i.e.3.2.1.) but didnt know how to do it
+%++++++++++++++++++++++++++++++
+3.2.1 Input data
+%++++++++++++++++++++++++++++++
+
+We require four sets of data. 
+First, the basic car parameters, which are summarised below:
 
 Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency upgrade (EEU).
 
@@ -1280,14 +1304,87 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
 \begin{tabular}{ r c c l }
   \toprule
                       & Ford Fusion & Ford Fusion & \\ 
-                      & (gasoline) & (hybrid EV) & Notes \\
+                      & (gasoline) & (hybrid EV) & Data sources \\
   \midrule
-  $\bempl{\eta}$, $\aprod{\eta}$ [mpg] & 25 & 42 & Notes here \\  
+  $\bempl{\eta}$, $\aprod{\eta}$ [fuel economy,mpg] 
+  & 25 
+  & 42 
+  & Combined cycle mpg value taken from 
+  \citet{Car_Connection:2020}, 
+  for model Titanium FWD  model, 
+  with Intercooled Turbo Premium Unleaded I-4, 2.0 L engine.
+  Combined cycle mpg value taken from 
+  \citet{Car_Connection:2020}, 
+  for model Titanium FWD  model, 
+  with Gas/Electric I-4, 2.0 L engine.
+ \\  
+   Capital expenditure rate [\$/year] 
+   & \$4,031 
+   & \$3,932 
+   & Seven year annual, 
+   averaged capital costs = 
+   Purchase + finance costs – resale value 
+   (Purchase – depreciation).
+   Fusion gasoline car costs from 
+   \citet{Edmunds:2019_gasoline_fusion} 
+   Fusion Energi car costs from 
+   \citet{Edmunds:2019_energi_fusion} 
+ \\
+   Car Ownership length from new [years] 
+   & 7 
+   & 7 
+   & US car ownership (from new) length taken from
+   \citet{BusinessWire:2015}, 
+   and has risen from 52 months (2005) to 79 months (2015),
+   so assumed as 84 months in 2019 (7 years) for our example.  \\
+   Car lifetime  [years] 
+   & 14 
+   & 14 
+   & Lifetime taken as 14 years, 
+   based on 13-17 years for US cars from 
+   \citet{Berla:2016} and 
+   14 years for UK cars from \citet{SMMT:2020}. 
+ \\
+   Life cycle analysis (LCA) embodied energy [MJ] 
+   & 34,000 
+   & 40,000 
+   & 34,000MJ for gasoline car taken from
+   \citet{Argonne_National_Laboratory:2010} 
+   We assume an additional 6,000MJ added for 
+   Hybrid Electric Vehicle (HEV) battery, 
+   as HEV typically 10-25 \% of 
+   total LCA energy of vehicle manufacture, 
+   with additionally the battery lifetime assumed 
+   to be the same as car lifetime, based on
+   \citet{nordelof2014environmental}, and
+   \citet{onat2015conventional}
+ \\
+   Maintenance and disposal costs [\$/year] 
+   & \$2,861 
+   & \$2,775 
+   & Seven year annual, averaged maintenance costs 
+   = sum of insurance, maintenance, repairs, taxes, and fees
+   (Excluding financing, depreciation, fuel).
+   Fusion gasoline car maintenance costs from 
+   \citet{Edmunds:2019_gasoline_fusion}
+   Fusion Energi car maintenance costs from 
+   \citet{Edmunds:2019_energi_fusion}
+ \\
    next row & cell7 & cell8 & cell9 \\
+ 
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
+
+Second, we require several general parameters, 
+mainly relating to the US economy and personal finances 
+of the average US citizen. 
+The parameters and their values used in the study 
+are given below in
+% Matt: can you make me a 3 column table with one blank/dummy row? I tried to take the 4 column one and cut it down, but it didnt work / i didnt get it right. thanks. PEB
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
