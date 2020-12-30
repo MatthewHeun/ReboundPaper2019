@@ -1383,9 +1383,21 @@ Second, we require several general parameters,
 mainly relating to the US economy and personal finances 
 of the average US citizen. 
 The parameters and their values used in the study 
-are given below in
-% Matt: can you make me a 3 column table with one blank/dummy row? I tried to take the 4 column one and cut it down, but it didnt work / i didnt get it right. thanks. PEB
+are given below in Table~\ref{tab:economic_parameters}.
 
+\begin{table}
+\begin{center}
+\caption{Economic parameters.}
+\label{tab:economic_parameters}
+\begin{tabular}{ r c c }
+  \toprule
+  Title 1 & Title 2 & Title 3 \\ 
+  \midrule
+  Content 1 & Content 2 & Content 3 \\ 
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
 
 
 
