@@ -1241,11 +1241,6 @@ are known.
 \label{sec:example}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% ***Matt: I think we can delete this text below, we dont need it now. if you agree, just delete it. Paul****
-
-%Focus on automobiles with at least two options.Reference \citet{Borenstein:2015aa} for some energy efficiency and cost parameters. The different options should yield large and small rebound to provide insulation from reviewers' nit-picking about any specific rebound numbers that we calculate.
-
-
 %++++++++++++++++++++++++++++++
 \subsection{Calculation Overview}
 \label{sec:calc_overview}
@@ -1253,23 +1248,23 @@ are known.
 
 % Matt: the text below overlaps quite a lot with the end of the text in the previous section. your text above suggests that we will produce the values in your 7 rebound equations. whereas my list of 7 equations is slightly different - i dont include Re_cap but instead want Re_prod values, i.e. i want to produce values for each component of rebound. would you be offended if we amended (or even deleted) your text in the end of the section above?***PEB
 
-We select two case studies (case study 1 – Car, case study 2 – light bulb) 
-for numerical analysis, using the framework developed in Section 2. 
-We require to collate all the required parameter values 
-for input into the equations for 
-the following seven rebound components:
-
-$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
-$Re_{\md}$ (Eq.~(\ref{eq:Re_OMd})),
-$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
-$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), 
-$Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
-$Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
-
-The total rebound sum is given by the sum of these individual components,
-which can also be checked against the collated equation 
-($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
+We select two case studies 
+for numerical analysis (automobile and electric lamp efficiency upgrades),
+using the framework developed in Section~\ref{sec:framework}. 
+% We require to collate all the required parameter values 
+% for input into the equations for 
+% the following seven rebound components:
+% 
+% $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+% $Re_{\md}$ (Eq.~(\ref{eq:Re_OMd})),
+% $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+% $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+% $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), 
+% $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
+% $Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
+% The total rebound sum is given by the sum of these individual components,
+% which can also be checked against the collated equation 
+% ($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
  
 
 %++++++++++++++++++++++++++++++
