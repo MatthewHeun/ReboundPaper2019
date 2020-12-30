@@ -1221,19 +1221,19 @@ we find
   Re_{sum} = \; \Retoteqn{} \; .
 \end{align}
 
-Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values
-[$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
-$Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
-$Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
-$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
-$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and 
-$Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc}))]
-is sufficient to calculate the rebound sum, 
-provided that 
-the productivity factor~($k$) and
-the product of energy price and energy intensity ($p_E I_E$)
-are known.
+% Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values
+% [$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
+% $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
+% $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
+% $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+% $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+% $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and 
+% $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc}))]
+% is sufficient to calculate the rebound sum, 
+% provided that 
+% the productivity factor~($k$) and
+% the product of energy price and energy intensity ($p_E I_E$)
+% are known.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1249,26 +1249,26 @@ are known.
 % Matt: the text below overlaps quite a lot with the end of the text in the previous section. your text above suggests that we will produce the values in your 7 rebound equations. whereas my list of 7 equations is slightly different - i dont include Re_cap but instead want Re_prod values, i.e. i want to produce values for each component of rebound. would you be offended if we amended (or even deleted) your text in the end of the section above?***PEB
 
 We select two case studies 
-for numerical analysis (automobile and electric lamp efficiency upgrades),
-using the framework developed in Section~\ref{sec:framework}. 
-% We require to collate all the required parameter values 
-% for input into the equations for 
-% the following seven rebound components:
-% 
-% $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
-% $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
-% $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-% $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
-% $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), 
-% $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
-% $Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
-% The total rebound sum is given by the sum of these individual components,
-% which can also be checked against the collated equation 
-% ($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
+(energy efficiency upgrades for an automobile and an electric lamp)
+and apply the framework developed in Section~\ref{sec:framework}. 
+To perform rebound analyses for the two case studies, 
+we collect the required parameter values
+for the equations for
+seven rebound components:
+$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})),
+$Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
+$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})),
+$Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
+$Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
+$Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
+The total rebound sum is given by the sum of the above components,
+which can also be checked against the collated equation
+($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
  
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 1 – Car:  rationale and input data}
+\subsection{Case 1 – Automobile: rationale and input data}
 \label{sec:Car_input_data}
 %++++++++++++++++++++++++++++++
 
@@ -1283,15 +1283,23 @@ the initial capital investment cost for the more energy efficient device is high
 but with the long-term benefit of decreased running costs. 
 
 %Matt: I want to make a sub-sub section (i.e.3.2.1.) but didnt know how to do it
-%++++++++++++++++++++++++++++++
-3.2.1 Input data
-%++++++++++++++++++++++++++++++
+% %++++++++++++++++++++++++++++++
+% 3.2.1 Input data
+% %++++++++++++++++++++++++++++++
+%------------------------------
+\subsubsection{Input data} 
+\label{sec:Car_input_data}
+%------------------------------
+
+
 
 We require four sets of data. 
 First, the basic car parameters, which are summarised below:
 
 Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency upgrade (EEU).
 
+
+\begin{landscape}
 \begin{table}
 \begin{center}
 \caption{Car parameters}
@@ -1371,6 +1379,7 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
 \end{tabular}
 \end{center}
 \end{table}
+\end{landscape}
 
 Second, we require several general parameters, 
 mainly relating to the US economy and personal finances 
