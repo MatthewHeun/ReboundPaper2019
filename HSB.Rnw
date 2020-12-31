@@ -508,7 +508,7 @@ The comprehensive rebound framework provides the following benefits:
 
 The remainder of this paper is structured as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
-Section~\ref{sec:example} provides an example.
+Section~\ref{sec:examples} provides two calculation examples.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
@@ -1237,16 +1237,14 @@ we find
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Calculations: an example (PB, 2000 words)}
-\label{sec:example}
+\section{Calculations: two examples (PB, 2000 words)}
+\label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %++++++++++++++++++++++++++++++
 \subsection{Calculation Overview}
 \label{sec:calc_overview}
 %++++++++++++++++++++++++++++++
-
-% Matt: the text below overlaps quite a lot with the end of the text in the previous section. your text above suggests that we will produce the values in your 7 rebound equations. whereas my list of 7 equations is slightly different - i dont include Re_cap but instead want Re_prod values, i.e. i want to produce values for each component of rebound. would you be offended if we amended (or even deleted) your text in the end of the section above?***PEB
 
 We select two case studies 
 (energy efficiency upgrades for an automobile and an electric lamp)
@@ -1268,8 +1266,8 @@ which can also be checked against the collated equation
  
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 1 – Automobile: rationale and input data}
-\label{sec:Car_input_data}
+\subsection{Case 1 – Automobile}
+\label{sec:Car_example}
 %++++++++++++++++++++++++++++++
 
 For the first example, 
@@ -1282,10 +1280,7 @@ This case study presents an example whereby
 the initial capital investment cost for the more energy efficient device is higher,
 but with the long-term benefit of decreased running costs. 
 
-%Matt: I want to make a sub-sub section (i.e.3.2.1.) but didnt know how to do it
-% %++++++++++++++++++++++++++++++
-% 3.2.1 Input data
-% %++++++++++++++++++++++++++++++
+
 %------------------------------
 \subsubsection{Input data} 
 \label{sec:Car_input_data}
@@ -1302,14 +1297,14 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Car parameters}
+\caption{Case study 1: Car parameters}
 \label{tab:car_parameters}
 \begin{tabular}{ r c c l }
   \toprule
                       & Ford Fusion & Ford Fusion & \\ 
                       & (gasoline) & (hybrid EV) & Data sources \\
   \midrule
-  $\bempl{\eta}$, $\aprod{\eta}$ [mpg] 
+  Car fuel economy $\bempl{\eta}$, $\aprod{\eta}$ [mpg] 
   & 25 
   & 42 
   & Combined cycle mpg value taken from 
@@ -1321,9 +1316,9 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
   for model Titanium FWD  model, 
   with Gas/Electric I-4, 2.0 L engine.
  \\  
-   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] 
-   & \$4,031 
-   & \$3,932 
+   Capital expenditure rate $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] 
+   & 4,031 
+   & 3,932 
    & Seven year annual, 
    averaged capital costs = 
    Purchase + finance costs – resale value 
@@ -1333,14 +1328,14 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
    Fusion Energi car costs from 
    \citet{Edmunds:2019_energi_fusion} 
  \\
-   $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years] 
+   Car ownership length (from new) $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years] 
    & 7 
    & 7 
    & US car ownership (from new) length taken from
    \citet{BusinessWire:2015}, 
    and has risen from 52 months (2005) to 79 months (2015),
    so assumed as 84 months in 2019 (7 years) for our example.  \\
-   $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
+   Car lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
    & 14 
    & 14 
    & Lifetime taken as 14 years, 
@@ -1348,7 +1343,7 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
    \citet{Berla:2016} and 
    14 years for UK cars from \citet{SMMT:2020}. 
  \\
-   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ] 
+   Car embodied energy $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ] 
    & 34,000 
    & 40,000 
    & 34,000MJ for gasoline car taken from
@@ -1362,9 +1357,9 @@ Table~\ref{tab:car_parameters} shows parameters for the car energy efficiency up
    \citet{nordelof2014environmental}, and
    \citet{onat2015conventional}
  \\
-   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year] 
-   & \$2,861 
-   & \$2,775 
+   Car maintenance and disposal costs $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year] 
+   & 2,861 
+   & 2,775 
    & Seven year annual, averaged maintenance costs 
    = sum of insurance, maintenance, repairs, taxes, and fees
    (Excluding financing, depreciation, fuel).
@@ -1383,23 +1378,430 @@ Second, we require several general parameters,
 mainly relating to the US economy and personal finances 
 of the average US citizen. 
 The parameters and their values used in the study 
-are given below in Table~\ref{tab:economic_parameters}.
+are given below in Table~\ref{tab:car_economic_parameters}.
 
 \begin{table}
 \begin{center}
-\caption{Economic parameters.}
-\label{tab:economic_parameters}
+\caption{Case study 1: Economic parameters}
+\label{tab:car_economic_parameters}
 \begin{tabular}{ r c c }
   \toprule
-  Title 1 & Title 2 & Title 3 \\ 
+  Parameter & Value & Data sources \\ 
   \midrule
-  Content 1 & Content 2 & Content 3 \\ 
+  Distance driven prior to upgrade [miles/year] 
+  & 14,425 
+  & Average US vehicle miles/year, taken from
+  \citet{Car_Insurance:2019}. 
+  This is slightly higher than the average driver miles/year 
+  = 13,476 miles/year from 
+  \citet{US_DoT:2018}.
+  \\ 
+  Real median personal income US, in 2018 [\$/year]
+  & 33,706 
+  & Taken from \citet{St_Louis_Fed:2019}.
+  \\ 
+  US Disposable income / real income (minus current taxes)
+  & 0.88 
+  & Taken from US Bureau of Economic Analysis (BEA) 
+  National and Products Accounts (NIPA) Table 2.1. 
+  Personal Income and Its Disposition,  
+  \citet{US_BEA:2020},
+  \\ 
+  Share of savings from disposable income
+  & 0.079 
+  & Taken from US Bureau of Economic Analysis (BEA) 
+  National and Products Accounts (NIPA) Table 2.1. 
+  Personal Income and Its Disposition,  
+  \citet{US_BEA:2020},
+  \\ 
+  Cost of gasoline [\$/Gallon]
+  & 2.21
+  & Taken from US Energy Information Agency (EIA) data
+  available at \citet{US_EIA:2020_gasoline},
+  \\ 
+  Fraction of disposable income on new energy service  
+  & 0.062 
+  & Calculation = \$1,275 (spend on energy service 
+  = 14,425 miles / 42miles/gallon x \$2.11/gallon) 
+  / (\$19,234 (spend on other goods) + 
+  \$1,275  (spend on energy service)) 
+  = 0.062
+  \\ 
+  Productivity multiplier  
+  & 1.0
+  & Assumed value 
+  \\  
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:car_elasticity_parameters}.
+%Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
+\begin{table}
+\begin{center}
+\caption{Case study 1: Elasticity parameters}
+\label{tab:car_elasticity_parameters}
+\begin{tabular}{ r c c l}
+  \toprule
+  Parameter & Symbol in paper & Value & Data sources\\ 
+  \midrule
+  Marshallian (uncompensated) price elasticity of demand 
+  & Symbol 
+  & -0.1 
+  & Price elasticity of demand taken from literature
+  \citet{Borenstein:2015aa} and 
+ % ***MORE_REFS_FROM_GREGOR***
+  \\ 
+  Price elasticity of demand for car use
+  & symbol 
+  & -0.077 
+  & Calculated via the Slutsky Equation C.7  
+  \\ 
+  Cross price elasticity of demand for other goods
+  & symbol 
+  & 0.002 
+  & Calculated via Equation C.13  
+  \\ 
+  Income elasticity of demand for car use
+  & symbol 
+  & 1.0 
+  & assumed value
+  \\ 
+  Income elasticity of demand for other goods
+  & symbol 
+  & 1.0 
+  & assumed value
+  \\ 
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 
 
+Fourth, armed with the parameter values from 
+Table~\ref{tab:car_parameters}-
+~\ref{tab:car_elasticity_parameters}, 
+and using the equations given in 
+Appendix~\ref{sec:derivation}, 
+we can now produce the values of other parameters given in Table B9, 
+% Matt i coudlnt find the dynamic link to Table B9
+as shown below in 
+%Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+
+
+
+%------------------------------
+\subsubsection{Results} 
+\label{sec:Car_results}
+%------------------------------
+
+The base results for the fuel efficient car yields 
+an estimate of 24\% total economy-wide rebound, 
+from the sum of components below:
+
+\begin{table}
+\begin{center}
+\caption{Case study 1: rebound results}
+\label{tab:car results}
+\begin{tabular}{ r c c }
+  \toprule
+  Rebound effect 
+  & symbol & Value(\%) \\ 
+  \midrule
+  Embodied energy effect & $Re_{emb}$ & 1.4\% \\ 
+  Maintenance and disposal effect & $Re_{md}$ & -1.0\% \\ 
+  Substitution effect - direct & $Re_{dsub}$ & 2.9\% \\ 
+  Substitution effect - indirect & $Re_{isub}$ & -0.3\% \\ 
+  Income effect – direct & $Re_{dinc}$ & 5.3\% \\ 
+  Income effect – indirect & $Re_{iinc}$ & 7.8\% \\ 
+  Macroeconomic – productivity effect & $Re_{prod}$ & 8.2\% \\   Total & $Re_{sum}$ & 24.4\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Let’s take each of these effects in turn. 
+First, is the embodied energy effect, which as positive (+1.4\%), 
+due to the higher embodied energy (+6,000MJ) 
+stemming from the electric battery in the hybrid EV car.
+Second, the maintenance and disposal effect 
+is low and negative (-1.0\%) 
+because of the slightly lower maintenance and disposal costs
+in the hybrid EV car. 
+Following these two effects are two substitution effects 
+at the original income level. 
+The direct substitution effect yields +2.9\% value,
+which is expected, as the new fuel efficiency (42mpg) 
+is much higher than the baseline car (25mpg), 
+leading to a preference to switch more spending to more driving. 
+In other words, with no other changes, 
+the more fuel efficient car increases the amount of miles driven by 2.9\%. 
+Conversely, the indirect substitution effect yields a value of -0.3\%, 
+being slightly negative as the increased fuel use 
+and miles driven in the direct substitution effect 
+means that less is spent on other goods.  
+
+Next, is the ‘income’ effect, 
+where the car user sees an increase in their ‘effective’ income 
+due to a net saving in outgoings associated with the car purchase and use, 
+this effect also splits into two. 
+One is the direct income effect (+5.3\%), 
+which is positive and non-zero as the car user allocates some
+of the additional income to driving further still. 
+The indirect income effect is also positive (+7.8\%), 
+due to higher spend on other sectors. 
+So, the additional ‘effective’ income 
+%(Ndot_hat = 
+(+\$712/year) 
+translates into direct and indirect income effects at the micro-level. 
+However, it also translates into a macroeconomic rebound effect (+8.2\%), 
+due to the larger economy that now exists, 
+so the additional money spent in the economy 
+has a positive rebound multiplier effect.
+
+
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Case 2 – Light Bulb}
+\label{sec:bulb_example}
+%++++++++++++++++++++++++++++++
+
+For our second example, 
+we select the option of buying a light emitting diode (LED) light bulb, 
+versus a baseline incandescent light bulb. 
+Both bulbs are matched as closely as possible 
+in terms of energy service delivery (lumens), 
+the key difference is in the energy required to provide that energy service. 
+The case study presents an example whereby the investment cost
+for the more energy efficient device is lower, 
+with the additional benefit of decreased running costs. 
+
+
+%------------------------------
+\subsubsection{Input data} 
+\label{sec:bulb_input_data}
+%------------------------------
+
+Again, we require four sets of data. 
+First, the basic bulb parameters, which are summarised below:  
+Table~\ref{tab:bulb_parameters} shows parameters for the light bulb efficiency upgrade (EEU).
+
+
+\begin{landscape}
+\begin{table}
+\begin{center}
+\caption{Case study 2: Light bulb parameters}
+\label{tab:bulb_parameters}
+\begin{tabular}{ r c c l }
+  \toprule
+                      & Incandescent bulb & LED bulb & Data sources\\ 
+  \midrule
+  bulb efficacy $\bempl{\eta}$, $\aprod{\eta}$ [lm/W] 
+  & 8.83 
+  & 81.8 
+  & Incandescent bulb calculation = 530 lumen output / 60 Watt energy input. LED bulb calculation = 450 lumen output / 5.5 Watt energy input.
+ \\  
+  Capital expenditure rate 
+  $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] 
+   & 1.044 
+   & 0.121
+   & Purchase costs: \$1.88 for incandescent bulb from \citet{Home_Depot:2020_Inc_bulb} and \$1.21 for LED bulb   \citet{Home_Depot:2020_LED_bulb},
+ \\
+   Ownership length $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years] 
+   & 1.8 
+   & 10 
+   & assumed to be same as bulb lifetime.  
+ \\
+   Bulb lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
+   & 1.8 
+   & 10 
+   & based on assumed 3 hours/day 
+   from \citet{Home_Depot:2020_Inc_bulb} 
+   and  \citet{Home_Depot:2020_LED_bulb}.
+ \\
+   Life cycle analysis (LCA) embodied energy 
+   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ] 
+   & 2.21 
+   & 6.50 
+   & Base document is Table 4.5 Manufacturing Energy Primary
+   energy (MJ/20 Million lumen hours), 
+   US DoE Life-cycle assessment of energy and environmental
+   impacts of LED lighting products, available at 
+   \citet{US_DoE:2012},
+   Incandescent bulb calculation: Table 4.5 LCA energy 
+   = 42.2 MJ/20 Million lumen-hours. 
+   Incandescent bulb lifetime output 
+   = 530lumens x 3hours/day x 365 days x 1.8 (years) 
+   = 1,044,630lumen-hrs. 
+   Thus LCA energy / bulb =  42.2 x 1.0446/20 = 2.21MJ
+   LED bulb calculation: Table 4.5 gives LCA energy 
+   = 132 MJ/20 Million lumen-hours for pack of 5 LED bulbs.
+   LED bulb lifetime output 
+   = 450lumens x 3hours/day x 365 days x 10 (years) 
+   = 4,926,405 lumen-hrs. 
+   Thus LCA energy / bulb =  132/5 x 4.9264/20 = 6.5MJ
+ \\
+   Maintenance and disposal costs $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year] 
+   & 0.001 
+   & 0.001 
+   & taken as \$0.001 to avoid 0/0 calculation error
+ \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+\end{landscape}
+
+Second, we require several general parameters, 
+mainly relating to the US economy and 
+personal finances of the average US citizen. 
+The parameters and their values used in the study 
+are given below in Table~\ref{tab:bulb_economic_parameters}.
+
+\begin{table}
+\begin{center}
+\caption{Case study 2: Economic parameters}
+\label{tab:bulb_economic_parameters}
+\begin{tabular}{ r c c }
+  \toprule
+  Parameter & Value & Data sources \\ 
+  \midrule
+  Lumens consumed prior to upgrade [lm/year] 
+  & 580,350  
+  & Calculation = 530lumens x 3 hrs/day x 365 days
+  \\ 
+  Real median personal income US, in 2018 [\$/year]
+  & 33,706 
+  & Taken from \citet{St_Louis_Fed:2019}.
+  \\ 
+  US Disposable income / real income (minus current taxes)
+  & 0.88 
+  & Taken from US Bureau of Economic Analysis (BEA) 
+  National and Products Accounts (NIPA) Table 2.1. 
+  Personal Income and Its Disposition,  
+  \citet{US_BEA:2020},
+  \\ 
+  Share of savings from disposable income
+  & 0.079 
+  & Taken from US Bureau of Economic Analysis (BEA) 
+  National and Products Accounts (NIPA) Table 2.1. 
+  Personal Income and Its Disposition,  
+  \citet{US_BEA:2020},
+  \\ 
+  Cost of electricity [\$/MJ]
+  & 0.0227
+  & Price of electricity for US households, 
+  taken as US average in 2020 =  \$0.1355/kWh 
+  from \citet{US_EIA:2020_electricity},
+  Calculation = \$0.1355 per kWh / 3.6MJ per kWh 
+  = \$0.0227/MJ
+  \\ 
+  Fraction of disposable income on new energy service  
+  & 0.00032 
+  & Calculation = \$9 (spend on energy service 
+  = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) 
+  x (\$0.1355/kWh /MJ)) / 
+  (\$27,391 (spend on other goods) 
+  + \$9  (spend on energy service)) 
+  = 0.00032
+  \\ 
+  Productivity multiplier  
+  & 1.0
+  & Assumed value 
+  \\  
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:bulb_elasticity_parameters}.
+%Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
+\begin{table}
+\begin{center}
+\caption{Case study 2: Elasticity parameters}
+\label{tab:bulb_elasticity_parameters}
+\begin{tabular}{ r c c l}
+  \toprule
+  Parameter & Symbol in paper & Value & Data sources\\ 
+  \midrule
+  Marshallian (uncompensated) price elasticity of demand 
+  & Symbol 
+  & -0.4 
+  & Price elasticity of demand taken from literature
+ % ***MORE_REFS_FROM_GREGOR***
+  \\ 
+  Price elasticity of demand for car use
+  & symbol 
+  & -0.39997 
+  & Calculated via the Slutsky Equation C.7  
+  \\ 
+  Cross price elasticity of demand for other goods
+  & symbol 
+  & 0.0001 
+  & Calculated via Equation C.13  
+  \\ 
+  Income elasticity of demand for car use
+  & symbol 
+  & 1.0 
+  & assumed value
+  \\ 
+  Income elasticity of demand for other goods
+  & symbol 
+  & 1.0 
+  & assumed value
+  \\ 
+  \bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Fourth, armed with the parameter values from 
+Table~\ref{tab:bulb_parameters}-
+~\ref{tab:bulb_elasticity_parameters}, 
+and using the equations given in 
+Appendix~\ref{sec:derivation}, 
+we can now produce the values of other parameters given in Table B9, 
+% Matt i coudlnt find the dynamic link to Table B9
+as shown below in 
+%Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+
+
+
+%------------------------------
+\subsubsection{Results} 
+\label{sec:bulb_results}
+%------------------------------
+
+The base results for the LED bulb yields 
+an estimate of 54\% total economy-wide rebound, 
+from the sum of components below:
+
+\begin{table}
+\begin{center}
+\caption{Case study 2: rebound results}
+\label{tab:bulb_results}
+\begin{tabular}{ r c c }
+  \toprule
+  Rebound effect 
+  & symbol & Value(\%) \\ 
+  \midrule
+  Embodied energy effect & $Re_{emb}$ & -0.3\% \\ 
+  Maintenance and disposal effect & $Re_{md}$ & 0.0\% \\ 
+  Substitution effect - direct & $Re_{dsub}$ & 17.4\% \\ 
+  Substitution effect - indirect & $Re_{isub}$ & -12.7\% \\ 
+  Income effect – direct & $Re_{dinc}$ & 0.0\% \\ 
+  Income effect – indirect & $Re_{iinc}$ & 24.7\% \\ 
+  Macroeconomic – productivity effect & $Re_{prod}$ & 24.7\% \\   Total & $Re_{sum}$ & 53.9\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+% text to follow, in same manner as at end of car rebound example section
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion (GS, 1000 words)}
