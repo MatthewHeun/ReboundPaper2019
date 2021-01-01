@@ -23,6 +23,7 @@
 \usepackage[most]{tcolorbox}    % For color highlighting of text
 \usepackage{tikz}               % For diagrams
 \usetikzlibrary{arrows,positioning}
+\usepackage{ulem}               % For strikeout command (\sout)
 \usepackage{xcolor}             % For ... colors
 
 
@@ -1534,6 +1535,9 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:car_elasticity_parameters}.
 %Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
 
+% Paul:  I think the bigger question is whether we should have the description and symbol
+% together in the first column. I think not. But take a look at my examples. ---MKH
+
 \begin{landscape}
 \begin{table}
 \begin{center}
@@ -1621,7 +1625,7 @@ from the sum of components below:
 
 
 
-% Here is another version that I like better
+% Here is another version that I like better. ---MKH
 
 \begin{table}
 \begin{center}
@@ -1645,9 +1649,6 @@ from the sum of components below:
 \end{table}
 
 
-
-
-
 Let's take each of these effects in turn. 
 First, is the embodied energy effect, which is positive (+1.4\%), 
 due to the higher embodied energy (+6,000MJ) 
@@ -1659,8 +1660,8 @@ in the hybrid EV car.
 Following these two effects are two substitution effects 
 at the original income level. 
 The direct substitution effect yields +2.9\% value,
-which is expected, as the new fuel efficiency (42mpg) 
-is much higher than the baseline car (25mpg), 
+which is expected, as the new fuel efficiency (42 mpg) 
+is much higher than the baseline car (25 mpg), 
 leading to a preference to switch more spending to more driving. 
 In other words, with no other changes, 
 the more fuel efficient car increases the amount of miles driven by 2.9\%. 
@@ -1669,8 +1670,9 @@ being slightly negative as the increased fuel use
 and miles driven in the direct substitution effect 
 means that less is spent on other goods.  
 
-Next, is the ‘income’ effect, 
-where the car user sees an increase in their ‘effective’ income 
+Next, is the \inceffect, 
+where the car 
+user sees an increase in their ‘effective’ income
 due to a net saving in outgoings associated with the car purchase and use, 
 this effect also splits into two. 
 One is the direct income effect (+5.3\%), 
@@ -1680,7 +1682,7 @@ The indirect income effect is also positive (+7.8\%),
 due to higher spend on other sectors. 
 So, the additional ‘effective’ income 
 %(Ndot_hat = 
-(+\$712/year) 
+($\rasub{N} = 712$ \$/year) 
 translates into direct and indirect income effects at the micro-level. 
 However, it also translates into a macroeconomic rebound effect (+8.2\%), 
 due to the larger economy that now exists, 
@@ -1712,7 +1714,7 @@ with the additional benefit of decreased running costs.
 %------------------------------
 
 Again, we require four sets of data. 
-First, the basic bulb parameters, which are summarised below:  
+First, the basic bulb parameters, which are summarized below:  
 Table~\ref{tab:bulb_parameters} shows parameters for the light bulb efficiency upgrade (EEU).
 
 
