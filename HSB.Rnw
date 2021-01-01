@@ -26,7 +26,6 @@
 \usepackage{ulem}               % For strikeout command (\sout)
 \usepackage{xcolor}             % For ... colors
 
-
 \usepackage{hyperref} % hyperref should be the last package loaded
 
 
@@ -1601,7 +1600,9 @@ we can now produce the values of other parameters given in Table B9,
 as shown below in 
 %Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
 
-<<stages_table>>=
+<<stages_table_data, echo=FALSE>>=
+library(xtable)
+
 analysis_vars <- expand.grid(ReboundTools::key_analysis_vars, ReboundTools::rebound_stages) %>% 
   magrittr::set_names(c("var", "stage")) %>% 
   dplyr::mutate(
@@ -1612,18 +1613,35 @@ analysis_vars <- expand.grid(ReboundTools::key_analysis_vars, ReboundTools::rebo
   unlist() %>% 
   unname()
 
-rebound_data %>% 
-  dplyr::select(
-    ReboundTools::eeu_base_params$case,
-    analysis_vars
-    ) %>% 
-  tidyr::pivot_longer(cols = analysis_vars, names_to = "var_stage", values_to = "value") %>% 
+rebound_table_data <- rebound_data %>% 
+  dplyr::select(ReboundTools::eeu_base_params$case, all_of(analysis_vars)) %>% 
+  tidyr::pivot_longer(cols = all_of(analysis_vars), names_to = "var_stage", values_to = "value") %>% 
   dplyr::mutate(
     name = sub(x = var_stage, pattern = "_[^_]*$", replacement = ""),
     stage = sub(x = var_stage, pattern = ".*_", replacement = ""),
-  ) %>% View
+    var_stage = NULL
+  ) %>% 
+  tidyr::pivot_wider(names_from = stage, values_from = value)
 
+print_stages_table <- function(.data, case, caption) {
+  rebound_table_data %>% 
+    dplyr::filter(Case == case) %>% 
+    dplyr::mutate(
+      Case = NULL
+    ) %>% 
+    xtable::xtable(caption = caption) %>% 
+    print(include.rownames = FALSE, 
+          booktabs = TRUE, 
+          caption.placement = "top")
+}
+@
 
+<<car_stages_table, results="asis", echo=FALSE>>=
+print_stages_table(rebound_table_data, case = "Car", caption = "Results for car example.")
+@
+
+<<lamp_stages_table, results="asis", echo=FALSE>>=
+print_stages_table(rebound_table_data, case = "Lamp", caption = "Results for lamp example.")
 @
 
 
