@@ -1597,8 +1597,10 @@ and using the equations given in
 Appendix~\ref{sec:derivation}, 
 we can now produce the values of other parameters given in Table B9, 
 % Matt i coudlnt find the dynamic link to Table B9
-as shown below in 
+as shown below in Table~\ref{tab:car_stages_table}.
 %Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+
+
 
 <<stages_table_data, echo=FALSE>>=
 library(xtable)
