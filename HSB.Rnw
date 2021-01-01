@@ -1245,7 +1245,9 @@ we find
 
 <<eeu_data>>=
 library(ReboundTools)
-rebound_calcs <- load_eeu_data("data/eeu_data.xlsx") %>% 
+
+# Load our test cases and perform rebound analyses.
+rebound_data <- load_eeu_data("data/eeu_data.xlsx") %>% 
   rebound_analysis()
 @
 
@@ -1598,6 +1600,32 @@ we can now produce the values of other parameters given in Table B9,
 % Matt i coudlnt find the dynamic link to Table B9
 as shown below in 
 %Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+
+<<stages_table>>=
+analysis_vars <- expand.grid(ReboundTools::key_analysis_vars, ReboundTools::rebound_stages) %>% 
+  magrittr::set_names(c("var", "stage")) %>% 
+  dplyr::mutate(
+    vars = paste(var, stage, sep = "_"), 
+    var = NULL, 
+    stage = NULL
+  ) %>% 
+  unlist() %>% 
+  unname()
+
+rebound_data %>% 
+  dplyr::select(
+    ReboundTools::eeu_base_params$case,
+    analysis_vars
+    ) %>% 
+  tidyr::pivot_longer(cols = analysis_vars, names_to = "var_stage", values_to = "value") %>% 
+  dplyr::mutate(
+    name = sub(x = var_stage, pattern = "_[^_]*$", replacement = ""),
+    stage = sub(x = var_stage, pattern = ".*_", replacement = ""),
+  ) %>% View
+
+
+@
+
 
 
 
