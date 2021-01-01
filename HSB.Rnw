@@ -1243,6 +1243,14 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+<<eeu_data>>=
+library(ReboundTools)
+rebound_calcs <- load_eeu_data("data/eeu_data.xlsx") %>% 
+  rebound_analysis()
+@
+
+
+
 %++++++++++++++++++++++++++++++
 \subsection{Calculation Overview}
 \label{sec:calc_overview}
