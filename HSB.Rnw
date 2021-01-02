@@ -122,6 +122,14 @@ Energy efficiency \sep Energy economics \sep Elasticity of substitution
 
 \end{frontmatter}
 
+<<setup>>=
+library(dplyr)
+library(magrittr)
+library(ReboundTools)
+library(tidyr)
+library(xtable)
+@
+
 \linenumbers
 
 
@@ -1244,11 +1252,9 @@ we find
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 <<eeu_data>>=
-library(ReboundTools)
-
 # Load our test cases and perform rebound analyses.
-rebound_data <- load_eeu_data("data/eeu_data.xlsx") %>% 
-  rebound_analysis()
+rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx") %>% 
+  ReboundTools::rebound_analysis()
 @
 
 
@@ -1601,8 +1607,6 @@ as shown below in Table~\ref{tab:car_stages_table}.
 
 
 <<stages_table_data, echo=FALSE>>=
-library(xtable)
-
 # Set up LaTeX for variable names
 latex_var_names_df <- data.frame(
   name = ReboundTools::key_analysis_vars %>% unlist() %>% unname(), 
