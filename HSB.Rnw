@@ -12,6 +12,7 @@
 \usepackage{amsfonts}           % For access to \checkmark.
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage{booktabs}           % For nice table rules
+\usepackage{chngcntr}           % To get figure and table numbering correct in the appendices
 \usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage[inline]{enumitem}   % For inline enumeration
 \usepackage{multicol}           % For multi-column layout
@@ -1595,11 +1596,8 @@ Table~\ref{tab:car_parameters}-
 ~\ref{tab:car_elasticity_parameters}, 
 and using the equations given in 
 Appendix~\ref{sec:derivation}, 
-we can now produce the values of other parameters given in Table B9, 
-% Matt i coudlnt find the dynamic link to Table B9
+we can now produce the values of other parameters given in Table~\ref{tab:analysis_assumptions}, 
 as shown below in Table~\ref{tab:car_stages_table}.
-%Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
-
 
 
 <<stages_table_data, echo=FALSE>>=
@@ -2152,6 +2150,8 @@ using an early version of this framework.
 
 
 \appendix
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 
 % Gives a helpful "Appendix" label
 \section*{Appendix}
