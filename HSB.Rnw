@@ -1645,8 +1645,8 @@ rebound_table_data <- rebound_data %>%
   dplyr::mutate(
     name = NULL
   ) %>% 
-  dplyr::rename(stage = "latex_var_name") %>% 
-  dplyr::relocate(stage, .after = "Case")
+  dplyr::relocate(latex_var_name, .after = "Case") %>% 
+  dplyr::rename(` ` = "latex_var_name")
 
 print_stages_table <- function(.data, case, label, caption) {
   rebound_table_data %>% 
