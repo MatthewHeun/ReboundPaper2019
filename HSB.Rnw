@@ -1685,7 +1685,7 @@ print_stages_table(rebound_table_data, label = "tab:car_stages_table",
 
 <<lamp_stages_table, results="asis", echo=FALSE>>=
 digs_lamp <- matrix(c(rep(0, 7), # eta
-                      rep(5, 7), # p_s
+                      rep(8, 7), # p_s
                       rep(0, 7), # q_dot_s
                       rep(1, 7), # E_dot_s
                       rep(3, 7), # E_dot_emb
