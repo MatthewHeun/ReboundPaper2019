@@ -1613,9 +1613,9 @@ latex_var_names_df <- data.frame(
                  "$\\rate{C}_{md}$", "$\\rate{C}_o$", "$\\rate{M}$", "$\\rate{N}$")
   )
 latex_col_names_df <- data.frame(
-  stage_names = ReboundTools::rebound_stages %>% unlist() %>% unname(),
-  latex_stage_name = c("$\\bempl{ }$", "$\\aempl{ }$", 
-                       "$\\asub{ }$", "$\\ainc{ }$", "$\\aprod{ }$")
+  stage = ReboundTools::rebound_stages %>% unlist() %>% unname(),
+  latex_stage_name = c("$\\bempl{ }$ (orig)", "$\\aempl{ }$ (star)", 
+                       "$\\asub{ }$ (hat)", "$\\ainc{ }$ (bar)", "$\\aprod{ }$ (tilde)")
 )
 
 analysis_vars <- expand.grid(ReboundTools::key_analysis_vars, ReboundTools::rebound_stages) %>% 
@@ -1636,7 +1636,11 @@ rebound_table_data <- rebound_data %>%
     stage = sub(x = var_stage, pattern = ".*_", replacement = ""),
     var_stage = NULL
   ) %>% 
-  tidyr::pivot_wider(names_from = stage, values_from = value) %>% 
+  dplyr::right_join(latex_col_names_df, by = "stage") %>% 
+  dplyr::mutate(
+    stage = NULL
+  ) %>% 
+  tidyr::pivot_wider(names_from = latex_stage_name, values_from = value) %>% 
   dplyr::right_join(latex_var_names_df, by = "name") %>% 
   dplyr::mutate(
     name = NULL
