@@ -1648,13 +1648,14 @@ rebound_table_data <- rebound_data %>%
   dplyr::rename(stage = "latex_var_name") %>% 
   dplyr::relocate(stage, .after = "Case")
 
-print_stages_table <- function(.data, case, caption) {
+print_stages_table <- function(.data, case, label, caption) {
   rebound_table_data %>% 
     dplyr::filter(Case == case) %>% 
     dplyr::mutate(
       Case = NULL
     ) %>% 
-    xtable::xtable(caption = caption) %>% 
+    xtable::xtable(label = label, 
+                   caption = caption) %>% 
     print(include.rownames = FALSE, 
           booktabs = TRUE, 
           caption.placement = "top", 
@@ -1664,11 +1665,13 @@ print_stages_table <- function(.data, case, caption) {
 @
 
 <<car_stages_table, results="asis", echo=FALSE>>=
-print_stages_table(rebound_table_data, case = "Car", caption = "Results for car example.")
+print_stages_table(rebound_table_data, label = "tab:car_stages_table", 
+                   case = "Car", caption = "Results for car example.")
 @
 
 <<lamp_stages_table, results="asis", echo=FALSE>>=
-print_stages_table(rebound_table_data, case = "Lamp", caption = "Results for lamp example.")
+print_stages_table(rebound_table_data, label = "tab:lamp_stages_table", 
+                   case = "Lamp", caption = "Results for lamp example.")
 @
 
 
