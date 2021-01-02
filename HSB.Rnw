@@ -1565,22 +1565,22 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
  % ***MORE_REFS_FROM_GREGOR***
   \\ 
   Price elasticity of demand for car use
-  & symbol 
+  & ($\eqsps$) 
   & -0.077 
-  & Calculated via the Slutsky Equation C.7  
+  & Calculated via the Slutsky Equation C.1  
   \\ 
   Cross price elasticity of demand for other goods
-  & symbol 
+  & ($\eqops$) 
   & 0.002 
   & Calculated via Equation C.13  
   \\ 
   Income elasticity of demand for car use
-  & symbol 
+  & ($\eqsM$)
   & 1.0 
   & assumed value
   \\ 
   Income elasticity of demand for other goods
-  & symbol 
+  & ($\eqoM$)
   & 1.0 
   & assumed value
   \\ 
@@ -1972,22 +1972,22 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
  % ***MORE_REFS_FROM_GREGOR***
   \\ 
   Price elasticity of demand for car use
-  & symbol 
+  & ($\eqsps$) 
   & -0.39997 
-  & Calculated via the Slutsky Equation C.7  
+  & Calculated via the Slutsky Equation C.1  
   \\ 
   Cross price elasticity of demand for other goods
-  & symbol 
+  & ($\eqops$)  
   & 0.0001 
   & Calculated via Equation C.13  
   \\ 
   Income elasticity of demand for car use
-  & symbol 
+  & ($\eqsM$)
   & 1.0 
   & assumed value
   \\ 
   Income elasticity of demand for other goods
-  & symbol 
+  & ($\eqoM$)
   & 1.0 
   & assumed value
   \\ 
@@ -2039,7 +2039,45 @@ from the sum of components below:
 \end{table}
 
 
-% text to follow, in same manner as at end of car rebound example section
+Taking each component in turn, 
+first, is the embodied energy effect, 
+which as negative (-0.3\%), 
+as although the LED bulb has higher embodied energy (+4.3MJ),
+it also has a much longer lifetime, 
+meaning the LED embodied energy rate (0.65MJ/year) 
+is lower than for the incandescent bulb (1.23MJ/year). 
+Second, the maintenance and disposal effect is zero (0\%)
+because of there is no difference in the negligible costs 
+(\$0.001) assumed for the two bulbs. 
+For the substitution effect at the original income level,
+there are two components. 
+The direct substitution effect yields +17.4\% value, 
+due to the much higher LED bulb efficacy (82Lm/W versus 9Lm/W), 
+which translates to increasing the average bulb use 
+from 3 hours/day to 3 hour 30 mins per day. 
+Due to the highly positive direct effect, 
+the indirect substitution effect 
+(remember, this is at the original income level)
+must be negative and it is (-12.7\%),
+as the increased lighting use from the direct substitution 
+effect means that less is spent on other goods. 
+Next are the two ‘income’ effects, 
+where the light bulb user respends their higher ‘effective’ income 
+%(Ndot_hat 
+= +\$15/year) which results from a net saving in outgoings
+associated with the light bulb purchase and use.
+The direct income effect (+0.02\%), 
+which is positive as the bulb user allocates 
+some of the additional income to increased lighting, 
+but is very small. 
+The indirect income effect is highly positive (+24.7\%),
+due to the preference for higher spend on other goods.
+So, the additional ‘effective’ income. 
+Finally, the macroeconomic rebound effect (+24.7\%) is large and positive, 
+as the additional consumption of goods in the economy 
+has a positive rebound multiplier effect.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion (GS, 1000 words)}
