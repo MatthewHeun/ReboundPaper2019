@@ -1606,12 +1606,17 @@ as shown below in Table~\ref{tab:car_stages_table}.
 library(xtable)
 
 # Set up LaTeX for variable names
-latex_names_df <- data.frame(
+latex_var_names_df <- data.frame(
   name = ReboundTools::key_analysis_vars %>% unlist() %>% unname(), 
-  latex_name = c("$\\eta$", "$p_s$", "$\\rate{q}_s$", "$\\rate{E}_s$",
+  latex_var_name = c("$\\eta$", "$p_s$", "$\\rate{q}_s$", "$\\rate{E}_s$",
                  "$\\rate{E}_{emb}$", "$\\rate{C}_s$", "$\\rate{C}_{cap}$",
                  "$\\rate{C}_{md}$", "$\\rate{C}_o$", "$\\rate{M}$", "$\\rate{N}$")
   )
+latex_col_names_df <- data.frame(
+  stage_names = ReboundTools::rebound_stages %>% unlist() %>% unname(),
+  latex_stage_name = c("$\\bempl{ }$", "$\\aempl{ }$", 
+                       "$\\asub{ }$", "$\\ainc{ }$", "$\\aprod{ }$")
+)
 
 analysis_vars <- expand.grid(ReboundTools::key_analysis_vars, ReboundTools::rebound_stages) %>% 
   magrittr::set_names(c("var", "stage")) %>% 
@@ -1632,12 +1637,12 @@ rebound_table_data <- rebound_data %>%
     var_stage = NULL
   ) %>% 
   tidyr::pivot_wider(names_from = stage, values_from = value) %>% 
-  dplyr::right_join(latex_names_df, by = "name") %>% 
+  dplyr::right_join(latex_var_names_df, by = "name") %>% 
   dplyr::mutate(
     name = NULL
   ) %>% 
-  dplyr::rename(name = "latex_name") %>% 
-  dplyr::relocate(name, .after = "Case")
+  dplyr::rename(stage = "latex_var_name") %>% 
+  dplyr::relocate(stage, .after = "Case")
 
 print_stages_table <- function(.data, case, caption) {
   rebound_table_data %>% 
@@ -1649,7 +1654,8 @@ print_stages_table <- function(.data, case, caption) {
     print(include.rownames = FALSE, 
           booktabs = TRUE, 
           caption.placement = "top", 
-          sanitize.text.function = function(x) x)
+          sanitize.text.function = function(x) {x}, 
+          format.args = list(big.mark = ","))
 }
 @
 
