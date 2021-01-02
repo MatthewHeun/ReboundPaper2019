@@ -1648,14 +1648,15 @@ rebound_table_data <- rebound_data %>%
   dplyr::relocate(latex_var_name, .after = "Case") %>% 
   dplyr::rename(` ` = "latex_var_name")
 
-print_stages_table <- function(.data, case, label, caption) {
+print_stages_table <- function(.data, case, label, caption, digits = 2) {
   rebound_table_data %>% 
     dplyr::filter(Case == case) %>% 
     dplyr::mutate(
       Case = NULL
     ) %>% 
     xtable::xtable(label = label, 
-                   caption = caption) %>% 
+                   caption = caption, 
+                   digits = digits) %>% 
     print(include.rownames = FALSE, 
           booktabs = TRUE, 
           caption.placement = "top", 
@@ -1665,13 +1666,39 @@ print_stages_table <- function(.data, case, label, caption) {
 @
 
 <<car_stages_table, results="asis", echo=FALSE>>=
+digs_car <- matrix(c(rep(3, 7), # eta
+                     rep(3, 7), # p_s
+                     rep(0, 7), # q_dot_s
+                     rep(0, 7), # E_dot_s
+                     rep(0, 7), # E_dot_emb
+                     rep(0, 7), # C_dot_s
+                     rep(0, 7), # C_dot_cap
+                     rep(0, 7), # C_dot_md
+                     rep(0, 7), # C_dot_o
+                     rep(0, 7), # M_dot
+                     rep(0, 7)), # N_dot
+                   nrow = 11, ncol = 7, byrow = TRUE)
 print_stages_table(rebound_table_data, label = "tab:car_stages_table", 
-                   case = "Car", caption = "Results for car example.")
+                   case = "Car", caption = "Results for car example.", 
+                   digits = digs_car)
 @
 
 <<lamp_stages_table, results="asis", echo=FALSE>>=
+digs_lamp <- matrix(c(rep(0, 7), # eta
+                      rep(5, 7), # p_s
+                      rep(0, 7), # q_dot_s
+                      rep(1, 7), # E_dot_s
+                      rep(3, 7), # E_dot_emb
+                      rep(2, 7), # C_dot_s
+                      rep(2, 7), # C_dot_cap
+                      rep(2, 7), # C_dot_md
+                      rep(0, 7), # C_dot_o
+                      rep(0, 7), # M_dot
+                      rep(2, 7)), # N_dot
+                    nrow = 11, ncol = 7, byrow = TRUE)
 print_stages_table(rebound_table_data, label = "tab:lamp_stages_table", 
-                   case = "Lamp", caption = "Results for lamp example.")
+                   case = "Lamp", caption = "Results for lamp example.", 
+                   digits = digs_lamp)
 @
 
 
