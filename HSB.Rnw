@@ -1489,17 +1489,13 @@ lifetime, embodied energy, and maintenance and disposal cost rates, respectively
 \caption{Case study 1: Car parameters. 
 Rows are fuel economy, capital expenditure rate, ownership duration (from new),
 lifetime, embodied energy, and maintenance and disposal cost rates, respectively.}
-\label{tab:car_parameters_option_3}
+\label{tab:car_parameters_option_2}
 \begin{tabular}{ r c c l }
   \toprule
                      & Ford Fusion & Ford Fusion & \\ 
     Symbols [units]  & (gasoline) & (hybrid EV) & Data sources and notes \\
   \midrule
-  Car fuel economy \\
-  & & & $\bempl{\eta}$, $\aprod{\eta}$ [mpg] \\
-  & & & blank \\
-  & & & blank \\
-  & & & blank \\
+  \multirow{5}{*}{$\bempl{\eta}$, $\aprod{\eta}$ [mpg]} 
   & \multirow{5}{*}{25} 
   & \multirow{5}{*}{42} 
   & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
