@@ -122,7 +122,7 @@ Energy efficiency \sep Energy economics \sep Elasticity of substitution
 
 \end{frontmatter}
 
-<<setup>>=
+<<setup, echo=FALSE, message=FALSE>>=
 library(dplyr)
 library(magrittr)
 library(ReboundTools)
@@ -134,9 +134,27 @@ library(xtable)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Terminology}
+\label{sec:terminology}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Some guidance regarding terms and style for the paper.
+
+\begin{enumerate}
+
+  \item Light bulb or electric lamp?  Electric lamp.
+
+  \item What do we call assumed/known information? \emph{parameters} (not variables).
+
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction (total: 1000 words)}
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Energy rebound background}
