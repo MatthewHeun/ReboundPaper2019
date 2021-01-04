@@ -142,9 +142,13 @@ Some guidance regarding terms and style for the paper.
 
 \begin{enumerate}
 
-  \item Light bulb or electric lamp?  Electric lamp.
+  \item What do we call a thing that converts electricity to light?  \emph{electric lamp}, (not light bulb).
 
   \item What do we call assumed/known information? \emph{parameters} (not variables).
+  
+  \item Use double-dash (--) for em-dash.
+  
+  \item Use back ticks (``) and single quotes ('') for quotation marks.
 
 \end{enumerate}
 
