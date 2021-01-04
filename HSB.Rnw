@@ -1819,14 +1819,14 @@ has a positive rebound multiplier effect.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 2 – Light Bulb}
-\label{sec:bulb_example}
+\subsection{Case 2 – Electric lamp}
+\label{sec:lamp_example}
 %++++++++++++++++++++++++++++++
 
 For our second example, 
-we select the option of buying a light emitting diode (LED) light bulb, 
-versus a baseline incandescent light bulb. 
-Both bulbs are matched as closely as possible 
+we select the option of buying a light emitting diode (LED) electric lamp, 
+versus a baseline incandescent electric lamp. 
+Both lamps are matched as closely as possible 
 in terms of energy service delivery (lumens), 
 the key difference is in the energy required to provide that energy service. 
 The case study presents an example whereby the investment cost
@@ -1836,40 +1836,40 @@ with the additional benefit of decreased running costs.
 
 %------------------------------
 \subsubsection{Input data} 
-\label{sec:bulb_input_data}
+\label{sec:lamp_input_data}
 %------------------------------
 
 Again, we require four sets of data. 
-First, the basic bulb parameters, which are summarized below:  
-Table~\ref{tab:bulb_parameters} shows parameters for the light bulb efficiency upgrade (EEU).
+First, the basic lamp parameters, which are summarized below:  
+Table~\ref{tab:lamp_parameters} shows parameters for the electic lamp efficiency upgrade (EEU).
 
 
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 2: Light bulb parameters}
-\label{tab:bulb_parameters}
+\caption{Case study 2: Electric lamp parameters}
+\label{tab:lamp_parameters}
 \begin{tabular}{ r c c l }
   \toprule
-                      & Incandescent bulb & LED bulb & Data sources\\ 
+                      & Incandescent lamp & LED lamp & Data sources\\ 
   \midrule
-  bulb efficacy $\bempl{\eta}$, $\aprod{\eta}$ [lm/W] 
+  lamp efficacy $\bempl{\eta}$, $\aprod{\eta}$ [lm/W] 
   & 8.83 
   & 81.8 
-  & Incandescent bulb calculation = 530 lumen output / 60 Watt energy input. LED bulb calculation = 450 lumen output / 5.5 Watt energy input.
+  & Incandescent lamp calculation = 530 lumen output / 60 Watt energy input. LED lamp calculation = 450 lumen output / 5.5 Watt energy input.
  \\  
   Capital expenditure rate 
   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] 
    & 1.044 
    & 0.121
-   & Purchase costs: \$1.88 for incandescent bulb from \citet{Home_Depot:2020_Inc_bulb} and \$1.21 for LED bulb   \citet{Home_Depot:2020_LED_bulb},
+   & Purchase costs: \$1.88 for incandescent lamp from \citet{Home_Depot:2020_Inc_bulb} and \$1.21 for LED lamp   \citet{Home_Depot:2020_LED_bulb},
  \\
    Ownership length $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years] 
    & 1.8 
    & 10 
-   & assumed to be same as bulb lifetime.  
+   & assumed to be same as lamp lifetime.  
  \\
-   Bulb lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
+   Lamp lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
    & 1.8 
    & 10 
    & based on assumed 3 hours/day 
@@ -1885,18 +1885,18 @@ Table~\ref{tab:bulb_parameters} shows parameters for the light bulb efficiency u
    US DoE Life-cycle assessment of energy and environmental
    impacts of LED lighting products, available at 
    \citet{US_DoE:2012},
-   Incandescent bulb calculation: Table 4.5 LCA energy 
+   Incandescent lamp calculation: Table 4.5 LCA energy 
    = 42.2 MJ/20 Million lumen-hours. 
-   Incandescent bulb lifetime output 
+   Incandescent lamp lifetime output 
    = 530lumens x 3hours/day x 365 days x 1.8 (years) 
    = 1,044,630lumen-hrs. 
-   Thus LCA energy / bulb =  42.2 x 1.0446/20 = 2.21MJ
-   LED bulb calculation: Table 4.5 gives LCA energy 
-   = 132 MJ/20 Million lumen-hours for pack of 5 LED bulbs.
-   LED bulb lifetime output 
+   Thus LCA energy / lamp =  42.2 x 1.0446/20 = 2.21MJ
+   LED lamp calculation: Table 4.5 gives LCA energy 
+   = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps.
+   LED lamp lifetime output 
    = 450lumens x 3hours/day x 365 days x 10 (years) 
    = 4,926,405 lumen-hrs. 
-   Thus LCA energy / bulb =  132/5 x 4.9264/20 = 6.5MJ
+   Thus LCA energy / lamp =  132/5 x 4.9264/20 = 6.5MJ
  \\
    Maintenance and disposal costs $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year] 
    & 0.001 
@@ -1913,12 +1913,12 @@ Second, we require several general parameters,
 mainly relating to the US economy and 
 personal finances of the average US citizen. 
 The parameters and their values used in the study 
-are given below in Table~\ref{tab:bulb_economic_parameters}.
+are given below in Table~\ref{tab:lamp_economic_parameters}.
 
 \begin{table}
 \begin{center}
 \caption{Case study 2: Economic parameters}
-\label{tab:bulb_economic_parameters}
+\label{tab:lamp_economic_parameters}
 \begin{tabular}{ r c c }
   \toprule
   Parameter & Value & Data sources \\ 
@@ -1972,12 +1972,12 @@ are given below in Table~\ref{tab:bulb_economic_parameters}.
 \end{table}
 
 
-Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:bulb_elasticity_parameters}.
+Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:lamp_elasticity_parameters}.
 %Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
 \begin{table}
 \begin{center}
 \caption{Case study 2: Elasticity parameters}
-\label{tab:bulb_elasticity_parameters}
+\label{tab:lamp_elasticity_parameters}
 \begin{tabular}{ r c c l}
   \toprule
   Parameter & Symbol in paper & Value & Data sources\\ 
@@ -2014,8 +2014,8 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
 \end{table}
 
 Fourth, armed with the parameter values from 
-Table~\ref{tab:bulb_parameters}-
-~\ref{tab:bulb_elasticity_parameters}, 
+Table~\ref{tab:lamp_parameters}-
+~\ref{tab:lamp_elasticity_parameters}, 
 and using the equations given in 
 Appendix~\ref{sec:derivation}, 
 we can now produce the values of other parameters given in Table B9, 
@@ -2027,17 +2027,17 @@ as shown below in
 
 %------------------------------
 \subsubsection{Results} 
-\label{sec:bulb_results}
+\label{sec:lamp_results}
 %------------------------------
 
-The base results for the LED bulb yields 
+The base results for the LED lamp yields 
 an estimate of 54\% total economy-wide rebound, 
 from the sum of components below:
 
 \begin{table}
 \begin{center}
 \caption{Case study 2: rebound results}
-\label{tab:bulb_results}
+\label{tab:lamp_results}
 \begin{tabular}{ r c c }
   \toprule
   Rebound effect 
@@ -2060,18 +2060,18 @@ Taking each of the four rebound effects in turn,
 the first is the \empleffect = -0.3\%. 
 It's three parts are the direct emplacement effect = 0\%; 
 the embodied energy effect (-0.3\%) which is negative, 
-as although the LED bulb has higher embodied energy (+4.3MJ),
+as although the LED lamp has higher embodied energy (+4.3MJ),
 it also has a much longer lifetime, 
 meaning the LED embodied energy rate (0.65MJ/year) 
-is lower than for the incandescent bulb (1.23MJ/year); and
+is lower than for the incandescent lamp (1.23MJ/year); and
 the maintenance and disposal effect is zero (0\%),
 because of there is no difference in the negligible costs 
-(\$0.001) assumed for the two bulbs. 
+(\$0.001) assumed for the two lamps. 
 Second, is the \subeffect at the original income level, 
 which is split into two parts. 
 The direct substitution effect yields +17.4\% value, 
-due to the much higher LED bulb efficacy (82Lm/W versus 9Lm/W), 
-which translates to increasing the average bulb use 
+due to the much higher LED lamp efficacy (82Lm/W versus 9Lm/W), 
+which translates to increasing the average lamp use 
 from 3 hours/day to 3 hour 30 mins per day. 
 Due to the highly positive direct effect, 
 the indirect substitution effect 
@@ -2081,12 +2081,12 @@ as the increased lighting use from the direct substitution
 effect means that less is spent on other goods. 
 
 Third is the \subeffect, split into two ‘income’ effects, 
-where the light bulb user respends their higher ‘effective’ income 
+where the electric lamp user respends their higher ‘effective’ income 
 %(Ndot_hat 
 ($\rasub{N} = 15$ \$/year) which results from a net saving in outgoings
-associated with the light bulb purchase and use.
+associated with the eletric lamp purchase and use.
 The direct income effect (+0.02\%), 
-which is positive as the bulb user allocates 
+which is positive as the lamp user allocates 
 some of the additional income to increased lighting, 
 but is very small. 
 The indirect income effect is highly positive (+24.7\%),
