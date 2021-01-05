@@ -1292,7 +1292,8 @@ and apply the framework developed in Section~\ref{sec:framework}.
 To perform rebound analyses for the two case studies, 
 we collect the required parameter values
 for the equations for
-seven rebound components:
+eight rebound components:
+$Re_{dempl}$ (Eq.~(\ref{eq:Re_dempl0})),
 $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})),
 $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
 $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
@@ -1328,230 +1329,67 @@ but with the long-term benefit of decreased running costs.
 
 We require four sets of data. 
 First, the basic car parameters, which are summarized 
-in Table~\ref{tab:car_parameters_option_1}.
+in Table~\ref{tab:car_parameters}.
 
 % Reduce spacing between table rows henceforth.
 \renewcommand{\arraystretch}{0.6}
 
-****
-Paul:
-I have edited the first table to fit all the text using the 
-information at
-\url{https://en.wikibooks.org/wiki/LaTeX/Tables#Space_between_rows}.
-Can you follow the pattern to adjust the remainder of the tables?
-I have moved all tables to full-page, landscape.
----MKH
-****
+%****
+%Paul:
+%I have edited the first table to fit all the text using the 
+%information at
+%\url{https://en.wikibooks.org/wiki/LaTeX/Tables#Space_between_rows}.
+%Can you follow the pattern to adjust the remainder of the tables?
+%I have moved all tables to full-page, landscape.
+%---MKH
+%****
 
-****
-Note: 
-To my eye, the first version of this table
-looks really bad, because the note text 
-is very compressed on the right of the table. 
-So, I made a new version that pushes descriptions of the variables
-into the table title, thereby
-giving the descriptive text in the right column more room to breathe.
-What do you think?
-If you like that style, it can be applied to most tables in this section.
----MKH 
-****
+
 
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 1: Car parameters}
-\label{tab:car_parameters_option_1}
+\caption{Case study 1: Car parameters.} 
+\label{tab:car_parameters}
 \begin{tabular}{ r c c l }
   \toprule
-                      & Ford Fusion & Ford Fusion & \\
-                      & (gasoline) & (hybrid EV) & Data sources \\
+    Description                  & Ford Fusion & Ford Fusion & Data sources and notes\\ 
+    Parameter [units]                                & (gasoline) & (hybrid EV) &  \\
   \midrule
-  \multirow{7}{*}{Car fuel economy $\bempl{\eta}$, $\aprod{\eta}$ [mpg]}
-  & \multirow{7}{*}{25}
-  & \multirow{7}{*}{42}
-  & Combined cycle mpg value taken from \\
-  & & & \citet{Car_Connection:2020}, for model \\
-  & & & Titanium FWD  model, with Intercooled \\
-  & & & Turbo Premium Unleaded I-4, 2.0 L engine. \\
-  & & & Combined cycle mpg value taken from \\
-  & & & \citet{Car_Connection:2020}, for model \\
-  & & & Titanium FWD  model, with Gas/Electric I-4, 2.0 L engine.\\
+  Fuel efficiency                                   & 25        & 42       & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
+  $\bempl{\eta}$, $\aprod{\eta}$ [mpg]              &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
+                                                    &           &          & I-4, 2.0 L engine. \\
+                                                    &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
+                                                    &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
-   \multirow{4}{*}{Capital expenditure rate $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year]}
-   & \multirow{4}{*}{4,031}
-   & \multirow{4}{*}{3,932}
-   & Seven year annual, averaged capital costs = Purchase \\
-   & & & + finance costs -- resale value (purchase--depreciation). \\
-   & & & Fusion gasoline costs from \citet{Edmunds:2019_gasoline_fusion}. \\
-   & & & Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
+   Capital cost rate                                & 4,031     & 3,932    & Seven year annual, averaged capital costs = purchase + finance costs \\
+   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
+                                                    &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
-   \multirow{5}{*}{Car ownership length (from new) $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]}
-   & \multirow{5}{*}{7}
-   & \multirow{5}{*}{7}
-   & US car ownership (from new) length taken from \\
-   & & & \citet{BusinessWire:2015}, and has risen from \\
-   & & & 52 months (2005) to 79 months (2015), \\
-   & & & so assumed as 84 months in 2019 (7 years) \\
-   & & & for our example. \\
+   Ownership duration                               & 7         & 7        & US car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
+   $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
+                                                    &           &          & 84 months in 2019 (7 years) for our example. \\
  \midrule
-   \multirow{4}{*}{Car lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years]}
-   & \multirow{4}{*}{14}
-   & \multirow{4}{*}{14}
-   & Lifetime taken as 14 years, based on 13--17 years \\
-   & & & for US cars from \citet{Berla:2016} \\
-   & & & and 14 years for UK cars from \\
-   & & & \citet{SMMT:2020}. \\
+   Lifespan                                         & 14        & 14       & Lifetime taken as 14 years, based on 13--17 years for US cars \\
+   $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Berla:2016} and 14 years for UK cars from \\
+                                                    &           &          & \citet{SMMT:2020}. \\
    \midrule
-   \multirow{10}{*}{Car embodied energy $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]}
-   & \multirow{10}{*}{34,000}
-   & \multirow{10}{*}{40,000}
-   & 34,000MJ for gasoline car taken from \\
-   & & & \citet{Argonne_National_Laboratory:2010} \\
-   & & & We assume an additional 6,000MJ added for \\
-   & & & Hybrid Electric Vehicle (HEV) battery, \\
-   & & & as HEV typically 10--25 \% of total LCA energy \\
-   & & & of vehicle manufacture, with additionally \\
-   & & & the battery lifetime assumed to be same as \\
-   & & & car lifetime, based on \\
-   & & & \citet{nordelof2014environmental}, and \\
-   & & & \citet{onat2015conventional}.
- \\
+   Embodied energy rate                             & 34,000    & 40,000   & 34,000 MJ for gasoline car taken from \\
+   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & \citet{Argonne_National_Laboratory:2010}. \\
+                                                    &           &          & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
+                                                    &           &          & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
+                                                    &           &          & manufacture. Battery lifetime assumed same as car lifetime, based on \\
+                                                    &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
-   \multirow{6}{*}{Car maintenance and disposal costs $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]}
-   & \multirow{6}{*}{2,861}
-   & \multirow{6}{*}{2,775}
-   & Seven year annual, averaged maintenance costs = \\
-   & & & sum of insurance, maintenance, repairs, taxes, and fees \\
-   & & & (excluding financing, depreciation, fuel). \\
-   & & & Fusion gasoline car maintenance costs from \\
-   & & & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi maintenance costs \\
-   & & & from \citet{Edmunds:2019_energi_fusion}. \\
+  Maintenance and disposal cost rate                & 2,861     & 2,775    & Seven year annual, averaged maintenance costs = sum of insurance, \\
+  $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
+                                                    &           &          & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
+                                                    &           &          & Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 \end{landscape}
-
-
-% Version 2 obtained by moving descriptive words in first column
-% to the table title.
-
-\begin{landscape}
-\begin{table}
-\begin{center}
-\caption{Case study 1: Car parameters. 
-Rows are fuel economy, capital expenditure rate, ownership duration (from new),
-lifetime, embodied energy, and maintenance and disposal cost rates, respectively.}
-\label{tab:car_parameters_option_2}
-\begin{tabular}{ r c c l }
-  \toprule
-                     & Ford Fusion & Ford Fusion & \\ 
-    Symbols [units]  & (gasoline) & (hybrid EV) & Data sources and notes \\
-  \midrule
-  \multirow{5}{*}{$\bempl{\eta}$, $\aprod{\eta}$ [mpg]} 
-  & \multirow{5}{*}{25} 
-  & \multirow{5}{*}{42} 
-  & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
-  & & & for Titanium FWD model with Intercooled Turbo Premium Unleaded \\
-  & & & I-4, 2.0 L engine. \\
-  & & & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
-  & & & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
-  \midrule
-   \multirow{3}{*}{$\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year]} 
-   & \multirow{3}{*}{4,031}
-   & \multirow{3}{*}{3,932}
-   & Seven year annual, averaged capital costs = purchase + finance costs \\
-   & & & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
-   & & & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
- \midrule
-   \multirow{3}{*}{$\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]} 
-   & \multirow{3}{*}{7}
-   & \multirow{3}{*}{7}
-   & US car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
-   & & & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
-   & & & 84 months in 2019 (7 years) for our example. \\
- \midrule
-   \multirow{3}{*}{$\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years]}
-   & \multirow{3}{*}{14}
-   & \multirow{3}{*}{14}
-   & Lifetime taken as 14 years, based on 13--17 years for US cars \\
-   & & & from \citet{Berla:2016} and 14 years for UK cars from \\
-   & & & \citet{SMMT:2020}. \\
-   \midrule
-   \multirow{6}{*}{$\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]}
-   & \multirow{6}{*}{34,000}
-   & \multirow{6}{*}{40,000}
-   & 34,000 MJ for gasoline car taken from \\
-   & & & \citet{Argonne_National_Laboratory:2010}. \\
-   & & & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
-   & & & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
-   & & & manufacture. Battery lifetime assumed same as car lifetime, based on \\
-   & & & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
- \midrule
-   \multirow{4}{*}{$\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]} 
-   & \multirow{4}{*}{2,861}
-   & \multirow{4}{*}{2,775}
-   & Seven year annual, averaged maintenance costs = sum of insurance, \\
-   & & & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
-   & & & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
-   & & &  Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
-  \bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-\end{landscape}
-
-
-% Version 3 obtained by multirow in first column
-% to the table title.
-
-\begin{landscape}
-\begin{table}
-\begin{center}
-\caption{Case study 1: Car parameters. 
-Rows are fuel economy, capital expenditure rate, ownership duration (from new),
-lifetime, embodied energy, and maintenance and disposal cost rates, respectively.}
-\label{tab:car_parameters_option_2}
-\begin{tabular}{ r c c l }
-  \toprule
-                     & Ford Fusion & Ford Fusion & \\ 
-    Symbols [units]  & (gasoline) & (hybrid EV) & Data sources and notes \\
-  \midrule
-  \multirow{4}{*}{Fuel efficiency}                            & \multirow{5}{*}{25} & \multirow{5}{*}{42} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
-                                                                                                      & & & for Titanium FWD model with Intercooled Turbo Premium Unleaded \\
-  \multirow{2}{*}{$\bempl{\eta}$, $\aprod{\eta}$ [mpg]}                                               & & & I-4, 2.0 L engine. \\
-                                                                                                      & & & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
-                                                                                                      & & & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
-  \midrule
-   \multirow{2}{*}{Capital cost rate}                                 & \multirow{3}{*}{4,031} & \multirow{3}{*}{3,932} & Seven year annual, averaged capital costs = purchase + finance costs \\
-   \multirow{2}{*}{$\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year]}                                                & & & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
-                                                                                                                    & & & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
- \midrule
-   \multirow{2}{*}{Ownership duration}                          & \multirow{3}{*}{7} & \multirow{3}{*}{7} & US car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
-   \multirow{2}{*}{$\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]}                                      & & & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
-                                                                                                      & & & 84 months in 2019 (7 years) for our example. \\
- \midrule
-   \multirow{2}{*}{Lifespan}                                           & \multirow{3}{*}{14}   & \multirow{3}{*}{14}   & Lifetime taken as 14 years, based on 13--17 years for US cars \\
-   \multirow{2}{*}{$\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years]}                                               & & & from \citet{Berla:2016} and 14 years for UK cars from \\
-                                                                                                                   & & & \citet{SMMT:2020}. \\
-   \midrule
-                                                              & \multirow{6}{*}{34,000} & \multirow{6}{*}{40,000} & 34,000 MJ for gasoline car taken from \\
-                                                                                                              & & & \citet{Argonne_National_Laboratory:2010}. \\
-   Embodied energy rate                                                                                       & & & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
-   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]                                                                  & & & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
-                                                                                                              & & & manufacture. Battery lifetime assumed same as car lifetime, based on \\
-                                                                                                              & & & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
- \midrule
-  \multirow{2}{*}{Maintenance and}          & \multirow{4}{*}{2,861} & \multirow{4}{*}{2,775} & Seven year annual, averaged maintenance costs = sum of insurance, \\
-  \multirow{2}{*}{disposal cost rate}                                                     & & & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
-  \multirow{2}{*}{$\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]}                       & & & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
-                                                                                          & & &  Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
-  \bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-\end{landscape}
-
 
 
 
@@ -1560,6 +1398,7 @@ mainly relating to the US economy and personal finances
 of the average US citizen. 
 The parameters and their values used in the study 
 are given below in Table~\ref{tab:car_economic_parameters}.
+
 
 \begin{landscape}
 \begin{table}
@@ -1570,49 +1409,23 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   \toprule
   Parameter & Value & Data sources \\ 
   \midrule
-  Distance driven prior to upgrade [miles/year] 
-  & 14,425 
-  & Average US vehicle miles/year, taken from
-  \citet{Car_Insurance:2019}. 
-  This is slightly higher than the average driver miles/year 
-  = 13,476 miles/year from 
-  \citet{US_DoT:2018}.
-  \\ 
-  Real median personal income US, in 2018 [\$/year]
-  & 33,706 
-  & Taken from \citet{St_Louis_Fed:2019}.
-  \\ 
-  US Disposable income / real income (minus current taxes)
-  & 0.88 
-  & Taken from US Bureau of Economic Analysis (BEA) 
-  National and Products Accounts (NIPA) Table 2.1. 
-  Personal Income and Its Disposition,  
-  \citet{US_BEA:2020},
-  \\ 
-  Share of savings from disposable income
-  & 0.079 
-  & Taken from US Bureau of Economic Analysis (BEA) 
-  National and Products Accounts (NIPA) Table 2.1. 
-  Personal Income and Its Disposition,  
-  \citet{US_BEA:2020},
-  \\ 
-  Cost of gasoline [\$/Gallon]
-  & 2.21
-  & Taken from US Energy Information Agency (EIA) data
-  available at \citet{US_EIA:2020_gasoline},
-  \\ 
-  Fraction of disposable income on new energy service  
-  & 0.062 
-  & Calculation = \$1,275 (spend on energy service 
-  = 14,425 miles / 42miles/gallon x \$2.11/gallon) 
-  / (\$19,234 (spend on other goods) + 
-  \$1,275  (spend on energy service)) 
-  = 0.062
-  \\ 
-  Productivity multiplier  
-  & 1.0
-  & Assumed value 
-  \\  
+  Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  symbol [\$/year]                                          &               & \\
+  \midrule
+  US Disposable income / real income (minus current taxes)  & 0.88          & Taken from US Bureau of Economic Analysis (BEA) \\
+  symbol [\$/year]                                          &               & National and Products Accounts (NIPA) \\
+                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
+                                                            &               & \citet{US_BEA:2020}, \\ 
+  \midrule
+  Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
+  symbol [\$/year]                                          &               & National and Products Accounts (NIPA) \\ 
+                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
+                                                            &               & \citet{US_BEA:2020}, \\
+  \midrule
+  Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
+  symbol [\$/Gallon]                                        &               & \citet{US_EIA:2020_gasoline} \\
+  \midrule
+  Productivity multiplier                                   & 1.0           & Assumed value \\  
   \bottomrule
 \end{tabular}
 \end{center}
@@ -1620,48 +1433,34 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 \end{landscape}
 
 
-Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:car_elasticity_parameters}.
-%Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
 
-% Paul:  I think the bigger question is whether we should have the description and symbol
-% together in the first column. I think not. But take a look at my examples. ---MKH
+Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:car_elasticity_parameters}.
+
 
 \begin{landscape}
 \begin{table}
 \begin{center}
 \caption{Case study 1: Elasticity parameters}
 \label{tab:car_elasticity_parameters}
-\begin{tabular}{ r c c l}
+\begin{tabular}{ r c l }
   \toprule
-  Parameter & Symbol in paper & Value & Data sources\\ 
+  Description & Value & Data sources and notes \\
+  Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand 
-  & Symbol 
-  & -0.1 
-  & Price elasticity of demand taken from literature
-  \citet{Borenstein:2015aa} and 
- % ***MORE_REFS_FROM_GREGOR***
-  \\ 
-  Price elasticity of demand for car use
-  & ($\eqsps$) 
-  & -0.077 
-  & Calculated via the Slutsky Equation C.1  
-  \\ 
-  Cross price elasticity of demand for other goods
-  & ($\eqops$) 
-  & 0.002 
-  & Calculated via Equation C.13  
-  \\ 
-  Income elasticity of demand for car use
-  & ($\eqsM$)
-  & 1.0 
-  & assumed value
-  \\ 
-  Income elasticity of demand for other goods
-  & ($\eqoM$)
-  & 1.0 
-  & assumed value
-  \\ 
+  Marshallian (uncompensated) price elasticity of demand  &   -0.1    & Price elasticity of demand taken from literature  \citet{Borenstein:2015aa} \\
+  Symbol [--]                                             &           &   \\ 
+  \midrule
+  Price elasticity of demand for car use                  &   -0.077  & Calculated via the Slutsky Equation C.1  \\
+  $\eqsps$ [--]                                           &           &   \\    
+  \midrule   
+  Cross price elasticity of demand for other goods        &   0.002   & Calculated via Equation C.13  \\
+  $\eqops$ [--]                                           &           &   \\ 
+  \midrule   
+  Income elasticity of demand for car use                 &   1.0     & assumed value \\
+  $\eqsM$ [--]                                            &           &   \\ 
+  \midrule   
+  Income elasticity of demand for other goods             &   1.0     & assumed value \\
+  $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
 \end{center}
@@ -1669,8 +1468,9 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
 \end{landscape}
 
 
+
 Fourth, armed with the parameter values from 
-Table~\ref{tab:car_parameters_option_1}-
+Table~\ref{tab:car_parameters}-
 ~\ref{tab:car_elasticity_parameters}, 
 and using the equations given in 
 Appendix~\ref{sec:derivation}, 
@@ -1748,36 +1548,12 @@ from the sum of components below:
 \begin{table}
 \begin{center}
 \caption{Case study 1: rebound results}
-\label{tab:car results}
-\begin{tabular}{ r c c }
-  \toprule
-  Rebound effect & symbol & Value [\%] \\ 
-  \midrule
-  Embodied energy effect & $Re_{emb}$ & 1.4 \\ 
-  Maintenance and disposal effect & $Re_{md}$ & -1.0 \\ 
-  Substitution effect - direct & $Re_{dsub}$ & 2.9 \\ 
-  Substitution effect - indirect & $Re_{isub}$ & -0.3 \\ 
-  Income effect – direct & $Re_{dinc}$ & 5.3 \\ 
-  Income effect – indirect & $Re_{iinc}$ & 7.8 \\ 
-  Macroeconomic – productivity effect & $Re_{prod}$ & 8.2 \\   
-  Total & $Re_{sum}$ & 24.4 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-
-
-% Here is another version that I like better. ---MKH
-
-\begin{table}
-\begin{center}
-\caption{Case study 1: rebound results}
 \label{tab:car_results}
 \begin{tabular}{ r l }
   \toprule
   Rebound effect (symbol) & Value [\%] \\ 
   \midrule
+  Emplacement effect ($Re_{dempl}$) & 0.0 \\
   Embodied energy effect ($Re_{emb}$) & 1.4 \\ 
   Maintenance and disposal effect ($Re_{md}$) & -1.0 \\ 
   Substitution effect - direct ($Re_{dsub}$) & 2.9 \\ 
