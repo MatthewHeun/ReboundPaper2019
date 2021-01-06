@@ -1450,7 +1450,8 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 
 
 
-Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:car_elasticity_parameters}.
+Third, we require the elasticity parameters that we shall need, 
+as given in Table~\ref{tab:car_elasticity_parameters}.
 
 
 \begin{landscape}
@@ -1723,10 +1724,11 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
                                                             &               & from \citet{US_EIA:2020_electricity},  \\
                                                             &               & Calculation = \$0.1355 per kWh / 3.6MJ per kWh = \$0.0227/MJ \\
   \midrule
-  Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service \\
-  {} [--]                                                   &               & = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) \\
-                                                            &               & $\times$ (\$0.1355/kWh /MJ)) / (\$27,391 (spend on other goods) \\
-                                                            &               & + \$9  (spend on energy service)) = 0.00032 \\       
+  Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service) \\
+  $\fCs$ [--]                                               &               & / [\$27,391 (spend on other goods) + \\
+                                                            &               & \$9  (spend on energy service)] = 0.00032, \\
+                                                            &               & where spend on energy service = 580,350 lumen-hrs / 81.8 Lm/W / 1000 W/kW \\
+                                                            &               & $\times$ \$0.1355/kWh = \$9. /  \\
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
   $k$ [--]                                                  &               &               \\
@@ -1737,7 +1739,8 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
 \end{landscape}
 
 
-Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:lamp_elasticity_parameters}.
+Third, we require the elasticity parameters that we shall need, 
+as given in Table~\ref{tab:lamp_elasticity_parameters}.
 
 \begin{landscape}
 \begin{table}
