@@ -1411,9 +1411,8 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   Parameter [units] & & \\
   \midrule
   Distance driven prior to upgrade                          & 14,425        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
-  {} [miles/year]                                           &               & This is slightly higher than the average driver miles/year \\
-                                                            &               & = 13,476 miles/year from \\
-                                                            &               & \citet{US_DoT:2018}.\\    
+  $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
+                                                            &               & \citet{US_DoT:2018}. \\
   \midrule
   Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
@@ -1431,7 +1430,7 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   Personal consumption                                      & 27401.28      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
+  Price of gasoline                                         & 2.21          & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
   Fractional spend on energy service                        & 0.062         & Calculation: \$1,275 (spend on energy service) \\
@@ -1464,19 +1463,19 @@ as given in Table~\ref{tab:car_elasticity_parameters}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   -0.1    & Price elasticity of demand taken from literature  \citet{Borenstein:2015aa} \\
+  Marshallian (uncompensated) price elasticity of demand  &   -0.1    & Source: \citet{Borenstein:2015aa}. \\
   Symbol [--]                                             &           &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   -0.077  & Calculated via the Slutsky Equation C.1  \\
+  Price elasticity of demand for car use                  &   -0.077  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   0.002   & Calculated via Equation C.13  \\
+  Cross price elasticity of demand for other goods        &   0.002   & Calculated via Eq.~\ref{eq:eqops}.  \\
   $\eqops$ [--]                                           &           &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   1.0     & assumed value \\
+  Income elasticity of demand for car use                 &   1.0     & Assumed value. \\
   $\eqsM$ [--]                                            &           &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   1.0     & assumed value \\
+  Income elasticity of demand for other goods             &   1.0     & Assumed value. \\
   $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
@@ -1639,40 +1638,38 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
     Description                  & Incandescent lamp & LED lamp & Data sources and notes\\ 
     Parameters [units]                                &  &  & \\
   \midrule
-  Lamp efficacy                                     & 8.83      & 81.8     & Incandescent lamp calculation  \\
-  $\bempl{\eta}$, $\aprod{\eta}$ [mpg]              &           &          & = 530 lumen output / 60 Watt energy input.\\
-                                                    &           &          & LED lamp calculation \\
-                                                    &           &          & = 450 lumen output / 5.5 Watt energy input.  \\
+  Lamp efficacy                                     & 8.83      & 81.8     & Incandescent: 530 lm output / 60 W energy input. \\
+  $\bempl{\eta}$, $\aprod{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
   \midrule
    Capital cost rate                                & 1.044     & 0.121    & Purchase costs: \$1.88 for incandescent lamp from  \\
-   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb} \\
+   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb}, \\
                                                     &           &          & and \$1.21 for LED lamp from \\
                                                     &           &          & \citet{Home_Depot:2020_LED_bulb}. \\
   \midrule
-   Ownership duration                               & 1.8       & 10       & assumed to be same as lamp lifetime. \\
+   Ownership duration                               & 1.8       & 10       & Assumed same as lamp lifespan \\
    $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          &  \\
  \midrule
-   Lifespan                                         & 1.8       & 10       & based on assumed 3 hours/day  \\
+   Lifespan                                         & 1.8       & 10       & Based on assumed 3 hours/day  \\
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Home_Depot:2020_Inc_bulb} \\
                                                     &           &          & and  \citet{Home_Depot:2020_LED_bulb}. \\
    \midrule
-   Life cycle analysis (LCA) embodied energy        & 2.21      & 6.50     & Base document is Table 4.5 Manufacturing Energy  \\
+   Life cycle analysis (LCA) embodied energy        & 2.21      & 6.50     & Base document: Table 4.5 Manufacturing Energy  \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Primary energy (MJ/20 Million lumen hours), \\
                                                     &           &          & US DoE Life-cycle assessment of energy and environmental \\
-                                                    &           &          & impacts of LED lighting products, available at\\
-                                                    &           &          & \citet{US_DoE:2012}, \\
-                                                    &           &          & Incandescent lamp calculation: \\
-                                                    &           &          & Table 4.5 LCA energy = 42.2 MJ/20 Million lumen-hours.  \\
-                                                    &           &          & Incandescent lamp lifetime output = 530lumens $\times$ 3hours/day \\
-                                                    &           &          & $\times$ 365 days $\times$ 1.8 (years) = 1,044,630lumen-hrs.\\
-                                                    &           &          & Thus LCA energy / lamp =  42.2 $\times$ 1.0446/20 = 2.21MJ. \\
-                                                    &           &          & LED lamp calculation: Table 4.5 gives LCA energy \\
-                                                    &           &          & = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps. \\
-                                                    &           &          & LED lamp lifetime output = 450lumens $\times$ 3hours/day  \\
-                                                    &           &          & $\times$ 365 days $\times$ 10 (years) = 4,926,405 lumen-hrs. \\
-                                                    &           &          & Thus LCA energy / lamp =  132/5 $\times$ 4.9264/20 = 6.5MJ. \\ 
+                                                    &           &          & impacts of LED lighting products \\
+                                                    &           &          & \citep{US_DoE:2012}. \\
+                                                    &           &          & Incandescent: \\
+                                                    &           &          & LCA energy = 42.2 MJ/20 million lumen-hours.  \\
+                                                    &           &          & Lifetime output = 530 lumens $\times$ 3 hours/day \\
+                                                    &           &          & $\times$ 365 days/year $\times$ 1.8 years = 1,044,630 lumen-hrs.\\
+                                                    &           &          & Thus LCA energy / lamp =  42.2 $\times$ 1.0446/20 = 2.21 MJ. \\
+                                                    &           &          & LED:  \\
+                                                    &           &          & LCA energy = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps. \\
+                                                    &           &          & Lifetime output = 450 lumens $\times$ 3 hours/day  \\
+                                                    &           &          & $\times$ 365 days/year $\times$ 10 years = 4,926,405 lumen-hrs. \\
+                                                    &           &          & Thus LCA energy / lamp =  132 MJ/5 $\times$ 4.9264/20 = 6.5 MJ. \\ 
  \midrule
-  Maintenance and disposal cost rate                & 0.001     & 0.001    & taken as \$0.001 to avoid 0/0 calculation error. \\
+  Maintenance and disposal cost rate                & 0.00      & 0.00     & Assumed negligible. \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
   \bottomrule
 \end{tabular}
@@ -1699,38 +1696,34 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
   Description  & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Lumens consumed prior to upgrade                          & 580,350       & Calculation = 530lumens $\times$ 3 hrs/day $\times$ 365 days \\
-  {} [lm/year]                                              &               & \\
+  Lighting consumption prior to upgrade                     & 580,350       & Calculation: 530 lm $\times$ 3 hrs/day $\times$ 365 days/year. \\
+  $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
-  Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  Real median personal income US, in 2018                   & 33,706        & Source: \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [--]                                                   &               & National and Products Accounts (NIPA) \\
-                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
-                                                            &               & \citet{US_BEA:2020}, \\ 
+  US Disposable income /                                    & 0.88268       & Source:  National and Products Accounts (NIPA) \\
+  real income (minus current taxes)                         &               & Table 2.1. Personal Income and Its Disposition \\
+  {} [--]                                                   &               & \citep{US_BEA:2020}. \\
   \midrule
-  Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [--]                                                   &               & National and Products Accounts (NIPA) \\ 
-                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
-                                                            &               & \citet{US_BEA:2020}, \\
+  Share of savings from disposable income                   & 0.079         & Source: National and Products Accounts (NIPA) \\
+  {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition \\ 
+                                                            &               & \citep{US_BEA:2020}. \\
   \midrule
-  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
+  Personal consumption                                      & 27,401.28     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Cost of electricity                                       & 0.0227        & Taken from US Energy Information Agency (EIA) data \\
-  $p_E$ [\$/MJ]                                             &               & Price of electricity for US households, \\
-                                                            &               & taken as US average in 2020 =  \$0.1355/kWh \\        
-                                                            &               & from \citet{US_EIA:2020_electricity},  \\
-                                                            &               & Calculation = \$0.1355 per kWh / 3.6MJ per kWh = \$0.0227/MJ \\
+  Price of electricity                                      & 0.0227        & US 2020 average household electricity price: \$0.1355/kW-hr \\
+  $p_E$ [\$/MJ]                                             &               & \citep{US_EIA:2020_electricity}.  \\
+                                                            &               & Calculation: \$0.1355/kW-hr / 3.6 MJ/kW-hr = \$0.0227/MJ. \\
   \midrule
-  Fractional spend on energy service                        & 0.00032       & Calculation = \$9 (spend on energy service) \\
-  $\fCs$ [--]                                               &               & / [\$27,391 (spend on other goods) + \\
-                                                            &               & \$9  (spend on energy service)] = 0.00032, \\
-                                                            &               & where spend on energy service = 580,350 lumen-hrs / 81.8 Lm/W / 1000 W/kW \\
-                                                            &               & $\times$ \$0.1355/kWh = \$9. /  \\
+  Fractional spend on energy service                        & 0.00032       & Calculation: \$9/year (spend on energy service) / \\
+  $\fCs$ [--]                                               &               & [\$27,391/year (spend on other goods) + \\
+                                                            &               & \$9/year (spend on energy service)] = 0.00032, \\
+                                                            &               & where spend on energy service = 580,350 lm-hrs/year /  \\
+                                                            &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1355/kW-hr = \$9/year.  \\
   \midrule
-  Productivity multiplier                                   & 1.0           & Assumed value \\  
+  Productivity multiplier                                   & 1.0           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
@@ -1752,19 +1745,19 @@ as given in Table~\ref{tab:lamp_elasticity_parameters}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   -0.4    & Price elasticity of demand taken from literature  \citet{Borenstein:2015aa} \\
+  Marshallian (uncompensated) price elasticity of demand  &   -0.4    & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
   Symbol [--]                                             &           &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   -0.3997  & Calculated via the Slutsky Equation C.1  \\
+  Price elasticity of demand for car use                  &   -0.3997  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   0.0001   & Calculated via Equation C.13  \\
+  Cross price elasticity of demand for other goods        &   0.0001   & Calculated via Eq.~\ref{eq:eqops}.  \\
   $\eqops$ [--]                                           &           &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   1.0     & assumed value \\
+  Income elasticity of demand for car use                 &   1.0     & Assumed value. \\
   $\eqsM$ [--]                                            &           &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   1.0     & assumed value \\
+  Income elasticity of demand for other goods             &   1.0     & Assumed value. \\
   $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
