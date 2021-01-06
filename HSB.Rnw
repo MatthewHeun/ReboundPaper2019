@@ -1410,25 +1410,26 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   Parameter & Value & Data sources \\ 
   \midrule
   Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
-  symbol [\$/year]                                          &               & \\
+  {} [\$/year]                                              &               & \\
   \midrule
-  US Disposable income / real income (minus current taxes)  & 0.88          & Taken from US Bureau of Economic Analysis (BEA) \\
-  symbol [\$/year]                                          &               & National and Products Accounts (NIPA) \\
+  US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
+  {} [\$/year]                                              &               & National and Products Accounts (NIPA) \\
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
   Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
-  symbol [\$/year]                                          &               & National and Products Accounts (NIPA) \\ 
+  {} [\$/year]                                              &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                                      & 27401.28      & Calculated as $(0.88268)(33706)(1 - 0.079)$ \\
+  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year})(0.88268)(1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
-  symbol [\$/Gallon]                                        &               & \citet{US_EIA:2020_gasoline} \\
+  $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
+  $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
 \end{center}
