@@ -1349,7 +1349,7 @@ in Table~\ref{tab:car_parameters}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 1: Car parameters.} 
+\caption{Car example: Vehicle parameters.} 
 \label{tab:car_parameters}
 \begin{tabular}{ r c c l }
   \toprule
@@ -1403,7 +1403,7 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 1: Economic parameters}
+\caption{Car example: Economic parameters}
 \label{tab:car_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -1418,9 +1418,9 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [--]                                                   &               & National and Products Accounts (NIPA) \\
-                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
+  US Disposable income /                                    & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
+  real income (minus current taxes)                         &               & National and Products Accounts (NIPA) \\
+  {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
   Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
@@ -1428,16 +1428,17 @@ are given below in Table~\ref{tab:car_economic_parameters}.
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year})(0.88268)(1 - 0.079)$ \\
+  Personal consumption                                      & 27401.28      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fraction of disposable income on new energy service       & 0.062         & Calculation: \$1,275 (spend on energy service \\
-  $\fCs$ [--]                                               &               & = 14,425 (miles) / 42 (mpg) \\
-                                                            &               & $\times$ (\$2.21/gallon) / (\$19,234 (spend on other goods) \\
-                                                            &               & + \$1,275  (spend on energy service)) = 0.062 \\
+  Fractional spend on energy service                        & 0.062         & Calculation: \$1,275 (spend on energy service) \\
+  $\fCs$ [--]                                               &               & / [\$19,234 (spend on other goods) + \\
+                                                            &               & \$1,275 (spend on energy service)] = 0.062, \\
+                                                            &               & where spend on energy service = 14,425 miles / 42 mpg \\
+                                                            &               & $\times$ \$2.21/gallon = \$1,275. \\
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
   $k$ [--]                                                  &               &               \\
@@ -1455,7 +1456,7 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 1: Elasticity parameters}
+\caption{Car example: Elasticity parameters}
 \label{tab:car_elasticity_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -1521,36 +1522,6 @@ rebound_data %>%
         format.args = list(big.mark = ","))
 @
 
-<<lamp_stages_table, results="asis", echo=FALSE>>=
-digs_lamp <- matrix(c(rep(0, 7), # eta
-                      rep(8, 7), # p_s
-                      rep(0, 7), # q_dot_s
-                      rep(1, 7), # E_dot_s
-                      rep(3, 7), # E_dot_emb
-                      rep(2, 7), # C_dot_s
-                      rep(2, 7), # C_dot_cap
-                      rep(2, 7), # C_dot_md
-                      rep(0, 7), # C_dot_o
-                      rep(2, 7), # N_dot
-                      rep(0, 7)), # M_dot
-                    nrow = 11, ncol = 7, byrow = TRUE)
-rebound_data %>% 
-  dplyr::filter(Case == "Lamp") %>% 
-  dplyr::mutate(
-    Case = NULL
-  ) %>% 
-  ReboundTools::stages_table(label = "tab:lamp_stages_table", 
-                             caption = "Results for lamp example.", 
-                             digits = digs_lamp, 
-                             align = "lrrrrrr") %>% 
-  print(include.rownames = FALSE, 
-        booktabs = TRUE,
-        caption.placement = "top",
-        sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
-@
-
-
 %------------------------------
 \subsubsection{Results} 
 \label{sec:Car_results}
@@ -1562,21 +1533,22 @@ from the sum of components below:
 
 \begin{table}
 \begin{center}
-\caption{Case study 1: rebound results}
+\caption{Car example: rebound results}
 \label{tab:car_results}
 \begin{tabular}{ r l }
   \toprule
   Rebound effect (symbol) & Value [\%] \\ 
   \midrule
-  Emplacement effect ($Re_{dempl}$) & 0.0 \\
-  Embodied energy effect ($Re_{emb}$) & 1.4 \\ 
+  Emplacement effect ($Re_{dempl}$) & +0.0 \\
+  Embodied energy effect ($Re_{emb}$) & +1.4 \\ 
   Maintenance and disposal effect ($Re_{md}$) & -1.0 \\ 
-  Substitution effect - direct ($Re_{dsub}$) & 2.9 \\ 
+  Substitution effect - direct ($Re_{dsub}$) & +2.9 \\ 
   Substitution effect - indirect ($Re_{isub}$) & -0.3 \\ 
-  Income effect – direct ($Re_{dinc}$) & 5.3 \\ 
-  Income effect – indirect ($Re_{iinc}$) & 7.8 \\ 
-  Macroeconomic – productivity effect ($Re_{prod}$) & 8.2 \\   
-  Total ($Re_{sum}$) & 24.4 \\
+  Income effect – direct ($Re_{dinc}$) & +5.3 \\ 
+  Income effect – indirect ($Re_{iinc}$) & +7.8 \\ 
+  Macroeconomic – productivity effect ($Re_{prod}$) & +8.2 \\   
+  \midrule
+  Total ($Re_{sum}$) & +24.4 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1659,7 +1631,7 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 2: Electric lamp parameters.} 
+\caption{Lamp example: Electric lamp parameters.} 
 \label{tab:lamp_parameters}
 \begin{tabular}{ r c c l }
   \toprule
@@ -1690,14 +1662,14 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
                                                     &           &          & \citet{US_DoE:2012}, \\
                                                     &           &          & Incandescent lamp calculation: \\
                                                     &           &          & Table 4.5 LCA energy = 42.2 MJ/20 Million lumen-hours.  \\
-                                                    &           &          & Incandescent lamp lifetime output = 530lumens x 3hours/day \\
-                                                    &           &          & x 365 days x 1.8 (years) = 1,044,630lumen-hrs.\\
-                                                    &           &          & Thus LCA energy / lamp =  42.2 x 1.0446/20 = 2.21MJ. \\
+                                                    &           &          & Incandescent lamp lifetime output = 530lumens $\times$ 3hours/day \\
+                                                    &           &          & $\times$ 365 days $\times$ 1.8 (years) = 1,044,630lumen-hrs.\\
+                                                    &           &          & Thus LCA energy / lamp =  42.2 $\times$ 1.0446/20 = 2.21MJ. \\
                                                     &           &          & LED lamp calculation: Table 4.5 gives LCA energy \\
                                                     &           &          & = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps. \\
-                                                    &           &          & LED lamp lifetime output = 450lumens x 3hours/day  \\
-                                                    &           &          & x 365 days x 10 (years) = 4,926,405 lumen-hrs. \\
-                                                    &           &          & Thus LCA energy / lamp =  132/5 x 4.9264/20 = 6.5MJ. \\ 
+                                                    &           &          & LED lamp lifetime output = 450lumens $\times$ 3hours/day  \\
+                                                    &           &          & $\times$ 365 days $\times$ 10 (years) = 4,926,405 lumen-hrs. \\
+                                                    &           &          & Thus LCA energy / lamp =  132/5 $\times$ 4.9264/20 = 6.5MJ. \\ 
  \midrule
   Maintenance and disposal cost rate                & 0.001     & 0.001    & taken as \$0.001 to avoid 0/0 calculation error. \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
@@ -1719,14 +1691,14 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 2: Economic parameters}
+\caption{Lamp example: Economic parameters}
 \label{tab:lamp_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
   Description  & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Lumens consumed prior to upgrade                          & 580,350       & Calculation = 530lumens x 3 hrs/day x 365 days \\
+  Lumens consumed prior to upgrade                          & 580,350       & Calculation = 530lumens $\times$ 3 hrs/day $\times$ 365 days \\
   {} [lm/year]                                              &               & \\
   \midrule
   Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
@@ -1742,7 +1714,7 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year})(0.88268)(1 - 0.079)$ \\
+  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Cost of electricity                                       & 0.0227        & Taken from US Energy Information Agency (EIA) data \\
@@ -1753,7 +1725,7 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
   \midrule
   Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service \\
   {} [--]                                                   &               & = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) \\
-                                                            &               & x (\$0.1355/kWh /MJ)) / (\$27,391 (spend on other goods) \\
+                                                            &               & $\times$ (\$0.1355/kWh /MJ)) / (\$27,391 (spend on other goods) \\
                                                             &               & + \$9  (spend on energy service)) = 0.00032 \\       
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
@@ -1770,7 +1742,7 @@ Third, we require the elasticity parameters that we shall need, as given in Tabl
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 2: Elasticity parameters}
+\caption{Lamp example: Elasticity parameters}
 \label{tab:lamp_elasticity_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -1805,8 +1777,37 @@ and using the equations given in
 Appendix~\ref{sec:derivation}, 
 we can now produce the values of other parameters given in Table B9, 
 % Matt i coudlnt find the dynamic link to Table B9
-as shown below in 
-%Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+as shown below in Table~\ref{tab:lamp_stages_table}.
+
+
+<<lamp_stages_table, results="asis", echo=FALSE>>=
+digs_lamp <- matrix(c(rep(0, 7), # eta
+                      rep(8, 7), # p_s
+                      rep(0, 7), # q_dot_s
+                      rep(1, 7), # E_dot_s
+                      rep(3, 7), # E_dot_emb
+                      rep(2, 7), # C_dot_s
+                      rep(2, 7), # C_dot_cap
+                      rep(2, 7), # C_dot_md
+                      rep(0, 7), # C_dot_o
+                      rep(2, 7), # N_dot
+                      rep(0, 7)), # M_dot
+                    nrow = 11, ncol = 7, byrow = TRUE)
+rebound_data %>% 
+  dplyr::filter(Case == "Lamp") %>% 
+  dplyr::mutate(
+    Case = NULL
+  ) %>% 
+  ReboundTools::stages_table(label = "tab:lamp_stages_table", 
+                             caption = "Results for lamp example.", 
+                             digits = digs_lamp, 
+                             align = "lrrrrrr") %>% 
+  print(include.rownames = FALSE, 
+        booktabs = TRUE,
+        caption.placement = "top",
+        sanitize.text.function = function(x) {x},
+        format.args = list(big.mark = ","))
+@
 
 
 
@@ -1819,24 +1820,25 @@ The base results for the LED lamp yields
 an estimate of 54\% total economy-wide rebound, 
 from the sum of components below:
 
+
 \begin{table}
 \begin{center}
-\caption{Case study 2: rebound results}
+\caption{Lamp example: rebound results}
 \label{tab:lamp_results}
-\begin{tabular}{ r c c }
+\begin{tabular}{ r l }
   \toprule
-  Rebound effect 
-  & symbol & Value(\%) \\ 
+  Rebound effect (symbol) & Value [\%] \\ 
   \midrule
-  Emplacement effect ($Re_{dempl}$) & 0.0 \\
-  Embodied energy effect & $Re_{emb}$ & -0.3\% \\ 
-  Maintenance and disposal effect & $Re_{md}$ & 0.0\% \\ 
-  Substitution effect - direct & $Re_{dsub}$ & 17.4\% \\ 
-  Substitution effect - indirect & $Re_{isub}$ & -12.7\% \\ 
-  Income effect – direct & $Re_{dinc}$ & 0.0\% \\ 
-  Income effect – indirect & $Re_{iinc}$ & 24.7\% \\ 
-  Macroeconomic – productivity effect & $Re_{prod}$ & 24.7\% \\   
-  Total & $Re_{sum}$ & 53.9\% \\
+  Emplacement effect ($Re_{dempl}$) & +0.0 \\
+  Embodied energy effect ($Re_{emb}$) & -0.3 \\ 
+  Maintenance and disposal effect ($Re_{md}$) & +0.0 \\ 
+  Substitution effect - direct ($Re_{dsub}$) & +17.4 \\ 
+  Substitution effect - indirect ($Re_{isub}$) & -12.7 \\ 
+  Income effect – direct ($Re_{dinc}$) & +0.02 \\ 
+  Income effect – indirect ($Re_{iinc}$) & +24.7 \\ 
+  Macroeconomic – productivity effect ($Re_{prod}$) & +24.7 \\   
+\midrule
+Total ($Re_{sum}$) & +53.9 \\
 \bottomrule
 \end{tabular}
 \end{center}
