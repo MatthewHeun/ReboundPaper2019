@@ -1409,16 +1409,21 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   \toprule
   Parameter & Value & Data sources \\ 
   \midrule
+  Distance driven prior to upgrade                          & 14,425        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
+  {} [miles/year]                                           &               & This is slightly higher than the average driver miles/year \\
+                                                            &               & = 13,476 miles/year from \\
+                                                            &               & \citet{US_DoT:2018}.\\    
+  \midrule
   Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
   US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [\$/year]                                              &               & National and Products Accounts (NIPA) \\
+  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
   Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [\$/year]                                              &               & National and Products Accounts (NIPA) \\ 
+  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
@@ -1427,6 +1432,11 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   \midrule
   Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
+  \midrule  
+  Fraction of disposable income on new energy service       & 0.062         & Calculation = \$1,275 (spend on energy service \\
+  {} [ratio]                                                &               & = 14,425 (miles) / 42 (mpg) \\
+                                                            &               & x (\$2.21/gallon) / (\$19,234 (spend on other goods) \\
+                                                            &               & + \$1,275  (spend on energy service)) = 0.062 \\
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
   $k$ [--]                                                  &               &               \\
@@ -1717,103 +1727,86 @@ personal finances of the average US citizen.
 The parameters and their values used in the study 
 are given below in Table~\ref{tab:lamp_economic_parameters}.
 
+\begin{landscape}
 \begin{table}
 \begin{center}
 \caption{Case study 2: Economic parameters}
 \label{tab:lamp_economic_parameters}
-\begin{tabular}{ r c c }
+\begin{tabular}{ r c l }
   \toprule
   Parameter & Value & Data sources \\ 
   \midrule
-  Lumens consumed prior to upgrade [lm/year] 
-  & 580,350  
-  & Calculation = 530lumens x 3 hrs/day x 365 days
-  \\ 
-  Real median personal income US, in 2018 [\$/year]
-  & 33,706 
-  & Taken from \citet{St_Louis_Fed:2019}.
-  \\ 
-  US Disposable income / real income (minus current taxes)
-  & 0.88 
-  & Taken from US Bureau of Economic Analysis (BEA) 
-  National and Products Accounts (NIPA) Table 2.1. 
-  Personal Income and Its Disposition,  
-  \citet{US_BEA:2020},
-  \\ 
-  Share of savings from disposable income
-  & 0.079 
-  & Taken from US Bureau of Economic Analysis (BEA) 
-  National and Products Accounts (NIPA) Table 2.1. 
-  Personal Income and Its Disposition,  
-  \citet{US_BEA:2020},
-  \\ 
-  Cost of electricity [\$/MJ]
-  & 0.0227
-  & Price of electricity for US households, 
-  taken as US average in 2020 =  \$0.1355/kWh 
-  from \citet{US_EIA:2020_electricity},
-  Calculation = \$0.1355 per kWh / 3.6MJ per kWh 
-  = \$0.0227/MJ
-  \\ 
-  Fraction of disposable income on new energy service  
-  & 0.00032 
-  & Calculation = \$9 (spend on energy service 
-  = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) 
-  x (\$0.1355/kWh /MJ)) / 
-  (\$27,391 (spend on other goods) 
-  + \$9  (spend on energy service)) 
-  = 0.00032
-  \\ 
-  Productivity multiplier  
-  & 1.0
-  & Assumed value 
-  \\  
+  Lumens consumed prior to upgrade                          & 580,350       & Calculation = 530lumens x 3 hrs/day x 365 days \\
+  {} [lm/year]                                              &               & \\
+  \midrule
+  Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  {} [\$/year]                                              &               & \\
+  \midrule
+  US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
+  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\
+                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
+                                                            &               & \citet{US_BEA:2020}, \\ 
+  \midrule
+  Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
+  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\ 
+                                                            &               & Table 2.1. Personal Income and Its Disposition, \\
+                                                            &               & \citet{US_BEA:2020}, \\
+  \midrule
+  Personal consumption                                      & 27401.28      & Calculated as $(\$33,706\mathrm{/year})(0.88268)(1 - 0.079)$ \\
+  $\rate{M}$ [\$/year]                                      &               &                                              \\
+  \midrule
+  Cost of electricity                                       & 0.0227        & Taken from US Energy Information Agency (EIA) data \\
+  $p_E$ [\$/MJ]                                             &               & Price of electricity for US households, \\
+                                                            &               & taken as US average in 2020 =  \$0.1355/kWh \\        
+                                                            &               & from \citet{US_EIA:2020_electricity},  \\
+                                                            &               & Calculation = \$0.1355 per kWh / 3.6MJ per kWh = \$0.0227/MJ \\
+  \midrule
+  Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service \\
+  {} [ratio]                                                &               & = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) \\
+                                                            &               & x (\$0.1355/kWh /MJ)) / (\$27,391 (spend on other goods) \\
+                                                            &               & + \$9  (spend on energy service)) = 0.00032 \\       
+  \midrule
+  Productivity multiplier                                   & 1.0           & Assumed value \\  
+  $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
+\end{landscape}
 
 
 Third, we require the elasticity parameters that we shall need, as given in Table~\ref{tab:lamp_elasticity_parameters}.
-%Matt: I made this table with four columns, as i've kept the symbol separate from the variable name. In Table 2 earlier, we only have 3 columns, we place the name and symbol in one column. Have a look at which you prefer.PEB
+
+\begin{landscape}
 \begin{table}
 \begin{center}
 \caption{Case study 2: Elasticity parameters}
 \label{tab:lamp_elasticity_parameters}
-\begin{tabular}{ r c c l}
+\begin{tabular}{ r c l }
   \toprule
-  Parameter & Symbol in paper & Value & Data sources\\ 
+  Description & Value & Data sources and notes \\
+  Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand 
-  & Symbol 
-  & -0.4 
-  & Price elasticity of demand taken from literature
- % ***MORE_REFS_FROM_GREGOR***
-  \\ 
-  Price elasticity of demand for car use
-  & ($\eqsps$) 
-  & -0.39997 
-  & Calculated via the Slutsky Equation C.1  
-  \\ 
-  Cross price elasticity of demand for other goods
-  & ($\eqops$)  
-  & 0.0001 
-  & Calculated via Equation C.13  
-  \\ 
-  Income elasticity of demand for car use
-  & ($\eqsM$)
-  & 1.0 
-  & assumed value
-  \\ 
-  Income elasticity of demand for other goods
-  & ($\eqoM$)
-  & 1.0 
-  & assumed value
-  \\ 
+  Marshallian (uncompensated) price elasticity of demand  &   -0.4    & Price elasticity of demand taken from literature  \citet{Borenstein:2015aa} \\
+  Symbol [--]                                             &           &   \\ 
+  \midrule
+  Price elasticity of demand for car use                  &   -0.3997  & Calculated via the Slutsky Equation C.1  \\
+  $\eqsps$ [--]                                           &           &   \\    
+  \midrule   
+  Cross price elasticity of demand for other goods        &   0.0001   & Calculated via Equation C.13  \\
+  $\eqops$ [--]                                           &           &   \\ 
+  \midrule   
+  Income elasticity of demand for car use                 &   1.0     & assumed value \\
+  $\eqsM$ [--]                                            &           &   \\ 
+  \midrule   
+  Income elasticity of demand for other goods             &   1.0     & assumed value \\
+  $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
+\end{landscape}
+
 
 Fourth, armed with the parameter values from 
 Table~\ref{tab:lamp_parameters}-
@@ -1845,13 +1838,15 @@ from the sum of components below:
   Rebound effect 
   & symbol & Value(\%) \\ 
   \midrule
+  Emplacement effect ($Re_{dempl}$) & 0.0 \\
   Embodied energy effect & $Re_{emb}$ & -0.3\% \\ 
   Maintenance and disposal effect & $Re_{md}$ & 0.0\% \\ 
   Substitution effect - direct & $Re_{dsub}$ & 17.4\% \\ 
   Substitution effect - indirect & $Re_{isub}$ & -12.7\% \\ 
   Income effect – direct & $Re_{dinc}$ & 0.0\% \\ 
   Income effect – indirect & $Re_{iinc}$ & 24.7\% \\ 
-  Macroeconomic – productivity effect & $Re_{prod}$ & 24.7\% \\   Total & $Re_{sum}$ & 53.9\% \\
+  Macroeconomic – productivity effect & $Re_{prod}$ & 24.7\% \\   
+  Total & $Re_{sum}$ & 53.9\% \\
 \bottomrule
 \end{tabular}
 \end{center}
