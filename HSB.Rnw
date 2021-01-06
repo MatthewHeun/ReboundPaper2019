@@ -1535,20 +1535,20 @@ from the sum of components below:
 \begin{center}
 \caption{Car example: rebound results}
 \label{tab:car_results}
-\begin{tabular}{ r l }
+\begin{tabular}{ r r }
   \toprule
   Rebound effect (symbol) & Value [\%] \\ 
   \midrule
-  Emplacement effect ($Re_{dempl}$) & +0.0 \\
-  Embodied energy effect ($Re_{emb}$) & +1.4 \\ 
-  Maintenance and disposal effect ($Re_{md}$) & -1.0 \\ 
-  Substitution effect - direct ($Re_{dsub}$) & +2.9 \\ 
-  Substitution effect - indirect ($Re_{isub}$) & -0.3 \\ 
-  Income effect – direct ($Re_{dinc}$) & +5.3 \\ 
-  Income effect – indirect ($Re_{iinc}$) & +7.8 \\ 
-  Macroeconomic – productivity effect ($Re_{prod}$) & +8.2 \\   
+  Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
+  Embodied energy effect--indirect ($Re_{emb}$) & 1.4 \\ 
+  Maintenance and disposal effect--indirect ($Re_{md}$) & --1.0 \\ 
+  Substitution effect--direct ($Re_{dsub}$) & 2.9 \\ 
+  Substitution effect--indirect ($Re_{isub}$) & --0.3 \\ 
+  Income effect--direct ($Re_{dinc}$) & 5.3 \\ 
+  Income effect--indirect ($Re_{iinc}$) & 7.8 \\ 
+  Macroeconomic productivity effect--indirect ($Re_{prod}$) & 8.2 \\   
   \midrule
-  Total ($Re_{sum}$) & +24.4 \\
+  Total ($Re_{sum}$) & 24.4 \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -1825,16 +1825,16 @@ from the sum of components below:
   \toprule
   Rebound effect (symbol) & Value [\%] \\ 
   \midrule
-  Emplacement effect ($Re_{dempl}$) & +0.0 \\
-  Embodied energy effect ($Re_{emb}$) & -0.3 \\ 
-  Maintenance and disposal effect ($Re_{md}$) & +0.0 \\ 
-  Substitution effect - direct ($Re_{dsub}$) & +17.4 \\ 
-  Substitution effect - indirect ($Re_{isub}$) & -12.7 \\ 
-  Income effect – direct ($Re_{dinc}$) & +0.02 \\ 
-  Income effect – indirect ($Re_{iinc}$) & +24.7 \\ 
-  Macroeconomic – productivity effect ($Re_{prod}$) & +24.7 \\   
+  Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
+  Embodied energy effect--indirect ($Re_{emb}$) & --0.3 \\ 
+  Maintenance and disposal effect--indirect ($Re_{md}$) & 0.0 \\ 
+  Substitution effect--direct ($Re_{dsub}$) & 17.4 \\ 
+  Substitution effect--indirect ($Re_{isub}$) & --12.7 \\ 
+  Income effect--direct ($Re_{dinc}$) & 0.02 \\ 
+  Income effect--indirect ($Re_{iinc}$) & 24.7 \\ 
+  Macroeconomic productivity effect--indirect ($Re_{prod}$) & 24.7 \\   
 \midrule
-Total ($Re_{sum}$) & +53.9 \\
+Total ($Re_{sum}$) & 53.9 \\
 \bottomrule
 \end{tabular}
 \end{center}
