@@ -1434,9 +1434,9 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fraction of disposable income on new energy service       & 0.062         & Calculation = \$1,275 (spend on energy service \\
-  {} [--]                                                   &               & = 14,425 (miles) / 42 (mpg) \\
-                                                            &               & x (\$2.21/gallon) / (\$19,234 (spend on other goods) \\
+  Fraction of disposable income on new energy service       & 0.062         & Calculation: \$1,275 (spend on energy service \\
+  $\fCs$ [--]                                               &               & = 14,425 (miles) / 42 (mpg) \\
+                                                            &               & $\times$ (\$2.21/gallon) / (\$19,234 (spend on other goods) \\
                                                             &               & + \$1,275  (spend on energy service)) = 0.062 \\
   \midrule
   Productivity multiplier                                   & 1.0           & Assumed value \\  
