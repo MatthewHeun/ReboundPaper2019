@@ -1724,7 +1724,7 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
                                                             &               & from \citet{US_EIA:2020_electricity},  \\
                                                             &               & Calculation = \$0.1355 per kWh / 3.6MJ per kWh = \$0.0227/MJ \\
   \midrule
-  Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service) \\
+  Fractional spend on energy service                        & 0.00032       & Calculation = \$9 (spend on energy service) \\
   $\fCs$ [--]                                               &               & / [\$27,391 (spend on other goods) + \\
                                                             &               & \$9  (spend on energy service)] = 0.00032, \\
                                                             &               & where spend on energy service = 580,350 lumen-hrs / 81.8 Lm/W / 1000 W/kW \\
