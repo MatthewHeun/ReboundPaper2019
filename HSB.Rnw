@@ -1273,7 +1273,7 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-<<eeu_data>>=
+<<eeu_data, echo=FALSE>>=
 # Load our test cases and perform rebound analyses.
 rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx") %>% 
   ReboundTools::rebound_analysis()
@@ -1354,7 +1354,7 @@ in Table~\ref{tab:car_parameters}.
 \begin{tabular}{ r c c l }
   \toprule
     Description                  & Ford Fusion & Ford Fusion & Data sources and notes\\ 
-    Parameter [units]                                & (gasoline) & (hybrid EV) &  \\
+    Parameters [units]                                & (gasoline) & (hybrid EV) &  \\
   \midrule
   Fuel efficiency                                   & 25        & 42       & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
   $\bempl{\eta}$, $\aprod{\eta}$ [mpg]              &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
@@ -1421,6 +1421,9 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   symbol [\$/year]                                          &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
+  \midrule
+  Personal consumption                                      & 27401.28      & Calculated as $(0.88268)(33706)(1 - 0.079)$ \\
+  $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Cost of gasoline                                          & 2.21          & Taken from US Energy Information Agency (EIA) data \\
   symbol [\$/Gallon]                                        &               & \citet{US_EIA:2020_gasoline} \\
