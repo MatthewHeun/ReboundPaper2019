@@ -1407,7 +1407,8 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 \label{tab:car_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
-  Parameter & Value & Data sources \\ 
+  Description & Value & Data sources and notes \\ 
+  Parameter [units] & & \\
   \midrule
   Distance driven prior to upgrade                          & 14,425        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
   {} [miles/year]                                           &               & This is slightly higher than the average driver miles/year \\
@@ -1418,12 +1419,12 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   {} [\$/year]                                              &               & \\
   \midrule
   US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\
+  {} [--]                                                   &               & National and Products Accounts (NIPA) \\
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
   Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\ 
+  {} [--]                                                   &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
@@ -1434,7 +1435,7 @@ are given below in Table~\ref{tab:car_economic_parameters}.
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
   Fraction of disposable income on new energy service       & 0.062         & Calculation = \$1,275 (spend on energy service \\
-  {} [ratio]                                                &               & = 14,425 (miles) / 42 (mpg) \\
+  {} [--]                                                   &               & = 14,425 (miles) / 42 (mpg) \\
                                                             &               & x (\$2.21/gallon) / (\$19,234 (spend on other goods) \\
                                                             &               & + \$1,275  (spend on energy service)) = 0.062 \\
   \midrule
@@ -1653,73 +1654,61 @@ with the additional benefit of decreased running costs.
 
 Again, we require four sets of data. 
 First, the basic lamp parameters, which are summarized below:  
-Table~\ref{tab:lamp_parameters} shows parameters for the electic lamp efficiency upgrade (EEU).
-
+Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficiency upgrade (EEU).
 
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Case study 2: Electric lamp parameters}
+\caption{Case study 2: Electric lamp parameters.} 
 \label{tab:lamp_parameters}
 \begin{tabular}{ r c c l }
   \toprule
-                      & Incandescent lamp & LED lamp & Data sources\\ 
+    Description                  & Incandescent lamp & LED lamp & Data sources and notes\\ 
+    Parameters [units]                                &  &  & \\
   \midrule
-  lamp efficacy $\bempl{\eta}$, $\aprod{\eta}$ [lm/W] 
-  & 8.83 
-  & 81.8 
-  & Incandescent lamp calculation = 530 lumen output / 60 Watt energy input. LED lamp calculation = 450 lumen output / 5.5 Watt energy input.
- \\  
-  Capital expenditure rate 
-  $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] 
-   & 1.044 
-   & 0.121
-   & Purchase costs: \$1.88 for incandescent lamp from \citet{Home_Depot:2020_Inc_bulb} and \$1.21 for LED lamp   \citet{Home_Depot:2020_LED_bulb},
- \\
-   Ownership length $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years] 
-   & 1.8 
-   & 10 
-   & assumed to be same as lamp lifetime.  
- \\
-   Lamp lifetime $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] 
-   & 1.8 
-   & 10 
-   & based on assumed 3 hours/day 
-   from \citet{Home_Depot:2020_Inc_bulb} 
-   and  \citet{Home_Depot:2020_LED_bulb}.
- \\
-   Life cycle analysis (LCA) embodied energy 
-   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ] 
-   & 2.21 
-   & 6.50 
-   & Base document is Table 4.5 Manufacturing Energy Primary
-   energy (MJ/20 Million lumen hours), 
-   US DoE Life-cycle assessment of energy and environmental
-   impacts of LED lighting products, available at 
-   \citet{US_DoE:2012},
-   Incandescent lamp calculation: Table 4.5 LCA energy 
-   = 42.2 MJ/20 Million lumen-hours. 
-   Incandescent lamp lifetime output 
-   = 530lumens x 3hours/day x 365 days x 1.8 (years) 
-   = 1,044,630lumen-hrs. 
-   Thus LCA energy / lamp =  42.2 x 1.0446/20 = 2.21MJ
-   LED lamp calculation: Table 4.5 gives LCA energy 
-   = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps.
-   LED lamp lifetime output 
-   = 450lumens x 3hours/day x 365 days x 10 (years) 
-   = 4,926,405 lumen-hrs. 
-   Thus LCA energy / lamp =  132/5 x 4.9264/20 = 6.5MJ
- \\
-   Maintenance and disposal costs $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year] 
-   & 0.001 
-   & 0.001 
-   & taken as \$0.001 to avoid 0/0 calculation error
- \\
+  Lamp efficacy                                     & 8.83      & 81.8     & Incandescent lamp calculation  \\
+  $\bempl{\eta}$, $\aprod{\eta}$ [mpg]              &           &          & = 530 lumen output / 60 Watt energy input.\\
+                                                    &           &          & LED lamp calculation \\
+                                                    &           &          & = 450 lumen output / 5.5 Watt energy input.  \\
+  \midrule
+   Capital cost rate                                & 1.044     & 0.121    & Purchase costs: \$1.88 for incandescent lamp from  \\
+   $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb} \\
+                                                    &           &          & and \$1.21 for LED lamp from \\
+                                                    &           &          & \citet{Home_Depot:2020_LED_bulb}. \\
+  \midrule
+   Ownership duration                               & 1.8       & 10       & assumed to be same as lamp lifetime. \\
+   $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          &  \\
+ \midrule
+   Lifespan                                         & 1.8       & 10       & based on assumed 3 hours/day  \\
+   $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Home_Depot:2020_Inc_bulb} \\
+                                                    &           &          & and  \citet{Home_Depot:2020_LED_bulb}. \\
+   \midrule
+   Life cycle analysis (LCA) embodied energy        & 2.21      & 6.50     & Base document is Table 4.5 Manufacturing Energy  \\
+   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Primary energy (MJ/20 Million lumen hours), \\
+                                                    &           &          & US DoE Life-cycle assessment of energy and environmental \\
+                                                    &           &          & impacts of LED lighting products, available at\\
+                                                    &           &          & \citet{US_DoE:2012}, \\
+                                                    &           &          & Incandescent lamp calculation: \\
+                                                    &           &          & Table 4.5 LCA energy = 42.2 MJ/20 Million lumen-hours.  \\
+                                                    &           &          & Incandescent lamp lifetime output = 530lumens x 3hours/day \\
+                                                    &           &          & x 365 days x 1.8 (years) = 1,044,630lumen-hrs.\\
+                                                    &           &          & Thus LCA energy / lamp =  42.2 x 1.0446/20 = 2.21MJ. \\
+                                                    &           &          & LED lamp calculation: Table 4.5 gives LCA energy \\
+                                                    &           &          & = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps. \\
+                                                    &           &          & LED lamp lifetime output = 450lumens x 3hours/day  \\
+                                                    &           &          & x 365 days x 10 (years) = 4,926,405 lumen-hrs. \\
+                                                    &           &          & Thus LCA energy / lamp =  132/5 x 4.9264/20 = 6.5MJ. \\ 
+ \midrule
+  Maintenance and disposal cost rate                & 0.001     & 0.001    & taken as \$0.001 to avoid 0/0 calculation error. \\
+  $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
   \bottomrule
 \end{tabular}
 \end{center}
 \end{table}
 \end{landscape}
+
+
+
 
 Second, we require several general parameters, 
 mainly relating to the US economy and 
@@ -1734,7 +1723,8 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
 \label{tab:lamp_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
-  Parameter & Value & Data sources \\ 
+  Description  & Value & Data sources and notes \\ 
+  Parameter [units] & & \\
   \midrule
   Lumens consumed prior to upgrade                          & 580,350       & Calculation = 530lumens x 3 hrs/day x 365 days \\
   {} [lm/year]                                              &               & \\
@@ -1743,12 +1733,12 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
   {} [\$/year]                                              &               & \\
   \midrule
   US Disposable income / real income (minus current taxes)  & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\
+  {} [--]                                                   &               & National and Products Accounts (NIPA) \\
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
   Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
-  {} [ratio]                                                &               & National and Products Accounts (NIPA) \\ 
+  {} [--]                                                   &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
@@ -1762,7 +1752,7 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
                                                             &               & Calculation = \$0.1355 per kWh / 3.6MJ per kWh = \$0.0227/MJ \\
   \midrule
   Fraction of disposable income on new energy service       & 0.00032       & Calculation = \$9 (spend on energy service \\
-  {} [ratio]                                                &               & = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) \\
+  {} [--]                                                   &               & = 580,350 (lumen-hrs) / 81.8 (Lm/W) / 1000 (W/kW) \\
                                                             &               & x (\$0.1355/kWh /MJ)) / (\$27,391 (spend on other goods) \\
                                                             &               & + \$9  (spend on energy service)) = 0.00032 \\       
   \midrule
