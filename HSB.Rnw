@@ -1521,36 +1521,6 @@ rebound_data %>%
         format.args = list(big.mark = ","))
 @
 
-<<lamp_stages_table, results="asis", echo=FALSE>>=
-digs_lamp <- matrix(c(rep(0, 7), # eta
-                      rep(8, 7), # p_s
-                      rep(0, 7), # q_dot_s
-                      rep(1, 7), # E_dot_s
-                      rep(3, 7), # E_dot_emb
-                      rep(2, 7), # C_dot_s
-                      rep(2, 7), # C_dot_cap
-                      rep(2, 7), # C_dot_md
-                      rep(0, 7), # C_dot_o
-                      rep(2, 7), # N_dot
-                      rep(0, 7)), # M_dot
-                    nrow = 11, ncol = 7, byrow = TRUE)
-rebound_data %>% 
-  dplyr::filter(Case == "Lamp") %>% 
-  dplyr::mutate(
-    Case = NULL
-  ) %>% 
-  ReboundTools::stages_table(label = "tab:lamp_stages_table", 
-                             caption = "Results for lamp example.", 
-                             digits = digs_lamp, 
-                             align = "lrrrrrr") %>% 
-  print(include.rownames = FALSE, 
-        booktabs = TRUE,
-        caption.placement = "top",
-        sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
-@
-
-
 %------------------------------
 \subsubsection{Results} 
 \label{sec:Car_results}
@@ -1805,8 +1775,37 @@ and using the equations given in
 Appendix~\ref{sec:derivation}, 
 we can now produce the values of other parameters given in Table B9, 
 % Matt i coudlnt find the dynamic link to Table B9
-as shown below in 
-%Matt, this is the big Table, should we import for now as a picture? with perhaps a later effort to build a table in the same manner as Table B9?
+as shown below in Table~\ref{tab:lamp_stages_table}.
+
+
+<<lamp_stages_table, results="asis", echo=FALSE>>=
+digs_lamp <- matrix(c(rep(0, 7), # eta
+                      rep(8, 7), # p_s
+                      rep(0, 7), # q_dot_s
+                      rep(1, 7), # E_dot_s
+                      rep(3, 7), # E_dot_emb
+                      rep(2, 7), # C_dot_s
+                      rep(2, 7), # C_dot_cap
+                      rep(2, 7), # C_dot_md
+                      rep(0, 7), # C_dot_o
+                      rep(2, 7), # N_dot
+                      rep(0, 7)), # M_dot
+                    nrow = 11, ncol = 7, byrow = TRUE)
+rebound_data %>% 
+  dplyr::filter(Case == "Lamp") %>% 
+  dplyr::mutate(
+    Case = NULL
+  ) %>% 
+  ReboundTools::stages_table(label = "tab:lamp_stages_table", 
+                             caption = "Results for lamp example.", 
+                             digits = digs_lamp, 
+                             align = "lrrrrrr") %>% 
+  print(include.rownames = FALSE, 
+        booktabs = TRUE,
+        caption.placement = "top",
+        sanitize.text.function = function(x) {x},
+        format.args = list(big.mark = ","))
+@
 
 
 
