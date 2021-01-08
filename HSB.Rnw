@@ -1268,16 +1268,26 @@ we find
 % are known.
 
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Graphical representation}
+\label{sec:example_rebound_graphs}
+%++++++++++++++++++++++++++++++
+
+<<eeu_data, echo=FALSE>>=
+# Load our test cases and perform rebound analyses.
+rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
+rebound_results <- ReboundTools::rebound_analysis(rebound_data)
+@
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Calculations: two examples (PB, 2000 words)}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-<<eeu_data, echo=FALSE>>=
-# Load our test cases and perform rebound analyses.
-rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx") %>% 
-  ReboundTools::rebound_analysis()
-@
 
 
 
@@ -1333,18 +1343,6 @@ in Table~\ref{tab:car_parameters}.
 
 % Reduce spacing between table rows henceforth.
 \renewcommand{\arraystretch}{0.6}
-
-%****
-%Paul:
-%I have edited the first table to fit all the text using the 
-%information at
-%\url{https://en.wikibooks.org/wiki/LaTeX/Tables#Space_between_rows}.
-%Can you follow the pattern to adjust the remainder of the tables?
-%I have moved all tables to full-page, landscape.
-%---MKH
-%****
-
-
 
 \begin{landscape}
 \begin{table}
@@ -1506,7 +1504,7 @@ digs_car <- matrix(c(rep(3, 7), # eta
                      rep(0, 7), # N_dot
                      rep(0, 7)), # M_dot
                    nrow = 11, ncol = 7, byrow = TRUE)
-rebound_data %>% 
+rebound_results %>% 
   dplyr::filter(Case == "Car") %>% 
   dplyr::mutate(
     Case = NULL
@@ -1553,6 +1551,31 @@ from the sum of components below:
 \end{tabular}
 \end{center}
 \end{table}
+
+
+<<CarEnergyGraph, echo = FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Car", 
+                               graph_types = "Energy") + 
+  MKHthemes::xy_theme()
+@
+
+
+<<CarCostGraph, echo = FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Car", 
+                               graph_types = "Cost") + 
+  MKHthemes::xy_theme()
+@
+
+
+<<CarPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Car", 
+                               graph_types = "Preferences") + 
+  MKHthemes::xy_theme()
+@
+
 
 
 Let's take each of these effects in turn. 
@@ -1789,7 +1812,7 @@ digs_lamp <- matrix(c(rep(0, 7), # eta
                       rep(2, 7), # N_dot
                       rep(0, 7)), # M_dot
                     nrow = 11, ncol = 7, byrow = TRUE)
-rebound_data %>% 
+rebound_results %>% 
   dplyr::filter(Case == "Lamp") %>% 
   dplyr::mutate(
     Case = NULL
@@ -1806,6 +1829,29 @@ rebound_data %>%
 @
 
 
+<<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Lamp", 
+                               graph_types = "Energy") + 
+  MKHthemes::xy_theme()
+@
+
+
+<<LampCostGraph, echo = FALSE, fig.cap="Cost path graph, lamp example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Lamp", 
+                               graph_types = "Cost") + 
+  MKHthemes::xy_theme()
+@
+
+
+<<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, lamp example.", fig.width=6, fig.height=4>>=
+rebound_data %>% 
+  ReboundTools::rebound_graphs(cases = "Lamp", 
+                               graph_types = "Preferences") + 
+  MKHthemes::xy_theme()
+@
+
 
 %------------------------------
 \subsubsection{Results} 
@@ -1821,7 +1867,7 @@ from the sum of components below:
 \begin{center}
 \caption{Lamp example: rebound results}
 \label{tab:lamp_results}
-\begin{tabular}{ r l }
+\begin{tabular}{ r r }
   \toprule
   Rebound effect (symbol) & Value [\%] \\ 
   \midrule
