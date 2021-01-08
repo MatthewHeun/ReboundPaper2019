@@ -1553,10 +1553,30 @@ from the sum of components below:
 \end{table}
 
 
+<<CarGraphParams>>=
+@
+
 <<CarEnergyGraph, echo = FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
+pal <- RColorBrewer::brewer.pal(9, "YlOrRd")[2:9] %>% rev()
+car_graph_params <- ReboundTools::default_graph_params
+car_graph_params$dempl_colour <- pal[[1]]
+car_graph_params$emb_colour <- pal[[2]]
+car_graph_params$cap_colour <- pal[[2]]
+car_graph_params$md_colour <- "black"
+car_graph_params$dsub_colour <- pal[[4]]
+car_graph_params$isub_colour <- pal[[5]]
+car_graph_params$dinc_colour <- pal[[6]]
+car_graph_params$iinc_colour <- pal[[7]]
+car_graph_params$prod_colour <- pal[[8]]
+
+car_graph_params$emb_size <- 2
+car_graph_params$cap_size <- 2
+
+
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
-                               graph_types = "Energy") + 
+                               graph_types = "Energy", 
+                               graph_params = car_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1564,7 +1584,8 @@ rebound_data %>%
 <<CarCostGraph, echo = FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
-                               graph_types = "Cost") + 
+                               graph_types = "Cost", 
+                               graph_params = car_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1572,7 +1593,8 @@ rebound_data %>%
 <<CarPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
-                               graph_types = "Preferences") + 
+                               graph_types = "Preferences", 
+                               graph_params = car_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1830,9 +1852,11 @@ rebound_results %>%
 
 
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
+lamp_graph_params <- car_graph_params
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
-                               graph_types = "Energy") + 
+                               graph_types = "Energy", 
+                               graph_params = lamp_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1840,7 +1864,8 @@ rebound_data %>%
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path graph, lamp example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
-                               graph_types = "Cost") + 
+                               graph_types = "Cost", 
+                               graph_params = lamp_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1848,7 +1873,8 @@ rebound_data %>%
 <<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, lamp example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
-                               graph_types = "Preferences") + 
+                               graph_types = "Preferences", 
+                               graph_params = lamp_graph_params) + 
   MKHthemes::xy_theme()
 @
 
