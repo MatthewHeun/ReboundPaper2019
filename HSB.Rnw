@@ -1557,20 +1557,28 @@ from the sum of components below:
 @
 
 <<CarEnergyGraph, echo = FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
-pal <- RColorBrewer::brewer.pal(9, "YlOrRd")[2:9] %>% rev()
+pal <- RColorBrewer::brewer.pal(12, "Paired")
+# library(viridis)
+# pal <- viridis(8)
 car_graph_params <- ReboundTools::default_graph_params
-car_graph_params$dempl_colour <- pal[[1]]
-car_graph_params$emb_colour <- pal[[2]]
-car_graph_params$cap_colour <- pal[[2]]
-car_graph_params$md_colour <- "black"
-car_graph_params$dsub_colour <- pal[[4]]
-car_graph_params$isub_colour <- pal[[5]]
-car_graph_params$dinc_colour <- pal[[6]]
-car_graph_params$iinc_colour <- pal[[7]]
-car_graph_params$prod_colour <- pal[[8]]
+car_graph_params$dempl_colour <- "lightgray"
+car_graph_params$dempl_size <- 0.5
+car_graph_params$dempl_linetype <- "longdash"
+car_graph_params$emb_colour <- pal[[1]]
+car_graph_params$cap_colour <- pal[[1]]
+car_graph_params$md_colour <- pal[[2]]
+car_graph_params$md_size <- 0.3
+car_graph_params$md_linetype <- "dotted"
+car_graph_params$dsub_colour <- pal[[3]]
+car_graph_params$dsub_size <- 0.3
+car_graph_params$dsub_linetype <- "dotted"
+car_graph_params$isub_colour <- pal[[4]]
+car_graph_params$dinc_colour <- pal[[5]]
+car_graph_params$dinc_size <- 0.3
+car_graph_params$dinc_linetype <- "dotted"
+car_graph_params$iinc_colour <- pal[[6]]
+car_graph_params$prod_colour <- pal[[7]]
 
-car_graph_params$emb_size <- 2
-car_graph_params$cap_size <- 2
 
 
 rebound_data %>% 
