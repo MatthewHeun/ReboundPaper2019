@@ -1571,11 +1571,11 @@ car_graph_params$md_size <- 0.3
 car_graph_params$md_linetype <- "dotted"
 car_graph_params$dsub_colour <- pal[[3]]
 car_graph_params$dsub_size <- 0.3
-car_graph_params$dsub_linetype <- "dotted"
+car_graph_params$dsub_linetype <- "dashed"
 car_graph_params$isub_colour <- pal[[4]]
 car_graph_params$dinc_colour <- pal[[5]]
 car_graph_params$dinc_size <- 0.3
-car_graph_params$dinc_linetype <- "dotted"
+car_graph_params$dinc_linetype <- "dashed"
 car_graph_params$iinc_colour <- pal[[6]]
 car_graph_params$prod_colour <- pal[[7]]
 
