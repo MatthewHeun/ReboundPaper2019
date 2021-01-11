@@ -3,4 +3,93 @@
 % before building the paper.
 %!TEX root = ../HSB.Rnw
 
-This is the utility appendix.
+We adopt a constant elasticity of substitution model for utility,
+normalized (indexed) by parameters at the pre-emplacement stage.
+
+\begin{equation}
+  \frac{\rate{u}}{\rbempl{u}} = 
+  \left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
+        + (1-\fCs) \left( \frac{\rate{q}_o}{\rbempl{q}_o} \right)^\rho  \right]^{(1/\rho)}
+\end{equation}
+
+However, the quantity of other goods consumption ($\rate{q}_o$)
+is not known independent of the prices of other goods ($p_o$).
+With the assumption that the prices of other goods do not change
+(i.e., $p_o$ is exogenous), 
+the ratio of other goods consumption is equal to the ratio of other good spending
+($\frac{\rate{C}_o}{\rbempl{C}_o} = \frac{\cancel{p_o} \rate{q}_o}{\cancel{p_o} \rbempl{q}_o} =
+\frac{\rate{q}_o}{\rbempl{q}_o}$), such that
+
+\begin{equation} \label{eq:ces_utility}
+  \cesutility \; ,
+\end{equation}
+%
+where $\rho = \frac{\sigma - 1}{\sigma}$, and 
+$\sigma$ is the elasticity of substitution between
+consumption of the energy service and other goods.
+
+Eq.~(\ref{eq:ces_utility}) can be rearranged to find 
+consumption of other goods ($\rate{C}_o/\rbempl{C}_o$)
+as a function of consumption of the energy service 
+($\rate{q}_s/\rbempl{q}_s$)
+and utility ($\rate{u}/\rbempl{u}$):
+
+\begin{equation}
+  \frac{\rate{C}}{\rbempl{C}_o} = 
+      \left[ \frac{1}{1 - \fCs} \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho 
+            - \frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1/\rho)} \; ,
+\end{equation}
+%
+a form convenient for graphing other goods consumption ($\rate{C}_o/\rbempl{C}_o$) vs.\ 
+energy service consumption ($\rate{q}_s/\rbempl{q}_s$) 
+with constant utility ($\rate{u}/\rbempl{u}$) indifference curves.
+In $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space, 
+the slope of an indifference curve is given by 
+
+\begin{align} \label{eq:slope_indifference_curve}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
+        -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \\
+        &\times \left[ \left( \frac{1}{1 - \fCs} \right) \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho
+                - \left( \frac{\fCs}{1 - \fCs} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+
+Note that a constant-expenditure line on the 
+$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ graph
+can be derived from the budget constraint:
+
+\begin{equation}
+  \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; . 
+\end{equation}
+%
+Solving for $\rate{C}_o$ and judiciously multiplying by $\rbempl{C}_o/\rbempl{C}_o$
+and $\rbempl{q}_s/\rbempl{q}_s$ gives
+
+\begin{equation}
+  \frac{\rate{C}_o}{\rbempl{C}_o} \rbempl{C}_o = - p_s \frac{\rate{q}_s}{\rbempl{q}_s} \rbempl{q}_s
+                        + \rate{M} - \rate{C}_{cap} - \rate{C}_{md} \; .
+\end{equation}
+%
+Solving for $\rate{C}_o/\rbempl{C}_o$ and rearranging gives
+
+\begin{equation}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o}  
+                                        \left( \frac{\rate{q}_s}{\rbempl{q}_s}   \right)
+                                    + \frac{1}{\rbempl{C}_o}
+                                          (\rate{M} - \rate{C}_{cap} - \rate{C}_{md}) \; ,
+\end{equation}
+%
+from which the slope is taken to be
+
+\begin{equation} \label{eq:slope_expenditure_line}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =
+              - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o} \; .
+\end{equation}
+
+At an equilibrium point, the expenditure line must be tangent to its indifference curve.
+Setting the slope of the expenditure line (Eq.~(\ref{eq:slope_expenditure_line}))
+equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_curve})) gives
+
+
+
+
