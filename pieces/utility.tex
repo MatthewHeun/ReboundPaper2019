@@ -8,9 +8,15 @@ normalized (indexed) by parameters at the pre-emplacement stage.
 
 \begin{equation}
   \frac{\rate{u}}{\rbempl{u}} = 
-  \left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
-        + (1-\fCs) \left( \frac{\rate{q}_o}{\rbempl{q}_o} \right)^\rho  \right]^{(1/\rho)}
+  \left[ a \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
+        + (1-a) \left( \frac{\rate{q}_o}{\rbempl{q}_o} \right)^\rho  \right]^{(1/\rho)} \; ,
 \end{equation}
+%
+where $a$ is a share parameter (determined below),
+$\rho = \frac{\sigma - 1}{\sigma}$, and 
+$\sigma$ is the elasticity of substitution between
+consumption of the energy service and 
+consumption of other goods.
 
 However, the quantity of other goods consumption ($\rate{q}_o$)
 is not known independent of the prices of other goods ($p_o$).
@@ -20,13 +26,11 @@ the ratio of other goods consumption is equal to the ratio of other good spendin
 ($\frac{\rate{C}_o}{\rbempl{C}_o} = \frac{\cancel{p_o} \rate{q}_o}{\cancel{p_o} \rbempl{q}_o} =
 \frac{\rate{q}_o}{\rbempl{q}_o}$), such that
 
-\begin{equation} \label{eq:ces_utility}
-  \cesutility \; ,
-\end{equation}
+\begin{equation}
+  \frac{\rate{u}}{\rbempl{u}} = 
+  \left[ a \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
+        + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}\end{equation}
 %
-where $\rho = \frac{\sigma - 1}{\sigma}$, and 
-$\sigma$ is the elasticity of substitution between
-consumption of the energy service and other goods.
 
 Eq.~(\ref{eq:ces_utility}) can be rearranged to find 
 consumption of other goods ($\rate{C}_o/\rbempl{C}_o$)
@@ -36,8 +40,8 @@ and utility ($\rate{u}/\rbempl{u}$):
 
 \begin{equation}
   \frac{\rate{C}}{\rbempl{C}_o} = 
-      \left[ \frac{1}{1 - \fCs} \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho 
-            - \frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1/\rho)} \; ,
+      \left[ \frac{1}{1 - a} \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho 
+            - \frac{a}{1 - a} \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1/\rho)} \; ,
 \end{equation}
 %
 a form convenient for graphing other goods consumption ($\rate{C}_o/\rbempl{C}_o$) vs.\ 
@@ -48,9 +52,9 @@ the slope of an indifference curve is given by
 
 \begin{align} \label{eq:slope_indifference_curve}
   \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
-        -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \\
-        &\times \left[ \left( \frac{1}{1 - \fCs} \right) \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho
-                - \left( \frac{\fCs}{1 - \fCs} \right) 
+        -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber  \\
+        &\times \left[ \left( \frac{1}{1 - a} \right) \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho
+                - \left( \frac{a}{1 - a} \right) 
                           \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
 \end{align}
 
@@ -86,10 +90,50 @@ from which the slope is taken to be
               - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o} \; .
 \end{equation}
 
-At an equilibrium point, the expenditure line must be tangent to its indifference curve.
+At any equilibrium point, the expenditure line must be tangent to its indifference curve.
+Applying the tangency requirement before emplacement enables 
+solving for the correct expression for $a$.
 Setting the slope of the expenditure line (Eq.~(\ref{eq:slope_expenditure_line}))
 equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_curve})) gives
 
+\begin{align}
+  - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o} =& 
+        -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber \\
+        &\times \left[ \left( \frac{1}{1 - a} \right) \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho
+                - \left( \frac{a}{1 - a} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+%
+Prior to emplacement, $\rate{q}_s/\rbempl{q}_s = 1$, $\rate{u}/\rbempl{u} = 1$, and
+$p_s = \bempl{p}_s$, which yields
 
+\begin{equation}
+  - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} =
+        -\frac{a}{1 - a} (1)^{(\rho -1)}
+        \left[ \left( \frac{1}{1 - a} \right) (1)^\rho
+                - \left( \frac{a}{1 - a} \right) 
+                          (1)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{equation}
+%
+Simplifying gives
+
+\begin{equation}
+  \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} = \frac{a}{1 - a} \; .
+\end{equation}
+%
+Recognizing that $\bempl{p}_s \rbempl{q}_s = \rbempl{C}_s$ and solving for
+$a$ gives
+
+\begin{equation}
+  a = \frac{\rbempl{C}_s}{\rbempl{C}_s + \rbempl{C}_o} \; ,
+\end{equation}
+%
+which is called $\fCs$.
+Thus, the utility equation becomes
+
+\begin{equation} \label{eq:ces_utility}
+  \cesutility \; .
+\end{equation}
+%
 
 
