@@ -1556,7 +1556,7 @@ from the sum of components below:
 <<CarGraphParams>>=
 @
 
-<<CarEnergyGraph, echo = FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
 pal <- RColorBrewer::brewer.pal(12, "Paired")
 # library(viridis)
 # pal <- viridis(8)
@@ -1579,8 +1579,6 @@ car_graph_params$dinc_linetype <- "dashed"
 car_graph_params$iinc_colour <- pal[[6]]
 car_graph_params$prod_colour <- pal[[7]]
 
-
-
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Energy", 
@@ -1589,7 +1587,7 @@ rebound_data %>%
 @
 
 
-<<CarCostGraph, echo = FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarCostGraph, echo=FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Cost", 
@@ -1598,11 +1596,18 @@ rebound_data %>%
 @
 
 
-<<CarPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
+car_graph_params$prefs_indiff_grid_size <- 1
+car_graph_params$n_indiff_curve_points <- 10
+car_graph_params$qs_qs0_lower <- 0.9
+car_graph_params$qs_qs0_upper <- 1.2
+
 rebound_data %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
+  ggplot2::xlim(0.95, 1.1) +
+  ggplot2::ylim(NA, 1.04) +
   MKHthemes::xy_theme()
 @
 
