@@ -2122,5 +2122,13 @@ using an early version of this framework.
 \input{pieces/proof_income_elasticities.tex}
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Utility model}
+\label{sec:utility_model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/utility.tex}
+
+
 
 \end{document}
