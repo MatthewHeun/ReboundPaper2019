@@ -3,6 +3,15 @@
 % before building the paper.
 %!TEX root = ../HSB.Rnw
 
+This appendix provides details of the utility model employed in the paper.
+It shows the form of the equation and derives the correct expression for the share parameter.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Form of the utility model}
+\label{sec:utility_model_form}
+%++++++++++++++++++++++++++++++
+
 We adopt a constant elasticity of substitution (CES) model for utility ($\rate{u}$),
 normalized by (indexed to) parameters before emplacement:
 
@@ -19,7 +28,7 @@ consumption of the energy service and
 consumption of other goods.
 
 However, the rate of other goods consumption ($\rate{q}_o$)
-is not known independent of the prices of other goods ($p_o$).
+is not known independently of the prices of other goods ($p_o$).
 With the assumption that the prices of other goods do not change
 (i.e., $p_o$ is exogenous), 
 the ratio of other goods consumption is equal to the ratio of other good spending
@@ -32,6 +41,18 @@ the ratio of other goods consumption is equal to the ratio of other good spendin
         + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}
 \end{equation}
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Determination of the share parameter ($a$)}
+\label{sec:share_parameter_derivation}
+%++++++++++++++++++++++++++++++
+
+Determination of the correct expression for the share parameter ($a$) is found from the 
+equilibrium requirement prior to emplacement of the energy efficient device,
+namely that the slope of the indifference curve is tangent to (has the same slope as)
+the expenditure curve.
+
+To find the slope of the indifference curve,
 Eq.~(\ref{eq:ces_utility_with_a}) can be rearranged to find 
 consumption of other goods ($\rate{C}_o/\rbempl{C}_o$)
 as a function of the consumption rate of the energy service 
@@ -58,9 +79,9 @@ the slope of an indifference curve is given by
                           \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
 \end{align}
 
-Note that a constant-expenditure line on the 
-$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ graph
-can be derived from the budget constraint:
+The budget constraint is the starting point for finding 
+the slope of the expenditure line in 
+$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space:
 
 \begin{equation}
   \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; . 
@@ -91,7 +112,7 @@ from which the slope is taken by inspection to be
 \end{equation}
 
 At any equilibrium point, the expenditure line must be tangent to its indifference curve.
-Applying the tangency requirement before emplacement enables 
+Applying the tangency (equal slope) requirement before emplacement enables 
 solving for the correct expression for $a$.
 Setting the slope of the expenditure line (Eq.~(\ref{eq:slope_expenditure_line}))
 equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_curve})) gives
