@@ -4,7 +4,8 @@
 %!TEX root = ../HSB.Rnw
 
 This appendix provides details of the utility model employed in the paper.
-It shows the form of the equation and derives the correct expression for the share parameter.
+It shows the form of the utility equation and
+derives the correct expression for its share parameter ($a$).
 
 
 %++++++++++++++++++++++++++++++
@@ -38,7 +39,7 @@ the ratio of other goods consumption is equal to the ratio of other good spendin
 \begin{equation} \label{eq:ces_utility_with_a}
   \frac{\rate{u}}{\rbempl{u}} = 
   \left[ a \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
-        + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}
+        + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)} \; .
 \end{equation}
 
 
@@ -47,10 +48,11 @@ the ratio of other goods consumption is equal to the ratio of other good spendin
 \label{sec:share_parameter_derivation}
 %++++++++++++++++++++++++++++++
 
-Determination of the correct expression for the share parameter ($a$) is found from the 
-equilibrium requirement prior to emplacement of the energy efficient device,
-namely that the slope of the indifference curve is tangent to (has the same slope as)
-the expenditure curve.
+The correct expression for the share parameter ($a$) is found from the 
+equilibrium requirement,
+namely that the slope of the indifference curve is tangent to 
+(has the same slope as) the expenditure curve
+in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space.
 
 To find the slope of the indifference curve,
 Eq.~(\ref{eq:ces_utility_with_a}) can be rearranged to find 
@@ -60,7 +62,7 @@ as a function of the consumption rate of the energy service
 and the utility rate ($\rate{u}/\rbempl{u}$):
 
 \begin{equation}
-  \frac{\rate{C}}{\rbempl{C}_o} = 
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
       \left[ \frac{1}{1 - a} \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho 
             - \frac{a}{1 - a} \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1/\rho)} \; ,
 \end{equation}
@@ -84,7 +86,7 @@ the slope of the expenditure line in
 $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space:
 
 \begin{equation}
-  \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; . 
+  \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o  + \rate{N} \; . 
 \end{equation}
 %
 Solving for $\rate{C}_o$ and judiciously multiplying by $\rbempl{C}_o/\rbempl{C}_o$
@@ -92,7 +94,7 @@ and $\rbempl{q}_s/\rbempl{q}_s$ gives
 
 \begin{equation}
   \frac{\rate{C}_o}{\rbempl{C}_o} \rbempl{C}_o = - p_s \frac{\rate{q}_s}{\rbempl{q}_s} \rbempl{q}_s
-                        + \rate{M} - \rate{C}_{cap} - \rate{C}_{md} \; .
+                        + \rate{M} - \rate{C}_{cap} - \rate{C}_{md}  - \rate{N} \; .
 \end{equation}
 %
 Solving for $\rate{C}_o/\rbempl{C}_o$ and rearranging gives
@@ -101,7 +103,7 @@ Solving for $\rate{C}_o/\rbempl{C}_o$ and rearranging gives
   \frac{\rate{C}_o}{\rbempl{C}_o} = - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o}  
                                         \left( \frac{\rate{q}_s}{\rbempl{q}_s}   \right)
                                     + \frac{1}{\rbempl{C}_o}
-                                          (\rate{M} - \rate{C}_{cap} - \rate{C}_{md}) \; ,
+                                          (\rate{M} - \rate{C}_{cap} - \rate{C}_{md} - \rate{N}) \; ,
 \end{equation}
 %
 from which the slope is taken by inspection to be
