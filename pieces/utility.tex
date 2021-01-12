@@ -3,8 +3,8 @@
 % before building the paper.
 %!TEX root = ../HSB.Rnw
 
-We adopt a constant elasticity of substitution model for utility,
-normalized (indexed) by parameters at the pre-emplacement stage.
+We adopt a constant elasticity of substitution (CES) model for utility ($\rate{u}$),
+normalized by (indexed to) parameters before emplacement:
 
 \begin{equation}
   \frac{\rate{u}}{\rbempl{u}} = 
@@ -18,7 +18,7 @@ $\sigma$ is the elasticity of substitution between
 consumption of the energy service and 
 consumption of other goods.
 
-However, the quantity of other goods consumption ($\rate{q}_o$)
+However, the rate of other goods consumption ($\rate{q}_o$)
 is not known independent of the prices of other goods ($p_o$).
 With the assumption that the prices of other goods do not change
 (i.e., $p_o$ is exogenous), 
@@ -26,17 +26,17 @@ the ratio of other goods consumption is equal to the ratio of other good spendin
 ($\frac{\rate{C}_o}{\rbempl{C}_o} = \frac{\cancel{p_o} \rate{q}_o}{\cancel{p_o} \rbempl{q}_o} =
 \frac{\rate{q}_o}{\rbempl{q}_o}$), such that
 
-\begin{equation}
+\begin{equation} \label{eq:ces_utility_with_a}
   \frac{\rate{u}}{\rbempl{u}} = 
   \left[ a \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
-        + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}\end{equation}
-%
+        + (1-a) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}
+\end{equation}
 
-Eq.~(\ref{eq:ces_utility}) can be rearranged to find 
+Eq.~(\ref{eq:ces_utility_with_a}) can be rearranged to find 
 consumption of other goods ($\rate{C}_o/\rbempl{C}_o$)
-as a function of consumption of the energy service 
+as a function of the consumption rate of the energy service 
 ($\rate{q}_s/\rbempl{q}_s$)
-and utility ($\rate{u}/\rbempl{u}$):
+and the utility rate ($\rate{u}/\rbempl{u}$):
 
 \begin{equation}
   \frac{\rate{C}}{\rbempl{C}_o} = 
@@ -83,7 +83,7 @@ Solving for $\rate{C}_o/\rbempl{C}_o$ and rearranging gives
                                           (\rate{M} - \rate{C}_{cap} - \rate{C}_{md}) \; ,
 \end{equation}
 %
-from which the slope is taken to be
+from which the slope is taken by inspection to be
 
 \begin{equation} \label{eq:slope_expenditure_line}
   \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =
