@@ -1529,37 +1529,54 @@ The base results for the fuel efficient car yields
 an estimate of 24\% total economy-wide rebound, 
 from the sum of components below:
 
-\begin{table}
-\begin{center}
-\caption{Car example: rebound results}
-\label{tab:car_results}
-\begin{tabular}{ r r }
-  \toprule
-  Rebound effect (symbol) & Value [\%] \\ 
-  \midrule
-  Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
-  Embodied energy effect--indirect ($Re_{emb}$) & 1.4 \\ 
-  Maintenance and disposal effect--indirect ($Re_{md}$) & --1.0 \\ 
-  Substitution effect--direct ($Re_{dsub}$) & 2.9 \\ 
-  Substitution effect--indirect ($Re_{isub}$) & --0.3 \\ 
-  Income effect--direct ($Re_{dinc}$) & 5.3 \\ 
-  Income effect--indirect ($Re_{iinc}$) & 7.8 \\ 
-  Macroeconomic productivity effect--indirect ($Re_{prod}$) & 8.2 \\   
-  \midrule
-  Total ($Re_{sum}$) & 24.4 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
-
-
-<<CarGraphParams>>=
+<<car_rebound_results_table, results="asis", echo=FALSE>>=
+rebound_results %>% 
+  dplyr::filter(Case == "Car") %>% 
+  dplyr::mutate(
+    Case = NULL
+  ) %>% 
+  ReboundTools::rebound_results_table(include_subtotals = FALSE, 
+                                      label = "tab:car_results", 
+                                      caption = "Car example: rebound results.", 
+                                      digits = 1, 
+                                      align = "rrr") %>% 
+  print(include.rownames = FALSE, 
+        booktabs = TRUE,
+        caption.placement = "top",
+        hline.after = c(-1, 0, nrow(.)-1, nrow(.)),
+        sanitize.text.function = function(x) {x},
+        format.args = list(big.mark = ","))
 @
 
-<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
+
+
+
+% \begin{table}
+% \begin{center}
+% \caption{Car example: rebound results}
+% \label{tab:car_results_old}
+% \begin{tabular}{ r r }
+%   \toprule
+%   Rebound effect (symbol) & Value [\%] \\ 
+%   \midrule
+%   Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
+%   Embodied energy effect--indirect ($Re_{emb}$) & 1.4 \\ 
+%   Maintenance and disposal effect--indirect ($Re_{md}$) & --1.0 \\ 
+%   Substitution effect--direct ($Re_{dsub}$) & 2.9 \\ 
+%   Substitution effect--indirect ($Re_{isub}$) & --0.3 \\ 
+%   Income effect--direct ($Re_{dinc}$) & 5.3 \\ 
+%   Income effect--indirect ($Re_{iinc}$) & 7.8 \\ 
+%   Macroeconomic productivity effect--indirect ($Re_{prod}$) & 8.2 \\   
+%   \midrule
+%   Total ($Re_{sum}$) & 24.4 \\
+% \bottomrule
+% \end{tabular}
+% \end{center}
+% \end{table}
+
+
+<<CarGraphParams, echo=FALSE>>=
 pal <- RColorBrewer::brewer.pal(12, "Paired")
-# library(viridis)
-# pal <- viridis(8)
 car_graph_params <- ReboundTools::default_graph_params
 car_graph_params$dempl_colour <- "lightgray"
 car_graph_params$dempl_size <- 0.5
@@ -1578,8 +1595,11 @@ car_graph_params$dinc_size <- 0.3
 car_graph_params$dinc_linetype <- "dashed"
 car_graph_params$iinc_colour <- pal[[6]]
 car_graph_params$prod_colour <- pal[[7]]
+@
 
+<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Energy", 
                                graph_params = car_graph_params) + 
@@ -1589,6 +1609,7 @@ rebound_data %>%
 
 <<CarCostGraph, echo=FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Cost", 
                                graph_params = car_graph_params) + 
@@ -1603,6 +1624,7 @@ car_graph_params$qs_qs0_lower <- 0.9
 car_graph_params$qs_qs0_upper <- 1.2
 
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
@@ -1647,8 +1669,7 @@ which is positive and non-zero as the car user allocates some
 of the additional income to driving further still. 
 The indirect income effect is also positive (+7.8\%), 
 due to higher spend on other sectors. 
-So, the additional ‘effective’ income 
-%(Ndot_hat = 
+So, the additional ``effective'' income 
 ($\rasub{N} = 712$ \$/year) 
 translates into direct and indirect income effects at the micro-level. 
 Last, is the macroeconomic 
@@ -1867,6 +1888,7 @@ rebound_results %>%
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
 lamp_graph_params <- car_graph_params
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy", 
                                graph_params = lamp_graph_params) + 
@@ -1876,6 +1898,7 @@ rebound_data %>%
 
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path graph, lamp example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost", 
                                graph_params = lamp_graph_params) + 
@@ -1885,6 +1908,7 @@ rebound_data %>%
 
 <<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, lamp example.", fig.width=6, fig.height=4>>=
 rebound_data %>% 
+  rebound_analysis() %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences", 
                                graph_params = lamp_graph_params) + 
@@ -1901,29 +1925,48 @@ The base results for the LED lamp yields
 an estimate of 54\% total economy-wide rebound, 
 from the sum of components below:
 
+<<lamp_rebound_results_table, results="asis", echo=FALSE>>=
+rebound_results %>% 
+  dplyr::filter(Case == "Lamp") %>% 
+  dplyr::mutate(
+    Case = NULL
+  ) %>% 
+  ReboundTools::rebound_results_table(include_subtotals = FALSE, 
+                                      label = "tab:lamp_results", 
+                                      caption = "Lamp example: rebound results.", 
+                                      digits = 1, 
+                                      align = "rrr") %>% 
+  print(include.rownames = FALSE, 
+        booktabs = TRUE,
+        caption.placement = "top",
+        hline.after = c(-1, 0, nrow(.)-1, nrow(.)),
+        sanitize.text.function = function(x) {x},
+        format.args = list(big.mark = ","))
+@
 
-\begin{table}
-\begin{center}
-\caption{Lamp example: rebound results}
-\label{tab:lamp_results}
-\begin{tabular}{ r r }
-  \toprule
-  Rebound effect (symbol) & Value [\%] \\ 
-  \midrule
-  Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
-  Embodied energy effect--indirect ($Re_{emb}$) & --0.3 \\ 
-  Maintenance and disposal effect--indirect ($Re_{md}$) & 0.0 \\ 
-  Substitution effect--direct ($Re_{dsub}$) & 17.4 \\ 
-  Substitution effect--indirect ($Re_{isub}$) & --12.7 \\ 
-  Income effect--direct ($Re_{dinc}$) & 0.02 \\ 
-  Income effect--indirect ($Re_{iinc}$) & 24.7 \\ 
-  Macroeconomic productivity effect--indirect ($Re_{prod}$) & 24.7 \\   
-\midrule
-Total ($Re_{sum}$) & 53.9 \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{table}
+
+% \begin{table}
+% \begin{center}
+% \caption{Lamp example: rebound results}
+% \label{tab:lamp_results}
+% \begin{tabular}{ r r }
+%   \toprule
+%   Rebound effect (symbol) & Value [\%] \\ 
+%   \midrule
+%   Emplacement effect--direct ($Re_{dempl}$) & 0.0 \\
+%   Embodied energy effect--indirect ($Re_{emb}$) & --0.3 \\ 
+%   Maintenance and disposal effect--indirect ($Re_{md}$) & 0.0 \\ 
+%   Substitution effect--direct ($Re_{dsub}$) & 17.4 \\ 
+%   Substitution effect--indirect ($Re_{isub}$) & --12.7 \\ 
+%   Income effect--direct ($Re_{dinc}$) & 0.02 \\ 
+%   Income effect--indirect ($Re_{iinc}$) & 24.7 \\ 
+%   Macroeconomic productivity effect--indirect ($Re_{prod}$) & 24.7 \\   
+% \midrule
+% Total ($Re_{sum}$) & 53.9 \\
+% \bottomrule
+% \end{tabular}
+% \end{center}
+% \end{table}
 
 
 Taking each of the four rebound effects in turn, 
