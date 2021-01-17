@@ -1462,7 +1462,7 @@ as given in Table~\ref{tab:car_elasticity_parameters}.
   Parameter [units] & & \\
   \midrule
   Marshallian (uncompensated) price elasticity of demand  &   -0.1    & Source: \citet{Borenstein:2015aa}. \\
-  Symbol [--]                                             &           &   \\ 
+  $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
   Price elasticity of demand for car use                  &   -0.077  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &           &   \\    
@@ -1527,7 +1527,7 @@ rebound_results %>%
 
 The base results for the fuel efficient car yields 
 an estimate of 24\% total economy-wide rebound, 
-from the sum of components below:
+from the sum of components in Table~\ref{tab:car_results}.
 
 <<car_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
@@ -1825,7 +1825,7 @@ as given in Table~\ref{tab:lamp_elasticity_parameters}.
   Parameter [units] & & \\
   \midrule
   Marshallian (uncompensated) price elasticity of demand  &   -0.4    & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
-  Symbol [--]                                             &           &   \\ 
+  $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
   Price elasticity of demand for car use                  &   -0.3997  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &           &   \\    
@@ -1923,7 +1923,7 @@ rebound_data %>%
 
 The base results for the LED lamp yields 
 an estimate of 54\% total economy-wide rebound, 
-from the sum of components below:
+from the sum of components in Table~\ref{tab:lamp_results}.
 
 <<lamp_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
