@@ -1253,32 +1253,15 @@ we find
   Re_{sum} = \; \Retoteqn{} \; .
 \end{align}
 
-% Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values
-% [$Re_{emb}$ (Eq.~(\ref{eq:Re_emb})), 
-% $Re_{cap}$ (Eq.~(\ref{eq:Re_cap})), 
-% $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
-% $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-% $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
-% $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and 
-% $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc}))]
-% is sufficient to calculate the rebound sum, 
-% provided that 
-% the productivity factor~($k$) and
-% the product of energy price and energy intensity ($p_E I_E$)
-% are known.
-
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Graphical representation}
-\label{sec:example_rebound_graphs}
-%++++++++++++++++++++++++++++++
 
 <<eeu_data, echo=FALSE>>=
 # Load our test cases and perform rebound analyses.
 rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
 rebound_results <- ReboundTools::rebound_analysis(rebound_data)
 @
+
+
+**** Show an example set of graphs here? ****
 
 
 
@@ -1288,19 +1271,11 @@ rebound_results <- ReboundTools::rebound_analysis(rebound_data)
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Calculation Overview}
-\label{sec:calc_overview}
-%++++++++++++++++++++++++++++++
-
-We select two case studies 
-(energy efficiency upgrades for an automobile and an electric lamp)
-and apply the framework developed in Section~\ref{sec:framework}. 
-To perform rebound analyses for the two case studies, 
-we collect the required parameter values
+To demonstrate application of the 
+rebound analysis framework developed in Section~\ref{sec:framework},
+we select two case studies:
+energy efficiency upgrades for an automobile and an electric lamp.
+We first collect parameter values
 for the equations for
 eight rebound components:
 $Re_{dempl}$ (Eq.~(\ref{eq:Re_dempl0})),
@@ -1311,29 +1286,29 @@ $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
-The total rebound sum is given by the sum of the above components,
-which can also be checked against the collated equation
-($Re_{sum}$, (Eq.~(\ref{eq:Re_tot})))
+The total rebound sum ($Re_{sum}$)
+is given by the sum of the above components,
+which can also be checked against Eq.~(\ref{eq:Re_tot}).
  
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 1 – Automobile}
+\subsection{Case 1: Automobile}
 \label{sec:Car_example}
 %++++++++++++++++++++++++++++++
 
 For the first example, 
-we select the option of buying a more fuel efficient car (Ford Fusion Energi), 
+we select the purchase of a more fuel efficient car (Ford Fusion Energi), 
 versus the incumbent (Ford Fusion SE). 
-Both cars are matched as closely as possible, 
+The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
-in the hybrid Energi car.  
-This case study presents an example whereby 
-the initial capital investment cost for the more energy efficient device is higher,
-but with the long-term benefit of decreased running costs. 
+in the gas-electric hybrid Energi car.  
+The automobile case study has a very high 
+initial capital investment
+and a long-term benefit of decreased direct energy costs. 
 
 
 %------------------------------
-\subsubsection{Input data} 
+\subsubsection{Input parameters} 
 \label{sec:Car_input_data}
 %------------------------------
 
@@ -1389,14 +1364,11 @@ in Table~\ref{tab:car_parameters}.
 \end{table}
 \end{landscape}
 
-
-
 Second, we require several general parameters, 
 mainly relating to the US economy and personal finances 
 of the average US citizen. 
 The parameters and their values used in the study 
-are given below in Table~\ref{tab:car_economic_parameters}.
-
+are given in Table~\ref{tab:car_economic_parameters}.
 
 \begin{landscape}
 \begin{table}
@@ -1445,11 +1417,8 @@ are given below in Table~\ref{tab:car_economic_parameters}.
 \end{table}
 \end{landscape}
 
-
-
-Third, we require the elasticity parameters that we shall need, 
+Third, we require elasticity parameters, 
 as given in Table~\ref{tab:car_elasticity_parameters}.
-
 
 \begin{landscape}
 \begin{table}
@@ -1481,14 +1450,10 @@ as given in Table~\ref{tab:car_elasticity_parameters}.
 \end{table}
 \end{landscape}
 
-
-
 Fourth, armed with the parameter values from 
-Table~\ref{tab:car_parameters}-
-~\ref{tab:car_elasticity_parameters}, 
-and using the equations given in 
-Appendix~\ref{sec:derivation}, 
-we can now produce the values of other parameters given in Table~\ref{tab:analysis_assumptions}, 
+Tables~\ref{tab:car_parameters}--\ref{tab:car_elasticity_parameters}, 
+and the equations of Section~\ref{sec:framework},
+we calculate important values at each rebound stage,
 as shown below in Table~\ref{tab:car_stages_table}.
 
 <<car_stages_table, results="asis", echo=FALSE>>=
@@ -1521,14 +1486,13 @@ rebound_results %>%
         format.args = list(big.mark = ","))
 @
 
+
 %------------------------------
 \subsubsection{Results} 
 \label{sec:Car_results}
 %------------------------------
 
-The base results for the fuel efficient car yields 
-an estimate of 24\% total economy-wide rebound, 
-from the sum of components in Table~\ref{tab:car_results}.
+The base results for the automobile upgrade are shown in Table~\ref{tab:car_results}.
 
 <<car_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
@@ -1680,11 +1644,8 @@ so the additional money spent in the economy
 has a positive rebound multiplier effect.
 
 
-
-
-
 %++++++++++++++++++++++++++++++
-\subsection{Case 2 – Electric lamp}
+\subsection{Case 2: Electric lamp}
 \label{sec:lamp_example}
 %++++++++++++++++++++++++++++++
 
@@ -1694,9 +1655,9 @@ versus a baseline incandescent electric lamp.
 Both lamps are matched as closely as possible 
 in terms of energy service delivery (lumens), 
 the key difference is in the energy required to provide that energy service. 
-The case study presents an example whereby the investment cost
-for the more energy efficient device is lower, 
-with the additional benefit of decreased running costs. 
+The electric lap case study has a very low 
+initial capital investment (negative, actually!)
+and a long-term benefit of decreased direct energy costs.
 
 
 %------------------------------
@@ -1845,16 +1806,11 @@ as given in Table~\ref{tab:lamp_elasticity_parameters}.
 \end{table}
 \end{landscape}
 
-
-Fourth, armed with the parameter values from 
-Table~\ref{tab:lamp_parameters}-
-~\ref{tab:lamp_elasticity_parameters}, 
-and using the equations given in 
-Appendix~\ref{sec:derivation}, 
-we can now produce the values of other parameters given in Table B9, 
-% Matt i coudlnt find the dynamic link to Table B9
+Fourth, with the parameter values from 
+Tables~\ref{tab:lamp_parameters}--\ref{tab:lamp_elasticity_parameters} 
+and the equations of Section~\ref{sec:framework} in hand,
+we calculate important values at each rebound stage,
 as shown below in Table~\ref{tab:lamp_stages_table}.
-
 
 <<lamp_stages_table, results="asis", echo=FALSE>>=
 digs_lamp <- matrix(c(rep(0, 7), # eta_engr_units
@@ -1923,9 +1879,7 @@ rebound_data %>%
 \label{sec:lamp_results}
 %------------------------------
 
-The base results for the LED lamp yields 
-an estimate of 54\% total economy-wide rebound, 
-from the sum of components in Table~\ref{tab:lamp_results}.
+The base results for the lamp upgrade are shown in Table~\ref{tab:lamp_results}.
 
 <<lamp_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
