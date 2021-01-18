@@ -1483,7 +1483,8 @@ rebound_results %>%
         booktabs = TRUE,
         caption.placement = "top",
         sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
+        format.args = list(big.mark = ","),
+        math.style.negative = TRUE)
 @
 
 
@@ -1510,7 +1511,8 @@ rebound_results %>%
         caption.placement = "top",
         hline.after = c(-1, 0, nrow(.)-1, nrow(.)),
         sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
+        format.args = list(big.mark = ","), 
+        math.style.negative = TRUE)
 @
 
 
@@ -1629,7 +1631,7 @@ the maintenance and disposal effect.
 Rebound from the direct emplacement effect 
 $Re_{dempl} = \Sexpr{Re_dempl_car_char_perc}$\% always, 
 because energy takeback (and, therefore, rebound)
-occurs after the direct emplacement effect.
+occurs after the EEU is emplaced.
 Indirect rebound due to the embodied energy effect
 $Re_{emb} = \Sexpr{Re_emb_car_char_perc}$\%,  
 due to the higher embodied energy rate
@@ -1875,7 +1877,8 @@ rebound_results %>%
         booktabs = TRUE,
         caption.placement = "top",
         sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
+        format.args = list(big.mark = ","),
+        math.style.negative = TRUE)
 @
 
 
@@ -1930,7 +1933,8 @@ rebound_results %>%
         caption.placement = "top",
         hline.after = c(-1, 0, nrow(.)-1, nrow(.)),
         sanitize.text.function = function(x) {x},
-        format.args = list(big.mark = ","))
+        format.args = list(big.mark = ","),
+        math.style.negative = TRUE)
 @
 
 
