@@ -1689,9 +1689,9 @@ For our second example,
 we select the option of buying a light emitting diode (LED) electric lamp, 
 versus a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
-in terms of energy service delivery (lumens), 
-the key difference is in the energy required to provide that energy service. 
-The electric lap case study has a very low 
+in terms of energy service delivery (measured in lumens), 
+the key difference being the energy required to provide that energy service. 
+The electric lamp case study has a very low 
 initial capital investment (negative, actually!)
 and a long-term benefit of decreased direct energy costs.
 
