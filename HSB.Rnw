@@ -1697,7 +1697,7 @@ and a long-term benefit of decreased direct energy costs.
 
 
 %------------------------------
-\subsubsection{Input data} 
+\subsubsection{Input parameters} 
 \label{sec:lamp_input_data}
 %------------------------------
 
