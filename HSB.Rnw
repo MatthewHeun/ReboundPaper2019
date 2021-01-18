@@ -1642,7 +1642,7 @@ because of the slightly lower maintenance and disposal costs
 for the hybrid EV car.
 
 The \subeffect{} effect has two components:
-direct and indirect substitution rebound.
+direct and indirect substitution effect rebound.
 Rebound from direct substitution
 $Re_{dsub} = \Sexpr{Re_dsub_car_char_perc}$\%
 is positive, as expected. 
@@ -1650,21 +1650,20 @@ The car owner will prefer more driving,
 because of fuel efficiency enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
 the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
-Conversely, the indirect substitution effect gives 
+Conversely, the indirect substitution effect  
 $Re_{isub} = \Sexpr{Re_isub_car_char_perc}$\%, 
 a slightly negative value
-to maintain the same level of utility after increased driving. 
+to achieve the same level of utility after increased driving. 
 Indeed, less money is spent on other goods:
 $\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_car_char}$~\$/year.
 
-Third, is the \inceffect{}.
+The \inceffect{} also has two components:
+direct and indirection income effect rebound.
 The car owner sees an increase in their effective income
 due to a net monetary savings from the emplacement and substitution effects. 
-Like the substitution effect, 
-the income effect has two components.
 The direct income effect
 $Re_{dinc} = \Sexpr{Re_dinc_car_char_perc}$\%, 
-a positive number, because the car owner allocates some
+is positive, because the car owner allocates some
 of the freed cash to additional driving. 
 Rebound from the indirect income effect 
 $Re_{iinc} = \Sexpr{Re_iinc_car_char_perc}$\%
