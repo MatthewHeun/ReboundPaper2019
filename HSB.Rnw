@@ -1597,18 +1597,29 @@ rebound_results %>%
 
 
 <<CarPrintableNumbers, echo=FALSE>>=
-Re_dempl_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_dempl) * 100) %>% 
-  sprintf(fmt = "%1.0f") %>%  
-  paste0("\\%")
-Re_emb_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_emb) * 100) %>% 
-  sprintf(fmt = "%#.1f") %>%  
-  paste0("\\%")
-Delta_E_dot_emb_car_char = rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Delta_E_dot_emb_star) %>% 
-  sprintf(fmt = "%1.0f") %>%  
-  paste0("~MJ/year")
-Re_md_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_md) * 100) %>% 
-  sprintf(fmt = "%#.1f") %>%  
-  paste0("\\%")
+val_to_string <- function(case, val, to_perc = TRUE, fmt = "%#.1f") {
+  val <- rebound_results %>% 
+     dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] == case) %>% 
+     magrittr::extract2(val)
+  if (to_perc) {
+    val <- val * 100
+  }
+  val %>% 
+    sprintf(fmt = fmt)
+}
+Re_dempl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dempl, fmt = "%1.0f")
+Re_emb_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_emb)
+Delta_E_dot_emb_star_car_char <- val_to_string(case = "Car", val = ReboundTools::Delta_vars$Delta_E_dot_emb_star, to_perc = FALSE)
+Re_md_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_md)
+Re_dsub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dsub)
+mpg_better <- val_to_string(case = "Car", val = ReboundTools::star_vars$eta_engr_units_star, to_perc = FALSE, fmt = "%1.0f")
+mpg_worse <- val_to_string(case = "Car", val = ReboundTools::orig_vars$eta_engr_units_orig, to_perc = FALSE, fmt = "%1.0f")
+Re_isub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_isub)
+Delta_C_dot_o_hat_car_char <- val_to_string(case = "Car", val = ReboundTools::Delta_vars$Delta_C_dot_o_hat, to_perc = FALSE, fmt = "%1#.2f")
+Re_dinc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dinc)
+Re_iinc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_iinc)
+N_dot_hat_char <- val_to_string(case = "Car", val = ReboundTools::hat_vars$N_dot_hat, to_perc = FALSE, fmt = "%1#.2f")
+Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod)
 @
 
 The \empleffect{} has three components:
@@ -1616,52 +1627,58 @@ the direct emplacement effect,
 the embodied energy effect, and 
 the maintenance and disposal effect.
 Rebound from the direct emplacement effect 
-$Re_{dempl} =$ \Sexpr{Re_dempl_car_char_perc} always, 
+$Re_{dempl} = \Sexpr{Re_dempl_car_char_perc}$\% always, 
 because energy takeback (and, therefore, rebound)
 occurs after the direct emplacement effect.
 Indirect rebound due to the embodied energy effect
-$Re_{emb} =$ \Sexpr{Re_emb_car_char_perc},  
+$Re_{emb} = \Sexpr{Re_emb_car_char_perc}$\%,  
 due to the higher embodied energy rate
-($\Delta \raempl{E}_{emb} =$ \Sexpr{Delta_E_dot_emb_car_char})
+($\Delta \raempl{E}_{emb} = \Sexpr{Delta_E_dot_emb_star_car_char}$~MJ/year)
 stemming from the electric battery in the hybrid EV car.
 Rebound due to the maintenance and disposal effect
-$Re_{\md} =$ \Sexpr{Re_md_car_char_perc} 
+$Re_{\md} = \Sexpr{Re_md_car_char_perc}$\% 
 is small and negative,
 because of the slightly lower maintenance and disposal costs
 for the hybrid EV car.
 
-Second, is the \subeffect, 
-which splits into two components 
-at the original income level. 
-The direct substitution effect yields +2.9\% value,
-which is expected, as the new fuel efficiency (42 mpg) 
-is much higher than the baseline car (25 mpg), 
-leading to a preference to switch more spending to more driving. 
+The \subeffect{} effect has two components:
+direct and indirect substitution rebound.
+Rebound from direct substitution
+$Re_{dsub} = \Sexpr{Re_dsub_car_char_perc}$\%
+is positive, as expected. 
+The car owner will prefer more driving, 
+because of fuel efficiency enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
-the more fuel efficient car increases the amount of miles driven by 2.9\%. 
-Conversely, the indirect substitution effect yields a value of -0.3\%, 
-being slightly negative as the increased fuel use 
-and miles driven in the direct substitution effect 
-means that less is spent on other goods.  
+the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
+Conversely, the indirect substitution effect gives 
+$Re_{isub} = \Sexpr{Re_isub_car_char_perc}$\%, 
+a slightly negative value
+to maintain the same level of utility after increased driving. 
+Indeed, less money is spent on other goods:
+$\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_car_char}$~\$/year.
 
-Third, is the \inceffect, 
-where the car 
-user sees an increase in their ‘effective’ income
-due to a net saving in outgoings associated with the car purchase and use, 
-this effect also splits into two. 
-One is the direct income effect (+5.3\%), 
-which is positive and non-zero as the car user allocates some
-of the additional income to driving further still. 
-The indirect income effect is also positive (+7.8\%), 
-due to higher spend on other sectors. 
-So, the additional ``effective'' income 
-($\rasub{N} = 712$ \$/year) 
-translates into direct and indirect income effects at the micro-level. 
-Last, is the macroeconomic 
-\prodeffect (+8.2\%), 
-due to the larger economy that now exists, 
-so the additional money spent in the economy 
-has a positive rebound multiplier effect.
+Third, is the \inceffect{}.
+The car owner sees an increase in their effective income
+due to a net monetary savings from the emplacement and substitution effects. 
+Like the substitution effect, 
+the income effect has two components.
+The direct income effect
+$Re_{dinc} = \Sexpr{Re_dinc_car_char_perc}$\%, 
+a positive number, because the car owner allocates some
+of the freed cash to additional driving. 
+Rebound from the indirect income effect 
+$Re_{iinc} = \Sexpr{Re_iinc_car_char_perc}$\%
+is positive due to higher spending on other goods. 
+Thus, the freed cash after the substitution effect
+($\rasub{N} = \Sexpr{N_dot_hat_char}$~\$/year) 
+translates into direct and indirect income
+rebound at the micro-level. 
+
+Finally, at the macro level, the \prodeffect{} leads to energy rebound
+$Re_{\productivity} = \Sexpr{Re_prod_car_char_perc}$\%,
+due to economic expansion caused by 
+productivity enhancements arising from the more-efficient provision of the 
+energy service (transportation).
 
 
 %++++++++++++++++++++++++++++++
