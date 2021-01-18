@@ -1563,8 +1563,7 @@ car_graph_params$prod_colour <- pal[[7]]
 @
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Energy", 
                                graph_params = car_graph_params) + 
@@ -1573,8 +1572,7 @@ rebound_data %>%
 
 
 <<CarCostGraph, echo=FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Cost", 
                                graph_params = car_graph_params) + 
@@ -1588,8 +1586,7 @@ car_graph_params$n_indiff_curve_points <- 10
 car_graph_params$qs_qs0_lower <- 0.9
 car_graph_params$qs_qs0_upper <- 1.2
 
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
@@ -1599,17 +1596,40 @@ rebound_data %>%
 @
 
 
+<<CarPrintableNumbers, echo=FALSE>>=
+Re_dempl_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_dempl) * 100) %>% 
+  sprintf(fmt = "%1.0f") %>%  
+  paste0("\\%")
+Re_emb_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_emb) * 100) %>% 
+  sprintf(fmt = "%#.1f") %>%  
+  paste0("\\%")
+Delta_E_dot_emb_car_char = rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Delta_E_dot_emb_star) %>% 
+  sprintf(fmt = "%1.0f") %>%  
+  paste0("~MJ/year")
+Re_md_car_char_perc <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select(Re_md) * 100) %>% 
+  sprintf(fmt = "%#.1f") %>%  
+  paste0("\\%")
+@
 
-Let's take each of these effects in turn. 
-First, is the \empleffect, which is in three parts:
-the direct emplacement effect = 0\%; 
-the embodied energy effect, which is positive (+1.4\%), 
-due to the higher embodied energy (+6,000MJ) 
-stemming from the electric battery in the hybrid EV car; 
-and the maintenance and disposal effect (-1.0\%), 
-which is low and negative  
+The \empleffect{} has three components:
+the direct emplacement effect, 
+the embodied energy effect, and 
+the maintenance and disposal effect.
+Rebound from the direct emplacement effect 
+$Re_{dempl} =$ \Sexpr{Re_dempl_car_char_perc} always, 
+because energy takeback (and, therefore, rebound)
+occurs after the direct emplacement effect.
+Indirect rebound due to the embodied energy effect
+$Re_{emb} =$ \Sexpr{Re_emb_car_char_perc},  
+due to the higher embodied energy rate
+($\Delta \raempl{E}_{emb} =$ \Sexpr{Delta_E_dot_emb_car_char})
+stemming from the electric battery in the hybrid EV car.
+Rebound due to the maintenance and disposal effect
+$Re_{\md} =$ \Sexpr{Re_md_car_char_perc} 
+is small and negative,
 because of the slightly lower maintenance and disposal costs
-in the hybrid EV car. 
+for the hybrid EV car.
+
 Second, is the \subeffect, 
 which splits into two components 
 at the original income level. 
@@ -1845,8 +1865,7 @@ rebound_results %>%
 
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
 lamp_graph_params <- car_graph_params
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy", 
                                graph_params = lamp_graph_params) + 
@@ -1855,8 +1874,7 @@ rebound_data %>%
 
 
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path graph, lamp example.", fig.width=6, fig.height=4>>=
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost", 
                                graph_params = lamp_graph_params) + 
@@ -1865,8 +1883,7 @@ rebound_data %>%
 
 
 <<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, lamp example.", fig.width=6, fig.height=4>>=
-rebound_data %>% 
-  rebound_analysis() %>% 
+rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences", 
                                graph_params = lamp_graph_params) + 
