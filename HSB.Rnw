@@ -1573,10 +1573,11 @@ rebound_results %>%
 
 
 <<CarPrintableNumbers, echo=FALSE>>=
-val_to_string <- function(case, val, to_perc = FALSE, fmt = "%#.1f") {
+val_to_string <- function(case, val, to_perc = FALSE, fmt = "%#.1f", scale = 1) {
   val <- rebound_results %>% 
-     dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] == case) %>% 
-     magrittr::extract2(val)
+    dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] == case) %>% 
+    magrittr::extract2(val) %>% 
+    magrittr::multiply_by(scale)
   if (to_perc) {
     val <- val * 100
   }
@@ -1729,8 +1730,6 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
 \end{center}
 \end{table}
 \end{landscape}
-
-
 
 
 Second, we require several general parameters, 
@@ -1946,8 +1945,10 @@ E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::sta
 Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
 Re_md_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_md, to_perc = TRUE)
 Re_dsub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dsub, to_perc = TRUE)
-mpg_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, fmt = "%1.0f")
-mpg_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, fmt = "%1.0f")
+eta_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, fmt = "%1#.1f", scale = 0.001) # In lm/W
+eta_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, fmt = "%1#.3f", scale = 0.001) # In lm/W
+q_dot_s_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$q_dot_s_star, fmt = "%#1.1f", scale = 1/365.25) # In lm-hr/day
+q_dot_s_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$q_dot_s_hat, fmt = "%1#.1f", scale = 1/365.25) # In lm-hr/day
 Re_isub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_isub, to_perc = TRUE)
 Delta_C_dot_o_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_hat, fmt = "%1#.2f")
 Re_dinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dinc, to_perc = TRUE)
@@ -1955,18 +1956,6 @@ Re_iinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebou
 N_dot_hat_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$N_dot_hat, fmt = "%1#.2f")
 Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
 @
-
-% Taking each of the four rebound effects in turn, 
-% the first is the \empleffect = -0.3\%. 
-% It's three parts are the direct emplacement effect = 0\%; 
-% the embodied energy effect (-0.3\%) which is negative, 
-% as although the LED lamp has higher embodied energy (+4.3MJ),
-% it also has a much longer lifetime, 
-% meaning the LED embodied energy rate (0.65MJ/year) 
-% is lower than for the incandescent lamp (1.23MJ/year); and
-% the maintenance and disposal effect is zero (0\%),
-% because of there is no difference in the negligible costs 
-% (\$0.001) assumed for the two lamps. 
 
 The \empleffect{} components are as follows:
 The direct emplacement effect is always $\Sexpr{Re_dempl_lamp_char_perc}$\%.
@@ -1991,21 +1980,24 @@ $Re_{\md} = \Sexpr{Re_md_lamp_char_perc}$\%,
 because we assume no difference in maintenance and disposal costs between 
 the incandescent lamp and the LED lamp.
 
+Direct substitution rebound 
+$Re_{dsub} = \Sexpr{Re_dsub_lamp_char_perc}$\%
+due to the much higher LED lamp efficacy
+for the LED lamp
+($\aempl{\eta} = \Sexpr{eta_better}$~lm/W) 
+compared to the incandescent lamp
+($\bempl{\eta} = \Sexpr{eta_worse}$~lm/W),
+leading to increasing lamp usage from 
+3 hours/day ****
+to
+3 hour 30 mins per day ****.
+To maintain constant utility, 
+consumption of other goods is reduced, 
+yielding indirect substitution effect rebound
+$Re_{isub} = \Sexpr{Re_isub_lamp_char_perc}$\%.
+($\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_lamp_char}$~\$/year.)
 
 
-
-Second, is the \subeffect at the original income level,
-which is split into two parts.
-The direct substitution effect yields +17.4\% value,
-due to the much higher LED lamp efficacy (82Lm/W versus 9Lm/W),
-which translates to increasing the average lamp use
-from 3 hours/day to 3 hour 30 mins per day.
-Due to the highly positive direct effect,
-the indirect substitution effect
-(remember, this is at the original income level)
-must be negative and it is (-12.7\%),
-as the increased lighting use from the direct substitution
-effect means that less is spent on other goods.
 
 
 
