@@ -1939,10 +1939,11 @@ rebound_results %>%
 Re_dempl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, fmt = "%1.0f")
 Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
 Delta_E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_E_dot_emb_star, fmt = "%1#.3f")
-E_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_emb_orig, fmt = "%1#.3f")
-E_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_emb_star, fmt = "%1#.3f")
-E_dot_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_dot_emb_orig, fmt = "%1#.3f")
-E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_dot_emb_star, fmt = "%1#.3f")
+E_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_emb_orig, fmt = "%1#.1f")
+E_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_emb_star, fmt = "%1#.1f")
+E_dot_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_dot_emb_orig, fmt = "%1#.2f")
+E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_dot_emb_star, fmt = "%1#.2f")
+Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
 Re_md_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_md, to_perc = TRUE)
 Re_dsub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dsub, to_perc = TRUE)
 mpg_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, fmt = "%1.0f")
@@ -1973,12 +1974,18 @@ Indirect rebound due to the embodied energy effect
 $Re_{emb} = \Sexpr{Re_emb_lamp_char_perc}$\%.
 
 **** Double-check these numbers. ****
-The LED lamp has higher embodied energy than the incandescent lamp 
-(\Sexpr{E_emb_star_lamp_char}~MJ vs.\ \Sexpr{E_emb_orig_lamp_char}~MJ), but
+The LED lamp has higher embodied energy 
+($\bempl{E}_{emb} = \Sexpr{E_emb_star_lamp_char}$~MJ)
+than the incandescent lamp 
+($\aempl{E}_{emb} = \Sexpr{E_emb_orig_lamp_char}$~MJ), but
 it also has a much longer lifetime,
-meaning that the LED embodied energy rate (\Sexpr{E_dot_emb_star_lamp_char}~MJ/year)
-is less than the incandescent embodied energy rate (\Sexpr{E_dot_emb_orig_lamp_char}~MJ/year).
-Thus, $\Delta \raempl{E}_{emb} = \Sexpr{Delta_E_dot_emb_star_lamp_char}$~MJ/year.
+meaning that the LED embodied energy rate 
+($\raempl{E}_{emb} = \Sexpr{E_dot_emb_star_lamp_char}$~MJ/year)
+is less than the incandescent embodied energy rate
+($\rbempl{E}_{emb} = \Sexpr{E_dot_emb_orig_lamp_char}$~MJ/year).
+Thus, $\Delta \raempl{E}_{emb} = \Sexpr{Delta_E_dot_emb_star_lamp_char}$~MJ/year, 
+and embodied energy rebound is negative
+($Re_{emb} = \Sexpr{Re_emb_lamp_char_perc}$\%).
 Rebound due to the maintenance and disposal effect
 $Re_{\md} = \Sexpr{Re_md_lamp_char_perc}$\%,
 because we assume no difference in maintenance and disposal costs between 
