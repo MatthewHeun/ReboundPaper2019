@@ -1325,7 +1325,7 @@ C_dot_md_star_car_char <- val_to_string(case = "Car", val = ReboundTools::star_v
 # Parameters for second table
 q_dot_s_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$q_dot_s_orig, digits = 0)
 M_dot_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$M_dot_orig, digits = 2)
-p_e_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$p_E_engr_units, digits = 2)
+p_E_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$p_E_engr_units, digits = 2)
 f_Cs_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$f_Cs_orig, digits = 3)
 k_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$k, digits = 1)
 
@@ -1358,9 +1358,9 @@ versus the incumbent (Ford Fusion SE).
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
 in the gas-electric hybrid Energi car.  
-The automobile case study has a very high 
+The automobile case study has a very large
 initial capital investment
-and a long-term benefit of decreased direct energy costs. 
+and the long-term benefit of decreased direct energy costs. 
 
 
 %------------------------------
@@ -1456,10 +1456,10 @@ are given in Table~\ref{tab:car_economic_parameters}.
   Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of gasoline                       & \Sexpr{p_e_orig_car_char}       & Taken from US Energy Information Agency (EIA) data \\
+  Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}         & Calculation: \$1,275 (spend on energy service) \\
+  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,275 (spend on energy service) \\
   $\fCs$ [--]                                               &               & / [\$19,234 (spend on other goods) + \\
                                                             &               & \$1,275 (spend on energy service)] = 0.062, \\
                                                             &               & where spend on energy service = 14,425 miles / 42 mpg \\
@@ -1486,10 +1486,10 @@ as given in Table~\ref{tab:car_elasticity_parameters}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   \Sexpr{e_qs_ps_UC_car_char}  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
+  Marshallian (uncompensated) price elasticity of demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
   $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   \Sexpr{e_qs_ps_car_char}     & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
+  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_car_char}$   & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &                                &   \\    
   \midrule   
   Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~\ref{eq:eqops}.  \\
@@ -1631,54 +1631,53 @@ the direct emplacement effect,
 the embodied energy effect, and 
 the maintenance and disposal effect.
 Rebound from the direct emplacement effect 
-$Re_{dempl} = \Sexpr{Re_dempl_car_char_perc}$\% always, 
+($Re_{dempl}$) is \Sexpr{Re_dempl_car_char_perc}\% always, 
 because energy takeback (and, therefore, rebound)
 occurs after the EEU is emplaced.
 Indirect rebound due to the embodied energy effect
-$Re_{emb} = \Sexpr{Re_emb_car_char_perc}$\%,  
+($Re_{emb}$) is \Sexpr{Re_emb_car_char_perc}\%,  
 due to the higher embodied energy rate
 ($\Delta \raempl{E}_{emb} = \Sexpr{Delta_E_dot_emb_star_car_char}$~MJ/year)
 stemming from the electric battery in the hybrid EV car.
 Rebound due to the maintenance and disposal effect
-$Re_{\md} = \Sexpr{Re_md_car_char_perc}$\% 
-is small and negative,
+($Re_{\md}$) is small and negative
+($\Sexpr{Re_md_car_char_perc}$\%),
 because of the slightly lower maintenance and disposal costs
 for the hybrid EV car.
 
 The \subeffect{} effect has two components:
 direct and indirect substitution effect rebound.
-Rebound from direct substitution
-$Re_{dsub} = \Sexpr{Re_dsub_car_char_perc}$\%
-is positive, as expected. 
+Rebound from direct substitution ($Re_{dsub}$) is 
+positive, as expected (\Sexpr{Re_dsub_car_char_perc}\%). 
 The car owner will prefer more driving, 
 because of fuel efficiency enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
 the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
-Conversely, the indirect substitution effect  
-$Re_{isub} = \Sexpr{Re_isub_car_char_perc}$\%, 
-a slightly negative value
+Conversely, the indirect substitution effect ($Re_{isub}$)
+is slightly negative ($\Sexpr{Re_isub_car_char_perc}$\%)
 to achieve the same level of utility after increased driving. 
-Indeed, less money is spent on other goods:
-$\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_car_char}$~\$/year.
+Indeed, less money is spent on other goods
+($\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_car_char}$~\$/year).
 
 The \inceffect{} also has two components:
 direct and indirection income effect rebound.
 The car owner sees an increase in their effective income
 due to a net monetary savings from the emplacement and substitution effects. 
 The direct income effect
-$Re_{dinc} = \Sexpr{Re_dinc_car_char_perc}$\%, 
-is positive, because the car owner allocates some
-of the freed cash to additional driving. 
+($Re_{dinc}$) is positive
+(\Sexpr{Re_dinc_car_char_perc}\%), 
+because the car owner allocates some
+freed cash to additional driving. 
 Rebound from the indirect income effect 
-$Re_{iinc} = \Sexpr{Re_iinc_car_char_perc}$\%
-is positive due to higher spending on other goods. 
+($Re_{iinc}$) is positive (\Sexpr{Re_iinc_car_char_perc}\%)
+due to higher spending on other goods. 
 Thus, the freed cash after the substitution effect
 ($\rasub{N} = \Sexpr{N_dot_hat_car_char}$~\$/year) 
-translates into direct and indirect income
-rebound at the micro-level. 
+translates into positive direct and indirect income
+rebound at the micro level. 
 
-Finally, at the macro level, the \prodeffect{} leads to energy rebound
-$Re_{\productivity} = \Sexpr{Re_prod_car_char_perc}$\%,
+Finally, at the macro level, the \prodeffect{} leads to prodictivity rebound
+($Re_{\productivity}$) of \Sexpr{Re_prod_car_char_perc}\%,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (transportation).
@@ -1688,6 +1687,61 @@ energy service (transportation).
 \subsection{Case 2: Electric lamp}
 \label{sec:lamp_example}
 %++++++++++++++++++++++++++++++
+
+<<LampPrintableNumbers, echo=FALSE>>=
+# First table
+efficacy_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 2) # lm-hr/W-hr
+efficacy_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # lm-hr/W-hr
+C_dot_cap_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$C_dot_cap_orig, digits = 3)
+C_dot_cap_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$C_dot_cap_star, digits = 3)
+t_own_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$t_own_orig, digits = 1)
+t_own_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$t_own_star, digits = 0)
+t_life_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$t_life_orig, digits = 1)
+t_life_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$t_life_star, digits = 0)
+E_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_emb_orig, digits = 2)
+E_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_emb_star, digits = 2)
+C_dot_md_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$C_dot_md_orig, digits = 2)
+C_dot_md_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$C_dot_md_star, digits = 2)
+
+# Second table
+q_dot_s_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$q_dot_s_orig, digits = 0)
+M_dot_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$M_dot_orig, digits = 2)
+p_E_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$p_E_engr_units, digits = 4)
+f_Cs_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$f_Cs_orig, digits = 7)
+k_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$k, digits = 1)
+
+# Third table
+e_qs_ps_UC_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qs_ps_UC, digits = 1)
+e_qs_ps_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qs_ps, digits = 4)
+e_qo_ps_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qo_ps, digits = 5)
+e_qs_M_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qs_M, digits = 1)
+e_qo_M_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qo_M, digits = 1)
+
+
+# Results discussion
+Re_dempl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, digits = 1)
+Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
+Delta_E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_E_dot_emb_star, digits = 2)
+E_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_emb_orig, digits = 2)
+E_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_emb_star, digits = 2)
+E_dot_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_dot_emb_orig, digits = 2)
+E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_dot_emb_star, digits = 2)
+Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
+Re_md_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_md, to_perc = TRUE)
+Re_dsub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dsub, to_perc = TRUE)
+eta_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # In lm/W
+eta_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 3) # In lm/W
+q_dot_s_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$q_dot_s_star, digits = 0) # In lm-hr/year
+q_dot_s_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$q_dot_s_hat, digits = 0) # In lm-hr/year
+Re_isub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_isub, to_perc = TRUE)
+Delta_C_dot_o_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_hat, digits = 2)
+Re_dinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dinc, to_perc = TRUE, digits = 2)
+Re_iinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_iinc, to_perc = TRUE)
+N_dot_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$N_dot_hat, digits = 2)
+Delta_C_dot_o_bar_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_bar, digits = 2)
+Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+@
+
 
 For our second example, 
 we select the option of buying a light emitting diode (LED) electric lamp, 
@@ -1719,22 +1773,22 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
     Description                  & Incandescent lamp & LED lamp & Data sources and notes\\ 
     Parameters [units]                                &  &  & \\
   \midrule
-  Lamp efficacy                                     & 8.83      & 81.8     & Incandescent: 530 lm output / 60 W energy input. \\
+  Lamp efficacy                   & \Sexpr{efficacy_worse}      & \Sexpr{efficacy_better}     & Incandescent: 530 lm output / 60 W energy input. \\
   $\bempl{\eta}$, $\aprod{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
   \midrule
-   Capital cost rate                                & 1.044     & 0.121    & Purchase costs: \$1.88 for incandescent lamp from  \\
+   Capital cost rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb}, \\
                                                     &           &          & and \$1.21 for LED lamp from \\
                                                     &           &          & \citet{Home_Depot:2020_LED_bulb}. \\
   \midrule
-   Ownership duration                               & 1.8       & 10       & Assumed same as lamp lifespan \\
+   Ownership duration      & \Sexpr{t_own_orig_lamp_char}       & \Sexpr{t_own_star_lamp_char}       & Assumed same as lamp lifespan \\
    $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          &  \\
  \midrule
-   Lifespan                                         & 1.8       & 10       & Based on assumed 3 hours/day  \\
+   Lifespan               & \Sexpr{t_life_orig_lamp_char}       & \Sexpr{t_life_star_lamp_char}       & Based on assumed 3 hours/day  \\
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Home_Depot:2020_Inc_bulb} \\
                                                     &           &          & and  \citet{Home_Depot:2020_LED_bulb}. \\
    \midrule
-   Life cycle analysis (LCA) embodied energy        & 2.21      & 6.50     & Base document: Table 4.5 Manufacturing Energy  \\
+   Life cycle analysis (LCA) embodied energy  & \Sexpr{E_emb_orig_lamp_char}      & \Sexpr{E_emb_star_lamp_char}     & Base document: Table 4.5 Manufacturing Energy  \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Primary energy (MJ/20 Million lumen hours), \\
                                                     &           &          & US DoE Life-cycle assessment of energy and environmental \\
                                                     &           &          & impacts of LED lighting products \\
@@ -1750,7 +1804,7 @@ Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficienc
                                                     &           &          & $\times$ 365 days/year $\times$ 10 years = 4,926,405 lumen-hrs. \\
                                                     &           &          & Thus LCA energy / lamp =  132 MJ/5 $\times$ 4.9264/20 = 6.5 MJ. \\ 
  \midrule
-  Maintenance and disposal cost rate                & 0.00      & 0.00     & Assumed negligible. \\
+  Maintenance and disposal cost rate  & \Sexpr{C_dot_md_orig_lamp_char}      & \Sexpr{C_dot_md_star_lamp_char}     & Assumed negligible. \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
   \bottomrule
 \end{tabular}
@@ -1775,7 +1829,7 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
   Description  & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Lighting consumption prior to upgrade                     & 580,350       & Calculation: 530 lm $\times$ 3 hrs/day $\times$ 365 days/year. \\
+  Lighting consumption prior to upgrade   & \Sexpr{q_dot_s_orig_lamp_char}  & Calculation: (530 lm) (3 hrs/day) (365 days/year). \\
   $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
   Real median personal income US, in 2018                   & 33,706        & Source: \citet{St_Louis_Fed:2019}.\\
@@ -1789,20 +1843,19 @@ are given below in Table~\ref{tab:lamp_economic_parameters}.
   {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition \\ 
                                                             &               & \citep{US_BEA:2020}. \\
   \midrule
-  Personal consumption                                      & 27,401.28     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
+  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of electricity                                      & 0.0227        & US 2020 average household electricity price: \$0.1355/kW-hr \\
-  $p_E$ [\$/MJ]                                             &               & \citep{US_EIA:2020_electricity}.  \\
-                                                            &               & Calculation: \$0.1355/kW-hr / 3.6 MJ/kW-hr = \$0.0227/MJ. \\
+  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & US 2020 average household electricity price \\
+  $p_E$ [\$/kW-hr]                                          &               & \citep{US_EIA:2020_electricity}.  \\
   \midrule
-  Fractional spend on energy service                        & 0.00032       & Calculation: \$9/year (spend on energy service) / \\
+  Fractional spend on energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$9/year (spend on energy service) / \\
   $\fCs$ [--]                                               &               & [\$27,391/year (spend on other goods) + \\
                                                             &               & \$9/year (spend on energy service)] = 0.00032, \\
                                                             &               & where spend on energy service = 580,350 lm-hrs/year /  \\
                                                             &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1355/kW-hr = \$9/year.  \\
   \midrule
-  Productivity multiplier                                   & 1.0           & Assumed value. \\  
+  Productivity multiplier                   & \Sexpr{k_lamp_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
@@ -1824,19 +1877,19 @@ as given in Table~\ref{tab:lamp_elasticity_parameters}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   -0.4    & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
+  Marshallian (uncompensated) price elasticity of demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
   $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   -0.3997  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
+  Price elasticity of demand for car use                  &  $\Sexpr{e_qs_ps_lamp_char}$      & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
   $\eqsps$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   0.0001   & Calculated via Eq.~\ref{eq:eqops}.  \\
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_char}     & Calculated via Eq.~\ref{eq:eqops}.  \\
   $\eqops$ [--]                                           &           &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   1.0     & Assumed value. \\
+  Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
   $\eqsM$ [--]                                            &           &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   1.0     & Assumed value. \\
+  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_lamp_char}     & Assumed value. \\
   $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
@@ -1938,34 +1991,11 @@ rebound_results %>%
 @
 
 
-<<LampPrintableNumbers, echo=FALSE>>=
-Re_dempl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, digits = 1)
-Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
-Delta_E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_E_dot_emb_star, digits = 2)
-E_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_emb_orig, digits = 2)
-E_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_emb_star, digits = 2)
-E_dot_emb_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$E_dot_emb_orig, digits = 2)
-E_dot_emb_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$E_dot_emb_star, digits = 2)
-Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
-Re_md_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_md, to_perc = TRUE)
-Re_dsub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dsub, to_perc = TRUE)
-eta_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # In lm/W
-eta_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 3) # In lm/W
-q_dot_s_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$q_dot_s_star, digits = 0) # In lm-hr/year
-q_dot_s_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$q_dot_s_hat, digits = 0) # In lm-hr/year
-Re_isub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_isub, to_perc = TRUE)
-Delta_C_dot_o_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_hat, digits = 2)
-Re_dinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dinc, to_perc = TRUE, digits = 2)
-Re_iinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_iinc, to_perc = TRUE)
-N_dot_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$N_dot_hat, digits = 2)
-Delta_C_dot_o_bar_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_bar, digits = 2)
-Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
-@
-
 The \empleffect{} rebound components are as follows:
-The direct emplacement effect is always $\Sexpr{Re_dempl_lamp_char_perc}$\%.
+the direct emplacement effect ($Re_{dempl}$) 
+is always $\Sexpr{Re_dempl_lamp_char_perc}$\%.
 Indirect rebound due to the embodied energy effect
-$Re_{emb} = \Sexpr{Re_emb_lamp_char_perc}$\%.
+($Re_{emb}$) is $\Sexpr{Re_emb_lamp_char_perc}$\%.
 Although the LED lamp has higher embodied energy 
 ($\aempl{E}_{emb} = \Sexpr{E_emb_star_lamp_char}$~MJ)
 than the incandescent lamp 
@@ -1975,18 +2005,18 @@ meaning that the LED embodied energy rate
 ($\raempl{E}_{emb} = \Sexpr{E_dot_emb_star_lamp_char}$~MJ/year)
 is less than the incandescent embodied energy rate
 ($\rbempl{E}_{emb} = \Sexpr{E_dot_emb_orig_lamp_char}$~MJ/year).
-Thus, $\Delta \raempl{E}_{emb} = \Sexpr{Delta_E_dot_emb_star_lamp_char}$~MJ/year, 
+Thus, the change in embodied energy rate ($\Delta \raempl{E}_{emb}$)
+is $\Sexpr{Delta_E_dot_emb_star_lamp_char}$~MJ/year, 
 and embodied energy rebound is negative
 ($Re_{emb} = \Sexpr{Re_emb_lamp_char_perc}$\%).
 Rebound due to the maintenance and disposal effect
-$Re_{\md} = \Sexpr{Re_md_lamp_char_perc}$\%,
+($Re_{\md}$) is \Sexpr{Re_md_lamp_char_perc}\%,
 because we assume no difference in maintenance and disposal costs between 
 the incandescent lamp and the LED lamp.
 
 Direct \subeffect{} rebound 
-$Re_{dsub} = \Sexpr{Re_dsub_lamp_char_perc}$\%
+($Re_{dsub}$) is \Sexpr{Re_dsub_lamp_char_perc}\%
 due to the much higher LED lamp efficacy
-for the LED lamp
 ($\aempl{\eta} = \Sexpr{eta_better}$~lm/W) 
 compared to the incandescent lamp
 ($\bempl{\eta} = \Sexpr{eta_worse}$~lm/W),
@@ -1997,14 +2027,15 @@ To maintain constant utility,
 consumption of other goods is reduced
 ($\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_lamp_char}$~\$/year), 
 yielding indirect substitution effect rebound
-$Re_{isub} = \Sexpr{Re_isub_lamp_char_perc}$\%.
+($Re_{isub}$) of $\Sexpr{Re_isub_lamp_char_perc}$\%.
 
 \Inceffect{} rebound arises from respending of net energy cost savings
 associated with converting from the incandescent lamp to the LED lamp
 ($\rbinc{N} = \Sexpr{N_dot_hat_lamp_char}$~\$/year).
 Direct income effect rebound 
-($Re_{dinc} = \Sexpr{Re_dinc_lamp_char_perc}$\%)
-is positive but small, as the lamp owner allocates 
+($Re_{dinc}$) is \Sexpr{Re_dinc_lamp_char_perc}\%),
+positive but small, 
+as the lamp owner allocates 
 some of the additional income to increased consumption of lighting. 
 The indirect income effect rebound is large
 ($Re_{iinc} = \Sexpr{Re_iinc_lamp_char_perc}$\%), 
@@ -2012,7 +2043,7 @@ due to the energy implications of increased spending on other goods.
 
 Finally, rebound due to the macroeconomic 
 \prodeffect{} 
-($Re_{\productivity} = \Sexpr{Re_prod_lamp_char_perc}$\%)
+($Re_{\productivity}$) is \Sexpr{Re_prod_lamp_char_perc}\%
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
