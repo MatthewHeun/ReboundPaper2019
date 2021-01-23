@@ -1308,6 +1308,7 @@ val_to_string <- function(case, val, to_perc = FALSE, scale = 1, digits = 1, for
   val %>% 
     formatC(digits = digits, format = format, big.mark = big.mark)
 }
+# Parameters for first table
 mpg_worse <- val_to_string(case = "Car", val = ReboundTools::orig_vars$eta_engr_units_orig, digits = 0)
 mpg_better <- val_to_string(case = "Car", val = ReboundTools::star_vars$eta_engr_units_star, digits = 0)
 C_dot_cap_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$C_dot_cap_orig, digits = 0)
@@ -1321,6 +1322,22 @@ E_emb_star_car_char <- val_to_string(case = "Car", val = ReboundTools::star_vars
 C_dot_md_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$C_dot_md_orig, digits = 0)
 C_dot_md_star_car_char <- val_to_string(case = "Car", val = ReboundTools::star_vars$C_dot_md_star, digits = 0)
 
+# Parameters for second table
+q_dot_s_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$q_dot_s_orig, digits = 0)
+M_dot_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$M_dot_orig, digits = 2)
+p_e_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$p_E_engr_units, digits = 2)
+f_Cs_orig_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$f_Cs_orig, digits = 3)
+k_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$k, digits = 1)
+
+# Parameters for elasticity table
+e_qs_ps_UC_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qs_ps_UC, digits = 1)
+e_qs_ps_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qs_ps, digits = 3)
+e_qo_ps_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qo_ps, digits = 3)
+e_qs_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qs_M, digits = 1)
+e_qo_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qo_M, digits = 1)
+
+
+# Parameters for discussion
 Re_dempl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, digits = 1)
 Re_emb_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
 Delta_E_dot_emb_star_car_char <- val_to_string(case = "Car", val = ReboundTools::Delta_vars$Delta_E_dot_emb_star, digits = 0)
@@ -1419,7 +1436,7 @@ are given in Table~\ref{tab:car_economic_parameters}.
   Description & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Distance driven prior to upgrade                          & 14,425        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
+  Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
   $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
                                                             &               & \citet{US_DoT:2018}. \\
   \midrule
@@ -1436,19 +1453,19 @@ are given in Table~\ref{tab:car_economic_parameters}.
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                                      & 27401.28      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
+  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of gasoline                                         & 2.21          & Taken from US Energy Information Agency (EIA) data \\
+  Price of gasoline                       & \Sexpr{p_e_orig_car_char}       & Taken from US Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fractional spend on energy service                        & 0.062         & Calculation: \$1,275 (spend on energy service) \\
+  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}         & Calculation: \$1,275 (spend on energy service) \\
   $\fCs$ [--]                                               &               & / [\$19,234 (spend on other goods) + \\
                                                             &               & \$1,275 (spend on energy service)] = 0.062, \\
                                                             &               & where spend on energy service = 14,425 miles / 42 mpg \\
                                                             &               & $\times$ \$2.21/gallon = \$1,275. \\
   \midrule
-  Productivity multiplier                                   & 1.0           & Assumed value \\  
+  Productivity multiplier                    & \Sexpr{k_car_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
@@ -1469,20 +1486,20 @@ as given in Table~\ref{tab:car_elasticity_parameters}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   -0.1    & Source: \citet{Borenstein:2015aa}. \\
-  $\eqspsUC$ [--]                                         &           &   \\ 
+  Marshallian (uncompensated) price elasticity of demand  &   \Sexpr{e_qs_ps_UC_car_char}  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
+  $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   -0.077  & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
-  $\eqsps$ [--]                                           &           &   \\    
+  Price elasticity of demand for car use                  &   \Sexpr{e_qs_ps_car_char}     & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
+  $\eqsps$ [--]                                           &                                &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   0.002   & Calculated via Eq.~\ref{eq:eqops}.  \\
-  $\eqops$ [--]                                           &           &   \\ 
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~\ref{eq:eqops}.  \\
+  $\eqops$ [--]                                           &                                &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   1.0     & Assumed value. \\
-  $\eqsM$ [--]                                            &           &   \\ 
+  Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Assumed value. \\
+  $\eqsM$ [--]                                            &                                &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   1.0     & Assumed value. \\
-  $\eqoM$ [--]                                            &           &   \\
+  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_car_char}      & Assumed value. \\
+  $\eqoM$ [--]                                            &                                &   \\
   \bottomrule
 \end{tabular}
 \end{center}
@@ -1605,8 +1622,6 @@ rebound_results %>%
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
-  ggplot2::xlim(0.95, 1.1) +
-  ggplot2::ylim(NA, 1.04) +
   MKHthemes::xy_theme()
 @
 
