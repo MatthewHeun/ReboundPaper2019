@@ -1573,17 +1573,6 @@ rebound_results %>%
 
 
 <<CarPrintableNumbers, echo=FALSE>>=
-# val_to_string <- function(case, val, to_perc = FALSE, fmt = "%#.1f", scale = 1) {
-#   val <- rebound_results %>% 
-#     dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] == case) %>% 
-#     magrittr::extract2(val) %>% 
-#     magrittr::multiply_by(scale)
-#   if (to_perc) {
-#     val <- val * 100
-#   }
-#   val %>% 
-#     sprintf(fmt = fmt)
-# }
 val_to_string <- function(case, val, to_perc = FALSE, scale = 1, digits = 1, format = "f", big.mark = ",") {
   val <- rebound_results %>% 
     dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] == case) %>% 
