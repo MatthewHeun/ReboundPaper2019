@@ -1934,12 +1934,12 @@ rebound_results %>%
 
 
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
-lamp_graph_params <- graph_colour_params
+ <- graph_colour_params
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy", 
-                               graph_params = lamp_graph_params) + 
+                               graph_params = ) + 
   MKHthemes::xy_theme()
 @
 
@@ -1948,7 +1948,7 @@ rebound_results %>%
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost", 
-                               graph_params = lamp_graph_params) + 
+                               graph_params = ) + 
   MKHthemes::xy_theme()
 @
 
@@ -2179,7 +2179,6 @@ using an early version of this framework.
 \input{pieces/nomenclature.tex}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Derivation of comprehensive rebound framework}
 \label{sec:derivation}
@@ -2194,7 +2193,6 @@ using an early version of this framework.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{pieces/elasticities.tex}
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2212,6 +2210,13 @@ using an early version of this framework.
 
 \input{pieces/utility.tex}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Derivation of post-substitution point}
+\label{sec:post_sub_derivation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/post_sub_derivation.tex}
 
 
 \end{document}
