@@ -1336,7 +1336,6 @@ e_qo_ps_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_
 e_qs_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qs_M, digits = 1)
 e_qo_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qo_M, digits = 1)
 
-
 # Parameters for discussion
 Re_dempl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, digits = 1)
 Re_emb_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_emb, to_perc = TRUE)
@@ -1574,24 +1573,26 @@ rebound_results %>%
 
 <<CarGraphParams, echo=FALSE>>=
 pal <- RColorBrewer::brewer.pal(12, "Paired")
-car_graph_params <- ReboundTools::default_graph_params
-car_graph_params$dempl_colour <- "lightgray"
-car_graph_params$dempl_size <- 0.5
-car_graph_params$dempl_linetype <- "longdash"
-car_graph_params$emb_colour <- pal[[1]]
-car_graph_params$cap_colour <- pal[[1]]
-car_graph_params$md_colour <- pal[[2]]
-car_graph_params$md_size <- 0.3
-car_graph_params$md_linetype <- "dotted"
-car_graph_params$dsub_colour <- pal[[3]]
-car_graph_params$dsub_size <- 0.3
-car_graph_params$dsub_linetype <- "dashed"
-car_graph_params$isub_colour <- pal[[4]]
-car_graph_params$dinc_colour <- pal[[5]]
-car_graph_params$dinc_size <- 0.3
-car_graph_params$dinc_linetype <- "dashed"
-car_graph_params$iinc_colour <- pal[[6]]
-car_graph_params$prod_colour <- pal[[7]]
+graph_colour_params <- ReboundTools::default_graph_params
+graph_colour_params$dempl_colour <- "lightgray"
+graph_colour_params$dempl_size <- 0.5
+graph_colour_params$dempl_linetype <- "longdash"
+graph_colour_params$emb_colour <- pal[[1]]
+graph_colour_params$cap_colour <- pal[[1]]
+graph_colour_params$md_colour <- pal[[2]]
+graph_colour_params$md_size <- 0.3
+graph_colour_params$md_linetype <- "dotted"
+graph_colour_params$dsub_colour <- pal[[3]]
+graph_colour_params$dsub_size <- 0.3
+graph_colour_params$dsub_linetype <- "dashed"
+graph_colour_params$isub_colour <- pal[[4]]
+graph_colour_params$dinc_colour <- pal[[5]]
+graph_colour_params$dinc_size <- 0.3
+graph_colour_params$dinc_linetype <- "dashed"
+graph_colour_params$iinc_colour <- pal[[6]]
+graph_colour_params$prod_colour <- pal[[7]]
+graph_colour_params$prefs_indiff_grid_size <- 1
+car_graph_params <- graph_colour_params
 @
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
@@ -1613,15 +1614,12 @@ rebound_results %>%
 
 
 <<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
-car_graph_params$prefs_indiff_grid_size <- 1
-car_graph_params$n_indiff_curve_points <- 10
-car_graph_params$qs_qs0_lower <- 0.9
-car_graph_params$qs_qs0_upper <- 1.2
-
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
+  ggplot2::xlim(0.9, 1.3) + 
+  ggplot2::ylim(0.99, 1.04) +
   MKHthemes::xy_theme()
 @
 
@@ -1936,7 +1934,8 @@ rebound_results %>%
 
 
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
-lamp_graph_params <- car_graph_params
+lamp_graph_params <- graph_colour_params
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy", 
@@ -1959,6 +1958,8 @@ rebound_results %>%
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences", 
                                graph_params = lamp_graph_params) + 
+  ggplot2::xlim(0.7, 3.5) +
+  ggplot2::ylim(0.9998, 1.0004) +
   MKHthemes::xy_theme()
 @
 
