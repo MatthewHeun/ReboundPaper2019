@@ -1934,12 +1934,12 @@ rebound_results %>%
 
 
 <<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
- <- graph_colour_params
+lamp_graph_params <- graph_colour_params
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy", 
-                               graph_params = ) + 
+                               graph_params = lamp_graph_params) + 
   MKHthemes::xy_theme()
 @
 
@@ -1948,7 +1948,7 @@ rebound_results %>%
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost", 
-                               graph_params = ) + 
+                               graph_params = lamp_graph_params) + 
   MKHthemes::xy_theme()
 @
 
