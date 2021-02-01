@@ -1555,6 +1555,7 @@ shows the effect of each rebound effect.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
 Re_label_angle <- -77
+Re_arrow_angle <- pi/180 * 3.1
 Re_label_size <- 4
 Re_text_colour <- "gray"
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
@@ -1563,29 +1564,29 @@ car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                      46700, 76990, 'scriptstyle("^")', "black", 10, 0,
                                      49300, 79550, 'scriptscriptstyle("_")', "black", 10, 0,
                                      49300, 81950, 'scriptscriptstyle("~")', "black", 10, 0,
-                                     41000, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
+                                     40200, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
                                      41000, 79000, 'Re[tot] == 0*"%"', Re_text_colour, Re_label_size, Re_label_angle,
                                      42400, 79200, 'Re[empl]', ReboundTools::default_graph_params$dempl_colour, Re_label_size, Re_label_angle,
                                      41900, 80500, 'Re[sub]', ReboundTools::default_graph_params$dsub_colour, Re_label_size-1, Re_label_angle + 90,
                                      45400, 80650, 'Re[inc]', ReboundTools::default_graph_params$dinc_colour, Re_label_size-1, Re_label_angle + 90,
                                      51250, 78000, 'Re[prod]', ReboundTools::default_graph_params$prod_colour, Re_label_size-2, Re_label_angle + 90,
                                      70100, 81000, 'Re[tot] == 100*"%"', "gray", Re_label_size, Re_label_angle, 
-                                     75000, 79500, 'Backfire', "gray", Re_label_size, Re_label_angle)
-Re_arrows <- tibble::tribble(~x, ~y, ~xend, ~yend, ~colour, ~size, 
-                             40330, 80600, 43150, 80730, ReboundTools::default_graph_params$dsub_colour, 0.5,
-                             43250, 80737, 47000, 80910, ReboundTools::default_graph_params$dinc_colour, 0.5,
-                             49940, 78040, 52200, 78150, ReboundTools::default_graph_params$prod_colour, 0.5)
+                                     73000, 79500, 'Backfire', "gray", Re_label_size, Re_label_angle)
+Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
+                             40330, 80600, Re_arrow_angle, 2800, ReboundTools::default_graph_params$dsub_colour, 0.5,
+                             43200, 80760, Re_arrow_angle, 3750, ReboundTools::default_graph_params$dinc_colour, 0.5,
+                             49940, 78040, Re_arrow_angle, 2250, ReboundTools::default_graph_params$prod_colour, 0.5)
 
 car_graph_params <- ReboundTools::default_graph_params
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Energy", 
                                graph_params = car_graph_params) +
-  ggplot2::geom_segment(data = Re_arrows, 
+  ggplot2::geom_spoke(data = Re_arrows, 
                         mapping = ggplot2::aes(x = x,
                                                y = y,
-                                               xend = xend, 
-                                               yend = yend, 
+                                               angle = angle, 
+                                               radius = radius, 
                                                colour = colour), 
                         arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
   ggplot2::geom_text(data = car_energy_labels, 
