@@ -372,7 +372,7 @@ Rather,
 $\Delta \aempl{p}_s \approx 0$ is finite and may be large.
 
 To determine the new consumption bundle after the substitution effect and,
-ultimately, to quantify the direct and indirect rebound effects
+ultimately, to quantify the direct and indirect substitution rebound effects
 ($Re_{dsub}$ and $Re_{isub}$),
 we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
 must be constant along an indifference curve.
@@ -383,6 +383,33 @@ the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
 and the consumption rate of other goods ($\rate{C}_o$).
 
+Figure~\ref{fig:ExamplePrefsPathGraph} illustrates features
+of the exact method for determining the new consumption bundle.
+
+<<ExamplePrefsPathGraph, echo=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
+                          0.95, 1.01, 'scriptscriptstyle(o)', "gray", 8,
+                          # 1.13, 0.98, 'scriptscriptstyle(o)', "gray", 8,
+                          0.95, 1.005, 'scriptscriptstyle("*")', "gray", 8,
+                          # 1.2, 0.981, 'scriptscriptstyle("*")', "gray", 8,
+                          1.155, 0.9815, 'scriptstyle("^")',  "black", 10,
+                          0.95, 1.001, 'scriptscriptstyle("^")', "gray", 8,
+                          # 1.17, 0.98, 'scriptscriptstyle("^")', "gray", 8,
+                          1.185, 1.01, 'scriptscriptstyle("r")',  "gray", 8,
+                          # 1.15, 0.98, 'scriptscriptstyle("r")',  "gray", 8,
+                          0.97, 1.0065, 'scriptscriptstyle("i")', "gray", 8)
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Preferences", 
+                               graph_params = car_graph_params) + 
+  ggplot2::xlim(0.95, 1.2) +
+  ggplot2::ylim(0.98, 1.01) +
+  ggplot2::geom_text(data = labels, 
+                     mapping = ggplot2::aes(x = x, y = y, label = lab, colour = colour, size = size), 
+                     parse = TRUE) +
+  MKHthemes::xy_theme()
+@
 
 
 

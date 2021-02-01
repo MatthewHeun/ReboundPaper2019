@@ -2216,7 +2216,8 @@ using an early version of this framework.
 \label{sec:post_sub_derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/post_sub_derivation.tex}
+<<test, child='pieces/post_sub_derivation.Rnw'>>=
+@
 
 
 \end{document}
