@@ -407,7 +407,10 @@ rebound_results %>%
   ggplot2::xlim(0.95, 1.2) +
   ggplot2::ylim(0.978, 1.01) +
   ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, label = lab, colour = colour, size = size), 
+                     mapping = ggplot2::aes(x = x, y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
                      parse = TRUE) +
   MKHthemes::xy_theme()
 @
