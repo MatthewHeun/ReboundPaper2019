@@ -1590,7 +1590,8 @@ rebound_results %>%
                                                colour = colour), 
                         arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
   ggplot2::geom_text(data = car_energy_labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
                                             label = lab, 
                                             colour = colour, 
                                             size = size,
