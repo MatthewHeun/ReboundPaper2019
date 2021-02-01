@@ -389,23 +389,23 @@ of the exact method for determining the new consumption bundle.
 <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                           1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.95, 1.009, 'scriptscriptstyle(o)', "gray", 8,
-                          1.13, 0.978, 'scriptscriptstyle(o)', "gray", 8,
-                          0.95, 1.005, 'scriptscriptstyle("*")', "gray", 8,
-                          1.2, 0.981, 'scriptscriptstyle("*")', "gray", 8,
-                          1.153, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.95, 1.001, 'scriptscriptstyle("^")', "gray", 8,
-                          1.19, 0.978, 'scriptscriptstyle("^")', "gray", 8,
-                          1.185, 1.01, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.148, 0.979, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.97, 1.0065, 'scriptscriptstyle("i")', "gray", 8,
-                          1.166, 0.9802, 'scriptscriptstyle("i")', "gray", 8)
+                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
+                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
+                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
+                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
+                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
+                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
+                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
+                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
+                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
+                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
+                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
-  ggplot2::xlim(0.95, 1.2) +
-  ggplot2::ylim(0.978, 1.01) +
+  ggplot2::xlim(0.93, 1.23) +
+  ggplot2::ylim(0.973, 1.02) +
   ggplot2::geom_text(data = labels, 
                      mapping = ggplot2::aes(x = x, y = y, 
                                             label = lab, 
