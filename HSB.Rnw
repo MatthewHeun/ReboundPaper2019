@@ -1557,25 +1557,46 @@ shows the effect of each rebound effect.
 Re_label_angle <- -77
 Re_arrow_angle <- pi/180 * 3.1
 Re_label_size <- 4
-Re_text_colour <- "gray"
+Re_text_colour <- "darkgray"
+# car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+#                                      72400, 77320, '""^scriptscriptstyle(o)', "black", 10, 0,
+#                                      42700, 77400, 'scriptstyle("*")', "black", 10, 0,
+#                                      46700, 76990, 'scriptstyle("^")', "black", 10, 0,
+#                                      49300, 79550, 'scriptscriptstyle("_")', "black", 10, 0,
+#                                      49300, 81950, 'scriptscriptstyle("~")', "black", 10, 0,
+#                                      40200, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
+#                                      41000, 79000, 'Re[tot] == 0*"%"', Re_text_colour, Re_label_size, Re_label_angle,
+#                                      42400, 79200, 'Re[empl]', ReboundTools::default_graph_params$dempl_colour, Re_label_size, Re_label_angle,
+#                                      41900, 80500, 'Re[sub]', ReboundTools::default_graph_params$dsub_colour, Re_label_size-1, Re_label_angle + 90,
+#                                      45400, 80650, 'Re[inc]', ReboundTools::default_graph_params$dinc_colour, Re_label_size-1, Re_label_angle + 90,
+#                                      51250, 78000, 'Re[prod]', ReboundTools::default_graph_params$prod_colour, Re_label_size-2, Re_label_angle + 90,
+#                                      70100, 81000, 'Re[tot] == 100*"%"', "gray", Re_label_size, Re_label_angle, 
+#                                      73000, 79500, 'Backfire', "gray", Re_label_size, Re_label_angle)
+# Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
+#                              40330, 80600, Re_arrow_angle, 2800, ReboundTools::default_graph_params$dsub_colour, 0.5,
+#                              43200, 80760, Re_arrow_angle, 3750, ReboundTools::default_graph_params$dinc_colour, 0.5,
+#                              49940, 78040, Re_arrow_angle, 2250, ReboundTools::default_graph_params$prod_colour, 0.5)
+
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                     72400, 77320, '""^scriptscriptstyle(o)', "black", 10, 0,
-                                     42700, 77400, 'scriptstyle("*")', "black", 10, 0,
-                                     46700, 76990, 'scriptstyle("^")', "black", 10, 0,
-                                     49300, 79550, 'scriptscriptstyle("_")', "black", 10, 0,
-                                     49300, 81950, 'scriptscriptstyle("~")', "black", 10, 0,
+                                     72400, 77320, '""^scriptscriptstyle(o)', Re_text_colour, 10, 0,
+                                     42700, 77400, 'scriptstyle("*")', Re_text_colour, 10, 0,
+                                     46800, 76900, 'scriptstyle("^")', Re_text_colour, 10, 0,
+                                     49400, 79560, 'scriptscriptstyle("_")', Re_text_colour, 10, 0,
+                                     49020, 81960, 'scriptscriptstyle("~")', Re_text_colour, 10, 0,
                                      40200, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
                                      41000, 79000, 'Re[tot] == 0*"%"', Re_text_colour, Re_label_size, Re_label_angle,
-                                     42400, 79200, 'Re[empl]', ReboundTools::default_graph_params$dempl_colour, Re_label_size, Re_label_angle,
-                                     41900, 80500, 'Re[sub]', ReboundTools::default_graph_params$dsub_colour, Re_label_size-1, Re_label_angle + 90,
-                                     45400, 80650, 'Re[inc]', ReboundTools::default_graph_params$dinc_colour, Re_label_size-1, Re_label_angle + 90,
-                                     51250, 78000, 'Re[prod]', ReboundTools::default_graph_params$prod_colour, Re_label_size-2, Re_label_angle + 90,
-                                     70100, 81000, 'Re[tot] == 100*"%"', "gray", Re_label_size, Re_label_angle, 
-                                     73000, 79500, 'Backfire', "gray", Re_label_size, Re_label_angle)
+                                     42400, 79200, 'Re[empl]', Re_text_colour, Re_label_size, Re_label_angle,
+                                     41900, 80500, 'Re[sub]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
+                                     45200, 80680, 'Re[inc]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
+                                     51250, 77910, 'Re[prod]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
+                                     70100, 81000, 'Re[tot] == 100*"%"', Re_text_colour, Re_label_size, Re_label_angle, 
+                                     73000, 79500, 'Backfire', Re_text_colour, Re_label_size, Re_label_angle)
 Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-                             40330, 80600, Re_arrow_angle, 2800, ReboundTools::default_graph_params$dsub_colour, 0.5,
-                             43200, 80760, Re_arrow_angle, 3750, ReboundTools::default_graph_params$dinc_colour, 0.5,
-                             49940, 78040, Re_arrow_angle, 2250, ReboundTools::default_graph_params$prod_colour, 0.5)
+                             40330, 80600, Re_arrow_angle, 2800, Re_text_colour, 0.5,
+                             43200, 80760, Re_arrow_angle, 3750, Re_text_colour, 0.5,
+                             49940, 78040, Re_arrow_angle, 2250, Re_text_colour, 0.5)
+
+
 
 car_graph_params <- ReboundTools::default_graph_params
 rebound_results %>% 
