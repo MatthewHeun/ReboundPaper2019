@@ -1553,7 +1553,7 @@ Results can be represented graphically in energy, cost, preference path graphs.
 An energy path graph (Figure~\ref{fig:CarEnergyGraph})
 shows the effect of each rebound effect.
 
-<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
 car_Re_label_size <- 4
@@ -1601,7 +1601,7 @@ rebound_results %>%
 @
 
 
-<<CarCostGraph, echo=FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
 car_cost_line_angle <- -27
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    1270, 26085, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
@@ -1627,7 +1627,7 @@ rebound_results %>%
 @
 
 
-<<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
+<<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
 car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                     1.004, 1.0004, '""^scriptscriptstyle(o*",")*"*"', car_Re_text_colour, 10, 0,
                                     1.071, 0.998, 'scriptstyle("^")',  car_Re_text_colour, 10, 0,
@@ -2003,7 +2003,7 @@ rebound_results %>%
 @
 
 
-<<LampEnergyGraph, echo = FALSE, fig.cap="Energy path graph, lamp example.", fig.width=6, fig.height=4>>=
+<<LampEnergyGraph, echo = FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_graph_params <- ReboundTools::default_graph_params
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
@@ -2013,7 +2013,7 @@ rebound_results %>%
 @
 
 
-<<LampCostGraph, echo = FALSE, fig.cap="Cost path graph, lamp example.", fig.width=6, fig.height=4>>=
+<<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost", 
@@ -2022,7 +2022,7 @@ rebound_results %>%
 @
 
 
-<<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path graph, lamp example.", fig.width=6, fig.height=4>>=
+<<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences", 
