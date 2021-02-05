@@ -1554,56 +1554,35 @@ An energy path graph (Figure~\ref{fig:CarEnergyGraph})
 shows the effect of each rebound effect.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph, car example.", fig.width=6, fig.height=4>>=
-Re_label_angle <- -77
-Re_arrow_angle <- pi/180 * 3.1
-Re_label_size <- 4
-Re_text_colour <- "darkgray"
-# car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-#                                      72400, 77320, '""^scriptscriptstyle(o)', "black", 10, 0,
-#                                      42700, 77400, 'scriptstyle("*")', "black", 10, 0,
-#                                      46700, 76990, 'scriptstyle("^")', "black", 10, 0,
-#                                      49300, 79550, 'scriptscriptstyle("_")', "black", 10, 0,
-#                                      49300, 81950, 'scriptscriptstyle("~")', "black", 10, 0,
-#                                      40200, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
-#                                      41000, 79000, 'Re[tot] == 0*"%"', Re_text_colour, Re_label_size, Re_label_angle,
-#                                      42400, 79200, 'Re[empl]', ReboundTools::default_graph_params$dempl_colour, Re_label_size, Re_label_angle,
-#                                      41900, 80500, 'Re[sub]', ReboundTools::default_graph_params$dsub_colour, Re_label_size-1, Re_label_angle + 90,
-#                                      45400, 80650, 'Re[inc]', ReboundTools::default_graph_params$dinc_colour, Re_label_size-1, Re_label_angle + 90,
-#                                      51250, 78000, 'Re[prod]', ReboundTools::default_graph_params$prod_colour, Re_label_size-2, Re_label_angle + 90,
-#                                      70100, 81000, 'Re[tot] == 100*"%"', "gray", Re_label_size, Re_label_angle, 
-#                                      73000, 79500, 'Backfire', "gray", Re_label_size, Re_label_angle)
-# Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-#                              40330, 80600, Re_arrow_angle, 2800, ReboundTools::default_graph_params$dsub_colour, 0.5,
-#                              43200, 80760, Re_arrow_angle, 3750, ReboundTools::default_graph_params$dinc_colour, 0.5,
-#                              49940, 78040, Re_arrow_angle, 2250, ReboundTools::default_graph_params$prod_colour, 0.5)
-
+car_Re_label_angle <- -77
+car_Re_arrow_angle <- pi/180 * 3.1
+car_Re_label_size <- 4
+car_Re_text_colour <- "darkgray"
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                     72400, 77320, '""^scriptscriptstyle(o)', Re_text_colour, 10, 0,
-                                     42700, 77400, 'scriptstyle("*")', Re_text_colour, 10, 0,
-                                     46800, 76900, 'scriptstyle("^")', Re_text_colour, 10, 0,
-                                     49400, 79560, 'scriptscriptstyle("_")', Re_text_colour, 10, 0,
-                                     49020, 81960, 'scriptscriptstyle("~")', Re_text_colour, 10, 0,
-                                     40200, 77700, 'Hyperconservation', Re_text_colour, Re_label_size-1, Re_label_angle,
-                                     41000, 79000, 'Re[tot] == 0*"%"', Re_text_colour, Re_label_size, Re_label_angle,
-                                     42400, 79200, 'Re[empl]', Re_text_colour, Re_label_size, Re_label_angle,
-                                     41900, 80500, 'Re[sub]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
-                                     45200, 80680, 'Re[inc]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
-                                     51250, 77910, 'Re[prod]', Re_text_colour, Re_label_size-1, Re_label_angle + 90,
-                                     70100, 81000, 'Re[tot] == 100*"%"', Re_text_colour, Re_label_size, Re_label_angle, 
-                                     73000, 79500, 'Backfire', Re_text_colour, Re_label_size, Re_label_angle)
-Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-                             40330, 80600, Re_arrow_angle, 2800, Re_text_colour, 0.5,
-                             43200, 80760, Re_arrow_angle, 3750, Re_text_colour, 0.5,
-                             49940, 78040, Re_arrow_angle, 2250, Re_text_colour, 0.5)
-
-
+                                     72400, 77320, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
+                                     42700, 77400, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
+                                     46400, 76980, 'scriptstyle("^")', car_Re_text_colour, 10, 0,
+                                     49200, 79560, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
+                                     49020, 81960, 'scriptscriptstyle("~")', car_Re_text_colour, 10, 0,
+                                     40200, 77700, 'Hyperconservation', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle,
+                                     41000, 79000, 'Re[tot] == 0*"%"', car_Re_text_colour, car_Re_label_size, car_Re_label_angle,
+                                     42400, 79200, 'Re[empl]', car_Re_text_colour, car_Re_label_size, car_Re_label_angle,
+                                     41900, 80500, 'Re[sub]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
+                                     45200, 80680, 'Re[inc]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
+                                     51250, 77910, 'Re[prod]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
+                                     71100, 80000, 'Re[tot] == 100*"%"', car_Re_text_colour, car_Re_label_size, car_Re_label_angle, 
+                                     72100, 81300, 'Backfire', car_Re_text_colour, car_Re_label_size, car_Re_label_angle)
+car_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
+                                 40330, 80600, car_Re_arrow_angle, 2800, car_Re_text_colour, 0.5,
+                                 43200, 80760, car_Re_arrow_angle, 3750, car_Re_text_colour, 0.5,
+                                 49940, 78040, car_Re_arrow_angle, 2250, car_Re_text_colour, 0.5)
 
 car_graph_params <- ReboundTools::default_graph_params
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Energy", 
                                graph_params = car_graph_params) +
-  ggplot2::geom_spoke(data = Re_arrows, 
+  ggplot2::geom_spoke(data = car_Re_arrows, 
                         mapping = ggplot2::aes(x = x,
                                                y = y,
                                                angle = angle, 
@@ -1623,19 +1602,63 @@ rebound_results %>%
 
 
 <<CarCostGraph, echo=FALSE, fig.cap="Cost path graph, car example.", fig.width=6, fig.height=4>>=
+car_cost_line_angle <- -27
+car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                   1270, 26085, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
+                                   770, 25937, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
+                                   816, 25880, 'scriptstyle("^")', car_Re_text_colour, 10, 0,
+                                   830, 26557, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
+                                   1075, 26350, 'Original~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle,
+                                   950, 25958, 'New~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle)
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Cost", 
                                graph_params = car_graph_params) + 
+  ggplot2::geom_text(data = car_cost_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
   MKHthemes::xy_theme()
 @
 
 
 <<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path graph, car example.", fig.width=6, fig.height=4>>=
+car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                    1.004, 1.0004, '""^scriptscriptstyle(o*",")*"*"', car_Re_text_colour, 10, 0,
+                                    1.071, 0.998, 'scriptstyle("^")',  car_Re_text_colour, 10, 0,
+                                    1.108, 1.0336, 'scriptstyle("_")',  car_Re_text_colour, 10, 0,
+                                    0.9, 1.0076, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
+                                    1.165, 0.99, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
+                                    0.9, 1.004, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
+                                    1.258, 0.99, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
+                                    0.9, 1.002, 'scriptscriptstyle("^")', car_Re_text_colour, 8, 0,
+                                    1.205, 0.99, 'scriptscriptstyle("^")', car_Re_text_colour, 8, 0,
+                                    0.9, 1.04, 'scriptscriptstyle("_")', car_Re_text_colour, 8, 0,
+                                    1.3, 1.024, 'scriptscriptstyle("_")', car_Re_text_colour, 8, 0,
+                                    1.128, 1.04, 'scriptscriptstyle("r")',  car_Re_text_colour, 8, 0,
+                                    1.075, 0.99, 'scriptscriptstyle("r")',  car_Re_text_colour, 8, 0,
+                                    0.91, 1.0103, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
+                                    1.27, 0.993, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
+                                    1.01, 1.0394, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
+                                    1.29, 1.0291, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0)
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
                                graph_types = "Preferences", 
                                graph_params = car_graph_params) + 
+  ggplot2::geom_text(data = car_prefs_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
   ggplot2::xlim(0.9, 1.3) + 
   ggplot2::ylim(0.99, 1.04) +
   MKHthemes::xy_theme()
