@@ -1271,7 +1271,7 @@ with indirect energy consumption or other goods expenditures on the y-axis
 and direct energy consumption by the energy conversion device or energy costs on the x-axis.
 
 
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path graph.", fig.width=6, fig.height=4>>=
 example_Re_label_angle <- -45.6
 example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
 example_Re_label_size <- 4
