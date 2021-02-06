@@ -386,7 +386,7 @@ and the consumption rate of other goods ($\rate{C}_o$).
 Figure~\ref{fig:ExamplePrefsPathGraph} illustrates features
 of the exact method for determining the new consumption bundle.
 
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+<<ExamplePrefsPathGraphForDerivation, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                           1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
                           0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
