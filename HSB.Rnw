@@ -1328,11 +1328,48 @@ rebound_results %>%
   ggplot2::theme(axis.text.x = ggplot2::element_blank(),
                  axis.ticks.x = ggplot2::element_blank(),
                  axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank())
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 
 @
 
 
+<<ExampleCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
+example_cost_line_angle <- -16.5
+example_Re_text_colour <- "darkgray"
+example_Re_label_size <- 4
+example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                   2886, 24470, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                   2572, 24545, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
+                                   2568, 24420, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
+                                   2568, 24050, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                   2568, 23990, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
+                                   2653, 23990, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                   2762, 23990, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
+                                   2760, 24660, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                   2830, 24590, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
+                                   2820, 24290, 'Expenditure~after~EEU', example_Re_text_colour, example_Re_label_size, example_cost_line_angle)
+
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Cost") + 
+  ggplot2::geom_text(data = example_cost_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(), 
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+
+@
 
   <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
@@ -1351,8 +1388,8 @@ labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Preferences") + 
-  ggplot2::xlim(0.93, 1.23) +
-  ggplot2::ylim(0.973, 1.02) +
+  ggplot2::xlim(0.98, 1.1) +
+  ggplot2::ylim(0.99, 1.05) +
   ggplot2::geom_text(data = labels, 
                      mapping = ggplot2::aes(x = x, y = y, 
                                             label = lab, 
@@ -1362,6 +1399,36 @@ rebound_results %>%
   MKHthemes::xy_theme()
 @
 
+
+
+
+<<ExampleSubPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
+                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
+                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
+                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
+                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
+                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
+                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
+                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
+                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
+                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
+                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
+                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Preferences") + 
+  ggplot2::xlim(0.993, 1.038) +
+  ggplot2::ylim(0.9945, 1.0015) +
+  ggplot2::geom_text(data = labels, 
+                     mapping = ggplot2::aes(x = x, y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
+                     parse = TRUE) +
+  MKHthemes::xy_theme()
+@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
