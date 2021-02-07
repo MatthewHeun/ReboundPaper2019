@@ -1277,29 +1277,32 @@ example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
 example_Re_label_size <- 4
 example_Re_text_colour <- "darkgray"
 example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         73500, 71800, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                         64600, 68750, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                         67000, 68000, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                         70500, 71000, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                         70500, 73500, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
-                                         62000, 70000, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
-                                         67500, 70000, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         61800, 73760, 'Re[empl]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         62500, 72500, 'Re[sub]', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle + 90,
-                                         65000, 73500, 'Re[inc]', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle + 90,
-                                         67500, 74500, 'Re[prod]', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle + 90,
-                                         71700, 73500, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle, 
+                                         73300, 71800, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                         65000, 68750, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                         67130, 68300, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                         70100, 71000, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                         70050, 73500, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
+                                         62500, 69500, 'Hyperconservation', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         67350, 70100, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         62400, 72650, 'Re[empl]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         63490, 71530, 'Re[sub]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         65200, 73250, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         67050, 75000, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         71700, 73600, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle, 
                                          73000, 74500, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
 example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-                                     63000, 74000, example_Re_arrow_angle, -2200, example_Re_text_colour, 0.5,
-                                     61500, 72770, example_Re_arrow_angle, 1100, example_Re_text_colour, 0.5,
-                                     
-                                     62700, 73200, example_Re_arrow_angle, 3500, example_Re_text_colour, 0.5,
-                                     66200, 74500, example_Re_arrow_angle, 1850, example_Re_text_colour, 0.5)
+                                     # Re_empl arrow
+                                     63600, 73500, example_Re_arrow_angle, -2030, example_Re_text_colour, 0.5, 
+                                     # Re_sub arrow
+                                     62900, 71270, example_Re_arrow_angle, 1150, example_Re_text_colour, 0.5, 
+                                     # Re_inc arrow
+                                     63750, 72100, example_Re_arrow_angle, 3380, example_Re_text_colour, 0.5, 
+                                     # Re_prod arrow
+                                     66200, 74500, example_Re_arrow_angle, 1850, example_Re_text_colour, 0.5) 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Energy") + 
-  # ggplot2::xlim(0.93, 1.23) +
+  ggplot2::xlim(61800, 73400) +
   # ggplot2::ylim(0.973, 1.02) +
   ggplot2::geom_spoke(data = example_Re_arrows, 
                         mapping = ggplot2::aes(x = x,
