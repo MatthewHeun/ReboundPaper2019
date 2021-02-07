@@ -1273,63 +1273,67 @@ and direct energy consumption by the energy conversion device or energy costs on
 
 <<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path graph.", fig.width=6, fig.height=4>>=
 example_Re_label_angle <- -45.6
-example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
+# example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
+example_Re_arrow_angle <- 19.0 * pi/180
 example_Re_label_size <- 4
 example_Re_text_colour <- "darkgray"
 example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         73300, 71800, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                         65200, 72150, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                         65000, 70200, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                         65000, 68750, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                         65200, 68400, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                         67130, 68300, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                         69900, 68400, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                         70100, 71000, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                         70050, 73500, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
-                                         62500, 69500, 'Hyperconservation', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         67350, 70100, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         62400, 72650, 'Re[empl]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         63490, 71530, 'Re[sub]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         65200, 73220, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         67050, 75000, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         71700, 73600, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle, 
-                                         73000, 74500, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
-example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
+                                         1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                         0.11, 1.01, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
+                                         0.09, 0.973, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
+                                         0.085, 0.95, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                         0.09, 0.935, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
+                                         0.242, 0.923, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                         0.295, 0.942, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
+                                         0.295, 1.036, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                         0.29, 1.13, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
+                                         # 62500, 69500, 'Hyperconservation', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
+#                                          63490, 71530, 'Re[sub]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+#                                          65200, 73220, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+#                                          67050, 75000, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         0.754, 1.1, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+#                                          73000, 74500, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle
+)
+example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      # Re_empl arrow
-                                     63600, 73500, example_Re_arrow_angle, -2030, example_Re_text_colour, 0.5, 
+                                     0.078, 1.01, example_Re_arrow_angle, -0.063, example_Re_text_colour, 0.5,
                                      # Re_sub arrow
-                                     62900, 71270, example_Re_arrow_angle, 1150, example_Re_text_colour, 0.5, 
+                                     0.249, 0.904, example_Re_arrow_angle, 0.04, example_Re_text_colour, 0.5,
                                      # Re_inc arrow
-                                     63750, 72100, example_Re_arrow_angle, 3380, example_Re_text_colour, 0.5, 
+                                     0.327, 0.904, example_Re_arrow_angle, 0.157, example_Re_text_colour, 0.5,
                                      # Re_prod arrow
-                                     66200, 74500, example_Re_arrow_angle, 1850, example_Re_text_colour, 0.5) 
+                                     0.52, 0.941, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5
+                                     ) 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Energy") + 
-  ggplot2::xlim(61800, 73400) +
-  # ggplot2::ylim(0.973, 1.02) +
-  ggplot2::geom_spoke(data = example_Re_arrows, 
+                               graph_types = "Energy", 
+                               indexed = TRUE) + 
+  ggplot2::xlim(0, 1.1) +
+  ggplot2::ylim(0.9, 1.15) +
+  ggplot2::geom_spoke(data = example_Re_arrows,
                         mapping = ggplot2::aes(x = x,
                                                y = y,
-                                               angle = angle, 
-                                               radius = radius, 
-                                               colour = colour), 
+                                               angle = angle,
+                                               radius = radius,
+                                               colour = colour),
                         arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
-  ggplot2::geom_text(data = example_energy_labels, 
-                     mapping = ggplot2::aes(x = x, 
-                                            y = y, 
-                                            label = lab, 
-                                            colour = colour, 
+  ggplot2::geom_text(data = example_energy_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
                                             size = size,
-                                            angle = angle), 
+                                            angle = angle),
                      parse = TRUE) +
-  MKHthemes::xy_theme() + 
+  MKHthemes::xy_theme() # + 
   # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(),
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+  # ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+  #                axis.ticks.x = ggplot2::element_blank(),
+  #                axis.text.y = ggplot2::element_blank(),
+  #                axis.ticks.y = ggplot2::element_blank(),
+  #                axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 
 @
 
@@ -1352,83 +1356,67 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Cost") + 
-  ggplot2::geom_text(data = example_cost_labels, 
-                     mapping = ggplot2::aes(x = x, 
-                                            y = y, 
+                               graph_types = "Cost", 
+                               indexed = TRUE) + 
+  # ggplot2::xlim(0, 1.1) +
+  # ggplot2::ylim(0.9995, 1.0005) +
+  
+  # ggplot2::geom_text(data = example_cost_labels, 
+  #                    mapping = ggplot2::aes(x = x, 
+  #                                           y = y, 
+  #                                           label = lab, 
+  #                                           colour = colour, 
+  #                                           size = size,
+  #                                           angle = angle), 
+  #                    parse = TRUE) +
+  MKHthemes::xy_theme() # + 
+  # remove axis labels and ticks
+  # ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+  #                axis.ticks.x = ggplot2::element_blank(),
+  #                axis.text.y = ggplot2::element_blank(),
+  #                axis.ticks.y = ggplot2::element_blank(), 
+  #                axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+
+@
+
+
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                          1.1, 1.002, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
+                          0.7, 1.011, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                          1.55, 0.97, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                          0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                          3.5, 0.983, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                          2.27, 0.972, 'scriptstyle("^")',  example_Re_text_colour, 10,
+                          0.7, 0.989, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                          3.5, 0.974, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                          2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
+                          2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                          2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                          0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          3.4, 0.981, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          0.75, 1.143, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          3.4, 1.084, 'scriptscriptstyle("i")', example_Re_text_colour, 8)
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Preferences") + 
+  ggplot2::xlim(0.7, 3.5) +
+  ggplot2::ylim(0.97, 1.15) +
+  ggplot2::geom_text(data = labels, 
+                     mapping = ggplot2::aes(x = x, y = y, 
                                             label = lab, 
                                             colour = colour, 
-                                            size = size,
-                                            angle = angle), 
+                                            size = size), 
                      parse = TRUE) +
   MKHthemes::xy_theme() + 
   # remove axis labels and ticks
   ggplot2::theme(axis.text.x = ggplot2::element_blank(),
                  axis.ticks.x = ggplot2::element_blank(),
                  axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(), 
+                 axis.ticks.y = ggplot2::element_blank(),
                  axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
 @
 
-  <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences") + 
-  ggplot2::xlim(0.98, 1.1) +
-  ggplot2::ylim(0.99, 1.05) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
-
-
-
-
-<<ExampleSubPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences") + 
-  ggplot2::xlim(0.993, 1.038) +
-  ggplot2::ylim(0.9945, 1.0015) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
