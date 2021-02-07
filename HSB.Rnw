@@ -1287,15 +1287,14 @@ example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                          0.295, 0.942, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
                                          0.295, 1.036, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
                                          0.29, 1.13, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
-                                         # 62500, 69500, 'Hyperconservation', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         0.04, 0.923, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
                                          0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
                                          0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
-#                                          63490, 71530, 'Re[sub]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-#                                          65200, 73220, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-#                                          67050, 75000, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         0.21, 0.90, 'Re[sub]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
+                                         0.39, 0.936, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         0.68, 0.935, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
                                          0.754, 1.1, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-#                                          73000, 74500, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle
-)
+                                         0.95, 1.1, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
 example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      # Re_empl arrow
                                      0.078, 1.01, example_Re_arrow_angle, -0.063, example_Re_text_colour, 0.5,
@@ -1304,14 +1303,15 @@ example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      # Re_inc arrow
                                      0.327, 0.904, example_Re_arrow_angle, 0.157, example_Re_text_colour, 0.5,
                                      # Re_prod arrow
-                                     0.52, 0.941, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5
-                                     ) 
+                                     0.622, 0.904, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5) 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Energy", 
                                indexed = TRUE) + 
   ggplot2::xlim(0, 1.1) +
   ggplot2::ylim(0.9, 1.15) +
+  ggplot2::xlab(expression(dot(E)[dir] * " [MJ/year]")) +
+  ggplot2::ylab(expression(dot(E)[indir] * " [MJ/year]")) +
   ggplot2::geom_spoke(data = example_Re_arrows,
                         mapping = ggplot2::aes(x = x,
                                                y = y,
@@ -1327,13 +1327,13 @@ rebound_results %>%
                                             size = size,
                                             angle = angle),
                      parse = TRUE) +
-  MKHthemes::xy_theme() # + 
+  MKHthemes::xy_theme() + 
   # remove axis labels and ticks
-  # ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-  #                axis.ticks.x = ggplot2::element_blank(),
-  #                axis.text.y = ggplot2::element_blank(),
-  #                axis.ticks.y = ggplot2::element_blank(),
-  #                axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 
 @
 
