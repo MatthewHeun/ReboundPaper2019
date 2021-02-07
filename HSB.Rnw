@@ -1271,7 +1271,7 @@ with indirect energy consumption or other goods expenditures on the y-axis
 and direct energy consumption by the energy conversion device or energy costs on the x-axis.
 
 
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path graph.", fig.width=6, fig.height=4>>=
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path.", fig.width=6, fig.height=4>>=
 example_Re_label_angle <- -45.6
 # example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
 example_Re_arrow_angle <- 19.0 * pi/180
@@ -1338,21 +1338,22 @@ rebound_results %>%
 @
 
 
-<<ExampleCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
+<<ExampleCostGraph, echo=FALSE, fig.cap="Example cost path.", fig.width=6, fig.height=4>>=
 example_cost_line_angle <- -16.5
 example_Re_text_colour <- "darkgray"
 example_Re_label_size <- 4
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   2886, 24470, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                   2572, 24545, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                   2568, 24420, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                   2568, 24050, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                   2568, 23990, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                   2653, 23990, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                   2762, 23990, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                   2760, 24660, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                   2830, 24590, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
-                                   2820, 24290, 'Expenditure~after~EEU', example_Re_text_colour, example_Re_label_size, example_cost_line_angle)
+                                   1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                   0.095, 1.005, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.972, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.9545, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.936, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
+                                   0.24, 0.938, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                   0.283, 0.936, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
+                                   0.243, 1.034, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                   0.635, 1.02, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
+                                   0.55, 0.9825, 'After~expected~savings', example_Re_text_colour, example_Re_label_size, example_cost_line_angle
+                                   )
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
@@ -1360,27 +1361,30 @@ rebound_results %>%
                                indexed = TRUE) + 
   # ggplot2::xlim(0, 1.1) +
   # ggplot2::ylim(0.9995, 1.0005) +
+  ggplot2::xlab(expression(dot(C)[dir] * " [$/year]")) +
+  ggplot2::ylab(expression(dot(C)[indir] * " [$/year]")) +
+
   
-  # ggplot2::geom_text(data = example_cost_labels, 
-  #                    mapping = ggplot2::aes(x = x, 
-  #                                           y = y, 
-  #                                           label = lab, 
-  #                                           colour = colour, 
-  #                                           size = size,
-  #                                           angle = angle), 
-  #                    parse = TRUE) +
-  MKHthemes::xy_theme() # + 
+  ggplot2::geom_text(data = example_cost_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
+                                            size = size,
+                                            angle = angle),
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
   # remove axis labels and ticks
-  # ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-  #                axis.ticks.x = ggplot2::element_blank(),
-  #                axis.text.y = ggplot2::element_blank(),
-  #                axis.ticks.y = ggplot2::element_blank(), 
-  #                axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 
 @
 
 
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                           1.1, 1.002, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
                           0.7, 1.011, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
@@ -1391,6 +1395,8 @@ labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                           0.7, 0.989, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
                           3.5, 0.974, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
                           2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
+                          0.7, 1.09, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
+                          3.5, 1.075, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
                           2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
                           2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
                           0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
