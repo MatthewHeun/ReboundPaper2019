@@ -1774,7 +1774,7 @@ car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    855, 25870, 'scriptstyle("6")', car_Re_text_colour, 5, 0,
                                    830, 26557, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
                                    1075, 26350, 'Original~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle,
-                                   950, 25958, 'New~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle)
+                                   950, 25958, 'Expected~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
@@ -2190,13 +2190,11 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                       25, 92881, 'Re[inc]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle + 90,
                                       90, 92856.5, 'Re[prod]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle + 90,
                                       202, 92880, 'Re[tot] == 100*"%"', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle,
-                                      230, 92890, 'Backfire', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle
-)
+                                      230, 92890, 'Backfire', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle)
 lamp_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
                                   -5.4, 92870, lamp_Re_arrow_angle, 17.2, lamp_Re_text_colour, 0.5,
                                   11.8, 92874.8, lamp_Re_arrow_angle, 32, lamp_Re_text_colour, 0.5,
-                                  76.7, 92850, lamp_Re_arrow_angle, 32, lamp_Re_text_colour, 0.5
-)
+                                  76.7, 92850, lamp_Re_arrow_angle, 32, lamp_Re_text_colour, 0.5)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
@@ -2221,19 +2219,68 @@ rebound_results %>%
 
 
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
+lamp_cost_line_angle <- -24
+lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                    9, 27392.4, '""^scriptscriptstyle(o)', lamp_Re_text_colour, 10, 0,
+                                    0.9, 27392.8, 'scriptstyle("1")', lamp_Re_text_colour, 5, 0,
+                                    0.65, 27391.6, 'scriptstyle("2,")', lamp_Re_text_colour, 5, 0,
+                                    0.8, 27391.5, 'scriptstyle("*")', lamp_Re_text_colour, 10, 0,
+                                    0.85, 27387, 'scriptstyle("4")', lamp_Re_text_colour, 5, 0,
+                                    2.3, 27386.5, 'scriptstyle("^")', lamp_Re_text_colour, 10, 0,
+                                    2.5, 27387, 'scriptstyle("6")', lamp_Re_text_colour, 5, 0,
+                                    2.55, 27399.2, 'scriptscriptstyle("_")', lamp_Re_text_colour, 10, 0,
+                                    5, 27396.7, 'Original~expenditure', lamp_Re_text_colour, car_Re_label_size, lamp_cost_line_angle,
+                                    4, 27389.7, 'Expected~expenditure', car_Re_text_colour, car_Re_label_size, lamp_cost_line_angle
+                                    )
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost") + 
+  ggplot2::geom_text(data = lamp_cost_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
+  
   MKHthemes::xy_theme()
 @
 
 
 <<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
+lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                                     1.1, 1, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
+                                     0.7, 1.00008, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                                     1.55, 0.9998, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                                     0.7, 0.999995, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                                     3.5, 0.9999, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                                     2.4, 0.999815, 'scriptstyle("^")',  example_Re_text_colour, 10,
+                                     0.7, 0.999885, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                                     3.5, 0.99979, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                                     # 2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
+                                     # 0.7, 1.09, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
+                                     # 3.5, 1.075, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
+                                     # 2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                                     # 2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                                     # 0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                                     # 3.4, 0.981, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                                     # 0.75, 1.143, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                                     # 3.4, 1.084, 'scriptscriptstyle("i")', example_Re_text_colour, 8
+                                     )
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences") + 
+    ggplot2::geom_text(data = lamp_prefs_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
+                     parse = TRUE) +
   ggplot2::xlim(0.7, 3.5) +
-  ggplot2::ylim(0.9998, 1.0004) +
+  ggplot2::ylim(0.99979, 1.0004) +
   MKHthemes::xy_theme()
 @
 
