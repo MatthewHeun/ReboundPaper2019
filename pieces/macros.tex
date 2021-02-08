@@ -71,10 +71,24 @@
 
 %%%%% Colors
 
+% Original spectrum colours
 \newcommand{\emplcolor}{red!25!white}
 \newcommand{\subcolor}{orange!25!white}
 \newcommand{\inccolor}{green!25!white}
 \newcommand{\prodcolor}{blue!25!white}
+
+\colorlet{emplcolor}{red!25!white}
+\colorlet{subcolor}{orange!25!white}
+\colorlet{inccolor}{green!25!white}
+\colorlet{prodcolor}{blue!25!white}
+
+
+% New Viridis "plasma" colours
+% \definecolor{emplcolor}{HTML}{150789}
+% \definecolor{subcolor}{HTML}{99149F}
+% \definecolor{inccolor}{HTML}{E76F5A}
+% \definecolor{prodcolor}{HTML}{F7E225}
+
 
 
 %%%%% Coloration of text background
@@ -100,10 +114,15 @@ bottom=2pt}
 %%%%% Colored phrases
 
 % Emplacement effect
-\newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
-\newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
-\newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
-\newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
+% \newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
+% \newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
+% \newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
+% \newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
+
+\newcommand{\empleffect}{\inlinebox[emplcolor]{\textcolor{black}{emplacement effect}}}
+\newcommand{\empleffectadj}{\inlinebox[emplcolor]{emplacement-effect}}
+\newcommand{\Empleffect}{\inlinebox[emplcolor]{Emplacement effect}}
+\newcommand{\EmplEffect}{\inlinebox[emplcolor]{Emplacement Effect}}
 
 % Substitution effect
 \newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
