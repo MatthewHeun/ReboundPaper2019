@@ -708,7 +708,7 @@ Detailed derivations of all rebound expressions
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
 which provide a structure for energy and financial accounting.
-We begin with the \empleffect{}.
+We begin with the emplacement effect.
 
 
 %++++++++++++++++++++++++++++++
@@ -896,7 +896,7 @@ is negative ($\eqsps < 0$),
 an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
-To quantify the \subeffect{} on other purchases,
+To quantify the substitution effect on other purchases,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$).
 Appendix~\ref{sec:Re_sub} shows that
@@ -996,7 +996,7 @@ and
 \label{sec:inc_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
-Rebound from the \inceffect{} quantifies the rate of additional energy demand 
+Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
 income from the EEU.
 The income rate of the device owner is $\rbempl{M}$, 
@@ -1005,11 +1005,13 @@ such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-In combination, the \empleffect{} and the \subeffect{} leave the device owner with
+In combination, the emplacement effect and 
+the substitution effect leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for gross and net income from the 
-\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+emplacement effect ($\rate{G}$) and
+the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
@@ -1084,7 +1086,7 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
-In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
+In the midst of the income effect analysis, a capital expenses rebound term appears:
 
 \begin{equation} \label{eq:Re_cap}
   Re_{cap} = \Recapeqn{} \; .
@@ -1103,7 +1105,7 @@ In the midst of the \inceffect{} analysis, a capital expenses rebound term appea
 The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:qorat_eqoM}))
 must satisfy the budget constraint
 such that net income is zero after
-the \inceffect{} ($\rainc{N} = 0$).
+the income effect ($\rainc{N} = 0$).
 See Appendix~\ref{sec:proof_income_elasticities}
 for a proof demonstrating that the income preference equations satisfies the budget constraint.
 
@@ -1120,7 +1122,7 @@ so we get the `price effect'?---GS
 %++++++++++++++++++++++++++++++
 
 The previous rebound effects
-(\empleffect{}, \subeffect{}, and \inceffect{})
+(emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
 In contrast, the productivity effect is macroeconomic.
@@ -1228,7 +1230,7 @@ productivity rebound is given by
 \end{equation}
 %
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
-we arrive at an expression for \prodeffectadj{} rebound:
+we arrive at an expression for productivity effect rebound:
 
 \begin{equation} \label{eq:Re_prod}
   Re_{\productivity} = \Reprodeqn{} \; .
@@ -1242,7 +1244,7 @@ we arrive at an expression for \prodeffectadj{} rebound:
 
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
-(\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
+(emplacement effect, substitution effect, income effect, and productivity effect).
 Productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
 is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
