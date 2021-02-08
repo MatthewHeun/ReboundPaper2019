@@ -2183,14 +2183,14 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                       66, 92825, 'scriptstyle("6")', lamp_Re_text_colour, 5, 0,
                                       67, 92866, 'scriptscriptstyle("_")', lamp_Re_text_colour, 10, 0,
                                       66, 92905, 'scriptscriptstyle("~")', lamp_Re_text_colour, 10, 0,
-                                      # 40200, 77700, 'Hyperconservation', lamp_Re_text_colour, lamp_Re_label_size-1, lamp_Re_label_angle,
+                                      -3, 92835, 'Hyperconservation', lamp_Re_text_colour, lamp_Re_label_size-1, lamp_Re_label_angle,
                                       16, 92855, 'Re[tot] == 0*"%"', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle,
-                                      -10, 92870, 'Re[empl]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle,
+                                      -11, 92870, 'Re[empl]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle,
                                       1, 92874.2, 'Re[sub]', lamp_Re_text_colour, lamp_Re_label_size-1, lamp_Re_label_angle + 90,
                                       25, 92881, 'Re[inc]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle + 90,
-                                      # 51250, 77910, 'Re[prod]', lamp_Re_text_colour, lamp_Re_label_size-1, lamp_Re_label_angle + 90,
+                                      90, 92856.5, 'Re[prod]', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle + 90,
                                       202, 92880, 'Re[tot] == 100*"%"', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle,
-                                      # 72100, 81300, 'Backfire', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle
+                                      230, 92890, 'Backfire', lamp_Re_text_colour, lamp_Re_label_size, lamp_Re_label_angle
 )
 lamp_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
                                   -5.4, 92870, lamp_Re_arrow_angle, 17.2, lamp_Re_text_colour, 0.5,
