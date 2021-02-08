@@ -1719,8 +1719,12 @@ car_Re_label_size <- 4
 car_Re_text_colour <- "darkgray"
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                      72400, 77320, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
-                                     42700, 77400, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
+                                     42700, 77350, 'scriptstyle("1")', car_Re_text_colour, 5, 0,
+                                     43560, 77900, 'scriptstyle("2")', car_Re_text_colour, 5, 0,
+                                     42700, 77450, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
+                                     43100, 77100, 'scriptstyle("4")', car_Re_text_colour, 5, 0,
                                      46400, 76980, 'scriptstyle("^")', car_Re_text_colour, 10, 0,
+                                     48800, 77100, 'scriptstyle("6")', car_Re_text_colour, 5, 0,
                                      49200, 79560, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
                                      49020, 81960, 'scriptscriptstyle("~")', car_Re_text_colour, 10, 0,
                                      40200, 77700, 'Hyperconservation', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle,
