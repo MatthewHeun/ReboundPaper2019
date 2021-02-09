@@ -596,6 +596,7 @@ We use colored backgrounds on rebound effects for visual convenience.
 \label{fig:flowchart}
 \end{figure}
 
+
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
 the device upgrade and four rebound effects, and 
@@ -692,9 +693,102 @@ Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
-In the subsections that follow, 
-we discuss four rebound effects, sequentially.
-In each subsection, we 
+In the following section, 
+we discuss four rebound effects.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound effects}
+\label{sec:rebound_effects}
+%++++++++++++++++++++++++++++++
+
+The four rebound effects of Fig.~\ref{fig:flowchart} 
+(emplacement, substitution, income, and productivity)
+can be illustrated graphically as in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+
+<<eeu_data, echo=FALSE>>=
+# Load our test cases and perform rebound analyses.
+rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
+rebound_results <- ReboundTools::rebound_analysis(rebound_data)
+@
+
+
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path.", fig.width=6, fig.height=4>>=
+example_Re_label_angle <- -45.6
+# example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
+example_Re_arrow_angle <- 19.0 * pi/180
+example_Re_label_size <- 4
+example_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
+example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                         1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                         0.11, 1.01, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
+                                         0.09, 0.973, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
+                                         0.085, 0.95, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                         0.09, 0.935, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
+                                         0.242, 0.923, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                         0.295, 0.942, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
+                                         0.295, 1.036, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                         0.29, 1.13, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
+                                         0.04, 0.923, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
+                                         0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
+                                         0.21, 0.90, 'Re[sub]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
+                                         0.39, 0.936, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         0.68, 0.935, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
+                                         0.754, 1.1, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
+                                         0.95, 1.1, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
+example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
+                                     # Re_empl arrow
+                                     0.078, 1.01, example_Re_arrow_angle, -0.063, example_Re_text_colour, 0.5,
+                                     # Re_sub arrow
+                                     0.249, 0.904, example_Re_arrow_angle, 0.04, example_Re_text_colour, 0.5,
+                                     # Re_inc arrow
+                                     0.327, 0.904, example_Re_arrow_angle, 0.157, example_Re_text_colour, 0.5,
+                                     # Re_prod arrow
+                                     0.622, 0.904, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5) 
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Energy", 
+                               indexed = TRUE) + 
+  ggplot2::xlim(0, 1.1) +
+  ggplot2::ylim(0.9, 1.15) +
+  ggplot2::xlab(expression(dot(E)[dir] * " [MJ/year]")) +
+  ggplot2::ylab(expression(dot(E)[indir] * " [MJ/year]")) +
+  ggplot2::geom_spoke(data = example_Re_arrows,
+                        mapping = ggplot2::aes(x = x,
+                                               y = y,
+                                               angle = angle,
+                                               radius = radius,
+                                               colour = colour),
+                        arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
+  ggplot2::geom_text(data = example_energy_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
+                                            size = size,
+                                            angle = angle),
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+
+@
+
+
+
+
+
+
+
+
+
+
+In the following subsections, we 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -1256,11 +1350,6 @@ we find
 \end{align}
 
 
-<<eeu_data, echo=FALSE>>=
-# Load our test cases and perform rebound analyses.
-rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
-rebound_results <- ReboundTools::rebound_analysis(rebound_data)
-@
 
 
 %++++++++++++++++++++++++++++++
@@ -1273,71 +1362,6 @@ with indirect energy consumption or other goods expenditures on the y-axis
 and direct energy consumption by the energy conversion device or energy costs on the x-axis.
 
 
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path.", fig.width=6, fig.height=4>>=
-example_Re_label_angle <- -45.6
-# example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
-example_Re_arrow_angle <- 19.0 * pi/180
-example_Re_label_size <- 4
-example_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
-example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                         0.11, 1.01, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                         0.09, 0.973, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                         0.085, 0.95, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                         0.09, 0.935, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                         0.242, 0.923, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                         0.295, 0.942, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                         0.295, 1.036, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                         0.29, 1.13, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
-                                         0.04, 0.923, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
-                                         0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
-                                         0.21, 0.90, 'Re[sub]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
-                                         0.39, 0.936, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         0.68, 0.935, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         0.754, 1.1, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         0.95, 1.1, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
-example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
-                                     # Re_empl arrow
-                                     0.078, 1.01, example_Re_arrow_angle, -0.063, example_Re_text_colour, 0.5,
-                                     # Re_sub arrow
-                                     0.249, 0.904, example_Re_arrow_angle, 0.04, example_Re_text_colour, 0.5,
-                                     # Re_inc arrow
-                                     0.327, 0.904, example_Re_arrow_angle, 0.157, example_Re_text_colour, 0.5,
-                                     # Re_prod arrow
-                                     0.622, 0.904, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5) 
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Energy", 
-                               indexed = TRUE) + 
-  ggplot2::xlim(0, 1.1) +
-  ggplot2::ylim(0.9, 1.15) +
-  ggplot2::xlab(expression(dot(E)[dir] * " [MJ/year]")) +
-  ggplot2::ylab(expression(dot(E)[indir] * " [MJ/year]")) +
-  ggplot2::geom_spoke(data = example_Re_arrows,
-                        mapping = ggplot2::aes(x = x,
-                                               y = y,
-                                               angle = angle,
-                                               radius = radius,
-                                               colour = colour),
-                        arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
-  ggplot2::geom_text(data = example_energy_labels,
-                     mapping = ggplot2::aes(x = x,
-                                            y = y,
-                                            label = lab,
-                                            colour = colour,
-                                            size = size,
-                                            angle = angle),
-                     parse = TRUE) +
-  MKHthemes::xy_theme() + 
-  # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(),
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
-@
 
 
 <<ExampleCostGraph, echo=FALSE, fig.cap="Example cost path.", fig.width=6, fig.height=4>>=
