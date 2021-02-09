@@ -733,38 +733,34 @@ Important quantities for the derivations are
 %
 These important rebound quantities can be illustrated via
 innovative rebound path graphs.
+
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
 notional rebound path graphs for energy consumption, expenditures, and preferences.
-
 Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
 indirect energy consumption rate ($\rate{E}_{indir}$) on the vertical axis
 and
 direct energy consumption rate ($\rate{E}_{dir}$) on the horizontal axis.
-Lines with negative slope indicate constant total energy consumption.
-Along those lines, at the \emph{y}-axis, all energy consumption is indirect energy consumption, 
-either embodied energy or energy demands due to expenditures in the economy.
-At the \emph{x}-axis, all energy consumption is direct energy consumption by the energy conversion device.
-
+Lines with negative slope through points 
+$\circ$, 1, *, $\asub{ }$, $\ainc{~}$, and $\sim$
+indicate constant total energy consumption
+(direct and indirect) at each of those points.
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with indirect expenses ($\rate{C}_{indir}$) on the vertical axis and 
 direct expenses on the energy service ($\rate{C}_{dir}$) on the horizontal axis.
-Lines with negative slope indicate constant expenditures.
-Along those lines, at the \emph{y}-axis, all expenditures are indirect expenditures,
-one of capital costs, maintenance and disposal costs, or expenses for other goods. 
-At the \emph{x}-axis, all expenditures is for energy to run the energy conversion device. 
-
+Lines with negative slope through points $\circ$ and 1
+indicate constant expenditures (direct and indirect).
 Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the vertical axis
 and
 the indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the horizontal axis.
-Lines of constant levels of consumption of other goods and the energy service
+Lines of constant indexed levels of consumption of other goods and the energy service
 are shown with negative slope. 
-Along those lines, at the \emph{y}-axis, no energy service is consumed.
-At the \emph{x}-axis, no other goods are purchased.
+Indifference curves (constant indexed utility) are denoted i---i. 
+A ray from the origin through the $\asub{ }$ point is denoted r---r.
 
 In the sections that follow, the notional graphs
-serve to illustrate the development of the rebound framework;
-they are not quantified (no scale on the axes).
+serve to illustrate the development of the rebound framework.
+The notional path graphs are not quantified; there is no scale on the axes.
 Later, in Section~\ref{sec:examples}, rebound path graphs (with scales) illustrate numerical examples.
 
 <<eeu_data, echo=FALSE>>=
@@ -935,13 +931,13 @@ We begin with the emplacement effect.
 \label{sec:empl_effect_main_paper}
 %------------------------------
 
-The emplacement effect (segments o---1---2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
+The emplacement effect (segments $\circ$---1, 1---2, and 2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only.
 No behavior changes occur.
 The direct effect of emplacement of the EEU is device energy savings
-(segment o---1 in the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph})
+(segment $\circ$---1 in the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph})
 and energy cost savings
-(segment o---1 in the expenditure path graph of Fig.~\ref{fig:ExampleCostPathGraph}).
+(segment $\circ$---1 in the expenditure path graph of Fig.~\ref{fig:ExampleCostPathGraph}).
 The indirect effects of emplacement of the EEU are changes in the embodied energy rate 
 (segment 1---2 on the energy path graph of 
 Fig.~\ref{fig:ExampleEnergyPathGraph}), 
@@ -968,17 +964,26 @@ Appendix~\ref{sec:Sdot} shows that
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-By definition, the direct emplacement effect has no rebound, 
+By definition, the direct emplacement effect 
+(segment $\circ$---1) has no rebound, 
 because actual and expected energy savings are identical.
 (See Table~\ref{tab:empleffect}.)
 
 \begin{equation} \label{eq:Re_dempl0}
   Re_{dempl} = 0
 \end{equation}
+%
+In fact, the ``1'' point 
+lies on the $Re_{tot} = 0\%$ line
+in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+indicating that line is the basis from which all rebound effects are measured.
+If total energy demand returns to the original energy consumption level 
+(negative sloping line through the $\circ$ point), 
+all expected energy savings are taken back by rebound effects. 
+Thus, the line of constant energy consumption through the $\circ$ point is labeled
+``$Re_{tot} = 100\%$.''
 
-In fact, the ``1'' point in Fig.~\ref{fig:ExampleEnergyPathGraph}
-lies on the $Re_{tot} = 0\%$ line, 
-indicating that the line is the basis from which all rebound effects are calculated.
+**** ended here. ****
 
 On the other hand, energy rebound may be caused by indirect emplacement effects, which
 account for the life cycle of the energy conversion device, including 
