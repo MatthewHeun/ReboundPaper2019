@@ -702,9 +702,70 @@ we discuss four rebound effects.
 \label{sec:rebound_effects}
 %++++++++++++++++++++++++++++++
 
-The four rebound effects of Fig.~\ref{fig:flowchart} 
+Expressions for the four rebound effects of Fig.~\ref{fig:flowchart} 
 (emplacement, substitution, income, and productivity)
-can be illustrated graphically as in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+are discussed in subsections below where we
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item define each rebound effect and
+  
+  \item provide rebound expressions.
+    
+\end{enumerate*}
+%
+Detailed derivations of all rebound expressions 
+can be found in Appendix~\ref{sec:derivation}.
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
+which provide a structure for energy and financial accounting.
+
+Important quantities for the derivations are
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
+  
+  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), and
+  
+  \item the consumption rate of the energy service ($\rate{q}_s$).
+    
+\end{enumerate*}
+%
+These important rebound quantities can be illustrated via
+innovative rebound path graphs.
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
+notional rebound path graphs for energy consumption, expenditures, and preferences.
+
+Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
+indirect energy consumption rate ($\rate{E}_{indir}$) on the vertical axis
+and
+direct energy consumption rate ($\rate{E}_{dir}$) on the horizontal axis.
+Lines with negative slope indicate constant total energy consumption.
+Along those lines, at the \emph{y}-axis, all energy consumption is indirect energy consumption, 
+either embodied energy or energy demands due to expenditures in the economy.
+At the \emph{x}-axis, all energy consumption is direct energy consumption by the energy conversion device.
+
+A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
+with indirect expenses ($\rate{C}_{indir}$) on the vertical axis and 
+direct expenses on the energy service ($\rate{C}_{dir}$) on the horizontal axis.
+Lines with negative slope indicate constant expenditures.
+Along those lines, at the \emph{y}-axis, all expenditures are indirect expenditures,
+one of capital costs, maintenance and disposal costs, or expenses for other goods. 
+At the \emph{x}-axis, all expenditures is for energy to run the energy conversion device. 
+
+Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the vertical axis
+and
+the indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the horizontal axis.
+Lines of constant levels of consumption of other goods and the energy service
+are shown with negative slope. 
+Along those lines, at the \emph{y}-axis, no energy service is consumed.
+At the \emph{x}-axis, no other goods are purchased.
+
+In the sections that follow, the notional graphs
+serve to illustrate the development of the rebound framework;
+they are not quantified (no scale on the axes).
+Later, in Section~\ref{sec:examples}, rebound path graphs (with scales) illustrate numerical examples.
 
 <<eeu_data, echo=FALSE>>=
 # Load our test cases and perform rebound analyses.
@@ -780,43 +841,120 @@ rebound_results %>%
 @
 
 
+<<ExampleCostPathGraph, echo=FALSE, fig.cap="Example cost path.", fig.width=6, fig.height=4>>=
+example_cost_line_angle <- -16.5
+example_Re_label_size <- 4
+example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                   1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                   0.095, 1.005, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.972, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.9545, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
+                                   0.09, 0.936, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
+                                   0.24, 0.938, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
+                                   0.283, 0.936, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
+                                   0.243, 1.034, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
+                                   0.635, 1.02, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
+                                   0.55, 0.9825, 'After~expected~savings', example_Re_text_colour, example_Re_label_size, example_cost_line_angle)
 
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Cost", 
+                               indexed = TRUE) + 
+  # ggplot2::xlim(0, 1.1) +
+  # ggplot2::ylim(0.9995, 1.0005) +
+  ggplot2::xlab(expression(dot(C)[dir] * " [$/year]")) +
+  ggplot2::ylab(expression(dot(C)[indir] * " [$/year]")) +
 
-
-
-
-
-
-
-In the following subsections, we 
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item define each rebound effect and
   
-  \item provide rebound expressions.
-    
-\end{enumerate*}
-%
-Detailed derivations of all rebound expressions 
-can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
-which provide a structure for energy and financial accounting.
+  ggplot2::geom_text(data = example_cost_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
+                                            size = size,
+                                            angle = angle),
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+
+@
+
+
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
+labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                          1.1, 1.002, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
+                          0.7, 1.011, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                          1.55, 0.97, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                          0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                          3.5, 0.983, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
+                          0.96, 0.98, 'scriptstyle("4")', example_Re_text_colour, 5,
+                          2.27, 0.972, 'scriptstyle("^")',  example_Re_text_colour, 10,
+                          0.7, 0.989, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                          3.5, 0.974, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
+                          2.51, 0.983, 'scriptstyle("6")', example_Re_text_colour, 5,
+                          2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
+                          0.7, 1.09, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
+                          3.5, 1.075, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
+                          2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                          2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
+                          0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          3.4, 0.981, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          0.75, 1.143, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
+                          3.4, 1.084, 'scriptscriptstyle("i")', example_Re_text_colour, 8)
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Preferences") + 
+  ggplot2::xlim(0.7, 3.5) +
+  ggplot2::ylim(0.97, 1.15) +
+  ggplot2::geom_text(data = labels, 
+                     mapping = ggplot2::aes(x = x, y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+@
+
+
 We begin with the emplacement effect.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Empleffect}
+%------------------------------
+\subsubsection{\Empleffect}
 \label{sec:empl_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
-The emplacement effect accounts for performance of the EEU only.
+The emplacement effect (segments o---1---2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
+accounts for performance of the EEU only.
 No behavior changes occur.
-The direct effect of emplacement of the EEU is device energy savings and energy cost savings.
-The indirect effects of emplacement of the EEU are changes in the embodied energy rate and
-the maintenance and disposal cost rates.
+The direct effect of emplacement of the EEU is device energy savings
+(segment o---1 in the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph})
+and energy cost savings
+(segment o---1 in the expenditure path graph of Fig.~\ref{fig:ExampleCostPathGraph}).
+The indirect effects of emplacement of the EEU are changes in the embodied energy rate 
+(segment 1---2 on the energy path graph of 
+Fig.~\ref{fig:ExampleEnergyPathGraph}), 
+changes in the capital cost rate 
+(segment 1---2 on the expenditure path graph of 
+Fig.~\ref{fig:ExampleCostPathGraph})
+and
+changes in the maintenance and disposal energy and cost rates
+(segment 2---* in
+Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
 
-Because no behavior changes are considered,
+Because no behavior changes are considered
+in the emplacement effect,
 actual and expected energy savings rates~($\Sdot$) are identical
 across the direct emplacement effect, namely
 
@@ -837,6 +975,10 @@ because actual and expected energy savings are identical.
 \begin{equation} \label{eq:Re_dempl0}
   Re_{dempl} = 0
 \end{equation}
+
+In fact, the ``1'' point in Fig.~\ref{fig:ExampleEnergyPathGraph}
+lies on the $Re_{tot} = 0\%$ line, 
+indicating that the line is the basis from which all rebound effects are calculated.
 
 On the other hand, energy rebound may be caused by indirect emplacement effects, which
 account for the life cycle of the energy conversion device, including 
@@ -916,10 +1058,10 @@ is given by
 See Appendix~\ref{sec:Re_OMd} for details.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Subeffect}
+%------------------------------
+\subsubsection{\Subeffect}
 \label{sec:sub_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
 The direct rebound effect is split into substitution and
 income effects, following neoclassical consumer theory. 
@@ -1085,10 +1227,10 @@ and
 \end{equation}
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Inceffect}
+%------------------------------
+\subsubsection{\Inceffect}
 \label{sec:inc_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
@@ -1210,10 +1352,10 @@ so we get the `price effect'?---GS
 +++
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Prodeffect}
+%------------------------------
+\subsubsection{\Prodeffect}
 \label{sec:prod_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
 The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
@@ -1348,108 +1490,6 @@ we find
 \begin{align} \label{eq:Re_tot}  
   Re_{sum} = \; \Retoteqn{} \; .
 \end{align}
-
-
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Graphical representation}
-\label{sec:graphical_representation}
-%++++++++++++++++++++++++++++++
-
-The rebound effects can be presented intuitively in graphical form. 
-with indirect energy consumption or other goods expenditures on the y-axis
-and direct energy consumption by the energy conversion device or energy costs on the x-axis.
-
-
-
-
-<<ExampleCostGraph, echo=FALSE, fig.cap="Example cost path.", fig.width=6, fig.height=4>>=
-example_cost_line_angle <- -16.5
-example_Re_label_size <- 4
-example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                   0.095, 1.005, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.972, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.9545, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.936, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                   0.24, 0.938, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                   0.283, 0.936, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                   0.243, 1.034, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                   0.635, 1.02, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
-                                   0.55, 0.9825, 'After~expected~savings', example_Re_text_colour, example_Re_label_size, example_cost_line_angle
-                                   )
-
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Cost", 
-                               indexed = TRUE) + 
-  # ggplot2::xlim(0, 1.1) +
-  # ggplot2::ylim(0.9995, 1.0005) +
-  ggplot2::xlab(expression(dot(C)[dir] * " [$/year]")) +
-  ggplot2::ylab(expression(dot(C)[indir] * " [$/year]")) +
-
-  
-  ggplot2::geom_text(data = example_cost_labels,
-                     mapping = ggplot2::aes(x = x,
-                                            y = y,
-                                            label = lab,
-                                            colour = colour,
-                                            size = size,
-                                            angle = angle),
-                     parse = TRUE) +
-  MKHthemes::xy_theme() + 
-  # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(),
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
-@
-
-
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.1, 1.002, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
-                          0.7, 1.011, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
-                          1.55, 0.97, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
-                          0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
-                          3.5, 0.983, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
-                          0.96, 0.98, 'scriptstyle("4")', example_Re_text_colour, 5,
-                          2.27, 0.972, 'scriptstyle("^")',  example_Re_text_colour, 10,
-                          0.7, 0.989, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
-                          3.5, 0.974, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
-                          2.51, 0.983, 'scriptstyle("6")', example_Re_text_colour, 5,
-                          2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
-                          0.7, 1.09, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
-                          3.5, 1.075, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
-                          2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
-                          2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
-                          0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          3.4, 0.981, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          0.75, 1.143, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          3.4, 1.084, 'scriptscriptstyle("i")', example_Re_text_colour, 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences") + 
-  ggplot2::xlim(0.7, 3.5) +
-  ggplot2::ylim(0.97, 1.15) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme() + 
-  # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(),
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-@
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
