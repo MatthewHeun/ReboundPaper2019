@@ -998,7 +998,10 @@ backfire (greater energy consumption after the EEU than before the EEU).
 Although the direct emplacement effect does not cause rebound, 
 indirect emplacement effects may cause rebound, 
 as shown in Fig.~\ref{fig:ExampleEnergyPathGraph}.
-Indirect emplacement effects account for the life cycle of the energy conversion device,
+Indirect emplacement effects 
+(segments 1---2 and 2---*
+in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
+account for the life cycle of the energy conversion device,
 including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
 In Fig.~\ref{fig:ExampleEnergyPathGraph}, 
@@ -1258,7 +1261,7 @@ Invoking L'H\^{o}pital's rule gives
 and
 
 \begin{equation} \label{eq:lim_Reisub_infty}
-  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
+  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
 
 
