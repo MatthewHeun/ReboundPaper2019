@@ -777,7 +777,7 @@ example_Re_arrow_angle <- 19.0 * pi/180
 example_Re_label_size <- 4
 example_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
 example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                         1.01, 0.995, '""^scriptstyle(degree)', example_Re_text_colour, 10, 0,
                                          0.11, 1.01, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
                                          0.09, 0.973, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
                                          0.085, 0.95, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
@@ -841,7 +841,7 @@ rebound_results %>%
 example_cost_line_angle <- -16.5
 example_Re_label_size <- 4
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1.01, 1, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
+                                   1.01, 0.998, '""^scriptstyle(degree)', example_Re_text_colour, 10, 0,
                                    0.095, 1.005, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
                                    0.09, 0.972, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
                                    0.09, 0.9545, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
@@ -883,9 +883,9 @@ rebound_results %>%
 
 <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.1, 1.002, '""^scriptscriptstyle(o*",")*"*"', example_Re_text_colour, 10,
-                          0.7, 1.011, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
-                          1.55, 0.97, 'scriptscriptstyle(o)', example_Re_text_colour, 8,
+                          1.1, 1.002, 'paste(degree, ""^",", "*")', example_Re_text_colour, 10,
+                          0.7, 1.011, 'scriptstyle(degree)', example_Re_text_colour, 8,
+                          1.55, 0.97, 'scriptstyle(degree)', example_Re_text_colour, 8,
                           0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
                           3.5, 0.983, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
                           0.96, 0.98, 'scriptstyle("4")', example_Re_text_colour, 5,
