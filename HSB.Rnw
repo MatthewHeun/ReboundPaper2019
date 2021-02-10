@@ -860,7 +860,6 @@ rebound_results %>%
   # ggplot2::ylim(0.9995, 1.0005) +
   ggplot2::xlab(expression(dot(C)[dir] * " [$/year]")) +
   ggplot2::ylab(expression(dot(C)[indir] * " [$/year]")) +
-
   
   ggplot2::geom_text(data = example_cost_labels,
                      mapping = ggplot2::aes(x = x,
@@ -877,13 +876,12 @@ rebound_results %>%
                  axis.text.y = ggplot2::element_blank(),
                  axis.ticks.y = ggplot2::element_blank(),
                  axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
 @
 
 
 <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.1, 1.002, 'paste(degree, ""^",", "*")', example_Re_text_colour, 10,
+                          1.08, 1.002, 'scriptstyle(paste(degree, ""^",", "*"))', example_Re_text_colour, 10,
                           0.7, 1.011, 'scriptstyle(degree)', example_Re_text_colour, 8,
                           1.55, 0.97, 'scriptstyle(degree)', example_Re_text_colour, 8,
                           0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
@@ -1790,7 +1788,7 @@ car_Re_arrow_angle <- pi/180 * 3.1
 car_Re_label_size <- 4
 car_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                     72400, 77320, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
+                                     72400, 77235, '""^scriptstyle(degree)', car_Re_text_colour, 10, 0,
                                      42700, 77350, 'scriptstyle("1")', car_Re_text_colour, 5, 0,
                                      43560, 77900, 'scriptstyle("2")', car_Re_text_colour, 5, 0,
                                      42700, 77450, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
@@ -1837,7 +1835,7 @@ rebound_results %>%
 <<CarCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
 car_cost_line_angle <- -27
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1270, 26085, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
+                                   1280, 26118, '""^scriptstyle(degree)', car_Re_text_colour, 10, 0,
                                    759, 26150, 'scriptstyle("1")', car_Re_text_colour, 5, 0,
                                    770, 26025, 'scriptstyle("2")', car_Re_text_colour, 5, 0,
                                    770, 25937, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
@@ -1863,13 +1861,13 @@ rebound_results %>%
 @
 
 
-<<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
+<<CarPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
 car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                    1.004, 1.0004, '""^scriptscriptstyle(o*",")*"*"', car_Re_text_colour, 10, 0,
+                                    1.01, 1.0004, 'scriptstyle(paste(degree, ""^",", "*"))', car_Re_text_colour, 10, 0,
                                     1.071, 0.998, 'scriptstyle("^")',  car_Re_text_colour, 10, 0,
                                     1.108, 1.0336, 'scriptstyle("_")',  car_Re_text_colour, 10, 0,
-                                    0.9, 1.0076, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
-                                    1.165, 0.99, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
+                                    0.9, 1.0076, 'scriptstyle(degree)', car_Re_text_colour, 8, 0,
+                                    1.165, 0.99, 'scriptstyle(degree)', car_Re_text_colour, 8, 0,
                                     0.9, 1.004, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
                                     1.258, 0.99, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
                                     0.995, 0.9958, 'scriptstyle("4")', car_Re_text_colour, 5, 0,
@@ -2240,16 +2238,16 @@ rebound_results %>%
 @
 
 
-<<LampEnergyGraph, echo = FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
 lamp_Re_label_size <- 4
 lamp_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
 lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                      240, 92839, '""^scriptscriptstyle(o)', lamp_Re_text_colour, 10, 0,
+                                      240, 92838, '""^scriptstyle(degree)', lamp_Re_text_colour, 10, 0,
                                       27, 92842, 'scriptstyle("1")', lamp_Re_text_colour, 5, 0,
-                                      17, 92839, 'scriptstyle("2,")', lamp_Re_text_colour, 5, 0,
-                                      22, 92838, 'scriptstyle("*")', lamp_Re_text_colour, 10, 0,
+                                      16, 92839, 'scriptstyle("2,")', lamp_Re_text_colour, 5, 0,
+                                      21, 92838, 'scriptstyle("*")', lamp_Re_text_colour, 10, 0,
                                       23, 92823, 'scriptstyle("4")', lamp_Re_text_colour, 5, 0,
                                       61, 92820, 'scriptstyle("^")', lamp_Re_text_colour, 10, 0,
                                       66, 92825, 'scriptstyle("6")', lamp_Re_text_colour, 5, 0,
@@ -2293,7 +2291,7 @@ rebound_results %>%
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_cost_line_angle <- -24
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                    9, 27392.4, '""^scriptscriptstyle(o)', lamp_Re_text_colour, 10, 0,
+                                    9, 27392.15, '""^scriptstyle(degree)', lamp_Re_text_colour, 10, 0,
                                     0.9, 27392.8, 'scriptstyle("1")', lamp_Re_text_colour, 5, 0,
                                     0.65, 27391.6, 'scriptstyle("2,")', lamp_Re_text_colour, 5, 0,
                                     0.8, 27391.5, 'scriptstyle("*")', lamp_Re_text_colour, 10, 0,
@@ -2321,11 +2319,11 @@ rebound_results %>%
 @
 
 
-<<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                                     1.1, 1, '""^scriptscriptstyle(o*",")*"*"', lamp_Re_text_colour, 10,
-                                     0.7, 1.00008, 'scriptscriptstyle(o)', lamp_Re_text_colour, 8,
-                                     1.55, 0.9998, 'scriptscriptstyle(o)', lamp_Re_text_colour, 8,
+                                     1.09, 1.000007, 'scriptstyle(paste(degree, ""^",", "*"))', lamp_Re_text_colour, 10,
+                                     0.7, 1.00008, 'scriptstyle(degree)', lamp_Re_text_colour, 8,
+                                     1.57, 0.9998, 'scriptstyle(degree)', lamp_Re_text_colour, 8,
                                      0.7, 0.999995, 'scriptscriptstyle("*")', lamp_Re_text_colour, 8,
                                      3.5, 0.9999, 'scriptscriptstyle("*")', lamp_Re_text_colour, 8,
                                      0.96, 0.99984, 'scriptstyle("4")', lamp_Re_text_colour, 5,
