@@ -770,7 +770,7 @@ rebound_results <- ReboundTools::rebound_analysis(rebound_data)
 @
 
 
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path.", fig.width=6, fig.height=4>>=
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Notional energy path.", fig.width=6, fig.height=4>>=
 example_Re_label_angle <- -45.6
 # example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
 example_Re_arrow_angle <- 19.0 * pi/180
@@ -836,7 +836,7 @@ rebound_results %>%
 @
 
 
-<<ExampleCostPathGraph, echo=FALSE, fig.cap="Example cost path.", fig.width=6, fig.height=4>>=
+<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional cost path.", fig.width=6, fig.height=4>>=
 example_cost_line_angle <- -16.5
 example_Re_label_size <- 4
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
@@ -878,7 +878,7 @@ rebound_results %>%
 @
 
 
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path.", fig.width=6, fig.height=4>>=
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional preferences path.", fig.width=6, fig.height=4>>=
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                           1.08, 1.002, 'scriptstyle(paste(degree, ""^",", "*"))', example_Re_text_colour, 10,
                           0.7, 1.011, 'scriptstyle(degree)', example_Re_text_colour, 8,
@@ -928,7 +928,8 @@ We begin with the emplacement effect.
 \label{sec:empl_effect_main_paper}
 %------------------------------
 
-The emplacement effect (segments $\circ$---1, 1---2, and 2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
+The emplacement effect (segments $\circ$---1, 1---2, and 2---* 
+in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only.
 No behavior changes occur.
 The direct emplacement effect of the EEU is
@@ -1011,6 +1012,11 @@ consistent with reduced capital costs
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
 reduced maintenance and disposal costs
 ($\raempl{C}_{md} < \rbempl{C}_{md}$).
+In the notional graphs of
+Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
+embodied energy and capital costs (segments 1---2) move in the same direction (both negative).
+But they could both move in the positive direction, or
+they could move in opposite directions.
 
 **** Ended here. ****
 
