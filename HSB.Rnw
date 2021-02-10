@@ -986,13 +986,15 @@ If total energy demand returns to the original energy consumption level
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
 $Re_{tot} = 100\%$.
-Total rebound ($Re_{tot}$) is linear between and beyond the 
-$Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines.
+Total rebound ($Re_{tot}$) is measured linearly between the
+$Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
+with decomposition to indirect rebound in the vertical ($y$-axis) direction and 
+direct rebound in the horizontal ($x$-axis) direction.
 Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
 exhibit negative rebound, indicating
 hyperconservation (energy savings in excess of the expected energy savings).
 Points above and to the right of the $Re_{tot} = 100\%$ line 
-have $Re_{tot} > 100\%$, indicating
+exhibit $Re_{tot} > 100\%$, indicating
 backfire (greater energy consumption after the EEU than before the EEU).
 
 Although the direct emplacement effect does not cause rebound, 
@@ -1004,7 +1006,7 @@ in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 account for the life cycle of the energy conversion device,
 including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
-In Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+In th notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
@@ -1017,20 +1019,19 @@ reduced maintenance and disposal costs
 ($\raempl{C}_{md} < \rbempl{C}_{md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
-embodied energy and capital costs (segments 1---2) move in the same direction (both negative).
-But they could both move in the positive direction, or
-they could move in opposite directions.
-
-**** Ended here. ****
+embodied energy and capital costs (segments 1---2) 
+move in the same direction (both negative), 
+but they could move in the positive direction or
+move in opposite directions.
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
-in the production of the device.
+in the production of the energy conversion device.
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 The EEU
-causes the embodied final energy of the device to change
+causes the embodied energy of the energy conversion device to change
 from $\bempl{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
@@ -1050,7 +1051,8 @@ $\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}_{\life}$
 and 
 $\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}_{\life}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\raempl{E}_{emb} - \rbempl{E}_{emb}$.
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$
+and is shown as segment 1---2 in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 The expression for embodied energy rebound is 
 
 \begin{equation} \label{eq:Re_emb}
@@ -1067,12 +1069,15 @@ such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device.
+meaning that the upgraded device has a lower embodied energy rate than the original device,
+as shown by point 2 being below point 1 
+in the notional energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}.
 See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
-energy demanded by maintenance and disposal~($\md$) activities.
+energy demanded by maintenance and disposal~($\md$) activities
+(segments 2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
 Maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
@@ -1085,7 +1090,8 @@ $\raempl{C}_{\md} = \raempl{C}_{m} + \aempl{C}_d/\aempl{t}_{\life}$.
 For simplicity, we assume that $\md$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\md$ expenditures
-is given by $\Delta \raempl{C}_{\md} I_E$.
+is given by $\Delta \raempl{C}_{\md} I_E = (\raempl{C}_{\md} - \rbempl{C}_{\md}) I_E$, 
+shown as segment 2---* in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 Rebound from maintenance and disposal
 is given by 
 
@@ -1101,17 +1107,19 @@ See Appendix~\ref{sec:Re_OMd} for details.
 \label{sec:sub_effect_main_paper}
 %------------------------------
 
-The direct rebound effect is split into substitution and
-income effects, following neoclassical consumer theory. 
-Neoclassical consumer theory distinguishes
-substituting the energy service for
-other consumption items whose relative price increases due to the 
-higher efficiency and hence lower price of producing the energy 
-service, and respending the higher real income. 
-Because the rate of consuming other goods is altered, 
-substitution and income effects affect 
-both direct and indirect rebound effects.
-
+Neoclassical consumer theory distinguishes between
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item substituting the energy service for
+        other goods consumption due to the now-lower price of the energy service and
+  
+  \item respending the higher real income. 
+    
+\end{enumerate*}
+%
+Substituting the energy service for other goods consumption
+leads to substitution effect rebound ($Re_{sub}$).
 The substitution effect alters compensated demand, which is
 defined as the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
@@ -1120,17 +1128,57 @@ It involves
 \begin{enumerate*}[label={(\alph*)}]
 
   \item an increase in consumption of the energy service,
-        called direct substitution ($dsub$) indicating its relationship
+        called direct substitution (subscript $dsub$) indicating its relationship
         with the direct rebound effect and
 
   \item a compensating reduction in consumption of other goods,
-        called indirect substitution ($isub$).
+        called indirect substitution (subscript $isub$).
 
 \end{enumerate*}
 %
 Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
+The substitution effect is shown by segments
+*---4 (indirect component) and 4---\^{} (direct component) 
+in Figs~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+
+The substitution effect is best understood with reference to Fig.~\ref{fig:ExamplePrefsPathGraph}.
+Prior to the EEU, the consumption basket (of the energy service and other goods)
+is represented by the $\circ$ point, and 
+the line of constant expenditure is $\circ$---$\circ$.
+The $\circ$---$\circ$ line is tangent to the lower indifference curve (i---i) at point $\circ$,
+indicating that equilibrium conditions exist and 
+that the device owner is maximizing utility.
+After emplacement of the more-efficient device
+(but before the substitution effect), 
+the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
+thereby altering the slope of the constant expenditure line,
+such that the $\circ$---$\circ$ line becomes the *---* line.
+The new constant expenditure line (*---*) is not tangent to the indifference curve.
+To re-equilibrate, the device owner shifts consumption
+to a point that maximizes utility, i.e., 
+where the the slope of the indifference curve is equal to the slope of the *---* line.
+The new consumption basket is represented by the \^{} point
+in Fig.~\ref{fig:ExamplePrefsPathGraph}, 
+at which the \^{}---\^{} expenditure line is tangent to the indifference curve.
+The change in consumption caused by the substitution effect
+favors energy service consumption (because it is now less expensive)
+at the expense of other goods consumption (which are now relatively more expensive).
+
+The substitution effect can be decomposed into direct
+(the increase in energy service consumption, segment 4---\^{})
+and indirect
+(the decrease in other good consumption, segment *---4)
+components.
+The impact of the substitution effect on energy consumption and expenditures
+can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
+and~\ref{fig:ExampleCostPathGraph}, respectively.
+
+**** ended here ****
+
+**** Refer to an appendix for the approximation. ****
+
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of energy service consumption ($\eqsps$), and
