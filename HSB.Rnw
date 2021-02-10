@@ -833,7 +833,6 @@ rebound_results %>%
                  axis.text.y = ggplot2::element_blank(),
                  axis.ticks.y = ggplot2::element_blank(),
                  axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
 @
 
 
@@ -932,20 +931,23 @@ We begin with the emplacement effect.
 The emplacement effect (segments $\circ$---1, 1---2, and 2---* in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only.
 No behavior changes occur.
-The direct effect of emplacement of the EEU is device energy savings
-(segment $\circ$---1 in the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph})
-and energy cost savings
-(segment $\circ$---1 in the expenditure path graph of Fig.~\ref{fig:ExampleCostPathGraph}).
-The indirect effects of emplacement of the EEU are changes in the embodied energy rate 
-(segment 1---2 on the energy path graph of 
-Fig.~\ref{fig:ExampleEnergyPathGraph}), 
-changes in the capital cost rate 
-(segment 1---2 on the expenditure path graph of 
-Fig.~\ref{fig:ExampleCostPathGraph})
-and
-changes in the maintenance and disposal energy and cost rates
-(segment 2---* in
-Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
+The direct emplacement effect of the EEU is
+device energy savings and energy cost savings
+(segments $\circ$---1 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
+The indirect effects of EEU emplacement are
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item changes in the embodied energy rate 
+        (segment 1---2 on Fig.~\ref{fig:ExampleEnergyPathGraph}), 
+  
+  \item changes in the capital cost rate 
+        (segment 1---2 on Fig.~\ref{fig:ExampleCostPathGraph}), and 
+        
+  \item changes in the maintenance and disposal energy and cost rates
+        (segments 2---* on Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
+    
+\end{enumerate*}
 
 Because no behavior changes are considered
 in the emplacement effect,
@@ -974,19 +976,43 @@ because actual and expected energy savings are identical.
 In fact, the ``1'' point 
 lies on the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
-indicating that line is the basis from which all rebound effects are measured.
+indicating that the $Re_{tot} = 0\%$ line 
+is the basis from which all rebound effects 
+($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\productivity}$)
+are measured.
 If total energy demand returns to the original energy consumption level 
 (negative sloping line through the $\circ$ point), 
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
-``$Re_{tot} = 100\%$.''
+$Re_{tot} = 100\%$.
+Total rebound ($Re_{tot}$) is linear between and beyond the 
+$Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines.
+Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
+exhibit negative rebound, indicating
+hyperconservation (energy savings in excess of the expected energy savings).
+Points above and to the right of the $Re_{tot} = 100\%$ line 
+have $Re_{tot} > 100\%$, indicating
+backfire (greater energy consumption after the EEU than before the EEU).
 
-**** ended here. ****
-
-On the other hand, energy rebound may be caused by indirect emplacement effects, which
-account for the life cycle of the energy conversion device, including 
-energy embodied by manufacturing (subscript $emb$) and
+Although the direct emplacement effect does not cause rebound, 
+indirect emplacement effects may cause rebound, 
+as shown in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+Indirect emplacement effects account for the life cycle of the energy conversion device,
+including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
+In Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+emplacement rebound is negative ($Re_{empl} < 0$),
+indicating that the upgraded device has 
+a lesser embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
+and lesser maintenance and disposal costs ($\raempl{C}_{md} < \rbempl{C}_{md}$).
+Fig.~\ref{fig:ExampleCostPathGraph} shows segments 1---2 and 2---*
+moving in the negative direction,
+consistent with reduced capital costs
+($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
+reduced maintenance and disposal costs
+($\raempl{C}_{md} < \rbempl{C}_{md}$).
+
+**** Ended here. ****
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
