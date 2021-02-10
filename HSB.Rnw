@@ -1003,9 +1003,9 @@ including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
 In Fig.~\ref{fig:ExampleEnergyPathGraph}, 
 emplacement rebound is negative ($Re_{empl} < 0$),
-indicating that the upgraded device has 
-a lesser embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and lesser maintenance and disposal costs ($\raempl{C}_{md} < \rbempl{C}_{md}$).
+because the upgraded device has lesser
+embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
+and lesser maintenance and disposal cost rate ($\raempl{C}_{md} < \rbempl{C}_{md}$).
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments 1---2 and 2---*
 moving in the negative direction,
 consistent with reduced capital costs
