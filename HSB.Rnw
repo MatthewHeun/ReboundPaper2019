@@ -888,7 +888,6 @@ rebound_results %>%
 
 <<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path.", fig.width=6, fig.height=4>>=
 cost_line_angle <- -16.5
-example_Re_label_size <- 4
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    1.01, 1.003, 'degree', 
                                      stage_colour, orig_size, 0,
@@ -907,9 +906,9 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    0.243, 1.034, 'bold("_")',
                                      stage_colour, bar_size, 0,
                                    0.635, 1.02, 'Original~expenditure', 
-                                     annotation_colour, example_Re_label_size, cost_line_angle,
+                                     annotation_colour, annotation_size, cost_line_angle,
                                    0.55, 0.9825, 'After~expected~savings', 
-                                     annotation_colour, example_Re_label_size, cost_line_angle)
+                                     annotation_colour, annotation_size, cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
@@ -2060,9 +2059,9 @@ car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    830, 26557, 'bold("_")', 
                                      stage_colour, bar_size, 0,
                                    1075, 26350, 'Original~expenditure', 
-                                     annotation_colour, example_Re_label_size, cost_line_angle,
+                                     annotation_colour, annotation_size, car_cost_line_angle,
                                    950, 25958, 'After~expected~savings', 
-                                     annotation_colour, example_Re_label_size, cost_line_angle)
+                                     annotation_colour, annotation_size, car_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
@@ -2567,17 +2566,26 @@ rebound_results %>%
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_cost_line_angle <- -24
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                    9, 27392.15, '""^scriptstyle(degree)', lamp_Re_text_colour, 10, 0,
-                                    0.9, 27392.8, 'scriptstyle("1")', lamp_Re_text_colour, 5, 0,
-                                    0.65, 27391.6, 'scriptstyle("2,")', lamp_Re_text_colour, 5, 0,
-                                    0.8, 27391.5, 'scriptstyle("*")', lamp_Re_text_colour, 10, 0,
-                                    0.85, 27387, 'scriptstyle("4")', lamp_Re_text_colour, 5, 0,
-                                    2.3, 27386.5, 'scriptstyle("^")', lamp_Re_text_colour, 10, 0,
-                                    2.5, 27387, 'scriptstyle("6")', lamp_Re_text_colour, 5, 0,
-                                    2.55, 27399.2, 'scriptscriptstyle("_")', lamp_Re_text_colour, 10, 0,
-                                    5, 27396.7, 'Original~expenditure', lamp_Re_text_colour, car_Re_label_size, lamp_cost_line_angle,
-                                    4, 27389.7, 'Expected~expenditure', car_Re_text_colour, car_Re_label_size, lamp_cost_line_angle
-                                    )
+                                    9, 27392.8, 'degree', 
+                                      stage_colour, orig_size, 0,
+                                    0.9, 27392.8, 'a', 
+                                      abcd_colour, abcd_size, 0,
+                                    0.57, 27391.6, '"b,"',
+                                      abcd_colour, abcd_size, 0,
+                                    0.79, 27391.33, '"*"', 
+                                      stage_colour, star_size, 0,
+                                    0.85, 27387, 'c', 
+                                      abcd_colour, abcd_size, 0,
+                                    2.3, 27386.5, '"^"', 
+                                      stage_colour, hat_size, 0,
+                                    2.5, 27387, 'd', 
+                                      abcd_colour, abcd_size, 0,
+                                    2.55, 27399.2, 'bold("_")', 
+                                      stage_colour, bar_size, 0,
+                                    5, 27396.7, 'Original~expenditure',
+                                      annotation_colour, annotation_size, lamp_cost_line_angle,
+                                    4, 27389.7, 'After~expected~savings',
+                                      annotation_colour, annotation_size, lamp_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
@@ -2597,25 +2605,49 @@ rebound_results %>%
 
 <<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                                     1.09, 1.000007, 'scriptstyle(paste(degree, ""^",", "*"))', lamp_Re_text_colour, 10,
-                                     0.7, 1.00008, 'scriptstyle(degree)', lamp_Re_text_colour, 8,
-                                     1.57, 0.9998, 'scriptstyle(degree)', lamp_Re_text_colour, 8,
-                                     0.7, 0.999995, 'scriptscriptstyle("*")', lamp_Re_text_colour, 8,
-                                     3.5, 0.9999, 'scriptscriptstyle("*")', lamp_Re_text_colour, 8,
-                                     0.96, 0.99984, 'scriptstyle("4")', lamp_Re_text_colour, 5,
-                                     2.4, 0.999815, 'scriptstyle("^")',  lamp_Re_text_colour, 10,
-                                     0.7, 0.999885, 'scriptscriptstyle("^")', lamp_Re_text_colour, 8,
-                                     3.5, 0.99979, 'scriptscriptstyle("^")', lamp_Re_text_colour, 8,
-                                     2.5, 0.999825, 'scriptstyle("6")', lamp_Re_text_colour, 5,
-                                     2.5, 1.00029, 'scriptscriptstyle("_")',  lamp_Re_text_colour, 10,
-                                     0.7, 1.00033, 'scriptscriptstyle("_")',  lamp_Re_text_colour, 8,
-                                     3.5, 1.00023, 'scriptscriptstyle("_")',  lamp_Re_text_colour, 8,
-                                     2.46, 0.9998, 'scriptscriptstyle("r")',  lamp_Re_text_colour, 8,
-                                     2.46, 1.0004, 'scriptscriptstyle("r")',  lamp_Re_text_colour, 8,
-                                     0.75, 1.00016, 'scriptscriptstyle("i")', lamp_Re_text_colour, 8,
-                                     3.4, 0.99984, 'scriptscriptstyle("i")', lamp_Re_text_colour, 8,
-                                     1.2, 1.0004, 'scriptscriptstyle("i")', lamp_Re_text_colour, 8,
-                                     3.4, 1.00027, 'scriptscriptstyle("i")', lamp_Re_text_colour, 8)
+                                     1.05, 1.00002, 'degree', 
+                                       stage_colour, orig_size,
+                                     1.097, 1.000005, '","', 
+                                       stage_colour, orig_size-3,
+                                     1.15, 1.000004, '"*"', 
+                                       stage_colour, star_size,
+                                     0.7, 1.00008, 'degree',
+                                       line_label_colour, orig_line_label_size,
+                                     1.57, 0.9998, 'degree',
+                                       line_label_colour, orig_line_label_size,
+                                     0.7, 0.999988, '"*"', 
+                                       line_label_colour, star_line_label_size,
+                                     3.5, 0.99989, '"*"',
+                                       line_label_colour, star_line_label_size,
+                                     0.96, 0.99984, 'c', 
+                                       abcd_colour, abcd_size,
+                                     2.4, 0.999815, '"^"',
+                                       stage_colour, hat_size,
+                                     0.7, 0.999885, '"^"',
+                                       line_label_colour, hat_line_label_size,
+                                     3.4, 0.99979, '"^"', 
+                                       line_label_colour, hat_line_label_size,
+                                     2.48, 0.999857, 'd',
+                                       abcd_colour, abcd_size,
+                                     2.5, 1.000287, 'bold("_")', 
+                                       stage_colour, bar_size,
+                                     0.7, 1.00033, '"_"',  
+                                       line_label_colour, bar_line_label_size,
+                                     3.5, 1.00023, '"_"',  
+                                       line_label_colour, bar_line_label_size,
+                                     2.46, 0.9998, 'r', 
+                                       abcd_colour, abcd_size,
+                                     2.46, 1.0004, 'r',
+                                       abcd_colour, abcd_size,
+                                     0.75, 1.00016, 'i*degree',
+                                       line_label_colour, i_line_label_size,
+                                     3.4, 0.99984, 'i*degree',
+                                       line_label_colour, i_line_label_size,
+                                     1.21, 1.0004, 'bar(i)',
+                                       line_label_colour, i_line_label_size,
+                                     3.4, 1.00027, 'bar(i)',
+                                       line_label_colour, i_line_label_size,
+                                     )
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences") + 
