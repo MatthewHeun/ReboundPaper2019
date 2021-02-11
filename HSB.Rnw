@@ -939,26 +939,58 @@ rebound_results %>%
 
 
 <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional preferences path.", fig.width=6, fig.height=4>>=
+orig_line_label_size <- orig_size - 3
+star_line_label_size <- star_size - 4
+hat_line_label_size <- hat_size - 3
+bar_line_label_size <- bar_size - 1
+r_line_label_size <- abcd_size
+i_line_label_size <- abcd_size
+line_label_colour <- "darkgray"
+  
 labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.08, 1.002, 'scriptstyle(paste(degree, ""^",", "*"))', example_Re_text_colour, 10,
-                          0.7, 1.011, 'scriptstyle(degree)', example_Re_text_colour, 8,
-                          1.55, 0.97, 'scriptstyle(degree)', example_Re_text_colour, 8,
-                          0.7, 0.997, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
-                          3.5, 0.983, 'scriptscriptstyle("*")', example_Re_text_colour, 8,
-                          0.96, 0.98, 'scriptstyle("4")', example_Re_text_colour, 5,
-                          2.27, 0.972, 'scriptstyle("^")',  example_Re_text_colour, 10,
-                          0.7, 0.989, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
-                          3.5, 0.974, 'scriptscriptstyle("^")', example_Re_text_colour, 8,
-                          2.51, 0.983, 'scriptstyle("6")', example_Re_text_colour, 5,
-                          2.43, 1.087, 'scriptscriptstyle("_")',  example_Re_text_colour, 10,
-                          0.7, 1.09, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
-                          3.5, 1.075, 'scriptscriptstyle("_")',  example_Re_text_colour, 8,
-                          2.18, 0.97, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
-                          2.6, 1.15, 'scriptscriptstyle("r")',  example_Re_text_colour, 8,
-                          0.75, 1.025, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          3.4, 0.981, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          0.75, 1.143, 'scriptscriptstyle("i")', example_Re_text_colour, 8,
-                          3.4, 1.084, 'scriptscriptstyle("i")', example_Re_text_colour, 8)
+                          1.04, 1.005, 'degree', 
+                            annotation_colour, orig_size,
+                          1.09, 1.00, '","', 
+                            annotation_colour, orig_size-3,
+                          1.14, 1.0005, '"*"', 
+                            annotation_colour, star_size,
+                          0.7, 1.011, 'degree', 
+                            line_label_colour, orig_line_label_size,
+                          1.54, 0.97, 'degree',
+                            line_label_colour, orig_line_label_size,
+                          0.7, 0.996, '"*"', 
+                            line_label_colour, star_line_label_size,
+                          3.5, 0.981, '"*"', 
+                            line_label_colour, star_line_label_size,
+                          0.96, 0.98, 'c', 
+                            abcd_colour, abcd_size,
+                          2.27, 0.972, '"^"',  
+                            annotation_colour, hat_size,
+                          0.7, 0.989, '"^"',
+                            line_label_colour, hat_line_label_size,
+                          3.5, 0.974, '"^"', 
+                            line_label_colour, hat_line_label_size,
+                          2.52, 0.983, 'd', 
+                            abcd_colour, abcd_size,
+                          2.43, 1.087, '"_"',  
+                            annotation_colour, bar_size,
+                          0.7, 1.09, '"_"',
+                            line_label_colour, bar_line_label_size,
+                          3.5, 1.075, '"_"',
+                            line_label_colour, bar_line_label_size,
+                          2.18, 0.97, 'r',
+                            line_label_colour, r_line_label_size,
+                          2.6, 1.15, 'r',  
+                            line_label_colour, r_line_label_size,
+                          0.75, 1.025, 'i', 
+                            line_label_colour, i_line_label_size,
+                          3.4, 0.981, 'i', 
+                            line_label_colour, i_line_label_size,
+                          0.75, 1.143, 'i', 
+                            line_label_colour, i_line_label_size,
+                          3.4, 1.084, 'i', 
+                            line_label_colour, i_line_label_size,
+                          )
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Preferences") + 
