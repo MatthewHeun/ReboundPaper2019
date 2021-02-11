@@ -17,9 +17,7 @@
 \newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
 
 % Create "after" commands
-% \newcommand{\orig}[1]{#1}
 \newcommand{\orig}[1]{{}{#1}^{\scriptscriptstyle \circ}}
-% \newcommand{\orig}[1]{{}{#1}^{\scriptscriptstyle o}}
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
@@ -323,3 +321,28 @@ bottom=2pt}
 \newcommand{\cesutility}{  \frac{\rate{u}}{\rbempl{u}} = 
   \left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
         + (1-\fCs) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}}
+
+
+% Segments and lines
+% \newcommand{\seg}[3]{#1\textbf{\textemdash}#3}
+% \newcommand{\seg}[3]{#1\linethickness{1mm}\line(1,0){30}#3}
+% \newcommand{\seg}[3]{#1\linethickness{1 mm}\raisebox{0.9 mm}{\line(1,0){12}}#3}
+\newcommand{\seg}[3]{#1\linethickness{1 mm}\raisebox{0.9 mm}{\textcolor{#2}{\line(1,0){12}}}#3}
+\newcommand{\ii}{\seg{i}{black}{i}}
+\newcommand{\rr}{r\textbf{\textemdash}r}
+\newcommand{\circcirc}{$\circ$\textbf{\textemdash}$\circ$}
+\newcommand{\starstar}{$*$\textbf{\textemdash}$*$}
+\newcommand{\hathat}{$\wedge$\textbf{\textemdash}$\wedge$}
+% \newcommand{\circone}{$\circ$\textbf{\textemdash}1}
+\newcommand{\circone}{\seg{$\circ$}{emplcolor}{1}}
+% \newcommand{\onetwo}{1\textbf{\textemdash}2}
+\newcommand{\onetwo}{\seg{1}{emplcolor}{2}}
+% \newcommand{\twostar}{2\textbf{\textemdash}$*$}
+\newcommand{\twostar}{\seg{2}{emplcolor}{$*$}}
+% \newcommand{\starfour}{$*$\textbf{\textemdash}4}
+\newcommand{\starfour}{\seg{$*$}{subcolor}{4}}
+% \newcommand{\fourhat}{4\textbf{\textemdash}$\wedge$}
+\newcommand{\fourhat}{\seg{4}{subcolor}{$\wedge$}}
+
+
+
