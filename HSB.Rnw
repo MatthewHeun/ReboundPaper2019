@@ -775,17 +775,31 @@ example_Re_label_angle <- -45.6
 # example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
 example_Re_arrow_angle <- 19.0 * pi/180
 example_Re_label_size <- 4
+stage_size <- 10
+stage_colour <- "black"
+abcd_size <- 4
+abcd_colour <- "darkgray"
+
 example_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
 example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         1.01, 0.995, '""^scriptstyle(degree)', example_Re_text_colour, 10, 0,
-                                         0.11, 1.01, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                         0.09, 0.973, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                         0.085, 0.95, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                         0.09, 0.935, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                         0.242, 0.923, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                         0.295, 0.942, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                         0.295, 1.036, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                         0.29, 1.13, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
+                                         1.01, 1.008, 'degree', 
+                                           stage_colour, stage_size, 0,
+                                         0.115, 1.008, 'a', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.085, 0.973, 'b', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.085, 0.95, '"*"', 
+                                           stage_colour, stage_size, 0,
+                                         0.09, 0.935, 'c', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.242, 0.923, '"^"', 
+                                           stage_colour, stage_size-3, 0,
+                                         0.295, 0.942, 'd', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.295, 1.036, '"_"', 
+                                           stage_colour, stage_size-5, 0,
+                                         0.29, 1.13, '"~"', 
+                                           stage_colour, stage_size-5, 0,
                                          0.04, 0.923, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
                                          0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
                                          0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
