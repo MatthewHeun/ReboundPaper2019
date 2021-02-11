@@ -771,52 +771,88 @@ rebound_results <- ReboundTools::rebound_analysis(rebound_data)
 
 
 <<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Notional energy path.", fig.width=6, fig.height=4>>=
-example_Re_label_angle <- -45.6
-# example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
-example_Re_arrow_angle <- 19.0 * pi/180
-example_Re_label_size <- 4
 stage_size <- 10
+orig_size <- stage_size
+star_size <- stage_size
+hat_size <- stage_size - 3
+bar_size <- stage_size - 5
+tilde_size <- stage_size - 5
+
 stage_colour <- "black"
 abcd_size <- 4
 abcd_colour <- "darkgray"
 
-example_Re_text_colour <- ReboundTools::default_graph_params$annotation_text_colour
+annotation_angle <- -45.6
+annotation_size <- 4
+annotation_colour <- "black"
+
+example_arrow_angle <- 19.0 * pi/180
+example_arrow_size <- 0.5 # width
+
 example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                          1.01, 1.008, 'degree', 
-                                           stage_colour, stage_size, 0,
+                                           stage_colour, orig_size, 0,
                                          0.115, 1.008, 'a', 
                                            abcd_colour, abcd_size, 0,
                                          0.085, 0.973, 'b', 
                                            abcd_colour, abcd_size, 0,
                                          0.085, 0.95, '"*"', 
-                                           stage_colour, stage_size, 0,
+                                           stage_colour, star_size, 0,
                                          0.09, 0.935, 'c', 
                                            abcd_colour, abcd_size, 0,
                                          0.242, 0.923, '"^"', 
-                                           stage_colour, stage_size-3, 0,
+                                           stage_colour, hat_size, 0,
                                          0.295, 0.942, 'd', 
                                            abcd_colour, abcd_size, 0,
                                          0.295, 1.036, '"_"', 
-                                           stage_colour, stage_size-5, 0,
+                                           stage_colour, bar_size, 0,
                                          0.29, 1.13, '"~"', 
-                                           stage_colour, stage_size-5, 0,
-                                         0.04, 0.923, 'Hyperconservation', example_Re_text_colour, example_Re_label_size-1, example_Re_label_angle,
-                                         0.02, 1.043, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         0.03, 1.005, 'Re[empl]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
-                                         0.21, 0.90, 'Re[sub]', example_Re_text_colour, example_Re_label_size - 1, example_Re_label_angle + 90,
-                                         0.39, 0.936, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         0.68, 0.935, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         0.754, 1.1, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         0.95, 1.1, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
+                                           stage_colour, tilde_size, 0,
+                                         0.04, 0.923, 'Hyperconservation', 
+                                           annotation_colour, 
+                                           annotation_size-1,
+                                           annotation_angle,
+                                         0.02, 1.043, 'Re[tot] == 0*"%"', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle,
+                                         0.03, 1.005, 'Re[empl]', 
+                                           annotation_colour,  
+                                           annotation_size - 1, 
+                                           annotation_angle + 90,
+                                         0.21, 0.90, 'Re[sub]', 
+                                           annotation_colour, 
+                                           annotation_size - 1,
+                                           annotation_angle + 90,
+                                         0.39, 0.936, 'Re[inc]', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle + 90,
+                                         0.68, 0.935, 'Re[prod]', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle + 90,
+                                         0.754, 1.1, 'Re[tot] == 100*"%"', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle,
+                                         0.95, 1.1, 'Backfire', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle)
 example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      # Re_empl arrow
-                                     0.078, 1.01, example_Re_arrow_angle, -0.063, example_Re_text_colour, 0.5,
+                                     0.078, 1.01, example_arrow_angle, 
+                                       -0.063, annotation_colour, example_arrow_size,
                                      # Re_sub arrow
-                                     0.249, 0.904, example_Re_arrow_angle, 0.04, example_Re_text_colour, 0.5,
+                                     0.249, 0.904, example_arrow_angle, 
+                                       0.04, annotation_colour, example_arrow_size,
                                      # Re_inc arrow
-                                     0.327, 0.904, example_Re_arrow_angle, 0.157, example_Re_text_colour, 0.5,
+                                     0.327, 0.904, example_arrow_angle, 
+                                       0.157, annotation_colour, example_arrow_size,
                                      # Re_prod arrow
-                                     0.622, 0.904, example_Re_arrow_angle, 0.146, example_Re_text_colour, 0.5) 
+                                     0.622, 0.904, example_arrow_angle, 
+                                       0.146, annotation_colour, example_arrow_size) 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
                                graph_types = "Energy", 
@@ -851,19 +887,29 @@ rebound_results %>%
 
 
 <<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional cost path.", fig.width=6, fig.height=4>>=
-example_cost_line_angle <- -16.5
+cost_line_angle <- -16.5
 example_Re_label_size <- 4
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1.01, 0.998, '""^scriptstyle(degree)', example_Re_text_colour, 10, 0,
-                                   0.095, 1.005, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.972, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.9545, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                   0.09, 0.936, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                   0.24, 0.938, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                   0.283, 0.936, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                   0.243, 1.034, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                   0.635, 1.02, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
-                                   0.55, 0.9825, 'After~expected~savings', example_Re_text_colour, example_Re_label_size, example_cost_line_angle)
+                                   1.01, 1.003, 'degree', 
+                                     stage_colour, orig_size, 0,
+                                   0.098, 1.003, 'a', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.09, 0.972, 'b', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.09, 0.9545, 'scriptstyle("*")', 
+                                     stage_colour, star_size, 0,
+                                   0.09, 0.936, 'c', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.24, 0.938, '"^"', 
+                                     stage_colour, hat_size, 0,
+                                   0.283, 0.936, 'd', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.243, 1.034, '"_"',
+                                     stage_colour, bar_size, 0,
+                                   0.635, 1.02, 'Original~expenditure', 
+                                     annotation_colour, example_Re_label_size, cost_line_angle,
+                                   0.55, 0.9825, 'After~expected~savings', 
+                                     annotation_colour, example_Re_label_size, cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Example", 
