@@ -324,25 +324,33 @@ bottom=2pt}
 
 
 % Segments and lines
-% \newcommand{\seg}[3]{#1\textbf{\textemdash}#3}
-% \newcommand{\seg}[3]{#1\linethickness{1mm}\line(1,0){30}#3}
-% \newcommand{\seg}[3]{#1\linethickness{1 mm}\raisebox{0.9 mm}{\line(1,0){12}}#3}
-\newcommand{\seg}[3]{#1\linethickness{1 mm}\raisebox{0.9 mm}{\textcolor{#2}{\line(1,0){12}}}#3}
-\newcommand{\ii}{\seg{i}{black}{i}}
-\newcommand{\rr}{r\textbf{\textemdash}r}
-\newcommand{\circcirc}{$\circ$\textbf{\textemdash}$\circ$}
-\newcommand{\starstar}{$*$\textbf{\textemdash}$*$}
-\newcommand{\hathat}{$\wedge$\textbf{\textemdash}$\wedge$}
-% \newcommand{\circone}{$\circ$\textbf{\textemdash}1}
-\newcommand{\circone}{\seg{$\circ$}{emplcolor}{1}}
-% \newcommand{\onetwo}{1\textbf{\textemdash}2}
-\newcommand{\onetwo}{\seg{1}{emplcolor}{2}}
-% \newcommand{\twostar}{2\textbf{\textemdash}$*$}
-\newcommand{\twostar}{\seg{2}{emplcolor}{$*$}}
-% \newcommand{\starfour}{$*$\textbf{\textemdash}4}
-\newcommand{\starfour}{\seg{$*$}{subcolor}{4}}
-% \newcommand{\fourhat}{4\textbf{\textemdash}$\wedge$}
-\newcommand{\fourhat}{\seg{4}{subcolor}{$\wedge$}}
+% Arguments:
+%   #1: left character
+%   #2: line color
+%   #3: line thickness (e.g., 0.1 mm)
+%   #4: right character
+% Note that \raisebox{0.9 mm} moves the line up from the baseline.
+% Also, \line(1,0){12} gives a horizontal line with length "12" (unknown units!)
+\newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.9 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
+
+% Construction lines
+\newcommand{\ii}{\seg{i}{black}{0.4 mm}{i}}
+\newcommand{\rr}{\seg{r}{black}{0.1 mm}{r}}
+\newcommand{\circcirc}{\seg{$\circ$}{black}{0.1 mm}{$\circ$}}
+\newcommand{\starstar}{\seg{$*$}{black}{0.1 mm}{$*$}}
+\newcommand{\hathat}{\seg{$\wedge$}{black}{0.1 mm}{$\wedge$}}
+
+% Line segments
+\newcommand{\circone}{\seg{$\circ$}{emplcolor}{1 mm}{1}}
+\newcommand{\onetwo}{\seg{1}{emplcolor}{1 mm}{2}}
+\newcommand{\twostar}{\seg{2}{emplcolor}{1 mm}{$*$}}
+\newcommand{\starfour}{\seg{$*$}{subcolor}{1 mm}{4}}
+\newcommand{\fourhat}{\seg{4}{subcolor}{1 mm}{$\wedge$}}
+
+
+
+
+
 
 
 
