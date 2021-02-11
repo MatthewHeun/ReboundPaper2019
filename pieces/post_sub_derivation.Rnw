@@ -383,37 +383,102 @@ the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
 and the consumption rate of other goods ($\rate{C}_o$).
 
-Figure~\ref{fig:ExamplePrefsPathGraph} illustrates features
+Figure~\ref{fig:ExamplePrefsPathGraph} 
+(especially segments \starc{} and \chat{})
+illustrates features
 of the exact method for determining the new consumption bundle.
 
-<<ExamplePrefsPathGraphForDerivation, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences", 
-                               graph_params = car_graph_params) + 
-  ggplot2::xlim(0.93, 1.23) +
-  ggplot2::ylim(0.973, 1.02) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
+Four equations are helpful for this analysis.
+First, the slope at any point of indifference curve \iicirc{} 
+is given by Eq.~\ref{eq:slope_indifference_curve} with 
+$\rate{u}/\rbempl{u} = 1$.
+
+\begin{align} \label{eq:slope_indifference_curve_u1}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
+        -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber  \\
+        &\times \left[ \left( \frac{1}{1 - a} \right) 
+                - \left( \frac{a}{1 - a} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+
+
+Second, the equation of \circcirc{} expenditure line is
+
+\begin{equation} \label{eq:origorig_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\bempl{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rbempl{C}_{md}) \; .
+\end{equation}
+
+Third, the equation of the \starstar{} expenditure line is
+
+\begin{equation} \label{eq:starstar_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\aprod{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+\end{equation}
+%
+Note that both the \circcirc{} line and the \starstar{} line
+pass through the $\circ$ and $*$ points in
+Figs.~\ref{fig:ExamplePrefsPathGraph},
+\ref{fig:CarPrefsGraph}, and
+\ref{fig:LampPrefsGraph}.
+
+Fourth, the equation of the \hathat{} expenditure line is given by 
+
+\begin{equation} \label{eq:hathat_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\aprod{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
+          + \aprod{p}_s \Delta \rasub{q}_s + \Delta \rasub{C}_o) \; .
+\end{equation}
+%
+Note that line \hathat{} (Eq.~\ref{eq:hathat_line})
+has the same slope as line \starstar{} (Eq.~\ref{eq:starstar_line}), 
+but a different $y$-intercept.
+
+To find the rate of energy service consumption after the substitution effect
+($\rasub{q}_s$), set the slope of the \hathat{} line (Eq.~\ref{eq:hathat_line})
+equal to the slope of the \iicirc{} indifference curve
+when $\rate{u}/\rbempl{u} = 1$ (Eq.~\ref{eq:slope_indifference_curve_u1}).
+
+\begin{equation}
+  -\frac{\aprod{p}_s \rbempl{q}_s}
+        {\rbempl{C}_o} = 
+    -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} % \nonumber  \\
+        \left[ \left( \frac{1}{1 - a} \right) 
+                - \left( \frac{a}{1 - a} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho}
+\end{equation}
+%
+Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
+
+\begin{equation}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ a + (1-a) 
+      \left[ \left(  \frac{1-a}{a}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
+\end{equation}
+%
+
+
+
+
+
+
+
+
+
+
+
 
 
 
