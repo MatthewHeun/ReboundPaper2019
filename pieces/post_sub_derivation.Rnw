@@ -363,15 +363,17 @@ The approximate method assumes that
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-This assumption is an approximation that holds 
+This assumption is an approximation that holds only 
 for infinitesimally small energy service price changes 
 ($\Delta \aempl{p}_s \approx 0$).
 However, in the case of an energy efficiency upgrade (EEU), 
 the energy service price change is not infinitesimal.
 Rather, 
-$\Delta \aempl{p}_s \approx 0$ is finite and may be large.
+$\Delta \aempl{p}_s$ is finite and may be large.
 
-To determine the new consumption bundle after the substitution effect and,
+To determine the new consumption bundle after the substitution effect 
+($\rasub{q}_s$ and $\rasub{C}_o$)
+and,
 ultimately, to quantify the direct and indirect substitution rebound effects
 ($Re_{dsub}$ and $Re_{isub}$),
 we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
@@ -381,16 +383,16 @@ utility function,
 we require constancy of only
 the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
-and the consumption rate of other goods ($\rate{C}_o$).
+and the expenditure rate for other goods ($\rate{C}_o$).
 
 Figure~\ref{fig:ExamplePrefsPathGraph} 
 (especially segments \starc{} and \chat{})
 illustrates features
 of the exact method for determining the new consumption bundle.
 
-Four equations are helpful for this analysis.
+Two equations are helpful for this analysis.
 First, the slope at any point of indifference curve \iicirc{} 
-is given by Eq.~\ref{eq:slope_indifference_curve} with 
+is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
 $\rate{u}/\rbempl{u} = 1$.
 
 \begin{align} \label{eq:slope_indifference_curve_u1}
@@ -401,18 +403,7 @@ $\rate{u}/\rbempl{u} = 1$.
                           \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
 \end{align}
 
-Second, the equation of \circcirc{} expenditure line is
-
-\begin{equation} \label{eq:origorig_line}
-  \frac{\rate{C}_o}{\rbempl{C}_o} = 
-      -\frac{\bempl{p}_s \rbempl{q}_s}
-            {\rbempl{C}_o}
-        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
-      + \frac{1}{\rbempl{C}_o} 
-        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rbempl{C}_{md}) \; .
-\end{equation}
-
-Third, the equation of the \starstar{} expenditure line is
+Second, the equation of the \starstar{} expenditure line is
 
 \begin{equation} \label{eq:starstar_line}
   \frac{\rate{C}_o}{\rbempl{C}_o} = 
@@ -422,33 +413,11 @@ Third, the equation of the \starstar{} expenditure line is
       + \frac{1}{\rbempl{C}_o} 
         (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
 \end{equation}
-%
-Note that both the \circcirc{} line and the \starstar{} line
-pass through the $\circ$ and $*$ points in
-Figs.~\ref{fig:ExamplePrefsPathGraph},
-\ref{fig:CarPrefsGraph}, and
-\ref{fig:LampPrefsGraph}.
-
-Fourth, the equation of the \hathat{} expenditure line is given by 
-
-\begin{equation} \label{eq:hathat_line}
-  \frac{\rate{C}_o}{\rbempl{C}_o} = 
-      -\frac{\aprod{p}_s \rbempl{q}_s}
-            {\rbempl{C}_o}
-        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
-      + \frac{1}{\rbempl{C}_o} 
-        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G} 
-          + \aprod{p}_s \Delta \rasub{q}_s + \Delta \rasub{C}_o) \; .
-\end{equation}
-%
-Note that line \hathat{} (Eq.~\ref{eq:hathat_line})
-has the same slope as line \starstar{} (Eq.~\ref{eq:starstar_line}), 
-but a different $y$-intercept.
 
 To find the rate of energy service consumption after the substitution effect
-($\rasub{q}_s$), set the slope of the \hathat{} line (Eq.~\ref{eq:hathat_line})
+($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:hathat_line})
 equal to the slope of the \iicirc{} indifference curve
-when $\rate{u}/\rbempl{u} = 1$ (Eq.~\ref{eq:slope_indifference_curve_u1}).
+when $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
 
 \begin{equation}
   -\frac{\aprod{p}_s \rbempl{q}_s}
@@ -467,9 +436,56 @@ Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
                                                   ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
 \end{equation}
 
+Direct substitution effect rebound is given by
+
+\begin{equation}
+  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot}
+\end{equation}
+%
+Substituting the typical relationship of Eq.(~\ref{eq:typ_qs_eta_Edot})
+in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Rearranging produces
+
+\begin{equation}
+  Re_{dsub} = \frac{ \left( \frac{\rasub{q}_s}{\rbempl{q}_s} 
+                    - \frac{\rbsub{q}_s}{\rbempl{q}_s}  \right) \frac{\rbempl{q}_s}{\aprod{\eta}} }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that the rate of energy service consumption ($\rate{q}_s$)
+is unchanged across the emplacement effect leads to $\frac{\rbsub{q}_s}{\rbempl{q}_s} = 1$.
+Furthermore, $\frac{\rbempl{q}_s}{\aprod{\eta}} 
+            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\aprod{\eta}}
+            = \rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}$,
+such that
+
+\begin{equation}
+  Re_{dsub} = \left( \frac{\rasub{q}_s}{\rbempl{q}_s} - 1  \right)
+              \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
+              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+\end{equation}
+%
+Simplifying yields
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; ,
+\end{equation}
+%
+into which Eq.~(\ref{eq:q_s_solution}) can be substituted directly.
+
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
-can be found by substituting $\rate{u}/\rbempl{u} = 1$ 
-and Eq.~(\ref{eq:q_s_solution})
+can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
+$\rate{u}/\rbempl{u} = 1$ 
 into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
 to obtain
 
@@ -488,7 +504,27 @@ Simplifying gives
           \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
                                                 ^{1/\rho} \; .
 \end{equation}
+
+Indirect substitution effect rebound is given by 
+
+\begin{equation}
+  Re_{isub} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\end{equation}
 %
+Rearranging gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left(\frac{\rasub{C}_o}{\rbempl{C}_o} - \frac{\rbsub{C}_o}{\rbempl{C}_o}  \right) \rbempl{C}_o I_E }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that expenditures on other goods are constant across the emplacement effect gives
+$\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and 
+
+\begin{equation}
+  Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; ,
+\end{equation}
+% 
+into which Eq.~(\ref{eq:C_o_solution}) can be substituted directly.
 
 
 
