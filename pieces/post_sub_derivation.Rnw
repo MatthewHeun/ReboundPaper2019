@@ -389,9 +389,8 @@ Figure~\ref{fig:ExamplePrefsPathGraph}
 (especially segments \starc{} and \chat{})
 illustrates features
 of the exact method for determining the new consumption bundle.
-
 Two equations are helpful for this analysis.
-First, the slope at any point of indifference curve \iicirc{} 
+First, the slope at any point on indifference curve \iicirc{} 
 is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
 $\rate{u}/\rbempl{u} = 1$.
 
@@ -402,7 +401,7 @@ $\rate{u}/\rbempl{u} = 1$.
                 - \left( \frac{a}{1 - a} \right) 
                           \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
 \end{align}
-
+%
 Second, the equation of the \starstar{} expenditure line is
 
 \begin{equation} \label{eq:starstar_line}
@@ -415,7 +414,7 @@ Second, the equation of the \starstar{} expenditure line is
 \end{equation}
 
 To find the rate of energy service consumption after the substitution effect
-($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:hathat_line})
+($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
 equal to the slope of the \iicirc{} indifference curve
 when $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
 
@@ -439,10 +438,10 @@ Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 Direct substitution effect rebound is given by
 
 \begin{equation}
-  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot}
+  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
 \end{equation}
 %
-Substituting the typical relationship of Eq.(~\ref{eq:typ_qs_eta_Edot})
+Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
 in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
 
 \begin{equation}
@@ -468,7 +467,7 @@ such that
               \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\Sdot} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ gives
+Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
