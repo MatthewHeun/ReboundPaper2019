@@ -331,21 +331,21 @@ bottom=2pt}
 %   #4: right character
 % Note that \raisebox{0.9 mm} moves the line up from the baseline.
 % Also, \line(1,0){12} gives a horizontal line with length "12" (unknown units!)
-\newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.9 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
+\newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.8 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
 
 % Construction lines
-\newcommand{\iicirc}{\seg{$\bempl{\text{i}}$}{black}{0.4 mm}{$\bempl{\text{i}}$}}
+\newcommand{\iicirc}{\seg{$\bempl{\text{i}}$}{black}{0.3 mm}{$\bempl{\text{i}}$}}
 \newcommand{\rr}{\seg{r}{black}{0.1 mm}{r}}
 \newcommand{\circcirc}{\seg{$\circ$}{black}{0.1 mm}{$\circ$}}
 \newcommand{\starstar}{\seg{$*$}{black}{0.1 mm}{$*$}}
 \newcommand{\hathat}{\seg{$\wedge$}{black}{0.1 mm}{$\wedge$}}
 
 % Line segments
-\newcommand{\circa}{\seg{$\circ$}{emplcolor}{1 mm}{a}}
-\newcommand{\ab}{\seg{a}{emplcolor}{1 mm}{b}}
-\newcommand{\bstar}{\seg{b}{emplcolor}{1 mm}{$*$}}
-\newcommand{\starc}{\seg{$*$}{subcolor}{1 mm}{$\,$c}}
-\newcommand{\chat}{\seg{c$\,$}{subcolor}{1 mm}{$\wedge$}}
+\newcommand{\circa}{\seg{$\circ$}{emplcolor}{0.6 mm}{a}}
+\newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+\newcommand{\bstar}{\seg{b}{emplcolor}{0.6 mm}{$*$}}
+\newcommand{\starc}{\seg{$*$}{subcolor}{0.6 mm}{$\,$c}}
+\newcommand{\chat}{\seg{c$\,$}{subcolor}{0.6 mm}{$\wedge$}}
 
 
 
