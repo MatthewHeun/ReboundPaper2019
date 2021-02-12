@@ -18,11 +18,11 @@ must be determined, including
 %
 \begin{itemize}
 
-  \item 0\% and 100\% rebound lines in energy path graphs, 
-  
   \item lines of constant total energy consumption
         in energy path graphs, 
         
+  \item 100\% and 0\% rebound lines in energy path graphs, 
+  
   \item constant expenditure lines in expenditure path graphs,
   
   \item indifference curves in preference path graphs, and 
@@ -69,7 +69,7 @@ For the energy path graph,
 indirect energy consumption is placed on the $y$-axis
 and direct energy consumption is place on the $x$-axis, 
 so we can write the euqation of any 
-constant total energy consumption line on the energy path graph to be
+constant total energy consumption line on the energy path graph as
 
 \begin{equation}
   y = -x + \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E \; ,
@@ -87,8 +87,7 @@ shows 100\% rebound:
 \end{equation}
 
 The constant total energy consumption line 
-that accounts for no other changes 
-except for expected energy savings ($\Sdot$)
+that accounts for expected energy savings ($\Sdot$) only 
 is the 0\% rebound line:
 
 \begin{equation}
@@ -110,5 +109,168 @@ and the device owner.
 Lines of constant expenditure are important, 
 because they provide budget constraints for the device owner.
 
+The equation of a constant total expenditures line is derived from 
+
+\begin{equation}
+  \rate{C}_{tot} = \rate{C}_{dir} + \rate{C}_{indir}
+\end{equation}
+%
+at any rebound stage.
+Direct expenditure is the cost of energy consumed by the energy conversion device
+($\rate{C}_s = p_E \rate{E}_s$), and 
+indirect expenses are the sum of capital costs, 
+maintenenace and disposal costs, and 
+expenditures on other goods
+($\rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o$).
+Rearranging gives
+
+\begin{equation}
+  \rate{C}_{indir} = - \rate{C}_{dir} + \rate{C}_{tot} \; .
+\end{equation}
+
+For the expenditure path graph,
+indirect expenditures are placed on the $y$-axis
+and direct expenditures on energy for the energy conversion device are place on the $x$-axis,
+so we can write the euqation of any
+constant expenditure line on the energy path graph as
+
+\begin{equation}
+  y = -x + \rate{C}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; ,
+\end{equation}
+%
+where $\rate{C}_s$, $\rate{C}_{cap}$, $\rate{C}_{md}$, and $\rate{C}_o$
+can be at any rebound stage in Fig.~\ref{fig:flowchart}.
+
+The constant total expenditure line 
+that passes through the original point ($\circ$)
+shows the budget constraint for the device owner:
+
+\begin{equation}
+  y = -x + \rbempl{C}_s + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rbempl{C}_o \; ,
+\end{equation}
+%
+or
+
+\begin{equation}
+  y = -x + \rbempl{M} \; .
+\end{equation}
+
+The constant total expenditure line 
+that accounts for expected energy savings ($\Sdot$) 
+and gross costs savings ($\rate{G} = p_E \Sdot$) only 
+is given by:
+
+\begin{equation}
+  y = -x + (\rbempl{C}_s - \rate{G}) + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rbempl{C}_o \; ,
+\end{equation}
+%
+or
+
+\begin{equation}
+  y = -x + \rbempl{M} - \rate{G}\; .
+\end{equation}
+%
+The above line passes through the $a$ point on an expenditure path graph.
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Preference path graphs}
+\label{sec:prefs_path_graph_details}
+%++++++++++++++++++++++++++++++
+
+Preferences path graphs show expenditures in 
+$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space.
+Line of constant expenditure are derived from budget constraints.
+
+Before the EEU, the budget constraint is
+
+\begin{equation}
+  \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rate{C}_o \; .
+\end{equation}
+%
+Note that both $\rbempl{C}_o$ and $\rbempl{q}_s$ 
+can vary with respect to one another so are written as
+$\rate{C}_o$ and $\rate{q}_s$.
+To derive the equation of the line representing the original budget constraint 
+in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
+(the \circcirc{} line through the $\circ$ point
+in preference path graphs), 
+we solve for $\rate{C}_o$ to obtain
+
+\begin{equation}
+  \rate{C}_o = - \bempl{p}_s \rate{q}_s + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} \; .
+\end{equation}
+%
+Multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl{q}_s$ gives
+
+\begin{equation}
+  \frac{\rate{C}_o}{\rbempl{C}_o} \rbempl{C}_o
+       = - \bempl{p}_s \frac{\rate{q}_s}{\rbempl{q}_s} \rbempl{q}_s 
+         + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} \; .
+\end{equation}
+%
+Dividing both sides by $\rbempl{C}_o$ yields
+
+\begin{equation}
+  \frac{\rate{C}_o}{\rbempl{C}_o}
+       = - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} \frac{\rate{q}_s}{\rbempl{q}_s}
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md}) \; .
+\end{equation}
+%
+Noting that $\frac{\rate{C}_o}{\rbempl{C}_o}$ is the $x$-axis value and 
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the $y$-axis value gives
+
+\begin{equation} \label{eq:orig_line_prefs}
+  y = - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md}) \; .
+\end{equation}
+
+A similar procedure can be employed to derive the equation of 
+\starstar{} line through the $*$ point
+after the emplacement effect.
+The budget constraint at the $*$ point is
+
+\begin{equation}
+  \rbempl{M} = \aprod{p}_s \rate{q}_s + \raempl{C}_{cap} + \raempl{C}_{md} + \rate{C}_o + \raempl{N} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:N_dot_star_empl}) for $\raempl{N}$,
+substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$,
+multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl{q}_s$, 
+rearranging, and noting that 
+$\frac{\rate{C}_o}{\rbempl{C}_o}$ is the $x$-axis value and 
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the $y$-axis value gives
+
+\begin{equation} \label{eq:star_line_prefs}
+  y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+\end{equation}
+%
+Note that the slope of Eq.~(\ref{eq:star_line_prefs}) is a less-negative value
+than the slope of Eq.~(\ref{eq:orig_line_prefs}), 
+because $\aprod{p}_s < \bempl{p}_s$.
+The $y$-intercept of Eq.~(\ref{eq:star_line_prefs}) is less than the 
+$y$-intercept of Eq.~(\ref{eq:orig_line_prefs}),
+reflecting gross savings.
+Both effects are seen in
+preference path graphs 
+(Figs.~\ref{fig:ExamplePrefsPathGraph}, \ref{fig:CarPrefsGraph}, and \ref{fig:LampPrefsGraph}).
+The \circcirc{} and \starstar{} lines intersect at the coincident $\circ$ and $*$ points.
+
+A similar derivation process can be used to find the equation of 
+line representing the budget constraint
+after the substitution effect (\hathat{} line through the $\wedge$ point) as
+
+\begin{equation} \label{eq:hat_line_prefs}
+  y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+                                   - \rate{G} + \aprod{p}_s \Delta \rasub{q}_s + \Delta \rasub{C}_o) \; .
+\end{equation}
+
+Note that the \hathat{} line (Eq.~(\ref{eq:hat_line_prefs})) has the same slope as 
+the \starstar{} line (Eq.~(\ref{eq:star_line_prefs}))
+but a lower $y$-intercept.
+
+Finally, the equation of the **** barbar **** line through the **** bar **** point is
+
+**** ended here ****
