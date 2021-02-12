@@ -401,7 +401,6 @@ $\rate{u}/\rbempl{u} = 1$.
                           \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
 \end{align}
 
-
 Second, the equation of \circcirc{} expenditure line is
 
 \begin{equation} \label{eq:origorig_line}
@@ -462,10 +461,32 @@ when $\rate{u}/\rbempl{u} = 1$ (Eq.~\ref{eq:slope_indifference_curve_u1}).
 %
 Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 
-\begin{equation}
+\begin{equation} \label{eq:q_s_solution}
   \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ a + (1-a) 
       \left[ \left(  \frac{1-a}{a}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
                                                   ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
+\end{equation}
+
+The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
+can be found by substituting $\rate{u}/\rbempl{u} = 1$ 
+and Eq.~(\ref{eq:q_s_solution})
+into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
+to obtain
+
+\begin{equation}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-a} \right) 
+                                     - \left( \frac{a}{1-a} \right)   
+              \left\{ a + (1-a)
+                  \left[ \left( \frac{1-a}{a} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
+                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
+\end{equation}
+
+Simplifying gives
+
+\begin{equation} \label{eq:C_o_solution}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + a \left\{ \left[ \left( \frac{1-a}{a} \right)
+          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
+                                                ^{1/\rho} \; .
 \end{equation}
 %
 
