@@ -17,7 +17,6 @@
 \newcommand{\rate}[1]{\dot{#1}}                    % Rate of a quantity
 
 % Create "after" commands
-% \newcommand{\orig}[1]{#1}
 \newcommand{\orig}[1]{{}{#1}^{\scriptscriptstyle \circ}}
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
@@ -71,10 +70,18 @@
 
 %%%%% Colors
 
-\newcommand{\emplcolor}{red!25!white}
-\newcommand{\subcolor}{orange!25!white}
-\newcommand{\inccolor}{green!25!white}
-\newcommand{\prodcolor}{blue!25!white}
+% Original spectrum colours
+% \colorlet{emplcolor}{red!25!white}
+% \colorlet{subcolor}{orange!25!white}
+% \colorlet{inccolor}{green!25!white}
+% \colorlet{prodcolor}{blue!25!white}
+
+% New Viridis "plasma" colours
+\definecolor{emplcolor}{HTML}{150789}
+\definecolor{subcolor}{HTML}{99149F}
+\definecolor{inccolor}{HTML}{E76F5A}
+\definecolor{prodcolor}{HTML}{F7E225}
+
 
 
 %%%%% Coloration of text background
@@ -100,29 +107,28 @@ bottom=2pt}
 %%%%% Colored phrases
 
 % Emplacement effect
-\newcommand{\empleffect}{\inlinebox[\emplcolor]{emplacement effect}}
-\newcommand{\empleffectadj}{\inlinebox[\emplcolor]{emplacement-effect}}
-\newcommand{\Empleffect}{\inlinebox[\emplcolor]{Emplacement effect}}
-\newcommand{\EmplEffect}{\inlinebox[\emplcolor]{Emplacement Effect}}
+\newcommand{\empleffect}{\inlinebox[emplcolor]{\textcolor{white}{emplacement effect}}}
+\newcommand{\empleffectadj}{\inlinebox[emplcolor]{\textcolor{white}{emplacement-effect}}}
+\newcommand{\Empleffect}{\inlinebox[emplcolor]{\textcolor{white}{Emplacement effect}}}
+\newcommand{\EmplEffect}{\inlinebox[emplcolor]{\textcolor{white}{Emplacement Effect}}}
 
 % Substitution effect
-\newcommand{\subeffect}{\inlinebox[\subcolor]{substitution effect}}
-\newcommand{\subeffectadj}{\inlinebox[\subcolor]{substitution-effect}}
-\newcommand{\Subeffect}{\inlinebox[\subcolor]{Substitution effect}}
-\newcommand{\SubEffect}{\inlinebox[\subcolor]{Substitution Effect}}
+\newcommand{\subeffect}{\inlinebox[subcolor]{\textcolor{white}{substitution effect}}}
+\newcommand{\subeffectadj}{\inlinebox[subcolor]{\textcolor{white}{substitution-effect}}}
+\newcommand{\Subeffect}{\inlinebox[subcolor]{\textcolor{white}{Substitution effect}}}
+\newcommand{\SubEffect}{\inlinebox[subcolor]{\textcolor{white}{Substitution Effect}}}
 
 % Income effect
-\newcommand{\inceffect}{\inlinebox[\inccolor]{income effect}}
-\newcommand{\inceffectadj}{\inlinebox[\inccolor]{income-effect}}
-\newcommand{\Inceffect}{\inlinebox[\inccolor]{Income effect}}
-\newcommand{\IncEffect}{\inlinebox[\inccolor]{Income Effect}}
+\newcommand{\inceffect}{\inlinebox[inccolor]{\textcolor{black}{income effect}}}
+\newcommand{\inceffectadj}{\inlinebox[inccolor]{\textcolor{black}{income-effect}}}
+\newcommand{\Inceffect}{\inlinebox[inccolor]{\textcolor{black}{Income effect}}}
+\newcommand{\IncEffect}{\inlinebox[inccolor]{\textcolor{black}{Income Effect}}}
 
 % Productivity effect
-\newcommand{\prodeffect}{\inlinebox[\prodcolor]{productivity effect}}
-\newcommand{\prodeffectadj}{\inlinebox[\prodcolor]{productivity-effect}}
-\newcommand{\Prodeffect}{\inlinebox[\prodcolor]{Productivity effect}}
-\newcommand{\ProdEffect}{\inlinebox[\prodcolor]{Productivity Effect}}
-
+\newcommand{\prodeffect}{\inlinebox[prodcolor]{\textcolor{black}{productivity effect}}}
+\newcommand{\prodeffectadj}{\inlinebox[prodcolor]{\textcolor{black}{productivity-effect}}}
+\newcommand{\Prodeffect}{\inlinebox[prodcolor]{\textcolor{black}{Productivity effect}}}
+\newcommand{\ProdEffect}{\inlinebox[prodcolor]{\textcolor{black}{Productivity Effect}}}
 
 
 %%%%% minipage for assumptions and constraints tables
@@ -315,3 +321,36 @@ bottom=2pt}
 \newcommand{\cesutility}{  \frac{\rate{u}}{\rbempl{u}} = 
   \left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
         + (1-\fCs) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}}
+
+
+% Segments and lines
+% Arguments:
+%   #1: left character
+%   #2: line color
+%   #3: line thickness (e.g., 0.1 mm)
+%   #4: right character
+% Note that \raisebox{0.9 mm} moves the line up from the baseline.
+% Also, \line(1,0){12} gives a horizontal line with length "12" (unknown units!)
+\newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.8 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
+
+% Construction lines
+\newcommand{\iicirc}{\seg{$\bempl{\text{i}}$}{black}{0.3 mm}{$\bempl{\text{i}}$}}
+\newcommand{\rr}{\seg{r}{black}{0.1 mm}{r}}
+\newcommand{\circcirc}{\seg{$\circ$}{black}{0.1 mm}{$\circ$}}
+\newcommand{\starstar}{\seg{$*$}{black}{0.1 mm}{$*$}}
+\newcommand{\hathat}{\seg{$\wedge$}{black}{0.1 mm}{$\wedge$}}
+
+% Line segments
+\newcommand{\circa}{\seg{$\circ$}{emplcolor}{0.6 mm}{a}}
+\newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+\newcommand{\bstar}{\seg{b}{emplcolor}{0.6 mm}{$*$}}
+\newcommand{\starc}{\seg{$*$}{subcolor}{0.6 mm}{$\,$c}}
+\newcommand{\chat}{\seg{c$\,$}{subcolor}{0.6 mm}{$\wedge$}}
+
+
+
+
+
+
+
+

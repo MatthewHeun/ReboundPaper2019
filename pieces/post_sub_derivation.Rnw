@@ -363,15 +363,17 @@ The approximate method assumes that
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-This assumption is an approximation that holds 
+This assumption is an approximation that holds only 
 for infinitesimally small energy service price changes 
 ($\Delta \aempl{p}_s \approx 0$).
 However, in the case of an energy efficiency upgrade (EEU), 
 the energy service price change is not infinitesimal.
 Rather, 
-$\Delta \aempl{p}_s \approx 0$ is finite and may be large.
+$\Delta \aempl{p}_s$ is finite and may be large.
 
-To determine the new consumption bundle after the substitution effect and,
+To determine the new consumption bundle after the substitution effect 
+($\rasub{q}_s$ and $\rasub{C}_o$)
+and,
 ultimately, to quantify the direct and indirect substitution rebound effects
 ($Re_{dsub}$ and $Re_{isub}$),
 we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
@@ -381,39 +383,158 @@ utility function,
 we require constancy of only
 the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
-and the consumption rate of other goods ($\rate{C}_o$).
+and the expenditure rate for other goods ($\rate{C}_o$).
 
-Figure~\ref{fig:ExamplePrefsPathGraph} illustrates features
+Figure~\ref{fig:ExamplePrefsPathGraph} 
+(especially segments \starc{} and \chat{})
+illustrates features
 of the exact method for determining the new consumption bundle.
+Two equations are helpful for this analysis.
+First, the slope at any point on indifference curve \iicirc{} 
+is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
+$\rate{u}/\rbempl{u} = 1$.
 
-<<ExamplePrefsPathGraphForDerivation, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences", 
-                               graph_params = car_graph_params) + 
-  ggplot2::xlim(0.93, 1.23) +
-  ggplot2::ylim(0.973, 1.02) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
+\begin{align} \label{eq:slope_indifference_curve_u1}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
+        -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber  \\
+        &\times \left[ \left( \frac{1}{1 - a} \right) 
+                - \left( \frac{a}{1 - a} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+%
+Second, the equation of the \starstar{} expenditure line is
+
+\begin{equation} \label{eq:starstar_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\aprod{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+\end{equation}
+
+To find the rate of energy service consumption after the substitution effect
+($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
+equal to the slope of the \iicirc{} indifference curve
+when $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
+
+\begin{equation}
+  -\frac{\aprod{p}_s \rbempl{q}_s}
+        {\rbempl{C}_o} = 
+    -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} % \nonumber  \\
+        \left[ \left( \frac{1}{1 - a} \right) 
+                - \left( \frac{a}{1 - a} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho}
+\end{equation}
+%
+Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
+
+\begin{equation} \label{eq:q_s_solution}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ a + (1-a) 
+      \left[ \left(  \frac{1-a}{a}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
+\end{equation}
+
+Direct substitution effect rebound is given by
+
+\begin{equation}
+  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
+in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Rearranging produces
+
+\begin{equation}
+  Re_{dsub} = \frac{ \left( \frac{\rasub{q}_s}{\rbempl{q}_s} 
+                    - \frac{\rbsub{q}_s}{\rbempl{q}_s}  \right) \frac{\rbempl{q}_s}{\aprod{\eta}} }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that the rate of energy service consumption ($\rate{q}_s$)
+is unchanged across the emplacement effect leads to $\frac{\rbsub{q}_s}{\rbempl{q}_s} = 1$.
+Furthermore, $\frac{\rbempl{q}_s}{\aprod{\eta}} 
+            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\aprod{\eta}}
+            = \rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}$,
+such that
+
+\begin{equation}
+  Re_{dsub} = \left( \frac{\rasub{q}_s}{\rbempl{q}_s} - 1  \right)
+              \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
+              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+\end{equation}
+%
+Simplifying yields
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; ,
+\end{equation}
+%
+into which Eq.~(\ref{eq:q_s_solution}) can be substituted directly.
+
+The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
+can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
+$\rate{u}/\rbempl{u} = 1$ 
+into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
+to obtain
+
+\begin{equation}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-a} \right) 
+                                     - \left( \frac{a}{1-a} \right)   
+              \left\{ a + (1-a)
+                  \left[ \left( \frac{1-a}{a} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
+                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
+\end{equation}
+
+Simplifying gives
+
+\begin{equation} \label{eq:C_o_solution}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + a \left\{ \left[ \left( \frac{1-a}{a} \right)
+          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
+                                                ^{1/\rho} \; .
+\end{equation}
+
+Indirect substitution effect rebound is given by 
+
+\begin{equation}
+  Re_{isub} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\end{equation}
+%
+Rearranging gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left(\frac{\rasub{C}_o}{\rbempl{C}_o} - \frac{\rbsub{C}_o}{\rbempl{C}_o}  \right) \rbempl{C}_o I_E }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that expenditures on other goods are constant across the emplacement effect gives
+$\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and 
+
+\begin{equation}
+  Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; ,
+\end{equation}
+% 
+into which Eq.~(\ref{eq:C_o_solution}) can be substituted directly.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
