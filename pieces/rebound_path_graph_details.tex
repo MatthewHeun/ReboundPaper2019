@@ -1,0 +1,114 @@
+% The next command tells RStudio to do "Compile PDF" on HSB.Rnw,
+% instead of this file, thereby eliminating the need to switch back to HSB.Rnw 
+% before building the paper.
+%!TEX root = ../HSB.Rnw
+
+This appendix shows the mathematical details of rebound path graphs
+for energy, expenditures, and preferences.
+Rebound path graphs show clearly the impact of direct and indirect rebound effects.
+Notional graphs can be found in 
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+Rebound path graphs for the car example can be found in 
+Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
+Graphs for the lamp example can be found in
+Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
+
+To construct rebound path graphs, equations of several lines and curves 
+must be determined, including
+%
+\begin{itemize}
+
+  \item 0\% and 100\% rebound lines in energy path graphs, 
+  
+  \item lines of constant total energy consumption
+        in energy path graphs, 
+        
+  \item constant expenditure lines in expenditure path graphs,
+  
+  \item indifference curves in preference path graphs, and 
+  
+  \item constant expensiture lines in preference path graphs.
+
+\end{itemize}
+%
+This appendix shows the derivation of equations for the above lines and curves.
+
+%++++++++++++++++++++++++++++++
+\subsection{Energy path graphs}
+\label{sec:energy_path_graph_details}
+%++++++++++++++++++++++++++++++
+
+Energy path graphs show direct ($x$-axis) and indirect ($y$-axis)
+energy consumption associated with the energy conversion device 
+and the device owner.
+Lines of constant total energy consumption provide the total rebound scale.
+E.g., the 0\% and 100\% rebound lines are constant total energy consumption
+lines which pass through the original point ($\circ$) and
+the post-direct-emplacement-effect point ($a$) in an energy path graph.
+
+The equation of a constant total energy consumption line is derived from 
+
+\begin{equation}
+  \rate{E}_{tot} = \rate{E}_{dir} + \rate{E}_{indir}
+\end{equation}
+%
+at any rebound stage. (See Fig.~\ref{fig:flowchart}.)
+Direct energy consumption is energy consumed by the energy conversion device
+($\rate{E}_s$), and 
+indirect energy consumption is the sum of embodied energy, 
+energy associated with maintenenace and disposal, and energy associated 
+with expenditures on other goods
+($\rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$).
+Rearranging gives
+
+\begin{equation}
+  \rate{E}_{indir} = - \rate{E}_{dir} + \rate{E}_{tot} \; .
+\end{equation}
+%
+For the energy path graph, 
+indirect energy consumption is placed on the $y$-axis
+and direct energy consumption is place on the $x$-axis, 
+so we can write the euqation of any 
+constant total energy consumption line on the energy path graph to be
+
+\begin{equation}
+  y = -x + \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E \; ,
+\end{equation}
+%
+where $\rate{E}_s$, $\rate{E}_{emb}$, $\rate{C}_{md}$, and $\rate{C}_o$
+can be at any rebound stage in Fig.~\ref{fig:flowchart}.
+
+The constant total energy consumption line 
+that passes through the original point ($\circ$)
+shows 100\% rebound:
+
+\begin{equation}
+  y = -x + \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{md} + \rbempl{C}_o) I_E \; .
+\end{equation}
+
+The constant total energy consumption line 
+that accounts for no other changes 
+except for expected energy savings ($\Sdot$)
+is the 0\% rebound line:
+
+\begin{equation}
+  y = -x + (\rbempl{E}_s - \Sdot)
+          + \rbempl{E}_{emb} + (\rbempl{C}_{md} + \rbempl{C}_o) I_E \; .
+\end{equation}
+%
+The above line passes through the $a$ point on an energy path graph.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Expenditure path graphs}
+\label{sec:expenditure_path_graph_details}
+%++++++++++++++++++++++++++++++
+
+Expenditure path graphs show direct ($x$-axis) and indirect ($y$-axis)
+expenses associated with the energy conversion device 
+and the device owner.
+Lines of constant expenditure are important, 
+because they provide budget constraints for the device owner.
+
+
+
