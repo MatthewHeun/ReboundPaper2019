@@ -2931,7 +2931,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of post-substitution point}
+\section{Derivation of post-substitution ($\wedge$) point}
 \label{sec:post_sub_derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
