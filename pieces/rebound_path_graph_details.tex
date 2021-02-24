@@ -44,10 +44,12 @@ This appendix shows the derivation of equations for the above lines and curves.
 Energy path graphs show direct ($x$-axis) and indirect ($y$-axis)
 energy consumption associated with the energy conversion device 
 and the device owner.
-Lines of constant total energy consumption provide the total rebound scale.
+Lines of constant total energy consumption comprise a 
+scale for total rebound.
 E.g., the 0\% and 100\% rebound lines are constant total energy consumption
 lines which pass through the original point ($\circ$) and
-the post-direct-emplacement-effect point ($a$) in an energy path graph.
+the post-direct-emplacement-effect point ($a$) 
+on an energy path graph.
 
 The equation of a constant total energy consumption line is derived from 
 
@@ -62,24 +64,28 @@ indirect energy consumption is the sum of embodied energy,
 energy associated with maintenenace and disposal, and energy associated 
 with expenditures on other goods
 ($\rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$).
-Rearranging gives
+
+For the energy path graph, 
+indirect energy consumption is placed on the ordinate
+and direct energy consumption is placed on the abscissa.
+To derive the equation of a constant energy consumption line, 
+we first rearrange to put the $y$ coordinate on the left of the equation:
 
 \begin{equation}
   \rate{E}_{indir} = - \rate{E}_{dir} + \rate{E}_{tot} \; .
 \end{equation}
 %
-For the energy path graph, 
-indirect energy consumption is placed on the $y$-axis
-and direct energy consumption is place on the $x$-axis, 
-so we can write the euqation of any 
-constant total energy consumption line on the energy path graph as
+Next, we substitution $y$ for $\rate{E}_{indir}$,
+$x$ for $\rate{E}_{dir}$, and 
+$\rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$ for $\rate{E}_{tot}$
+to obtain
 
 \begin{equation}
   y = -x + \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E \; ,
 \end{equation}
 %
-where $\rate{E}_s$, $\rate{E}_{emb}$, $\rate{C}_{md}$, and $\rate{C}_o$
-can be at any rebound stage in Fig.~\ref{fig:flowchart}.
+where all of $\rate{E}_s$, $\rate{E}_{emb}$, $\rate{C}_{md}$, and $\rate{C}_o$
+apply at the same rebound stage of Fig.~\ref{fig:flowchart}.
 
 The constant total energy consumption line 
 that passes through the original point ($\circ$)
@@ -89,9 +95,8 @@ shows 100\% rebound:
   y = -x + \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{md} + \rbempl{C}_o) I_E \; .
 \end{equation}
 
-The constant total energy consumption line 
-that accounts for expected energy savings ($\Sdot$) only 
-is the 0\% rebound line:
+The 0\% rebound line is the constant total energy consumption line 
+that accounts for expected energy savings ($\Sdot$) only:
 
 \begin{equation}
   y = -x + (\rbempl{E}_s - \Sdot)
@@ -113,36 +118,39 @@ Lines of constant expenditure are important,
 because they provide budget constraints for the device owner.
 
 The equation of a constant total expenditures line is derived from 
+the budget constraint
 
 \begin{equation}
   \rate{C}_{tot} = \rate{C}_{dir} + \rate{C}_{indir}
 \end{equation}
 %
 at any rebound stage.
+For the expenditure path graph,
+indirect expenditures are placed on the ordinate
+and direct expenditures on energy for the energy conversion device are place on the abscissa.
 Direct expenditure is the cost of energy consumed by the energy conversion device
 ($\rate{C}_s = p_E \rate{E}_s$), and 
 indirect expenses are the sum of capital costs, 
 maintenenace and disposal costs, and 
 expenditures on other goods
 ($\rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o$).
-Rearranging gives
+Rearranging to put the $y$-axis variable on the left side of the equation gives
 
 \begin{equation}
   \rate{C}_{indir} = - \rate{C}_{dir} + \rate{C}_{tot} \; .
 \end{equation}
 
-For the expenditure path graph,
-indirect expenditures are placed on the $y$-axis
-and direct expenditures on energy for the energy conversion device are place on the $x$-axis,
-so we can write the euqation of any
-constant expenditure line on the energy path graph as
+Substituting $y$ for $\rate{C}_{indir}$, 
+$x$ for $\rate{C}_{dir}$, and 
+$\rate{C}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o$ for $\rate{C}_{tot}$
+gives
 
 \begin{equation}
   y = -x + \rate{C}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; ,
 \end{equation}
 %
-where $\rate{C}_s$, $\rate{C}_{cap}$, $\rate{C}_{md}$, and $\rate{C}_o$
-can be at any rebound stage in Fig.~\ref{fig:flowchart}.
+where all of $\rate{C}_s$, $\rate{C}_{cap}$, $\rate{C}_{md}$, and $\rate{C}_o$
+apply at the same rebound stage of Fig.~\ref{fig:flowchart}.
 
 The constant total expenditure line 
 that passes through the original point ($\circ$)
@@ -182,8 +190,13 @@ The above line passes through the $a$ point on an expenditure path graph.
 %++++++++++++++++++++++++++++++
 
 Preferences path graphs show expenditures in 
-$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space.
-Line of constant expenditure are derived from budget constraints.
+$\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
+to accord with the utilty model.
+(See Appendix~\ref{sec:utility_model}.)
+
+Like the expenditure path graph, 
+lines of constant expenditure on a preferences path graph 
+are derived from the budget constraint of the device owner.
 
 Before the EEU, the budget constraint is
 
@@ -191,9 +204,10 @@ Before the EEU, the budget constraint is
   \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rate{C}_o \; .
 \end{equation}
 %
-Note that both $\rbempl{C}_o$ and $\rbempl{q}_s$ 
+Note that the cost rate of other goods and the rate of energy service consumption
 can vary with respect to one another so are written as
-$\rate{C}_o$ and $\rate{q}_s$.
+$\rate{C}_o$ and $\rate{q}_s$
+instead of $\rbempl{C}_o$ and $\rbempl{q}_s$.
 To derive the equation of the line representing the original budget constraint 
 in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
 (the \circcirc{} line through the $\circ$ point
@@ -220,8 +234,10 @@ Dividing both sides by $\rbempl{C}_o$ yields
          + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md}) \; .
 \end{equation}
 %
-Noting that $\frac{\rate{C}_o}{\rbempl{C}_o}$ is the $x$-axis value and 
-$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the $y$-axis value gives
+Noting that $\frac{\rate{C}_o}{\rbempl{C}_o}$ and 
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ are
+the abscissa and ordinate, respectively,
+on a preferences path graph gives
 
 \begin{equation} \label{eq:orig_line_prefs}
   y = - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
@@ -241,15 +257,15 @@ Substituting Eq.~(\ref{eq:N_dot_star_empl}) for $\raempl{N}$,
 substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$,
 multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl{q}_s$, 
 rearranging, and noting that 
-$\frac{\rate{C}_o}{\rbempl{C}_o}$ is the $x$-axis value and 
-$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the $y$-axis value gives
+$\frac{\rate{C}_o}{\rbempl{C}_o}$ is the abscissa and 
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the ordinate gives
 
 \begin{equation} \label{eq:star_line_prefs}
   y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
          + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
 \end{equation}
 %
-Note that the slope of Eq.~(\ref{eq:star_line_prefs}) is a less-negative value
+Note that the slope of Eq.~(\ref{eq:star_line_prefs}) is less negative
 than the slope of Eq.~(\ref{eq:orig_line_prefs}), 
 because $\aprod{p}_s < \bempl{p}_s$.
 The $y$-intercept of Eq.~(\ref{eq:star_line_prefs}) is less than the 
