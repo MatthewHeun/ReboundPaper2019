@@ -3,45 +3,48 @@
 % before building the paper.
 %!TEX root = ../HSB.Rnw
 
-This appendix shows the mathematical details of rebound path graphs
-for energy, expenditures, and preferences.
-Rebound path graphs show clearly the impact of direct and indirect rebound effects.
-Notional graphs can be found in 
+Rebound path graphs show the impact of direct and indirect rebound effects
+in energy space, expenditure space, and preference space.
+Notional rebound path graphs can be found in 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 Rebound path graphs for the car example can be found in 
 Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
 Graphs for the lamp example can be found in
 Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
 
-To construct rebound path graphs, equations of several lines and curves 
-must be determined, including
-%
-\begin{itemize}
+This appendix shows the mathematical details of rebound path graphs,
+specifically derivations of equations for lines and curves 
+shown in Table~\ref{tab:lines_and_curves}.
+The lines and curves enable construction of
+rebound path graphs.
 
-  \item lines of constant total energy consumption
-        in energy path graphs, 
-        
-  \item 100\% and 0\% rebound lines in energy path graphs, 
-  
-  \item constant expenditure lines in expenditure path graphs,
-  
-  \item constant expenditure lines in preference path graphs, 
-  
-  \item rays from the origin to the point between 
-        the substitution effect and the income effect ($\wedge$), and 
+\begin{table}
+\centering
+\caption{Lines and curves for rebound path graphs.}
+\label{tab:lines_and_curves}
+\begin{tabular}{rl}
+\toprule
+Rebound path graph           & Lines and curves                        \\ 
+\midrule
+\multirow{2}{*}{Energy}      & Constant total energy consumption lines \\
+                             & 0\% and 100\% rebound lines             \\
+\midrule
+Expenditure                  & Constant expenditure lines              \\
+\midrule
+\multirow{3}{*}{Preferences} & Constant expenditure lines              \\
+                             & Rays from origin to $\wedge$ point      \\
+                             & Indifference curves                     \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-  \item indifference curves in preference path graphs.
-
-\end{itemize}
-%
-This appendix shows the derivation of equations for the above lines and curves.
 
 %++++++++++++++++++++++++++++++
 \subsection{Energy path graphs}
 \label{sec:energy_path_graph_details}
 %++++++++++++++++++++++++++++++
 
-Energy path graphs show direct ($x$-axis) and indirect ($y$-axis)
+Energy path graphs show direct (on the abscissa) and indirect (on the ordinate)
 energy consumption associated with the energy conversion device 
 and the device owner.
 Lines of constant total energy consumption comprise a 
@@ -75,7 +78,7 @@ we first rearrange to put the $y$ coordinate on the left of the equation:
   \rate{E}_{indir} = - \rate{E}_{dir} + \rate{E}_{tot} \; .
 \end{equation}
 %
-Next, we substitution $y$ for $\rate{E}_{indir}$,
+Next, we substitute $y$ for $\rate{E}_{indir}$,
 $x$ for $\rate{E}_{dir}$, and 
 $\rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$ for $\rate{E}_{tot}$
 to obtain
@@ -111,13 +114,13 @@ The above line passes through the $a$ point on an energy path graph.
 \label{sec:expenditure_path_graph_details}
 %++++++++++++++++++++++++++++++
 
-Expenditure path graphs show direct ($x$-axis) and indirect ($y$-axis)
+Expenditure path graphs show direct (on the abscissa) and indirect (on the ordinate)
 expenses associated with the energy conversion device 
 and the device owner.
 Lines of constant expenditure are important, 
 because they provide budget constraints for the device owner.
 
-The equation of a constant total expenditures line is derived from 
+The equation of a constant total expenditure line is derived from 
 the budget constraint
 
 \begin{equation}
@@ -328,7 +331,8 @@ On preference path graphs,
 the ray from the origin to the $\wedge$ point 
 (line \rr{})
 defines the path along which the income effect
-(line \hatbar{}) operates.
+(line \hatbar{}
+**** Change to hatd and dbar ****) operates.
 The ray from the origin to the $\wedge$ point
 has slope $(\rasub{C}_o/\rbempl{C}_o) / (\rasub{q}_s/\rbempl{q}_s)$
 and a $y$-intercept of 0.
