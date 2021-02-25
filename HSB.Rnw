@@ -1278,7 +1278,8 @@ The impact of the substitution effect on energy consumption and expenditures
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 
-The model for utility defines the indifference curve.
+The model for utility defines indifference curves on the preferences path graph
+(Fig.~\ref{fig:ExamplePrefsPathGraph}).
 We employ a constant elasticity of substitution utility function 
 to describe the device owner's behavior.
 
@@ -1286,19 +1287,21 @@ to describe the device owner's behavior.
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{}
 \end{equation}
 %
-The device owner's utility (relative to the original condition)
+The device owner's utility
+(relative to the original condition, $\rate{u}/\rorig{u}$)
 is determined by
 the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods and services ($\rate{C}_o$).
-The share parameter ($\fCs$) is taken from the pre-EEU consumption basket.
+The share parameter ($\fCs$) is taken from the orignal (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the elasticity of substitution ($\sigma$) 
-as $\sigma = \frac{\sigma - 1}{\sigma}$.
-See Appendix~\ref{sec:utility_model} for further details.
+as $\rho = \frac{\sigma - 1}{\sigma}$.
+See Appendix~\ref{sec:utility_model} for further details
+of the utility model.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
 \begin{equation}
-  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; ,
+  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} \; ,
 \end{equation}
 %
 which can be rearranged to
@@ -1308,6 +1311,48 @@ which can be rearranged to
 \end{equation}
 %
 as shown in Appendix~\ref{sec:Redsub_Reisub_expressions}.
+
+Indirect substitution effect rebound ($Re_{isub}$) is given by
+
+\begin{equation}
+  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; ,
+\end{equation}
+%
+which can be rearranged to 
+
+\begin{equation} \label{eq:Re_isub_prelim}
+  Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; ,
+\end{equation}
+%
+as shown in Appendix~\ref{sec:Redsub_Reisub_expressions}.
+
+To find the post-substitution effect point ($\wedge$),
+we solve for the location on the \iicirc{} indifference curve
+where its slope is equal to the slope of the
+\starstar{} expenditure line.
+The results are
+
+\begin{equation} \label{eq:q_s_solution}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs)
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}
+\end{equation}
+%
+and
+
+\begin{equation} \label{eq:C_o_solution}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
+          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\}
+                                                ^{1/\rho} \; .
+\end{equation}
+
+The above values are used directly in 
+Eqs.~(\ref{eq:Re_dsub_prelim}) and~(\ref{eq:Re_isub_prelim})
+to estimate direct and indirect substitution rebound effects.
+See Appendix~\ref{sec:Re_sub} for further details
+and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
+
+
 
 
 
