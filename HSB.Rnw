@@ -579,8 +579,8 @@ would require a full-economy model that is beyond the scope of this paper.)
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-notation elements (symbols, Greek letters, decorations, and subscripts)
-used throughout the paper.
+notation elements used throughout the paper, including
+symbols, Greek letters, decorations, and subscripts.
 (Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
 it does not necessarily represent 
 the progression of rebound effects through time.)
@@ -604,8 +604,7 @@ we derive rebound expressions for each.
 But first 
 we define rebound relationships 
 (Section~\ref{sec:rebound_relationships}) and 
-typical energy and cost relationships (Section~\ref{sec:energy_and_cost_relationships})
-for the analysis.
+typical energy and cost relationships (Section~\ref{sec:energy_and_cost_relationships}).
 
 
 %++++++++++++++++++++++++++++++
@@ -665,18 +664,19 @@ First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
 the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination are provided.
-**** Add illumination units. ---MKH ****
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
-  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber
+  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber \\
+  \text{lm-hr/yr} &= [\text{lm-hr/MJ}] [\text{MJ/yr}] \nonumber
 \end{align}
 %
 Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
 %
 \begin{align} \label{eq:ps_pE_eta}
   p_s &= \frac{p_E}{\eta} \\
-  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber
+  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber \\
+  \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
 \end{align}
 %
 Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
@@ -704,7 +704,8 @@ we discuss four rebound effects.
 
 Expressions for the four rebound effects of Fig.~\ref{fig:flowchart} 
 (emplacement, substitution, income, and productivity)
-are discussed in subsections below where we
+are discussed in subsections below,
+In each subsection, we
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -732,36 +733,34 @@ Important quantities for the derivations are
 \end{enumerate*}
 %
 These important rebound quantities can be illustrated via
-innovative rebound path graphs.
+rebound path graphs.
 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
 notional rebound path graphs for energy consumption, expenditures, and preferences.
-Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
-indirect energy consumption rate ($\rate{E}_{indir}$) on the vertical axis
-and
-direct energy consumption rate ($\rate{E}_{dir}$) on the horizontal axis.
-Lines with negative slope through points 
-$\circ$, 1, $*$, $\wedge$, --, and $\sim$
-indicate constant total energy consumption
-(direct and indirect) at each of those points.
-A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
-with indirect expenses ($\rate{C}_{indir}$) on the vertical axis and 
-direct expenses on the energy service ($\rate{C}_{dir}$) on the horizontal axis.
-Lines with negative slope through points $\circ$ and 1
-indicate constant expenditures (direct and indirect).
-Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
-The indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the vertical axis
-and
-the indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the horizontal axis.
-Lines of constant indexed levels of consumption of other goods and the energy service
-are shown with negative slope. 
-Indifference curves (constant indexed utility) are denoted \iicirc{}. 
-A ray from the origin through the $\wedge$ point is denoted \rr{}.
-
-In the sections that follow, the notional graphs
-serve to illustrate the development of the rebound framework.
 The notional path graphs are not quantified; there is no scale on the axes.
-Later, in Section~\ref{sec:examples}, rebound path graphs (with scales) illustrate numerical examples.
+Later (Section~\ref{sec:examples}), 
+rebound path graphs (with scales) illustrate numerical examples.
+Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
+direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
+and
+indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
+Lines with negative slope through points 
+$\circ$, 1, $*$, $\wedge$, $-$, and $\sim$
+indicate constant total energy consumption rates
+(direct and indirect).
+A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
+with 
+direct expenses on the energy service ($\rate{C}_{dir}$) on the abscissa and 
+indirect expenses ($\rate{C}_{indir}$) on the ordinate.
+Lines with negative slope through points $\circ$ and $a$
+indicate constant expenditure rates (direct and indirect).
+Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
+the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
+Lines of constant rates of indexed consumption of other goods and the energy service
+are shown with negative slope. 
+Indifference curves (constant indexed utility) are denoted by \iicirc{} and \iibar{}. 
+A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
 <<eeu_data, echo=FALSE>>=
 # Load our test cases and perform rebound analyses.
@@ -1010,7 +1009,9 @@ rebound_results %>%
                  axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 @
 
-
+In the subsections that follow, the notional graphs
+(Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph})
+serve to illustrate the development of the rebound framework.
 We begin with the emplacement effect.
 
 
@@ -1022,7 +1023,8 @@ We begin with the emplacement effect.
 The emplacement effect (segments \circa{}, \ab{}, and \bstar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only.
-No behavior changes occur.
+Behavior changes are addressed later, 
+in the substitution and income effects. 
 The direct emplacement effect of the EEU is
 device energy savings and energy cost savings
 (segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
@@ -1037,7 +1039,7 @@ The indirect effects of EEU emplacement are
         (segment \ab{} in Fig.~\ref{fig:ExampleCostPathGraph}), and 
         
   \item changes in the maintenance and disposal energy and cost rates 
-        ($\Delta \raempl{E}{\md}$ and $\Delta \raempl{C}{\md}$)
+        ($\Delta \raempl{E}_{\md}$ and $\Delta \raempl{C}_{\md}$)
         (segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
     
 \end{enumerate*}
@@ -1051,7 +1053,7 @@ across the direct emplacement effect, namely
   \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
 \end{equation}
 %
-Appendix~\ref{sec:Sdot} shows that
+Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten as
 
 \begin{equation} \label{eq:Sdot}
   \Sdot = \Sdoteqn \; .
@@ -1080,8 +1082,8 @@ Thus, the line of constant energy consumption through the $\circ$ point is label
 $Re_{tot} = 100\%$.
 Total rebound ($Re_{tot}$) is measured linearly between the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
-with decomposition to indirect rebound in the vertical ($y$-axis) direction and 
-direct rebound in the horizontal ($x$-axis) direction.
+with decomposition to direct rebound in the $x$ direction and 
+indirect rebound in the $y$ direction.
 Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
 exhibit negative rebound, indicating
 hyperconservation (energy savings in excess of the expected energy savings).
@@ -1096,25 +1098,25 @@ Indirect emplacement effects
 (segments \ab{} and \bstar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
 account for the life cycle of the energy conversion device,
-including energy embodied by manufacturing (subscript $emb$) and
-maintenance and disposal (subscript $\md$).
+including energy embodied by manufacturing processes (subscript $emb$) and
+maintenance and disposal activities (subscript $\md$).
 In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and lesser maintenance and disposal cost rate ($\raempl{C}{\md} < \rbempl{C}{\md}$).
+and lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
 consistent with reduced capital costs
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
 reduced maintenance and disposal costs
-($\raempl{C}{\md} < \rbempl{C}{\md}$).
+($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
 embodied energy and capital costs (segments \ab{}) 
 move in the same direction (both negative), 
-but they could move in the positive direction or
-move in opposite directions.
+but they could both move in the positive direction, or
+they could each move in opposite directions.
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
@@ -1160,7 +1162,7 @@ and more embodied energy,
 such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
-$\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$ could be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device,
 as shown by point 2 being below point 1 
 in the notional energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}.
@@ -1175,16 +1177,19 @@ Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
-to form cost rates such that $\rbempl{C}{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
+to form cost rates such that 
+$\rbempl{C}_{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
-$\raempl{C}_{\md} = \raempl{C}_{m} + \aempl{C}_d/\aempl{t}_{\life}$.
+$\raempl{C}_{\md} = \raempl{C}_m + \aempl{C}_d/\aempl{t}_{\life}$.
 
-For simplicity, we assume that $\md$ expenditures indicate energy consumption
-elsewhere in the economy at its energy intensity~($I_E$).
-Therefore, the change in energy consumption rate caused by a change in $\md$ expenditures
+For simplicity, we assume that maintenance and disposal
+expenditures imply energy consumption
+elsewhere in the economy at its overall energy intensity~($I_E$).
+Therefore, the change in energy consumption rate caused by a change 
+in maintenance and disposal expenditures
 is given by $\Delta \raempl{C}_{\md} I_E = (\raempl{C}_{\md} - \rbempl{C}_{\md}) I_E$, 
 shown as segment \bstar{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
-Rebound from maintenance and disposal
+Rebound from maintenance and disposal activities 
 is given by 
 
 \begin{equation} \label{eq:Re_md}
@@ -1235,8 +1240,8 @@ The substitution effect is shown by segments
 \starc{} (indirect component) and \chat{} (direct component) 
 in Figs~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 
-The substitution effect is best understood 
-with reference to Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The substitution effect is best described 
+with reference to a preferences path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point, and 
 the line of constant expenditure is \circcirc{}.
@@ -1247,16 +1252,17 @@ The \circcirc{} line is tangent to the lower indifference curve
 	
   \item equilibrium conditions exist and 
   
-  \item the device owner is maximizing utility.
+  \item the device owner is maximizing utility at the original expenditure level.
     
 \end{enumerate*}
 %
 After emplacement of the more-efficient device
 (but before the substitution effect), 
-the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
+the price of the energy service has decreased ($\aempl{p}_s < \bempl{p}_s$),
 thereby altering the slope of the constant expenditure line,
 such that the \circcirc{} line becomes the \starstar{} line.
-The new constant expenditure line (\starstar{}) is not tangent to the indifference curve,
+The new constant expenditure line (\starstar{}) 
+is no longer tangent to the \iicirc{} indifference curve,
 meaning that the price change has disequilibrated the device owner's behavior. 
 To re-equilibrate,
 the device owner shifts consumption to the point where
@@ -1270,11 +1276,11 @@ favors energy service consumption (because it is now less expensive)
 at the expense of other goods consumption (which are now relatively more expensive).
 
 The substitution effect can be decomposed into indirect
-(the decrease in other good consumption, segment \starc{}) and 
+(the decrease in other goods consumption, segment \starc{}) and 
 direct
 (the increase in energy service consumption, segment \chat{})
 components.
-The impact of the substitution effect on energy consumption and expenditures
+The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 
@@ -1356,181 +1362,39 @@ See Appendix~\ref{sec:Re_sub} for further details
 and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
 
 
-
-
-
-
-
-
-
-**** ended here ****
-
-**** Refer to an appendix for the approximation. ****
-
-Substitution effect rebound  
-can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
-the service price elasticity of energy service consumption ($\eqsps$), and
-the service price elasticity of other goods consumption ($\eqops$).
-
-****
-Add information here about elasticities.
-****
-See Appendix~\ref{sec:elasticities} for further details about elasticities.
-
-The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of energy service consumption~($\eqsps$),
-such that
-
-\begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
-\end{equation}
-%
-We assume that the service price elasticity of consumption is 
-no greater than zero ($\eqsps < 0$)
-under standard assumptions on convex preferences.
-% Note that a negative value for the service price elasticity of energy service consumption 
-% means that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
-% the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
-
-Substituting the relationship of Eq.~(\ref{eq:ps_pE_eta}) in the form
-$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
-$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
-gives
-
-\begin{equation} \label{eq:q_ratio_func_of_eps}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \etaratiostacked \right)^{-\eqsps} \; .
-\end{equation}
-%
-Because the energy service price elasticity of energy service consumption
-is negative ($\eqsps < 0$),
-an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
-implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
-
-To quantify the substitution effect on other purchases,
-we introduce another elasticity:
-the energy service price elasticity of other goods consumption~($\eqops$).
-Appendix~\ref{sec:Re_sub} shows that
-
-\begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
-\end{equation}
-%
-(See Appendix~\ref{sec:elasticities} for relationships among the elasticities.)
-Because the energy service price elasticity of other goods consumption
-is positive ($\eqops > 0$),
-an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$)
-implies a reduction in the rate of consumption of other goods ($\rasub{q}_o > \rbsub{q}_o$).
-
-As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
-
-\begin{equation} \label{eq:Re_dsub_def}
-  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; .
-\end{equation}
-%
-Expansion and substitution of terms (see Appendix~\ref{sec:Re_dsub})
-gives
-
-\begin{equation} \label{eq:Re_dsub}
-  Re_{dsub} = \Redsubeqn{} \; .
-\end{equation}
-
-Note that the service price elasticity of energy service consumption is
-expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\etaratiostacked = 2$,
-$Re_{dsub} = 0.15$.
-
-Furthermore, L'H\^{o}pital's rule can be invoked to find
-
-\begin{equation} \label{eq:lim_Redsub_1}
-  \lim_{\etaratioinline \to 1^{\!+}} Re_{dsub} = -\eqsps \; ,
-\end{equation}
-%
-and
-
-\begin{equation} \label{eq:lim_Redsub_infty}
-  \lim_{\etaratioinline \to \infty} Re_{dsub} = 0 \; .
-\end{equation}
-%
-With $\eqsps \in (-1, 0)$ expected,
-direct substitution rebound will never be larger than 1.
-Thus, the direct substitution effect alone
-can never cause backfire. 
-
-The increase in consumption of the energy service after its price drop
-substitutes for consumption of other goods in the economy,
-subject to the payoff constraint.
-The reduction in spending on other goods in the economy
-is captured by indirect substitution rebound~($Re_{isub}$).
-
-To derive an expression for indirect substitution rebound,
-we begin with the definition of $Re_{isub}$
-from Table~\ref{tab:subeffect}:
-
-\begin{equation} \label{eq:Re_isub_dev}
-  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .
-\end{equation}
-
-We assume a basket of other goods purchased in the economy,
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$).
-We further assume that the average price is unchanged across the substitution effect,
-such that $\asub{p}_o = \bsub{p}_o$.
-After substitution and rearrangement (see Appendix~\ref{sec:Re_isub}),
-we find
-
-\begin{equation} \label{eq:Re_isub}
-  Re_{isub} = \Reisubeqn{} \; .
-\end{equation}
-
-Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
-the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
-indirect substitution rebound will be negative always ($Re_{isub} < 0$),
-as expected.
-Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
-
-Invoking L'H\^{o}pital's rule gives
-
-\begin{equation} \label{eq:lim_Reisub_1}
-  \lim_{\etaratioinline \to 1^{\!+}} Re_{isub} 
-        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
-\end{equation}
-%
-and
-
-\begin{equation} \label{eq:lim_Reisub_infty}
-  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
-\end{equation}
-
-
 %------------------------------
 \subsubsection{\Inceffect}
 \label{sec:inc_effect_main_paper}
 %------------------------------
 
+****Add references to notional graphs in this section. ****
+
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
-income from the EEU.
+income from the EEU
+(segments \hatd{} and \dbar{} in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 The income rate of the device owner is $\rbempl{M}$, 
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
-Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
+\textit{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and 
 the substitution effect leave the device owner with
-\emph{net} income ($\rasub{N}$) from the EEU,
+\textit{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for gross and net income from the 
 emplacement effect ($\rate{G}$) and
 the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
-In this framework, all net income ($\rasub{N}$) is spent either 
+In this framework, all net income ($\rasub{N}$) is split between
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item on additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
+  \item additional energy service ($\rainc{q}_s > \rbinc{q}_s$) and
   
-  \item on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+  \item additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
     
 \end{enumerate*}
 %
@@ -1552,6 +1416,8 @@ where effective income ($\Mdothatprime$) is given by
 \end{equation}
 %
 Homotheticity means that $\eqsM = 1$ and $\eqoM = 1$.
+The increased consumption rate of the energy service is 
+represented by segments \hatd{} in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
@@ -1580,9 +1446,11 @@ on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
 The ratio of rates of other goods consumed across the income effect is given by
 
 \begin{equation} \label{eq:qorat_eqoM}
-  \incprefoeqn \; .
+  \incprefoeqn \; 
 \end{equation}
 %
+and is represented by segments \dbar{} 
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
 \begin{equation} \label{eq:Re_iinc_def}
@@ -1739,6 +1607,8 @@ productivity rebound is given by
   Re_{\productivity} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
+Productivity effects are shown as segment \bartilde{}
+in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
 we arrive at an expression for productivity effect rebound:
 
@@ -1781,8 +1651,8 @@ eight rebound components:
 $Re_{dempl}$ (Eq.~(\ref{eq:Re_dempl0})),
 $Re_{emb}$ (Eq.~(\ref{eq:Re_emb})),
 $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
-$Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
-$Re_{isub}$ (Eq.~(\ref{eq:Re_isub})),
+$Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim} and~\ref{eq:q_s_solution})),
+$Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
