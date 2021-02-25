@@ -7,12 +7,11 @@ This appendix derives expressions for substitution effect rebound.
 Two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
-Both the 
+Assuming that conditions after the emplacement effect ($*$) are known, 
+both the 
 rate of energy service consumption ($\rasub{q}_s$) and
 the rate of other goods consumption ($\rasub{C}_o$) 
-must be determined after the substitution effect.
-We show both an approximate method and an exact method for determining the 
-post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
+must be determined as a result of the substitution effect.
 
 The EEU's energy efficiency increase
 ($\aprod{\eta} > \bempl{\eta}$)
@@ -29,32 +28,101 @@ subject to a utility constraint.
 The reduction in spending on other goods in the economy
 is captured by indirect substitution rebound~($Re_{isub}$).
 
+We begin by deriving an expression for direct and indirect 
+substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
+Thereafter, an approximate method and an exact method for determining the 
+post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$)
+are discussed.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Direct and indirect substitution effect rebound expressions}
+\label{sec:Redsub_Reisub_expressions}
+%++++++++++++++++++++++++++++++
+
+Direct substitution effect rebound ($Re_{dsub}$) is given by
+
+\begin{equation}
+  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
+\end{equation}
+%
+Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
+in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Rearranging produces
+
+\begin{equation}
+  Re_{dsub} = \frac{ \left( \frac{\rasub{q}_s}{\rbempl{q}_s}
+                    - \frac{\rbsub{q}_s}{\rbempl{q}_s}  \right) \frac{\rbempl{q}_s}{\aprod{\eta}} }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that the rate of energy service consumption ($\rate{q}_s$)
+is unchanged across the emplacement effect leads to $\frac{\rbsub{q}_s}{\rbempl{q}_s} = 1$.
+Furthermore, $\frac{\rbempl{q}_s}{\aprod{\eta}}
+            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\aprod{\eta}}
+            = \rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}$,
+such that
+
+\begin{equation}
+  Re_{dsub} = \left( \frac{\rasub{q}_s}{\rbempl{q}_s} - 1  \right)
+              \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\Sdot} \; .
+\end{equation}
+%
+Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
+
+\begin{equation}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
+              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+\end{equation}
+%
+Simplifying yields
+
+\begin{equation} \label{eq:Re_dsub_prelim}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; .
+\end{equation}
+%
+Eq.~(\ref{eq:Re_dsub_prelim}) is the basis for
+developing both approximate and exact methods of determining
+direct substitution rebound.
+
+Indirect substitution effect rebound ($Re_{isub}$) is given by
+
+\begin{equation}
+  Re_{isub} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\end{equation}
+%
+Rearranging gives
+
+\begin{equation}
+  Re_{isub} = \frac{\left(\frac{\rasub{C}_o}{\rbempl{C}_o} - \frac{\rbsub{C}_o}{\rbempl{C}_o}  \right) \rbempl{C}_o I_E }{\Sdot} \; .
+\end{equation}
+%
+Recognizing that expenditures on other goods are constant across the emplacement effect gives
+$\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and
+
+\begin{equation} \label{eq:Re_isub_prelim}
+  Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; .
+\end{equation}
+%
+Eq.~(\ref{eq:Re_isub_prelim}) is the basis for
+developing both approximate and exact methods of determining
+indirect substitution rebound.
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Approximate method}
-\label{sec:approx_method_sub}
+\label{sec:Resub_approximate_method}
 %++++++++++++++++++++++++++++++
 
-This section derives each in terms of 
-energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$) and
-the service price elasticities 
-of energy service consumption ($\eqsps$) and
-other goods consumption ($\eqops$).
-In the approximate method, 
-the service price elasticities ($\eqsps$ and $\eqops$)
-are (incorrectly) assumed constant along an indifference curve.
 
-We begin with derivation of two ratios that are helpful later,
-$\frac{\rasub{q}_s}{\rbsub{q}_s}$ and
-$\frac{\rasub{q}_o}{\rbsub{q}_o}$.
-
-
-%..............................
-\paragraph{Expressions for two ratios, $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and $\frac{\rasub{q}_o}{\rbsub{q}_o}$}
-\label{sec:two_ratios}
-%..............................
-
-(See Appendix~\ref{sec:elasticities} for information about elasticities.)
+%------------------------------
+\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
+\label{sec:Redsub_approx}
+%------------------------------
 
 In the approximate method, 
 the relationship between energy service price and energy service consumption rate
@@ -66,7 +134,7 @@ such that
 \end{equation}
 %
 Note that the energy service price elasticity of energy service consumption ($\eqsps$)
-is assumed constant along an indifference curve
+is (incorrectly) assumed constant along an indifference curve
 in the approximate method. 
 A negative value for the service price elasticity of energy service consumption
 is expected ($\eqsps < 0$),
@@ -76,11 +144,11 @@ the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
 $\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+and noting that $\rbempl{q}_s = \raempl{q}_s$ gives
 gives
 
-\begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
-                                                                        \tag{\ref{eq:q_ratio_func_of_eps}}
+\begin{equation} \label{eq:approx_qshat_over_qsorig}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
 \end{equation}
 %
 Again, note that the energy service price elasticity of energy service consumption
@@ -88,93 +156,11 @@ is negative ($\eqsps < 0$), so that
 as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
-To quantify the substitution effect on other purchases,
-we introduce a second elasticity, 
-the service price elasticity of other goods consumption~($\eqops$).
-See Appendix~\ref{sec:elasticities} for constraints on the relationship between the
-energy service price elasticity of energy service consumption~($\eqsps$) and the
-energy service price elasticity of other goods consumption~($\eqops$).
+Substituting Eq.~(\ref{eq:approx_qshat_over_qsorig}) into Eq.~(\ref{eq:Re_dsub_prelim})
+yields the approximate expression for direct substitution rebound.
 
-The ratio of other goods consumption on before and after the substitution effect is given by
-
-\begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; . 
-\end{equation}
-%
-Note that the service price elasticity of other good consumption
-is expected to be positive ($\eqops > 0$).
-As the energy service price decreases~($\aprod{p}_s < \bempl{p_s}$), 
-consumption of other goods is expected to decrease ($\rasub{q}_o < \rbsub{q}_o$), 
-because constant utility is assumed across the substitution effect.
-(See Appendix~\ref{sec:elasticities}.)
-Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
-$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
-$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
-gives
-
-\begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right) ^ {-\eqops} \; . 
-                                                                                              \tag{\ref{eq:qohat_qostar}}
-\end{equation}
-
-Next, we derive an expression for direct substitution rebound ($Re_{dsub}$).
-
-
-%..............................
-\paragraph{Expression for $Re_{dsub}$}
-\label{sec:Re_dsub}
-%..............................
-
-As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
-
-\begin{equation}
-  Re_{dsub} \equiv \frac{\Delta \rasub{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dsub_def}}
-\end{equation}
-%
-Expansion of the difference term and
-substitution of Eq.~(\ref{eq:typ_qs_eta_Edot}) in the form
-$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$
-and
-$\rbsub{E}_s = \frac{\rbsub{q}_s}{\aprod{\eta}}$
-gives
-
-\begin{equation}
-   Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}{\Sdot} \; .
-\end{equation}
-%
-Substitution of Eq.~(\ref{eq:Sdot}) gives
-
-\begin{equation}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}
-              {\Sdoteqn} \; .
-\end{equation}
-%
-Rearrangement of the numerator and canceling terms gives
-
-\begin{equation}
-  Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\aprod{\eta}}} }
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\cancel{\aprod{\eta}}} \rbempl{E}_s} \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; \;
-                \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bempl{\eta}}}}{\rbempl{E}_s} \; .
-\end{equation}
-%
-Noting that $\frac{\rbsub{q}_s}{\bempl{\eta}} = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$,
-canceling $\rbempl{E}_s$ terms,
-and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
-
-\begin{equation}
-  Re_{dsub} = \Redsubeqn \; . \tag{\ref{eq:Re_dsub}}
+\begin{equation} \label{eq:Re_dsub_approx}
+  Re_{dsub} = \Redsubeqn
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
@@ -182,61 +168,39 @@ expected to be negative ($\eqsps < 0$).
 For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
-% To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
-% $\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
-% of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
-% 
-% \begin{equation}
-%   \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqsps}  \right]}
-%            {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
-%     = -\eqsps \left( \etaratiostacked{} \right)^{-(\eqsps + 1)}
-% \end{equation}
-% %
-% Substituting 1 and $\infty$ for $\etaratioinline$ gives
-% 
-% \begin{equation}
-%   \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
-%     = -\eqsps ( 1 )^{-(\eqsps + 1)}
-%     = -\eqsps \; ,                               \tag{\ref{eq:lim_Redsub_1}}
-% \end{equation}
-% %
-% and
-% 
-% \begin{equation}
-%   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
-%     = -\eqsps ( \infty )^{-(\eqsps + 1)}
-%     = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
-% \end{equation}
-% %
-% because $\eqsps \in [-1, 0)$ and, therefore, $(\eqsps + 1) > 0$.
-
 With $\eqsps \in (-1, 0)$ expected,
 the approximate method indicates that
 direct substitution rebound will never be larger than 1.
-The direct substitution effect alone
+I.e., the direct substitution effect alone
 can never cause backfire. 
 
 
-%..............................
-\paragraph{Expression for $Re_{isub}$}
-\label{sec:Re_isub}
-%..............................
+%------------------------------
+\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
+\label{sec:Reisub_approx}
+%------------------------------
 
-To derive an expression for indirect substitution rebound
-under the approximate method,
-we begin with the definition of $Re_{isub}$
-from Table~\ref{tab:subeffect}:
+To quantify the substitution effect on other purchases in the approximate method,
+we introduce another elasticity:
+the energy service price elasticity of other goods consumption~($\eqops$), 
+such that
 
 \begin{equation}
-  Re_{isub} \equiv \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; .  \tag{\ref{eq:Re_isub_dev}}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; .
 \end{equation}
 %
-Expansion of the difference term to $\rasub{C}_o - \rbsub{C}_o$ and rearranging the numerator gives
+Because the energy service price elasticity of other goods consumption
+is positive ($\eqops > 0$),
+an energy service price decrease ($\aprod{p}_s < \bempl{p}_s$)
+implies a reduction in the rate of consumption of other goods ($\rasub{q}_o < \rbsub{q}_o$).
 
-\begin{equation} \label{eq:Re_isub_prelim}
-  Re_{isub} = \frac{\left( \frac{\rasub{C}_o}{\rbsub{C}_o} - 1  \right) \rbsub{C}_o I_E} {\Sdot} \; .
+The energy service price is inversely proportional to 
+efficiency, yielding
+
+\begin{equation} \label{eq:qohat_qostar}
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
 \end{equation}
-%
+
 We assume a basket of other goods purchased in the economy,
 each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
 such that the average price of all other goods purchased in the economy~($p_o$) is given by
@@ -259,7 +223,9 @@ and
 %
 Assuming that the average price is unchanged across the substitution effect,
 such that $\asub{p}_o = \bsub{p}_o$,
-the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can be added to find
+the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
+and set equal, and
+Eq.~(\ref{eq:qohat_qostar}) can be added to find
 
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
@@ -276,13 +242,14 @@ on other goods in the economy~($\rasub{C}_o$) by
   \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
 \end{equation}
 
-Substituting Eq.~\ref{eq:Cdot_o_ratio} into Eq.~(\ref{eq:Re_isub_prelim}) gives
+Substituting $\rbsub{C}_o = \rbempl{C}_o$ into Eq.~\ref{eq:Cdot_o_ratio} and 
+the result into Eq.~(\ref{eq:Re_isub_prelim}) gives
 
 \begin{equation}
   Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 %
-Substituting Eq.~\ref{eq:Sdot} gives
+Substituting Eq.~\ref{eq:Sdot} for $\Sdot$ gives
 
 \begin{equation}
   Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
@@ -293,87 +260,39 @@ Substituting Eq.~\ref{eq:Sdot} gives
 Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
 
 \begin{equation}
-  Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
+  Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
 
 Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
 the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
-Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
-
-% We can take derivatives of numerator and denominator and
-% invoke L'H\^{o}pital's rule
-% to find limits for $Re_{isub}$ when
-% $\etaratioinline{} \to 1^{\! +}$ and when
-% $\etaratioinline{} \to \infty$.
-% First, rearranging Eq.~(\ref{eq:Re_isub}) gives
-% 
-% \begin{equation}
-%   Re_{isub} = \frac{\left( \etaratiostacked{} \right)^m - \etaratiostacked{}}{\left( \etaratiostacked{} \right) - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
-% \end{equation}
-% %
-% where $m \equiv 1 - \eqops$.
-% Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
-% with respect to $\etaratioinline{}$ gives
-% 
-% \begin{equation}
-%   \frac{\dbydetaeta{} \left[ \left( \etaratiostacked{} \right)^m - \etaratiostacked \right]}
-%             {\dbydetaeta{}\left[ \left( \etaratiostacked{} \right)  - 1 \right] } \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} 
-%        = \left[ m \left( \etaratiostacked{} \right)^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
-% \end{equation}
-% %
-% Substituting $\etaratioinline = 1$ and invoking L'H\^{o}pital's rule gives
-% 
-% \begin{equation}
-%   \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
-%         = \left[ m ( 1 )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
-%         = [m - 1] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
-% \end{equation}
-% %
-% Substituting for $m$ gives
-% 
-% \begin{equation}
-%   \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
-%         = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
-% \end{equation}
-% 
-% Similarly, 
-% substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
-% 
-% \begin{equation}
-%   \lim_{\etaratioinline \to \infty} Re_{isub} 
-%         = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
-% \end{equation}
-% %
-% Because $\eqops \in (0, 1)$ is expected **** Check with Gregor.  Is this true? ****,
-% $0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
-% 
-% \begin{equation}
-%   \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} = -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
-% \end{equation}
+Negative rebound indicates that indirect substitution effects 
+reduce energy takeback by direct substitution effects.
 
 
 %++++++++++++++++++++++++++++++
 \subsection{Exact method}
-\label{sec:exact_method_sub}
+\label{sec:Resub_exact_method}
 %++++++++++++++++++++++++++++++
 
-The approximate method assumes that 
+The approximate method assumes (incorrectly) that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-This assumption is an approximation that holds 
+These assumptions are approximations that hold only 
 for infinitesimally small energy service price changes 
 ($\Delta \aempl{p}_s \approx 0$).
 However, in the case of an energy efficiency upgrade (EEU), 
 the energy service price change is not infinitesimal.
 Rather, 
-$\Delta \aempl{p}_s \approx 0$ is finite and may be large.
+$\Delta \aempl{p}_s$ is finite and may be large.
 
-To determine the new consumption bundle after the substitution effect and,
+To determine the new consumption bundle after the substitution effect 
+($\rasub{q}_s$ and $\rasub{C}_o$)
+and,
 ultimately, to quantify the direct and indirect substitution rebound effects
-($Re_{dsub}$ and $Re_{isub}$),
+($Re_{dsub}$ and $Re_{isub}$) exactly,
 we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
 must be constant along an indifference curve.
 Instead, recognizing that we employ a constant elasticity of substitution (CES)
@@ -381,42 +300,101 @@ utility function,
 we require constancy of only
 the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
-and the consumption rate of other goods ($\rate{C}_o$).
+and the expenditure rate for other goods ($\rate{C}_o$).
 
-Figure~\ref{fig:ExamplePrefsPathGraph} illustrates features
+Figure~\ref{fig:ExamplePrefsPathGraph} 
+(especially segments \starc{} and \chat{})
+illustrates features
 of the exact method for determining the new consumption bundle.
+Two equations are helpful for this analysis.
+First, the slope at any point on indifference curve \iicirc{} 
+is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
+$\rate{u}/\rbempl{u} = 1$ and 
+the share parameter ($a$) replaced by $\fCs$,
+as discussed in Appendix~\ref{sec:utility_model}.
 
-<<ExamplePrefsPathGraphForDerivation, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences", 
-                               graph_params = car_graph_params) + 
-  ggplot2::xlim(0.93, 1.23) +
-  ggplot2::ylim(0.973, 1.02) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
+\begin{align} \label{eq:slope_indifference_curve_u1}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
+        -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber  \\
+        &\times \left[ \left( \frac{1}{1 - \fCs} \right) 
+                - \left( \frac{\fCs}{1 - \fCs} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+%
+Second, the equation of the \starstar{} expenditure line is
+
+\begin{equation} \label{eq:starstar_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\aprod{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+\end{equation}
 
 
+%------------------------------
+\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
+\label{sec:Redsub_exact}
+%------------------------------
+
+To find the rate of energy service consumption after the substitution effect
+($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
+equal to the slope of the \iicirc{} indifference curve 
+at the original utility rate of $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
+
+\begin{equation}
+  -\frac{\aprod{p}_s \rbempl{q}_s}
+        {\rbempl{C}_o} = 
+    -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} % \nonumber  \\
+        \left[ \left( \frac{1}{1 - \fCs} \right) 
+                - \left( \frac{\fCs}{1 - \fCs} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho}
+\end{equation}
+%
+Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
+
+\begin{equation} \label{eq:q_s_solution}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs) 
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
+\end{equation}
+
+Eq.~(\ref{eq:q_s_solution}) can be substituted directly
+into Eq.~(\ref{eq:Re_dsub_prelim})
+to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
+via the exact method.
 
 
+%------------------------------
+\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
+\label{sec:Reisub_exact}
+%------------------------------
+
+The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
+can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
+$\rate{u}/\rbempl{u} = 1$ 
+into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
+to obtain
+
+\begin{equation}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-\fCs} \right) 
+                                     - \left( \frac{\fCs}{1-\fCs} \right)   
+              \left\{ \fCs + (1-\fCs)
+                  \left[ \left( \frac{1-\fCs}{\fCs} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
+                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
+\end{equation}
+
+Simplifying gives
+
+\begin{equation} \label{eq:C_o_solution}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
+          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
+                                                ^{1/\rho} \; .
+\end{equation}
+
+Eq.~(\ref{eq:C_o_solution}) can be substituted into Eq.~(\ref{eq:Re_isub_prelim})
+to obtain an estimate for indirect substitution rebound ($Re_{isub}$)
+via the exact method.
 
 

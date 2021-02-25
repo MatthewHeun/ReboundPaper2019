@@ -596,6 +596,7 @@ We use colored backgrounds on rebound effects for visual convenience.
 \label{fig:flowchart}
 \end{figure}
 
+
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
 the device upgrade and four rebound effects, and 
@@ -692,9 +693,18 @@ Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
-In the subsections that follow, 
-we discuss four rebound effects, sequentially.
-In each subsection, we 
+In the following section, 
+we discuss four rebound effects.
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound effects}
+\label{sec:rebound_effects}
+%++++++++++++++++++++++++++++++
+
+Expressions for the four rebound effects of Fig.~\ref{fig:flowchart} 
+(emplacement, substitution, income, and productivity)
+are discussed in subsections below where we
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -708,21 +718,332 @@ Detailed derivations of all rebound expressions
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
 which provide a structure for energy and financial accounting.
-We begin with the \empleffect{}.
+
+Important quantities for the derivations are
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
+  
+  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), and
+  
+  \item the consumption rate of the energy service ($\rate{q}_s$).
+    
+\end{enumerate*}
+%
+These important rebound quantities can be illustrated via
+innovative rebound path graphs.
+
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
+notional rebound path graphs for energy consumption, expenditures, and preferences.
+Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
+indirect energy consumption rate ($\rate{E}_{indir}$) on the vertical axis
+and
+direct energy consumption rate ($\rate{E}_{dir}$) on the horizontal axis.
+Lines with negative slope through points 
+$\circ$, 1, $*$, $\wedge$, --, and $\sim$
+indicate constant total energy consumption
+(direct and indirect) at each of those points.
+A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
+with indirect expenses ($\rate{C}_{indir}$) on the vertical axis and 
+direct expenses on the energy service ($\rate{C}_{dir}$) on the horizontal axis.
+Lines with negative slope through points $\circ$ and 1
+indicate constant expenditures (direct and indirect).
+Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the vertical axis
+and
+the indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the horizontal axis.
+Lines of constant indexed levels of consumption of other goods and the energy service
+are shown with negative slope. 
+Indifference curves (constant indexed utility) are denoted \iicirc{}. 
+A ray from the origin through the $\wedge$ point is denoted \rr{}.
+
+In the sections that follow, the notional graphs
+serve to illustrate the development of the rebound framework.
+The notional path graphs are not quantified; there is no scale on the axes.
+Later, in Section~\ref{sec:examples}, rebound path graphs (with scales) illustrate numerical examples.
+
+<<eeu_data, echo=FALSE>>=
+# Load our test cases and perform rebound analyses.
+rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
+rebound_results <- ReboundTools::rebound_analysis(rebound_data)
+@
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Empleffect}
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Notional energy path.", fig.width=6, fig.height=4>>=
+stage_size <- 10
+orig_size <- stage_size
+star_size <- stage_size
+hat_size <- stage_size - 3
+bar_size <- stage_size - 5
+tilde_size <- stage_size - 5
+
+stage_colour <- "black"
+abcd_size <- 4
+abcd_colour <- "darkgray"
+
+annotation_angle <- -45.6
+annotation_size <- 4
+annotation_colour <- "black"
+
+example_arrow_angle <- 19.0 * pi/180
+example_arrow_size <- 0.5 # width
+
+example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                         1.01, 1.008, 'degree', 
+                                           stage_colour, orig_size, 0,
+                                         0.115, 1.008, 'a', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.085, 0.973, 'b', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.085, 0.95, '"*"', 
+                                           stage_colour, star_size, 0,
+                                         0.09, 0.935, 'c', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.242, 0.923, '"^"', 
+                                           stage_colour, hat_size, 0,
+                                         0.295, 0.942, 'd', 
+                                           abcd_colour, abcd_size, 0,
+                                         0.295, 1.036, 'bold("_")', 
+                                           stage_colour, bar_size, 0,
+                                         0.29, 1.13, '"~"', 
+                                           stage_colour, tilde_size, 0,
+                                         0.04, 0.923, 'Hyperconservation', 
+                                           annotation_colour, 
+                                           annotation_size-1,
+                                           annotation_angle,
+                                         0.02, 1.043, 'Re[tot] == 0*"%"', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle,
+                                         0.03, 1.005, 'Re[empl]', 
+                                           annotation_colour,  
+                                           annotation_size - 1, 
+                                           annotation_angle + 90,
+                                         0.21, 0.90, 'Re[sub]', 
+                                           annotation_colour, 
+                                           annotation_size - 1,
+                                           annotation_angle + 90,
+                                         0.39, 0.936, 'Re[inc]', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle + 90,
+                                         0.68, 0.935, 'Re[prod]', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle + 90,
+                                         0.754, 1.1, 'Re[tot] == 100*"%"', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle,
+                                         0.95, 1.1, 'Backfire', 
+                                           annotation_colour, 
+                                           annotation_size, 
+                                           annotation_angle)
+example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
+                                     # Re_empl arrow
+                                     0.078, 1.01, example_arrow_angle, 
+                                       -0.063, annotation_colour, example_arrow_size,
+                                     # Re_sub arrow
+                                     0.249, 0.904, example_arrow_angle, 
+                                       0.04, annotation_colour, example_arrow_size,
+                                     # Re_inc arrow
+                                     0.327, 0.904, example_arrow_angle, 
+                                       0.157, annotation_colour, example_arrow_size,
+                                     # Re_prod arrow
+                                     0.622, 0.904, example_arrow_angle, 
+                                       0.146, annotation_colour, example_arrow_size) 
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Energy", 
+                               indexed = TRUE) + 
+  ggplot2::xlim(0, 1.1) +
+  ggplot2::ylim(0.9, 1.15) +
+  ggplot2::xlab(expression(dot(E)[dir] * " [MJ/year]")) +
+  ggplot2::ylab(expression(dot(E)[indir] * " [MJ/year]")) +
+  ggplot2::geom_spoke(data = example_Re_arrows,
+                        mapping = ggplot2::aes(x = x,
+                                               y = y,
+                                               angle = angle,
+                                               radius = radius,
+                                               colour = colour),
+                        arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
+  ggplot2::geom_text(data = example_energy_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
+                                            size = size,
+                                            angle = angle),
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+@
+
+
+<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path.", fig.width=6, fig.height=4>>=
+cost_line_angle <- -16.5
+example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                   1.01, 1.003, 'degree', 
+                                     stage_colour, orig_size, 0,
+                                   0.098, 1.003, 'a', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.09, 0.972, 'b', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.09, 0.9545, 'scriptstyle("*")', 
+                                     stage_colour, star_size, 0,
+                                   0.09, 0.936, 'c', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.24, 0.938, '"^"', 
+                                     stage_colour, hat_size, 0,
+                                   0.283, 0.936, 'd', 
+                                     abcd_colour, abcd_size, 0,
+                                   0.243, 1.034, 'bold("_")',
+                                     stage_colour, bar_size, 0,
+                                   0.635, 1.02, 'Original~expenditure', 
+                                     annotation_colour, annotation_size, cost_line_angle,
+                                   0.55, 0.9825, 'After~expected~savings', 
+                                     annotation_colour, annotation_size, cost_line_angle)
+
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Cost", 
+                               indexed = TRUE) + 
+  # ggplot2::xlim(0, 1.1) +
+  # ggplot2::ylim(0.9995, 1.0005) +
+  ggplot2::xlab(expression(dot(C)[dir] * " [$/year]")) +
+  ggplot2::ylab(expression(dot(C)[indir] * " [$/year]")) +
+  
+  ggplot2::geom_text(data = example_cost_labels,
+                     mapping = ggplot2::aes(x = x,
+                                            y = y,
+                                            label = lab,
+                                            colour = colour,
+                                            size = size,
+                                            angle = angle),
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+@
+
+
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional preferences path.", fig.width=6, fig.height=4>>=
+orig_line_label_size <- orig_size - 3
+star_line_label_size <- star_size - 4
+hat_line_label_size <- hat_size - 3
+bar_line_label_size <- bar_size - 1
+r_line_label_size <- abcd_size
+i_line_label_size <- abcd_size
+line_label_colour <- "darkgray"
+  
+labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                          1.04, 1.005, 'degree', 
+                            annotation_colour, orig_size,
+                          1.09, 1.00, '","', 
+                            annotation_colour, orig_size-3,
+                          1.14, 1.0005, '"*"', 
+                            annotation_colour, star_size,
+                          0.7, 1.011, 'degree', 
+                            line_label_colour, orig_line_label_size,
+                          1.54, 0.97, 'degree',
+                            line_label_colour, orig_line_label_size,
+                          0.7, 0.996, '"*"', 
+                            line_label_colour, star_line_label_size,
+                          3.5, 0.981, '"*"', 
+                            line_label_colour, star_line_label_size,
+                          0.96, 0.98, 'c', 
+                            abcd_colour, abcd_size,
+                          2.27, 0.972, '"^"',  
+                            annotation_colour, hat_size,
+                          0.7, 0.989, '"^"',
+                            line_label_colour, hat_line_label_size,
+                          3.5, 0.974, '"^"', 
+                            line_label_colour, hat_line_label_size,
+                          2.52, 0.983, 'd', 
+                            abcd_colour, abcd_size,
+                          2.43, 1.087, 'bold("_")',  
+                            annotation_colour, bar_size,
+                          0.7, 1.09, '"_"',
+                            line_label_colour, bar_line_label_size,
+                          3.5, 1.075, '"_"',
+                            line_label_colour, bar_line_label_size,
+                          2.18, 0.97, 'r',
+                            line_label_colour, r_line_label_size,
+                          2.6, 1.15, 'r',  
+                            line_label_colour, r_line_label_size,
+                          0.75, 1.027, 'i*degree', 
+                            line_label_colour, i_line_label_size,
+                          3.4, 0.981, 'i*degree', 
+                            line_label_colour, i_line_label_size,
+                          0.75, 1.143, 'bar(i)', 
+                            line_label_colour, i_line_label_size,
+                          3.4, 1.084, 'bar(i)', 
+                            line_label_colour, i_line_label_size,
+                          )
+rebound_results %>% 
+  ReboundTools::rebound_graphs(cases = "Example", 
+                               graph_types = "Preferences") + 
+  ggplot2::xlim(0.7, 3.5) +
+  ggplot2::ylim(0.97, 1.15) +
+  ggplot2::geom_text(data = labels, 
+                     mapping = ggplot2::aes(x = x, y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
+                     parse = TRUE) +
+  MKHthemes::xy_theme() + 
+  # remove axis labels and ticks
+  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
+                 axis.ticks.x = ggplot2::element_blank(),
+                 axis.text.y = ggplot2::element_blank(),
+                 axis.ticks.y = ggplot2::element_blank(),
+                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
+@
+
+
+We begin with the emplacement effect.
+
+
+%------------------------------
+\subsubsection{\Empleffect}
 \label{sec:empl_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
-The emplacement effect accounts for performance of the EEU only.
+The emplacement effect (segments \circa{}, \ab{}, and \bstar{} 
+in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
+accounts for performance of the EEU only.
 No behavior changes occur.
-The direct effect of emplacement of the EEU is device energy savings and energy cost savings.
-The indirect effects of emplacement of the EEU are changes in the embodied energy rate and
-the maintenance and disposal cost rates.
+The direct emplacement effect of the EEU is
+device energy savings and energy cost savings
+(segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
+The indirect effects of EEU emplacement are
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
+        (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
+  
+  \item changes in the capital cost rate ($\Delta \raempl{C}_{cap}$)
+        (segment \ab{} in Fig.~\ref{fig:ExampleCostPathGraph}), and 
+        
+  \item changes in the maintenance and disposal energy and cost rates 
+        ($\Delta \raempl{E}_{md}$ and $\Delta \raempl{C}_{md}$)
+        (segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
+    
+\end{enumerate*}
 
-Because no behavior changes are considered,
+Because no behavior changes are considered
+in the emplacement effect,
 actual and expected energy savings rates~($\Sdot$) are identical
 across the direct emplacement effect, namely
 
@@ -736,27 +1057,73 @@ Appendix~\ref{sec:Sdot} shows that
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-By definition, the direct emplacement effect has no rebound, 
+By definition, the direct emplacement effect 
+(segment \circa{}) has no rebound, 
 because actual and expected energy savings are identical.
 (See Table~\ref{tab:empleffect}.)
 
 \begin{equation} \label{eq:Re_dempl0}
   Re_{dempl} = 0
 \end{equation}
+%
+In fact, point $a$ 
+lies on the $Re_{tot} = 0\%$ line
+in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+indicating that the $Re_{tot} = 0\%$ line 
+is the basis from which all rebound effects 
+($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\productivity}$)
+are measured.
+If total energy demand returns to the original energy consumption level 
+(negative sloping line through the $\circ$ point), 
+all expected energy savings are taken back by rebound effects. 
+Thus, the line of constant energy consumption through the $\circ$ point is labeled
+$Re_{tot} = 100\%$.
+Total rebound ($Re_{tot}$) is measured linearly between the
+$Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
+with decomposition to indirect rebound in the vertical ($y$-axis) direction and 
+direct rebound in the horizontal ($x$-axis) direction.
+Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
+exhibit negative rebound, indicating
+hyperconservation (energy savings in excess of the expected energy savings).
+Points above and to the right of the $Re_{tot} = 100\%$ line 
+exhibit $Re_{tot} > 100\%$, indicating
+backfire (greater energy consumption after the EEU than before the EEU).
 
-On the other hand, energy rebound may be caused by indirect emplacement effects, which
-account for the life cycle of the energy conversion device, including 
-energy embodied by manufacturing (subscript $emb$) and
+Although the direct emplacement effect does not cause rebound, 
+indirect emplacement effects may cause rebound, 
+as shown in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+Indirect emplacement effects 
+(segments \ab{} and \bstar{}
+in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
+account for the life cycle of the energy conversion device,
+including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
+In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
+emplacement rebound is negative ($Re_{empl} < 0$),
+because the upgraded device has lesser
+embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
+and lesser maintenance and disposal cost rate ($\raempl{C}_{md} < \rbempl{C}_{md}$).
+Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
+moving in the negative direction,
+consistent with reduced capital costs
+($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
+reduced maintenance and disposal costs
+($\raempl{C}_{md} < \rbempl{C}_{md}$).
+In the notional graphs of
+Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
+embodied energy and capital costs (segments \ab{}) 
+move in the same direction (both negative), 
+but they could move in the positive direction or
+move in opposite directions.
 
 We define embodied energy consistent with the energy/exergy analysis literature
 to be the sum of all final energy consumed (direct and indirect)
-in the production of the device.
+in the production of the energy conversion device.
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 The EEU
-causes the embodied final energy of the device to change
+causes the embodied energy of the energy conversion device to change
 from $\bempl{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
@@ -776,7 +1143,8 @@ $\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}_{\life}$
 and 
 $\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}_{\life}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\raempl{E}_{emb} - \rbempl{E}_{emb}$.
+$\raempl{E}_{emb} - \rbempl{E}_{emb}$
+and is shown as segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 The expression for embodied energy rebound is 
 
 \begin{equation} \label{eq:Re_emb}
@@ -793,12 +1161,15 @@ such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$ can be negative,
-meaning that the upgraded device has a lower embodied energy rate than the original device.
+meaning that the upgraded device has a lower embodied energy rate than the original device,
+as shown by point 2 being below point 1 
+in the notional energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}.
 See Appendix~\ref{sec:Re_emb} for details.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
-energy demanded by maintenance and disposal~($\md$) activities.
+energy demanded by maintenance and disposal~($\md$) activities
+(segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
 Maintenance expenditures are typically modeled as a per-year expense, a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
@@ -811,7 +1182,8 @@ $\raempl{C}_{\md} = \raempl{C}_{m} + \aempl{C}_d/\aempl{t}_{\life}$.
 For simplicity, we assume that $\md$ expenditures indicate energy consumption
 elsewhere in the economy at its energy intensity~($I_E$).
 Therefore, the change in energy consumption rate caused by a change in $\md$ expenditures
-is given by $\Delta \raempl{C}_{\md} I_E$.
+is given by $\Delta \raempl{C}_{\md} I_E = (\raempl{C}_{\md} - \rbempl{C}_{\md}) I_E$, 
+shown as segment \bstar{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 Rebound from maintenance and disposal
 is given by 
 
@@ -822,22 +1194,24 @@ is given by
 See Appendix~\ref{sec:Re_OMd} for details.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Subeffect}
+%------------------------------
+\subsubsection{\Subeffect}
 \label{sec:sub_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
-The direct rebound effect is split into substitution and
-income effects, following neoclassical consumer theory. 
-Neoclassical consumer theory distinguishes
-substituting the energy service for
-other consumption items whose relative price increases due to the 
-higher efficiency and hence lower price of producing the energy 
-service, and respending the higher real income. 
-Because the rate of consuming other goods is altered, 
-substitution and income effects affect 
-both direct and indirect rebound effects.
-
+Neoclassical consumer theory distinguishes between
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item substituting the energy service for
+        other goods consumption due to the now-lower price of the energy service and
+  
+  \item respending the higher real income. 
+    
+\end{enumerate*}
+%
+Substituting the energy service for other goods consumption
+leads to substitution effect rebound ($Re_{sub}$).
 The substitution effect alters compensated demand, which is
 defined as the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
@@ -846,17 +1220,67 @@ It involves
 \begin{enumerate*}[label={(\alph*)}]
 
   \item an increase in consumption of the energy service,
-        called direct substitution ($dsub$) indicating its relationship
-        with the direct rebound effect and
+        called direct substitution (subscript $dsub$) and
 
   \item a compensating reduction in consumption of other goods,
-        called indirect substitution ($isub$).
+        called indirect substitution (subscript $isub$).
 
 \end{enumerate*}
 %
 Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
+The substitution effect is shown by segments
+\starc{} (indirect component) and \chat{} (direct component) 
+in Figs~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+
+The substitution effect is best understood 
+with reference to Fig.~\ref{fig:ExamplePrefsPathGraph}.
+Prior to the EEU, the consumption basket (of the energy service and other goods)
+is represented by the $\circ$ point, and 
+the line of constant expenditure is \circcirc{}.
+The \circcirc{} line is tangent to the lower indifference curve 
+(\iicirc{}) at point $\circ$, indicating that 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item equilibrium conditions exist and 
+  
+  \item the device owner is maximizing utility.
+    
+\end{enumerate*}
+%
+After emplacement of the more-efficient device
+(but before the substitution effect), 
+the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
+thereby altering the slope of the constant expenditure line,
+such that the \circcirc{} line becomes the \starstar{} line.
+The new constant expenditure line (\starstar{}) is not tangent to the indifference curve,
+meaning that the device owner is no longer maximizing utility.
+To again maximize utility, 
+the device owner shifts consumption to a point where
+the slope of the indifference curve (\iicirc{}) is equal to the slope of the
+indifference curve (\starstar{}).
+The new consumption basket is represented by the $\wedge$ point
+in Fig.~\ref{fig:ExamplePrefsPathGraph}, 
+at which the \hathat{} expenditure line is tangent to the indifference curve.
+The change in consumption caused by the substitution effect
+favors energy service consumption (because it is now less expensive)
+at the expense of other goods consumption (which are now relatively more expensive).
+
+The substitution effect can be decomposed into indirect
+(the decrease in other good consumption, segment \starc{}) and 
+and direct
+(the increase in energy service consumption, segment \chat{})
+components.
+The impact of the substitution effect on energy consumption and expenditures
+can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
+and~\ref{fig:ExampleCostPathGraph}, respectively.
+
+**** ended here ****
+
+**** Refer to an appendix for the approximation. ****
+
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
 the service price elasticity of energy service consumption ($\eqsps$), and
@@ -896,7 +1320,7 @@ is negative ($\eqsps < 0$),
 an energy service efficiency increase ($\aprod{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
-To quantify the \subeffect{} on other purchases,
+To quantify the substitution effect on other purchases,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$).
 Appendix~\ref{sec:Re_sub} shows that
@@ -987,16 +1411,16 @@ Invoking L'H\^{o}pital's rule gives
 and
 
 \begin{equation} \label{eq:lim_Reisub_infty}
-  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; .
+  \lim_{\etaratioinline \to \infty} Re_{isub} = - \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Inceffect}
+%------------------------------
+\subsubsection{\Inceffect}
 \label{sec:inc_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
-Rebound from the \inceffect{} quantifies the rate of additional energy demand 
+Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
 income from the EEU.
 The income rate of the device owner is $\rbempl{M}$, 
@@ -1005,11 +1429,13 @@ such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
 Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-In combination, the \empleffect{} and the \subeffect{} leave the device owner with
+In combination, the emplacement effect and 
+the substitution effect leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for gross and net income from the 
-\empleffect{} ($\rate{G}$) and the \subeffect{} ($\rasub{N}$)
+emplacement effect ($\rate{G}$) and
+the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
 In this framework, all net income ($\rasub{N}$) is spent either 
@@ -1084,7 +1510,7 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqn{} \; .
 \end{equation}
 
-In the midst of the \inceffect{} analysis, a capital expenses rebound term appears:
+In the midst of the income effect analysis, a capital expenses rebound term appears:
 
 \begin{equation} \label{eq:Re_cap}
   Re_{cap} = \Recapeqn{} \; .
@@ -1103,7 +1529,7 @@ In the midst of the \inceffect{} analysis, a capital expenses rebound term appea
 The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:qorat_eqoM}))
 must satisfy the budget constraint
 such that net income is zero after
-the \inceffect{} ($\rainc{N} = 0$).
+the income effect ($\rainc{N} = 0$).
 See Appendix~\ref{sec:proof_income_elasticities}
 for a proof demonstrating that the income preference equations satisfies the budget constraint.
 
@@ -1114,13 +1540,13 @@ so we get the `price effect'?---GS
 +++
 
 
-%++++++++++++++++++++++++++++++
-\subsection{\Prodeffect}
+%------------------------------
+\subsubsection{\Prodeffect}
 \label{sec:prod_effect_main_paper}
-%++++++++++++++++++++++++++++++
+%------------------------------
 
 The previous rebound effects
-(\empleffect{}, \subeffect{}, and \inceffect{})
+(emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
 In contrast, the productivity effect is macroeconomic.
@@ -1228,7 +1654,7 @@ productivity rebound is given by
 \end{equation}
 %
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
-we arrive at an expression for \prodeffectadj{} rebound:
+we arrive at an expression for productivity effect rebound:
 
 \begin{equation} \label{eq:Re_prod}
   Re_{\productivity} = \Reprodeqn{} \; .
@@ -1242,7 +1668,7 @@ we arrive at an expression for \prodeffectadj{} rebound:
 
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
-(\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
+(emplacement effect, substitution effect, income effect, and productivity effect).
 Productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
 is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
@@ -1252,183 +1678,6 @@ we find
 \begin{align} \label{eq:Re_tot}  
   Re_{sum} = \; \Retoteqn{} \; .
 \end{align}
-
-
-<<eeu_data, echo=FALSE>>=
-# Load our test cases and perform rebound analyses.
-rebound_data <- ReboundTools::load_eeu_data("data/eeu_data.xlsx")
-rebound_results <- ReboundTools::rebound_analysis(rebound_data)
-@
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Graphical representation}
-\label{sec:graphical_representation}
-%++++++++++++++++++++++++++++++
-
-The rebound effects can be presented intuitively in graphical form. 
-with indirect energy consumption or other goods expenditures on the y-axis
-and direct energy consumption by the energy conversion device or energy costs on the x-axis.
-
-
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Example energy path graph.", fig.width=6, fig.height=4>>=
-example_Re_label_angle <- -45.6
-example_Re_arrow_angle <- (example_Re_label_angle + 90) * pi/180
-example_Re_label_size <- 4
-example_Re_text_colour <- "darkgray"
-example_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                         73300, 71800, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                         65200, 72150, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                         65000, 70200, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                         65000, 68750, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                         65200, 68400, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                         67130, 68300, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                         69900, 68400, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                         70100, 71000, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                         70050, 73500, 'scriptscriptstyle("~")', example_Re_text_colour, 10, 0,
-                                         62500, 69500, 'Hyperconservation', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         67350, 70100, 'Re[tot] == 0*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle,
-                                         62400, 72650, 'Re[empl]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         63490, 71530, 'Re[sub]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         65200, 73220, 'Re[inc]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         67050, 75000, 'Re[prod]', example_Re_text_colour, example_Re_label_size, example_Re_label_angle + 90,
-                                         71700, 73600, 'Re[tot] == 100*"%"', example_Re_text_colour, example_Re_label_size, example_Re_label_angle, 
-                                         73000, 74500, 'Backfire', example_Re_text_colour, example_Re_label_size, example_Re_label_angle)
-example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-                                     # Re_empl arrow
-                                     63600, 73500, example_Re_arrow_angle, -2030, example_Re_text_colour, 0.5, 
-                                     # Re_sub arrow
-                                     62900, 71270, example_Re_arrow_angle, 1150, example_Re_text_colour, 0.5, 
-                                     # Re_inc arrow
-                                     63750, 72100, example_Re_arrow_angle, 3380, example_Re_text_colour, 0.5, 
-                                     # Re_prod arrow
-                                     66200, 74500, example_Re_arrow_angle, 1850, example_Re_text_colour, 0.5) 
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Energy") + 
-  ggplot2::xlim(61800, 73400) +
-  # ggplot2::ylim(0.973, 1.02) +
-  ggplot2::geom_spoke(data = example_Re_arrows, 
-                        mapping = ggplot2::aes(x = x,
-                                               y = y,
-                                               angle = angle, 
-                                               radius = radius, 
-                                               colour = colour), 
-                        arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
-  ggplot2::geom_text(data = example_energy_labels, 
-                     mapping = ggplot2::aes(x = x, 
-                                            y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size,
-                                            angle = angle), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme() + 
-  # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(),
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
-@
-
-
-<<ExampleCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
-example_cost_line_angle <- -16.5
-example_Re_text_colour <- "darkgray"
-example_Re_label_size <- 4
-example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   2886, 24470, '""^scriptscriptstyle(o)', example_Re_text_colour, 10, 0,
-                                   2572, 24545, 'scriptscriptstyle("1")', example_Re_text_colour, 10, 0,
-                                   2568, 24420, 'scriptscriptstyle("2")', example_Re_text_colour, 10, 0,
-                                   2568, 24050, 'scriptstyle("*")', example_Re_text_colour, 10, 0,
-                                   2568, 23990, 'scriptscriptstyle("4")', example_Re_text_colour, 10, 0,
-                                   2653, 23990, 'scriptstyle("^")', example_Re_text_colour, 10, 0,
-                                   2762, 23990, 'scriptscriptstyle("6")', example_Re_text_colour, 10, 0,
-                                   2760, 24660, 'scriptscriptstyle("_")', example_Re_text_colour, 10, 0,
-                                   2830, 24590, 'Original~expenditure', example_Re_text_colour, example_Re_label_size, example_cost_line_angle,
-                                   2820, 24290, 'Expenditure~after~EEU', example_Re_text_colour, example_Re_label_size, example_cost_line_angle)
-
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Cost") + 
-  ggplot2::geom_text(data = example_cost_labels, 
-                     mapping = ggplot2::aes(x = x, 
-                                            y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size,
-                                            angle = angle), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme() + 
-  # remove axis labels and ticks
-  ggplot2::theme(axis.text.x = ggplot2::element_blank(),
-                 axis.ticks.x = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 axis.ticks.y = ggplot2::element_blank(), 
-                 axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
-
-@
-
-  <<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences") + 
-  ggplot2::xlim(0.98, 1.1) +
-  ggplot2::ylim(0.99, 1.05) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
-
-
-
-
-<<ExampleSubPathGraph, echo=FALSE, warning=FALSE, fig.cap="Example preferences path graph.", fig.width=6, fig.height=4>>=
-labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
-                          1.01, 1.0004, '""^scriptscriptstyle(o*",")*"*"', "black", 10,
-                          0.93, 1.013, 'scriptscriptstyle(o)', "gray", 8,
-                          1.17, 0.9734, 'scriptscriptstyle(o)', "gray", 8,
-                          0.93, 1.007, 'scriptscriptstyle("*")', "gray", 8,
-                          1.23, 0.978, 'scriptscriptstyle("*")', "gray", 8,
-                          1.154, 0.9815, 'scriptstyle("^")',  "black", 10,
-                          0.93, 1.003, 'scriptscriptstyle("^")', "gray", 8,
-                          1.23, 0.974, 'scriptscriptstyle("^")', "gray", 8,
-                          1.197, 1.02, 'scriptscriptstyle("r")',  "gray", 8,
-                          1.142, 0.973, 'scriptscriptstyle("r")',  "gray", 8,
-                          0.95, 1.0105, 'scriptscriptstyle("i")', "gray", 8,
-                          1.21, 0.977, 'scriptscriptstyle("i")', "gray", 8)
-rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
-                               graph_types = "Preferences") + 
-  ggplot2::xlim(0.993, 1.038) +
-  ggplot2::ylim(0.9945, 1.0015) +
-  ggplot2::geom_text(data = labels, 
-                     mapping = ggplot2::aes(x = x, y = y, 
-                                            label = lab, 
-                                            colour = colour, 
-                                            size = size), 
-                     parse = TRUE) +
-  MKHthemes::xy_theme()
-@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1721,26 +1970,63 @@ shows the effect of each rebound effect.
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
-car_Re_label_size <- 4
-car_Re_text_colour <- "darkgray"
+
 car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                     72400, 77320, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
-                                     42700, 77400, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
-                                     46400, 76980, 'scriptstyle("^")', car_Re_text_colour, 10, 0,
-                                     49200, 79560, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
-                                     49020, 81960, 'scriptscriptstyle("~")', car_Re_text_colour, 10, 0,
-                                     40200, 77700, 'Hyperconservation', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle,
-                                     41000, 79000, 'Re[tot] == 0*"%"', car_Re_text_colour, car_Re_label_size, car_Re_label_angle,
-                                     42400, 79200, 'Re[empl]', car_Re_text_colour, car_Re_label_size, car_Re_label_angle,
-                                     41900, 80500, 'Re[sub]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
-                                     45200, 80680, 'Re[inc]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
-                                     51250, 77910, 'Re[prod]', car_Re_text_colour, car_Re_label_size-1, car_Re_label_angle + 90,
-                                     71100, 80000, 'Re[tot] == 100*"%"', car_Re_text_colour, car_Re_label_size, car_Re_label_angle, 
-                                     72100, 81300, 'Backfire', car_Re_text_colour, car_Re_label_size, car_Re_label_angle)
-car_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size, 
-                                 40330, 80600, car_Re_arrow_angle, 2800, car_Re_text_colour, 0.5,
-                                 43200, 80760, car_Re_arrow_angle, 3750, car_Re_text_colour, 0.5,
-                                 49940, 78040, car_Re_arrow_angle, 2250, car_Re_text_colour, 0.5)
+                                     73500, 77500, 'degree', 
+                                       stage_colour, orig_size, 0,
+                                     42700, 77350, 'a', 
+                                       abcd_colour, abcd_size, 0,
+                                     43560, 77900, 'b', 
+                                       abcd_colour, abcd_size, 0,
+                                     42700, 77450, 'scriptstyle("*")', 
+                                       stage_colour, star_size, 0,
+                                     43100, 77100, 'c',
+                                       abcd_colour, abcd_size, 0,
+                                     46400, 76980, '"^"', 
+                                       stage_colour, hat_size, 0,
+                                     48800, 77100, 'd', 
+                                       abcd_colour, abcd_size, 0,
+                                     49400, 79560, 'bold("_")',
+                                       stage_colour, bar_size, 0,
+                                     49150, 81960, '"~"', 
+                                       stage_colour, tilde_size, 0,
+                                     40200, 77700, 'Hyperconservation', 
+                                       annotation_colour, 
+                                       annotation_size-1,
+                                       car_Re_label_angle,
+                                     41000, 79000, 'Re[tot] == 0*"%"', 
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle,
+                                     42400, 79200, 'Re[empl]', 
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle,
+                                     41900, 80500, 'Re[sub]', 
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle + 90,
+                                     45200, 80680, 'Re[inc]', 
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle + 90,
+                                     51250, 77910, 'Re[prod]', 
+                                       annotation_colour, 
+                                       annotation_size - 1,
+                                       car_Re_label_angle + 90,
+                                     71100, 80000, 'Re[tot] == 100*"%"', 
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle,
+                                     72100, 81300, 'Backfire', 
+                                       annotation_colour, 
+                                       annotation_size-1,
+                                       car_Re_label_angle)
+
+car_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
+                                 40330, 80600, car_Re_arrow_angle, 2800, annotation_colour, 0.5,
+                                 43200, 80760, car_Re_arrow_angle, 3750, annotation_colour, 0.5,
+                                 49940, 78040, car_Re_arrow_angle, 2250, annotation_colour, 0.5)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
@@ -1764,15 +2050,29 @@ rebound_results %>%
 @
 
 
-<<CarCostGraph, echo=FALSE, fig.cap="Cost path, car example.", fig.width=6, fig.height=4>>=
+<<CarCostGraph, echo=FALSE, fig.cap="Expenditure path, car example.", fig.width=6, fig.height=4>>=
 car_cost_line_angle <- -27
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1270, 26085, '""^scriptscriptstyle(o)', car_Re_text_colour, 10, 0,
-                                   770, 25937, 'scriptstyle("*")', car_Re_text_colour, 10, 0,
-                                   816, 25880, 'scriptstyle("^")', car_Re_text_colour, 10, 0,
-                                   830, 26557, 'scriptscriptstyle("_")', car_Re_text_colour, 10, 0,
-                                   1075, 26350, 'Original~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle,
-                                   950, 25958, 'New~expenditure', car_Re_text_colour, car_Re_label_size, car_cost_line_angle)
+                                   1280, 26150, 'degree', 
+                                     stage_colour, orig_size, 0,
+                                   759, 26150, 'a', 
+                                     abcd_colour, abcd_size, 0,
+                                   770, 26025, 'b', 
+                                     abcd_colour, abcd_size, 0,
+                                   770, 25937, '"*"', 
+                                     stage_colour, star_size, 0,
+                                   770, 25892, 'c', 
+                                     abcd_colour, abcd_size, 0,
+                                   816, 25880, '"^"', 
+                                     stage_colour, hat_size, 0,
+                                   855, 25870, 'd', 
+                                     abcd_colour, abcd_size, 0,
+                                   830, 26557, 'bold("_")', 
+                                     stage_colour, bar_size, 0,
+                                   1075, 26350, 'Original~expenditure', 
+                                     annotation_colour, annotation_size, car_cost_line_angle,
+                                   950, 25958, 'After~expected~savings', 
+                                     annotation_colour, annotation_size, car_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
@@ -1789,25 +2089,51 @@ rebound_results %>%
 @
 
 
-<<CarPrefsGraph, echo=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
-car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                    1.004, 1.0004, '""^scriptscriptstyle(o*",")*"*"', car_Re_text_colour, 10, 0,
-                                    1.071, 0.998, 'scriptstyle("^")',  car_Re_text_colour, 10, 0,
-                                    1.108, 1.0336, 'scriptstyle("_")',  car_Re_text_colour, 10, 0,
-                                    0.9, 1.0076, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
-                                    1.165, 0.99, 'scriptscriptstyle(o)', car_Re_text_colour, 8, 0,
-                                    0.9, 1.004, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
-                                    1.258, 0.99, 'scriptscriptstyle("*")', car_Re_text_colour, 8, 0,
-                                    0.9, 1.002, 'scriptscriptstyle("^")', car_Re_text_colour, 8, 0,
-                                    1.205, 0.99, 'scriptscriptstyle("^")', car_Re_text_colour, 8, 0,
-                                    0.9, 1.04, 'scriptscriptstyle("_")', car_Re_text_colour, 8, 0,
-                                    1.3, 1.024, 'scriptscriptstyle("_")', car_Re_text_colour, 8, 0,
-                                    1.128, 1.04, 'scriptscriptstyle("r")',  car_Re_text_colour, 8, 0,
-                                    1.075, 0.99, 'scriptscriptstyle("r")',  car_Re_text_colour, 8, 0,
-                                    0.91, 1.0103, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
-                                    1.27, 0.993, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
-                                    1.01, 1.0394, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0,
-                                    1.29, 1.0291, 'scriptscriptstyle("i")', car_Re_text_colour, 8, 0)
+<<CarPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
+car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                                    1.005, 1.0016, 'degree', 
+                                      stage_colour, orig_size, 
+                                    1.012, 1.0002, '","', 
+                                      annotation_colour, orig_size-3,
+                                    1.02, 1.0004, '"*"', 
+                                      annotation_colour, star_size,
+                                    1.071, 0.998, '"^"',  
+                                      stage_colour, hat_size, 
+                                    1.108, 1.0336, 'bold("_")',  
+                                      stage_colour, bar_size, 
+                                    0.9, 1.0076, 'degree', 
+                                      line_label_colour, orig_line_label_size, 
+                                    1.165, 0.99, 'degree', 
+                                      line_label_colour, orig_line_label_size, 
+                                    0.9, 1.004, '"*"', 
+                                      line_label_colour, star_line_label_size, 
+                                    1.258, 0.99, '"*"', 
+                                      line_label_colour, star_line_label_size, 
+                                    0.995, 0.9958, 'c',
+                                      abcd_colour, abcd_size,
+                                    0.9, 1.0017, '"^"', 
+                                      line_label_colour, hat_line_label_size, 
+                                    1.195, 0.99, '"^"', 
+                                      line_label_colour, hat_line_label_size, 
+                                    1.12, 0.9965, 'd', 
+                                      abcd_colour, abcd_size,
+                                    0.9, 1.04, '"_"', 
+                                      line_label_colour, bar_line_label_size, 
+                                    1.3, 1.024, '"_"', 
+                                      line_label_colour, bar_line_label_size, 
+                                    1.128, 1.04, 'r', 
+                                      line_label_colour, r_line_label_size,
+                                    1.075, 0.99, 'r', 
+                                      line_label_colour, r_line_label_size,
+                                    0.91, 1.0106, 'i*degree', 
+                                      line_label_colour, i_line_label_size,
+                                    1.27, 0.9933, 'i*degree', 
+                                      line_label_colour, i_line_label_size,
+                                    1.01, 1.0397, 'bar(i)', 
+                                      line_label_colour, i_line_label_size,
+                                    1.29, 1.0295, 'bar(i)', 
+                                      line_label_colour, i_line_label_size,
+                                    )
 
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Car", 
@@ -1817,8 +2143,7 @@ rebound_results %>%
                                             y = y, 
                                             label = lab, 
                                             colour = colour, 
-                                            size = size,
-                                            angle = angle), 
+                                            size = size), 
                      parse = TRUE) +
   ggplot2::xlim(0.9, 1.3) + 
   ggplot2::ylim(0.99, 1.04) +
@@ -2164,28 +2489,188 @@ rebound_results %>%
 @
 
 
-<<LampEnergyGraph, echo = FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
+lamp_Re_label_angle <- -62
+lamp_Re_arrow_angle <- pi/180 * 15.5
+lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                      240, 92838, '""^scriptstyle(degree)', 
+                                        stage_colour, orig_size, 0,
+                                      27, 92842, 'a', 
+                                        abcd_colour, abcd_size, 0,
+                                      14, 92839.5, '"b,"', 
+                                        abcd_colour, abcd_size, 0,
+                                      20, 92837.5, '"*"', 
+                                        stage_colour, star_size, 0,
+                                      23, 92823, 'c', 
+                                        abcd_colour, abcd_size, 0,
+                                      61, 92820, '"^"', 
+                                        stage_colour, hat_size, 0,
+                                      67, 92825, '"d"', 
+                                        abcd_colour, abcd_size, 0,
+                                      68, 92865, 'bold("_")',
+                                        stage_colour, bar_size, 0,
+                                      67, 92904, '"~"', 
+                                        stage_colour, tilde_size, 0,
+                                      -3, 92835, 'Hyperconservation', 
+                                        annotation_colour, 
+                                        annotation_size-1,
+                                        lamp_Re_label_angle,
+                                      16, 92855, 'Re[tot] == 0*"%"', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle,
+                                      -11, 92870, 'Re[empl]', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle,
+                                      1, 92874.2, 'Re[sub]', 
+                                        annotation_colour, 
+                                        annotation_size - 1, 
+                                        lamp_Re_label_angle + 90,
+                                      24, 92881, 'Re[inc]', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle + 90,
+                                      90, 92856.5, 'Re[prod]', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle + 90,
+                                      202, 92880, 'Re[tot] == 100*"%"', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle,
+                                      230, 92890, 'Backfire',
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle)
+
+lamp_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
+                                  -5.4, 92870, lamp_Re_arrow_angle, 
+                                    17.2, annotation_colour, example_arrow_size,
+                                  11.8, 92874.8, lamp_Re_arrow_angle, 
+                                    32, annotation_colour, example_arrow_size,
+                                  76.7, 92850, lamp_Re_arrow_angle, 
+                                    32, annotation_colour, example_arrow_size)
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Energy") + 
+  ggplot2::geom_spoke(data = lamp_Re_arrows, 
+                        mapping = ggplot2::aes(x = x,
+                                               y = y,
+                                               angle = angle, 
+                                               radius = radius, 
+                                               colour = colour), 
+                        arrow = ggplot2::arrow(length = ggplot2::unit(0.1,"cm"))) +
+  ggplot2::geom_text(data = lamp_energy_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
   MKHthemes::xy_theme()
 @
 
 
 <<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
+lamp_cost_line_angle <- -24
+lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
+                                    9, 27392.8, 'degree', 
+                                      stage_colour, orig_size, 0,
+                                    0.9, 27392.8, 'a', 
+                                      abcd_colour, abcd_size, 0,
+                                    0.57, 27391.6, '"b,"',
+                                      abcd_colour, abcd_size, 0,
+                                    0.79, 27391.33, '"*"', 
+                                      stage_colour, star_size, 0,
+                                    0.85, 27387, 'c', 
+                                      abcd_colour, abcd_size, 0,
+                                    2.3, 27386.5, '"^"', 
+                                      stage_colour, hat_size, 0,
+                                    2.5, 27387, 'd', 
+                                      abcd_colour, abcd_size, 0,
+                                    2.55, 27399.2, 'bold("_")', 
+                                      stage_colour, bar_size, 0,
+                                    5, 27396.7, 'Original~expenditure',
+                                      annotation_colour, annotation_size, lamp_cost_line_angle,
+                                    4, 27389.7, 'After~expected~savings',
+                                      annotation_colour, annotation_size, lamp_cost_line_angle)
+
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Cost") + 
+  ggplot2::geom_text(data = lamp_cost_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size,
+                                            angle = angle), 
+                     parse = TRUE) +
+  
   MKHthemes::xy_theme()
 @
 
 
-<<LampPrefsGraph, echo = FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
+lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
+                                     1.05, 1.00002, 'degree', 
+                                       stage_colour, orig_size,
+                                     1.097, 1.000005, '","', 
+                                       stage_colour, orig_size-3,
+                                     1.15, 1.000004, '"*"', 
+                                       stage_colour, star_size,
+                                     0.7, 1.00008, 'degree',
+                                       line_label_colour, orig_line_label_size,
+                                     1.57, 0.9998, 'degree',
+                                       line_label_colour, orig_line_label_size,
+                                     0.7, 0.999988, '"*"', 
+                                       line_label_colour, star_line_label_size,
+                                     3.5, 0.99989, '"*"',
+                                       line_label_colour, star_line_label_size,
+                                     0.96, 0.99984, 'c', 
+                                       abcd_colour, abcd_size,
+                                     2.4, 0.999815, '"^"',
+                                       stage_colour, hat_size,
+                                     0.7, 0.999885, '"^"',
+                                       line_label_colour, hat_line_label_size,
+                                     3.4, 0.99979, '"^"', 
+                                       line_label_colour, hat_line_label_size,
+                                     2.48, 0.999857, 'd',
+                                       abcd_colour, abcd_size,
+                                     2.5, 1.000287, 'bold("_")', 
+                                       stage_colour, bar_size,
+                                     0.7, 1.00033, '"_"',  
+                                       line_label_colour, bar_line_label_size,
+                                     3.5, 1.00023, '"_"',  
+                                       line_label_colour, bar_line_label_size,
+                                     2.46, 0.9998, 'r', 
+                                       abcd_colour, r_line_label_size,
+                                     2.46, 1.0004, 'r',
+                                       abcd_colour, r_line_label_size,
+                                     0.75, 1.00016, 'i*degree',
+                                       line_label_colour, i_line_label_size,
+                                     3.4, 0.99984, 'i*degree',
+                                       line_label_colour, i_line_label_size,
+                                     1.21, 1.0004, 'bar(i)',
+                                       line_label_colour, i_line_label_size,
+                                     3.4, 1.00027, 'bar(i)',
+                                       line_label_colour, i_line_label_size,
+                                     )
 rebound_results %>% 
   ReboundTools::rebound_graphs(cases = "Lamp", 
                                graph_types = "Preferences") + 
+    ggplot2::geom_text(data = lamp_prefs_labels, 
+                     mapping = ggplot2::aes(x = x, 
+                                            y = y, 
+                                            label = lab, 
+                                            colour = colour, 
+                                            size = size), 
+                     parse = TRUE) +
   ggplot2::xlim(0.7, 3.5) +
-  ggplot2::ylim(0.9998, 1.0004) +
+  ggplot2::ylim(0.99979, 1.0004) +
   MKHthemes::xy_theme()
 @
 
@@ -2438,7 +2923,15 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of post-substitution point}
+\section{Mathematical details of rebound path graphs}
+\label{sec:graph_details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/rebound_path_graph_details.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Derivation of post-substitution ($\wedge$) point}
 \label{sec:post_sub_derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
