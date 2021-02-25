@@ -1066,7 +1066,7 @@ because actual and expected energy savings are identical.
   Re_{dempl} = 0
 \end{equation}
 %
-In fact, the 1 point 
+In fact, point $a$ 
 lies on the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
 indicating that the $Re_{tot} = 0\%$ line 
@@ -1098,7 +1098,7 @@ in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 account for the life cycle of the energy conversion device,
 including energy embodied by manufacturing (subscript $emb$) and
 maintenance and disposal (subscript $\md$).
-In th notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
+In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
