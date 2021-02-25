@@ -329,7 +329,7 @@ are discussed.
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
 \begin{equation}
-  Re_{dsub} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
+  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
 \end{equation}
 %
 Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
@@ -379,7 +379,7 @@ direct substitution rebound.
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
 \begin{equation}
-  Re_{isub} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+  Re_{isub} = \frac{\Delta \rasub{C}_o}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
 \end{equation}
 %
 Rearranging gives
@@ -393,7 +393,15 @@ $\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and
 
 \begin{equation}
   Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; .
-                                                        \tag{\ref{eq:Re_isub_prelim}}
+\end{equation}
+%
+Substituting Eq.~($\ref{eq:Sdot}$) and rearranging gives
+
+\begin{equation}
+  Re_{isub} = \frac{\frac{\rasub{C}_o}{\rorig{C}_o} - 1}{\etaratiostacked - 1} \; 
+                          \etaratiostacked \; 
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
+                              \tag{\ref{eq:Re_isub_prelim}}
 \end{equation}
 %
 Eq.~(\ref{eq:Re_isub_prelim}) is the basis for
