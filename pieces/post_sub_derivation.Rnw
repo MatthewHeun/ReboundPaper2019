@@ -258,7 +258,7 @@ Substituting Eq.~\ref{eq:Sdot} gives
 Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
 
 \begin{equation}
-  Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
+  Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
 
 Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
@@ -268,25 +268,99 @@ as expected.
 Negative rebound indicates that indirect substitution reduces the energy takeback by direct substitution.
 
 
-
-
-
-
-
-
-
-
 %++++++++++++++++++++++++++++++
 \subsection{Exact method}
 \label{sec:Resub_exact_method}
 %++++++++++++++++++++++++++++++
 
+The approximate method assumes (incorrectly) that 
+the energy service price elasticity of energy service consumption ($\eqsps$) and
+the energy service price elasticity of other goods consumption ($\eqops$)
+are constant along an indifference curve.
+These assumptions are approximations that hold only 
+for infinitesimally small energy service price changes 
+($\Delta \aempl{p}_s \approx 0$).
+However, in the case of an energy efficiency upgrade (EEU), 
+the energy service price change is not infinitesimal.
+Rather, 
+$\Delta \aempl{p}_s$ is finite and may be large.
+
+To determine the new consumption bundle after the substitution effect 
+($\rasub{q}_s$ and $\rasub{C}_o$)
+and,
+ultimately, to quantify the direct and indirect substitution rebound effects
+($Re_{dsub}$ and $Re_{isub}$) exactly,
+we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
+must be constant along an indifference curve.
+Instead, recognizing that we employ a constant elasticity of substitution (CES)
+utility function,
+we require constancy of only
+the elasticity of substitution ($\sigma$) between
+the consumption rate of the energy service ($\rate{q}_s$)
+and the expenditure rate for other goods ($\rate{C}_o$).
+
+Figure~\ref{fig:ExamplePrefsPathGraph} 
+(especially segments \starc{} and \chat{})
+illustrates features
+of the exact method for determining the new consumption bundle.
+Two equations are helpful for this analysis.
+First, the slope at any point on indifference curve \iicirc{} 
+is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
+$\rate{u}/\rbempl{u} = 1$ and 
+share parameter $a$ replaced by $\fCs$,
+as discussed in Appendix~\ref{sec:utility_model}.
+
+\begin{align} \label{eq:slope_indifference_curve_u1}
+  \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
+        -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber  \\
+        &\times \left[ \left( \frac{1}{1 - \fCs} \right) 
+                - \left( \frac{\fCs}{1 - \fCs} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho} \; .
+\end{align}
+%
+Second, the equation of the \starstar{} expenditure line is
+
+\begin{equation} \label{eq:starstar_line}
+  \frac{\rate{C}_o}{\rbempl{C}_o} = 
+      -\frac{\aprod{p}_s \rbempl{q}_s}
+            {\rbempl{C}_o}
+        \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
+      + \frac{1}{\rbempl{C}_o} 
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+\end{equation}
 
 
 %------------------------------
 \subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
 \label{sec:Redsub_exact}
 %------------------------------
+
+To find the rate of energy service consumption after the substitution effect
+($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
+equal to the slope of the \iicirc{} indifference curve
+when $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
+
+\begin{equation}
+  -\frac{\aprod{p}_s \rbempl{q}_s}
+        {\rbempl{C}_o} = 
+    -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} % \nonumber  \\
+        \left[ \left( \frac{1}{1 - \fCs} \right) 
+                - \left( \frac{\fCs}{1 - \fCs} \right) 
+                          \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1 - \rho)/\rho}
+\end{equation}
+%
+Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
+
+\begin{equation} \label{eq:q_s_solution}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs) 
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
+\end{equation}
+
+Eq.~(\ref{eq:q_s_solution}) can be substituted directly
+into Eq.~(\ref{eq:Re_dsub_prelim})
+to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
+via the exact method.
 
 
 %------------------------------
