@@ -577,7 +577,7 @@ so the final energy purchaser (i.e., the device owner) is a price taker.
 would require a full-economy model that is beyond the scope of this paper.)
 
 Note that
-the vocabulary and mathematical notation for rebound is extensive;
+the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
 notation elements (symbols, Greek letters, decorations, and subscripts)
 used throughout the paper.
@@ -1037,7 +1037,7 @@ The indirect effects of EEU emplacement are
         (segment \ab{} in Fig.~\ref{fig:ExampleCostPathGraph}), and 
         
   \item changes in the maintenance and disposal energy and cost rates 
-        ($\Delta \raempl{E}_{md}$ and $\Delta \raempl{C}_{md}$)
+        ($\Delta \raempl{E}{\md}$ and $\Delta \raempl{C}{\md}$)
         (segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
     
 \end{enumerate*}
@@ -1102,13 +1102,13 @@ In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}),
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and lesser maintenance and disposal cost rate ($\raempl{C}_{md} < \rbempl{C}_{md}$).
+and lesser maintenance and disposal cost rate ($\raempl{C}{\md} < \rbempl{C}{\md}$).
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
 consistent with reduced capital costs
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
 reduced maintenance and disposal costs
-($\raempl{C}_{md} < \rbempl{C}_{md}$).
+($\raempl{C}{\md} < \rbempl{C}{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
 embodied energy and capital costs (segments \ab{}) 
@@ -1175,7 +1175,7 @@ Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
-to form cost rates such that $\rbempl{C}_{md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
+to form cost rates such that $\rbempl{C}{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
 $\raempl{C}_{\md} = \raempl{C}_{m} + \aempl{C}_d/\aempl{t}_{\life}$.
 
