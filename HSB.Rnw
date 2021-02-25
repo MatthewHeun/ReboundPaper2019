@@ -1346,7 +1346,8 @@ and
                                                 ^{1/\rho} \; .
 \end{equation}
 
-The above values are used directly in 
+Values calculated by Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution})
+can be used directly in 
 Eqs.~(\ref{eq:Re_dsub_prelim}) and~(\ref{eq:Re_isub_prelim})
 to estimate direct and indirect substitution rebound effects.
 See Appendix~\ref{sec:Re_sub} for further details
