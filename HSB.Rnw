@@ -2930,13 +2930,13 @@ using an early version of this framework.
 \input{pieces/rebound_path_graph_details.tex}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of post-substitution ($\wedge$) point}
-\label{sec:post_sub_derivation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-<<test, child='pieces/post_sub_derivation.Rnw'>>=
-@
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Derivation of post-substitution ($\wedge$) point}
+% \label{sec:post_sub_derivation}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% <<test, child='pieces/post_sub_derivation.Rnw'>>=
+% @
 
 
 \end{document}
