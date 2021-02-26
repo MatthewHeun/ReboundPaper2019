@@ -741,7 +741,7 @@ indirect energy consumption rate ($\rate{E}_{indir}$) on the vertical axis
 and
 direct energy consumption rate ($\rate{E}_{dir}$) on the horizontal axis.
 Lines with negative slope through points 
-$\circ$, 1, $*$, $\wedge$, --, and $\sim$
+$\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate constant total energy consumption
 (direct and indirect) at each of those points.
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
@@ -2912,6 +2912,14 @@ using an early version of this framework.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{pieces/proof_income_elasticities.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical details of rebound path graphs}
+\label{sec:graph_details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/rebound_path_graph_details.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
