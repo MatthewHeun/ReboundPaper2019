@@ -328,7 +328,7 @@ are discussed.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
 \end{equation}
 %
@@ -378,8 +378,8 @@ direct substitution rebound.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation}
-  Re_{isub} = \frac{\Delta \rasub{C}_o}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\begin{equation} \label{eq:Re_isub_def}
+  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
 \end{equation}
 %
 Rearranging gives
@@ -941,55 +941,6 @@ to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
 
-% ===========================
-% 
-% In this framework,
-% any net income not spent on procuring more of the energy service
-% goes toward consumption of other goods in the economy.
-% Rebound from the indirect income effect involves 
-% the energy implications of spending net income ($\rbinc{N}$)
-% on those other goods in the economy.
-% 
-% As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
-% 
-% \begin{equation}
-%   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
-% \end{equation}
-% %
-% The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
-% can be found by rearranging the budget constraint for the income effect 
-% (Eq.~(\ref{eq:inc_budget_constraint})) to be 
-% $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
-% Substituting gives
-% 
-% \begin{equation}
-%   Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
-% \end{equation}
-% %
-% Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
-% 
-% \begin{equation}
-%   Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
-% \end{equation}
-% %
-% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
-% 
-% \begin{equation}
-%   Re_{iinc} = \Reiinceqnapprox{} \; . \tag{\ref{eq:Re_iinc}}
-% \end{equation}
-% 
-% This equation shows that a good first estimate for indirect income rebound
-% is $p_E I_E$.
-% Positive rebound from capital expenditures~($Re_{cap}$), 
-% maintenance and disposal~($Re_{\md}$),
-% direct substitution~($Re_{dsub}$), 
-% indirect substitution~($Re_{isub}$), and 
-% direct income~($Re_{dinc}$)
-% reduce the indirect income effect rebound, 
-% because each reduces net income available to the device owner to spend on other goods in the economy.
-% Any negative rebound effects enhance the indirect income effect rebound, because 
-% they add to the net income available to the device owner to spend on other goods in the economy.
-
 
 %------------------------------
 \subsubsection{\Prodeffect{}} 
@@ -1008,7 +959,7 @@ Substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$) gives
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$
-and Eqs.~(\ref{eq:Re_md_def}), (\ref{eq:Re_dsub_def}), and (\ref{eq:Re_isub_dev})
+and Eqs.~(\ref{eq:Re_md_def}), (\ref{eq:Re_dsub_def}), and (\ref{eq:Re_isub_def})
 for rebound terms gives
 
 \begin{equation}
@@ -1026,16 +977,6 @@ Canceling terms and defining $Re_{cap}$ as
 \end{equation}
 %
 gives
-
-% \begin{equation} \label{eq:N_dot_I_E_Sdot}
-%   Re_{\productivity} = k p_E I_E
-%                                 - k Re_{cap}
-%                                 - k Re_{\md}
-%                                 - k p_E I_E Re_{dsub}
-%                                 - k Re_{isub} \; .
-% \end{equation}
-% 
-% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) into Eq.~(\ref{eq:Re_prod_def}) gives
 
 \begin{equation}
   Re_{\productivity} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
@@ -1091,13 +1032,13 @@ Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values,
   
   \item $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
   
-  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+  \item $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim}) and (\ref{eq:q_s_solution})),
   
-  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_prelim}) and (\ref{eq:C_o_solution})), 
   
-  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and
+  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc}) and (\ref{eq:q_s_solution})), and
   
-  \item $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})),
+  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc}) and (\ref{eq:C_o_solution})),
 
 \end{itemize}
 %
