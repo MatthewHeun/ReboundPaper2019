@@ -48,7 +48,8 @@
 % \newcommand{\OM}{O\!M}
 % \newcommand{\md}{O\!M\!d}
 \newcommand{\md}{md}
-\newcommand{\productivity}{pr\!od}
+% Can't be \prod, because \prod is already a command for the product symbol.
+\newcommand{\productivity}{pr\!od} 
 \newcommand{\life}{li\!f\!e}
 
 
@@ -314,12 +315,11 @@ bottom=2pt}
 \newcommand{\incprefoeqn}{\frac{\rainc{q}_o}{\rbinc{q}_o} = \left( 1 + \frac{\rbinc{N}}{\Mdothatprime}  \right) ^{\eqoM}}
 
 % Equation for effective income
-\newcommand{\effinceqn}{\Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+\newcommand{\effinceqn}{\Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} 
                         - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o}
                         
 % CES utility equation
-\newcommand{\cesutility}{  \frac{\rate{u}}{\rbempl{u}} = 
-  \left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
+\newcommand{\cesutility}{\left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
         + (1-\fCs) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}}
 
 
@@ -331,10 +331,12 @@ bottom=2pt}
 %   #4: right character
 % Note that \raisebox{0.9 mm} moves the line up from the baseline.
 % Also, \line(1,0){12} gives a horizontal line with length "12" (unknown units!)
+% (1, 0) is the slope (1 unit to right, 0 units up).
 \newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.88 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
 
 % Construction lines
 \newcommand{\iicirc}{\seg{$\bempl{\text{i}}$}{black}{0.3 mm}{$\,\bempl{\text{i}}$}}
+\newcommand{\iibar}{\seg{$\bprod{\text{i}}$}{black}{0.3 mm}{$\,\bprod{\text{i}}$}}
 \newcommand{\rr}{\seg{r}{black}{0.1 mm}{r}}
 \newcommand{\circcirc}{\seg{$\circ$}{black}{0.1 mm}{$\circ$}}
 \newcommand{\starstar}{\seg{$*$}{black}{0.1 mm}{$*$}}
@@ -343,7 +345,8 @@ bottom=2pt}
 
 % Line segments
 \newcommand{\circa}{\seg{$\circ$}{emplcolor}{0.6 mm}{a}}
-\newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+% \newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+\newcommand{\ab}{a\tikz[baseline=-0.6ex]\draw [line width=0.6mm,dotted,emplcolor] (0,0) -- (0.45,0);b}
 \newcommand{\bstar}{\seg{b}{emplcolor}{0.6 mm}{$*$}}
 \newcommand{\starc}{\seg{$*$}{subcolor}{0.6 mm}{$\,$c}}
 \newcommand{\chat}{\seg{c$\,$}{subcolor}{0.6 mm}{$\wedge$}}
@@ -351,11 +354,4 @@ bottom=2pt}
 \newcommand{\dbar}{\seg{d}{inccolor}{0.6 mm}{$\,-$}}
 \newcommand{\hatbar}{\seg{$\wedge$}{inccolor}{0.6 mm}{$\,-$}}
 \newcommand{\bartilde}{\seg{$- \,$}{prodcolor}{0.6 mm}{$\, \sim$}}
-
-
-
-
-
-
-
 

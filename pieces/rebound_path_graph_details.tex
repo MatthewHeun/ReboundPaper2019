@@ -66,7 +66,7 @@ Direct energy consumption is energy consumed by the energy conversion device
 indirect energy consumption is the sum of embodied energy, 
 energy associated with maintenenace and disposal, and energy associated 
 with expenditures on other goods
-($\rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$).
+($\rate{E}_{emb} + (\rate{C}{\md} + \rate{C}_o) I_E$).
 
 For the energy path graph, 
 indirect energy consumption is placed on the ordinate
@@ -80,14 +80,14 @@ we first rearrange to put the $y$ coordinate on the left of the equation:
 %
 Next, we substitute $y$ for $\rate{E}_{indir}$,
 $x$ for $\rate{E}_{dir}$, and 
-$\rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E$ for $\rate{E}_{tot}$
+$\rate{E}_s + \rate{E}_{emb} + (\rate{C}{\md} + \rate{C}_o) I_E$ for $\rate{E}_{tot}$
 to obtain
 
 \begin{equation}
-  y = -x + \rate{E}_s + \rate{E}_{emb} + (\rate{C}_{md} + \rate{C}_o) I_E \; ,
+  y = -x + \rate{E}_s + \rate{E}_{emb} + (\rate{C}{\md} + \rate{C}_o) I_E \; ,
 \end{equation}
 %
-where all of $\rate{E}_s$, $\rate{E}_{emb}$, $\rate{C}_{md}$, and $\rate{C}_o$
+where all of $\rate{E}_s$, $\rate{E}_{emb}$, $\rate{C}{\md}$, and $\rate{C}_o$
 apply at the same rebound stage of Fig.~\ref{fig:flowchart}.
 
 The constant total energy consumption line 
@@ -95,7 +95,7 @@ that passes through the original point ($\circ$)
 shows 100\% rebound:
 
 \begin{equation}
-  y = -x + \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}_{md} + \rbempl{C}_o) I_E \; .
+  y = -x + \rbempl{E}_s + \rbempl{E}_{emb} + (\rbempl{C}{\md} + \rbempl{C}_o) I_E \; .
 \end{equation}
 
 The 0\% rebound line is the constant total energy consumption line 
@@ -103,7 +103,7 @@ that accounts for expected energy savings ($\Sdot$) only:
 
 \begin{equation}
   y = -x + (\rbempl{E}_s - \Sdot)
-          + \rbempl{E}_{emb} + (\rbempl{C}_{md} + \rbempl{C}_o) I_E \; .
+          + \rbempl{E}_{emb} + (\rbempl{C}{\md} + \rbempl{C}_o) I_E \; .
 \end{equation}
 %
 The above line passes through the $a$ point on an energy path graph.
@@ -136,7 +136,7 @@ Direct expenditure is the cost of energy consumed by the energy conversion devic
 indirect expenses are the sum of capital costs, 
 maintenenace and disposal costs, and 
 expenditures on other goods
-($\rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o$).
+($\rate{C}_{cap} + \rate{C}{\md} + \rate{C}_o$).
 Rearranging to put the $y$-axis variable on the left side of the equation gives
 
 \begin{equation}
@@ -145,14 +145,14 @@ Rearranging to put the $y$-axis variable on the left side of the equation gives
 
 Substituting $y$ for $\rate{C}_{indir}$, 
 $x$ for $\rate{C}_{dir}$, and 
-$\rate{C}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o$ for $\rate{C}_{tot}$
+$\rate{C}_s + \rate{C}_{cap} + \rate{C}{\md} + \rate{C}_o$ for $\rate{C}_{tot}$
 gives
 
 \begin{equation}
-  y = -x + \rate{C}_s + \rate{C}_{cap} + \rate{C}_{md} + \rate{C}_o \; ,
+  y = -x + \rate{C}_s + \rate{C}_{cap} + \rate{C}{\md} + \rate{C}_o \; ,
 \end{equation}
 %
-where all of $\rate{C}_s$, $\rate{C}_{cap}$, $\rate{C}_{md}$, and $\rate{C}_o$
+where all of $\rate{C}_s$, $\rate{C}_{cap}$, $\rate{C}{\md}$, and $\rate{C}_o$
 apply at the same rebound stage of Fig.~\ref{fig:flowchart}.
 
 The constant total expenditure line 
@@ -160,7 +160,7 @@ that passes through the original point ($\circ$)
 shows the budget constraint for the device owner:
 
 \begin{equation}
-  y = -x + \rbempl{C}_s + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rbempl{C}_o \; ,
+  y = -x + \rbempl{C}_s + \rbempl{C}_{cap} + \rbempl{C}{\md} + \rbempl{C}_o \; ,
 \end{equation}
 %
 or
@@ -175,7 +175,7 @@ and gross costs savings ($\rate{G} = p_E \Sdot$) only
 is given by:
 
 \begin{equation}
-  y = -x + (\rbempl{C}_s - \rate{G}) + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rbempl{C}_o \; ,
+  y = -x + (\rbempl{C}_s - \rate{G}) + \rbempl{C}_{cap} + \rbempl{C}{\md} + \rbempl{C}_o \; ,
 \end{equation}
 %
 or
@@ -223,7 +223,7 @@ are derived from the budget constraint of the device owner.
 Before the EEU, the budget constraint is
 
 \begin{equation}
-  \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}_{md} + \rate{C}_o \; .
+  \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}{\md} + \rate{C}_o \; .
 \end{equation}
 %
 Note that the cost rate of other goods and the rate of energy service consumption
@@ -237,7 +237,7 @@ in preference path graphs),
 we solve for $\rate{C}_o$ to obtain
 
 \begin{equation}
-  \rate{C}_o = - \bempl{p}_s \rate{q}_s + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} \; .
+  \rate{C}_o = - \bempl{p}_s \rate{q}_s + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} \; .
 \end{equation}
 %
 Multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl{q}_s$ gives
@@ -245,7 +245,7 @@ Multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl
 \begin{equation}
   \frac{\rate{C}_o}{\rbempl{C}_o} \rbempl{C}_o
        = - \bempl{p}_s \frac{\rate{q}_s}{\rbempl{q}_s} \rbempl{q}_s 
-         + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} \; .
+         + \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} \; .
 \end{equation}
 %
 Dividing both sides by $\rbempl{C}_o$ yields
@@ -253,7 +253,7 @@ Dividing both sides by $\rbempl{C}_o$ yields
 \begin{equation}
   \frac{\rate{C}_o}{\rbempl{C}_o}
        = - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} \frac{\rate{q}_s}{\rbempl{q}_s}
-         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md}) \; .
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md}) \; .
 \end{equation}
 %
 Noting that $\frac{\rate{C}_o}{\rbempl{C}_o}$ and 
@@ -263,7 +263,7 @@ on a preferences path graph gives
 
 \begin{equation} \label{eq:orig_line_prefs}
   y = - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
-         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md}) \; .
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md}) \; .
 \end{equation}
 
 A similar procedure can be employed to derive the equation of 
@@ -272,7 +272,7 @@ after the emplacement effect.
 The budget constraint at the $*$ point is
 
 \begin{equation}
-  \rbempl{M} = \aprod{p}_s \rate{q}_s + \raempl{C}_{cap} + \raempl{C}_{md} + \rate{C}_o + \raempl{N} \; .
+  \rbempl{M} = \aprod{p}_s \rate{q}_s + \raempl{C}_{cap} + \raempl{C}{\md} + \rate{C}_o + \raempl{N} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:N_dot_star_empl}) for $\raempl{N}$,
@@ -284,7 +284,7 @@ $\frac{\rate{q}_s}{\rbempl{q}_s}$ is the ordinate gives
 
 \begin{equation} \label{eq:star_line_prefs}
   y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
-         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} - \rate{G}) \; .
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} - \rate{G}) \; .
 \end{equation}
 %
 Note that the slope of Eq.~(\ref{eq:star_line_prefs}) is less negative
@@ -304,7 +304,7 @@ after the substitution effect (\hathat{} line through the $\wedge$ point) to be
 
 \begin{equation} \label{eq:hat_line_prefs}
   y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
-         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
+         + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} 
                                    - \rate{G} + \aprod{p}_s \Delta \rasub{q}_s + \Delta \rasub{C}_o) \; .
 \end{equation}
 
@@ -317,8 +317,8 @@ $-$ point (\barbar{}) is given by
 
 \begin{equation} \label{eq:bar_line_prefs}
   y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
-        + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{md} 
-                                   - \Delta \raempl{C}_{cap} - \Delta \raempl{C}_{md}) \; .
+        + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} 
+                                   - \Delta \raempl{C}_{cap} - \Delta \raempl{C}{\md}) \; .
 \end{equation}
 
 
