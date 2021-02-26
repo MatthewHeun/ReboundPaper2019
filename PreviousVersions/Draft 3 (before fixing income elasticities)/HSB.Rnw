@@ -995,7 +995,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 an expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqn{} \; .
+  Re_{dinc} = \Redinceqnapprox{} \; .
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 

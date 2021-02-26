@@ -1354,6 +1354,8 @@ and
           \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\}
                                                 ^{1/\rho} \; .
 \end{equation}
+%
+See Appendix~\ref{sec:Resub_exact_method} for details.
 
 Values calculated by Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution})
 can be used directly in 
@@ -1367,8 +1369,6 @@ and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
 \subsubsection{\Inceffect}
 \label{sec:inc_effect_main_paper}
 %------------------------------
-
-****Add references to notional graphs in this section. ****
 
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
@@ -1430,7 +1430,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqn{} \; .
+  Re_{dinc} = \Redinceqnapprox{} \; .
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 
@@ -2137,8 +2137,6 @@ rebound_results %>%
         format.args = list(big.mark = ","), 
         math.style.negative = TRUE)
 @
-
-
 
 
 The \empleffect{} has three components:

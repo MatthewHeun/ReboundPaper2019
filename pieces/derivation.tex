@@ -362,10 +362,10 @@ Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
-              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+              \left( \frac{\cancel{\rbempl{E}_s} \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}    }{  \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}    \cancel{\rbempl{E}_s}} \right) \; .
 \end{equation}
 %
-Simplifying yields
+Canceling terms yields
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; .
@@ -416,7 +416,7 @@ indirect substitution rebound.
 
 
 %------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
+\subsubsection{Direct substitution rebound ($Re_{dsub}$), approximate method} 
 \label{sec:Redsub_approx}
 %------------------------------
 
@@ -472,7 +472,7 @@ can never cause backfire.
 
 
 %------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
+\subsubsection{Indirect substitution rebound ($Re_{isub}$), approximate method} 
 \label{sec:Reisub_approx}
 %------------------------------
 
@@ -630,7 +630,7 @@ Second, the equation of the \starstar{} expenditure line is
 
 
 %------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
+\subsubsection{Direct substitution rebound ($Re_{dsub}$), exact method} 
 \label{sec:Redsub_exact}
 %------------------------------
 
@@ -664,7 +664,7 @@ via the exact method.
 
 
 %------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
+\subsubsection{Indirect substitution rebound ($Re_{isub}$), exact method} 
 \label{sec:Reisub_exact}
 %------------------------------
 
@@ -872,18 +872,18 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
                   \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Eliminating terms and substituting
-Eq.~(\ref{eq:q_ratio_func_of_eps}) for $\rasub{q}_s / \rbsub{q}_s$ gives
+Eliminating terms and recognizing that 
+$\rorig{q}_s = \raempl{q}_s$ gives
 
 \begin{equation} 
-  Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
+  Re_{dinc} = \Redinceqnexact{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
-
+%
+Eq.~(\ref{eq:q_s_solution}) 
+can be substituted into Eq.~(\ref{eq:Re_dinc})
+to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities gets stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
-direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
 using the income preference for other goods consumption.
