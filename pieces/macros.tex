@@ -331,6 +331,7 @@ bottom=2pt}
 %   #4: right character
 % Note that \raisebox{0.9 mm} moves the line up from the baseline.
 % Also, \line(1,0){12} gives a horizontal line with length "12" (unknown units!)
+% (1, 0) is the slope (1 unit to right, 0 units up).
 \newcommand{\seg}[4]{#1\linethickness{#3}\raisebox{0.88 mm}{\textcolor{#2}{\line(1,0){12}}}#4}
 
 % Construction lines
@@ -344,7 +345,8 @@ bottom=2pt}
 
 % Line segments
 \newcommand{\circa}{\seg{$\circ$}{emplcolor}{0.6 mm}{a}}
-\newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+% \newcommand{\ab}{\seg{a}{emplcolor}{0.6 mm}{b}}
+\newcommand{\ab}{a\tikz[baseline=-0.6ex]\draw [line width=0.6mm,dotted,emplcolor] (0,0) -- (0.45,0);b}
 \newcommand{\bstar}{\seg{b}{emplcolor}{0.6 mm}{$*$}}
 \newcommand{\starc}{\seg{$*$}{subcolor}{0.6 mm}{$\,$c}}
 \newcommand{\chat}{\seg{c$\,$}{subcolor}{0.6 mm}{$\wedge$}}
@@ -354,6 +356,8 @@ bottom=2pt}
 \newcommand{\bartilde}{\seg{$- \,$}{prodcolor}{0.6 mm}{$\, \sim$}}
 
 
+
+ 
 
 
 

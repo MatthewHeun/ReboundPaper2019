@@ -27,7 +27,7 @@
 \usepackage{ulem}               % For strikeout command (\sout)
 \usepackage{xcolor}             % For ... colors
 
-\usepackage{hyperref} % hyperref should be the last package loaded
+\usepackage{hyperref}           % hyperref should be the last package loaded
 
 
 %% Macros defined by authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -734,7 +734,8 @@ Important quantities for the derivations are
 %
 These important rebound quantities can be illustrated via
 rebound path graphs.
-
+(See Appendix~\ref{sec:graph_details} for a
+detailed mathematical description of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
 notional rebound path graphs for energy consumption, expenditures, and preferences.
 The notional path graphs are not quantified; there is no scale on the axes.
@@ -1022,8 +1023,8 @@ We begin with the emplacement effect.
 
 The emplacement effect (segments \circa{}, \ab{}, and \bstar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
-accounts for performance of the EEU only.
-Behavior changes are addressed later, 
+accounts for performance of the EEU only;
+behavior changes are addressed later, 
 in the substitution and income effects. 
 The direct emplacement effect of the EEU is
 device energy savings and energy cost savings
@@ -1921,7 +1922,7 @@ rebound_results %>%
 Results can be represented graphically in energy, cost, preference path graphs.
 
 An energy path graph (Figure~\ref{fig:CarEnergyGraph})
-shows the effect of each rebound effect.
+shows the size of each rebound effect.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
@@ -2885,14 +2886,6 @@ using an early version of this framework.
 
 \input{pieces/rebound_path_graph_details.tex}
 
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Derivation of post-substitution ($\wedge$) point}
-% \label{sec:post_sub_derivation}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% <<test, child='pieces/post_sub_derivation.Rnw'>>=
-% @
 
 
 \end{document}
