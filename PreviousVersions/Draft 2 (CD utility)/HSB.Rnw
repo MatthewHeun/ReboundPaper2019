@@ -1045,7 +1045,7 @@ After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
 %
 \begin{equation} \label{eq:Re_iinc}
-  Re_{iinc} = \Reiinceqn{} \; .
+  Re_{iinc} = \Reiinceqnapprox{} \; .
 \end{equation}
 
 Eq.~(\ref{eq:Re_iinc}) shows that a good first estimate for indirect income rebound

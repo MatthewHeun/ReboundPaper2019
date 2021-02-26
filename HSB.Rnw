@@ -1430,7 +1430,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqnapprox{} \; .
+  Re_{dinc} = \Redinceqnexact{} \; .
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 
@@ -1462,7 +1462,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
-  Re_{iinc} = \Reiinceqn{} \; .
+  Re_{iinc} = \Reiinceqnexact{} \; .
 \end{equation}
 
 In the midst of the income effect analysis, a capital expenses rebound term appears:

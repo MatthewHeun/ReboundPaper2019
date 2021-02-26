@@ -286,14 +286,20 @@ bottom=2pt}
 
 % Equation for Re_dinc, exact method
 \newcommand{\Redinceqnexact}{\frac{ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1}
-              { \etaratiostacked - 1 } \frac{\rasub{q}_s}{\rorig{q}_s}}
+              { \etaratiostacked - 1 } \left( \frac{\rasub{q}_s}{\rorig{q}_s} \right) }
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
 
-% Equation for Re_iinc
-\newcommand{\Reiinceqn}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+% Equation for Re_iinc, approximate method
+\newcommand{\Reiinceqnapprox}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
               \left( \etaratiostacked \right)^{1 - \eqops}
+              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+
+% Equation for Re_iinc, exact method
+\newcommand{\Reiinceqnexact}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+              \left( \etaratiostacked \right)
+              \left( \frac{\rasub{C}_o}{\rorig{C}_o} \right) 
               \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_d (total direct rebound)
