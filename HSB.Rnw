@@ -557,7 +557,6 @@ that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
 The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
-
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\aprod{\eta} > \bempl{\eta}$,
@@ -576,14 +575,23 @@ so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
 
+Initially, the device owner spends income ($\rorig{M}$)
+on final energy for the device ($\rorig{C}_s = p_E \rorig{E}_s$), 
+annualized capital costs for the device ($\rorig{C}_{cap}$), 
+annualized costs for maintenance and disposal of the device ($\rorig{C}_{\md}$), and 
+other goods and services ($\rorig{C}_o$).
+The budget constraint
+for the device owner is
+
+\begin{equation} \label{eq:budget_constraint}
+  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} \; .
+\end{equation}
+
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
 notation elements used throughout the paper, including
 symbols, Greek letters, decorations, and subscripts.
-(Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
-it does not necessarily represent 
-the progression of rebound effects through time.)
 The notation elements 
 can be mixed to comprise a rich and expressive ``language'' of energy rebound.
 We use colored backgrounds on rebound effects for visual convenience. 
@@ -592,10 +600,12 @@ We use colored backgrounds on rebound effects for visual convenience.
 \centering
   % The file is a Tikz picture.
   \input{pieces/flowchart.tex}
-\caption{Flowchart of effects and decorations.}
+\caption{Flowchart of rebound effects and decorations.
+         Rebound effects are arranged in the order of their discussion in this paper.
+         The left-ro-right order does not necessarily represent 
+         the progression of rebound effects through time.}
 \label{fig:flowchart}
 \end{figure}
-
 
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
@@ -626,13 +636,7 @@ relative to the expected final energy savings rate, sometimes called hyperconser
 Thus,
 
 \begin{equation}
-  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; ,
-\end{equation}
-%
-or
-
-\begin{equation}
-  Re = 1 - 1 + \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
+  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
 Simplifying gives
@@ -659,11 +663,13 @@ unless there is reason to indicate a specific stage of the energy conversion cha
 \label{sec:energy_and_cost_relationships}
 %++++++++++++++++++++++++++++++
 
-With the rebound notation of Appendix~\ref{sec:nomenclature}, four typical relationships emerge.
+With the rebound notation of Appendix~\ref{sec:nomenclature}, 
+four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
-the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
-Typical units for automotive transport and illumination are provided.
+the rate of energy consumption by the service-producing machine~($\rate{E}_s$).
+Typical units for automotive transport and illumination
+(examples in Section~\ref{sec:examples}) are provided.
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -693,9 +699,6 @@ Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
-In the following section, 
-we discuss four rebound effects.
-
 
 %++++++++++++++++++++++++++++++
 \subsection{Rebound effects}
@@ -711,14 +714,14 @@ In each subsection, we
 	
   \item define each rebound effect and
   
-  \item provide rebound expressions.
+  \item develop mathematical rebound expressions.
     
 \end{enumerate*}
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
-which provide a structure for energy and financial accounting.
+which provide a structure for parallel energy and financial accounting.
 
 Important quantities for the derivations are
 %
@@ -726,22 +729,25 @@ Important quantities for the derivations are
 	
   \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
   
-  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), and
+  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), 
   
-  \item the consumption rate of the energy service ($\rate{q}_s$).
+  \item the consumption rate of the energy service ($\rate{q}_s$), and
+  
+  \item the consumption rate of other goods ($\rate{C}_o$).
     
 \end{enumerate*}
 %
 These important rebound quantities can be illustrated via
 rebound path graphs.
-(See Appendix~\ref{sec:graph_details} for a
-detailed mathematical description of rebound path graphs.)
+(See Appendix~\ref{sec:graph_details} for 
+detailed mathematical descriptions of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
 notional rebound path graphs for energy consumption, expenditures, and preferences.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate numerical examples.
-Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
+
+Fig.~\ref{fig:ExampleEnergyPathGraph} shows a notional energy path graph, with 
 direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
 and
 indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
@@ -749,13 +755,15 @@ Lines with negative slope through points
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate constant total energy consumption
 (direct and indirect) at each of those points.
+
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
 direct expenses on the energy service ($\rate{C}_{dir}$) on the abscissa and 
 indirect expenses ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
 indicate constant expenditure rates (direct and indirect).
-Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+
+A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Lines of constant rates of indexed consumption of other goods and the energy service
