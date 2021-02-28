@@ -316,15 +316,15 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 
 We begin by deriving an expression for direct and indirect 
 substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
-Thereafter, an approximate method and an exact method for determining the 
-post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$)
-are discussed.
+Thereafter, we note an assumption of exogenous pries of other goods ($p_o$)
+and develop an approximate method and an exact method for determining the 
+post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Direct and indirect substitution effect rebound expressions}
-\label{sec:Redsub_Reisub_expressions}
-%++++++++++++++++++++++++++++++
+%..............................
+\paragraph{Direct substitution effect rebound expression}
+\label{sec:Redsub_expression}
+%..............................
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
@@ -376,6 +376,12 @@ Eq.~(\ref{eq:Re_dsub_prelim}) is the basis for
 developing both approximate and exact methods of determining
 direct substitution rebound.
 
+
+%..............................
+\paragraph{Indirect substitution effect rebound expression}
+\label{sec:Reisub_expression}
+%..............................
+
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
 \begin{equation} \label{eq:Re_isub_def}
@@ -409,16 +415,46 @@ developing both approximate and exact methods of determining
 indirect substitution rebound.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Approximate method}
+%..............................
+\paragraph{Exogenous $p_o$ assumption}
+\label{sec:exogenous_p_o}
+%..............................
+
+We assume a basket of other goods purchased in the economy,
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
+such that the average price of all other goods purchased in the economy~($p_o$) is given by
+
+\begin{equation}
+  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
+\end{equation}
+%
+Then, the cost rate of other purchases in the economy can be given as
+
+\begin{equation}
+  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
+\end{equation}
+%
+and
+
+\begin{equation}
+  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
+\end{equation}
+%
+Assuming that the average price is unchanged across the substitution effect,
+such that $\asub{p}_o = \bsub{p}_o$,
+the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
+and set equal to find
+
+\begin{equation} \label{eq:qo_Co_equality}
+  \frac{\rasub{C}_o}{\rbsub{C}_o} 
+      = \frac{\rasub{q}_o}{\rbsub{q}_o} \; .
+\end{equation}
+
+
+%..............................
+\paragraph{Approximate method} 
 \label{sec:Resub_approximate_method}
-%++++++++++++++++++++++++++++++
-
-
-%------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$), approximate method} 
-\label{sec:Redsub_approx}
-%------------------------------
+%..............................
 
 In the approximate method, 
 the relationship between energy service price and energy service consumption rate
@@ -470,12 +506,6 @@ direct substitution rebound will never be larger than 1.
 I.e., the direct substitution effect alone
 can never cause backfire. 
 
-
-%------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$), approximate method} 
-\label{sec:Reisub_approx}
-%------------------------------
-
 To quantify the substitution effect on other purchases in the approximate method,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$), 
@@ -497,41 +527,19 @@ efficiency, yielding
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
 \end{equation}
 
-We assume a basket of other goods purchased in the economy,
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
-such that the average price of all other goods purchased in the economy~($p_o$) is given by
-
-\begin{equation}
-  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
-\end{equation}
-%
-Then, the cost rate of other purchases in the economy can be given as
-
-\begin{equation}
-  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
-\end{equation}
-%
 Assuming that the average price is unchanged across the substitution effect,
 such that $\asub{p}_o = \bsub{p}_o$,
-the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
-and set equal, and
-Eq.~(\ref{eq:qohat_qostar}) can be added to find
+we can write
 
 \begin{equation} \label{eq:Cdot_o_ratio}
-  \frac{\rasub{C}_o}{\rbsub{C}_o} 
-      = \frac{\rasub{q}_o}{\rbsub{q}_o} 
+  \frac{\rasub{C}_o}{\rbsub{C}_o}
+      = \frac{\rasub{q}_o}{\rbsub{q}_o}
       = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
 \end{equation}
 %
-Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
+Note that Eq.~(\ref{eq:Cdot_o_ratio})
 (along with $\rbsub{C}_o = \rbempl{C}_o$)
-can be used to determine the rate of expenditures 
+can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
 \begin{equation}
@@ -567,10 +575,10 @@ Negative rebound indicates that indirect substitution effects
 reduce energy takeback by direct substitution effects.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Exact method}
+%..............................
+\paragraph{Exact method}
 \label{sec:Resub_exact_method}
-%++++++++++++++++++++++++++++++
+%..............................
 
 The approximate method assumes (incorrectly) that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
@@ -628,12 +636,6 @@ Second, the equation of the \starstar{} expenditure line is
         (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} - \rate{G}) \; .
 \end{equation}
 
-
-%------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$), exact method} 
-\label{sec:Redsub_exact}
-%------------------------------
-
 To find the rate of energy service consumption after the substitution effect
 ($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
 equal to the slope of the \iicirc{} indifference curve 
@@ -661,12 +663,6 @@ Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
 to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
 via the exact method.
-
-
-%------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$), exact method} 
-\label{sec:Reisub_exact}
-%------------------------------
 
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
 can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 

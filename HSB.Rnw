@@ -219,14 +219,8 @@ is restated by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-%The macroeconomic feedback mechanisms and their
-%size lie at
-The scale
-****
-magnitude?---MKH
-****
-of macroeconomic feedback gets to 
-***I placed some alternative text above in comments---PEB***
+The macroeconomic feedback mechanisms and their
+size lie at
 the heart of the debate,
 which continues today.
 Advocates of small rebound (say, less than 50~\%),
@@ -1453,8 +1447,8 @@ the expression for direct income rebound is
   Re_{dinc} = \Redinceqnexact{} \; ,
 \end{equation}
 %
-where **** Add equation for quantity ratio here. ****
-
+where $\frac{\rasub{q}_s}{\rorig{q}_s}$
+is given by Eq.~(\ref{eq:q_s_solution}).
 If there is no net income after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities gets stronger 
@@ -1466,7 +1460,6 @@ quantifies the amount of net income spent
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
 (See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
 The ratio of rates of other goods consumed across the income effect is given by
-***** Add equation for ratio of $\rate{C}_o$ here. *****
 
 \begin{equation} \label{eq:qorat_eqoM}
   \incprefoeqn \; 
@@ -1474,6 +1467,16 @@ The ratio of rates of other goods consumed across the income effect is given by
 %
 and is represented by segments \dbar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+Under the assumption that prices of other goods are exogenous
+(see Appendix~\ref{sec:exogenous_p_o}), 
+the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
+is equal to the ratio of rates of other goods expenditures ($\frac{\rasub{C}_o}{\rorig{C}_o}$)
+such that 
+
+\begin{equation} \label{eq:Corat_eqoM}
+  \frac{\rasub{C}_o}{\rorig{C}_o} = \left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqoM} \; .
+\end{equation}
+%
 Homotheticity means that $\eqoM = 1$.
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
@@ -1488,9 +1491,9 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqnexact{} \; ,
 \end{equation}
 %
-where **** Add equation for other goods spending ratio here. ****
+where $\frac{\rasub{C}_o}{\rorig{C}_o}$ is given by Eq.~(\ref{eq:C_o_solution}).
 
-The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:qorat_eqoM}))
+The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:Corat_eqoM}))
 must satisfy the budget constraint
 such that net income is zero after
 the income effect ($\rainc{N} = 0$).
