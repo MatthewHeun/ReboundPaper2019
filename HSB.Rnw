@@ -1736,7 +1736,7 @@ Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound
 
 
 For the first example, 
-we select the purchase of a more fuel efficient car (Ford Fusion Energi), 
+we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
 versus the incumbent (Ford Fusion SE). 
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
@@ -1944,12 +1944,11 @@ rebound_results %>%
 \label{sec:Car_results}
 %------------------------------
 
-
-
-Results can be represented graphically in energy, cost, preference path graphs.
-
-An energy path graph (Fig.~\ref{fig:CarEnergyGraph})
-shows the size of each rebound effect.
+Results are represented graphically in energy, cost, preference path graphs
+in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
+The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
+shows the size of each rebound effect
+for the car example.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
@@ -2276,7 +2275,7 @@ Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebou
 
 
 For our second example, 
-we select the option of buying a light emitting diode (LED) electric lamp, 
+we consider purchasing a light emitting diode (LED) electric lamp, 
 versus a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
 in terms of energy service delivery (measured in lumens), 
@@ -2667,6 +2666,12 @@ rebound_results %>%
 \subsubsection{Results} 
 \label{sec:lamp_results}
 %------------------------------
+
+Results are represented graphically in energy, cost, preference path graphs
+in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
+The energy path graph (Fig.~\ref{fig:LampEnergyGraph})
+shows the size of each rebound effect
+for the lamp example.
 
 The base results for the lamp upgrade are shown in Table~\ref{tab:lamp_results}.
 
