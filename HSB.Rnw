@@ -12,6 +12,7 @@
 \usepackage{amsfonts}           % For access to \checkmark.
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage{booktabs}           % For nice table rules
+\usepackage[figurename=Fig.]{caption} % For changing "Figure" to "Fig." in figure captions
 \usepackage{chngcntr}           % To get figure and table numbering correct in the appendices
 \usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage[inline]{enumitem}   % For inline enumeration
@@ -552,10 +553,11 @@ Section~\ref{sec:conclusion} concludes.
 
 In this section, we develop a mathematical model 
 for the comprehensive rebound framework.
-We assume a device (say, an automobile)
+We assume an energy conversion device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
-The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
+The energy conversion device provides a rate of energy service 
+$\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
@@ -667,9 +669,9 @@ With the rebound notation of Appendix~\ref{sec:nomenclature},
 four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
-the rate of energy consumption by the service-producing machine~($\rate{E}_s$).
+the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination
-(examples in Section~\ref{sec:examples}) are provided.
+(the examples in Section~\ref{sec:examples}) are shown
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -705,7 +707,7 @@ Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and
 \label{sec:rebound_effects}
 %++++++++++++++++++++++++++++++
 
-Expressions for the four rebound effects of Fig.~\ref{fig:flowchart} 
+The four rebound effects of Fig.~\ref{fig:flowchart} 
 (emplacement, substitution, income, and productivity)
 are discussed in subsections below,
 In each subsection, we
@@ -721,7 +723,7 @@ In each subsection, we
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
-which provide a structure for parallel energy and financial accounting.
+which provide a parallel structure for energy and financial accounting.
 
 Important quantities for the derivations are
 %
@@ -748,18 +750,18 @@ Later (Section~\ref{sec:examples}),
 rebound path graphs (with scales) illustrate numerical examples.
 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows a notional energy path graph, with 
-direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
+the direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
 and
-indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
+the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate constant total energy consumption
-(direct and indirect) at each of those points.
+(direct and indirect) at each point.
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
-direct expenses on the energy service ($\rate{C}_{dir}$) on the abscissa and 
-indirect expenses ($\rate{C}_{indir}$) on the ordinate.
+the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
+the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
 indicate constant expenditure rates (direct and indirect).
 
@@ -768,7 +770,7 @@ The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is sh
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Lines of constant rates of indexed consumption of other goods and the energy service
 are shown with negative slope. 
-Indifference curves (constant indexed utility) are denoted by \iicirc{} and \iibar{}. 
+Indifference curves of constant utility are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
 <<eeu_data, echo=FALSE>>=
@@ -1034,9 +1036,10 @@ in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only;
 behavior changes are addressed later, 
 in the substitution and income effects. 
-The direct emplacement effect of the EEU is
-device energy savings and energy cost savings
-(segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
+The direct emplacement effects of the EEU include
+device energy savings ($\Sdot$) and device energy cost savings ($\Delta \raempl{C}_s$),
+on segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} 
+and~\ref{fig:ExampleCostPathGraph}, respectively.
 The indirect effects of EEU emplacement are
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -1053,38 +1056,39 @@ The indirect effects of EEU emplacement are
     
 \end{enumerate*}
 
-Because no behavior changes are considered
-in the emplacement effect,
-actual and expected energy savings rates~($\Sdot$) are identical
-across the direct emplacement effect, namely
+The rate of energy savings
+due to the direct emplacement effect  
+($\Sdot$, segment \circa{} in Fig.~\ref{fig:ExampleEnergyPathGraph})
+is given by
 
 \begin{equation} \label{eq:S_dot_def}
   \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
 \end{equation}
 %
-Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten as
+Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
 
 \begin{equation} \label{eq:Sdot}
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-By definition, the direct emplacement effect 
-(segment \circa{}) has no rebound, 
-because actual and expected energy savings are identical.
-(See Table~\ref{tab:empleffect}.)
+Because behavior changes are not considered
+in the direct emplacement effect,
+actual and expected energy savings rates are identical~($\Sdot$).
+By definition, then, the direct emplacement effect causes no rebound.
+Thus, 
 
 \begin{equation} \label{eq:Re_dempl0}
-  Re_{dempl} = 0
+  Re_{dempl} = 0 \; .
 \end{equation}
 %
-In fact, point $a$ 
-lies on the $Re_{tot} = 0\%$ line
-in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+In the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+point $a$ lies on the $Re_{tot} = 0\%$ line
 indicating that the $Re_{tot} = 0\%$ line 
 is the basis from which all rebound effects 
 ($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\productivity}$)
 are measured.
-If total energy demand returns to the original energy consumption level 
+If rebound effects cause 
+total energy demand to return to the original energy consumption level 
 (negative sloping line through the $\circ$ point), 
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
@@ -1093,16 +1097,17 @@ Total rebound ($Re_{tot}$) is measured linearly between the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with decomposition to direct rebound in the $x$ direction and 
 indirect rebound in the $y$ direction.
-Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
-exhibit negative rebound, indicating
-hyperconservation (energy savings in excess of the expected energy savings).
-Points above and to the right of the $Re_{tot} = 100\%$ line 
-exhibit $Re_{tot} > 100\%$, indicating
-backfire (greater energy consumption after the EEU than before the EEU).
+The region below and to the left of the $Re_{tot} = 0\%$ line
+in Fig.~\ref{fig:ExampleEnergyPathGraph}
+exhibits negative rebound, indicating
+``hyperconservation'' (energy savings in excess of the expected energy savings).
+The region above and to the right of the $Re_{tot} = 100\%$ line 
+exhibits greater energy consumption after the EEU than before it,
+a condition known as ``backfire.''
 
 Although the direct emplacement effect does not cause rebound, 
-indirect emplacement effects may cause rebound, 
-as shown in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+Fig.~\ref{fig:ExampleEnergyPathGraph} shows that
+indirect emplacement effects may cause rebound.
 Indirect emplacement effects 
 (segments \ab{} and \bstar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
@@ -1111,31 +1116,32 @@ including energy embodied by manufacturing processes (subscript $emb$) and
 maintenance and disposal activities (subscript $\md$).
 In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
-because the upgraded device has lesser
+because the upgraded device has a lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
+and a lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
+than the original device.
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
-consistent with reduced capital costs
+consistent with a lower capital cost rate
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
-reduced maintenance and disposal costs
+a reduced maintenance and disposal cost rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
 embodied energy and capital costs (segments \ab{}) 
 move in the same direction (both negative), 
 but they could both move in the positive direction, or
-they could each move in opposite directions.
+they each could move in opposite directions.
 
-We define embodied energy consistent with the energy/exergy analysis literature
-to be the sum of all final energy consumed (direct and indirect)
-in the production of the energy conversion device.
+Consistent with the energy/exergy analysis literature, 
+we define embodied energy 
+to be the sum of all final energy (direct and indirect) 
+consumed in the production of the energy conversion device.
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
-The EEU
-causes the embodied energy of the energy conversion device to change
-from $\bempl{E}_{emb}$ to $\aempl{E}_{emb}$.
+The EEU causes the embodied energy of the energy conversion device to change
+from $\orig{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
@@ -1166,9 +1172,11 @@ Embodied energy rebound can be either positive or negative, depending on
 the sign of the term
 $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
 Typically, but not always,
-rising energy efficiency is associated with increased device complexity
-and more embodied energy,
-such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
+rising energy efficiency is associated with increased device complexity,
+additional energy consumption in manufacturing, and
+more embodied energy,
+such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$,
+all other things being equal.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$ could be negative,
@@ -1937,7 +1945,7 @@ rebound_results %>%
 
 Results can be represented graphically in energy, cost, preference path graphs.
 
-An energy path graph (Figure~\ref{fig:CarEnergyGraph})
+An energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
