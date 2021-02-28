@@ -1466,7 +1466,7 @@ quantifies the amount of net income spent
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
 (See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
 The ratio of rates of other goods consumed across the income effect is given by
-***** Add ratio of $\rate{C}_o$ here. *****
+***** Add equation for ratio of $\rate{C}_o$ here. *****
 
 \begin{equation} \label{eq:qorat_eqoM}
   \incprefoeqn \; 
