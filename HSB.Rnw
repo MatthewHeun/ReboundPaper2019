@@ -2752,7 +2752,7 @@ Finally, rebound due to the macroeconomic
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-(It is a coincidence that $Re_{\productivity} = Re_{iinc}$
+(It is a coincidence that $Re_{\productivity} has the same value as Re_{iinc}$
 to 1 decimal place for the lighting example.)
 
 
