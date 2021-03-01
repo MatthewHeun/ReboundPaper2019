@@ -2223,12 +2223,14 @@ energy service (transportation).
 \label{sec:car_sensitivity_analysis}
 %------------------------------
 
-<<CarSensitivityStudies>>=
-# k_range <- list(k = seq(0.5, 2.0, by = 0.1))
-# car_k_study <- rebound_results %>%
-#   dplyr::filter(Case == "Car") %>%
-#   ReboundTools::parametric_studies(k_range)
-
+<<Car_k_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$), car example.", fig.width=6, fig.height=4>>=
+rebound_data %>%
+  dplyr::filter(Case == "Car") %>%
+  ReboundTools::parametric_studies(list(k = seq(0.5, 2.0, by = 0.1))) %>% 
+  ggplot2::ggplot(mapping = ggplot2::aes_string(x = "k", y = "Re_tot")) +
+  ggplot2::geom_line() + 
+  ggplot2::ylab(expression(Re[tot])) +
+  MKHthemes::xy_theme()
 @
 
 
