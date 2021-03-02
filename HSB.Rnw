@@ -2821,8 +2821,11 @@ rebound_data %>%
   ) %>% 
   tidyr::pivot_longer(cols = c("Re_emb", "Re_md", "Re_isub", "Re_dsub", "Re_dinc", "Re_iinc", "Re_prod", "Re_tot"),
                       names_to = "Re_terms", values_to = "Re_vals") %>% 
-  ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals") + 
-  # ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals", 
+                                   linetype_var = "Re_terms",
+                                   linecolour_var = "Re_terms",
+                                   linesize_var = "Re_terms") + 
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
   # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
   # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
