@@ -2768,8 +2768,8 @@ Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
 rebound_data %>%
-  ReboundTools::parametric_studies(list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
-                                        Lamp = list(k = seq(0.5, 2.0, by = 0.5)))) %>% 
+  ReboundTools::parametric_analysis(list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5)))) %>% 
   dplyr::mutate(
     Case = factor(Case, levels = c("Lamp", "Car"))
   ) %>% 
