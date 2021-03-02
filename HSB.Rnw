@@ -2767,14 +2767,22 @@ to 1 decimal place for the lighting example.)
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
-rebound_data %>%
+p_data <- rebound_data %>%
   ReboundTools::parametric_analysis(list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
                                          Lamp = list(k = seq(0.5, 2.0, by = 0.5)))) %>% 
   dplyr::mutate(
     Case = factor(Case, levels = c("Lamp", "Car"))
-  ) %>% 
-  ggplot2::ggplot(mapping = ggplot2::aes_string(x = "k", y = "Re_tot", linetype = "Case")) +
-  ggplot2::geom_line() + 
+  )
+line_data <- p_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+point_data <- p_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+  
+ggplot2::ggplot() + 
+  ggplot2::geom_line(data = line_data, 
+                     mapping = ggplot2::aes_string(x = "k", y = "Re_tot", linetype = "Case")) + 
+  ggplot2::geom_point(data = point_data, 
+                      mapping = ggplot2::aes_string(x = "k", y = "Re_tot"), colour = "red") +
   ggplot2::labs(y = expression(Re[tot]), linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 @
