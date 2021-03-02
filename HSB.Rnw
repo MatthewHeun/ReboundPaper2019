@@ -2829,11 +2829,11 @@ rebound_data %>%
   # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
   # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
   # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
-  # ggplot2::labs(x = expression(eta*" [mpg or lm/kW]"),
-  #               y = expression(Re[tot]*" [-]"), 
-  #               colour = ggplot2::element_blank(), 
-  #               size = ggplot2::element_blank(),
-  #               linetype = ggplot2::element_blank()) + 
+  ggplot2::labs(x = expression(eta*" [mpg or lm/kW]"),
+                y = "Re values [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 
 
