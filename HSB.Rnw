@@ -2217,25 +2217,6 @@ productivity enhancements arising from the more-efficient provision of the
 energy service (transportation).
 
 
-
-%------------------------------
-\subsubsection{Car sensitivity analysis} 
-\label{sec:car_sensitivity_analysis}
-%------------------------------
-
-<<Car_k_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$), car example.", fig.width=6, fig.height=4>>=
-rebound_data %>%
-  dplyr::filter(Case == "Car") %>%
-  ReboundTools::parametric_studies(list(k = seq(0.5, 2.0, by = 0.1))) %>% 
-  ggplot2::ggplot(mapping = ggplot2::aes_string(x = "k", y = "Re_tot")) +
-  ggplot2::geom_line() + 
-  ggplot2::ylab(expression(Re[tot])) +
-  MKHthemes::xy_theme()
-@
-
-
-
-
 %++++++++++++++++++++++++++++++
 \subsection{Case 2: Electric lamp}
 \label{sec:lamp_example}
@@ -2776,6 +2757,28 @@ productivity enhancements arising from the more-efficient provision of the
 energy service (lighting).
 (It is a coincidence that $Re_{\productivity} has the same value as Re_{iinc}$
 to 1 decimal place for the lighting example.)
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Sensitivity analyses}
+\label{sec:sensitivity_analyses}
+%++++++++++++++++++++++++++++++
+
+Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
+
+<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
+rebound_data %>%
+  ReboundTools::parametric_studies(list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                                        Lamp = list(k = seq(0.5, 2.0, by = 0.5)))) %>% 
+  dplyr::mutate(
+    Case = factor(Case, levels = c("Lamp", "Car"))
+  ) %>% 
+  ggplot2::ggplot(mapping = ggplot2::aes_string(x = "k", y = "Re_tot", linetype = "Case")) +
+  ggplot2::geom_line() + 
+  ggplot2::labs(y = expression(Re[tot]), linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
