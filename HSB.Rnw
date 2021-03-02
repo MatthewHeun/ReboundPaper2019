@@ -2767,25 +2767,76 @@ to 1 decimal place for the lighting example.)
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
-p_data <- rebound_data %>%
-  ReboundTools::parametric_analysis(list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
-                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5)))) %>% 
-  dplyr::mutate(
-    Case = factor(Case, levels = c("Lamp", "Car"))
-  )
-line_data <- p_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
-point_data <- p_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
-  
-ggplot2::ggplot() + 
-  ggplot2::geom_line(data = line_data, 
-                     mapping = ggplot2::aes_string(x = "k", y = "Re_tot", linetype = "Case")) + 
-  ggplot2::geom_point(data = point_data, 
-                      mapping = ggplot2::aes_string(x = "k", y = "Re_tot"), colour = "red") +
-  ggplot2::labs(y = expression(Re[tot]), linetype = ggplot2::element_blank()) +
+ReboundTools::sensitivity_graphs(rebound_data = rebound_data, 
+                                 parameterization = list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5))), 
+                                 x_var = "k", y_var = "Re_tot") +
+  ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = "k [-]",
+                y = expression(Re[tot]*" [-]"), 
+                colour = ggplot2::element_blank(), 
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) + 
   MKHthemes::xy_theme()
 @
+
+
+
+Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
+
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+eta_sens_params <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                        Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
+ReboundTools::sensitivity_graphs(rebound_data = rebound_data, parameterization = eta_sens_params, 
+                                 x_var = "eta_engr_units_star", y_var = "Re_tot") +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = expression(eta*" [mpg or lm/kW]"),
+                y = expression(Re[tot]*" [-]"), 
+                colour = ggplot2::element_blank(), 
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) + 
+  MKHthemes::xy_theme()
+@
+
+
+
+All rebound terms are shown in Fig.~\ref{fig:all_Re}.
+
+<<all_Re_terms_graph>>=
+rebound_data %>% 
+  dplyr::filter(Case != "Example") %>% 
+  ReboundTools::parametric_analysis(parameterization = eta_sens_params) %>% 
+  dplyr::mutate(
+    Re_dempl = NULL,
+    Re_empl = NULL,
+    Re_sub = NULL,
+    Re_inc = NULL, 
+    Re_d = NULL,
+    Re_i = NULL
+  ) %>% 
+  tidyr::pivot_longer(cols = c("Re_emb", "Re_md", "Re_isub", "Re_dsub", "Re_dinc", "Re_iinc", "Re_prod", "Re_tot"),
+                      names_to = "Re_terms", values_to = "Re_vals") %>% 
+  ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals") + 
+  # ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  # ggplot2::labs(x = expression(eta*" [mpg or lm/kW]"),
+  #               y = expression(Re[tot]*" [-]"), 
+  #               colour = ggplot2::element_blank(), 
+  #               size = ggplot2::element_blank(),
+  #               linetype = ggplot2::element_blank()) + 
+  MKHthemes::xy_theme()
+
+
+@
+
+
 
 
 
