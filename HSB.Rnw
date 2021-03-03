@@ -2755,7 +2755,7 @@ Finally, rebound due to the macroeconomic
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-(It is a coincidence that $Re_{\productivity} has the same value as Re_{iinc}$
+(It is a coincidence that $Re_{\productivity}$ has the same value as $Re_{iinc}$
 to 1 decimal place for the lighting example.)
 
 
@@ -2807,36 +2807,60 @@ ReboundTools::sensitivity_graphs(rebound_data = rebound_data, parameterization =
 
 All rebound terms are shown in Fig.~\ref{fig:all_Re}.
 
-<<all_Re_terms_graph>>=
+<<all_Re_terms_graph, echo=FALSE, fig.cap="Senmsitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+Re_order <- c("Re_dempl", "Re_emb", "Re_md", "Re_dsub", "Re_isub", "Re_dinc", "Re_iinc", "Re_prod")
 rebound_data %>% 
   dplyr::filter(Case != "Example") %>% 
   ReboundTools::parametric_analysis(parameterization = eta_sens_params) %>% 
   dplyr::mutate(
-    Re_dempl = NULL,
     Re_empl = NULL,
     Re_sub = NULL,
     Re_inc = NULL, 
     Re_d = NULL,
-    Re_i = NULL
+    Re_i = NULL,
+    Re_tot = NULL
   ) %>% 
-  tidyr::pivot_longer(cols = c("Re_emb", "Re_md", "Re_isub", "Re_dsub", "Re_dinc", "Re_iinc", "Re_prod", "Re_tot"),
-                      names_to = "Re_terms", values_to = "Re_vals") %>% 
+  tidyr::pivot_longer(cols = dplyr::all_of(Re_order), names_to = "Re_terms", values_to = "Re_vals") %>% 
+  dplyr::mutate(
+    Re_terms = factor(Re_terms, levels = Re_order)
+  ) %>% 
   ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals", 
                                    linetype_var = "Re_terms",
                                    linecolour_var = "Re_terms",
-                                   linesize_var = "Re_terms") + 
+                                   linesize_var = "Re_terms",
+                                   orig_point_colour = "black", 
+                                   orig_point_size = 2) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
-  # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
-  # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
-  ggplot2::labs(x = expression(eta*" [mpg or lm/kW]"),
+  ggplot2::scale_colour_manual(values = c(Re_dempl = ReboundTools::default_graph_params$dempl_colour,
+                                          Re_emb = ReboundTools::default_graph_params$emb_colour,
+                                          Re_md = ReboundTools::default_graph_params$md_colour, 
+                                          Re_dsub = ReboundTools::default_graph_params$dsub_colour,
+                                          Re_isub = ReboundTools::default_graph_params$isub_colour, 
+                                          Re_dinc = ReboundTools::default_graph_params$dinc_colour,
+                                          Re_iinc = ReboundTools::default_graph_params$iinc_colour,
+                                          Re_prod = ReboundTools::default_graph_params$prod_colour)) +
+  ggplot2::scale_size_manual(values = c(Re_dempl = 0.2, 
+                                        Re_emb = ReboundTools::default_graph_params$emb_size,
+                                        Re_md = ReboundTools::default_graph_params$md_size, 
+                                        Re_dsub = ReboundTools::default_graph_params$dsub_size,
+                                        Re_isub = ReboundTools::default_graph_params$isub_size, 
+                                        Re_dinc = ReboundTools::default_graph_params$dinc_size,
+                                        Re_iinc = ReboundTools::default_graph_params$iinc_size,
+                                        Re_prod = ReboundTools::default_graph_params$prod_size)) +
+  ggplot2::scale_linetype_manual(values = c(Re_dempl = ReboundTools::default_graph_params$dempl_linetype, 
+                                            Re_emb = ReboundTools::default_graph_params$emb_linetype,
+                                            Re_md = ReboundTools::default_graph_params$md_linetype,
+                                            Re_dsub = ReboundTools::default_graph_params$dsub_linetype,
+                                            Re_isub = "11",
+                                            Re_dinc = ReboundTools::default_graph_params$dinc_linetype,
+                                            Re_iinc = "11",
+                                            Re_prod = ReboundTools::default_graph_params$prod_linetype)) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/kW]"),
                 y = "Re values [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
-
-
 @
 
 
