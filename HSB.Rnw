@@ -2805,7 +2805,7 @@ ReboundTools::sensitivity_graphs(rebound_data = rebound_data, parameterization =
 
 
 
-All rebound terms are shown in Fig.~\ref{fig:all_Re}.
+All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 
 <<all_Re_terms_graph, echo=FALSE, fig.cap="Senmsitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_order <- c("Re_dempl", "Re_emb", "Re_md", "Re_dsub", "Re_isub", "Re_dinc", "Re_iinc", "Re_prod")
