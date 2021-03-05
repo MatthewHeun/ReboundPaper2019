@@ -2866,6 +2866,26 @@ rebound_data %>%
 
 
 
+Germany energy prices: 
+
+0.3 Euro/kWh. Source: Germany Economy \& Energy Ministry: 
+\url{https://www.bmwi.de/Redaktion/DE/Infografiken/Energie/strompreisbestandteile.html}
+
+1.35 Euro/liter for ``super’ gasoline'' (95 octane but let me double check)
+appears like an OK summary of the last five or so years, 
+perhaps undervaluing the past year a bit.
+\url{https://www.finanzen.net/rohstoffe/super-benzinpreis/historisch}
+
+1 L = 3.7854 us gallon
+
+1 euro = 1.21 USD
+
+So 0.3 euro/kWhr = 0.363 USD/kWhr
+
+1.35 euro/liter = 6.1834509 USD/gallon
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion (GS, 1000 words)}
