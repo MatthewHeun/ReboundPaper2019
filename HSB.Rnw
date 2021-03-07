@@ -2887,6 +2887,16 @@ So 0.3 euro/kWhr = 0.363 USD/kWhr
 
 
 
+UK energy prices from PB email of 7 March 2021:
+
+20 UKp/kW-hr or about 0.28 USD/kW-hr
+from PB's own electricity bill.
+
+6.48 USD/US gallon
+from \url{https://www.globalpetrolprices.com/United-Kingdom/gasoline_prices/}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Discussion (GS, 1000 words)}
 \label{sec:discussion}
