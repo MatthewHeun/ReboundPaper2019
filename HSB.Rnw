@@ -2803,7 +2803,8 @@ eta_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data
     "{ReboundTools::tilde_vars$eta_engr_units_tilde}" := dplyr::case_when(
       .data[[ReboundTools::eeu_base_params$case]] == "Lamp" ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]] / 1000, 
       TRUE ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]]
-    )
+    ), 
+    takeback = Re_tot * S_dot_dev
   )
 eta_line_data <- eta_sens_data %>% 
   dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
@@ -2829,6 +2830,52 @@ ggplot2::ggplot() +
                 linetype = ggplot2::element_blank()) + 
   MKHthemes::xy_theme()
 @
+
+Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
+takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
+with efficiency ($\aprod{\eta}$).
+
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback and expected energy savings ($\\Sdot$) as a function of efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
+y_vars <- c(ReboundTools::star_vars$S_dot_dev, "takeback")
+y_vals_col <- "y_vars"
+y_names_col <- "y_names"
+graph_params <- ReboundTools::sens_graph_params
+
+
+pivoted_data <- eta_sens_data %>% 
+  tidyr::pivot_longer(cols = dplyr::all_of(y_vars), names_to = y_names_col, values_to = y_vals_col)
+
+line_data <- pivoted_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+orig_data <- pivoted_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+
+ggplot2::ggplot() +
+  ggplot2::geom_point(data = orig_data, 
+                      mapping = ggplot2::aes_string(x = x_var, 
+                                                    y = y_vals_col), 
+                      colour = graph_params$orig_point_colour, 
+                      shape = graph_params$orig_point_shape, 
+                      size = graph_params$orig_point_size, 
+                      stroke = graph_params$orig_point_stroke) + 
+  ggplot2::geom_line(data = line_data, 
+                     mapping = ggplot2::aes_string(x = x_var, 
+                                                   y = y_vals_col, 
+                                                   linetype = y_names_col)) +
+  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case, scales = "free_x") +
+  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/W]"),
+                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"), 
+                colour = ggplot2::element_blank(), 
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) + 
+  MKHthemes::xy_theme()
+
+@
+
 
 
 
