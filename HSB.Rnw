@@ -2767,11 +2767,25 @@ to 1 decimal place for the lighting example.)
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
-ReboundTools::sensitivity_graphs(rebound_data = rebound_data, 
-                                 parameterization = list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
-                                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5))), 
-                                 x_var = "k", y_var = "Re_tot") +
-  ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+k_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
+                                  parameterization = list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                                                          Lamp = list(k = seq(0.5, 2.0, by = 0.5))))
+k_line_data <- k_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+k_orig_data <- k_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+
+ggplot2::ggplot() + 
+  ggplot2::geom_point(data = k_orig_data,
+                      mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
+                                                    y = ReboundTools::rebound_terms$Re_tot), 
+                      colour = "red") + 
+  ggplot2::geom_line(data = k_line_data, 
+                     mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
+                                                   y = ReboundTools::rebound_terms$Re_tot, 
+                                                   # colour = ReboundTools::eeu_base_params$case, 
+                                                   linetype = ReboundTools::eeu_base_params$case)) + 
+  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
   ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
   ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
   ggplot2::labs(x = "k [-]",
