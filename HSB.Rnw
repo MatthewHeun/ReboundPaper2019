@@ -250,7 +250,7 @@ energy efficiency contributes 44~\% of
 energy-related global carbon emissions reductions in
 the International Energy Agency's Sustainable Development scenario relative to
 its New Policies scenario~\citep[Fig.~3.15, p.~139]{International-Energy-Agency:2017b}.
-However as \citet{Brockway2020} note, 
+However as \citet{Brockway2021} note, 
 such reductions in energy consumption 
 would represent a structural break with the historical record
 of close energy-GDP coupling,
@@ -263,7 +263,7 @@ to economic growth ~\citep{Haberl2020, Wiedmann2020},
 it may not possible to separate energy rebound from rising material consumption and resource extraction.
 Third, energy rebound is rarely included in either 
 policy-making~\citep{fontvivanco2016}
-or energy~\citep{Brockway2020} models, 
+or energy~\citep{Brockway2021} models, 
 limiting our ability to assess the interactions among
 rebound, 
 carbon emissions, and
@@ -358,7 +358,7 @@ have progressed in terms of numbers of studies and methods.
 ****
 Is the preceding sentence complete?---MKH
 ****
-A recent review of studies by \citet{Brockway2020} 
+A recent review of studies by \citet{Brockway2021} 
 found 
 the most common method is via a dominant group of CGE-based studies, 
 such as \citet{Lecca2014} and \citet{Wei2017},
@@ -369,7 +369,7 @@ econometric analysis (e.g., \citet{Wei2019} and \citet{Bruns2019}), and
 productivity or growth accounting studies (e.g., \citet{Lin2015}).
 The magnitude of total energy rebound from these non-CGE methods 
 was also found to be over 50~\%,
-leading the review authors \citet{Brockway2020} 
+leading the review authors \citet{Brockway2021} 
 to conclude that total rebound magnitudes 
 were ``larger than commonly assumed.''
 Finally, increasing empirical support is emerging for 
@@ -1520,81 +1520,49 @@ The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
-In contrast, the productivity effect is macroeconomic.
-%At the macro level, we claim that the effect of energy efficiency is expansionary,
-%just like other factor-augmenting productivity improvements.
-%This argument implicitly assumes two things:
-%
-%\begin{enumerate*}[label={(\alph*)}]
-
-%  \item that, together with capital and labor, energy is a factor of production, and
-
-%  \item energy efficiency operates along the supply side by reducing the cost of inputs
-%        (in this case, final energy),
-%        thereby allowing production on a greater scale.
-
-%\end{enumerate*}
-Like other factor-augmenting technical change, energy-augmenting
-technical change reduces production costs and thereby enables more efficient
+In contrast, the growth effect is macroeconomic.
+Like other factor-augmenting technical change, 
+energy-augmenting technical change reduces production 
+costs and thereby enables more efficient
 production (process innovation) that typically results in growth.
-Additionally, cheaper energy services could facilitate the
-development and deployment of new products (product innovation),
-an important driver of rising aggregate demand (Szostack 1995)
-**** This references needs to go into BibTeX ****.
+Additionally, as \citet{VanBenthem2015} notes, cheaper 
+energy services could facilitate the development and 
+deployment of new products (product innovation),
+an important driver of rising aggregate demand \citep{Szostack1995}. 
+Often the effect is subdivided into components that distinguish 
+structural change, employment and investment effects \citep{Brockway2021,Colmenares2020}. 
 The upshot is that while energy efficiency is higher, the more 
 efficient economy is growing more than one without the improvement,
 taking back part of the expected energy savings. We call this the
-productivity effect.
-+++
-If we follow my argument that there is only one growth effect,
-we could also call it growth effect, which is more intuitive
----GS
-+++
+growth effect.
 
-In general, reducing cost of inputs at the micro level can lead
-to important and surprising counter-tendencies in factor consumption at the macro level.
+The growth effect is just one instance of the phenomenon
+that reducing the need for an input at the micro level can lead 
+to important and surprising counter-tendencies in the aggregate
+demand for that input.
 Consider labor productivity: it has risen 20-fold
-in Western Europe and the US since 1820 \citep{Maddison:2001aa}, and
-yet today these countries employ more workers than ever before.
-**** Can we also include examples of other inputs,
-while avoiding the capital controversy?
-Doing so would round out the illustrations and really drive home the point. 
-Does \citet{Magee2017} help with this?---MKH ****
-Consider XXXXXX: it has risen YY-fold,
-yet more XXXXXX is in service than ever before. **** Need statistics here. ---MKH ****
-And so too with energy.
-While energy efficiency at the device-level has climbed in the past century,
-energy consumption at the macro level has also risen.
-\citet{Heun:2019aa} **** Heun et al.\ are not the best reference here.
-Can PB provide an alternative? ****
-show that increases in energy efficiency at the micro level
-go hand-in-hand with 
-increases in overall energy consumption at the macro level.
+in Western Europe and the US since 1820 \citep{Maddison:2001aa}, 
+and yet today these countries employ more workers than ever before
+as richer people demand more goods and services, and productivity
+gains lead to new products. The same holds for energy.
+While energy efficiency at the device-level has climbed 
+over the past centuries, energy consumption at the macro level 
+has also risen \citep{Fouquet2014}.
 It is important to recognise the generality of this result.
-Typically focus is less interested in overall savings of an input,
-but once expected savings are of interest, all factor-augmenting
-technical change that accelerates economic growth can be analyzed
-in terms of its contribution to rebound relative to counterfactual
-scenario of lower growth.
-%Of course, this generality between energy on the one hand
-%and other inputs (XXXXX and labor) on the other hand
-%raises the question whether it is appropriate to speak of a rebound effect at all.
-%Isn't all technological progress just a rebound effect?
-%We put it the opposite way:
-%macroeconomic rebound effects are the consequences of technological change,
-%whether
-%in utilization of XXXXXX,
-%in utilization of labor, or
-%in utilization of energy.
++++ here possible about th 69 inputs, and the long run growth
+in iron demand -- GS+++
+Typically the focus is on the effects on output of factor-augmenting
+technical change. But once expected savings of that factor are of interest, 
+all factor-augmenting technical change that accelerates economic 
+growth can be analyzed in terms of its contribution to rebound 
+relative to counterfactual scenario of lower growth.
 
-Further, we claim that productivity effect rebound stems from technological improvements
-(energy efficiency)
-which can be correlated to energy service price reductions.
-As such, productivity effect rebound at the macro level scales with the net income~($\rasub{N}$)
-gained by device owners at the micro level.
-As shown by \citet{Antal:2014aa},
-it is reasonable to assume that
-net income ($\rasub{N}$) is spent in the economy at the average energy intensity of the economy ($I_E$).
+To operationalize this growth effect, that ultimately leads to 
+higher incomes and spending on goods and energy services, we scale
+the net income~($\rasub{N}$) gained by device owners at the micro level.
+As argued by \citet{Antal:2014aa}, it is reasonable to assume that
+net income ($\rasub{N}$) is spent in the economy at the average 
+energy intensity of the economy ($I_E$).
 
 Scaling from net income ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is an unexplored area.
@@ -1606,7 +1574,7 @@ $k = 0$ means two things:
 \begin{enumerate*}[label={(\alph*)}]
 
   \item the device owner's freed cash is simply redistributed to a new basket of goods
-        with no energy implications and
+        with no energy implications +++ Matt: I don't understand the lack of energy implication - does not the redistribution have an effect, but none that goes beyond the `indirect' substitution and income effect? -- GS+++ and
 
   \item there is no macroeconomic productivity boost that results from the energy efficiency upgrade.
 
@@ -1614,8 +1582,11 @@ $k = 0$ means two things:
 %
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption at the macro level.
-This should not be confused with a ``multiplier" from Keynesian economics,
-on which more in the discussion.
+In particular, if $k = 1$ and net income was 0.5 per cent of GDP, 
+instead of respending only 0.1 per cent of GDP, respending 
+to the tune of 0.2 per cent of GDP would occur, and thus GDP 
+would grow by 0.1 per cent. This should not be confused with 
+a ``multiplier" from Keynesian economics, on which more in the discussion.
 
 As shown in Table~\ref{tab:prodeffect}, 
 productivity rebound is given by
@@ -2983,6 +2954,18 @@ in place of productivity effects
 here as opposed to in the section with the derivation. ---GS
 +++
 Gregor wants to do some discussing.
+
+%Of course, this generality between energy on the one hand
+%and other inputs (XXXXX and labor) on the other hand
+%raises the question whether it is appropriate to speak of a rebound effect at all.
+%Isn't all technological progress just a rebound effect?
+%We put it the opposite way:
+%macroeconomic rebound effects are the consequences of technological change,
+%whether
+%in utilization of XXXXXX,
+%in utilization of labor, or
+%in utilization of energy.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions (MKH, 500 words)}
