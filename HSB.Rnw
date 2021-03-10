@@ -2195,8 +2195,8 @@ energy service (transportation).
 
 <<LampPrintableNumbers, echo=FALSE>>=
 # First table
-efficacy_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 2) # lm-hr/W-hr
-efficacy_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # lm-hr/W-hr
+efficacy_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, digits = 2) # lm-hr/W-hr
+efficacy_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, digits = 1) # lm-hr/W-hr
 C_dot_cap_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$C_dot_cap_orig, digits = 3)
 C_dot_cap_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$C_dot_cap_star, digits = 3)
 t_own_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$t_own_orig, digits = 1)
@@ -2235,7 +2235,7 @@ Re_emb_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::reboun
 Re_md_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_md, to_perc = TRUE)
 Re_dsub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dsub, to_perc = TRUE)
 eta_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # In lm/W
-eta_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 3) # In lm/W
+eta_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, digits = 3) # In lm/W
 q_dot_s_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$q_dot_s_star, digits = 0) # In lm-hr/year
 q_dot_s_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$q_dot_s_hat, digits = 0) # In lm-hr/year
 Re_isub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_isub, to_perc = TRUE)
@@ -2863,12 +2863,21 @@ ggplot2::ggplot() +
 All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 
 <<all_Re_terms_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+original_cases <- rebound_data %>% 
+  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
+parameterization <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                         Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
+
 x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
-y_vars <- setdiff(ReboundTools::rebound_terms, ReboundTools::rebound_terms_agg)
-y_vals_col <- "y_vars"
+y_vars <- setdiff(ReboundTools::rebound_terms, ReboundTools::rebound_terms_agg) %>% 
+  unlist()
+y_vals_col <- "y_vals"
 y_names_col <- "y_names"
 
-pivoted_data <- eta_sens_data %>% 
+.sens_data <- ReboundTools::parametric_analysis(original_cases = original_cases, 
+                                                parameterization = parameterization)
+
+pivoted_data <- .sens_data %>% 
   tidyr::pivot_longer(cols = dplyr::all_of(y_vars), names_to = y_names_col, values_to = y_vals_col)
 
 line_data <- pivoted_data %>% 
@@ -2878,14 +2887,22 @@ orig_data <- pivoted_data %>%
 
 ggplot2::ggplot() + 
   ggplot2::geom_point(data = orig_data, 
-                      mapping = aes_string(x = ))
-  ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals", 
-                                   linetype_var = "Re_terms",
-                                   linecolour_var = "Re_terms",
-                                   linesize_var = "Re_terms",
-                                   orig_point_colour = "black", 
-                                   orig_point_size = 2) + 
+                      mapping = ggplot2::aes_string(x = x_var, 
+                                                    y = y_vals_col), 
+                      colour = graph_params$orig_point_colour, 
+                      shape = graph_params$orig_point_shape, 
+                      size = graph_params$orig_point_size, 
+                      stroke = graph_params$orig_point_stroke) + 
+  ggplot2::geom_line(data = line_data, 
+                     mapping = ggplot2::aes_string(x = x_var, 
+                                                   y = y_vals_col, 
+                                                   linetype = y_names_col, 
+                                                   colour = y_names_col, 
+                                                   size = y_names_col)) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  
+  
+  
   ggplot2::scale_colour_manual(values = c(Re_dempl = ReboundTools::path_graph_params$dempl_colour,
                                           Re_emb = ReboundTools::path_graph_params$emb_colour,
                                           Re_md = ReboundTools::path_graph_params$md_colour, 
@@ -2910,7 +2927,7 @@ ggplot2::ggplot() +
                                             Re_dinc = ReboundTools::path_graph_params$dinc_linetype,
                                             Re_iinc = "11",
                                             Re_prod = ReboundTools::path_graph_params$prod_linetype)) +
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/kW]"),
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm/W (Lamp)]"),
                 y = "Re values [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
@@ -2920,8 +2937,16 @@ ggplot2::ggplot() +
 
 
 
+<<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 
-**** Make a graph of Re vs. sigma. ****
+
+@
+
+
+**** Make a graph of Re vs. $p_E$. ****
+
+
+**** Make a graph of Re vs. $\sigma$. ****
 
 
 
