@@ -995,7 +995,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 an expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqn{} \; .
+  Re_{dinc} = \Redinceqnapprox{} \; .
 \end{equation}
 
 If there is no net income ($\rasub{N} = 0$), 
@@ -1024,7 +1024,7 @@ After some additional algebra (see Section~\ref{sec:Re_iinc}),
 an expression for indirect income effect rebound is
 
 \begin{equation} \label{eq:Re_iinc}
-  Re_{iinc} = \Reiinceqn{} \; .
+  Re_{iinc} = \Reiinceqnapprox{} \; .
 \end{equation}
 
 Eq.~(\ref{eq:Re_iinc}) shows that a good first estimate for indirect income rebound

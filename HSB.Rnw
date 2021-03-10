@@ -12,6 +12,7 @@
 \usepackage{amsfonts}           % For access to \checkmark.
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage{booktabs}           % For nice table rules
+\usepackage[figurename=Fig.]{caption} % For changing "Figure" to "Fig." in figure captions
 \usepackage{chngcntr}           % To get figure and table numbering correct in the appendices
 \usepackage[makeroom]{cancel}   % To show terms go to zero
 \usepackage[inline]{enumitem}   % For inline enumeration
@@ -218,14 +219,8 @@ is restated by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-%The macroeconomic feedback mechanisms and their
-%size lie at
-The scale
-****
-magnitude?---MKH
-****
-of macroeconomic feedback gets to 
-***I placed some alternative text above in comments---PEB***
+The macroeconomic feedback mechanisms and their
+size lie at
 the heart of the debate,
 which continues today.
 Advocates of small rebound (say, less than 50~\%),
@@ -552,12 +547,12 @@ Section~\ref{sec:conclusion} concludes.
 
 In this section, we develop a mathematical model 
 for the comprehensive rebound framework.
-We assume a device (say, an automobile)
+We assume an energy conversion device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
-The device provides a rate of energy service $\rbempl{q}_s$ (in vehicle km/year)
+The energy conversion device provides a rate of energy service 
+$\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
-
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\aprod{\eta} > \bempl{\eta}$,
@@ -576,14 +571,23 @@ so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
 
+Initially, the device owner spends income ($\rorig{M}$)
+on final energy for the device ($\rorig{C}_s = p_E \rorig{E}_s$), 
+annualized capital costs for the device ($\rorig{C}_{cap}$), 
+annualized costs for maintenance and disposal of the device ($\rorig{C}_{\md}$), and 
+other goods and services ($\rorig{C}_o$).
+The budget constraint
+for the device owner is
+
+\begin{equation} \label{eq:budget_constraint}
+  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} \; .
+\end{equation}
+
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
 notation elements used throughout the paper, including
 symbols, Greek letters, decorations, and subscripts.
-(Fig.~\ref{fig:flowchart} shows the order of discussion for rebound effects; 
-it does not necessarily represent 
-the progression of rebound effects through time.)
 The notation elements 
 can be mixed to comprise a rich and expressive ``language'' of energy rebound.
 We use colored backgrounds on rebound effects for visual convenience. 
@@ -592,10 +596,12 @@ We use colored backgrounds on rebound effects for visual convenience.
 \centering
   % The file is a Tikz picture.
   \input{pieces/flowchart.tex}
-\caption{Flowchart of effects and decorations.}
+\caption{Flowchart of rebound effects and decorations.
+         Rebound effects are arranged in the order of their discussion in this paper.
+         The left-ro-right order does not necessarily represent 
+         the progression of rebound effects through time.}
 \label{fig:flowchart}
 \end{figure}
-
 
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
@@ -626,13 +632,7 @@ relative to the expected final energy savings rate, sometimes called hyperconser
 Thus,
 
 \begin{equation}
-  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; ,
-\end{equation}
-%
-or
-
-\begin{equation}
-  Re = 1 - 1 + \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
+  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
 Simplifying gives
@@ -659,11 +659,13 @@ unless there is reason to indicate a specific stage of the energy conversion cha
 \label{sec:energy_and_cost_relationships}
 %++++++++++++++++++++++++++++++
 
-With the rebound notation of Appendix~\ref{sec:nomenclature}, four typical relationships emerge.
+With the rebound notation of Appendix~\ref{sec:nomenclature}, 
+four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-services efficiency~($\eta$) and
-the rate of consumption of final energy by the service-producing machine~($\rate{E}_s$).
-Typical units for automotive transport and illumination are provided.
+the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
+Typical units for automotive transport and illumination
+(the examples in Section~\ref{sec:examples}) are shown
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -693,16 +695,13 @@ Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
 
-In the following section, 
-we discuss four rebound effects.
-
 
 %++++++++++++++++++++++++++++++
 \subsection{Rebound effects}
 \label{sec:rebound_effects}
 %++++++++++++++++++++++++++++++
 
-Expressions for the four rebound effects of Fig.~\ref{fig:flowchart} 
+The four rebound effects of Fig.~\ref{fig:flowchart} 
 (emplacement, substitution, income, and productivity)
 are discussed in subsections below,
 In each subsection, we
@@ -711,14 +710,14 @@ In each subsection, we
 	
   \item define each rebound effect and
   
-  \item provide rebound expressions.
+  \item develop mathematical rebound expressions.
     
 \end{enumerate*}
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
-which provide a structure for energy and financial accounting.
+which provide a parallel structure for energy and financial accounting.
 
 Important quantities for the derivations are
 %
@@ -726,41 +725,46 @@ Important quantities for the derivations are
 	
   \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
   
-  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), and
+  \item direct and indirect expenditure rates ($\rate{C}_{dir}$ and $\rate{C}_{indir}$), 
   
-  \item the consumption rate of the energy service ($\rate{q}_s$).
+  \item the consumption rate of the energy service ($\rate{q}_s$), and
+  
+  \item the consumption rate of other goods ($\rate{C}_o$).
     
 \end{enumerate*}
 %
 These important rebound quantities can be illustrated via
 rebound path graphs.
-(See Appendix~\ref{sec:graph_details} for a
-detailed mathematical description of rebound path graphs.)
+(See Appendix~\ref{sec:graph_details} for 
+detailed mathematical descriptions of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
 notional rebound path graphs for energy consumption, expenditures, and preferences.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate numerical examples.
-Fig.~\ref{fig:ExampleEnergyPathGraph} is a notional energy path graph, showing 
-direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
+
+Fig.~\ref{fig:ExampleEnergyPathGraph} shows a notional energy path graph, with 
+the direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
 and
-indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
+the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate constant total energy consumption
-(direct and indirect) at each of those points.
+(direct and indirect) at each point.
+
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
-direct expenses on the energy service ($\rate{C}_{dir}$) on the abscissa and 
-indirect expenses ($\rate{C}_{indir}$) on the ordinate.
+the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
+the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
 indicate constant expenditure rates (direct and indirect).
-Finally, a notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+
+A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Lines of constant rates of indexed consumption of other goods and the energy service
 are shown with negative slope. 
-Indifference curves (constant indexed utility) are denoted by \iicirc{} and \iibar{}. 
+Indifference curves of constant utility are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
 <<eeu_data, echo=FALSE>>=
@@ -854,7 +858,7 @@ example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      0.622, 0.904, example_arrow_angle, 
                                        0.146, annotation_colour, example_arrow_size) 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
+  ReboundTools::path_graphs(cases = "Example", 
                                graph_types = "Energy", 
                                indexed = TRUE) + 
   ggplot2::xlim(0, 1.1) +
@@ -911,7 +915,7 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                      annotation_colour, annotation_size, cost_line_angle)
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
+  ReboundTools::path_graphs(cases = "Example", 
                                graph_types = "Cost", 
                                indexed = TRUE) + 
   # ggplot2::xlim(0, 1.1) +
@@ -991,7 +995,7 @@ labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                             line_label_colour, i_line_label_size,
                           )
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Example", 
+  ReboundTools::path_graphs(cases = "Example", 
                                graph_types = "Preferences") + 
   ggplot2::xlim(0.7, 3.5) +
   ggplot2::ylim(0.97, 1.15) +
@@ -1026,9 +1030,10 @@ in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph})
 accounts for performance of the EEU only;
 behavior changes are addressed later, 
 in the substitution and income effects. 
-The direct emplacement effect of the EEU is
-device energy savings and energy cost savings
-(segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}).
+The direct emplacement effects of the EEU include
+device energy savings ($\Sdot$) and device energy cost savings ($\Delta \raempl{C}_s$),
+on segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph} 
+and~\ref{fig:ExampleCostPathGraph}, respectively.
 The indirect effects of EEU emplacement are
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -1045,38 +1050,39 @@ The indirect effects of EEU emplacement are
     
 \end{enumerate*}
 
-Because no behavior changes are considered
-in the emplacement effect,
-actual and expected energy savings rates~($\Sdot$) are identical
-across the direct emplacement effect, namely
+The rate of energy savings
+due to the direct emplacement effect  
+($\Sdot$, segment \circa{} in Fig.~\ref{fig:ExampleEnergyPathGraph})
+is given by
 
 \begin{equation} \label{eq:S_dot_def}
   \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
 \end{equation}
 %
-Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten as
+Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
 
 \begin{equation} \label{eq:Sdot}
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-By definition, the direct emplacement effect 
-(segment \circa{}) has no rebound, 
-because actual and expected energy savings are identical.
-(See Table~\ref{tab:empleffect}.)
+Because behavior changes are not considered
+in the direct emplacement effect,
+actual and expected energy savings rates are identical~($\Sdot$).
+By definition, then, the direct emplacement effect causes no rebound.
+Thus, 
 
 \begin{equation} \label{eq:Re_dempl0}
-  Re_{dempl} = 0
+  Re_{dempl} = 0 \; .
 \end{equation}
 %
-In fact, point $a$ 
-lies on the $Re_{tot} = 0\%$ line
-in Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+In the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}, 
+point $a$ lies on the $Re_{tot} = 0\%$ line
 indicating that the $Re_{tot} = 0\%$ line 
 is the basis from which all rebound effects 
 ($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\productivity}$)
 are measured.
-If total energy demand returns to the original energy consumption level 
+If rebound effects cause 
+total energy demand to return to the original energy consumption level 
 (negative sloping line through the $\circ$ point), 
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
@@ -1085,16 +1091,17 @@ Total rebound ($Re_{tot}$) is measured linearly between the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with decomposition to direct rebound in the $x$ direction and 
 indirect rebound in the $y$ direction.
-Points below and to the left of the $Re_{tot} = 0\%$ line in Fig.~\ref{fig:ExampleEnergyPathGraph}
-exhibit negative rebound, indicating
-hyperconservation (energy savings in excess of the expected energy savings).
-Points above and to the right of the $Re_{tot} = 100\%$ line 
-exhibit $Re_{tot} > 100\%$, indicating
-backfire (greater energy consumption after the EEU than before the EEU).
+The region below and to the left of the $Re_{tot} = 0\%$ line
+in Fig.~\ref{fig:ExampleEnergyPathGraph}
+exhibits negative rebound, indicating
+``hyperconservation'' (energy savings in excess of the expected energy savings).
+The region above and to the right of the $Re_{tot} = 100\%$ line 
+exhibits greater energy consumption after the EEU than before it,
+a condition known as ``backfire.''
 
 Although the direct emplacement effect does not cause rebound, 
-indirect emplacement effects may cause rebound, 
-as shown in Fig.~\ref{fig:ExampleEnergyPathGraph}.
+Fig.~\ref{fig:ExampleEnergyPathGraph} shows that
+indirect emplacement effects may cause rebound.
 Indirect emplacement effects 
 (segments \ab{} and \bstar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
@@ -1103,31 +1110,32 @@ including energy embodied by manufacturing processes (subscript $emb$) and
 maintenance and disposal activities (subscript $\md$).
 In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
-because the upgraded device has lesser
+because the upgraded device has a lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
+and a lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
+than the original device.
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
-consistent with reduced capital costs
+consistent with a lower capital cost rate
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
-reduced maintenance and disposal costs
+a reduced maintenance and disposal cost rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
 embodied energy and capital costs (segments \ab{}) 
 move in the same direction (both negative), 
 but they could both move in the positive direction, or
-they could each move in opposite directions.
+they each could move in opposite directions.
 
-We define embodied energy consistent with the energy/exergy analysis literature
-to be the sum of all final energy consumed (direct and indirect)
-in the production of the energy conversion device.
+Consistent with the energy/exergy analysis literature, 
+we define embodied energy 
+to be the sum of all final energy (direct and indirect) 
+consumed in the production of the energy conversion device.
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
-The EEU
-causes the embodied energy of the energy conversion device to change
-from $\bempl{E}_{emb}$ to $\aempl{E}_{emb}$.
+The EEU causes the embodied energy of the energy conversion device to change
+from $\orig{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
 over the lifetime of the device,
@@ -1158,9 +1166,11 @@ Embodied energy rebound can be either positive or negative, depending on
 the sign of the term
 $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
 Typically, but not always,
-rising energy efficiency is associated with increased device complexity
-and more embodied energy,
-such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
+rising energy efficiency is associated with increased device complexity,
+additional energy consumption in manufacturing, and
+more embodied energy,
+such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$,
+all other things being equal.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$ could be negative,
@@ -1209,28 +1219,29 @@ Neoclassical consumer theory distinguishes between
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item substituting the energy service for
-        other goods consumption due to the now-lower price of the energy service 
+  \item substituting energy service consumption for
+        other goods consumption due to the lower post-EEU price of the energy service 
         (the substitution effect) and
   
-  \item respending the higher real income (the income effect). 
+  \item re-spending the higher real income (the income effect). 
     
 \end{enumerate*}
 %
-Substituting the energy service for other goods consumption
-leads to substitution effect rebound ($Re_{sub}$).
-The substitution effect alters compensated demand, which is
-defined as the expenditure minimizing consumption bundle for
+This section develops mathematical expressions 
+for substitution effect rebound ($Re_{sub}$).
+(The next section addresses income effect rebound, $Re_{isub}$.)
+The substitution effect alters compensated demand, 
+the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
 It involves
 %
 \begin{enumerate*}[label={(\alph*)}]
 
   \item an increase in consumption of the energy service,
-        called direct substitution (subscript $dsub$) and
+        a direct substitution effect (subscript $dsub$) and
 
   \item a compensating decrease in consumption of other goods,
-        called indirect substitution (subscript $isub$).
+        an indirect substitution effect (subscript $isub$).
 
 \end{enumerate*}
 %
@@ -1239,7 +1250,7 @@ direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 The substitution effect is shown by segments
 \starc{} (indirect component) and \chat{} (direct component) 
-in Figs~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 
 The substitution effect is best described 
 with reference to a preferences path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
@@ -1253,13 +1264,13 @@ The \circcirc{} line is tangent to the lower indifference curve
 	
   \item equilibrium conditions exist and 
   
-  \item the device owner is maximizing utility at the original expenditure level.
+  \item the device owner is minimizing expenditures at the original utility level.
     
 \end{enumerate*}
 %
 After emplacement of the more-efficient device
 (but before the substitution effect), 
-the price of the energy service has decreased ($\aempl{p}_s < \bempl{p}_s$),
+the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
 thereby altering the slope of the constant expenditure line,
 such that the \circcirc{} line becomes the \starstar{} line.
 The new constant expenditure line (\starstar{}) 
@@ -1288,10 +1299,10 @@ and~\ref{fig:ExampleCostPathGraph}, respectively.
 The model for utility defines indifference curves on the preferences path graph
 (Fig.~\ref{fig:ExamplePrefsPathGraph}).
 We employ a constant elasticity of substitution utility function 
-to describe the device owner's behavior.
+to describe the device owner's behavior:
 
 \begin{equation} \label{eq:ces_utility}
-  \frac{\rate{u}}{\rbempl{u}} = \cesutility{}
+  \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
 \end{equation}
 %
 The device owner's utility
@@ -1354,6 +1365,8 @@ and
           \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\}
                                                 ^{1/\rho} \; .
 \end{equation}
+%
+See Appendix~\ref{sec:Resub_exact_method} for details.
 
 Values calculated by Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution})
 can be used directly in 
@@ -1368,12 +1381,6 @@ and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
 \label{sec:inc_effect_main_paper}
 %------------------------------
 
-****Add references to notional graphs in this section. ****
-
-Rebound from the income effect quantifies the rate of additional energy demand 
-that arises when the energy conversion device owner spends net
-income from the EEU
-(segments \hatd{} and \dbar{} in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 The income rate of the device owner is $\rbempl{M}$, 
 which remains unchanged across the rebound effects, 
 such that
@@ -1388,14 +1395,20 @@ Derivations of expressions for gross and net income from the
 emplacement effect ($\rate{G}$) and
 the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
+Rebound from the income effect quantifies the rate of additional energy demand 
+that arises when the energy conversion device owner spends net
+income from the EEU
+(segments \hatd{} and \dbar{} in 
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
-In this framework, all net income ($\rasub{N}$) is split between
+In this framework, net income ($\rasub{N}$) is completely re-spent and 
+split between 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item additional energy service ($\rainc{q}_s > \rbinc{q}_s$, segment \hatd{}) and
+  \item additional spending on the energy service ($\rainc{q}_s > \rbinc{q}_s$, segment \hatd{}) and
   
-  \item additional other goods ($\rainc{q}_o > \rbinc{q}_o$, segment \dbar{}).
+  \item additional spending on other goods ($\rainc{q}_o > \rbinc{q}_o$, segment \dbar{}).
     
 \end{enumerate*}
 %
@@ -1416,9 +1429,10 @@ where effective income ($\Mdothatprime$) is given by
   \effinceqn{} \; .
 \end{equation}
 %
-Homotheticity means that $\eqsM = 1$ and $\eqoM = 1$.
+Homotheticity means that $\eqsM = 1$.
 The increased consumption rate of the energy service is 
-represented by segments \hatd{} in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+represented by segments \hatd{} 
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
@@ -1430,10 +1444,12 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqn{} \; .
+  Re_{dinc} = \Redinceqnexact{} \; ,
 \end{equation}
-
-If there is no net income ($\rasub{N} = 0$), 
+%
+where $\frac{\rasub{q}_s}{\rorig{q}_s}$
+is given by Eq.~(\ref{eq:q_s_solution}).
+If there is no net income after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities gets stronger 
 ($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
@@ -1443,7 +1459,6 @@ The income elasticity of other goods consumption ($\eqoM$)
 quantifies the amount of net income spent 
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
 (See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
-
 The ratio of rates of other goods consumed across the income effect is given by
 
 \begin{equation} \label{eq:qorat_eqoM}
@@ -1452,6 +1467,17 @@ The ratio of rates of other goods consumed across the income effect is given by
 %
 and is represented by segments \dbar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+Under the assumption that prices of other goods are exogenous
+(see Appendix~\ref{sec:exogenous_p_o}), 
+the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
+is equal to the ratio of rates of other goods expenditures ($\frac{\rasub{C}_o}{\rorig{C}_o}$)
+such that 
+
+\begin{equation} \label{eq:Corat_eqoM}
+  \frac{\rasub{C}_o}{\rorig{C}_o} = \left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqoM} \; .
+\end{equation}
+%
+Homotheticity means that $\eqoM = 1$.
 As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
 
 \begin{equation} \label{eq:Re_iinc_def}
@@ -1462,16 +1488,12 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
-  Re_{iinc} = \Reiinceqn{} \; .
+  Re_{iinc} = \Reiinceqnexact{} \; ,
 \end{equation}
+%
+where $\frac{\rasub{C}_o}{\rorig{C}_o}$ is given by Eq.~(\ref{eq:C_o_solution}).
 
-In the midst of the income effect analysis, a capital expenses rebound term appears:
-
-\begin{equation} \label{eq:Re_cap}
-  Re_{cap} = \Recapeqn{} \; .
-\end{equation}
-
-The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:qorat_eqoM}))
+The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:Corat_eqoM}))
 must satisfy the budget constraint
 such that net income is zero after
 the income effect ($\rainc{N} = 0$).
@@ -1717,7 +1739,7 @@ Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound
 
 
 For the first example, 
-we select the purchase of a more fuel efficient car (Ford Fusion Energi), 
+we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
 versus the incumbent (Ford Fusion SE). 
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
@@ -1925,12 +1947,11 @@ rebound_results %>%
 \label{sec:Car_results}
 %------------------------------
 
-
-
-Results can be represented graphically in energy, cost, preference path graphs.
-
-An energy path graph (Figure~\ref{fig:CarEnergyGraph})
-shows the size of each rebound effect.
+Results are represented graphically in energy, cost, preference path graphs
+in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
+The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
+shows the size of each rebound effect
+for the car example.
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
@@ -1994,7 +2015,7 @@ car_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                  49940, 78040, car_Re_arrow_angle, 2250, annotation_colour, 0.5)
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Car", 
+  ReboundTools::path_graphs(cases = "Car", 
                                graph_types = "Energy") +
   ggplot2::geom_spoke(data = car_Re_arrows, 
                         mapping = ggplot2::aes(x = x,
@@ -2040,7 +2061,7 @@ car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                      annotation_colour, annotation_size, car_cost_line_angle)
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Car", 
+  ReboundTools::path_graphs(cases = "Car", 
                                graph_types = "Cost") + 
   ggplot2::geom_text(data = car_cost_labels, 
                      mapping = ggplot2::aes(x = x, 
@@ -2101,7 +2122,7 @@ car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                     )
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Car", 
+  ReboundTools::path_graphs(cases = "Car", 
                                graph_types = "Preferences") + 
   ggplot2::geom_text(data = car_prefs_labels, 
                      mapping = ggplot2::aes(x = x, 
@@ -2137,8 +2158,6 @@ rebound_results %>%
         format.args = list(big.mark = ","), 
         math.style.negative = TRUE)
 @
-
-
 
 
 The \empleffect{} has three components:
@@ -2191,7 +2210,7 @@ Thus, the freed cash after the substitution effect
 translates into positive direct and indirect income
 rebound at the micro level. 
 
-Finally, at the macro level, the \prodeffect{} leads to prodictivity rebound
+Finally, at the macro level, the \prodeffect{} leads to productivity rebound
 ($Re_{\productivity}$) of \Sexpr{Re_prod_car_char_perc}\%,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
@@ -2259,7 +2278,7 @@ Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebou
 
 
 For our second example, 
-we select the option of buying a light emitting diode (LED) electric lamp, 
+we consider purchasing a light emitting diode (LED) electric lamp, 
 versus a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
 in terms of energy service delivery (measured in lumens), 
@@ -2524,7 +2543,7 @@ lamp_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                     32, annotation_colour, example_arrow_size)
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Lamp", 
+  ReboundTools::path_graphs(cases = "Lamp", 
                                graph_types = "Energy") + 
   ggplot2::geom_spoke(data = lamp_Re_arrows, 
                         mapping = ggplot2::aes(x = x,
@@ -2570,7 +2589,7 @@ lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                       annotation_colour, annotation_size, lamp_cost_line_angle)
 
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Lamp", 
+  ReboundTools::path_graphs(cases = "Lamp", 
                                graph_types = "Cost") + 
   ggplot2::geom_text(data = lamp_cost_labels, 
                      mapping = ggplot2::aes(x = x, 
@@ -2631,7 +2650,7 @@ lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                        line_label_colour, i_line_label_size,
                                      )
 rebound_results %>% 
-  ReboundTools::rebound_graphs(cases = "Lamp", 
+  ReboundTools::path_graphs(cases = "Lamp", 
                                graph_types = "Preferences") + 
     ggplot2::geom_text(data = lamp_prefs_labels, 
                      mapping = ggplot2::aes(x = x, 
@@ -2650,6 +2669,12 @@ rebound_results %>%
 \subsubsection{Results} 
 \label{sec:lamp_results}
 %------------------------------
+
+Results are represented graphically in energy, cost, preference path graphs
+in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
+The energy path graph (Fig.~\ref{fig:LampEnergyGraph})
+shows the size of each rebound effect
+for the lamp example.
 
 The base results for the lamp upgrade are shown in Table~\ref{tab:lamp_results}.
 
@@ -2730,8 +2755,220 @@ Finally, rebound due to the macroeconomic
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-(It is a coincidence that $Re_{\productivity} = Re_{iinc}$
+(It is a coincidence that $Re_{\productivity}$ has the same value as $Re_{iinc}$
 to 1 decimal place for the lighting example.)
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Sensitivity analyses}
+\label{sec:sensitivity_analyses}
+%++++++++++++++++++++++++++++++
+
+Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
+
+<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
+k_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
+                                                 parameterization = list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                                                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5))))
+k_line_data <- k_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+k_orig_data <- k_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+
+ggplot2::ggplot() + 
+  ggplot2::geom_point(data = k_orig_data,
+                      mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
+                                                    y = ReboundTools::rebound_terms$Re_tot), 
+                      colour = "red") + 
+  ggplot2::geom_line(data = k_line_data, 
+                     mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
+                                                   y = ReboundTools::rebound_terms$Re_tot)) + 
+  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case) +
+  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = "k [-]",
+                y = expression(Re[tot]*" [-]"), 
+                size = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
+
+
+Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
+
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+eta_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
+                                                   parameterization = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                                                                           Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))) %>% 
+  dplyr::mutate(
+    "{ReboundTools::tilde_vars$eta_engr_units_tilde}" := dplyr::case_when(
+      .data[[ReboundTools::eeu_base_params$case]] == "Lamp" ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]] / 1000, 
+      TRUE ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]]
+    ), 
+    takeback = Re_tot * S_dot_dev
+  )
+eta_line_data <- eta_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+eta_orig_data <- eta_sens_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+
+ggplot2::ggplot() +
+  ggplot2::geom_point(data = eta_orig_data, 
+                      mapping = ggplot2::aes_string(x = ReboundTools::tilde_vars$eta_engr_units_tilde, 
+                                                    y = ReboundTools::rebound_terms$Re_tot), 
+                      colour = "red") + 
+  ggplot2::geom_line(data = eta_line_data, 
+                     mapping = ggplot2::aes_string(x = ReboundTools::tilde_vars$eta_engr_units_tilde, 
+                                                   y = ReboundTools::rebound_terms$Re_tot)) +
+  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case, scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/W]"),
+                y = expression(Re[tot]*" [-]"), 
+                colour = ggplot2::element_blank(), 
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) + 
+  MKHthemes::xy_theme()
+@
+
+Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
+takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
+with efficiency ($\aprod{\eta}$).
+
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback and expected energy savings ($\\Sdot$) as a function of efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
+y_vars <- c(ReboundTools::star_vars$S_dot_dev, "takeback")
+y_vals_col <- "y_vars"
+y_names_col <- "y_names"
+graph_params <- ReboundTools::sens_graph_params
+
+
+pivoted_data <- eta_sens_data %>% 
+  tidyr::pivot_longer(cols = dplyr::all_of(y_vars), names_to = y_names_col, values_to = y_vals_col)
+
+line_data <- pivoted_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
+orig_data <- pivoted_data %>% 
+  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+
+ggplot2::ggplot() +
+  ggplot2::geom_point(data = orig_data, 
+                      mapping = ggplot2::aes_string(x = x_var, 
+                                                    y = y_vals_col), 
+                      colour = graph_params$orig_point_colour, 
+                      shape = graph_params$orig_point_shape, 
+                      size = graph_params$orig_point_size, 
+                      stroke = graph_params$orig_point_stroke) + 
+  ggplot2::geom_line(data = line_data, 
+                     mapping = ggplot2::aes_string(x = x_var, 
+                                                   y = y_vals_col, 
+                                                   linetype = y_names_col)) +
+  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case, scales = "free_x") +
+  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+  # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/W]"),
+                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"), 
+                colour = ggplot2::element_blank(), 
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) + 
+  MKHthemes::xy_theme()
+
+@
+
+
+
+
+All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
+
+<<all_Re_terms_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+Re_order <- c("Re_dempl", "Re_emb", "Re_md", "Re_dsub", "Re_isub", "Re_dinc", "Re_iinc", "Re_prod")
+rebound_data %>% 
+  dplyr::filter(Case != "Example") %>% 
+  ReboundTools::parametric_analysis(parameterization = eta_sens_params) %>% 
+  dplyr::mutate(
+    Re_empl = NULL,
+    Re_sub = NULL,
+    Re_inc = NULL, 
+    Re_d = NULL,
+    Re_i = NULL,
+    Re_tot = NULL
+  ) %>% 
+  tidyr::pivot_longer(cols = dplyr::all_of(Re_order), names_to = "Re_terms", values_to = "Re_vals") %>% 
+  dplyr::mutate(
+    Re_terms = factor(Re_terms, levels = Re_order)
+  ) %>% 
+  ReboundTools::sensitivity_graphs(x_var = "eta_engr_units_star", y_var = "Re_vals", 
+                                   linetype_var = "Re_terms",
+                                   linecolour_var = "Re_terms",
+                                   linesize_var = "Re_terms",
+                                   orig_point_colour = "black", 
+                                   orig_point_size = 2) + 
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_dempl = ReboundTools::path_graph_params$dempl_colour,
+                                          Re_emb = ReboundTools::path_graph_params$emb_colour,
+                                          Re_md = ReboundTools::path_graph_params$md_colour, 
+                                          Re_dsub = ReboundTools::path_graph_params$dsub_colour,
+                                          Re_isub = ReboundTools::path_graph_params$isub_colour, 
+                                          Re_dinc = ReboundTools::path_graph_params$dinc_colour,
+                                          Re_iinc = ReboundTools::path_graph_params$iinc_colour,
+                                          Re_prod = ReboundTools::path_graph_params$prod_colour)) +
+  ggplot2::scale_size_manual(values = c(Re_dempl = 0.2, 
+                                        Re_emb = ReboundTools::path_graph_params$emb_size,
+                                        Re_md = ReboundTools::path_graph_params$md_size, 
+                                        Re_dsub = ReboundTools::path_graph_params$dsub_size,
+                                        Re_isub = ReboundTools::path_graph_params$isub_size, 
+                                        Re_dinc = ReboundTools::path_graph_params$dinc_size,
+                                        Re_iinc = ReboundTools::path_graph_params$iinc_size,
+                                        Re_prod = ReboundTools::path_graph_params$prod_size)) +
+  ggplot2::scale_linetype_manual(values = c(Re_dempl = ReboundTools::path_graph_params$dempl_linetype, 
+                                            Re_emb = ReboundTools::path_graph_params$emb_linetype,
+                                            Re_md = ReboundTools::path_graph_params$md_linetype,
+                                            Re_dsub = ReboundTools::path_graph_params$dsub_linetype,
+                                            Re_isub = "11",
+                                            Re_dinc = ReboundTools::path_graph_params$dinc_linetype,
+                                            Re_iinc = "11",
+                                            Re_prod = ReboundTools::path_graph_params$prod_linetype)) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/kW]"),
+                y = "Re values [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
+
+
+
+Germany energy prices: 
+
+0.3 Euro/kWh. Source: Germany Economy \& Energy Ministry: 
+\url{https://www.bmwi.de/Redaktion/DE/Infografiken/Energie/strompreisbestandteile.html}
+
+1.35 Euro/liter for ``super’ gasoline'' (95 octane but let me double check)
+appears like an OK summary of the last five or so years, 
+perhaps undervaluing the past year a bit.
+\url{https://www.finanzen.net/rohstoffe/super-benzinpreis/historisch}
+
+1 L = 3.7854 us gallon
+
+1 euro = 1.21 USD
+
+So 0.3 euro/kWhr = 0.363 USD/kWhr
+
+1.35 euro/liter = 6.1834509 USD/gallon
+
+
+
+
+UK energy prices from PB email of 7 March 2021:
+
+20 UKp/kW-hr or about 0.28 USD/kW-hr
+from PB's own electricity bill.
+
+6.48 USD/US gallon
+from \url{https://www.globalpetrolprices.com/United-Kingdom/gasoline_prices/}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

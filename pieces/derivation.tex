@@ -316,19 +316,19 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 
 We begin by deriving an expression for direct and indirect 
 substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
-Thereafter, an approximate method and an exact method for determining the 
-post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$)
-are discussed.
+Thereafter, we note an assumption of exogenous pries of other goods ($p_o$)
+and develop an approximate method and an exact method for determining the 
+post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Direct and indirect substitution effect rebound expressions}
-\label{sec:Redsub_Reisub_expressions}
-%++++++++++++++++++++++++++++++
+%..............................
+\paragraph{Direct substitution effect rebound expression}
+\label{sec:Redsub_expression}
+%..............................
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
 \end{equation}
 %
@@ -362,10 +362,10 @@ Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
-              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+              \left( \frac{\cancel{\rbempl{E}_s} \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}    }{  \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}    \cancel{\rbempl{E}_s}} \right) \; .
 \end{equation}
 %
-Simplifying yields
+Canceling terms yields
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; .
@@ -376,10 +376,16 @@ Eq.~(\ref{eq:Re_dsub_prelim}) is the basis for
 developing both approximate and exact methods of determining
 direct substitution rebound.
 
+
+%..............................
+\paragraph{Indirect substitution effect rebound expression}
+\label{sec:Reisub_expression}
+%..............................
+
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation}
-  Re_{isub} = \frac{\Delta \rasub{C}_o}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\begin{equation} \label{eq:Re_isub_def}
+  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
 \end{equation}
 %
 Rearranging gives
@@ -409,16 +415,46 @@ developing both approximate and exact methods of determining
 indirect substitution rebound.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Approximate method}
+%..............................
+\paragraph{Exogenous $p_o$ assumption}
+\label{sec:exogenous_p_o}
+%..............................
+
+We assume a basket of other goods purchased in the economy,
+each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
+such that the average price of all other goods purchased in the economy~($p_o$) is given by
+
+\begin{equation}
+  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
+\end{equation}
+%
+Then, the cost rate of other purchases in the economy can be given as
+
+\begin{equation}
+  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
+\end{equation}
+%
+and
+
+\begin{equation}
+  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
+\end{equation}
+%
+Assuming that the average price is unchanged across the substitution effect,
+such that $\asub{p}_o = \bsub{p}_o$,
+the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
+and set equal to find
+
+\begin{equation} \label{eq:qo_Co_equality}
+  \frac{\rasub{C}_o}{\rbsub{C}_o} 
+      = \frac{\rasub{q}_o}{\rbsub{q}_o} \; .
+\end{equation}
+
+
+%..............................
+\paragraph{Approximate method} 
 \label{sec:Resub_approximate_method}
-%++++++++++++++++++++++++++++++
-
-
-%------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
-\label{sec:Redsub_approx}
-%------------------------------
+%..............................
 
 In the approximate method, 
 the relationship between energy service price and energy service consumption rate
@@ -470,12 +506,6 @@ direct substitution rebound will never be larger than 1.
 I.e., the direct substitution effect alone
 can never cause backfire. 
 
-
-%------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
-\label{sec:Reisub_approx}
-%------------------------------
-
 To quantify the substitution effect on other purchases in the approximate method,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$), 
@@ -497,41 +527,19 @@ efficiency, yielding
   \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
 \end{equation}
 
-We assume a basket of other goods purchased in the economy,
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
-such that the average price of all other goods purchased in the economy~($p_o$) is given by
-
-\begin{equation}
-  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
-\end{equation}
-%
-Then, the cost rate of other purchases in the economy can be given as
-
-\begin{equation}
-  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
-\end{equation}
-%
 Assuming that the average price is unchanged across the substitution effect,
 such that $\asub{p}_o = \bsub{p}_o$,
-the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
-and set equal, and
-Eq.~(\ref{eq:qohat_qostar}) can be added to find
+we can write
 
 \begin{equation} \label{eq:Cdot_o_ratio}
-  \frac{\rasub{C}_o}{\rbsub{C}_o} 
-      = \frac{\rasub{q}_o}{\rbsub{q}_o} 
+  \frac{\rasub{C}_o}{\rbsub{C}_o}
+      = \frac{\rasub{q}_o}{\rbsub{q}_o}
       = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
 \end{equation}
 %
-Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
+Note that Eq.~(\ref{eq:Cdot_o_ratio})
 (along with $\rbsub{C}_o = \rbempl{C}_o$)
-can be used to determine the rate of expenditures 
+can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
 \begin{equation}
@@ -567,10 +575,10 @@ Negative rebound indicates that indirect substitution effects
 reduce energy takeback by direct substitution effects.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Exact method}
+%..............................
+\paragraph{Exact method}
 \label{sec:Resub_exact_method}
-%++++++++++++++++++++++++++++++
+%..............................
 
 The approximate method assumes (incorrectly) that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
@@ -628,12 +636,6 @@ Second, the equation of the \starstar{} expenditure line is
         (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} - \rate{G}) \; .
 \end{equation}
 
-
-%------------------------------
-\subsubsection{Direct substitution rebound ($Re_{dsub}$)} 
-\label{sec:Redsub_exact}
-%------------------------------
-
 To find the rate of energy service consumption after the substitution effect
 ($\rasub{q}_s$), we set the slope of the \starstar{} expenditure line (Eq.~\ref{eq:starstar_line})
 equal to the slope of the \iicirc{} indifference curve 
@@ -661,12 +663,6 @@ Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
 to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
 via the exact method.
-
-
-%------------------------------
-\subsubsection{Indirect substitution rebound ($Re_{isub}$)} 
-\label{sec:Reisub_exact}
-%------------------------------
 
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
 can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
@@ -872,18 +868,18 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
                   \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Eliminating terms and substituting
-Eq.~(\ref{eq:q_ratio_func_of_eps}) for $\rasub{q}_s / \rbsub{q}_s$ gives
+Eliminating terms and recognizing that 
+$\rorig{q}_s = \raempl{q}_s$ gives
 
 \begin{equation} 
-  Re_{dinc} = \Redinceqn{} \; . \tag{\ref{eq:Re_dinc}}
+  Re_{dinc} = \Redinceqnexact{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
-
+%
+Eq.~(\ref{eq:q_s_solution}) 
+can be substituted into Eq.~(\ref{eq:Re_dinc})
+to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities gets stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
-direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
 using the income preference for other goods consumption.
@@ -928,74 +924,18 @@ and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
               \rbinc{C}_o I_E}{\Sdoteqn} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:Cdot_o_ratio}) for $\rbinc{C}_o$ gives
-
-\begin{equation}
-  Re_{iinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1  \right] 
-              \rbsub{C}_o \left( \etaratiostacked \right)^{-\eqops} I_E}{\Sdoteqn} \; .
-\end{equation}
-%
-Recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final form 
+Sutstituting $\frac{\raempl{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\raempl{C}_o$ and 
+recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final form 
 of the indirect income rebound expression:
 
 \begin{equation}
-  Re_{iinc} = \Reiinceqn{} \; .
+  Re_{iinc} = \Reiinceqnexact{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
-
+%
+Eq.~(\ref{eq:C_o_solution}) can be substituted into \ref{eq:Re_iinc}
+to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
-As either of the elasticities gets stronger 
-($\eqoM$ becomes more positive or $\eqops$ becomes more negative), 
-indirect income rebound~($Re_{iinc}$) grows.
-
-% ===========================
-% 
-% In this framework,
-% any net income not spent on procuring more of the energy service
-% goes toward consumption of other goods in the economy.
-% Rebound from the indirect income effect involves 
-% the energy implications of spending net income ($\rbinc{N}$)
-% on those other goods in the economy.
-% 
-% As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
-% 
-% \begin{equation}
-%   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; . \tag{\ref{eq:Re_iinc_def}}
-% \end{equation}
-% %
-% The increased spending on other goods in the economy ($\Delta \rainc{C}_o$)
-% can be found by rearranging the budget constraint for the income effect 
-% (Eq.~(\ref{eq:inc_budget_constraint})) to be 
-% $\Delta \rainc{C}_o = \rbinc{N} - p_E \Delta \rainc{E}_s$.
-% Substituting gives
-% 
-% \begin{equation}
-%   Re_{iinc} = \frac{\rbinc{N} I_E - p_E I_E \Delta \rainc{E}_s}{\Sdot} \; .
-% \end{equation}
-% %
-% Splitting the terms and substituting Eq.~(\ref{eq:Re_dinc_def}) gives
-% 
-% \begin{equation}
-%   Re_{iinc} = \frac{\rbinc{N} I_E}{\Sdot} - p_E I_E Re_{dinc} \; .
-% \end{equation}
-% %
-% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives 
-% 
-% \begin{equation}
-%   Re_{iinc} = \Reiinceqn{} \; . \tag{\ref{eq:Re_iinc}}
-% \end{equation}
-% 
-% This equation shows that a good first estimate for indirect income rebound
-% is $p_E I_E$.
-% Positive rebound from capital expenditures~($Re_{cap}$), 
-% maintenance and disposal~($Re_{\md}$),
-% direct substitution~($Re_{dsub}$), 
-% indirect substitution~($Re_{isub}$), and 
-% direct income~($Re_{dinc}$)
-% reduce the indirect income effect rebound, 
-% because each reduces net income available to the device owner to spend on other goods in the economy.
-% Any negative rebound effects enhance the indirect income effect rebound, because 
-% they add to the net income available to the device owner to spend on other goods in the economy.
 
 
 %------------------------------
@@ -1015,7 +955,7 @@ Substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$) gives
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$
-and Eqs.~(\ref{eq:Re_md_def}), (\ref{eq:Re_dsub_def}), and (\ref{eq:Re_isub_dev})
+and Eqs.~(\ref{eq:Re_md_def}), (\ref{eq:Re_dsub_def}), and (\ref{eq:Re_isub_def})
 for rebound terms gives
 
 \begin{equation}
@@ -1033,16 +973,6 @@ Canceling terms and defining $Re_{cap}$ as
 \end{equation}
 %
 gives
-
-% \begin{equation} \label{eq:N_dot_I_E_Sdot}
-%   Re_{\productivity} = k p_E I_E
-%                                 - k Re_{cap}
-%                                 - k Re_{\md}
-%                                 - k p_E I_E Re_{dsub}
-%                                 - k Re_{isub} \; .
-% \end{equation}
-% 
-% Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) into Eq.~(\ref{eq:Re_prod_def}) gives
 
 \begin{equation}
   Re_{\productivity} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
@@ -1098,13 +1028,13 @@ Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values,
   
   \item $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
   
-  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub})),
+  \item $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim}) and (\ref{eq:q_s_solution})),
   
-  \item $Re_{isub}$ (Eq.~(\ref{eq:Re_isub})), 
+  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_prelim}) and (\ref{eq:C_o_solution})), 
   
-  \item $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})), and
+  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc}) and (\ref{eq:q_s_solution})), and
   
-  \item $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})),
+  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc}) and (\ref{eq:C_o_solution})),
 
 \end{itemize}
 %
