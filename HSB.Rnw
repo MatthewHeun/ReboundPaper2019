@@ -2747,6 +2747,7 @@ k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)),
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
                    x_var = "k", y_var = "Re_tot") +
+  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
@@ -2770,6 +2771,7 @@ eta_sens_params = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)),
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                    x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, by = 0.1)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
@@ -2817,10 +2819,15 @@ All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 Re_graph_params <- ReboundTools::sens_graph_params
 Re_graph_params[["isub_linetype"]] <- "11" # short dashes
 Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
+Re_graph_params[["md_linetype"]] <- "11" # short dashes
+Re_graph_params[["emb_size"]] <- 1 # revert to regular size
+Re_graph_params[["md_size"]] <- 0.5 # make smaller
+
 sens_params <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
                     Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))
 rebound_terms_graph(rebound_data = actual_cases, parameterization = sens_params, 
                     x_var = "eta_engr_units_tilde", graph_params = Re_graph_params) +
+  ggplot2::geom_hline(yintercept = 0, size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm/W (Lamp)]"),
                 y = "Re values [-]",
@@ -2839,6 +2846,7 @@ sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
 sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "p_E_engr_units", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
@@ -2853,17 +2861,18 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)), 
-                    Lamp = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)))
+sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.6, 0, by = 0.01)), 
+                    Lamp = list(e_qs_ps_UC = seq(-0.6, 0, by = 0.01)))
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_x_reverse() +
+  ggplot2::scale_y_continuous(limits = c(0, 0.8), breaks = seq(0, 1, by = 0.2)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
-  ggplot2::scale_x_reverse() +
-  ggplot2::labs(x = expression(epsilon[q[s]*","*p[s]*","*UC]),
+  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
                 y = expression(Re[tot]),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
