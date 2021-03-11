@@ -2738,27 +2738,24 @@ to 1 decimal place for the lighting example.)
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
-k_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
-                                                 parameterization = list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
-                                                                         Lamp = list(k = seq(0.5, 2.0, by = 0.5))))
-k_line_data <- k_sens_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
-k_orig_data <- k_sens_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+# Use for all sensitivity graphs
+actual_cases <- rebound_data %>% 
+  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
-ggplot2::ggplot() + 
-  ggplot2::geom_point(data = k_orig_data,
-                      mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
-                                                    y = ReboundTools::rebound_terms$Re_tot), 
-                      colour = "red") + 
-  ggplot2::geom_line(data = k_line_data, 
-                     mapping = ggplot2::aes_string(x = ReboundTools::eeu_base_params$k, 
-                                                   y = ReboundTools::rebound_terms$Re_tot)) + 
-  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case) +
-  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
+k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                      Lamp = list(k = seq(0.5, 2.0, by = 0.5)))
+
+sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
+                   x_var = "k", y_var = "Re_tot") +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = "k [-]",
-                y = expression(Re[tot]*" [-]"), 
-                size = ggplot2::element_blank()) +
+                y = expression(Re[tot]),
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 @
 
@@ -2767,90 +2764,48 @@ ggplot2::ggplot() +
 Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
 
 <<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
-eta_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
-                                                   parameterization = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                                                                           Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))) %>% 
-  dplyr::mutate(
-    takeback = Re_tot * S_dot_dev
-  )
-eta_line_data <- eta_sens_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
-eta_orig_data <- eta_sens_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
+eta_sens_params = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                       Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))
 
-ggplot2::ggplot() +
-  ggplot2::geom_point(data = eta_orig_data, 
-                      mapping = ggplot2::aes_string(x = ReboundTools::tilde_vars$eta_engr_units_tilde, 
-                                                    y = ReboundTools::rebound_terms$Re_tot), 
-                      colour = "red") + 
-  ggplot2::geom_line(data = eta_line_data, 
-                     mapping = ggplot2::aes_string(x = ReboundTools::tilde_vars$eta_engr_units_tilde, 
-                                                   y = ReboundTools::rebound_terms$Re_tot)) +
-  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case, scales = "free_x") +
-  ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
-  ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
-  ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/W]"),
-                y = expression(Re[tot]*" [-]"), 
-                colour = ggplot2::element_blank(), 
+sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
+                   x_var = "eta_engr_units_star", y_var = "Re_tot") +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm/W (Lamp)]"),
+                y = expression(Re[tot]*" [-]"),
+                colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) + 
+                linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 @
+
 
 Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
 takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
 with efficiency ($\aprod{\eta}$).
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback and expected energy savings ($\\Sdot$) as a function of efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
-original_cases <- rebound_data %>% 
-  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
-parameterization <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                         Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
-x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
-y_vars <- c(ReboundTools::star_vars$S_dot_dev, "takeback")
-y_vals_col <- "y_vars"
-y_names_col <- "y_names"
-graph_params <- ReboundTools::sens_graph_params
-
-.sens_data <- ReboundTools::parametric_analysis(original_cases = original_cases, 
-                                                parameterization = parameterization) %>% 
+sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases,
+                                                parameterization = eta_sens_params) %>%
   dplyr::mutate(
     takeback = .data[[ReboundTools::rebound_terms$Re_tot]] * .data[[ReboundTools::star_vars$S_dot_dev]]
   )
 
-
-pivoted_data <- .sens_data %>% 
-  tidyr::pivot_longer(cols = dplyr::all_of(y_vars), names_to = y_names_col, values_to = y_vals_col)
-
-line_data <- pivoted_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
-orig_data <- pivoted_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
-
-ggplot2::ggplot() +
-  ggplot2::geom_point(data = orig_data, 
-                      mapping = ggplot2::aes_string(x = x_var, 
-                                                    y = y_vals_col), 
-                      colour = graph_params$orig_point_colour, 
-                      shape = graph_params$orig_point_shape, 
-                      size = graph_params$orig_point_size, 
-                      stroke = graph_params$orig_point_stroke) + 
-  ggplot2::geom_line(data = line_data, 
-                     mapping = ggplot2::aes_string(x = x_var, 
-                                                   y = y_vals_col, 
-                                                   linetype = y_names_col)) +
-  ggplot2::facet_wrap(facets = ReboundTools::eeu_base_params$case, scales = "free_x") +
-  # ggplot2::scale_colour_manual(values = c(Car = "black", Lamp = "black"), breaks = c("Lamp", "Car")) + 
-  # ggplot2::scale_size_manual(values = c(Car = 0.5, Lamp = 0.5), breaks = c("Lamp", "Car")) + 
-  # ggplot2::scale_linetype_manual(values = c(Car = "dashed", Lamp = "solid"), breaks = c("Lamp", "Car")) + 
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg or lm/W]"),
-                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"), 
-                colour = ggplot2::element_blank(), 
+sensitivity_graphs(.parametric_data = sens_data,
+                   x_var = "eta_engr_units_star", 
+                   y_var = c(ReboundTools::star_vars$S_dot_dev, "takeback")) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(S_dot_dev = "black", takeback = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = FALSE) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm/W (Lamp)]"),
+                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"),
+                colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) + 
+                linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
-
 @
 
 
@@ -2859,70 +2814,14 @@ ggplot2::ggplot() +
 All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 
 <<all_Re_terms_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
-original_cases <- rebound_data %>% 
-  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
-parameterization <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                         Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))
-
-x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
-y_vars <- setdiff(ReboundTools::rebound_terms, ReboundTools::rebound_terms_agg) %>% 
-  unlist()
-y_vals_col <- "y_vals"
-y_names_col <- "y_names"
-
-.sens_data <- ReboundTools::parametric_analysis(original_cases = original_cases, 
-                                                parameterization = parameterization)
-
-pivoted_data <- .sens_data %>% 
-  tidyr::pivot_longer(cols = dplyr::all_of(y_vars), names_to = y_names_col, values_to = y_vals_col)
-
-line_data <- pivoted_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$sweep)
-orig_data <- pivoted_data %>% 
-  dplyr::filter(.data[[ReboundTools::parametric_analysis_point_types$point_type_colname]] == ReboundTools::parametric_analysis_point_types$orig)
-
-ggplot2::ggplot() + 
-  ggplot2::geom_point(data = orig_data, 
-                      mapping = ggplot2::aes_string(x = x_var, 
-                                                    y = y_vals_col), 
-                      colour = graph_params$orig_point_colour, 
-                      shape = graph_params$orig_point_shape, 
-                      size = graph_params$orig_point_size, 
-                      stroke = graph_params$orig_point_stroke) + 
-  ggplot2::geom_line(data = line_data, 
-                     mapping = ggplot2::aes_string(x = x_var, 
-                                                   y = y_vals_col, 
-                                                   linetype = y_names_col, 
-                                                   colour = y_names_col, 
-                                                   size = y_names_col)) +
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  
-  
-  
-  ggplot2::scale_colour_manual(values = c(Re_dempl = ReboundTools::path_graph_params$dempl_colour,
-                                          Re_emb = ReboundTools::path_graph_params$emb_colour,
-                                          Re_md = ReboundTools::path_graph_params$md_colour, 
-                                          Re_dsub = ReboundTools::path_graph_params$dsub_colour,
-                                          Re_isub = ReboundTools::path_graph_params$isub_colour, 
-                                          Re_dinc = ReboundTools::path_graph_params$dinc_colour,
-                                          Re_iinc = ReboundTools::path_graph_params$iinc_colour,
-                                          Re_prod = ReboundTools::path_graph_params$prod_colour)) +
-  ggplot2::scale_size_manual(values = c(Re_dempl = 0.2, 
-                                        Re_emb = ReboundTools::path_graph_params$emb_size,
-                                        Re_md = ReboundTools::path_graph_params$md_size, 
-                                        Re_dsub = ReboundTools::path_graph_params$dsub_size,
-                                        Re_isub = ReboundTools::path_graph_params$isub_size, 
-                                        Re_dinc = ReboundTools::path_graph_params$dinc_size,
-                                        Re_iinc = ReboundTools::path_graph_params$iinc_size,
-                                        Re_prod = ReboundTools::path_graph_params$prod_size)) +
-  ggplot2::scale_linetype_manual(values = c(Re_dempl = ReboundTools::path_graph_params$dempl_linetype, 
-                                            Re_emb = ReboundTools::path_graph_params$emb_linetype,
-                                            Re_md = ReboundTools::path_graph_params$md_linetype,
-                                            Re_dsub = ReboundTools::path_graph_params$dsub_linetype,
-                                            Re_isub = "11",
-                                            Re_dinc = ReboundTools::path_graph_params$dinc_linetype,
-                                            Re_iinc = "11",
-                                            Re_prod = ReboundTools::path_graph_params$prod_linetype)) +
+Re_graph_params <- ReboundTools::sens_graph_params
+Re_graph_params[["isub_linetype"]] <- "11" # short dashes
+Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
+sens_params <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                    Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))
+rebound_terms_graph(rebound_data = actual_cases, parameterization = sens_params, 
+                    x_var = "eta_engr_units_tilde", graph_params = Re_graph_params) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm/W (Lamp)]"),
                 y = "Re values [-]",
                 colour = ggplot2::element_blank(),
@@ -2934,12 +2833,10 @@ ggplot2::ggplot() +
 
 
 <<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$).", fig.width=6, fig.height=4>>=
-original_cases <- rebound_data %>% 
-  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
                     Lamp = list(p_E_engr_units = seq(0.00005, 0.0004, by = 0.00001)))
 
-sensitivity_graphs(rebound_data = original_cases, parameterization = sens_params,
+sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "p_E_engr_units", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
@@ -2956,12 +2853,10 @@ sensitivity_graphs(rebound_data = original_cases, parameterization = sens_params
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-original_cases <- rebound_data %>% 
-  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)), 
                     Lamp = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)))
 
-sensitivity_graphs(rebound_data = original_cases, parameterization = sens_params,
+sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
