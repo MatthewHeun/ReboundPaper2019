@@ -2186,8 +2186,8 @@ energy service (transportation).
 
 <<LampPrintableNumbers, echo=FALSE>>=
 # First table
-efficacy_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, digits = 2) # lm-hr/W-hr
-efficacy_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, digits = 1) # lm-hr/W-hr
+efficacy_worse <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$eta_engr_units_orig, scale = 0.001, digits = 2) # lm-hr/W-hr
+efficacy_better <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$eta_engr_units_star, scale = 0.001, digits = 1) # lm-hr/W-hr
 C_dot_cap_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$C_dot_cap_orig, digits = 3)
 C_dot_cap_star_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::star_vars$C_dot_cap_star, digits = 3)
 t_own_orig_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$t_own_orig, digits = 1)
@@ -2410,7 +2410,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
 
 
 <<lamp_stages_table, results="asis", echo=FALSE>>=
-digs_lamp <- matrix(c(rep(3, 7), # eta_engr_units
+digs_lamp <- matrix(c(rep(0, 7), # eta_engr_units
                       rep(0, 7), # eta
                       rep(8, 7), # p_s
                       rep(0, 7), # q_dot_s
