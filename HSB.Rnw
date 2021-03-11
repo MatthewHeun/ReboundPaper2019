@@ -2769,12 +2769,8 @@ Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fi
 <<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 eta_sens_data <- ReboundTools::parametric_analysis(original_cases = rebound_data, 
                                                    parameterization = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                                                                           Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))) %>% 
+                                                                           Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))) %>% 
   dplyr::mutate(
-    "{ReboundTools::tilde_vars$eta_engr_units_tilde}" := dplyr::case_when(
-      .data[[ReboundTools::eeu_base_params$case]] == "Lamp" ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]] / 1000, 
-      TRUE ~ .data[[ReboundTools::tilde_vars$eta_engr_units_tilde]]
-    ), 
     takeback = Re_tot * S_dot_dev
   )
 eta_line_data <- eta_sens_data %>% 
@@ -2937,16 +2933,49 @@ ggplot2::ggplot() +
 
 
 
-<<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$).", fig.width=6, fig.height=4>>=
+original_cases <- rebound_data %>% 
+  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
+sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
+                    Lamp = list(p_E_engr_units = seq(0.00005, 0.0004, by = 0.00001)))
 
-
+sensitivity_graphs(rebound_data = original_cases, parameterization = sens_params,
+                   x_var = "p_E_engr_units", y_var = "Re_tot") +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
+  ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/W-hr (Lamp)]"),
+                y = expression(Re[tot]),
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
 @
 
 
-**** Make a graph of Re vs. $p_E$. ****
 
+<<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
+original_cases <- rebound_data %>% 
+  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
+sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)), 
+                    Lamp = list(e_qs_ps_UC = seq(-0.6, -0.1, by = 0.01)))
 
-**** Make a graph of Re vs. $\sigma$. ****
+sensitivity_graphs(rebound_data = original_cases, parameterization = sens_params,
+                   x_var = "e_qs_ps_UC", y_var = "Re_tot") +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
+  ggplot2::scale_x_reverse() +
+  ggplot2::labs(x = expression(epsilon[q[s]*","*p[s]*","*UC]),
+                y = expression(Re[tot]),
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
 
 
 
