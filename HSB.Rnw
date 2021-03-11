@@ -2861,8 +2861,8 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.6, 0, by = 0.01)), 
-                    Lamp = list(e_qs_ps_UC = seq(-0.6, 0, by = 0.01)))
+sens_params <- list(Car = list(e_qs_ps_UC = seq(-1, 0, by = 0.01)), 
+                    Lamp = list(e_qs_ps_UC = seq(-1, 0, by = 0.01)))
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
