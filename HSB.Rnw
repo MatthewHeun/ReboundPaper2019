@@ -2866,7 +2866,7 @@ All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 original_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 parameterization <- list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                         Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
+                         Lamp = list(eta_engr_units_star = seq(70, 90, by = 5)))
 
 x_var <- ReboundTools::tilde_vars$eta_engr_units_tilde
 y_vars <- setdiff(ReboundTools::rebound_terms, ReboundTools::rebound_terms_agg) %>% 
