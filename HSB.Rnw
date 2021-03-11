@@ -2726,47 +2726,71 @@ to 1 decimal place for the lighting example.)
 \label{sec:sensitivity_analyses}
 %++++++++++++++++++++++++++++++
 
-Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
-<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
-# Use for all sensitivity graphs
+
+
+
+Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
+energy savings takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
+with efficiency ($\aprod{\eta}$).
+
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
-k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
-                      Lamp = list(k = seq(0.5, 2.0, by = 0.5)))
+eta_sens_params = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
+                       Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
 
-sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
-                   x_var = "k", y_var = "Re_tot") +
-  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) + 
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
-  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
-  ggplot2::labs(x = "k [-]",
-                y = expression(Re[tot]),
+eta_sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases,
+                                                parameterization = eta_sens_params) %>%
+  dplyr::mutate(
+    takeback = .data[[ReboundTools::rebound_terms$Re_tot]] * .data[[ReboundTools::star_vars$S_dot_dev]]
+  )
+
+# This is a hacky function to format the x-axis numbers of the graphs.
+# x is the breaks for a facet.
+# The function checks to see if the breaks are > 1000 and divides by 1000 in that case.
+# This approach works, because lm-hr/kW-hr values are > 1000 for the Lamp example
+# but the car example has mpg (which are all less than 100).
+# So this function divides the Lm-hr/kW-hr values by 1000 while leaving the mpg values alone.
+eta_tilde_formatter <- function(x) {
+  if (all(x > 1000)) {
+    # To convert Lm-hr/kW-hr to Lm-hr/W-hr.
+    return(x/1000)
+  }
+  # To leave mpg alone.
+  return(x)
+}
+
+sensitivity_graphs(.parametric_data = eta_sens_data,
+                   x_var = "eta_engr_units_star", 
+                   y_var = c(ReboundTools::star_vars$S_dot_dev, "takeback")) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free") +
+  ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
+  ggplot2::scale_y_continuous(limits = c(0, NA)) +
+  ggplot2::scale_colour_manual(values = c(S_dot_dev = "black", takeback = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = FALSE) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
+                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 @
 
-
-
 Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
 
 <<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
-eta_sens_params = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
-                       Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
-
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                    x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, by = 0.1)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/kW-hr (Lamp)]"),
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
                 y = expression(Re[tot]*" [-]"),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
@@ -2775,38 +2799,9 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
 @
 
 
-Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
-takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
-with efficiency ($\aprod{\eta}$).
-
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback and expected energy savings ($\\Sdot$) as a function of efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
-sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases,
-                                                parameterization = eta_sens_params) %>%
-  dplyr::mutate(
-    takeback = .data[[ReboundTools::rebound_terms$Re_tot]] * .data[[ReboundTools::star_vars$S_dot_dev]]
-  )
-
-sensitivity_graphs(.parametric_data = sens_data,
-                   x_var = "eta_engr_units_star", 
-                   y_var = c(ReboundTools::star_vars$S_dot_dev, "takeback")) +
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  ggplot2::scale_colour_manual(values = c(S_dot_dev = "black", takeback = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = FALSE) + 
-  ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = FALSE) +
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/kW-hr (Lamp)]"),
-                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"),
-                colour = ggplot2::element_blank(),
-                size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
-@
-
-
-
-
 All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 
-<<all_Re_terms_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
 Re_graph_params[["isub_linetype"]] <- "11" # short dashes
 Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
@@ -2818,7 +2813,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
                     x_var = "eta_engr_units_tilde", graph_params = Re_graph_params) +
   ggplot2::geom_hline(yintercept = 0, size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
-  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/kW-hr (Lamp)]"),
+  ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
+  ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
                 y = "Re values [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
@@ -2832,15 +2828,11 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
                     Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
-# price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units, 
-#                               "Car", "DEU", 6.18,     # $/gal
-#                               "Lamp", "DEU", 0.363,  # $/W-hr
+price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
 #                               "Car", "GBR", 6.48,     # $/gal
-#                               "Lamp", "GBR", 0.28)   # $/W-hr
-
-price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units, 
-                              "Car", "DEU", 6.18,      # $/gal
-                              "Lamp", "DEU", 0.363) # $/W-hr
+#                               "Lamp", "GBR", 0.28,    # $/W-hr
+                              "Car", "DEU", 6.18,     # $/gal
+                              "Lamp", "DEU", 0.363)   # $/W-hr
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "p_E_engr_units", y_var = "Re_tot") +
@@ -2852,7 +2844,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
-  ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/W-hr (Lamp)]"),
+  ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
                 y = expression(Re[tot]),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
@@ -2863,10 +2855,10 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
-                    Lamp = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)))
+eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
+                        Lamp = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)))
 
-sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
+sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
@@ -2884,6 +2876,49 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
 
 
 
+<<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
+Re_graph_params <- ReboundTools::sens_graph_params
+Re_graph_params[["isub_linetype"]] <- "11" # short dashes
+Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
+Re_graph_params[["md_linetype"]] <- "11" # short dashes
+Re_graph_params[["emb_size"]] <- 1 # revert to regular size
+Re_graph_params[["md_size"]] <- 0.5 # make smaller
+
+rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params, 
+                    x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
+  ggplot2::geom_hline(yintercept = 0, size = 0.1) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
+  ggplot2::scale_x_reverse() +
+  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
+                y = "Rebound terms [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
+
+Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
+
+<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
+# Use for all sensitivity graphs
+k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+                      Lamp = list(k = seq(0.5, 2.0, by = 0.5)))
+
+sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
+                   x_var = "k", y_var = "Re_tot") +
+  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) + 
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
+  ggplot2::labs(x = "k [-]",
+                y = expression(Re[tot]),
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
 
 Germany energy prices: 
 
