@@ -2861,14 +2861,14 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-sens_params <- list(Car = list(e_qs_ps_UC = seq(-1, 0, by = 0.01)), 
-                    Lamp = list(e_qs_ps_UC = seq(-1, 0, by = 0.01)))
+sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
+                    Lamp = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)))
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
-  ggplot2::scale_y_continuous(limits = c(0, 0.8), breaks = seq(0, 1, by = 0.2)) + 
+  ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 2, by = 0.2)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
