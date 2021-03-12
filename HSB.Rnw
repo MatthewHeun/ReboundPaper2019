@@ -2726,10 +2726,6 @@ to 1 decimal place for the lighting example.)
 \label{sec:sensitivity_analyses}
 %++++++++++++++++++++++++++++++
 
-
-
-
-
 Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
 energy savings takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
 with efficiency ($\aprod{\eta}$).
@@ -2811,7 +2807,6 @@ Re_graph_params[["md_size"]] <- 0.5 # make smaller
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_params, 
                     x_var = "eta_engr_units_tilde", graph_params = Re_graph_params) +
-  ggplot2::geom_hline(yintercept = 0, size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
@@ -2840,7 +2835,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
   ggplot2::geom_vline(data = price_data, 
                       mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
                       size = 0.1) +
-  # ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 1, by = 0.2)) + 
+  ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 1, by = 0.2)) +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
@@ -2862,7 +2857,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
-  ggplot2::scale_y_continuous(limits = c(0, 1), breaks = seq(0, 2, by = 0.2)) + 
+  ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 2, by = 0.2)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
@@ -2886,7 +2881,6 @@ Re_graph_params[["md_size"]] <- 0.5 # make smaller
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params, 
                     x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
-  ggplot2::geom_hline(yintercept = 0, size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::scale_x_reverse() +
   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
