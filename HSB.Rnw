@@ -2840,7 +2840,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_para
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
-                y = expression(Re[tot]),
+                y = expression(Re[tot]*" [-]"),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -2876,7 +2876,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
   ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
-                y = expression(Re[tot]),
+                y = expression(Re[tot]*" [-]"),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
