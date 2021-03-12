@@ -2870,26 +2870,29 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
 @
 
 
+% 
+% <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
+% Re_graph_params <- ReboundTools::sens_graph_params
+% Re_graph_params[["isub_linetype"]] <- "11" # short dashes
+% Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
+% # Re_graph_params[["iinc_size"]] <- 3 # short dashes
+% Re_graph_params[["md_linetype"]] <- "11" # short dashes
+% Re_graph_params[["emb_size"]] <- 1 # revert to regular size
+% Re_graph_params[["md_size"]] <- 0.5 # make smaller
+% 
+% rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params, 
+%                     x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
+%   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
+%   ggplot2::scale_x_reverse() +
+%   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
+%                 y = "Rebound terms [-]",
+%                 colour = ggplot2::element_blank(),
+%                 size = ggplot2::element_blank(),
+%                 linetype = ggplot2::element_blank()) +
+%   MKHthemes::xy_theme()
+% @
+% 
 
-<<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-Re_graph_params <- ReboundTools::sens_graph_params
-Re_graph_params[["isub_linetype"]] <- "11" # short dashes
-Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
-Re_graph_params[["md_linetype"]] <- "11" # short dashes
-Re_graph_params[["emb_size"]] <- 1 # revert to regular size
-Re_graph_params[["md_size"]] <- 0.5 # make smaller
-
-rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params, 
-                    x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
-  ggplot2::scale_x_reverse() +
-  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
-                y = "Rebound terms [-]",
-                colour = ggplot2::element_blank(),
-                size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
-@
 
 
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
