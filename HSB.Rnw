@@ -2820,8 +2820,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 
 
 <<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$). Vertical lines indicate energy prices in Germany.", fig.width=6, fig.height=4>>=
-sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
-                    Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
+p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
+                        Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
 price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
 #                               "Car", "GBR", 6.48,     # $/gal
@@ -2829,7 +2829,7 @@ price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
                               "Car", "DEU", 6.18,     # $/gal
                               "Lamp", "DEU", 0.363)   # $/W-hr
 
-sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
+sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_params,
                    x_var = "p_E_engr_units", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::geom_vline(data = price_data, 
@@ -2841,6 +2841,20 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = sens_params,
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
                 y = expression(Re[tot]),
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
+
+
+<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_params, 
+                    x_var = "p_E_engr_units", graph_params = Re_graph_params) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
+  # ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
+  ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
+                y = "Re values [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
