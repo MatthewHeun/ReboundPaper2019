@@ -2726,11 +2726,88 @@ to 1 decimal place for the lighting example.)
 \label{sec:sensitivity_analyses}
 %++++++++++++++++++++++++++++++
 
-Total rebound ($Re_{tot}$) decreases with efficiency ($\aprod{\eta}$), because
-energy savings takeback ($Re_{tot} \Sdot$) grows more slowly than expected energy savings ($\Sdot$)
-with efficiency ($\aprod{\eta}$).
+Sensitivity analyses show the effect of 
+independently-varied parameters on total rebound and rebound components.
+Key parameters include 
+post-EEU efficiency ($\aprod{\eta}$),
+energy price ($p_E$),
+uncompensated own price elasticity of energy service consumption ($\eqspsUC$), and
+the productivity multiplier ($k$).
+However, sensitivity analyses must be undertaken carefully,
+because it is rarely true that rebound parameters are, in fact, independent of each other.
+For example,
+post-EEU efficiency ($\aprod{\eta}$)
+is unlikely to be independent of capital cost rate ($\raempl{C}_{cap}$).
+Varying the energy price ($p_E$) alone
+should not be considered a way to find, say,
+the magnitude of rebound that would occur in a country with a different energy price,
+because the capital cost rate ($\raempl{C}_{cap}$), 
+the maintenance and disposal cost rate ($\raempl{C}_{\md}$),
+the energy intensity of the economy ($I_E$), and
+typical energy service consumption rates ($\rbempl{q}_s$)
+would also be different in the other country.
+Varying only uncompensated own price elasticity of energy service consumption ($\eqspsUC$)
+must be interpreted carefully, too,
+because $\left| \eqspsUC \right| < \fCs$ 
+leads to negative elasticity of substitution ($\sigma < 0$),
+by Eq.~(\ref{eq:sigma}),
+an uneconomic condition.
+In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
+would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
+Finally, different values of the productivity factor ($k$)
+are unlikely to be independent of
+the energy intensity of the economy ($I_E$), because
+a different value of $k$ implies a different macro-economy.
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $y$-axis limits.)", fig.width=6, fig.height=4>>=
+Notwithstanding the caveats above, 
+sensitivity analysis
+can be important for understanding trends, tendencies, and relationships
+between rebound parameters and rebound magnitudes.
+Thus, the following subsections show the effects of key rebound parameters
+($\aprod{\eta}$, $p_E$, $\eqspsUC$, and $k$)
+on energy rebound ($Re_{tot}$) and its components
+($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
+$Re_{dinc}$, $Re_{iinc}$, and $Re_{\productivity}$).
+
+
+%------------------------------
+\subsubsection{Effect of efficiency ($\aprod{\eta}$)} 
+\label{sec:effect_of_efficiency}
+%------------------------------
+
+<<efficiency_ratios, echo=FALSE>>=
+car_efficiency_ratio <- (rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select("eta_engr_units_star") / rebound_results %>% dplyr::filter(Case == "Car") %>% dplyr::select("eta_engr_units_orig")) %>% 
+  unlist() %>% 
+  formatC(digits = 3)
+
+lamp_efficacy_ratio <- (rebound_results %>% dplyr::filter(Case == "Lamp") %>% dplyr::select("eta_engr_units_star") / rebound_results %>% dplyr::filter(Case == "Lamp") %>% dplyr::select("eta_engr_units_orig")) %>% 
+  unlist() %>% 
+  formatC(digits = 3)
+@
+
+Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
+both takeback and expected energy savings ($\Sdot$)
+increase with post-EEU efficiency ($\aprod{\eta}$), 
+but the relationship is asymptotic:
+there are diminishing returns to increasing efficiency,
+leading to saturation at very high efficiencies.
+Saturation is especially noticeable in the Lamp example,
+because the LED lamp is much more efficient than the incandescent lamp
+(\Sexpr{lamp_efficacy_ratio}$\times$), 
+whereas the fuel-efficient car is only 
+\Sexpr{car_efficiency_ratio}$\times$ as efficient as the original. 
+That said,
+expected energy savings ($\Sdot$) increase faster than takeback,
+so total rebound ($Re_{tot}$, the ratio of 
+takeback to expected energy savings given by Eq.~\ref{eq:Re_takeback}),
+decreases as efficiency grows, 
+as shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
+Note that open circle points indicate the nominal $x$-axis values 
+in sensitivity graphs.
+Fig.~\ref{fig:all_Re_terms_graph} shows the variation of all rebound components
+with post-EEU efficiency ($\aprod{\eta}$).
+
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $x$ and $y$ axes.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
@@ -2744,18 +2821,18 @@ eta_sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases
   )
 
 # This is a hacky function to format the x-axis numbers of the graphs.
-# x is the breaks for a facet.
+# x_breaks are the breaks for an axis.
 # The function checks to see if the breaks are > 1000 and divides by 1000 in that case.
 # This approach works, because lm-hr/kW-hr values are > 1000 for the Lamp example
 # but the car example has mpg (which are all less than 100).
-# So this function divides the Lm-hr/kW-hr values by 1000 while leaving the mpg values alone.
-eta_tilde_formatter <- function(x) {
-  if (all(x > 1000)) {
+# So this function divides the Lm-hr/kW-hr values by 1000 while leaving the mpg values unchanged.
+eta_tilde_formatter <- function(x_breaks) {
+  if (all(x_breaks > 1000)) {
     # To convert Lm-hr/kW-hr to Lm-hr/W-hr.
-    return(x/1000)
+    return(x_breaks/1000)
   }
   # To leave mpg alone.
-  return(x)
+  return(x_breaks)
 }
 
 sensitivity_graphs(.parametric_data = eta_sens_data,
@@ -2775,9 +2852,8 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
   MKHthemes::xy_theme()
 @
 
-Sensitivity to the post-EEU efficiency ($\aprod{\eta}$) is shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
 
-<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                    x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
@@ -2794,8 +2870,6 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
   MKHthemes::xy_theme()
 @
 
-
-All rebound terms are shown in Fig.~\ref{fig:all_Re_terms_graph}.
 
 <<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
@@ -2817,6 +2891,46 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
   MKHthemes::xy_theme()
 @
 
+
+%------------------------------
+\subsubsection{Effect of energy price ($p_E$)} 
+\label{sec:effect_of_energy_price}
+%------------------------------
+
+The effect of energy price on rebound is shown in Fig.~\ref{fig:p_E_sens_graph}.
+Increasing energy prices lead to larger total rebound ($Re_{tot}$),
+because higher energy prices lead to more freed cash for the devide owner.
+All other things being equal, more freed cash leads to 
+more spending on other goods and services that demand energy.
+
+% Germany energy prices: 
+% 
+% 0.3 Euro/kWh. Source: Germany Economy \& Energy Ministry: 
+% \url{https://www.bmwi.de/Redaktion/DE/Infografiken/Energie/strompreisbestandteile.html}
+% 
+% 1.35 Euro/liter for ``super’ gasoline'' (95 octane but let me double check)
+% appears like an OK summary of the last five or so years, 
+% perhaps undervaluing the past year a bit.
+% \url{https://www.finanzen.net/rohstoffe/super-benzinpreis/historisch}
+% 
+% 1 L = 3.7854 us gallon
+% 
+% 1 euro = 1.21 USD
+% 
+% So 0.3 euro/kWhr = 0.363 USD/kWhr
+% 
+% 1.35 euro/liter = 6.1834509 USD/gallon
+% 
+% 
+% 
+% 
+% UK energy prices from PB email of 7 March 2021:
+% 
+% 20 UKp/kW-hr or about 0.28 USD/kW-hr
+% from PB's own electricity bill.
+% 
+% 6.48 USD/US gallon
+% from \url{https://www.globalpetrolprices.com/United-Kingdom/gasoline_prices/}
 
 
 <<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$). Vertical lines indicate energy prices in Germany.", fig.width=6, fig.height=4>>=
@@ -2848,9 +2962,23 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_para
 @
 
 
-<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+Fig.~\ref{fig:all_Re_terms_p_E_graph} shows the effect of energy price ($p_E$)
+on all rebound components.
+Interstingly, substitution effects ($Re_{dsub}$ and $Re_{isub}$)
+are the only rebound components that decrease with energy price ($p_E$) increases.
+Substitution effects decrease with energy price, because 
+less behavior adjustment is needed to re-equilibrate 
+after emplacement of the energy efficient device
+when energy price is higher.
+**** Gregor: what else can we say here? ---MKH ****
+
+
+<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
 rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_params, 
                     x_var = "p_E_engr_units", graph_params = Re_graph_params) +
+  ggplot2::geom_vline(data = price_data, 
+                      mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
+                      size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   # ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
@@ -2861,6 +2989,13 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
   MKHthemes::xy_theme()
 @
 
+
+%------------------------------
+\subsubsection{Effect of elasticity ($\eqspsUC$)} 
+\label{sec:effect_of_elasticity}
+%------------------------------
+
+**** Comments here about sensitivity to elasticity. ****
 
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
@@ -2885,29 +3020,32 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
 
 
 % 
-% <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-% Re_graph_params <- ReboundTools::sens_graph_params
-% Re_graph_params[["isub_linetype"]] <- "11" # short dashes
-% Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
-% # Re_graph_params[["iinc_size"]] <- 3 # short dashes
-% Re_graph_params[["md_linetype"]] <- "11" # short dashes
-% Re_graph_params[["emb_size"]] <- 1 # revert to regular size
-% Re_graph_params[["md_size"]] <- 0.5 # make smaller
-% 
-% rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params, 
-%                     x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
-%   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
-%   ggplot2::scale_x_reverse() +
-%   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
-%                 y = "Rebound terms [-]",
-%                 colour = ggplot2::element_blank(),
-%                 size = ggplot2::element_blank(),
-%                 linetype = ggplot2::element_blank()) +
-%   MKHthemes::xy_theme()
-% @
-% 
+<<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
+Re_graph_params <- ReboundTools::sens_graph_params
+Re_graph_params[["isub_linetype"]] <- "11" # short dashes
+Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
+# Re_graph_params[["iinc_size"]] <- 3 # short dashes
+Re_graph_params[["md_linetype"]] <- "11" # short dashes
+Re_graph_params[["emb_size"]] <- 1 # revert to regular size
+Re_graph_params[["md_size"]] <- 0.5 # make smaller
+
+rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params,
+                    x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::scale_x_reverse() +
+  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
+                y = "Rebound terms [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
 
 
+%------------------------------
+\subsubsection{Effect of productivity parameter ($k$)} 
+\label{sec:effect_of_productivity_parameter}
+%------------------------------
 
 Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
 
@@ -2931,34 +3069,9 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params
   MKHthemes::xy_theme()
 @
 
-Germany energy prices: 
 
-0.3 Euro/kWh. Source: Germany Economy \& Energy Ministry: 
-\url{https://www.bmwi.de/Redaktion/DE/Infografiken/Energie/strompreisbestandteile.html}
+**** Graph of all rebound terms vs. k here? ****
 
-1.35 Euro/liter for ``super’ gasoline'' (95 octane but let me double check)
-appears like an OK summary of the last five or so years, 
-perhaps undervaluing the past year a bit.
-\url{https://www.finanzen.net/rohstoffe/super-benzinpreis/historisch}
-
-1 L = 3.7854 us gallon
-
-1 euro = 1.21 USD
-
-So 0.3 euro/kWhr = 0.363 USD/kWhr
-
-1.35 euro/liter = 6.1834509 USD/gallon
-
-
-
-
-UK energy prices from PB email of 7 March 2021:
-
-20 UKp/kW-hr or about 0.28 USD/kW-hr
-from PB's own electricity bill.
-
-6.48 USD/US gallon
-from \url{https://www.globalpetrolprices.com/United-Kingdom/gasoline_prices/}
 
 
 
