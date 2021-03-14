@@ -2876,14 +2876,14 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
 Re_graph_params <- ReboundTools::sens_graph_params
 
 Re_terms_order <- ReboundTools::rebound_terms[c(ReboundTools::rebound_terms$Re_tot,
-                                                ReboundTools::rebound_terms$Re_dempl,
-                                                ReboundTools::rebound_terms$Re_emb,
-                                                ReboundTools::rebound_terms$Re_md, 
-                                                ReboundTools::rebound_terms$Re_dsub,
-                                                ReboundTools::rebound_terms$Re_isub,
+                                                ReboundTools::rebound_terms$Re_prod,
                                                 ReboundTools::rebound_terms$Re_dinc,
                                                 ReboundTools::rebound_terms$Re_iinc,
-                                                ReboundTools::rebound_terms$Re_prod)] %>% 
+                                                ReboundTools::rebound_terms$Re_dsub,
+                                                ReboundTools::rebound_terms$Re_isub,
+                                                ReboundTools::rebound_terms$Re_dempl,
+                                                ReboundTools::rebound_terms$Re_emb,
+                                                ReboundTools::rebound_terms$Re_md)] %>% 
   unlist()
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_params, 
