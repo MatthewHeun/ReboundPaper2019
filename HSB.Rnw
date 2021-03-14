@@ -2738,9 +2738,10 @@ because it is rarely true that rebound parameters are, in fact, independent of e
 For example,
 post-EEU efficiency ($\aprod{\eta}$)
 is unlikely to be independent of capital cost rate ($\raempl{C}_{cap}$).
+More-efficient devices are likely to be more expensive.
 Varying the energy price ($p_E$) alone
-should not be considered a way to find, say,
-the magnitude of rebound that would occur in a country with a different energy price,
+should not be considered a way to estimate, say,
+the magnitude of energy rebound that would occur in a country with a different energy price,
 because the capital cost rate ($\raempl{C}_{cap}$), 
 the maintenance and disposal cost rate ($\raempl{C}_{\md}$),
 the energy intensity of the economy ($I_E$), and
@@ -2749,7 +2750,7 @@ would also be different in the other country.
 Varying only uncompensated own price elasticity of energy service consumption ($\eqspsUC$)
 must be interpreted carefully, too,
 because $\left| \eqspsUC \right| < \fCs$ 
-leads to negative elasticity of substitution ($\sigma < 0$),
+leads to negative elasticity of substitution ($\sigma < 0$)
 by Eq.~(\ref{eq:sigma}),
 an uneconomic condition.
 In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
@@ -2873,14 +2874,22 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
 
 <<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
-Re_graph_params[["isub_linetype"]] <- "11" # short dashes
-Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
-Re_graph_params[["md_linetype"]] <- "11" # short dashes
-Re_graph_params[["emb_size"]] <- 1 # revert to regular size
-Re_graph_params[["md_size"]] <- 0.5 # make smaller
+
+Re_terms_order <- ReboundTools::rebound_terms[c(ReboundTools::rebound_terms$Re_tot,
+                                                ReboundTools::rebound_terms$Re_dempl,
+                                                ReboundTools::rebound_terms$Re_emb,
+                                                ReboundTools::rebound_terms$Re_md, 
+                                                ReboundTools::rebound_terms$Re_dsub,
+                                                ReboundTools::rebound_terms$Re_isub,
+                                                ReboundTools::rebound_terms$Re_dinc,
+                                                ReboundTools::rebound_terms$Re_iinc,
+                                                ReboundTools::rebound_terms$Re_prod)] %>% 
+  unlist()
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_params, 
-                    x_var = "eta_engr_units_tilde", graph_params = Re_graph_params) +
+                    x_var = "eta_engr_units_tilde", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
@@ -2975,7 +2984,9 @@ when energy price is higher.
 
 <<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
 rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_params, 
-                    x_var = "p_E_engr_units", graph_params = Re_graph_params) +
+                    x_var = "p_E_engr_units", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
   ggplot2::geom_vline(data = price_data, 
                       mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
                       size = 0.1) +
@@ -3021,16 +3032,10 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
 
 % 
 <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-Re_graph_params <- ReboundTools::sens_graph_params
-Re_graph_params[["isub_linetype"]] <- "11" # short dashes
-Re_graph_params[["iinc_linetype"]] <- "11" # short dashes
-# Re_graph_params[["iinc_size"]] <- 3 # short dashes
-Re_graph_params[["md_linetype"]] <- "11" # short dashes
-Re_graph_params[["emb_size"]] <- 1 # revert to regular size
-Re_graph_params[["md_size"]] <- 0.5 # make smaller
-
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params,
-                    x_var = "e_qs_ps_UC", graph_params = Re_graph_params) +
+                    x_var = "e_qs_ps_UC", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
@@ -3070,7 +3075,19 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params
 @
 
 
-**** Graph of all rebound terms vs. k here? ****
+<<all_Re_terms_k_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to productivity factor ($k$).", fig.width=6, fig.height=4>>=
+rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_params,
+                    x_var = "k", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::labs(x = expression("k [-]"),
+                y = "Rebound terms [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme()
+@
 
 
 
