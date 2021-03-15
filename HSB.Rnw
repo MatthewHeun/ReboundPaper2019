@@ -2730,7 +2730,7 @@ Sensitivity analyses show the effect of
 independently-varied parameters on total rebound and rebound components.
 In the context of this rebound framework,
 sensitivity analyses
-can show important understanding trends, tendencies, and relationships
+can show important trends, tendencies, and relationships
 between rebound parameters and rebound magnitudes.
 Key rebound parameters include 
 post-EEU efficiency ($\aprod{\eta}$),
@@ -2738,8 +2738,7 @@ energy price ($p_E$),
 uncompensated own price elasticity of energy service consumption ($\eqspsUC$), and
 the productivity factor ($k$).
 Sensitivity analyses must be undertaken carefully,
-because it is rarely true 
-that rebound parameters are, in fact, 
+because rebound parameters are rarely
 independent of each other.
 
 In each subsection below, a series of graphs
@@ -2751,7 +2750,7 @@ $Re_{dinc}$, $Re_{iinc}$, and $Re_{\productivity}$).
 In the graphs, 
 nominal values for the rebound parameters are shown as points, 
 and sensitivity trends are shown as lines. 
-A limitation of each sensitivity analysis is also discussed.
+A limitation of each sensitivity analysis is noted.
 
 
 %------------------------------
@@ -2917,6 +2916,11 @@ of energy price variation around the world.
 If U.S.\ residents paid Germany's electricity prices,
 energy rebound for the Car example would be ***** \%
 and for the Lamp example **** \%.
+**** 
+If we decide to keep the German prices in the paper,
+we can make an example in the data file
+to calculate rebound directly. ---MKH
+****
 
 Fig.~\ref{fig:all_Re_terms_p_E_graph} shows the effect of energy price ($p_E$)
 on all rebound components.
