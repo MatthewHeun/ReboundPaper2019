@@ -2728,49 +2728,25 @@ to 1 decimal place for the lighting example.)
 
 Sensitivity analyses show the effect of 
 independently-varied parameters on total rebound and rebound components.
-Key parameters include 
+Key rebound parameters include 
 post-EEU efficiency ($\aprod{\eta}$),
 energy price ($p_E$),
 uncompensated own price elasticity of energy service consumption ($\eqspsUC$), and
-the productivity multiplier ($k$).
+the productivity factor ($k$).
 However, sensitivity analyses must be undertaken carefully,
 because it is rarely true that rebound parameters are, in fact, independent of each other.
-For example,
-post-EEU efficiency ($\aprod{\eta}$)
-is unlikely to be independent of capital cost rate ($\raempl{C}_{cap}$).
-More-efficient devices are likely to be more expensive.
-Varying the energy price ($p_E$) alone
-should not be considered a way to estimate, say,
-the magnitude of energy rebound that would occur in a country with a different energy price,
-because the capital cost rate ($\raempl{C}_{cap}$), 
-the maintenance and disposal cost rate ($\raempl{C}_{\md}$),
-the energy intensity of the economy ($I_E$), and
-typical energy service consumption rates ($\rbempl{q}_s$)
-would also be different in the other country.
-Varying only uncompensated own price elasticity of energy service consumption ($\eqspsUC$)
-must be interpreted carefully, too,
-because $\left| \eqspsUC \right| < \fCs$ 
-leads to negative elasticity of substitution ($\sigma < 0$)
-by Eq.~(\ref{eq:sigma}),
-an uneconomic condition.
-In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
-would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
-Finally, different values of the productivity factor ($k$)
-are unlikely to be independent of
-the energy intensity of the economy ($I_E$), because
-a different value of $k$ implies a different macro-economy.
-
-Notwithstanding the caveats above, 
-sensitivity analysis
+Notwithstanding, sensitivity analysis
 can be important for understanding trends, tendencies, and relationships
 between rebound parameters and rebound magnitudes.
-Thus, the following subsections show the effects of key rebound parameters
+
+In each subsection below, we show the effects of key rebound parameters
 ($\aprod{\eta}$, $p_E$, $\eqspsUC$, and $k$)
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\productivity}$).
-Nominal values for the rebound parameters are shown as black dots
-in the following figures.
+A limitation of each sensitivity analysis is also discussed.
+Nominal values for the rebound parameters are shown as points
+in graphs that follow.
 
 
 %------------------------------
@@ -2805,12 +2781,19 @@ so total rebound ($Re_{tot}$, the ratio of
 takeback to expected energy savings given by Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows, 
 as shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
-Note that open circle points indicate the nominal $x$-axis values 
-in sensitivity graphs.
+
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
 with post-EEU efficiency ($\aprod{\eta}$).
+We note that post-EEU efficiency ($\aprod{\eta}$)
+is unlikely to be independent of other factors, 
+such as capital cost rate ($\raempl{C}_{cap}$).
+More-efficient devices are likely to be more expensive.
+However, Figs.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}--\ref{fig:all_Re_terms_eta_graph}
+are beneficial to demonstrate the effect of efficiency on rebound
+and rebound components.
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
+
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
@@ -2856,7 +2839,7 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
 @
 
 
-<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                    x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
@@ -2874,7 +2857,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
 @
 
 
-<<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
 Re_graph_params[["include_x_axis"]] <- TRUE
 Re_graph_params[["use_latex_legend"]] <- TRUE
@@ -2913,14 +2896,20 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 
 The effect of energy price on rebound is shown in Fig.~\ref{fig:p_E_sens_graph}.
 Increasing energy prices lead to larger total rebound ($Re_{tot}$),
-because higher energy prices lead to more freed cash for the device owner.
+because higher energy prices lead to more freed cash 
+to be re-spent by the device owner.
 All other things being equal, more freed cash leads to 
 more spending on other goods and services that demand energy.
+
 For comparison purposes only, 
 German energy prices are shown as vertical lines.
 The lines are not meant to indicate expected levels of rebound for these cars in Germany, 
 for many other parameters besides $p_E$ would change 
-when moving from the U.S.\ to a different country.
+when moving from the U.S.\ to a different country, including 
+capital cost rate ($\raempl{C}_{cap}$), 
+maintenance and disposal cost rate ($\raempl{C}_{\md}$),
+energy intensity of the economy ($I_E$), and
+typical energy service consumption rates ($\rbempl{q}_s$).
 Rather the vertical lines show a reasonable range
 of energy price variation around the world.
 If U.S.\ residents paid Germany's electricity prices,
@@ -3031,15 +3020,16 @@ For the Lamp example, indirect income rebound ($Re_{iinc}$) also increases
 substantially with $\eqspsUC$, 
 because freed cash increases substantially with $\eqspsUC$ in the Lamp case. 
 
-As discussed above, 
-these sensitivity results should be interpreted with caution. 
+Like the previous sensitivity analyses
+these results should be interpreted with some caution. 
 When $\left| \eqspsUC \right| < \fCs$, 
 negative direct substitution rebound is observed ($Re_{dsub} < 0$), because
 Eq.~(\ref{eq:sigma}) pushes 
 the elasticity of substitution negative ($\sigma < 0$), 
 an uneconomic condition.
-smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
-would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
+In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
+would correlate with a smaller fraction of expenses on the energy service ($\fCs$).=
+
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
@@ -3085,10 +3075,17 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
 \label{sec:effect_of_productivity_factor}
 %------------------------------
 
-Sensitivity to the productivity factor ($k$) is shown 
+The sensitivity of energy rebound 
+to the productivity factor ($k$) is shown 
 in Figs.~\ref{fig:k_sens_graph} and~\ref{fig:all_Re_terms_k_graph}.
-As expected, the productivity parameter affects only 
+The productivity factor affects only 
 productivity rebound ($Re_{\productivity}$).
+All other rebound components are constant as $k$ changes.
+Although different values of the productivity factor ($k$)
+are unlikely to be independent of $I_E$
+(different value of $k$ imply a different macro-economy), 
+the graph gives a sense of the importance of $k$ to total rebound.
+
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
 # Use for all sensitivity graphs
