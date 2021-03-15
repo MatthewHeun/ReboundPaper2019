@@ -2769,6 +2769,8 @@ Thus, the following subsections show the effects of key rebound parameters
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\productivity}$).
+Nominal values for the rebound parameters are shown as black dots
+in the following figures.
 
 
 %------------------------------
@@ -2808,7 +2810,7 @@ in sensitivity graphs.
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
 with post-EEU efficiency ($\aprod{\eta}$).
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $x$ and $y$ axes.)", fig.width=6, fig.height=4>>=
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
