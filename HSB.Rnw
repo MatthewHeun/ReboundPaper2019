@@ -2805,7 +2805,7 @@ decreases as efficiency grows,
 as shown in Fig.~\ref{fig:eta_tilde_sens_graph}.
 Note that open circle points indicate the nominal $x$-axis values 
 in sensitivity graphs.
-Fig.~\ref{fig:all_Re_terms_graph} shows the variation of all rebound components
+Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
 with post-EEU efficiency ($\aprod{\eta}$).
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of efficiency ($\\aprod{\\eta}$). (Note different $x$ and $y$ axes.)", fig.width=6, fig.height=4>>=
@@ -2874,6 +2874,8 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
 
 <<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
+Re_graph_params[["include_x_axis"]] <- TRUE
+Re_graph_params[["use_latex_legend"]] <- TRUE
 
 Re_terms_order <- ReboundTools::rebound_terms[c(ReboundTools::rebound_terms$Re_tot,
                                                 ReboundTools::rebound_terms$Re_prod,
@@ -2897,7 +2899,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
+  MKHthemes::xy_theme() + 
+  ggplot2::theme(legend.text.align = 0)
 @
 
 
@@ -2908,9 +2911,18 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 
 The effect of energy price on rebound is shown in Fig.~\ref{fig:p_E_sens_graph}.
 Increasing energy prices lead to larger total rebound ($Re_{tot}$),
-because higher energy prices lead to more freed cash for the devide owner.
+because higher energy prices lead to more freed cash for the device owner.
 All other things being equal, more freed cash leads to 
 more spending on other goods and services that demand energy.
+For comparison purposes only, 
+German energy prices are shown as vertical lines.
+The lines are not meant to indicate expected levels of rebound for these cars in Germany, 
+for many other parameters besides $p_E$ would change 
+when moving from the U.S.\ to a different country.
+Rather the vertical lines show a reasonable range
+of energy price variation around the world.
+If U.S.\ residents paid Germany's electricity prices,
+energy rebound for LED lamps would be nearly ****\%.
 
 % Germany energy prices: 
 % 
@@ -2973,13 +2985,12 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_para
 
 Fig.~\ref{fig:all_Re_terms_p_E_graph} shows the effect of energy price ($p_E$)
 on all rebound components.
-Interstingly, substitution effects ($Re_{dsub}$ and $Re_{isub}$)
-are the only rebound components that decrease with energy price ($p_E$) increases.
+Substitution effects ($Re_{dsub}$ and $Re_{isub}$)
+are the only rebound components that decrease with energy price ($p_E$).
 Substitution effects decrease with energy price, because 
-less behavior adjustment is needed to re-equilibrate 
-after emplacement of the energy efficient device
-when energy price is higher.
-**** Gregor: what else can we say here? ---MKH ****
+at high prices less behavior adjustment is needed to re-equilibrate 
+after emplacement of the energy efficient device.
+**** Gregor: what else do we want to say here? ---MKH ****
 
 
 <<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
@@ -2997,7 +3008,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
+  MKHthemes::xy_theme() +
+  ggplot2::theme(legend.text.align = 0)
 @
 
 
@@ -3006,8 +3018,26 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
 \label{sec:effect_of_elasticity}
 %------------------------------
 
-**** Comments here about sensitivity to elasticity. ****
+Fig.~\ref{fig:elasticity_sens_graph} shows the variation of total rebound ($Re_{tot}$)
+with uncompensated own-price elasticity of energy service consumption ($\eqspsUC$).
+The effect is exponential:
+total rebound increases with larger negative values of $\eqspsUC$, as expected.
+The Lamp example shows stronger exponential variation than the Car example.
+Fig.~\ref{fig:all_Re_terms_eps_graph} shows that direct substitution rebound 
+($Re_{dsub}$) is the most sensitive rebound component to changes in $\eqspsUC$.
+For the Lamp example, indirect income rebound ($Re_{iinc}$) also increases
+substantially with $\eqspsUC$, 
+because freed cash increases substantially with $\eqspsUC$ in the Lamp case. 
 
+As discussed above, 
+these sensitivity results should be interpreted with caution. 
+When $\left| \eqspsUC \right| < \fCs$, 
+negative direct substitution rebound is observed ($Re_{dsub} < 0$), because
+Eq.~(\ref{eq:sigma}) pushes 
+the elasticity of substitution negative ($\sigma < 0$), 
+an uneconomic condition.
+smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
+would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
 
 <<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
@@ -3043,16 +3073,20 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
+  MKHthemes::xy_theme() +
+  ggplot2::theme(legend.text.align = 0)
 @
 
 
 %------------------------------
-\subsubsection{Effect of productivity parameter ($k$)} 
-\label{sec:effect_of_productivity_parameter}
+\subsubsection{Effect of productivity factor ($k$)} 
+\label{sec:effect_of_productivity_factor}
 %------------------------------
 
-Sensitivity to the productivity parameter ($k$) is shown in Fig.~\ref{fig:k_sens_graph}.
+Sensitivity to the productivity factor ($k$) is shown 
+in Figs.~\ref{fig:k_sens_graph} and~\ref{fig:all_Re_terms_k_graph}.
+As expected, the productivity parameter affects only 
+productivity rebound ($Re_{\productivity}$).
 
 <<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
 # Use for all sensitivity graphs
@@ -3086,7 +3120,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
+  MKHthemes::xy_theme() +
+  ggplot2::theme(legend.text.align = 0)
 @
 
 
