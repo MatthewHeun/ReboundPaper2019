@@ -2775,10 +2775,10 @@ increase with post-EEU efficiency ($\aprod{\eta}$),
 but the relationship is asymptotic.
 There are diminishing returns to increasing efficiency,
 leading to saturation at very high efficiencies.
-Saturation occurs, because each additional increment of efficiency gain
-leads to marginally less energy savings. 
 
-A simple example illustrates saturation.
+Saturation occurs because each additional increment of efficiency gain
+leads to marginally less energy savings. 
+A simple example illustrates.
 A $\bempl{\eta} = 25$ mpg car drives $\bempl{q}_s = 100$ miles 
 using $\bempl{E}_s = 4$ gallons of gasoline.
 A more-efficient car ($\aprod{\eta} = 30$ mpg) is expected to use
@@ -2793,14 +2793,15 @@ Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
 shows that the rebound framework correctly replicates these trends.
 
 Saturation is especially noticeable in the lamp example
-compared to the car example.
-The difference is that 
+compared to the car example,
+the difference being that 
 the LED lamp is already much more efficient than the incandescent lamp
 (\Sexpr{lamp_efficacy_ratio}$\times$),
-whereas the fuel-efficient car is only 
-\Sexpr{car_efficiency_ratio}$\times$ as efficient as the original. 
-Thus, at $\aprod{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, the energy efficient LED
-is far closer to efficiency saturation than the electric vehicle 
+whereas the hybrid car is only 
+\Sexpr{car_efficiency_ratio}$\times$ as efficient as the gasoline car. 
+Thus, at $\aprod{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, 
+the energy efficient LED
+is far closer to efficiency saturation than the hybrid vehicle 
 (at $\aprod{\eta} = \Sexpr{mpg_better}$ mpg).
 
 Fig.~\ref{fig:eta_tilde_sens_graph} shows that
@@ -2808,6 +2809,8 @@ expected energy savings ($\Sdot$) increase faster than takeback.
 Thus, total rebound ($Re_{tot}$, the ratio of 
 takeback to expected energy savings in Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows.
+The lamp exhibits a relatively smaller rebound decline with efficiency,
+because the lamp example is closer to saturation than the car example.
 
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
 with post-EEU efficiency ($\aprod{\eta}$).
