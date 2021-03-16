@@ -12,6 +12,7 @@
 \usepackage{amsfonts}           % For access to \checkmark.
 \usepackage{amsmath}            % For better symbol decorations
 \usepackage{booktabs}           % For nice table rules
+\usepackage[official]{eurosym}  % For the euro symbol
 \usepackage[figurename=Fig.]{caption} % For changing "Figure" to "Fig." in figure captions
 \usepackage{chngcntr}           % To get figure and table numbering correct in the appendices
 \usepackage[makeroom]{cancel}   % To show terms go to zero
@@ -2771,12 +2772,25 @@ lamp_efficacy_ratio <- (rebound_results %>% dplyr::filter(Case == "Lamp") %>% dp
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 both takeback and expected energy savings ($\Sdot$)
 increase with post-EEU efficiency ($\aprod{\eta}$), 
-but the relationship is asymptotic:
-there are diminishing returns to increasing efficiency,
+but the relationship is asymptotic.
+There are diminishing returns to increasing efficiency,
 leading to saturation at very high efficiencies.
-For example, doubling efficiency does not lead to halving of energy consumption.
-Saturation is especially noticeable in the Lamp example,
-because the LED lamp is much more efficient than the incandescent lamp
+Saturation occurs, because each additional increment of efficiency gain
+leads to marginally less energy savings. 
+
+A simple example illustrates saturation.
+A 25 mpg car that drives 100 miles uses 4 gallons of gasoline.
+A more-efficient car (30 mpg) uses 3.33 gallons to drive the same distance,
+a savings of 0.67 gal.
+Another 5 mpg boost in efficiency (35 mpg) requires 2.86 gal to drive 100 miles, 
+a savings of 0.47 gal.
+Each additional 5 mpg boost in efficiency 
+saves less energy than the previous 5 mpg efficiency increment.
+Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
+shows that the rebound framework correctly replicates these trends.
+
+Saturation is especially noticeable in the Lamp example.
+The LED lamp is already much more efficient than the incandescent lamp
 (\Sexpr{lamp_efficacy_ratio}$\times$), 
 whereas the fuel-efficient car is only 
 \Sexpr{car_efficiency_ratio}$\times$ as efficient as the original. 
@@ -2789,17 +2803,16 @@ decreases as efficiency grows.
 
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
 with post-EEU efficiency ($\aprod{\eta}$).
-The most sensitive rebound term to post-EEU efficiency ($\aprod{\eta}$)
-is direct substitution rebound ($Re_{dsub}$).
+In the Car and Lamp examples, 
+direct substitution rebound ($Re_{dsub}$) is the 
+rebound component 
+most sensitive to changes in post-EEU efficiency ($\aprod{\eta}$),
 
 A limitation of the efficiency sensitivity analysis is that 
 post-EEU efficiency ($\aprod{\eta}$)
 is unlikely to be independent of other factors, 
 such as capital cost rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
-However, Figs.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}--\ref{fig:all_Re_terms_eta_graph}
-are beneficial to demonstrate the effect of efficiency on rebound
-and rebound components.
 
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
@@ -2903,24 +2916,24 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 \label{sec:effect_of_energy_price}
 %------------------------------
 
+<<Germany_results, echo=FALSE>>=
+# In the calculations, we include same parameters for German energy prices.
+# Extract that information here for use in the paragraph below.
+Car_Germany_Re_tot <- rebound_results %>% 
+  dplyr::filter(Case == "Car - Germany") %>% 
+  dplyr::select("Re_tot")
+Lamp_Germany_Re_tot <- rebound_results %>% 
+  dplyr::filter(Case == "Lamp - Germany") %>% 
+  dplyr::select("Re_tot")
+@
+
+
 The effect of energy price on rebound is shown in Fig.~\ref{fig:p_E_sens_graph}.
 Increasing energy prices lead to larger total rebound ($Re_{tot}$),
 because higher energy prices lead to more freed cash 
 to be re-spent by the device owner.
 All other things being equal, more freed cash leads to 
 more spending on other goods and services that demand energy.
-
-German energy prices are shown as vertical lines.
-The vertical lines show a reasonable range
-of energy price variation around the world.
-If U.S.\ residents paid Germany's electricity prices,
-energy rebound for the Car example would be ***** \%
-and for the Lamp example **** \%.
-**** 
-If we decide to keep the German prices in the paper,
-we can make an example in the data file
-to calculate rebound directly. ---MKH
-****
 
 Fig.~\ref{fig:all_Re_terms_p_E_graph} shows the effect of energy price ($p_E$)
 on all rebound components.
@@ -2931,46 +2944,36 @@ are the only rebound components that decrease with energy price ($p_E$).
 Substitution effects decrease with energy price, because 
 at high energy price, less behavior adjustment is needed to re-equilibrate 
 after emplacement of the energy efficient device.
-**** Gregor: what else do we want to say here? ---MKH ****
+
+German energy prices%
+\footnote{
+  For the Car example,
+  the gasoline price in Germany is taken as 1.35 \euro{}/liter for ``super gasoline'' (95 octane),
+  an approximate average price over the last five years~\citep{finanzen}.
+  For the Lamp example,
+  the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~\citep{bundesministerium}.
+  Converting currency (at 1 \euro{} = 1.21 USD) and
+  physical units gives 6.18~\$/gallon and 0.363~\$/kW-hr.}
+%
+are shown as vertical lines,
+providing an indication of possible energy price variations.
+All other things being equal, 
+if U.S.\ residents paid Germany's electricity prices,
+energy rebound would be 
+\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}\%
+for the Car example and 
+\Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}\%
+for the Lamp example.
 
 A limitation to the energy price sensitivity analysis arises from the fact that
 energy price is not independent of other parameters.
-Other parameters would change along with energy price
+Indeed, other rebound parameters
+would change along with energy price
 (especially if moving from one country to another),
 including capital cost rate ($\raempl{C}_{cap}$), 
 maintenance and disposal cost rate ($\raempl{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rates ($\rbempl{q}_s$).
-
-
-% Germany energy prices: 
-% 
-% 0.3 Euro/kWh. Source: Germany Economy \& Energy Ministry: 
-% \url{https://www.bmwi.de/Redaktion/DE/Infografiken/Energie/strompreisbestandteile.html}
-% 
-% 1.35 Euro/liter for ``super’ gasoline'' (95 octane but let me double check)
-% appears like an OK summary of the last five or so years, 
-% perhaps undervaluing the past year a bit.
-% \url{https://www.finanzen.net/rohstoffe/super-benzinpreis/historisch}
-% 
-% 1 L = 3.7854 us gallon
-% 
-% 1 euro = 1.21 USD
-% 
-% So 0.3 euro/kWhr = 0.363 USD/kWhr
-% 
-% 1.35 euro/liter = 6.1834509 USD/gallon
-% 
-% 
-% 
-% 
-% UK energy prices from PB email of 7 March 2021:
-% 
-% 20 UKp/kW-hr or about 0.28 USD/kW-hr
-% from PB's own electricity bill.
-% 
-% 6.48 USD/US gallon
-% from \url{https://www.globalpetrolprices.com/United-Kingdom/gasoline_prices/}
 
 
 <<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$). Vertical lines indicate energy prices in Germany.", fig.width=6, fig.height=4>>=
@@ -3011,7 +3014,6 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
                       mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
                       size = 0.1) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
-  # ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
                 y = "Re values [-]",
                 colour = ggplot2::element_blank(),
