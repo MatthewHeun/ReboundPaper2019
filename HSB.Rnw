@@ -2109,6 +2109,7 @@ rebound_results %>%
     Case = NULL
   ) %>% 
   ReboundTools::rebound_results_table(include_subtotals = FALSE, 
+                                      rebound_terms = ReboundTools::rebound_terms[!names(ReboundTools::rebound_terms) %in% "Re_cap"],
                                       label = "tab:car_results", 
                                       caption = "Car example: rebound results.", 
                                       digits = 1, 
@@ -2648,6 +2649,7 @@ rebound_results %>%
     Case = NULL
   ) %>% 
   ReboundTools::rebound_results_table(include_subtotals = FALSE, 
+                                      rebound_terms = ReboundTools::rebound_terms[!names(ReboundTools::rebound_terms) %in% "Re_cap"],
                                       label = "tab:lamp_results", 
                                       caption = "Lamp example: rebound results.", 
                                       digits = 1, 
@@ -2878,8 +2880,8 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_para
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, by = 0.1)) + 
-  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) +
+  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
                 y = expression(Re[tot]*" [-]"),
@@ -3005,7 +3007,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_para
                       size = 0.1) +
   ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 1, by = 0.2)) +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
                 y = expression(Re[tot]*" [-]"),
@@ -3071,7 +3073,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
   ggplot2::scale_x_reverse() +
   ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 2, by = 0.2)) + 
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
                 y = expression(Re[tot]*" [-]"),
@@ -3127,7 +3129,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params
   ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 0.5), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = "k [-]",
                 y = expression(Re[tot]),
