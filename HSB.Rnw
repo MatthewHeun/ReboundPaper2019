@@ -2779,21 +2779,29 @@ Saturation occurs, because each additional increment of efficiency gain
 leads to marginally less energy savings. 
 
 A simple example illustrates saturation.
-A 25 mpg car that drives 100 miles uses 4 gallons of gasoline.
-A more-efficient car (30 mpg) uses 3.33 gallons to drive the same distance,
-a savings of 0.67 gal.
-Another 5 mpg boost in efficiency (35 mpg) requires 2.86 gal to drive 100 miles, 
-a savings of 0.47 gal.
-Each additional 5 mpg boost in efficiency 
-saves less energy than the previous 5 mpg efficiency increment.
+A $\bempl{\eta} = 25$ mpg car drives $\bempl{q}_s = 100$ miles 
+using $\bempl{E}_s = 4$ gallons of gasoline.
+A more-efficient car ($\aprod{\eta} = 30$ mpg) is expected to use
+$\aempl{E}_s = 3.33$ gallons to drive the same distance,
+a savings of $\Sdot = 0.67$ gallons.
+Another 5 mpg boost in efficiency (to $\aprod{\eta} = 35$ mpg)
+will use $\aempl{E}_s = 2.86$ gal to drive 100 miles, 
+a further expected savings of only $\Sdot = 0.47$ gallons.
+Each successive 5 mpg boost in efficiency 
+is expected to save less energy than the previous 5 mpg boost in efficiency.
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
 shows that the rebound framework correctly replicates these trends.
 
-Saturation is especially noticeable in the lamp example.
-The LED lamp is already much more efficient than the incandescent lamp
-(\Sexpr{lamp_efficacy_ratio}$\times$), 
+Saturation is especially noticeable in the lamp example
+compared to the car example.
+The difference is that 
+the LED lamp is already much more efficient than the incandescent lamp
+(\Sexpr{lamp_efficacy_ratio}$\times$),
 whereas the fuel-efficient car is only 
 \Sexpr{car_efficiency_ratio}$\times$ as efficient as the original. 
+Thus, at $\aprod{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, the energy efficient LED
+is far closer to efficiency saturation than the electric vehicle 
+(at $\aprod{\eta} = \Sexpr{mpg_better}$ mpg).
 
 Fig.~\ref{fig:eta_tilde_sens_graph} shows that
 expected energy savings ($\Sdot$) increase faster than takeback.
@@ -2815,7 +2823,7 @@ such as capital cost rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
 
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Takeback (dashed line) and expected energy savings ($\\Sdot$, solid line) as a function of post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
 
