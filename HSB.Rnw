@@ -2789,7 +2789,7 @@ saves less energy than the previous 5 mpg efficiency increment.
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
 shows that the rebound framework correctly replicates these trends.
 
-Saturation is especially noticeable in the Lamp example.
+Saturation is especially noticeable in the lamp example.
 The LED lamp is already much more efficient than the incandescent lamp
 (\Sexpr{lamp_efficacy_ratio}$\times$), 
 whereas the fuel-efficient car is only 
@@ -2831,7 +2831,7 @@ eta_sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases
 # This is a hacky function to format the x-axis numbers of the graphs.
 # x_breaks are the breaks for an axis.
 # The function checks to see if the breaks are > 1000 and divides by 1000 in that case.
-# This approach works, because lm-hr/kW-hr values are > 1000 for the Lamp example
+# This approach works, because lm-hr/kW-hr values are > 1000 for the lamp example
 # but the car example has mpg (which are all less than 100).
 # So this function divides the Lm-hr/kW-hr values by 1000 while leaving the mpg values unchanged.
 eta_tilde_formatter <- function(x_breaks) {
@@ -2947,10 +2947,10 @@ after emplacement of the energy efficient device.
 
 German energy prices%
 \footnote{
-  For the Car example,
+  For the car example,
   the gasoline price in Germany is taken as 1.35 \euro{}/liter for ``super gasoline'' (95 octane),
   an approximate average price over the last five years~\citep{finanzen}.
-  For the Lamp example,
+  For the lamp example,
   the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~\citep{bundesministerium}.
   Converting currency (at 1 \euro{} = 1.21 USD) and
   physical units gives 6.18~\$/gallon and 0.363~\$/kW-hr.}
@@ -2961,9 +2961,9 @@ All other things being equal,
 if U.S.\ residents paid Germany's electricity prices,
 energy rebound would be 
 \Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}\%
-for the Car example and 
+for the car example and 
 \Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}\%
-for the Lamp example.
+for the lamp example.
 
 A limitation to the energy price sensitivity analysis arises from the fact that
 energy price is not independent of other parameters.
@@ -3033,10 +3033,10 @@ Fig.~\ref{fig:elasticity_sens_graph} shows the variation of total rebound ($Re_{
 with uncompensated own-price elasticity of energy service consumption ($\eqspsUC$).
 The effect is exponential:
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
-The Lamp example shows stronger exponential variation than the Car example.
+The Lamp example shows stronger exponential variation than the car example.
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows that direct substitution rebound 
 ($Re_{dsub}$) is the most sensitive rebound component to changes in $\eqspsUC$.
-For the Lamp example, indirect income rebound ($Re_{iinc}$) also increases
+For the lamp example, indirect income rebound ($Re_{iinc}$) also increases
 substantially with $\eqspsUC$, 
 because freed cash increases substantially with $\eqspsUC$ in the Lamp case. 
 
