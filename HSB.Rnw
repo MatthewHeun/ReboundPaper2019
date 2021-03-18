@@ -2841,8 +2841,9 @@ eta_sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases
     takeback = .data[[ReboundTools::rebound_terms$Re_tot]] * .data[[ReboundTools::star_vars$S_dot_dev]]
   )
 
-# This is a hacky function to format the x-axis numbers of the graphs.
-# x_breaks are the breaks for an axis.
+# This is a hacky formatter function 
+# that formats the x-axis numbers of the graphs.
+# The argument x_breaks is the breaks for an axis.
 # The function checks to see if the breaks are > 1000 and divides by 1000 in that case.
 # This approach works, because lm-hr/kW-hr values are > 1000 for the lamp example
 # but the car example has mpg (which are all less than 100).
@@ -3026,6 +3027,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
   ggplot2::geom_vline(data = price_data, 
                       mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
                       size = 0.1) +
+  ggplot2::scale_y_continuous(breaks = seq(-0.2, 1, by = 0.2)) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
                 y = "Re values [-]",
@@ -3126,7 +3128,7 @@ k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)),
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
                    x_var = "k", y_var = "Re_tot") +
-  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.7, by = 0.1)) + 
+  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.8, by = 0.2)) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
   ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
@@ -3145,6 +3147,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
                     x_var = "k", 
                     Re_terms = Re_terms_order,
                     graph_params = Re_graph_params) +
+  ggplot2::scale_y_continuous(breaks = seq(-0.2, 0.8, by = 0.2)) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::labs(x = expression("k [-]"),
                 y = "Rebound terms [-]",
