@@ -3185,6 +3185,32 @@ Gregor wants to do some discussing.
 %in utilization of labor, or
 %in utilization of energy.
 
+At our meeting of 11 March, we brainstormed these topics for the Discussion:
+
+Focus on consequences of comprehensive framework
+%
+\begin{enumerate}
+
+  \item Saturated demand (service price elasticity of energy service consumption = 0) 
+        may still lead to rebound, because of rebound effects elsewhere in the system
+
+  \item Clear picture of significance of each rebound mechanism is available 
+        from the framework. 
+        Thus, can formulate policy options to mitigate the largest rebound effects
+  
+  \item Provide a list of policies that mitigate each rebound effect
+  
+  \item Graphs clarify understanding of disparate discussions of rebound effects. 
+        Engineers start with energy path graph.
+        Accountants and business leaders start with cost path graph.
+        Economists start with preferences path graph. 
+        But they all hang together.
+        
+  \item Clarification of k factor
+
+\end{enumerate}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusions (MKH, 500 words)}

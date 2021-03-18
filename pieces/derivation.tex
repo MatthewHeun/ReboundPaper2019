@@ -25,29 +25,30 @@ The purposes of the analyses are to determine for each effect
 %
 \begin{enumerate*}[label={(\alph*)}]
 
-  \item a definition for energy rebound~($Re$) and
+  \item an expression for energy rebound~($Re$) for the effect and
 
-  \item an equation for net income~($\rate{N}$).
+  \item an equation for net income~($\rate{N}$) remaining after the effect.
 
 \end{enumerate*}
 
-Analysis of each stage involves a set of assumptions and constraints
+Analysis of each rebound effect
+involves a set of assumptions and constraints
 as shown in Table~\ref{tab:analysis_assumptions}.
 In Table~\ref{tab:analysis_assumptions}, 
 relationships for emplacement effect 
-embodied energy rates, 
-capital expenditure rates, and 
-maintenance and disposal expenditure rates
+embodied energy rates ($\rbempl{E}_{emb}$ and $\raempl{E}_{emb}$), 
+capital expenditure rates ($\rbempl{C}_{cap}$ and $\raempl{C}_{cap}$), and 
+maintenance and disposal expenditure rates ($\rbempl{C}_{\md}$ and $\raempl{C}_{\md}$)
 are typical, and
 inequalities could switch direction for a specific EEU.
 Productivity effect relationships are given for a single device only.
 If the EEU is deployed at scale across the economy, 
-the energy service consumption rate~($\rate{q}_s$), 
-device energy consumption rate~($\rate{E}_s$), 
-embodied energy rate~($\rate{E}_{emb}$),
-capital expenditure rate~($\rate{C}_{cap}$), and 
-maintenance and disposal expenditure rate~($\rate{C}_{\md}$)
-will all increase.
+the energy service consumption rate~($\raprod{q}_s$), 
+device energy consumption rate~($\raprod{E}_s$), 
+embodied energy rate~($\raprod{E}_{emb}$),
+capital expenditure rate~($\raprod{C}_{cap}$), and 
+maintenance and disposal expenditure rate~($\raprod{C}_{\md}$)
+will all increase in proportion to the number of devices emplaced.
 
 \input{pieces/assumptions_table.tex}
 
@@ -59,7 +60,7 @@ will all increase.
 
 Derivations for rebound definitions and net income equations
 are presented in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect},
-one for each stage in Fig.~\ref{fig:flowchart}.
+one for each rebound effect in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
 each informs the other.
 
@@ -82,8 +83,8 @@ each informs the other.
 \label{sec:rebound_expressions}
 %++++++++++++++++++++++++++++++
 
-All that remains is to determine expressions for each rebound term, 
-beginning with the expected energy savings rate~($\Sdot$), which
+All that remains is to determine expressions for each rebound effect.
+We begin with the device-level expected energy savings rate~($\Sdot$), which
 appears in the denominator of all rebound expressions.
 
 
