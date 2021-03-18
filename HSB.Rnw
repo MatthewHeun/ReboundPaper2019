@@ -2815,8 +2815,9 @@ is far closer to efficiency saturation than the hybrid vehicle
 As a result, further increases in the LED lamp's efficiency 
 are less effective than further increases in the hybrid car's efficiency.
 
-Fig.~\ref{fig:eta_tilde_sens_graph} shows that
-expected energy savings ($\Sdot$) increase faster than takeback.
+Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
+expected energy savings ($\Sdot$) increase faster than takeback 
+as $\raprod{\eta}$ increases.
 Thus, total rebound ($Re_{tot}$, the ratio of 
 takeback to expected energy savings in Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows.
@@ -2839,13 +2840,13 @@ More-efficient devices are likely to be more expensive.
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
-  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] != "Example")
+  dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] %in% c("Car", "Lamp"))
 
 eta_sens_params = list(Car = list(eta_engr_units_star = seq(35, 50, by = 0.5)), 
                        Lamp = list(eta_engr_units_star = seq(70000, 90000, by = 5000)))
 
 eta_sens_data <- ReboundTools::parametric_analysis(original_cases = actual_cases,
-                                                parameterization = eta_sens_params) %>%
+                                                   parameterization = eta_sens_params) %>%
   dplyr::mutate(
     takeback = .data[[ReboundTools::rebound_terms$Re_tot]] * .data[[ReboundTools::star_vars$S_dot_dev]]
   )
@@ -2884,14 +2885,14 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
 @
 
 
-<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4, include=FALSE>>=
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                    x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
-  ggplot2::scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, by = 0.1)) + 
+  ggplot2::scale_y_continuous(limits = c(0, 0.6), breaks = seq(0, 0.6, by = 0.1)) +
   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) +
-  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
+  ggplot2::scale_size_manual(values = c(Re_tot = 1), guide = FALSE) +
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
                 y = expression(Re[tot]*" [-]"),
@@ -2951,14 +2952,15 @@ Lamp_Germany_Re_tot <- rebound_results %>%
 @
 
 
-The effect of energy price on rebound is shown in Fig.~\ref{fig:p_E_sens_graph}.
+The effect of energy price on rebound is shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}.
 Increasing energy prices lead to larger total rebound ($Re_{tot}$),
 because higher energy prices lead to more freed cash 
 to be re-spent by the device owner.
 All other things being equal, more freed cash leads to 
 more spending on other goods and services that demand energy.
 
-Fig.~\ref{fig:all_Re_terms_p_E_graph} shows the effect of energy price ($p_E$)
+Fig.~\ref{fig:all_Re_terms_p_E_graph} also 
+shows the effect of energy price ($p_E$)
 on all rebound components.
 Most rebound components increase with energy price, 
 with the examples exhibiting different sensitivities. 
@@ -2999,33 +3001,33 @@ energy intensity of the economy ($I_E$), and
 energy service consumption rates ($\rbempl{q}_s$).
 
 
-<<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$). Vertical lines indicate energy prices in Germany.", fig.width=6, fig.height=4>>=
-p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)), 
-                        Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
+ <<p_E_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to energy price ($p_E$). Vertical lines indicate energy prices in Germany.", fig.width=6, fig.height=4, include=FALSE>>=
+ p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
+                         Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
-price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
-#                               "Car", "GBR", 6.48,     # $/gal
-#                               "Lamp", "GBR", 0.28,    # $/W-hr
-                              "Car", "DEU", 6.18,     # $/gal
-                              "Lamp", "DEU", 0.363)   # $/W-hr
+ price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
+ #                               "Car", "GBR", 6.48,     # $/gal
+ #                               "Lamp", "GBR", 0.28,    # $/W-hr
+                               "Car", "DEU", 6.18,     # $/gal
+                               "Lamp", "DEU", 0.363)   # $/W-hr
 
-sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_params,
-                   x_var = "p_E_engr_units", y_var = "Re_tot") +
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  ggplot2::geom_vline(data = price_data, 
-                      mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"), 
-                      size = 0.1) +
-  ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 1, by = 0.2)) +
-  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
-  ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
-  ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
-                y = expression(Re[tot]*" [-]"),
-                colour = ggplot2::element_blank(),
-                size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
-@
+ sensitivity_graphs(rebound_data = actual_cases, parameterization = p_E_sens_params,
+                    x_var = "p_E_engr_units", y_var = "Re_tot") +
+   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+   ggplot2::geom_vline(data = price_data,
+                       mapping = ggplot2::aes_string(xintercept = "p_E_engr_units"),
+                       size = 0.1) +
+   ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 1, by = 0.2)) +
+   ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) +
+   ggplot2::scale_size_manual(values = c(Re_tot = 1), guide = FALSE) +
+   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
+   ggplot2::labs(x = expression(p[E]*" [$/gallon (Car) or $/kW-hr (Lamp)]"),
+                 y = expression(Re[tot]*" [-]"),
+                 colour = ggplot2::element_blank(),
+                 size = ggplot2::element_blank(),
+                 linetype = ggplot2::element_blank()) +
+   MKHthemes::xy_theme()
+ @
 
 
 <<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
@@ -3053,7 +3055,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
 \label{sec:effect_of_elasticity}
 %------------------------------
 
-Fig.~\ref{fig:elasticity_sens_graph} shows the variation of total rebound ($Re_{tot}$)
+Fig.~\ref{fig:all_Re_terms_eps_graph} shows the variation of total rebound ($Re_{tot}$)
 with uncompensated own-price elasticity of energy service consumption ($\eqspsUC$).
 The effect is exponential:
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
@@ -3074,17 +3076,17 @@ In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
 
 
-<<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
-eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)), 
+<<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4, include=FALSE>>=
+eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)),
                         Lamp = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)))
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_params,
                    x_var = "e_qs_ps_UC", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
-  ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 2, by = 0.2)) + 
-  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
+  ggplot2::scale_y_continuous(limits = c(0, NA), breaks = seq(0, 2, by = 0.2)) +
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) +
+  ggplot2::scale_size_manual(values = c(Re_tot = 1), guide = FALSE) +
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
                 y = expression(Re[tot]*" [-]"),
@@ -3119,7 +3121,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
 
 The sensitivity of energy rebound 
 to the productivity factor ($k$) is shown 
-in Figs.~\ref{fig:k_sens_graph} and~\ref{fig:all_Re_terms_k_graph}.
+in Fig.~\ref{fig:all_Re_terms_k_graph}.
 The productivity factor has a linear effect on total rebound
 through the productivity rebound component ($Re_{\productivity}$).
 All other rebound components are constant as $k$ changes.
@@ -3130,17 +3132,17 @@ independent of $I_E$, because
 different values of $k$ imply a different macro-economy.
 
 
-<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4>>=
+<<k_sens_graph, echo=FALSE, fig.cap="Total rebound sensitivity to productivity parameter ($k$).", fig.width=6, fig.height=4, include=FALSE>>=
 # Use for all sensitivity graphs
-k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)), 
+k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)),
                       Lamp = list(k = seq(0.5, 2.0, by = 0.5)))
 
 sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params,
                    x_var = "k", y_var = "Re_tot") +
-  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.8, by = 0.2)) + 
+  ggplot2::scale_y_continuous(limits = c(0, 0.7), breaks = seq(0, 0.8, by = 0.2)) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(Re_tot = 1.5), guide = FALSE) + 
+  ggplot2::scale_colour_manual(values = c(Re_tot = "black"), guide = FALSE) +
+  ggplot2::scale_size_manual(values = c(Re_tot = 1), guide = FALSE) +
   ggplot2::scale_linetype_manual(values = c(Re_tot = "solid"), guide = FALSE) +
   ggplot2::labs(x = "k [-]",
                 y = expression(Re[tot]),
@@ -3149,6 +3151,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = k_sens_params
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme()
 @
+
 
 
 <<all_Re_terms_k_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to productivity factor ($k$).", fig.width=6, fig.height=4>>=
