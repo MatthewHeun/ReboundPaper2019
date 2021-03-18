@@ -2791,8 +2791,15 @@ will use $\aempl{E}_s = 2.86$ gal to drive 100 miles,
 a further expected savings of only $\Sdot = 0.47$ gallons.
 Each successive 5 mpg boost in efficiency 
 is expected to save less energy than the previous 5 mpg boost in efficiency.
+
+Saturation can be seen mathematically, too.
+Taking the limit as $\aprod{\eta} \rightarrow \infty$ 
+in Eq.~(\ref{eq:Sdot}) gives $\Sdot = \rbempl{E}_s$, 
+not $\infty$. 
+Thus, efficiency saturation must occur.
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
-shows that the rebound framework correctly replicates these trends.
+shows that the rebound framework correctly replicates the
+expected efficiency saturation trends.
 
 Saturation is especially noticeable in the lamp example
 compared to the car example,
@@ -2805,6 +2812,8 @@ Thus, at $\aprod{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr,
 the energy efficient LED
 is far closer to efficiency saturation than the hybrid vehicle 
 (at $\aprod{\eta} = \Sexpr{mpg_better}$ mpg).
+As a result, further increases in the LED lamp's efficiency 
+are less effective than further increases in the hybrid car's efficiency.
 
 Fig.~\ref{fig:eta_tilde_sens_graph} shows that
 expected energy savings ($\Sdot$) increase faster than takeback.

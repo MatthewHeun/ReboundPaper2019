@@ -432,7 +432,7 @@ such that the average price of all other goods purchased in the economy~($p_o$) 
 Then, the cost rate of other purchases in the economy can be given as
 
 \begin{equation}
-  \rbsub{C}_o = \bsub{p}_o \rbsub{q}_o \; ,
+  \rorig{C}_o = \orig{p}_o \rorig{q}_o \; ,
 \end{equation}
 %
 and
@@ -442,13 +442,13 @@ and
 \end{equation}
 %
 Assuming that the average price is unchanged across the substitution effect,
-such that $\asub{p}_o = \bsub{p}_o$,
-the preceding two equations can be solved for prices ($\bsub{p}_o$ and $\asub{p}_o$)
+such that $\asub{p}_o = \orig{p}_o$,
+the preceding two equations can be solved for prices ($\orig{p}_o$ and $\asub{p}_o$)
 and set equal to find
 
 \begin{equation} \label{eq:qo_Co_equality}
-  \frac{\rasub{C}_o}{\rbsub{C}_o} 
-      = \frac{\rasub{q}_o}{\rbsub{q}_o} \; .
+  \frac{\rasub{C}_o}{\rorig{C}_o} 
+      = \frac{\rasub{q}_o}{\rorig{q}_o} \; .
 \end{equation}
 
 
@@ -487,7 +487,7 @@ gives
 Again, note that the energy service price elasticity of energy service consumption
 is negative ($\eqsps < 0$), so that
 as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
-the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
+the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s = \rorig{q}_s$).
 
 Substituting Eq.~(\ref{eq:approx_qshat_over_qsorig}) into Eq.~(\ref{eq:Re_dsub_prelim})
 yields the approximate expression for direct substitution rebound.
@@ -496,10 +496,11 @@ yields the approximate expression for direct substitution rebound.
   Re_{dsub} = \Redsubeqn
 \end{equation}
 
-Note that the service price elasticity of energy service consumption is
-expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
-$Re_{dsub} = 0.15$.
+The service price elasticity of energy service consumption is
+expected to be negative ($\eqsps < 0$), 
+such that, e.g.,  
+$\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$
+yields $Re_{dsub} = 0.15$.
 
 With $\eqsps \in (-1, 0)$ expected,
 the approximate method indicates that
@@ -525,21 +526,21 @@ The energy service price is inversely proportional to
 efficiency, yielding
 
 \begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} .
 \end{equation}
 
-Assuming that the average price is unchanged across the substitution effect,
-such that $\asub{p}_o = \bsub{p}_o$,
+Assuming that the average price is unchanged across the substitution effect
+such that $\asub{p}_o = \raempl{p}_o = \orig{p}_o$,
+and noting that $\rbsub{q}_s = \rorig{q}_s$ and $\rbsub{C}_o = \rorig{C}_o$,
 we can write
 
 \begin{equation} \label{eq:Cdot_o_ratio}
-  \frac{\rasub{C}_o}{\rbsub{C}_o}
-      = \frac{\rasub{q}_o}{\rbsub{q}_o}
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
+  \frac{\rasub{C}_o}{\rorig{C}_o}
+      = \frac{\rasub{q}_o}{\rorig{q}_o}
+      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} .
 \end{equation}
 %
 Note that Eq.~(\ref{eq:Cdot_o_ratio})
-(along with $\rbsub{C}_o = \rbempl{C}_o$)
 can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
@@ -587,7 +588,7 @@ the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
 These assumptions are approximations that hold only 
 for infinitesimally small energy service price changes 
-($\Delta \aempl{p}_s \approx 0$).
+($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
 However, in the case of an energy efficiency upgrade (EEU), 
 the energy service price change is not infinitesimal.
 Rather, 
@@ -600,12 +601,13 @@ ultimately, to quantify the direct and indirect substitution rebound effects
 ($Re_{dsub}$ and $Re_{isub}$) exactly,
 we remove the restriction that energy service price elasticities ($\eqsps$ and $\eqops$)
 must be constant along an indifference curve.
-Instead, recognizing that we employ a constant elasticity of substitution (CES)
-utility function,
-we require constancy of only
+Instead, we require constancy of only
 the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
-and the expenditure rate for other goods ($\rate{C}_o$).
+and the expenditure rate for other goods ($\rate{C}_o$)
+across the substitution effect.
+Thus, we employ a constant elasticity of substitution (CES)
+utility function.
 
 Figure~\ref{fig:ExamplePrefsPathGraph} 
 (especially segments \starc{} and \chat{})
