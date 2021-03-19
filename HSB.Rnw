@@ -3076,7 +3076,7 @@ In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses on the energy service ($\fCs$).
 
 
-<<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4, include=FALSE>>=
+<<elasticity_sens_graph, echo=FALSE, fig.cap="Sensitivity of total rebound ($Re_{tot}$) to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis.)", fig.width=6, fig.height=4, include=FALSE>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)),
                         Lamp = list(e_qs_ps_UC = seq(-0.7, 0, by = 0.01)))
 
@@ -3097,7 +3097,7 @@ sensitivity_graphs(rebound_data = actual_cases, parameterization = eps_sens_para
 @
 
 
-<<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$).", fig.width=6, fig.height=4>>=
+<<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis.)", fig.width=6, fig.height=4>>=
 rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_params,
                     x_var = "e_qs_ps_UC", 
                     Re_terms = Re_terms_order,
