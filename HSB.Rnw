@@ -1701,6 +1701,7 @@ Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound
 @
 
 
+
 For the first example, 
 we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
 versus the incumbent (Ford Fusion SE). 
@@ -1912,6 +1913,14 @@ The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect
 for the car example.
 
+
+<<CarGraphReResults, include=FALSE>>=
+Re_empl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
+Re_sub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
+Re_inc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+@
+
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
@@ -1943,7 +1952,8 @@ car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        annotation_colour, 
                                        annotation_size,
                                        car_Re_label_angle,
-                                     42400, 79200, 'Re[empl]', 
+                                     # 42400, 79200, 'Re[empl]', 
+                                     42400, 79200, paste0("Re[empl] == ", Re_empl_car_char_perc, "*'%'"),
                                        annotation_colour, 
                                        annotation_size,
                                        car_Re_label_angle,
