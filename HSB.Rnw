@@ -3347,19 +3347,19 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CES utility model and elasticities}
-\label{sec:ces_and_elasticities}
+\section{Utility models and elasticities}
+\label{sec:utility_and_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/ces_utility_and_elasticities.tex}
+\input{pieces/utility_and_elasticities.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Elasticities}
-\label{sec:elasticities}
+% \section{Elasticities}
+% \label{sec:elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/elasticities.tex}
+% \input{pieces/elasticities.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3371,11 +3371,11 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Utility model and derivation of $\fCs$}
-\label{sec:utility_model}
+% \section{Utility model and derivation of $\fCs$}
+% \label{sec:utility_model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/utility.tex}
+% \input{pieces/utility.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
