@@ -1314,8 +1314,8 @@ the consumption rate of other goods and services ($\rate{C}_o$).
 The share parameter ($\fCs$) is taken from the orignal (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the elasticity of substitution ($\sigma$) 
 as $\rho = \frac{\sigma - 1}{\sigma}$.
-See Appendix~\ref{sec:utility_model} for further details
-of the utility model.
+See Appendix~\ref{sec:utility_and_elasticities}
+for further details of the utility model.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
@@ -1329,7 +1329,7 @@ which can be rearranged to
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; ,
 \end{equation}
 %
-as shown in Appendix~\ref{sec:Redsub_Reisub_expressions}.
+as shown in Appendix~\ref{sec:Redsub_expression}.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
@@ -1345,7 +1345,7 @@ which can be rearranged to
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
-as shown in Appendix~\ref{sec:Redsub_Reisub_expressions}.
+as shown in Appendix~\ref{sec:Reisub_expression}.
 
 To find the post-substitution effect point ($\wedge$),
 we solve for the location on the \iicirc{} indifference curve
@@ -1701,6 +1701,7 @@ Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound
 @
 
 
+
 For the first example, 
 we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
 versus the incumbent (Ford Fusion SE). 
@@ -1720,22 +1721,18 @@ and the long-term benefit of decreased direct energy costs.
 We require four sets of data. 
 First, the basic car parameters are summarized 
 in Table~\ref{tab:car_parameters}.
-
 Second, we require several general parameters, 
 mainly relating to the US economy and personal finances 
 of the average US citizen. 
 The parameters and their values used in the study 
 are given in Table~\ref{tab:car_economic_parameters}.
-
 Third, we require elasticity parameters, 
 as given in Table~\ref{tab:car_elasticity_parameters}.
-
 Fourth, armed with the parameter values from 
 Tables~\ref{tab:car_parameters}--\ref{tab:car_elasticity_parameters}, 
 and the equations of Section~\ref{sec:framework},
 we calculate important values at each rebound stage,
 as shown below in Table~\ref{tab:car_stages_table}.
-
 
 
 % Reduce spacing between table rows henceforth.
@@ -1916,6 +1913,15 @@ The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect
 for the car example.
 
+
+<<CarGraphReResults, include=FALSE>>=
+Re_empl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
+Re_sub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
+Re_inc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
+@
+
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
@@ -1947,7 +1953,8 @@ car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        annotation_colour, 
                                        annotation_size,
                                        car_Re_label_angle,
-                                     42400, 79200, 'Re[empl]', 
+                                     # 42400, 79200, 'Re[empl]', 
+                                     42600, 79000, paste0("Re[empl] == ", Re_empl_car_char_perc, "*'%'"),
                                        annotation_colour, 
                                        annotation_size,
                                        car_Re_label_angle,
@@ -1955,14 +1962,31 @@ car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        annotation_colour, 
                                        annotation_size,
                                        car_Re_label_angle + 90,
+                                     42180, 80250, paste0(Re_sub_car_char_perc, "*'%'"), 
+                                       annotation_colour, 
+                                       annotation_size - 1,
+                                       car_Re_label_angle + 90,
                                      45200, 80680, 'Re[inc]', 
                                        annotation_colour, 
                                        annotation_size,
+                                       car_Re_label_angle + 90,
+                                     45500, 80420, paste0(Re_inc_car_char_perc, "*'%'"), 
+                                       annotation_colour, 
+                                       annotation_size - 1,
                                        car_Re_label_angle + 90,
                                      51250, 77910, 'Re[prod]', 
                                        annotation_colour, 
                                        annotation_size - 1,
                                        car_Re_label_angle + 90,
+                                     51530, 77710, paste0(Re_prod_car_char_perc, "*'%'"), 
+                                       annotation_colour, 
+                                       annotation_size - 1,
+                                       car_Re_label_angle + 90,
+                                     
+                                     51700, 79500, paste0("Re[tot] == ", Re_tot_car_char_perc, "*'%'"),                                     
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle,
                                      71100, 80000, 'Re[tot] == 100*"%"', 
                                        annotation_colour, 
                                        annotation_size,
@@ -2260,16 +2284,13 @@ and a long-term benefit of decreased direct energy costs.
 Again, we require four sets of data. 
 First, the basic lamp parameters, which are summarized below:  
 Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficiency upgrade (EEU).
-
 Second, we require several general parameters, 
 mainly relating to the US economy and 
 personal finances of the average US citizen. 
 The parameters and their values used in the study 
 are given below in Table~\ref{tab:lamp_economic_parameters}.
-
 Third, we require the elasticity parameters, 
 as shown in Table~\ref{tab:lamp_elasticity_parameters}.
-
 Fourth, with the parameter values from 
 Tables~\ref{tab:lamp_parameters}--\ref{tab:lamp_elasticity_parameters} 
 and the equations of Section~\ref{sec:framework} in hand,
@@ -2443,6 +2464,14 @@ rebound_results %>%
 @
 
 
+<<LampGraphReResults, include=FALSE>>=
+Re_empl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
+Re_sub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
+Re_inc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
+@
+
 <<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
@@ -2465,19 +2494,24 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         stage_colour, bar_size, 0,
                                       67, 92904, '"~"', 
                                         stage_colour, tilde_size, 0,
-                                      -3, 92835, 'Hyperconservation', 
+                                      0, 92835, 'Hyperconservation', 
                                         annotation_colour, 
-                                        annotation_size-1,
+                                        annotation_size - 1,
                                         lamp_Re_label_angle,
                                       16, 92855, 'Re[tot] == 0*"%"', 
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle,
-                                      -11, 92870, 'Re[empl]', 
+                                      # -11, 92870, 'Re[empl]', 
+                                     -1, 92860, paste0("Re[empl] == ", Re_empl_lamp_char_perc, "*'%'"),
                                         annotation_colour, 
-                                        annotation_size, 
+                                        annotation_size - 1, 
                                         lamp_Re_label_angle,
                                       1, 92874.2, 'Re[sub]', 
+                                        annotation_colour, 
+                                        annotation_size - 1, 
+                                        lamp_Re_label_angle + 90,
+                                      6, 92870, paste0(Re_sub_lamp_char_perc, "*'%'"), 
                                         annotation_colour, 
                                         annotation_size - 1, 
                                         lamp_Re_label_angle + 90,
@@ -2485,11 +2519,23 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
+                                      29, 92876.5, paste0(Re_inc_lamp_char_perc, "*'%'"), 
+                                        annotation_colour, 
+                                        annotation_size - 1, 
+                                        lamp_Re_label_angle + 90,
                                       90, 92856.5, 'Re[prod]', 
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
+                                      95.5, 92851, paste0(Re_prod_lamp_char_perc, "*'%'"), 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle + 90,
                                       202, 92880, 'Re[tot] == 100*"%"', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle,
+                                      108, 92865, paste0("Re[tot] == ", Re_tot_lamp_char_perc, "*'%'"),
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle,
@@ -3347,19 +3393,19 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{CES utility model and elasticities}
-\label{sec:ces_and_elasticities}
+\section{Utility models and elasticities}
+\label{sec:utility_and_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/ces_utility_and_elasticities.tex}
+\input{pieces/utility_and_elasticities.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Elasticities}
-\label{sec:elasticities}
+% \section{Elasticities}
+% \label{sec:elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/elasticities.tex}
+% \input{pieces/elasticities.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3371,11 +3417,11 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Utility model and derivation of $\fCs$}
-\label{sec:utility_model}
+% \section{Utility model and derivation of $\fCs$}
+% \label{sec:utility_model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/utility.tex}
+% \input{pieces/utility.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
