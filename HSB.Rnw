@@ -1919,6 +1919,7 @@ Re_empl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound
 Re_sub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
 Re_prod_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
 <<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
@@ -1981,6 +1982,11 @@ car_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        annotation_colour, 
                                        annotation_size - 1,
                                        car_Re_label_angle + 90,
+                                     
+                                     51700, 79500, paste0("Re[tot] == ", Re_tot_car_char_perc, "*'%'"),                                     
+                                       annotation_colour, 
+                                       annotation_size,
+                                       car_Re_label_angle,
                                      71100, 80000, 'Re[tot] == 100*"%"', 
                                        annotation_colour, 
                                        annotation_size,
@@ -2463,6 +2469,7 @@ Re_empl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebou
 Re_sub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
 Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
 <<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
@@ -2525,6 +2532,10 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
                                       202, 92880, 'Re[tot] == 100*"%"', 
+                                        annotation_colour, 
+                                        annotation_size, 
+                                        lamp_Re_label_angle,
+                                      108, 92865, paste0("Re[tot] == ", Re_tot_lamp_char_perc, "*'%'"),
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle,
