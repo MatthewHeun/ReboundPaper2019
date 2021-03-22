@@ -318,7 +318,7 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 We begin by deriving an expression for direct and indirect 
 substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
 Thereafter, we note an assumption of exogenous pries of other goods ($p_o$)
-and develop an approximate method and an exact method for determining the 
+and develop an approximate model and a CES utility model for determining the 
 post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 
@@ -374,7 +374,7 @@ Canceling terms yields
 \end{equation}
 %
 Eq.~(\ref{eq:Re_dsub_prelim}) is the basis for
-developing both approximate and exact methods of determining
+developing both approximate and CES models of determining
 direct substitution rebound.
 
 
@@ -412,7 +412,7 @@ Substituting Eq.~($\ref{eq:Sdot}$) and rearranging gives
 \end{equation}
 %
 Eq.~(\ref{eq:Re_isub_prelim}) is the basis for
-developing both approximate and exact methods of determining
+developing both approximate and CES models of determining
 indirect substitution rebound.
 
 
@@ -453,11 +453,11 @@ and set equal to find
 
 
 %..............................
-\paragraph{Approximate method} 
+\paragraph{Approximate model} 
 \label{sec:Resub_approximate_method}
 %..............................
 
-In the approximate method, 
+In the approximate model, 
 the relationship between energy service price and energy service consumption rate
 is given by the service price elasticity of energy service consumption~($\eqsps$),
 such that
@@ -468,7 +468,7 @@ such that
 %
 Note that the energy service price elasticity of energy service consumption ($\eqsps$)
 is (incorrectly) assumed constant along an indifference curve
-in the approximate method. 
+in the approximate model. 
 A negative value for the service price elasticity of energy service consumption
 is expected ($\eqsps < 0$),
 such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
@@ -503,12 +503,12 @@ $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$
 yields $Re_{dsub} = 0.15$.
 
 With $\eqsps \in (-1, 0)$ expected,
-the approximate method indicates that
+the approximate model indicates that
 direct substitution rebound will never be larger than 1.
 I.e., the direct substitution effect alone
 can never cause backfire. 
 
-To quantify the substitution effect on other purchases in the approximate method,
+To quantify the substitution effect on other purchases in the approximate model,
 we introduce another elasticity:
 the energy service price elasticity of other goods consumption~($\eqops$), 
 such that
@@ -578,11 +578,11 @@ reduce energy takeback by direct substitution effects.
 
 
 %..............................
-\paragraph{Exact method}
+\paragraph{CES model}
 \label{sec:Resub_exact_method}
 %..............................
 
-The approximate method assumes (incorrectly) that 
+The CES utility model assumes (incorrectly) that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
@@ -612,13 +612,13 @@ utility function.
 Figure~\ref{fig:ExamplePrefsPathGraph} 
 (especially segments \starc{} and \chat{})
 illustrates features
-of the exact method for determining the new consumption bundle.
+of the CES utility model for determining the new consumption bundle.
 Two equations are helpful for this analysis.
 First, the slope at any point on indifference curve \iicirc{} 
 is given by Eq.~(\ref{eq:slope_indifference_curve}) with 
 $\rate{u}/\rbempl{u} = 1$ and 
 the share parameter ($a$) replaced by $\fCs$,
-as discussed in Appendix~\ref{sec:utility_model}.
+as discussed in Appendix~\ref{sec:utility_and_elasticities}.
 
 \begin{align} \label{eq:slope_indifference_curve_u1}
   \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&
@@ -665,7 +665,7 @@ Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
 to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
-via the exact method.
+via the CES utility model.
 
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
 can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
@@ -692,7 +692,7 @@ Simplifying gives
 
 Eq.~(\ref{eq:C_o_solution}) can be substituted into Eq.~(\ref{eq:Re_isub_prelim})
 to obtain an estimate for indirect substitution rebound ($Re_{isub}$)
-via the exact method.
+via the CES utility model.
 
 
 %------------------------------
