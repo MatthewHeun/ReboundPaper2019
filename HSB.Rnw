@@ -433,7 +433,7 @@ or, simply, a multiplier effect ~\citep{Borenstein:2015aa, Lange2019},
 which occurs when
 ``the economy [expands] by more than the private income gain
 enjoyed by the owner of the upgraded appliance'' \citep[p.~11]{Borenstein:2015aa}.
-The size of this productivity multiplier remains probably the most central of all issues
+The size of this productivity factor remains probably the most central of all issues
 within the rebound debate.
 On one side, \citet{Howarth1997} and \citet{Schipper2000}
 claim that the macroeconomic rebound multiplier is small. 
@@ -473,7 +473,7 @@ one that
   
   \item carefully distinguishes among the microeconomic components shown in Table~\ref{tab:typology}, and
   
-  \item incorporates macroeconomic productivity multiplier effects shown in Table~\ref{tab:typology}. 
+  \item incorporates macroeconomic productivity effects shown in Table~\ref{tab:typology}. 
 
 \end{enumerate*}
 %
@@ -492,51 +492,39 @@ one that
 
 **** Be sure we hit all of need, aim, contributions, and structure. ****
 
-The aim of this paper is to fill the gap in the literature identified above.
-We build on the microeconomic foundations laid by \citet{Borenstein:2015aa}
-by defining six microeconomic components of rebound
-(direct and indirect rebound for 
-emplacement, substitution, and income effects),
-with linkage to macroeconomic rebound components via a multiplier effect,
-as shown in Table~\ref{tab:typology}.
-We also demonstrate application of the framework
-by calculating energy rebound associated with 
-purchase and use of a fuel-efficient automobile.   
-
-Thus, this paper's contribution to the rebound literature is
-the development and presentation of a more-comprehensive
-energy-economy rebound analysis framework, 
-a ``comprehensive rebound framework'' for short.
-The comprehensive rebound framework provides the following benefits:
+The \textit{need} for
+a comprehensive, mathematically-rigorous rebound analysis framework 
+is amply demonstrated by the preceding discussion.
+The \textit{aim} of this paper is to fill the gap in the literature identified above
+by developing and demonstrating a comprehensive and rigorous rebound framework.
+The \textit{contributions} of this paper are
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
-  \item it untangles and clarifies interrelated aspects of energy rebound,
+  \item describing a consistent and mathematically-rigorous rebound framework
+        in which direct and indirect dimensions of 
+        substitution and income effects
+        are connected,
+        
+  \item showing that embodied energy, maintenance and disposal activities, 
+        replacements, and macroeconomic effects can be accommodated 
+        in consistent and rigorous rebound framework, 
+        
+  \item providing a new way to visualize rebound effects, 
+        namely energy, cost, and preference path graphs,
   
-  \item it unifies several concepts of energy rebound, 
-  
-  \item it connects engineers and product designers
-        (who usually focus on micro efficiency and the device level) and
-        economists 
-        (some of whom focus on the macroeconomic scale), and
-        ****
-        I moved this ``benefit'' from the end of the section above. 
-        Do we like it here?
-        Do we like this benefit?
-        (Although this is important to me, personally, 
-        we don't really speak much about this benefit elsewhere in the paper.
-        It seems like we should re-connect to each of these benefits later in the paper.
-        If we don't re-connect, maybe that means we should delete the benefit?)---MKH
-        ****
-  
-  \item it enables consideration of the potential energy rebound of prospective energy policy options, 
-        thereby providing insight to the energy policymaking process.
-    
+  \item applying a CES utility function to rebound 
+        via empirically-plausible cost shares of other goods consumption, and
+        
+  \item linking quantified rebound effects with
+        actionable steps to minimize real-world rebound effects.
+        
 \end{enumerate*}
 
-The remainder of this paper is structured as follows.
+The remainder of this paper is \textit{structured} as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
-Section~\ref{sec:examples} provides two calculation examples.
+Section~\ref{sec:examples} provides two calculation examples, 
+a hybrid car and an LED lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
@@ -1574,6 +1562,7 @@ $k = 0$ means there is no macroeconomic productivity boost
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption at the macro level.
+**** MKH to check this GS sentence: 
 In particular, if $k = 1$ and net income was 0.5 per cent of GDP, 
 instead of respending only 0.1 per cent of GDP, respending 
 to the tune of 0.2 per cent of GDP would occur, and thus GDP 
@@ -1790,7 +1779,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Car example: Economic parameters}
+\caption{Car example: Economic parameters.}
 \label{tab:car_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -1826,7 +1815,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                             &               & where spend on energy service = 14,425 miles / 42 mpg \\
                                                             &               & $\times$ \$2.21/gallon = \$1,275. \\
   \midrule
-  Productivity multiplier                    & \Sexpr{k_car_char}           & Assumed value. \\  
+  Productivity factor                        & \Sexpr{k_car_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
@@ -1841,7 +1830,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Car example: Elasticity parameters}
+\caption{Car example: Elasticity parameters.}
 \label{tab:car_elasticity_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -1851,10 +1840,10 @@ as shown below in Table~\ref{tab:car_stages_table}.
   Marshallian (uncompensated) price elasticity of demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
   $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_car_char}$   & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
+  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqsps$ [--]                                           &                                &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~\ref{eq:eqops}.  \\
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqops$ [--]                                           &                                &   \\ 
   \midrule   
   Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Assumed value. \\
@@ -2355,7 +2344,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Lamp example: Economic parameters}
+\caption{Lamp example: Economic parameters.}
 \label{tab:lamp_economic_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -2388,7 +2377,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
                                                             &               & where spend on energy service = 580,350 lm-hrs/year /  \\
                                                             &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1355/kW-hr = \$9/year.  \\
   \midrule
-  Productivity multiplier                   & \Sexpr{k_lamp_char}           & Assumed value. \\  
+  Productivity factor                       & \Sexpr{k_lamp_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
   \bottomrule
 \end{tabular}
@@ -2402,7 +2391,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
 \begin{landscape}
 \begin{table}
 \begin{center}
-\caption{Lamp example: Elasticity parameters}
+\caption{Lamp example: Elasticity parameters.}
 \label{tab:lamp_elasticity_parameters}
 \begin{tabular}{ r c l }
   \toprule
@@ -2412,13 +2401,13 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Marshallian (uncompensated) price elasticity of demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
   $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &  $\Sexpr{e_qs_ps_lamp_char}$      & Calculated via the Slutsky Equation (Eq.~\ref{eq:slutsky}).  \\
+  Price elasticity of demand for lighting                 &  $\Sexpr{e_qs_ps_lamp_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqsps$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_char}     & Calculated via Eq.~\ref{eq:eqops}.  \\
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqops$ [--]                                           &           &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
+  Income elasticity of demand for lighting                &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
   $\eqsM$ [--]                                            &           &   \\ 
   \midrule   
   Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_lamp_char}     & Assumed value. \\
