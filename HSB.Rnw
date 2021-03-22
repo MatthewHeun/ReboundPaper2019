@@ -2458,6 +2458,13 @@ rebound_results %>%
 @
 
 
+<<LampGraphReResults, include=FALSE>>=
+Re_empl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
+Re_sub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
+Re_inc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+@
+
 <<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
@@ -2488,17 +2495,26 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle,
-                                      -11, 92870, 'Re[empl]', 
+                                      # -11, 92870, 'Re[empl]', 
+                                     -1, 92860, paste0("Re[empl] == ", Re_empl_lamp_char_perc, "*'%'"),
                                         annotation_colour, 
-                                        annotation_size, 
+                                        annotation_size - 1, 
                                         lamp_Re_label_angle,
                                       1, 92874.2, 'Re[sub]', 
+                                        annotation_colour, 
+                                        annotation_size - 1, 
+                                        lamp_Re_label_angle + 90,
+                                      6, 92870, paste0(Re_sub_lamp_char_perc, "*'%'"), 
                                         annotation_colour, 
                                         annotation_size - 1, 
                                         lamp_Re_label_angle + 90,
                                       24, 92881, 'Re[inc]', 
                                         annotation_colour, 
                                         annotation_size, 
+                                        lamp_Re_label_angle + 90,
+                                      29, 92876.5, paste0(Re_inc_lamp_char_perc, "*'%'"), 
+                                        annotation_colour, 
+                                        annotation_size - 1, 
                                         lamp_Re_label_angle + 90,
                                       90, 92856.5, 'Re[prod]', 
                                         annotation_colour, 
