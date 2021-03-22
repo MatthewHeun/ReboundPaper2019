@@ -1530,7 +1530,7 @@ that reducing the need for an input at the micro level can lead
 to important and surprising counter-tendencies in the aggregate
 demand for that input.
 Consider labor productivity: it has risen 20-fold
-in Western Europe and the US since 1820 \citep{Maddison:2001aa}, 
+in Western Europe and the U.S.\ since 1820 \citep{Maddison:2001aa}, 
 and yet today these countries employ more workers than ever before
 as richer people demand more goods and services, and productivity
 gains lead to new products. The same holds for energy.
@@ -1711,8 +1711,8 @@ We require four sets of data.
 First, the basic car parameters are summarized 
 in Table~\ref{tab:car_parameters}.
 Second, we require several general parameters, 
-mainly relating to the US economy and personal finances 
-of the average US citizen. 
+mainly relating to the U.S.\ economy and personal finances 
+of the average U.S.\ citizen. 
 The parameters and their values used in the study 
 are given in Table~\ref{tab:car_economic_parameters}.
 Third, we require elasticity parameters, 
@@ -1747,11 +1747,11 @@ as shown below in Table~\ref{tab:car_stages_table}.
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
                                                     &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
-   Ownership duration            & \Sexpr{t_own_orig_car_char}  & \Sexpr{t_own_star_car_char}  & US car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
+   Ownership duration            & \Sexpr{t_own_orig_car_char}  & \Sexpr{t_own_star_car_char}  & U.S.\ car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
    $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
                                                     &           &          & 84 months in 2019 (7 years) for our example. \\
  \midrule
-   Lifespan                     & \Sexpr{t_life_orig_car_char}  & \Sexpr{t_life_star_car_char} & Lifetime taken as 14 years, based on 13--17 years for US cars \\
+   Lifespan                     & \Sexpr{t_life_orig_car_char}  & \Sexpr{t_life_star_car_char} & Lifetime taken as 14 years, based on 13--17 years for U.S.\ cars \\
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Berla:2016} and 14 years for UK cars from \\
                                                     &           &          & \citet{SMMT:2020}. \\
    \midrule
@@ -1786,19 +1786,19 @@ as shown below in Table~\ref{tab:car_stages_table}.
   Description & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average US vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
+  Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average U.S.\ vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
   $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
                                                             &               & \citet{US_DoT:2018}. \\
   \midrule
-  Real median personal income US, in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  Real median personal income U.S., in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  US Disposable income /                                    & 0.88268       & Taken from US Bureau of Economic Analysis (BEA) \\
+  U.S.\ Disposable income /                                    & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   real income (minus current taxes)                         &               & National and Products Accounts (NIPA) \\
   {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
-  Share of savings from disposable income                   & 0.079         & Taken from US Bureau of Economic Analysis (BEA) \\
+  Share of savings from disposable income                   & 0.079         & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   {} [--]                                                   &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
@@ -1806,7 +1806,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
   Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from US Energy Information Agency (EIA) data \\
+  Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from U.S.\ Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
   Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,275 (spend on energy service) \\
@@ -2274,8 +2274,8 @@ Again, we require four sets of data.
 First, the basic lamp parameters, which are summarized below:  
 Table~\ref{tab:lamp_parameters} shows parameters for the electric lamp efficiency upgrade (EEU).
 Second, we require several general parameters, 
-mainly relating to the US economy and 
-personal finances of the average US citizen. 
+mainly relating to the U.S.\ economy and 
+personal finances of the average U.S.\ citizen. 
 The parameters and their values used in the study 
 are given below in Table~\ref{tab:lamp_economic_parameters}.
 Third, we require the elasticity parameters, 
@@ -2314,7 +2314,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
    \midrule
    Life cycle analysis (LCA) embodied energy  & \Sexpr{E_emb_orig_lamp_char}      & \Sexpr{E_emb_star_lamp_char}     & Base document: Table 4.5 Manufacturing Energy  \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Primary energy (MJ/20 Million lumen hours), \\
-                                                    &           &          & US DoE Life-cycle assessment of energy and environmental \\
+                                                    &           &          & U.S.\ DoE Life-cycle assessment of energy and environmental \\
                                                     &           &          & impacts of LED lighting products \\
                                                     &           &          & \citep{US_DoE:2012}. \\
                                                     &           &          & Incandescent: \\
@@ -2354,10 +2354,10 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Lighting consumption prior to upgrade   & \Sexpr{q_dot_s_orig_lamp_char}  & Calculation: (530 lm) (3 hrs/day) (365 days/year). \\
   $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
-  Real median personal income US, in 2018                   & 33,706        & Source: \citet{St_Louis_Fed:2019}.\\
+  Real median personal income U.S.\, in 2018                   & 33,706        & Source: \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  US Disposable income /                                    & 0.88268       & Source:  National and Products Accounts (NIPA) \\
+  U.S.\ Disposable income /                                    & 0.88268       & Source:  National and Products Accounts (NIPA) \\
   real income (minus current taxes)                         &               & Table 2.1. Personal Income and Its Disposition \\
   {} [--]                                                   &               & \citep{US_BEA:2020}. \\
   \midrule
@@ -2368,7 +2368,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & US 2020 average household electricity price \\
+  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2020 average household electricity price \\
   $p_E$ [\$/kW-hr]                                          &               & \citep{US_EIA:2020_electricity}.  \\
   \midrule
   Fractional spend on energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$9/year (spend on energy service) / \\
