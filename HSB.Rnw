@@ -3068,14 +3068,15 @@ A limitation of the elasticity sensitivity study derives from limitations of the
 CES utility model itself, 
 namely that numerical extremes are approached only asymptotically. 
 **** Gregor to add more intelligence here. ---MKH ****
-Indeed, uneconomic conditions can arise; 
-when when $\left| \eqspsUC \right| < \fCs$,
-negative direct substitution rebound is observed ($Re_{dsub} < 0$),
+Indeed, uneconomic conditions should be avoided.
+For example, negative direct substitution rebound ($Re_{dsub} < 0$)
+is obtained when $\left| \eqspsUC \right| < \fCs$,
 because Eq.~(\ref{eq:sigma}) pushes 
 the elasticity of substitution negative ($\sigma < 0$).
 In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
-but that dynamic is not captured by a single-variable sensitivity study.
+thereby avoiding the uneconomic condition.
+However, multi-variate dynamics are not captured by univariate sensitivity studies.
 **** Gregor: is the above correct? ---MKH ****
 
 
