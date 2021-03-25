@@ -3006,7 +3006,7 @@ for the car example and
 \Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}\%
 for the lamp example.
 
-A limitation to the energy price sensitivity analysis arises from the fact that
+A limitation of the energy price sensitivity analysis arises from the fact that
 energy price is not independent of other parameters.
 Indeed, other rebound parameters
 would change along with energy price
@@ -3111,7 +3111,7 @@ The productivity factor has a linear effect on total rebound
 through the productivity rebound component ($Re_{\productivity}$).
 All other rebound components are constant as $k$ changes.
 
-A limitation to the productivity factor sensitivity analysis is that
+A limitation of the productivity factor sensitivity analysis is that
 the productivity factor ($k$) is unlikely to be 
 independent of $I_E$, because 
 different values of $k$ imply a different macro-economy.
