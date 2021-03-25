@@ -2516,7 +2516,7 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
-                                      95.5, 92851, paste0(Re_prod_lamp_char_perc, "*'%'"), 
+                                      95.5, 92851, paste0("'", Re_prod_lamp_char_perc, "%'"), 
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
@@ -2558,7 +2558,7 @@ rebound_results %>%
                                             colour = colour, 
                                             size = size,
                                             angle = angle), 
-                     parse = TRUE) +
+                     parse = TRUE, ) +
   MKHthemes::xy_theme()
 @
 
