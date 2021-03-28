@@ -1340,7 +1340,7 @@ for further details of the CES utility model.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} \; ,
 \end{equation}
 %
@@ -1354,7 +1354,7 @@ as shown in Appendix~\ref{sec:Redsub_expression}.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_isub_def}
   Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; ,
 \end{equation}
 %
@@ -3415,6 +3415,16 @@ using an early version of this framework.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{pieces/derivation.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exogenous $p_o$ assumption}
+\label{sec:exogenous_p_o}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/exogenous_p_o.tex}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

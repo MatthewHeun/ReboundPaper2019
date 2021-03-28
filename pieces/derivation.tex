@@ -324,7 +324,8 @@ Assuming that conditions after the emplacement effect ($*$) are known,
 both the 
 rate of energy service consumption ($\rasub{q}_s$) and
 the rate of other goods consumption ($\rasub{C}_o$) 
-must be determined as a result of the substitution effect.
+must be determined as a result of the substitution effect
+(the $\wedge$ point).
 
 The EEU's energy efficiency increase
 ($\aprod{\eta} > \bempl{\eta}$)
@@ -343,8 +344,7 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 
 We begin by deriving an expression for direct and indirect 
 substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
-Thereafter, we note an assumption of exogenous pries of other goods ($p_o$)
-and develop an approximate model and a CES utility model for determining the 
+Thereafter, we develop an approximate model and a CES utility model for determining the 
 post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 
@@ -355,8 +355,8 @@ post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation} \label{eq:Re_dsub_def}
-  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
+\begin{equation}
+  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dsub_def}}
 \end{equation}
 %
 Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
@@ -411,8 +411,8 @@ direct substitution rebound.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation} \label{eq:Re_isub_def}
-  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\begin{equation}
+  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; . \tag{\ref{eq:Re_isub_def}}
 \end{equation}
 %
 Rearranging gives
@@ -428,7 +428,7 @@ $\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and
   Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; .
 \end{equation}
 %
-Substituting Eq.~($\ref{eq:Sdot}$) and rearranging gives
+Substituting Eq.~($\ref{eq:Sdot}$) for $\Sdot$ and rearranging gives
 
 \begin{equation}
   Re_{isub} = \frac{\frac{\rasub{C}_o}{\rorig{C}_o} - 1}{\etaratiostacked - 1} \; 
@@ -442,40 +442,12 @@ developing both approximate and CES models of determining
 indirect substitution rebound.
 
 
-%..............................
-\paragraph{Exogenous $p_o$ assumption}
-\label{sec:exogenous_p_o}
-%..............................
-
-We assume a basket of other goods purchased in the economy,
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
-such that the average price of all other goods purchased in the economy~($p_o$) is given by
-
-\begin{equation}
-  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
-\end{equation}
-%
-Then, the expenditure rate of other purchases in the economy can be given as
-
-\begin{equation}
-  \rorig{C}_o = \orig{p}_o \rorig{q}_o \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
-\end{equation}
-%
-Assuming that the average price is unchanged across the substitution effect,
-such that $\asub{p}_o = \orig{p}_o$,
-the preceding two equations can be solved for prices ($\orig{p}_o$ and $\asub{p}_o$)
-and set equal to find
-
-\begin{equation} \label{eq:qo_Co_equality}
-  \frac{\rasub{C}_o}{\rorig{C}_o} 
-      = \frac{\rasub{q}_o}{\rorig{q}_o} \; .
-\end{equation}
+Determining the post-substitution effect conditions
+requires reference to a consumer utility model.
+We first show an approximate model, often used in the literature. 
+Later, we use a constant elasticity of substitution (CES)
+utility model. 
+The CES model is used for all calculations and graphs in this paper.
 
 
 %..............................
@@ -556,7 +528,8 @@ efficiency, yielding
 \end{equation}
 
 Assuming that the average price is unchanged across the substitution effect
-such that $\asub{p}_o = \raempl{p}_o = \orig{p}_o$,
+such that $\asub{p}_o = \raempl{p}_o = \orig{p}_o$
+(Appendix~\ref{sec:exogenous_p_o}),
 and noting that $\rbsub{q}_s = \rorig{q}_s$ and $\rbsub{C}_o = \rorig{C}_o$,
 we can write
 
@@ -591,7 +564,7 @@ reduce energy takeback by direct substitution effects.
 
 
 %..............................
-\paragraph{Exact (CES) utility model}
+\paragraph{CES utility model}
 \label{sec:Resub_exact_method}
 %..............................
 
