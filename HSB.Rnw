@@ -1396,6 +1396,19 @@ via the CES utility model.
   Re_{dsub} = \RedsubCES{}
 \end{equation}
 
+Eq.~(\ref{eq:C_o_solution}) can be substituted directly
+into Eq.~(\ref{eq:Re_isub_prelim})
+to obtain an expression for direct substitution rebound ($Re_{isub}$)
+via the CES utility model.
+
+\begin{equation} \label{eq:Re_isub_CES}
+  Re_{isub} = \ReisubCES{}
+\end{equation}
+
+See Appendix~\ref{sec:Resub_exact_method} for details
+of the derivations of Eqs.~(\ref{eq:Re_dsub_CES}) and~(\ref{eq:Re_isub_CES}).
+
+
 
 %------------------------------
 \subsubsection{\Inceffect}
@@ -1526,11 +1539,9 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqnexact{} \; ,
+  Re_{dinc} = \Redinceqnexact{} \; .
 \end{equation}
 %
-where $\frac{\rasub{q}_s}{\rorig{q}_s}$
-is given by Eq.~(\ref{eq:q_s_solution}).
 If there is no net income after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 See Appendix~\ref{sec:Re_inc} for details of the derivation
@@ -1580,7 +1591,6 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqnexact{} \; ,
 \end{equation}
 %
-where $\frac{\rasub{C}_o}{\rorig{C}_o}$ is given by Eq.~(\ref{eq:C_o_solution}).
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
 

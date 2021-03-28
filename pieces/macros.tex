@@ -279,6 +279,29 @@ bottom=2pt}
                           ^{-\eqops} - 1}{\etaratiostacked - 1} \; 
                           \etaratiostacked \; 
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+                          
+% CES utility equation
+\newcommand{\cesutility}{\left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
+        + (1-\fCs) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}}
+        
+% Equation for q_s_hat/q_s_orig
+\newcommand{\qssolution}{\left\{ \fCs + (1-\fCs)
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}}
+
+% Equation for C_o_hat/C_o_orig
+\newcommand{\Cosolution}{\left[ \left( 1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
+          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right)^{-1}  \right] 
+                                                ^{1/\rho}}
+
+% Equation for Re_dsub for the CES utility model
+\newcommand{\RedsubCES}{\frac{\qssolution{} - 1}{\etaratiostacked{} - 1}}
+
+% Equation for Re_isub for the CES utility model
+\newcommand{\ReisubCES}{\frac{\Cosolution{} - 1}{\etaratiostacked{} - 1}
+                         \etaratiostacked \; 
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+
 
 % Equation for Re_dinc, approximate method
 \newcommand{\Redinceqnapprox}{\frac{ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1}
@@ -286,7 +309,7 @@ bottom=2pt}
 
 % Equation for Re_dinc, exact method
 \newcommand{\Redinceqnexact}{\frac{ \left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right) ^{\eqsM} - 1}
-              { \etaratiostacked - 1 } \left( \frac{\rasub{q}_s}{\rorig{q}_s} \right) }
+              { \etaratiostacked - 1 } \qssolution{} }
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
@@ -297,10 +320,17 @@ bottom=2pt}
               \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_iinc, exact method
+% \newcommand{\Reiinceqnexact}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+%               \left( \etaratiostacked \right)
+%               \left( \frac{\rasub{C}_o}{\rorig{C}_o} \right) 
+%               \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+
 \newcommand{\Reiinceqnexact}{\frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
               \left( \etaratiostacked \right)
-              \left( \frac{\rasub{C}_o}{\rorig{C}_o} \right) 
-              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
+              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
+              \Cosolution{}}
+
+
 
 % Equation for Re_d (total direct rebound)
 \newcommand{\Redeqn}{\frac{ \left( \etaratiostacked \right)^{-\eqsps}
@@ -328,19 +358,6 @@ bottom=2pt}
 \newcommand{\effinceqn}{\Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} 
                         - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o}
                         
-% CES utility equation
-\newcommand{\cesutility}{\left[ \fCs \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^\rho 
-        + (1-\fCs) \left( \frac{\rate{C}_o}{\rbempl{C}_o} \right)^\rho  \right]^{(1/\rho)}}
-
-\newcommand{\qssolution}{\left\{ \fCs + (1-\fCs)
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
-                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}}
-
-\newcommand{\Cosolution}{\left\{ \left[ 1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right]^{-1}  \right\} 
-                                                ^{1/\rho}}
-
-\newcommand{\RedsubCES}{\frac{\qssolution{} - 1}{\etaratiostacked{} - 1}}
 
 
 

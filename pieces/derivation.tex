@@ -662,11 +662,11 @@ into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
 to obtain
 
 \begin{equation}
-  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-\fCs} \right) 
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left( \left( \frac{1}{1-\fCs} \right) 
                                      - \left( \frac{\fCs}{1-\fCs} \right)   
               \left\{ \fCs + (1-\fCs)
                   \left[ \left( \frac{1-\fCs}{\fCs} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
-                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
+                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right) ^{1/\rho} \; .
 \end{equation}
 
 Simplifying gives
@@ -675,16 +675,13 @@ Simplifying gives
   \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; . \tag{\ref{eq:C_o_solution}}
 \end{equation}
 
-
-
 Eq.~(\ref{eq:C_o_solution}) can be substituted into Eq.~(\ref{eq:Re_isub_prelim})
 to obtain an expression for indirect substitution rebound ($Re_{isub}$)
 via the CES utility model.
 
-\begin{equation} \label{eq:Re_isub_CES}
-  Re_{isub} = 
+\begin{equation}
+  Re_{isub} = \ReisubCES{} \tag{\ref{eq:Re_isub_CES}}
 \end{equation}
-%
 
 
 %------------------------------
@@ -863,16 +860,15 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
                   \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Eliminating terms and recognizing that 
-$\rorig{q}_s = \raempl{q}_s$ gives
+Eliminating terms, recognizing that 
+$\rorig{q}_s = \raempl{q}_s$, and substituting Eq.~(\ref{eq:q_s_solution}), 
+which assumes the CES utility model,
+gives
 
 \begin{equation} 
   Re_{dinc} = \Redinceqnexact{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
 %
-Eq.~(\ref{eq:q_s_solution}) 
-can be substituted into Eq.~(\ref{eq:Re_dinc})
-to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 
@@ -919,16 +915,26 @@ and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
               \rbinc{C}_o I_E}{\Sdoteqn} \; .
 \end{equation}
 %
-Sutstituting $\frac{\raempl{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\raempl{C}_o$ and 
-recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final form 
+Sutstituting $\frac{\rasub{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\rasub{C}_o$,  
+recognizing that $\rbsub{C}_o = \rbempl{C}_o$, and simplifying gives 
+
+\begin{equation}
+  Re_{iinc} = \frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+              \left( \etaratiostacked \right)
+              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
+              \left( \frac{\rasub{C}_o}{\rorig{C}_o} \right) \; .
+\end{equation}
+
+Substituting Eq.~(\ref{eq:C_o_solution}) 
+for $\rasub{C}_o / \rorig{C}_o$, 
+thereby assuming the CES utility model,
+gives the final form 
 of the indirect income rebound expression:
 
 \begin{equation}
   Re_{iinc} = \Reiinceqnexact{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
 %
-Eq.~(\ref{eq:C_o_solution}) can be substituted into \ref{eq:Re_iinc}
-to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
 
@@ -979,7 +985,7 @@ gives
 \label{sec:total_rebound}
 %------------------------------
 
-The sum of all rebound effects is 
+The sum of four rebound effects is 
 
 \begin{equation}
   Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re_{\productivity} \; .
@@ -1023,13 +1029,13 @@ Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values,
   
   \item $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
   
-  \item $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim}) and (\ref{eq:q_s_solution})),
+  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub_CES})),
   
-  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_prelim}) and (\ref{eq:C_o_solution})), 
+  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_CES})), 
   
-  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc}) and (\ref{eq:q_s_solution})), and
+  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc})), and
   
-  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc}) and (\ref{eq:C_o_solution})),
+  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc})),
 
 \end{itemize}
 %
