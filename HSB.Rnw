@@ -1436,9 +1436,9 @@ This constraint can be seen in
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
 where the post-income-effect point ($-$) returns to the original expenditure line.
 See Appendix~\ref{sec:proof_income_elasticities}
-for proof that the income preference equations below
+for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
-satisfy this constraint.
+satisfy the first constraint.
 
 The second constraint is that net income should be re-spent on only 
 %
@@ -1461,7 +1461,8 @@ Thus,
 although spending on both the energy service and other goods increases across the income effect,
 the proportion of spending on the energy service and other goods
 should not change across the income effect.
-This constraint is also satisfied by construction below. 
+This constraint is also satisfied by construction below, 
+particularly via an effective income ($\Mdothatprime$). 
 Proof that this constraint is satisfied can be seen in 
 preference path graphs
 where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
@@ -1489,19 +1490,35 @@ leads to direct income effect rebound ($Re_{dinc}$).
 The ratio of rates of energy service consumed across the income effect is given by
 
 \begin{equation} \label{eq:qsrat_eqsM}
-  \incprefseqn \; ,
-\end{equation}
-%
-where effective income ($\Mdothatprime$) is given by 
-
-\begin{equation} \label{eq:effective_income}
-  \effinceqn{} \; .
+  \incprefseqn \; .
 \end{equation}
 %
 Homotheticity means that $\eqsM = 1$.
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+
+Effective income ($\Mdothatprime$) is given by 
+
+\begin{equation} \label{eq:effective_income}
+  \effinceqn{} \; .
+\end{equation}
+%
+For the purposes of the income effect, 
+the effective income equation (Eq.~(\ref{eq:effective_income})) 
+adjusts income ($\rorig{M}$) to account for 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
+        gross income ($\rate{G}$)
+        from the emplacement effect and
+  
+  \item expenditure adjustments 
+        ($p_E \Delta \rasub{E}_s$ and $\Delta \rasub{C}_o$)
+        from the substitution effect. 
+    
+\end{enumerate*}
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
@@ -1520,9 +1537,6 @@ where $\frac{\rasub{q}_s}{\rorig{q}_s}$
 is given by Eq.~(\ref{eq:q_s_solution}).
 If there is no net income after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities gets stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
-direct income rebound~($Re_{dinc}$) grows.
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
 
