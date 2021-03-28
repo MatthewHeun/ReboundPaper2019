@@ -1224,7 +1224,7 @@ Neoclassical consumer theory distinguishes between
 %
 This section develops mathematical expressions 
 for substitution effect rebound ($Re_{sub}$).
-(The next section addresses income effect rebound, $Re_{isub}$.)
+(The next section addresses income effect rebound, $Re_{inc}$.)
 The substitution effect alters compensated demand, 
 the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
@@ -1291,10 +1291,37 @@ The impact of the substitution effect on energy consumption rates and expenditur
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 
-The model for utility defines indifference curves on the preferences path graph
+An approximate method
+is often used in the literature
+(e.g., see \citet{Borenstein:2015aa})
+for determining 
+the post-substitution effect point, and therefore $Re_{dsub}$ and $Re_{isub}$.
+The approximate method assumes (incorrectly) that 
+the energy service price elasticity of energy service consumption ($\eqsps$) and
+the energy service price elasticity of other goods consumption ($\eqops$)
+are constant along an indifference curve.
+These assumptions are approximations that hold only 
+for infinitesimally small energy service price changes 
+($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
+Emplacing a more-efficient energy conversion device
+can cause the energy service price to change by a large amount
+($\aempl{p}_s <\!\!< \orig{p}_s$),
+thereby violating the assumptions of the approximate method. 
+Appendix~\ref{sec:Re_sub} contains details of the approximate method.
+
+Here, we present an exact method that allows 
+the energy service price elasticity of energy service consumption ($\eqsps$) and
+the energy service price elasticity of other goods consumption ($\eqops$)
+to vary along an indifference curve.
+Our only restriction is that the elasticity of substitution ($\sigma$)
+between consumption of the energy service ($\rate{q}_s$)
+and consumption of other goods ($\rate{C}_o$)
+remain constant along an indifference curve.
 (Fig.~\ref{fig:ExamplePrefsPathGraph}).
-We employ a constant elasticity of substitution utility function 
-to describe the device owner's behavior:
+Thus, the exact method utilizes 
+a constant elasticity of substitution (CES) utility model.
+The utility model describes the device owner's behavior
+as follows:
 
 \begin{equation} \label{eq:ces_utility}
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
@@ -1307,9 +1334,9 @@ the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods and services ($\rate{C}_o$).
 The share parameter ($\fCs$) is taken from the orignal (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the elasticity of substitution ($\sigma$) 
-as $\rho = \frac{\sigma - 1}{\sigma}$.
+as $\rho \equiv \frac{\sigma - 1}{\sigma}$.
 See Appendix~\ref{sec:utility_and_elasticities}
-for further details of the utility model.
+for further details of the CES utility model.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
@@ -1361,14 +1388,17 @@ and
                                                 ^{1/\rho} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Resub_exact_method} for details.
+See Appendix~\ref{sec:Resub_exact_method} for details
+of the derivations of Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution}).
 
-Values calculated by Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution})
+Values calculated by 
+the post-substitution effect equations
+(Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution}))
 can be used directly in 
-Eqs.~(\ref{eq:Re_dsub_prelim}) and~(\ref{eq:Re_isub_prelim})
+the substitution effect rebound equations
+(Eqs.~(\ref{eq:Re_dsub_prelim}) and~(\ref{eq:Re_isub_prelim}))
 to estimate direct and indirect substitution rebound effects.
-See Appendix~\ref{sec:Re_sub} for further details
-and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
+See Appendix~\ref{sec:Re_sub} for details and derivations.
 
 
 %------------------------------
