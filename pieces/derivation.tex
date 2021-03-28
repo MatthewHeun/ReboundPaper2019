@@ -64,6 +64,31 @@ one for each rebound effect in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
 each informs the other.
 
+Several terms in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
+are cancelled to 0, e.g., $\cancelto{0}{\Delta \raempl{C}_o}$. 
+Most cancellations can be traced back to Table~\ref{tab:analysis_assumptions}.
+Table~\ref{tab:cancellations} highlights those assumptions.
+
+\begin{table}
+\centering % Centered table
+\caption{Sources for cancellations in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}.}
+\begin{tabular}{r l}
+  \toprule
+  Cancellation & Source or justification \\
+  \midrule
+  $\cancelto{0}{\Delta \raempl{C}_o}$ & Table~\ref{tab:analysis_assumptions}: 
+                                $\rorig{C}_o = \raempl{C}_o$ ($\rate{C}_o$ unchanged across emplacement effect.) \\
+  $\cancelto{0}{\rorig{N}}$ & Table~\ref{tab:analysis_assumptions}: 
+                                $0 = \rorig{N}$ (Net income is zero prior to the EEU.) \\
+  $\cancelto{0}{\Delta \rasub{E}_{emb}}$ & Table~\ref{tab:analysis_assumptions}: 
+                                $\rbsub{E}_{emb} = \rasub{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across substitution effect.) \\
+  \bottomrule
+\end{tabular}
+\label{tab:cancellations}
+\end{table}
+
+
+
 % Derivation tables
 
 \input{pieces/deriv1_emplacement_effect.tex}

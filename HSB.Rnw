@@ -1050,7 +1050,7 @@ due to the direct emplacement effect
 is given by
 
 \begin{equation} \label{eq:S_dot_def}
-  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
+  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s = - \Delta \raempl{E}_s \; .
 \end{equation}
 %
 Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
