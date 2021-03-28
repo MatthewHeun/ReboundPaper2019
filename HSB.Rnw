@@ -546,7 +546,7 @@ An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\aprod{\eta} > \bempl{\eta}$,
 typically, but not always,
-at an increased financial cost rate to
+at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
@@ -569,9 +569,11 @@ The budget constraint
 for the device owner is
 
 \begin{equation} \label{eq:budget_constraint}
-  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} \; .
+  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} + \rorig{N} \; ,
 \end{equation}
-
+%
+where 
+original net income ($\rorig{N}$) is zero.
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
@@ -655,6 +657,7 @@ is the product of final-to-services efficiency~($\eta$) and
 the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination
 (the examples in Section~\ref{sec:examples}) are shown
+beneath each equation.
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -670,14 +673,16 @@ Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to
   \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
 \end{align}
 %
-Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
+Third, expenditure rates~($\rate{C}$) are the product 
+of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 %
 \begin{align}
   \rate{C} &= p_E \rate{E}_s \\
   \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
 \end{align}
 %
-Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+Fourth, energy rates~($\rate{E}$) are the product 
+of expenditures rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
 %
 \begin{align}
   \rate{E} &= \rate{C} I_E \\
@@ -1030,10 +1035,10 @@ The indirect effects of EEU emplacement are
   \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
   
-  \item changes in the capital cost rate ($\Delta \raempl{C}_{cap}$)
+  \item changes in the capital expenditure rate ($\Delta \raempl{C}_{cap}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleCostPathGraph}), and 
         
-  \item changes in the maintenance and disposal energy and cost rates 
+  \item changes in the maintenance and disposal energy and expenditure rates 
         ($\Delta \raempl{E}_{\md}$ and $\Delta \raempl{C}_{\md}$)
         (segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
     
@@ -1101,13 +1106,13 @@ In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}),
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has a lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and a lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
+and a lesser maintenance and disposal expenditure rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
 than the original device.
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
-consistent with a lower capital cost rate
+consistent with a lower capital expenditure rate
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
-a reduced maintenance and disposal cost rate
+a reduced maintenance and disposal expenditure rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
@@ -1177,7 +1182,7 @@ Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
-to form cost rates such that 
+to form expenditure rates such that 
 $\rbempl{C}_{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
 $\raempl{C}_{\md} = \raempl{C}_m + \aempl{C}_d/\aempl{t}_{\life}$.
@@ -1743,7 +1748,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
-   Capital cost rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs \\
+   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
                                                     &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
@@ -1762,7 +1767,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                     &           &          & manufacture. Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
-  Maintenance and disposal cost rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
+  Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
                                                     &           &          & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
                                                     &           &          & Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
@@ -2298,7 +2303,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Lamp efficacy                   & \Sexpr{efficacy_worse}      & \Sexpr{efficacy_better}     & Incandescent: 530 lm output / 60 W energy input. \\
   $\bempl{\eta}$, $\aprod{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
   \midrule
-   Capital cost rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
+   Capital expenditure rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb}, \\
                                                     &           &          & and \$1.21 for LED lamp from \\
                                                     &           &          & \citet{Home_Depot:2020_LED_bulb}. \\
@@ -2326,7 +2331,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
                                                     &           &          & $\times$ 365 days/year $\times$ 10 years = 4,926,405 lumen-hrs. \\
                                                     &           &          & Thus LCA energy / lamp =  132 MJ/5 $\times$ 4.9264/20 = 6.5 MJ. \\ 
  \midrule
-  Maintenance and disposal cost rate  & \Sexpr{C_dot_md_orig_lamp_char}      & \Sexpr{C_dot_md_star_lamp_char}     & Assumed negligible. \\
+  Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_lamp_char}      & \Sexpr{C_dot_md_star_lamp_char}     & Assumed negligible. \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
   \bottomrule
 \end{tabular}
@@ -2868,7 +2873,7 @@ most sensitive to changes in post-EEU efficiency ($\aprod{\eta}$),
 A limitation of the efficiency sensitivity analysis is that 
 post-EEU efficiency ($\aprod{\eta}$)
 is unlikely to be independent of other factors, 
-such as capital cost rate ($\raempl{C}_{cap}$).
+such as capital expenditure rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
 
 
@@ -3011,8 +3016,8 @@ energy price is not independent of other parameters.
 Indeed, other rebound parameters
 would change along with energy price
 (especially if moving from one country to another),
-including capital cost rate ($\raempl{C}_{cap}$), 
-maintenance and disposal cost rate ($\raempl{C}_{\md}$),
+including capital expenditure rate ($\raempl{C}_{cap}$), 
+maintenance and disposal expenditure rate ($\raempl{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rates ($\rbempl{q}_s$).
 
