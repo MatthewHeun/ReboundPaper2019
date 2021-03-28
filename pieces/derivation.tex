@@ -64,6 +64,32 @@ one for each rebound effect in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
 each informs the other.
 
+Several terms in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
+are cancelled to 0, e.g., $\cancelto{0}{\Delta \raempl{C}_o}$. 
+Most cancellations can be traced back to Table~\ref{tab:analysis_assumptions}.
+Table~\ref{tab:cancellations} highlights those assumptions.
+
+\begin{table}
+\centering % Centered table
+\caption{Sources for cancellations in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}.}
+\begin{tabular}{r l}
+  \toprule
+  Cancellation & Table~\ref{tab:analysis_assumptions} justification \\
+  \midrule
+  $\cancelto{0}{\Delta \raempl{C}_o}$    & $\rorig{C}_o = \raempl{C}_o$ ($\rate{C}_o$ unchanged across emplacement effect.) \\
+  $\cancelto{0}{\rorig{N}}$              & $0 = \rorig{N}$ (Net income is zero prior to the EEU.) \\
+  $\cancelto{0}{\Delta \rasub{E}_{emb}}$ & $\rbsub{E}_{emb} = \rasub{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across substitution effect.) \\
+  $\cancelto{0}{\Delta \rasub{C}_{\md}}$ & $\rbsub{C}_{\md} = \rasub{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across substitution effect.) \\
+  $\cancelto{0}{\Delta \rainc{E}_{emb}}$ & $\rbinc{E}_{emb} = \rainc{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across income effect.) \\
+  $\cancelto{0}{\Delta \rainc{C}_{\md}}$ & $\rbinc{C}_{\md} = \rainc{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across income effect.) \\
+  $\cancelto{0}{\rainc{N}}$              & $\rainc{N} = 0$ (Residual net income is spent in the income effect.) \\
+  \bottomrule
+\end{tabular}
+\label{tab:cancellations}
+\end{table}
+
+
+
 % Derivation tables
 
 \input{pieces/deriv1_emplacement_effect.tex}
@@ -144,7 +170,7 @@ The emplacement effect accounts for performance of the EEU only.
 No behavior changes occur.
 The direct emplacement effect of the EEU is device energy savings and energy cost savings.
 The indirect emplacement effects of the EEU produce changes in the embodied energy rate and
-the maintenance and disposal cost rates.
+the maintenance and disposal expenditure rates.
 By definition, the direct emplacement effect has no rebound. 
 However, indirect emplacement effects may cause energy rebound.
 Both direct and indirect emplacement effects are discussed below.
@@ -257,9 +283,9 @@ Maintenance expenditures are typically modeled as a per-year expense,
 a rate (e.g., $\rbempl{C}_m$).
 Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred 
 at the end of the useful life of the energy conversion device.
-Like embodied energy, we spread disposal costs across the lifetime 
+Like embodied energy, we spread disposal expenditures across the lifetime 
 of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
-to form cost rates such that 
+to form expenditure rates such that 
 $\rbempl{C}_{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
 $\raempl{C}_{\md} = \raempl{C}_m + \aempl{C}_d/\aempl{t}_{\life}$.
@@ -298,7 +324,8 @@ Assuming that conditions after the emplacement effect ($*$) are known,
 both the 
 rate of energy service consumption ($\rasub{q}_s$) and
 the rate of other goods consumption ($\rasub{C}_o$) 
-must be determined as a result of the substitution effect.
+must be determined as a result of the substitution effect
+(the $\wedge$ point).
 
 The EEU's energy efficiency increase
 ($\aprod{\eta} > \bempl{\eta}$)
@@ -317,8 +344,7 @@ is captured by indirect substitution rebound~($Re_{isub}$).
 
 We begin by deriving an expression for direct and indirect 
 substitution effect rebound ($Re_{dsub}$ and $Re_{isub}$, respectively).
-Thereafter, we note an assumption of exogenous pries of other goods ($p_o$)
-and develop an approximate model and a CES utility model for determining the 
+Thereafter, we develop an approximate model and a CES utility model for determining the 
 post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 
@@ -329,8 +355,8 @@ post-substitution point ($\rasub{q}_s$ and $\rasub{C}_o$).
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation} \label{eq:Re_dsub_def}
-  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; .
+\begin{equation}
+  Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} = \frac{\rasub{E}_s - \rbsub{E}_s}{\Sdot} \; . \tag{\ref{eq:Re_dsub_def}}
 \end{equation}
 %
 Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
@@ -385,8 +411,8 @@ direct substitution rebound.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation} \label{eq:Re_isub_def}
-  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; .
+\begin{equation}
+  Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} = \frac{(\rasub{C}_o - \rbsub{C}_{o}) I_E}{\Sdot} \; . \tag{\ref{eq:Re_isub_def}}
 \end{equation}
 %
 Rearranging gives
@@ -402,7 +428,7 @@ $\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and
   Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; .
 \end{equation}
 %
-Substituting Eq.~($\ref{eq:Sdot}$) and rearranging gives
+Substituting Eq.~($\ref{eq:Sdot}$) for $\Sdot$ and rearranging gives
 
 \begin{equation}
   Re_{isub} = \frac{\frac{\rasub{C}_o}{\rorig{C}_o} - 1}{\etaratiostacked - 1} \; 
@@ -416,44 +442,16 @@ developing both approximate and CES models of determining
 indirect substitution rebound.
 
 
-%..............................
-\paragraph{Exogenous $p_o$ assumption}
-\label{sec:exogenous_p_o}
-%..............................
-
-We assume a basket of other goods purchased in the economy,
-each ($i$) with its own price ($p_{o,i}$) and rate of consumption ($\rate{q}_{o,i}$),
-such that the average price of all other goods purchased in the economy~($p_o$) is given by
-
-\begin{equation}
-  p_o = \frac{\sum\limits_i \bempl{p}_{o,i} \rbempl{q}_{o,i}}{\sum\limits_i \rbempl{q}_{o,i}} \; .
-\end{equation}
-%
-Then, the cost rate of other purchases in the economy can be given as
-
-\begin{equation}
-  \rorig{C}_o = \orig{p}_o \rorig{q}_o \; ,
-\end{equation}
-%
-and
-
-\begin{equation}
-  \rasub{C}_o = \asub{p}_o \rasub{q}_o \; .
-\end{equation}
-%
-Assuming that the average price is unchanged across the substitution effect,
-such that $\asub{p}_o = \orig{p}_o$,
-the preceding two equations can be solved for prices ($\orig{p}_o$ and $\asub{p}_o$)
-and set equal to find
-
-\begin{equation} \label{eq:qo_Co_equality}
-  \frac{\rasub{C}_o}{\rorig{C}_o} 
-      = \frac{\rasub{q}_o}{\rorig{q}_o} \; .
-\end{equation}
+Determining the post-substitution effect conditions
+requires reference to a consumer utility model.
+We first show an approximate model, often used in the literature. 
+Later, we use a constant elasticity of substitution (CES)
+utility model. 
+The CES model is used for all calculations and graphs in this paper.
 
 
 %..............................
-\paragraph{Approximate model} 
+\paragraph{Approximate utility model} 
 \label{sec:Resub_approximate_method}
 %..............................
 
@@ -467,7 +465,7 @@ such that
 \end{equation}
 %
 Note that the energy service price elasticity of energy service consumption ($\eqsps$)
-is (incorrectly) assumed constant along an indifference curve
+is assumed constant along an indifference curve
 in the approximate model. 
 A negative value for the service price elasticity of energy service consumption
 is expected ($\eqsps < 0$),
@@ -509,7 +507,7 @@ I.e., the direct substitution effect alone
 can never cause backfire. 
 
 To quantify the substitution effect on other purchases in the approximate model,
-we introduce another elasticity:
+we introduce another elasticity,
 the energy service price elasticity of other goods consumption~($\eqops$), 
 such that
 
@@ -530,7 +528,8 @@ efficiency, yielding
 \end{equation}
 
 Assuming that the average price is unchanged across the substitution effect
-such that $\asub{p}_o = \raempl{p}_o = \orig{p}_o$,
+such that $\asub{p}_o = \raempl{p}_o = \orig{p}_o$
+(Appendix~\ref{sec:exogenous_p_o}),
 and noting that $\rbsub{q}_s = \rorig{q}_s$ and $\rbsub{C}_o = \rorig{C}_o$,
 we can write
 
@@ -544,29 +543,16 @@ Note that Eq.~(\ref{eq:Cdot_o_ratio})
 can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
-\begin{equation}
+\begin{equation} \label{eq:C_dot_hat_o_eqn}
   \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
 \end{equation}
 
-Substituting $\rbsub{C}_o = \rbempl{C}_o$ into Eq.~\ref{eq:Cdot_o_ratio} and 
-the result into Eq.~(\ref{eq:Re_isub_prelim}) gives
+Substituting Eq.~(\ref{eq:C_dot_hat_o_eqn}) into Eq.~(\ref{eq:Re_isub_prelim})
+gives the expression for 
+indirect substitution rebound for the approximate utility model.
 
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
-\end{equation}
-%
-Substituting Eq.~\ref{eq:Sdot} for $\Sdot$ gives
-
-\begin{equation}
-  Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
-                  ^{-\eqops} - 1  \right] \rbsub{C}_o I_E}
-                  {\Sdoteqn} \; .
-\end{equation}
-%
-Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
-
-\begin{equation}
-  Re_{isub} = \Reisubeqn{} \; .
+  Re_{isub} = \Reisubeqn{}
 \end{equation}
 
 Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
@@ -578,11 +564,11 @@ reduce energy takeback by direct substitution effects.
 
 
 %..............................
-\paragraph{CES model}
+\paragraph{CES utility model}
 \label{sec:Resub_exact_method}
 %..............................
 
-The CES utility model assumes (incorrectly) that 
+The approximate utility model assumes that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
@@ -636,7 +622,7 @@ Second, the equation of the \starstar{} expenditure line is
             {\rbempl{C}_o}
         \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
       + \frac{1}{\rbempl{C}_o} 
-        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} - \rate{G}) \; .
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} - \rate{G}) \; .
 \end{equation}
 
 To find the rate of energy service consumption after the substitution effect
@@ -656,16 +642,17 @@ at the original utility rate of $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_in
 Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs) 
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
-                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
-                                                        \tag{\ref{eq:q_s_solution}}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \qssolution{} \; . \tag{\ref{eq:q_s_solution}}
 \end{equation}
 
 Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
 to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
 via the CES utility model.
+
+\begin{equation}
+  Re_{dsub} = \RedsubCES{} \tag{\ref{eq:Re_dsub_CES}}
+\end{equation}
 
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
 can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
@@ -674,25 +661,26 @@ into the functional form of the utility model (Eq.~(\ref{eq:utility_Co_form}))
 to obtain
 
 \begin{equation}
-  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-\fCs} \right) 
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left( \left( \frac{1}{1-\fCs} \right) 
                                      - \left( \frac{\fCs}{1-\fCs} \right)   
               \left\{ \fCs + (1-\fCs)
                   \left[ \left( \frac{1-\fCs}{\fCs} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
-                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
+                      ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right) ^{1/\rho} \; .
 \end{equation}
 
 Simplifying gives
 
 \begin{equation}
-  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
-                                                ^{1/\rho} \; .
-                                            \tag{\ref{eq:C_o_solution}}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; . \tag{\ref{eq:C_o_solution}}
 \end{equation}
 
 Eq.~(\ref{eq:C_o_solution}) can be substituted into Eq.~(\ref{eq:Re_isub_prelim})
-to obtain an estimate for indirect substitution rebound ($Re_{isub}$)
+to obtain an expression for indirect substitution rebound ($Re_{isub}$)
 via the CES utility model.
+
+\begin{equation}
+  Re_{isub} = \ReisubCES{} \tag{\ref{eq:Re_isub_CES}}
+\end{equation}
 
 
 %------------------------------
@@ -871,16 +859,15 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) for $\rbinc{E}_s$ gives
                   \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
-Eliminating terms and recognizing that 
-$\rorig{q}_s = \raempl{q}_s$ gives
+Eliminating terms, recognizing that 
+$\rorig{q}_s = \raempl{q}_s$, and substituting Eq.~(\ref{eq:q_s_solution}), 
+which assumes the CES utility model,
+gives
 
 \begin{equation} 
   Re_{dinc} = \Redinceqnexact{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
 %
-Eq.~(\ref{eq:q_s_solution}) 
-can be substituted into Eq.~(\ref{eq:Re_dinc})
-to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 
@@ -927,16 +914,26 @@ and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
               \rbinc{C}_o I_E}{\Sdoteqn} \; .
 \end{equation}
 %
-Sutstituting $\frac{\raempl{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\raempl{C}_o$ and 
-recognizing that $\rbsub{C}_o = \rbempl{C}_o$ and simplifying gives the final form 
+Sutstituting $\frac{\rasub{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\rasub{C}_o$,  
+recognizing that $\rbsub{C}_o = \rbempl{C}_o$, and simplifying gives 
+
+\begin{equation}
+  Re_{iinc} = \frac{\left( 1 + \frac{\rbinc{N}}{\Mdothatprime} \right)^{\eqoM} - 1}{\etaratiostacked - 1} 
+              \left( \etaratiostacked \right)
+              \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}
+              \left( \frac{\rasub{C}_o}{\rorig{C}_o} \right) \; .
+\end{equation}
+
+Substituting Eq.~(\ref{eq:C_o_solution}) 
+for $\rasub{C}_o / \rorig{C}_o$, 
+thereby assuming the CES utility model,
+gives the final form 
 of the indirect income rebound expression:
 
 \begin{equation}
   Re_{iinc} = \Reiinceqnexact{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
 %
-Eq.~(\ref{eq:C_o_solution}) can be substituted into \ref{eq:Re_iinc}
-to complete the expression.
 If there is no net income ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
 
@@ -987,7 +984,7 @@ gives
 \label{sec:total_rebound}
 %------------------------------
 
-The sum of all rebound effects is 
+The sum of four rebound effects is 
 
 \begin{equation}
   Re_{sum} = Re_{empl} + Re_{sub} + Re_{inc} + Re_{\productivity} \; .
@@ -1031,13 +1028,13 @@ Eq.~(\ref{eq:Re_tot}) shows that determining seven rebound values,
   
   \item $Re_{\md}$ (Eq.~(\ref{eq:Re_md})),
   
-  \item $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim}) and (\ref{eq:q_s_solution})),
+  \item $Re_{dsub}$ (Eq.~(\ref{eq:Re_dsub_CES})),
   
-  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_prelim}) and (\ref{eq:C_o_solution})), 
+  \item $Re_{isub}$ (Eqs.~(\ref{eq:Re_isub_CES})), 
   
-  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc}) and (\ref{eq:q_s_solution})), and
+  \item $Re_{dinc}$ (Eqs.~(\ref{eq:Re_dinc})), and
   
-  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc}) and (\ref{eq:C_o_solution})),
+  \item $Re_{iinc}$ (Eqs.~(\ref{eq:Re_iinc})),
 
 \end{itemize}
 %

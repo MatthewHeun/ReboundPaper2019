@@ -492,12 +492,12 @@ one that
 
 **** Be sure we hit all of need, aim, contributions, and structure. ****
 
-The \textit{need} for
+The \emph{need} for
 a comprehensive, mathematically-rigorous rebound analysis framework 
 is amply demonstrated by the preceding discussion.
-The \textit{aim} of this paper is to fill the gap in the literature identified above
+The \emph{aim} of this paper is to fill the gap in the literature identified above
 by developing and demonstrating a comprehensive and rigorous rebound framework.
-The \textit{contributions} of this paper are
+The \emph{contributions} of this paper are
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -521,7 +521,7 @@ The \textit{contributions} of this paper are
         
 \end{enumerate*}
 
-The remainder of this paper is \textit{structured} as follows.
+The remainder of this paper is \emph{structured} as follows.
 Section~\ref{sec:framework} describes the comprehensive analytical framework.
 Section~\ref{sec:examples} provides two calculation examples, 
 a hybrid car and an LED lamp.
@@ -546,7 +546,7 @@ An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\aprod{\eta} > \bempl{\eta}$,
 typically, but not always,
-at an increased financial cost rate to
+at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
@@ -569,9 +569,11 @@ The budget constraint
 for the device owner is
 
 \begin{equation} \label{eq:budget_constraint}
-  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} \; .
+  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} + \rorig{N} \; ,
 \end{equation}
-
+%
+where 
+original net income ($\rorig{N}$) is zero.
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
@@ -655,6 +657,7 @@ is the product of final-to-services efficiency~($\eta$) and
 the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination
 (the examples in Section~\ref{sec:examples}) are shown
+beneath each equation.
 %
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
@@ -670,14 +673,16 @@ Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to
   \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
 \end{align}
 %
-Third, cost rates~($\rate{C}$) are the product of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
+Third, expenditure rates~($\rate{C}$) are the product 
+of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 %
 \begin{align}
   \rate{C} &= p_E \rate{E}_s \\
   \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
 \end{align}
 %
-Fourth, energy rates~($\rate{E}$) are the product of cost rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+Fourth, energy rates~($\rate{E}$) are the product 
+of expenditures rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
 %
 \begin{align}
   \rate{E} &= \rate{C} I_E \\
@@ -1030,10 +1035,10 @@ The indirect effects of EEU emplacement are
   \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
   
-  \item changes in the capital cost rate ($\Delta \raempl{C}_{cap}$)
+  \item changes in the capital expenditure rate ($\Delta \raempl{C}_{cap}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleCostPathGraph}), and 
         
-  \item changes in the maintenance and disposal energy and cost rates 
+  \item changes in the maintenance and disposal energy and expenditure rates 
         ($\Delta \raempl{E}_{\md}$ and $\Delta \raempl{C}_{\md}$)
         (segments \bstar{} in Figs.~\ref{fig:ExampleEnergyPathGraph} and \ref{fig:ExampleCostPathGraph}).
     
@@ -1045,7 +1050,7 @@ due to the direct emplacement effect
 is given by
 
 \begin{equation} \label{eq:S_dot_def}
-  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s \; .
+  \Sdot \equiv \rbempl{E}_s - \raempl{E}_s = - \Delta \raempl{E}_s \; .
 \end{equation}
 %
 Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
@@ -1101,13 +1106,13 @@ In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}),
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has a lesser
 embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and a lesser maintenance and disposal cost rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
+and a lesser maintenance and disposal expenditure rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
 than the original device.
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative direction,
-consistent with a lower capital cost rate
+consistent with a lower capital expenditure rate
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
-a reduced maintenance and disposal cost rate
+a reduced maintenance and disposal expenditure rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
@@ -1145,7 +1150,8 @@ $\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}_{\life}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$
 and is shown as segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
-The expression for embodied energy rebound is 
+The expression for embodied energy rebound is derived in 
+Appendix~\ref{sec:Re_emb} to be
 
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembeqn{} \; .
@@ -1177,7 +1183,7 @@ Disposal costs (e.g., $\bempl{C}_d$) are one-time expenses incurred
 at the end of the useful life of the energy conversion device.
 Like embodied energy, we spread disposal costs across the lifetime 
 of the original and upgraded devices ($\bempl{t}_{\life}$ and $\aempl{t}_{\life}$, respectively)
-to form cost rates such that 
+to form expenditure rates such that 
 $\rbempl{C}_{\md} = \rbempl{C}_m + \bempl{C}_d/\bempl{t}_{\life}$
 and
 $\raempl{C}_{\md} = \raempl{C}_m + \aempl{C}_d/\aempl{t}_{\life}$.
@@ -1196,7 +1202,7 @@ is given by
   Re_{\md} = \ReOMdeqn{} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Re_OMd} for details.
+See Appendix~\ref{sec:Re_OMd} for details of the derivation.
 
 
 %------------------------------
@@ -1218,7 +1224,7 @@ Neoclassical consumer theory distinguishes between
 %
 This section develops mathematical expressions 
 for substitution effect rebound ($Re_{sub}$).
-(The next section addresses income effect rebound, $Re_{isub}$.)
+(The next section addresses income effect rebound, $Re_{inc}$.)
 The substitution effect alters compensated demand, 
 the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
@@ -1285,10 +1291,37 @@ The impact of the substitution effect on energy consumption rates and expenditur
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 
-The model for utility defines indifference curves on the preferences path graph
-(Fig.~\ref{fig:ExamplePrefsPathGraph}).
-We employ a constant elasticity of substitution utility function 
-to describe the device owner's behavior:
+An approximate method
+is often used in the literature
+(e.g., see \citet{Borenstein:2015aa})
+for determining 
+the post-substitution effect point, and therefore $Re_{dsub}$ and $Re_{isub}$.
+The approximate method assumes that 
+the energy service price elasticity of energy service consumption ($\eqsps$) and
+the energy service price elasticity of other goods consumption ($\eqops$)
+are constant along an indifference curve.
+These assumptions are approximations that hold only 
+for infinitesimally small energy service price changes 
+($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
+Emplacing a more-efficient energy conversion device
+can cause the energy service price to change by a large amount
+($\aempl{p}_s <\!\!< \orig{p}_s$),
+thereby violating the assumptions of the approximate method. 
+Appendix~\ref{sec:Re_sub} contains details of the approximate method.
+
+Here, we present an exact method that allows 
+the energy service price elasticity of energy service consumption ($\eqsps$) and
+the energy service price elasticity of other goods consumption ($\eqops$)
+to vary along an indifference curve.
+Our only restriction is that the elasticity of substitution ($\sigma$)
+between consumption of the energy service ($\rate{q}_s$)
+and consumption of other goods ($\rate{C}_o$)
+remain constant along an indifference curve.
+(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
+Thus, the exact method utilizes 
+a constant elasticity of substitution (CES) utility model.
+The utility model describes the device owner's behavior
+as follows:
 
 \begin{equation} \label{eq:ces_utility}
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
@@ -1301,13 +1334,13 @@ the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods and services ($\rate{C}_o$).
 The share parameter ($\fCs$) is taken from the orignal (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the elasticity of substitution ($\sigma$) 
-as $\rho = \frac{\sigma - 1}{\sigma}$.
+as $\rho \equiv \frac{\sigma - 1}{\sigma}$.
 See Appendix~\ref{sec:utility_and_elasticities}
-for further details of the utility model.
+for further details of the CES utility model.
 
 Direct substitution effect rebound ($Re_{dsub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} \; ,
 \end{equation}
 %
@@ -1321,7 +1354,7 @@ as shown in Appendix~\ref{sec:Redsub_expression}.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
-\begin{equation}
+\begin{equation} \label{eq:Re_isub_def}
   Re_{isub} = \frac{\Delta \rasub{C}_o I_E}{\Sdot} \; ,
 \end{equation}
 %
@@ -1342,27 +1375,39 @@ where its slope is equal to the slope of the
 The results are
 
 \begin{equation} \label{eq:q_s_solution}
-  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs)
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
-                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \qssolution{}
 \end{equation}
 %
 and
 
 \begin{equation} \label{eq:C_o_solution}
-  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\}
-                                                ^{1/\rho} \; .
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Resub_exact_method} for details.
+See Appendix~\ref{sec:Resub_exact_method} for details
+of the derivations of Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution}).
 
-Values calculated by Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution})
-can be used directly in 
-Eqs.~(\ref{eq:Re_dsub_prelim}) and~(\ref{eq:Re_isub_prelim})
-to estimate direct and indirect substitution rebound effects.
-See Appendix~\ref{sec:Re_sub} for further details
-and an approximate method for determining $Re_{dsub}$ and $Re_{isub}$.
+Eq.~(\ref{eq:q_s_solution}) can be substituted directly
+into Eq.~(\ref{eq:Re_dsub_prelim})
+to obtain an expression for direct substitution rebound ($Re_{dsub}$)
+via the CES utility model.
+
+\begin{equation} \label{eq:Re_dsub_CES}
+  Re_{dsub} = \RedsubCES{}
+\end{equation}
+
+Eq.~(\ref{eq:C_o_solution}) can be substituted directly
+into Eq.~(\ref{eq:Re_isub_prelim})
+to obtain an expression for direct substitution rebound ($Re_{isub}$)
+via the CES utility model.
+
+\begin{equation} \label{eq:Re_isub_CES}
+  Re_{isub} = \ReisubCES{}
+\end{equation}
+
+See Appendix~\ref{sec:Resub_exact_method} for details
+of the derivations of Eqs.~(\ref{eq:Re_dsub_CES}) and~(\ref{eq:Re_isub_CES}).
+
 
 
 %------------------------------
@@ -1374,11 +1419,11 @@ The income rate of the device owner is $\rbempl{M}$,
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
-\textit{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
+\emph{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and 
 the substitution effect leave the device owner with
-\textit{net} income ($\rasub{N}$) from the EEU,
+\emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for gross and net income from the 
 emplacement effect ($\rate{G}$) and
@@ -1390,8 +1435,21 @@ income from the EEU
 (segments \hatd{} and \dbar{} in 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
-In this framework, net income ($\rasub{N}$) is completely re-spent and 
-split between 
+In this framework,
+the income effect must satisfy several constraints.
+The first constraint is that net income ($\rasub{N}$) should be completely re-spent.
+I.e, the income effect should satisfy the budget constraint
+such that net income is zero after
+the income effect ($\rainc{N} = 0$).
+This constraint can be seen in 
+expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
+where the post-income-effect point ($-$) returns to the original expenditure line.
+See Appendix~\ref{sec:proof_income_elasticities}
+for a mathematical proof that the income preference equations below
+(Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
+satisfy the first constraint.
+
+The second constraint is that net income should be re-spent on only 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -1401,27 +1459,75 @@ split between
     
 \end{enumerate*}
 %
+This constraint is satisfied by construction below.
+
+The third constraint is that 
+additional spending on the energy service 
+and other goods 
+should be allocated in the same proportion as 
+post-substitution-effect expenditures on the energy service and other goods.
+Thus,
+although spending on both the energy service and other goods increases across the income effect,
+the proportion of spending on the energy service and other goods
+should not change across the income effect.
+This constraint is also satisfied by construction below, 
+particularly via an effective income ($\Mdothatprime$). 
+Proof that this constraint is satisfied can be seen in 
+preference path graphs
+where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
+lie along ray \rr{}.
+(Ray \rr{} is formed by drawing a line from the origin 
+through the post-substitution-effect point ($\wedge$) and beyond.
+See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
+
+We next show expressions for 
+direct and indirect income effect rebound.
+
+%..............................
+\paragraph{Direct income effect} 
+\label{sec:direct_income_effect}
+%..............................
+
 The income elasticity of energy service consumption ($\eqsM$)
 quantifies the amount of net income spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
-(See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
+(See Appendix~\ref{sec:utility_and_elasticities} 
+for additional information about elasticities.)
+Spending of net income on the energy service 
+leads to direct income effect rebound ($Re_{dinc}$).
 
 The ratio of rates of energy service consumed across the income effect is given by
 
 \begin{equation} \label{eq:qsrat_eqsM}
-  \incprefseqn \; ,
-\end{equation}
-%
-where effective income ($\Mdothatprime$) is given by 
-
-\begin{equation} \label{eq:effective_income}
-  \effinceqn{} \; .
+  \incprefseqn \; .
 \end{equation}
 %
 Homotheticity means that $\eqsM = 1$.
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+
+Effective income ($\Mdothatprime$) is given by 
+
+\begin{equation} \label{eq:effective_income}
+  \effinceqn{} \; .
+\end{equation}
+%
+For the purposes of the income effect, 
+the effective income equation (Eq.~(\ref{eq:effective_income})) 
+adjusts income ($\rorig{M}$) to account for 
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
+        gross income ($\rate{G}$)
+        from the emplacement effect and
+  
+  \item expenditure adjustments 
+        ($p_E \Delta \rasub{E}_s$ and $\Delta \rasub{C}_o$)
+        from the substitution effect. 
+    
+\end{enumerate*}
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
@@ -1433,21 +1539,26 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
-  Re_{dinc} = \Redinceqnexact{} \; ,
+  Re_{dinc} = \Redinceqnexact{} \; .
 \end{equation}
 %
-where $\frac{\rasub{q}_s}{\rorig{q}_s}$
-is given by Eq.~(\ref{eq:q_s_solution}).
 If there is no net income after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
-As either of the elasticities gets stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
-direct income rebound~($Re_{dinc}$) grows.
+See Appendix~\ref{sec:Re_inc} for details of the derivation
+of income effect rebound.
+
+
+%..............................
+\paragraph{Indirect income effect} 
+\label{sec:indirect_income_effect}
+%..............................
 
 The income elasticity of other goods consumption ($\eqoM$)
 quantifies the amount of net income spent 
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
-(See Appendix~\ref{sec:elasticities} for additional information about elasticities.)
+Spending of net income on other goods and services
+leads to indirect income effect rebound ($Re_{iinc}$).
+
 The ratio of rates of other goods consumed across the income effect is given by
 
 \begin{equation} \label{eq:qorat_eqoM}
@@ -1480,18 +1591,10 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqnexact{} \; ,
 \end{equation}
 %
-where $\frac{\rasub{C}_o}{\rorig{C}_o}$ is given by Eq.~(\ref{eq:C_o_solution}).
+See Appendix~\ref{sec:Re_inc} for details of the derivation
+of income effect rebound.
 
-The income preferences expressions (Eqs.~(\ref{eq:qsrat_eqsM}) and ~(\ref{eq:Corat_eqoM}))
-must satisfy the budget constraint
-such that net income is zero after
-the income effect ($\rainc{N} = 0$).
-I.e., the $-$ point must return to the original expenditure line in 
-an expenditure path graph (e.g., Fig.~\ref{fig:ExampleCostPathGraph}).
-See Appendix~\ref{sec:proof_income_elasticities}
-for proof that the income preference equations 
-(Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
-satisfy the budget constraint.
+
 
 +++
 Should we add a subsection here on `economy-wide effects',
@@ -1743,7 +1846,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
-   Capital cost rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs \\
+   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
                                                     &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
@@ -1762,7 +1865,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                     &           &          & manufacture. Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
-  Maintenance and disposal cost rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
+  Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
                                                     &           &          & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
                                                     &           &          & Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
@@ -2298,7 +2401,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Lamp efficacy                   & \Sexpr{efficacy_worse}      & \Sexpr{efficacy_better}     & Incandescent: 530 lm output / 60 W energy input. \\
   $\bempl{\eta}$, $\aprod{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
   \midrule
-   Capital cost rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
+   Capital expenditure rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb}, \\
                                                     &           &          & and \$1.21 for LED lamp from \\
                                                     &           &          & \citet{Home_Depot:2020_LED_bulb}. \\
@@ -2326,7 +2429,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
                                                     &           &          & $\times$ 365 days/year $\times$ 10 years = 4,926,405 lumen-hrs. \\
                                                     &           &          & Thus LCA energy / lamp =  132 MJ/5 $\times$ 4.9264/20 = 6.5 MJ. \\ 
  \midrule
-  Maintenance and disposal cost rate  & \Sexpr{C_dot_md_orig_lamp_char}      & \Sexpr{C_dot_md_star_lamp_char}     & Assumed negligible. \\
+  Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_lamp_char}      & \Sexpr{C_dot_md_star_lamp_char}     & Assumed negligible. \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & \\
   \bottomrule
 \end{tabular}
@@ -2868,7 +2971,7 @@ most sensitive to changes in post-EEU efficiency ($\aprod{\eta}$),
 A limitation of the efficiency sensitivity analysis is that 
 post-EEU efficiency ($\aprod{\eta}$)
 is unlikely to be independent of other factors, 
-such as capital cost rate ($\raempl{C}_{cap}$).
+such as capital expenditure rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
 
 
@@ -3011,8 +3114,8 @@ energy price is not independent of other parameters.
 Indeed, other rebound parameters
 would change along with energy price
 (especially if moving from one country to another),
-including capital cost rate ($\raempl{C}_{cap}$), 
-maintenance and disposal cost rate ($\raempl{C}_{\md}$),
+including capital expenditure rate ($\raempl{C}_{cap}$), 
+maintenance and disposal expenditure rate ($\raempl{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rates ($\rbempl{q}_s$).
 
@@ -3314,6 +3417,16 @@ using an early version of this framework.
 \input{pieces/derivation.tex}
 
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical details of rebound path graphs}
+\label{sec:graph_details}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/rebound_path_graph_details.tex}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Utility models and elasticities}
 \label{sec:utility_and_elasticities}
@@ -3321,13 +3434,6 @@ using an early version of this framework.
 
 \input{pieces/utility_and_elasticities.tex}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Elasticities}
-% \label{sec:elasticities}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{pieces/elasticities.tex}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3338,20 +3444,13 @@ using an early version of this framework.
 \input{pieces/proof_income_elasticities.tex}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Utility model and derivation of $\fCs$}
-% \label{sec:utility_model}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{pieces/utility.tex}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Mathematical details of rebound path graphs}
-\label{sec:graph_details}
+\section{Exogenous $p_o$ assumption}
+\label{sec:exogenous_p_o}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/rebound_path_graph_details.tex}
+\input{pieces/exogenous_p_o.tex}
 
 
 

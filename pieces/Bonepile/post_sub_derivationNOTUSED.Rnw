@@ -329,7 +329,7 @@ Second, the equation of the \starstar{} expenditure line is
             {\rbempl{C}_o}
         \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
       + \frac{1}{\rbempl{C}_o} 
-        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}{\md} - \rate{G}) \; .
+        (\rate{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} - \rate{G}) \; .
 \end{equation}
 
 
