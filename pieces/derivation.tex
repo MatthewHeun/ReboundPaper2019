@@ -467,7 +467,7 @@ such that
 \end{equation}
 %
 Note that the energy service price elasticity of energy service consumption ($\eqsps$)
-is (incorrectly) assumed constant along an indifference curve
+is assumed constant along an indifference curve
 in the approximate model. 
 A negative value for the service price elasticity of energy service consumption
 is expected ($\eqsps < 0$),
@@ -569,7 +569,7 @@ reduce energy takeback by direct substitution effects.
 \label{sec:Resub_exact_method}
 %..............................
 
-The CES utility model assumes (incorrectly) that 
+The approximate utility model assumes that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
@@ -643,16 +643,17 @@ at the original utility rate of $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_in
 Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs) 
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
-                                                  ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
-                                                        \tag{\ref{eq:q_s_solution}}
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \qssolution{} \; . \tag{\ref{eq:q_s_solution}}
 \end{equation}
 
 Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
 to obtain an estimate for direct substitution rebound ($Re_{dsub}$)
 via the CES utility model.
+
+\begin{equation}
+  Re_{dsub} = \RedsubCES{} \tag{\ref{eq:Re_dsub_CES}}
+\end{equation}
 
 The rate of other goods consumption after the substitution effect ($\rasub{C}_o$) 
 can be found by substituting Eq.~(\ref{eq:q_s_solution}) and 
@@ -671,15 +672,19 @@ to obtain
 Simplifying gives
 
 \begin{equation}
-  \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
-                                                ^{1/\rho} \; .
-                                            \tag{\ref{eq:C_o_solution}}
+  \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; . \tag{\ref{eq:C_o_solution}}
 \end{equation}
 
+
+
 Eq.~(\ref{eq:C_o_solution}) can be substituted into Eq.~(\ref{eq:Re_isub_prelim})
-to obtain an estimate for indirect substitution rebound ($Re_{isub}$)
+to obtain an expression for indirect substitution rebound ($Re_{isub}$)
 via the CES utility model.
+
+\begin{equation} \label{eq:Re_isub_CES}
+  Re_{isub} = 
+\end{equation}
+%
 
 
 %------------------------------
