@@ -1151,7 +1151,7 @@ The change in embodied final energy due to the EEU (expressed as a rate) is give
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$
 and is shown as segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 The expression for embodied energy rebound is derived in 
-Section~\ref{sec:Re_emb} to be
+Appendix~\ref{sec:Re_emb} to be
 
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembeqn{} \; .
@@ -1317,7 +1317,7 @@ Our only restriction is that the elasticity of substitution ($\sigma$)
 between consumption of the energy service ($\rate{q}_s$)
 and consumption of other goods ($\rate{C}_o$)
 remain constant along an indifference curve.
-(Fig.~\ref{fig:ExamplePrefsPathGraph}).
+(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
 Thus, the exact method utilizes 
 a constant elasticity of substitution (CES) utility model.
 The utility model describes the device owner's behavior
@@ -3419,11 +3419,11 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Exogenous $p_o$ assumption}
-\label{sec:exogenous_p_o}
+\section{Mathematical details of rebound path graphs}
+\label{sec:graph_details}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/exogenous_p_o.tex}
+\input{pieces/rebound_path_graph_details.tex}
 
 
 
@@ -3435,13 +3435,6 @@ using an early version of this framework.
 \input{pieces/utility_and_elasticities.tex}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Elasticities}
-% \label{sec:elasticities}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{pieces/elasticities.tex}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Proof: Income preference equations satisfy the budget constraint}
@@ -3451,20 +3444,13 @@ using an early version of this framework.
 \input{pieces/proof_income_elasticities.tex}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \section{Utility model and derivation of $\fCs$}
-% \label{sec:utility_model}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \input{pieces/utility.tex}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Mathematical details of rebound path graphs}
-\label{sec:graph_details}
+\section{Exogenous $p_o$ assumption}
+\label{sec:exogenous_p_o}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/rebound_path_graph_details.tex}
+\input{pieces/exogenous_p_o.tex}
 
 
 
