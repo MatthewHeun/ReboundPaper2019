@@ -1588,7 +1588,7 @@ After much substitution, rearranging, and canceling of terms (see Appendix~\ref{
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
-  Re_{iinc} = \Reiinceqnexact{} \; ,
+  Re_{iinc} = \Reiinceqnexact{} \; .
 \end{equation}
 %
 See Appendix~\ref{sec:Re_inc} for details of the derivation
