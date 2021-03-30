@@ -65,13 +65,13 @@ at any rebound stage. (See Fig.~\ref{fig:flowchart}.)
 Direct energy consumption is energy consumed by the energy conversion device
 ($\rate{E}_s$), and 
 indirect energy consumption is the sum of embodied energy, 
-energy associated with maintenenace and disposal, and energy associated 
+energy associated with maintenanace and disposal, and energy associated 
 with expenditures on other goods
 ($\rate{E}_{emb} + (\rate{C}_{\md} + \rate{C}_o) I_E$).
 
 For the energy path graph, 
-indirect energy consumption is placed on the ordinate
-and direct energy consumption is placed on the abscissa.
+direct energy consumption is placed on the abscissa and 
+indirect energy consumption is placed on the ordinate.
 To derive the equation of a constant energy consumption line, 
 we first rearrange to put the $y$ coordinate on the left of the equation:
 
@@ -135,7 +135,7 @@ and direct expenditures on energy for the energy conversion device are place on 
 Direct expenditure is the cost of energy consumed by the energy conversion device
 ($\rate{C}_s = p_E \rate{E}_s$), and 
 indirect expenses are the sum of capital costs, 
-maintenenace and disposal costs, and 
+maintenanace and disposal costs, and 
 expenditures on other goods
 ($\rate{C}_{cap} + \rate{C}_{\md} + \rate{C}_o$).
 Rearranging to put the $y$-axis variable on the left side of the equation gives
@@ -164,7 +164,9 @@ shows the budget constraint for the device owner:
   y = -x + \rbempl{C}_s + \rbempl{C}_{cap} + \rbempl{C}_{\md} + \rbempl{C}_o \; ,
 \end{equation}
 %
-or
+into which Eq.~(\ref{eq:M_acct_orig}) can be substituted with 
+$\rorig{C}_s = p_E \rorig{E}_s$ and 
+$\rorig{N} = 0$ to obtain
 
 \begin{equation}
   y = -x + \rbempl{M} \; .
@@ -196,8 +198,8 @@ passes through the $a$ point on an expenditure path graph.
 
 Preferences path graphs show expenditures in 
 $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
-to accord with the utilty model.
-(See Appendix~\ref{sec:utility_model}.)
+to accord with the utility model.
+(See Appendix~\ref{sec:utility_and_elasticities}.)
 Preference path graphs include 
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -222,16 +224,29 @@ Like the expenditure path graph,
 lines of constant expenditure on a preferences path graph 
 are derived from the budget constraint of the device owner.
 
-Before the EEU, the budget constraint is
+Prior to the EEU, the budget constraint is given by Eq.~(\ref{eq:M_acct_orig}).
+Substituting $\orig{p}_s \rorig{q}_s$ for $p_E \rorig{E}_s$ and 
+recognizing that there is no net income before the EEU
+($\rorig{N} = 0$) gives
 
 \begin{equation}
-  \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}_{\md} + \rate{C}_o \; .
+  \rorig{M} = \orig{p}_s \rorig{q}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_o \; .
+\end{equation}
+
+To create the line of constant expenditure on the preference path graph, 
+we allow $\rorig{q}_s$ and $\rorig{C}_o$ to vary in a compensatory manner:
+when one increases, the other must decrease.  
+To show that variation along the constant expenditure line, 
+we remove the notation that ties $\rorig{q}_s$ and $\rorig{C}_o$
+to the original point ($\circ$) to obtain
+
+\begin{equation}
+  \rbempl{M} = \bempl{p}_s \rate{q}_s + \rbempl{C}_{cap} + \rbempl{C}_{\md} + \rate{C}_o \; , 
 \end{equation}
 %
-Note that the expenditure rate for other goods and the rate of energy service consumption
-can vary with respect to one another so are written as
-$\rate{C}_o$ and $\rate{q}_s$
-instead of $\rbempl{C}_o$ and $\rbempl{q}_s$.
+where all of $\rbempl{M}$, $\bempl{p}_s$, $\rbempl{C}_{cap}$, and $\rbempl{C}_{\md}$
+apply at the same rebound stage of Fig.~\ref{fig:flowchart}.
+
 To derive the equation of the line representing the original budget constraint 
 in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
 (the \circcirc{} line through the $\circ$ point
@@ -258,8 +273,9 @@ Dividing both sides by $\rbempl{C}_o$ yields
          + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md}) \; .
 \end{equation}
 %
-Noting that $\frac{\rate{C}_o}{\rbempl{C}_o}$ and 
-$\frac{\rate{q}_s}{\rbempl{q}_s}$ are
+Noting that  
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ and 
+$\frac{\rate{C}_o}{\rbempl{C}_o}$ are
 the abscissa and ordinate, respectively,
 on a preferences path graph gives
 
@@ -268,7 +284,7 @@ on a preferences path graph gives
          + \frac{1}{\rbempl{C}_o} (\rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md}) \; .
 \end{equation}
 
-A similar procedure can be employed to derive the equation of 
+A similar procedure can be employed to derive the equation of the
 \starstar{} line through the $*$ point
 after the emplacement effect.
 The budget constraint at the $*$ point is
@@ -281,8 +297,8 @@ Substituting Eq.~(\ref{eq:N_dot_star_empl}) for $\raempl{N}$,
 substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$,
 multiplying judiciously by $\rbempl{C}_o/\rbempl{C}_o$ and $\rbempl{q}_s/\rbempl{q}_s$, 
 rearranging, and noting that 
-$\frac{\rate{C}_o}{\rbempl{C}_o}$ is the abscissa and 
-$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the ordinate gives
+$\frac{\rate{q}_s}{\rbempl{q}_s}$ is the abscissa and 
+$\frac{\rate{C}_o}{\rbempl{C}_o}$ is the ordinate gives
 
 \begin{equation} \label{eq:star_line_prefs}
   y = - \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} x
