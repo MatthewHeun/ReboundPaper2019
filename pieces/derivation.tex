@@ -65,29 +65,29 @@ Energy and financial analyses are shown side by side, because
 each informs the other.
 
 Several terms in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
-are cancelled to 0, e.g., $\cancelto{0}{\Delta \raempl{C}_o}$. 
-Most cancellations can be traced back to Table~\ref{tab:analysis_assumptions}.
-Table~\ref{tab:cancellations} highlights those assumptions.
+are zeroed, e.g., $\cancelto{0}{\Delta \raempl{C}_o}$. 
+These zeroes can be traced back to Table~\ref{tab:analysis_assumptions}.
+Table~\ref{tab:zeroed_terms} highlights the equations
+in Table~\ref{tab:analysis_assumptions}
+that justify zeroing each term.
 
 \begin{table}
 \centering % Centered table
-\caption{Sources for cancellations in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}.}
+\caption{Sources for zeroed terms in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}.}
 \begin{tabular}{r l}
   \toprule
-  Cancellation & Table~\ref{tab:analysis_assumptions} justification \\
+  Zeroed term & Justification (from Table~\ref{tab:analysis_assumptions}). \\
   \midrule
   $\cancelto{0}{\Delta \raempl{C}_o}$    & $\rorig{C}_o = \raempl{C}_o$ ($\rate{C}_o$ unchanged across emplacement effect.) \\
   $\cancelto{0}{\rorig{N}}$              & $0 = \rorig{N}$ (Net income is zero prior to the EEU.) \\
   $\cancelto{0}{\Delta \rasub{E}_{emb}}$ & $\rbsub{E}_{emb} = \rasub{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across substitution effect.) \\
   $\cancelto{0}{\Delta \rasub{C}_{\md}}$ & $\rbsub{C}_{\md} = \rasub{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across substitution effect.) \\
   $\cancelto{0}{\Delta \rainc{E}_{emb}}$ & $\rbinc{E}_{emb} = \rainc{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across income effect.) \\
-  % $\cancelto{0}{\Delta \rainc{C}_{\md}}$ & $\rbinc{C}_{\md} = \rainc{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across income effect.) \\
-  % $\cancelto{0}{\rainc{N}}$              & $\rainc{N} = 0$ (All net income is re-spent in the income effect.) \\
-  \sout{$\Delta \rainc{C}_{\md}$}        & $\rbinc{C}_{\md} = \rainc{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across income effect.) \\
-  \sout{$\rainc{N}$}                     & $\rainc{N} = 0$ (All net income is re-spent in the income effect.) \\
+  $\cancelto{0}{\Delta \rainc{C}_{\md}}$ & $\rbinc{C}_{\md} = \rainc{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across income effect.) \\
+  $\cancelto{0}{\rainc{N}}$              & $\rainc{N} = 0$ (All net income is re-spent in the income effect.) \\
   \bottomrule
 \end{tabular}
-\label{tab:cancellations}
+\label{tab:zeroed_terms}
 \end{table}
 
 
