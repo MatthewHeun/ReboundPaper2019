@@ -4,34 +4,68 @@
 %!TEX root = ../HSB.Rnw
 
 
+<<efficiency_improvements, echo=FALSE>>=
+eta_car_orig <- rebound_results %>% 
+  dplyr::filter(Case == "Car") %>% 
+  dplyr::select(eta_engr_units_orig) # In mpg
+eta_car_tilde <- rebound_results %>% 
+  dplyr::filter(Case == "Car") %>% 
+  dplyr::select(eta_engr_units_tilde) # In mpg
+eta_lamp_orig <- rebound_results %>% 
+  dplyr::filter(Case == "Lamp") %>% 
+  dplyr::select(eta_engr_units_orig) / 1000 # In lm-hr/W-hr
+eta_lamp_tilde <- rebound_results %>% 
+  dplyr::filter(Case == "Lamp") %>% 
+  dplyr::select(eta_engr_units_tilde) / 1000 # In lm-hr/W-hr
+
+eta_car_perc_improvement <- (eta_car_tilde - eta_car_orig) / eta_car_orig * 100 # In percent
+
+eta_lamp_perc_improvement <- (eta_lamp_tilde - eta_lamp_orig) / eta_lamp_orig * 100 # In percent
+@
+
 As discussed in Section~\ref{sec:sub_effect_main_paper}
 and Appendix~\ref{sec:Re_sub}, 
 the substitution effect requires a model for device owner utility
 that compares the perceived benefits of 
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
-
-In this paper, we describe two utility models.
-One utility model is an approximate utility model
-discussed in Appendix~\ref{sec:Resub_approximate_method}.
-The approximate model applies when
-changes in energy service price are small ($\Delta \aempl{p}_s \approx 0$), 
-an assumption that is untrue for emplacement of a more-efficient energy conversion device.
-The approximate model is discussed for continuity with the literature.
+In this appendix, we describe two utility models.
+One utility model is an approximate  model
+that applies only when
+changes in energy efficiency and 
+changes in service price are infinitesimally
+small ($\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$).
+In fact, infinitesimally small efficiency gains are
+unlikely to be worthwhile economically: 
+the increased capital expense will overwhelm the financial savings, 
+making it uneconomic to pursue small efficiency gains.
+The real-world EEUs in this paper have very large percentage increases in energy efficiency.
+For the car in Section~\ref{sec:car_example}, 
+energy efficiency increases from 
+$\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
+$\aprod{\eta} = \Sexpr{mpg_better}$~mpg, 
+a \Sexpr{eta_car_perc_improvement}~\% improvement.
+For the lamp example in Section~\ref{sec:lamp_example},
+energy efficiency increases by 
+\Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
+Thus, the approximate utility model is rarely applicable to real-world EEUs.
+The approximate model is discussed for continuity with the literature only.
 (See, for example, \citet{Borenstein:2015aa}.)
+
 The other utility model is the CES utility model used in the rebound framework.
 (See Section~\ref{sec:sub_effect_main_paper}.)
 Both utility models rely upon elasticities to estimate consumption utility.
 
 Like the substitution effect,
-the income effect employs elasticities
-to describe the proportion of net income spent on the energy service
-or other goods and sercices.
+the income effect also employs elasticities.
+In the income effect, 
+elasticities describe the proportions of net income spent on the energy service
+and other goods and services.
 
 In this appendix,
 elasticities for the income effect are discussed briefly. 
-Thereafter, the approximate and CES utility functions are described.
-Finally, elasticities for the substitition effect are 
+Thereafter, the approximate and CES utility models are described.
+Finally, elasticities for the substitution effect are 
 discussed.
 
 
@@ -44,8 +78,8 @@ The income effect requires two elasticities to
 estimate the respending of net income:
 the income elasticity of energy service consumption ($\eqsM$) and
 the income elasticity of other goods consumption ($\eqoM$).
-Due to homotheticity,
-both income elasticities are assumed unitary. 
+Due to homotheticity assumption,
+both income elasticities are unitary. 
 Thus, 
 
 \begin{equation} \label{eq:eqsM}
@@ -65,22 +99,22 @@ and
 %++++++++++++++++++++++++++++++
 
 A utility model gives the ratio of energy service consumption rate 
-and other goods consumption rates across the substition effect
-($\frac{\rasub{q}_s}{\rorig{q}_s}$ and 
-$\frac{\rasub{q}_o}{\rorig{q}_o}$, 
+and other goods consumption rates across the substitution effect
+($\frac{\rasub{q}_s}{\rbsub{q}_s}$ and 
+$\frac{\rasub{q}_o}{\rbsub{q}_o}$, 
 respectively).
 In so doing, 
 utility models quantify the decrease in other goods consumption
-($\frac{\rasub{q}_o}{\rorig{q}_o} < 1$)
+($\frac{\rasub{q}_o}{\rbsub{q}_o} < 1$)
 caused by the increase of energy service consumption
-($\frac{\rasub{q}_s}{\rorig{q}_s} > 1$)
+($\frac{\rasub{q}_s}{\rbsub{q}_s} > 1$)
 resulting from the decrease of the energy service price ($\aempl{p}_s < \orig{p}_s$).
 Across the substitution effect, 
 the utility increase of the larger energy service consumption rate
 must be exactly offset
 by the utility decrease of the smaller other goods consumption rate.
 
-Before proceeding the with utility models,
+Before proceeding with the utility models,
 we note that the rate of other goods consumption ($\rate{q}_o$)
 is not known independently from the prices of other goods ($p_o$).
 With the assumption that the prices of other goods do not change
@@ -161,7 +195,14 @@ The correct expression for the share parameter ($a$) is found from the
 equilibrium requirement,
 namely that the slope of the indifference curve is tangent to 
 (has the same slope as) the expenditure curve
-in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space.
+in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
+prior to the EEU.
+For example, line \circcirc{} is tangent to preference curve 
+\iicirc{}
+at point $\circ$
+in Figs.~\ref{fig:ExamplePrefsPathGraph}, 
+\ref{fig:CarPrefsGraph}, and 
+\ref{fig:LampPrefsGraph}.
 
 To find the slope of the indifference curve,
 Eq.~(\ref{eq:ces_utility_with_a}) can be rearranged to find 
@@ -176,16 +217,19 @@ and the normalized utility rate ($\rate{u}/\rbempl{u}$):
             - \frac{a}{1 - a} \left( \frac{\rate{q}}{\rbempl{q}_s} \right)^\rho \right]^{(1/\rho)} \; ,
 \end{equation}
 %
-a form convenient for graphing 
+a form convenient for drawing 
 constant utility rate ($\rate{u}/\rbempl{u}$) indifference curves in 
 $\rate{C}_o/\rbempl{C}_o$ vs.\ 
 $\rate{q}_s/\rbempl{q}_s$ space.
-(See Appendix~\ref{sec:graph_details} and
-Figs.~\ref{fig:ExamplePrefsPathGraph}, 
+(See Figs.~\ref{fig:ExamplePrefsPathGraph}, 
 \ref{fig:CarPrefsGraph}, and 
 \ref{fig:LampPrefsGraph}.)
 In $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space, 
-the slope of an indifference curve is given by 
+the slope of an indifference curve is found by taking the first 
+derivative of $\rate{C}_o/\rbempl{C}_o$
+with respect to $\rate{q}_s/\rbempl{q}_s$,
+starting from Eq.~(\ref{eq:utility_Co_form}).
+The result is
 
 \begin{align} \label{eq:slope_indifference_curve}
   \frac{\partial (\rate{C}_o/\rbempl{C}_o)}{\partial (\rate{q}_s/\rbempl{q}_s)} =&

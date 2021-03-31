@@ -1755,7 +1755,7 @@ which can also be checked against Eq.~(\ref{eq:Re_tot}).
 
 %++++++++++++++++++++++++++++++
 \subsection{Case 1: Automobile}
-\label{sec:Car_example}
+\label{sec:car_example}
 %++++++++++++++++++++++++++++++
 
 <<CarPrintableNumbers, echo=FALSE>>=
@@ -3452,7 +3452,9 @@ using an early version of this framework.
 \label{sec:utility_and_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/utility_and_elasticities.tex}
+% \input{pieces/utility_and_elasticities.Rnw}
+<<UtilityAppendix,child="pieces/utility_and_elasticities.Rnw">>=
+@
 
 
 
