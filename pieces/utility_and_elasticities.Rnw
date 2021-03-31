@@ -226,9 +226,10 @@ $\rate{q}_s/\rbempl{q}_s$ space.
 \ref{fig:LampPrefsGraph}.)
 In $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space, 
 the slope of an indifference curve is found by taking the first 
-derivative of $\rate{C}_o/\rbempl{C}_o$
+partial derivative of $\rate{C}_o/\rbempl{C}_o$
 with respect to $\rate{q}_s/\rbempl{q}_s$,
-starting from Eq.~(\ref{eq:utility_Co_form}).
+starting from Eq.~(\ref{eq:utility_Co_form}) and 
+using the chain rule repeatedly.
 The result is
 
 \begin{align} \label{eq:slope_indifference_curve}
@@ -244,11 +245,18 @@ the slope of the expenditure line in
 $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space:
 
 \begin{equation}
-  \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{\md} + \rate{C}_o  + \rate{N} \; . 
+  \rate{M} = p_s \rate{q}_s + \rate{C}_{cap} + \rate{C}_{\md} + \rate{C}_o  + \rate{N} \; ,
 \end{equation}
 %
-Solving for $\rate{C}_o$ and judiciously multiplying by $\rbempl{C}_o/\rbempl{C}_o$
-and $\rbempl{q}_s/\rbempl{q}_s$ gives
+a generic version of Eqs.~(\ref{eq:M_acct_orig}), 
+(\ref{eq:M_acct_aemp}), 
+(\ref{eq:M_acct_asub}), and 
+(\ref{eq:M_acct_ainc})
+with $p_s \rate{q}_s$ substituted for $p_E \rate{E}_s$.
+In a manner similar to derivations in
+Appendix~\ref{sec:pref_graph_constant_expenditure_lines}, 
+we solve for $\rate{C}_o$ and judiciously multiplying by $\rbempl{C}_o/\rbempl{C}_o$
+and $\rbempl{q}_s/\rbempl{q}_s$ to obtain
 
 \begin{equation}
   \frac{\rate{C}_o}{\rbempl{C}_o} \rbempl{C}_o = - p_s \frac{\rate{q}_s}{\rbempl{q}_s} \rbempl{q}_s
@@ -278,7 +286,7 @@ solving for the correct expression for $a$.
 Setting the slope of the expenditure line (Eq.~(\ref{eq:slope_expenditure_line}))
 equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_curve})) gives
 
-\begin{align}
+\begin{align} \label{eq:generic_expenditure_line}
   - \frac{p_s \rbempl{q}_s}{\rbempl{C}_o} =& 
         -\frac{a}{1 - a} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} \nonumber \\
         &\times \left[ \left( \frac{1}{1 - a} \right) \left( \frac{\rate{u}}{\rbempl{u}} \right)^\rho
@@ -288,7 +296,7 @@ equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_cu
 %
 For the equilibrium point 
 prior to emplacement, $\rate{q}_s/\rbempl{q}_s = 1$, $\rate{u}/\rbempl{u} = 1$, and
-$p_s = \bempl{p}_s$, which yields
+$p_s = \bempl{p}_s$, which reduces Eq.~(\ref{eq:generic_expenditure_line}) to
 
 \begin{equation}
   - \frac{\bempl{p}_s \rbempl{q}_s}{\rbempl{C}_o} =
@@ -316,7 +324,7 @@ the share of energy service expenditure ($\rbempl{C}_s$)
 relative to the sum of energy service and other goods expenditures 
 ($\rbempl{C}_s + \rbempl{C}_o$) 
 before emplacement.
-Thus, the CES utility equation becomes
+Thus, the CES utility equation (Eq.~(\ref{eq:ces_utility_with_a})) becomes
 
 \begin{equation} 
     \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; , \tag{\ref{eq:ces_utility}}
@@ -328,17 +336,18 @@ with
   \fCs \equiv \frac{\rorig{C}_s}{\rorig{C}_s + \rorig{C}_o} \; .
 \end{equation}
 
-We note briefly that 
-a common model of utility takes the form of a Cobb-Douglas function
+We note briefly (because we don't use it in this paper), 
+that a common utility model takes the form of a Cobb-Douglas function
 
 \begin{equation} \label{eq:CD_utility}
-  \rate{u}(\rate{q}_s,\rate{q}_o) = A \rate{q}_s^\alpha \rate{q}_o^{1 - \alpha} \; ,
+  \frac{\rate{u}}{\rorig{u}} = A \left( \frac{\rate{q}_s}{\rorig{q}_s}\right)^\alpha 
+                                 \left( \frac{\rate{q}_o}{\rorig{q}_o} \right) ^{(1 - \alpha)} \; ,
 \end{equation}
 %
 where $A$ is a proportionality constant and
 $\alpha \in (0,1)$ gives the relative importance to utility
-of consumption of the energy service ($\rate{q}_s$)
-relative to consumption of other goods ($\rate{q}_o$).
+of consuming the energy service ($\rate{q}_s$)
+relative to consuming other goods ($\rate{q}_o$).
 However, the uncompensated own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always.
@@ -353,6 +362,10 @@ I.e, a Cobb-Douglas model of consumer utility already presumes 100\% direct rebo
 which is inappropriate for an analytical framework that purports to
 estimate the magnitude of rebound effects.
 **** Gregor to review and clean up. ---MKH ****
+
+****
+Gregor to check Saunders (2008), which PB thinks may have said something similar. ---MKH 
+****
 
 
 %++++++++++++++++++++++++++++++
