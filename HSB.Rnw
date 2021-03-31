@@ -1114,12 +1114,32 @@ consistent with a lower capital expenditure rate
 ($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
 a reduced maintenance and disposal expenditure rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
+
+One of the unique features of this rebound framework
+is that independent analyses of embodied energy and 
+capital costs of the EEU are expected.
+We note that the different terms 
+(embodied energy rate, $\rate{E}_{emb}$, and
+capital cost rate, $\rate{C}_{cap}$)
+might seem to imply different processes, 
+but they actually refer to the same emplacement effect, 
+namely segment \ab{} in energy and expenditure path graphs
+(Figs.~\ref{fig:ExampleEnergyPathGraph} and
+\ref{fig:ExampleCostPathGraph}, respectively).
+Purchasing an upgraded device (which likely leads to $\rbempl{C}_{cap} \neq \raempl{C}_{cap}$)
+will likely mean a changed embodied energy rate ($\rbempl{E}_{emb} \neq \raempl{E}_{emb}$) 
+to provide the same energy service.
+Our names for these segments reflect common usage 
+in the energy and economics fields, respectively.
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
-embodied energy and capital costs (segments \ab{}) 
-move in the same direction (both negative), 
-but they could both move in the positive direction, or
-they each could move in opposite directions.
+embodied energy rates and
+capital cost rates (segments \ab{}) 
+move in the same direction (both negative).
+However, segments \ab{} could both move in the positive direction, or
+they could move in opposite directions, 
+depending on the results of the independent analyses for 
+embodied energy and capital cost rates.
 
 Consistent with the energy/exergy analysis literature, 
 we define embodied energy 
