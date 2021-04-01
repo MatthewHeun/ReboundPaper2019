@@ -350,13 +350,16 @@ Gregor to check Saunders (2008), which PB thinks may have said something similar
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Elasticities for utility models}
-\label{sec:elasticities_for_utility_models}
+\subsection{Elasticities for the substitution effect ($\eqsps$, $\eqops$, and $\sigma$)}
+\label{sec:elasticities_for_sub_effect}
 %++++++++++++++++++++++++++++++
 
-The approximate and CES utility models discussed above
-require three elasticities
-($\eqsps$, $\eqops$, and $\sigma$).
+The substitution effect requires a utility model.
+In this paper, we describe two utiliity models, 
+an approximate model and CES model.
+Both models require elasticities to describe consumer preferences.
+In fact, there are three elasticies across the two utility models:
+$\eqsps$, $\eqops$, and $\sigma$.
 The approximate method requires 
 the own price elasticity of energy service consumption ($\eqsps$) and
 the cross-price elasticity of energy service consumption ($\eqops$).
@@ -463,7 +466,7 @@ can be determined from two pieces of readily-available information:
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Elasticities for the income effect}
+\subsection{Elasticities for the income effect ($\eqsM$ and $\eqoM$)}
 \label{sec:income_elasticities}
 %++++++++++++++++++++++++++++++
 
