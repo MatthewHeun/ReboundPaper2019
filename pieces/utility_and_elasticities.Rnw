@@ -36,10 +36,10 @@ changes in energy efficiency and
 changes in service price are infinitesimally
 small ($\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$).
 In fact, infinitesimally small efficiency gains are
-unlikely to be worthwhile economically: 
-the increased capital expense will overwhelm the financial savings, 
-making it uneconomic to pursue small efficiency gains.
-The real-world EEUs in this paper have very large percentage increases in energy efficiency.
+likely to be uneconomic: 
+the increased capital expense will overwhelm the financial savings.
+Accordingly, 
+the real-world EEUs in this paper have very large percentage increases in energy efficiency.
 For the car in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
@@ -48,49 +48,30 @@ a \Sexpr{eta_car_perc_improvement}~\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
-Thus, the approximate utility model is rarely applicable to real-world EEUs.
+The approximate utility model is rarely applicable to real-world EEUs.
 The approximate model is discussed for continuity with the literature only.
 (See, for example, \citet{Borenstein:2015aa}.)
-
-The other utility model is the CES utility model used in the rebound framework.
+The other utility model is the CES utility model employed in the rebound framework.
 (See Section~\ref{sec:sub_effect_main_paper}.)
-Both utility models rely upon elasticities to estimate consumption utility.
 
+Both utility models in the substitution effect
+rely upon elasticities to estimate consumption utility
+and the comparative benefits of 
+consuming the energy service ($\Delta \rasub{q}_s$) and
+consuming other goods and services ($\Delta \rasub{C}_o$).
 Like the substitution effect,
-the income effect also employs elasticities.
+the income effect also employs elasticities to determine changes to 
+the rate of energy service consumption ($\Delta \rainc{q}_s$) and
+the rate of other goods consumption ($\Delta \rainc{C}_o$).
 In the income effect, 
 elasticities describe the proportions of net income spent on the energy service
 and other goods and services.
 
 In this appendix,
-elasticities for the income effect are discussed briefly. 
-Thereafter, the approximate and CES utility models are described.
-Finally, elasticities for the substitution effect are 
+the approximate and CES utility models are described.
+Then, elasticities for the substitution effect are 
 discussed.
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Elasticities for the income effect}
-\label{sec:income_elasticities}
-%++++++++++++++++++++++++++++++
-
-The income effect requires two elasticities to 
-estimate the respending of net income:
-the income elasticity of energy service consumption ($\eqsM$) and
-the income elasticity of other goods consumption ($\eqoM$).
-Due to homotheticity assumption,
-both income elasticities are unitary. 
-Thus, 
-
-\begin{equation} \label{eq:eqsM}
-  \eqsM = 1 \; ,
-\end{equation}
-%
-and
-
-\begin{equation} \label{eq:eqoM}
-  \eqoM = 1 \; .
-\end{equation}
+Finally, elasticities for the income effect are discussed. 
 
 
 %++++++++++++++++++++++++++++++
@@ -374,7 +355,8 @@ Gregor to check Saunders (2008), which PB thinks may have said something similar
 %++++++++++++++++++++++++++++++
 
 The approximate and CES utility models discussed above
-require three elasticities.
+require three elasticities
+($\eqsps$, $\eqops$, and $\sigma$).
 The approximate method requires 
 the own price elasticity of energy service consumption ($\eqsps$) and
 the cross-price elasticity of energy service consumption ($\eqops$).
@@ -391,38 +373,13 @@ which can be estimated empirically from
 
 
 %------------------------------
-\subsubsection{Elasticity for the CES utility model ($\sigma$)} 
-\label{sec:elasticity_ces}
-%------------------------------
-
-\citet{Gortz1977} shows that
-the elasticity of substitution ($\sigma$)
-in the CES utility model is given by
-
-\begin{equation} \label{eq:sigma}
-  \sigma = \frac{\fCs + \eqspsUC}{\fCs - 1} \; .
-\end{equation}
-%
-Thus, the elasticity of substitution ($\sigma$) 
-can be determined from two pieces of readily-available information:
-%
-\begin{enumerate*}[label={(\alph*)}]
-	
-  \item the uncompensated own price elasticity ($\eqspsUC$) and 
-  
-  \item the share of income spent on the energy service ($\fCs$ 
-        from Eq.~(\ref{eq:fCs})).
-
-\end{enumerate*}
-
-
-%------------------------------
 \subsubsection{Elasticities for the approximate utility model ($\eqsps$ and $\eqops$)} 
 \label{sec:elasticities_approx}
 %------------------------------
 
 Analytical expressions for the elasticities in the approximate utility model
-can be derived using the Slutsky equation, 
+can be derived using the Slutsky equation
+**** Gregor to provide a reference to Slutsky eqaution ****, 
 whereby the uncompensated ($UC$) own price elasticity 
 of the energy service ($\eqspsUC$) 
 is decomposed into the compensated price elasticity ($\eqsps$) and
@@ -432,8 +389,8 @@ the income elasticity ($\eqsM$) as follows:
   \eqspsUC = \eqsps - \fCs \eqsM \; ,
 \end{equation}
 %
-where $\fCs$ is given by Eq.~(\ref{eq:fCs}) and 
-$\eqsM$ is given by Eq.~(\ref{eq:eqsM}).
+where $\fCs$ is given by Eq.~(\ref{eq:fCs}). and 
+$\eqsM$ is given in Section~\ref{sec:income_elasticities}.
 Solving for the compensated own price elasticity ($\eqsps$) gives
 
 \begin{equation} \label{eq:eqsps}
@@ -472,15 +429,61 @@ Solving for $\eqops$ gives
   \eqops = \fCs \sigma \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:sigma}) gives
+Substituting $\sigma$ from Section~\ref{sec:elasticity_ces} (Eq.~(\ref{eq:sigma})) gives
 
 \begin{equation} \label{eq:eqops}
   \eqops = \frac{\fCs (\fCs + \eqspsUC)}{\fCs - 1} \; .
 \end{equation}
 
 
+%------------------------------
+\subsubsection{Elasticity for the CES utility model ($\sigma$)} 
+\label{sec:elasticity_ces}
+%------------------------------
+
+\citet{Gortz1977} shows that
+the elasticity of substitution ($\sigma$)
+in the CES utility model is given by
+
+\begin{equation} \label{eq:sigma}
+  \sigma = \frac{\fCs + \eqspsUC}{\fCs - 1} \; .
+\end{equation}
+%
+Thus, the elasticity of substitution ($\sigma$) 
+can be determined from two pieces of readily-available information:
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item the uncompensated own price elasticity ($\eqspsUC$) and 
+  
+  \item the share of income spent on the energy service ($\fCs$ 
+        from Eq.~(\ref{eq:fCs})).
+
+\end{enumerate*}
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Elasticities for the income effect}
+\label{sec:income_elasticities}
+%++++++++++++++++++++++++++++++
+
+The income effect requires two elasticities to 
+estimate the respending of net income:
+the income elasticity of energy service consumption ($\eqsM$) and
+the income elasticity of other goods consumption ($\eqoM$).
+Due to the homotheticity assumption,
+both income elasticities are unitary. 
+Thus, 
+
+\begin{equation} \label{eq:eqsM}
+  \eqsM = 1 \; ,
+\end{equation}
+%
+and
+
+\begin{equation} \label{eq:eqoM}
+  \eqoM = 1 \; .
+\end{equation}
 
 
 
