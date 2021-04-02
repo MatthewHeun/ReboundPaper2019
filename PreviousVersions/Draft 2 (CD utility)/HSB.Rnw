@@ -1081,7 +1081,7 @@ so we get the `price effect'?---GS
 +++
 
 %++++++++++++++++++++++++++++++
-\subsection{\Prodeffect}
+\subsection{\Macroeffect}
 \label{sec:prod_effect_main_paper}
 %++++++++++++++++++++++++++++++
 
