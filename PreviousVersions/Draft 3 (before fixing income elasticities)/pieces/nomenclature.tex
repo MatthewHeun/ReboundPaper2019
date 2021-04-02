@@ -85,7 +85,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $\aempl{X}$  & $X$ after the \empleffect{} (before the \subeffect{}) \\
   $\asub{X}$ & $X$ after the \subeffect{} (before the \inceffect{}) \\
   $\ainc{X}$ & $X$ after the \inceffect{} (before the \macroeffect{}) \\
-  $\aprod{X}$ & $X$ after the \macroeffect{} \\
+  $\amacro{X}$ & $X$ after the \macroeffect{} \\
   $\rate{X}$ & rate of $X$ [units of X/year] \\
   $M^\prime$ & effective income [\$] \\
   \bottomrule
@@ -138,17 +138,17 @@ signify subtraction of a quantity at an earlier stage of Fig.~\ref{fig:flowchart
 from the same quantity at a later stage of Fig.~\ref{fig:flowchart}.
 E.g.,
 $\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and
-$\Delta \aprod{X} \equiv \aprod{X} - \bmacro{X}$.
+$\Delta \amacro{X} \equiv \amacro{X} - \bmacro{X}$.
 Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}.
-E.g., $\Delta X \equiv \aprod{X} - \orig{X}$.
+E.g., $\Delta X \equiv \amacro{X} - \orig{X}$.
 $\Delta X$ is also the sum of differences across each stage in Fig.~\ref{fig:flowchart},
 as shown below.
 %
 \begin{align}
-\Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \aempl{X} \nonumber \\
-\Delta X &= (\aprod{X} - \bmacro{X}) + (\ainc{X} - \binc{X})
+\Delta X &= \Delta \amacro{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \aempl{X} \nonumber \\
+\Delta X &= (\amacro{X} - \bmacro{X}) + (\ainc{X} - \binc{X})
             + (\asub{X} - \bsub{X}) + (\aempl{X} - \bempl{X}) \nonumber \\
-\Delta X &= (\aprod{X} - \cancel{\bmacro{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
+\Delta X &= (\amacro{X} - \cancel{\bmacro{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
             + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\aempl{X}} - \bempl{X}) \nonumber \\
-\Delta X &= \aprod{X} - \orig{X}
+\Delta X &= \amacro{X} - \orig{X}
 \end{align}

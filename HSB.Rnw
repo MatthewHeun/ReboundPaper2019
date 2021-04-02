@@ -544,7 +544,7 @@ $\rbempl{q}_s$ (in vehicle km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
-$\aprod{\eta} > \bempl{\eta}$,
+$\amacro{\eta} > \bempl{\eta}$,
 typically, but not always,
 at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device
@@ -556,7 +556,7 @@ $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
-($\aprod{p}_E = \bempl{p}_E$),
+($\amacro{p}_E = \bempl{p}_E$),
 so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
@@ -1368,7 +1368,7 @@ Direct substitution effect rebound ($Re_{dsub}$) is given by
 which can be rearranged to
 
 \begin{equation} \label{eq:Re_dsub_prelim}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; ,
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; ,
 \end{equation}
 %
 as shown in Appendix~\ref{sec:Redsub_expression}.
@@ -1862,7 +1862,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
     Parameters [units]                                & (gasoline) & (hybrid EV) &  \\
   \midrule
   Fuel efficiency                           & \Sexpr{mpg_worse} & \Sexpr{mpg_better} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
-  $\bempl{\eta}$, $\aprod{\eta}$ [mpg]              &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
+  $\bempl{\eta}$, $\amacro{\eta}$ [mpg]              &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
                                                     &           &          & I-4, 2.0 L engine. \\
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
@@ -2420,7 +2420,7 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
     Parameters [units]                                &  &  & \\
   \midrule
   Lamp efficacy                   & \Sexpr{efficacy_worse}      & \Sexpr{efficacy_better}     & Incandescent: 530 lm output / 60 W energy input. \\
-  $\bempl{\eta}$, $\aprod{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
+  $\bempl{\eta}$, $\amacro{\eta}$ [lm-hr/W-hr]       &           &          & LED: 450 lm output / 5.5 W energy input. \\
   \midrule
    Capital expenditure rate       & \Sexpr{C_dot_cap_orig_lamp_char}   & \Sexpr{C_dot_cap_star_lamp_char}    & Purchase costs: \$1.88 for incandescent lamp from  \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & \citet{Home_Depot:2020_Inc_bulb}, \\
@@ -2894,7 +2894,7 @@ sensitivity analyses
 can show important trends, tendencies, and relationships
 between rebound parameters and rebound magnitudes.
 Key rebound parameters include 
-post-EEU efficiency ($\aprod{\eta}$),
+post-EEU efficiency ($\amacro{\eta}$),
 energy price ($p_E$),
 uncompensated own price elasticity of energy service consumption ($\eqspsUC$), and
 the productivity factor ($k$).
@@ -2904,7 +2904,7 @@ independent of each other.
 
 In each subsection below, a series of graphs
 shows the effects of key rebound parameters
-($\aprod{\eta}$, $p_E$, $\eqspsUC$, and $k$)
+($\amacro{\eta}$, $p_E$, $\eqspsUC$, and $k$)
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
@@ -2915,7 +2915,7 @@ A limitation of each sensitivity analysis is noted.
 
 
 %------------------------------
-\subsubsection{Effect of efficiency ($\aprod{\eta}$)} 
+\subsubsection{Effect of efficiency ($\amacro{\eta}$)} 
 \label{sec:effect_of_efficiency}
 %------------------------------
 
@@ -2931,7 +2931,7 @@ lamp_efficacy_ratio <- (rebound_results %>% dplyr::filter(Case == "Lamp") %>% dp
 
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 both takeback and expected energy savings ($\Sdot$)
-increase with post-EEU efficiency ($\aprod{\eta}$), 
+increase with post-EEU efficiency ($\amacro{\eta}$), 
 but the relationship is asymptotic.
 There are diminishing returns to increasing efficiency,
 leading to saturation at very high efficiencies.
@@ -2941,17 +2941,17 @@ leads to marginally less energy savings.
 A simple example illustrates.
 A $\bempl{\eta} = 25$ mpg car drives $\bempl{q}_s = 100$ miles 
 using $\bempl{E}_s = 4$ gallons of gasoline.
-A more-efficient car ($\aprod{\eta} = 30$ mpg) is expected to use
+A more-efficient car ($\amacro{\eta} = 30$ mpg) is expected to use
 $\aempl{E}_s = 3.33$ gallons to drive the same distance,
 a savings of $\Sdot = 0.67$ gallons.
-Another 5 mpg boost in efficiency (to $\aprod{\eta} = 35$ mpg)
+Another 5 mpg boost in efficiency (to $\amacro{\eta} = 35$ mpg)
 will use $\aempl{E}_s = 2.86$ gal to drive 100 miles, 
 a further expected savings of only $\Sdot = 0.47$ gallons.
 Each successive 5 mpg boost in efficiency 
 is expected to save less energy than the previous 5 mpg boost in efficiency.
 
 Saturation can be seen mathematically, too.
-Taking the limit as $\aprod{\eta} \rightarrow \infty$ 
+Taking the limit as $\amacro{\eta} \rightarrow \infty$ 
 in Eq.~(\ref{eq:Sdot}) gives $\Sdot = \rbempl{E}_s$, 
 not $\infty$. 
 Thus, efficiency saturation must occur.
@@ -2966,10 +2966,10 @@ the LED lamp is already much more efficient than the incandescent lamp
 (\Sexpr{lamp_efficacy_ratio}$\times$),
 whereas the hybrid car is only 
 \Sexpr{car_efficiency_ratio}$\times$ as efficient as the gasoline car. 
-Thus, at $\aprod{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, 
+Thus, at $\amacro{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, 
 the energy efficient LED
 is far closer to efficiency saturation than the hybrid vehicle 
-(at $\aprod{\eta} = \Sexpr{mpg_better}$ mpg).
+(at $\amacro{\eta} = \Sexpr{mpg_better}$ mpg).
 As a result, further increases in the LED lamp's efficiency 
 are less effective than further increases in the hybrid car's efficiency.
 
@@ -2983,20 +2983,20 @@ The lamp exhibits a relatively smaller rebound decline with efficiency,
 because the lamp example is closer to saturation than the car example.
 
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows the variation of all rebound components
-with post-EEU efficiency ($\aprod{\eta}$).
+with post-EEU efficiency ($\amacro{\eta}$).
 In the Car and Lamp examples, 
 direct substitution rebound ($Re_{dsub}$) is the 
 rebound component 
-most sensitive to changes in post-EEU efficiency ($\aprod{\eta}$),
+most sensitive to changes in post-EEU efficiency ($\amacro{\eta}$),
 
 A limitation of the efficiency sensitivity analysis is that 
-post-EEU efficiency ($\aprod{\eta}$)
+post-EEU efficiency ($\amacro{\eta}$)
 is unlikely to be independent of other factors, 
 such as capital expenditure rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
 
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] %in% c("Car", "Lamp"))
 
@@ -3043,7 +3043,7 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
 @
 
 
-<<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4>>=
+<<all_Re_terms_eta_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to post-EEU efficiency ($\\amacro{\\eta}$).", fig.width=6, fig.height=4>>=
 Re_graph_params <- ReboundTools::sens_graph_params
 Re_graph_params[["include_x_axis"]] <- TRUE
 Re_graph_params[["use_latex_legend"]] <- TRUE

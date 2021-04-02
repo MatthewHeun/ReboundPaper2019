@@ -21,7 +21,7 @@
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
-\newcommand{\aprod}[1]{\tilde{#1}}
+\newcommand{\amacro}[1]{\tilde{#1}}
 
 % Create the "before" commands
 \newcommand{\bempl}[1]{\orig{#1}}
@@ -35,7 +35,7 @@
 \newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\ramacro}[1]{\aprod{\rate{#1}}}
+\newcommand{\ramacro}[1]{\amacro{\rate{#1}}}
 
 % Rates before
 \newcommand{\rbempl}[1]{\rorig{#1}}
@@ -222,8 +222,8 @@ bottom=2pt}
 % Equations
 
 % Efficiency ratios
-\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
-\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+\newcommand{\etaratioinline}{\amacro{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\amacro{\eta}}{\bempl{\eta}}}
 
 % Derivative with respect to efficiency ratio
 \newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
@@ -267,7 +267,7 @@ bottom=2pt}
 % Equation for S_dot_dev
 % \newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\!\etaratiostacked \rbempl{E}_s}
 \newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\! 
-                            \frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
+                            \frac{\bempl{\eta}}{\amacro{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
 \newcommand{\Redsubeqn}{\frac{\left( \etaratiostacked \right)^{-\eqsps} - 1}
@@ -285,12 +285,12 @@ bottom=2pt}
         
 % Equation for q_s_hat/q_s_orig
 \newcommand{\qssolution}{\left\{ \fCs + (1-\fCs)
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
                                                   ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}}
 
 % Equation for C_o_hat/C_o_orig
 \newcommand{\Cosolution}{\left[ \left( 1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right)^{-1}  \right] 
+          \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right)^{-1}  \right] 
                                                 ^{1/\rho}}
 
 % Equation for Re_dsub for the CES utility model

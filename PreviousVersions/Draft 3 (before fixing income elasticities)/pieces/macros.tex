@@ -21,7 +21,7 @@
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
-\newcommand{\aprod}[1]{\tilde{#1}}
+\newcommand{\amacro}[1]{\tilde{#1}}
 
 % Create the "before" commands
 \newcommand{\bempl}[1]{\orig{#1}}
@@ -35,7 +35,7 @@
 \newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\ramacro}[1]{\aprod{\rate{#1}}}
+\newcommand{\ramacro}[1]{\amacro{\rate{#1}}}
 
 % Rates before
 \newcommand{\rbempl}[1]{\rorig{#1}}
@@ -214,8 +214,8 @@ bottom=2pt}
 % Equations
 
 % Efficiency ratios
-\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
-\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+\newcommand{\etaratioinline}{\amacro{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\amacro{\eta}}{\bempl{\eta}}}
 
 % Derivative with respect to efficiency ratio
 \newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}

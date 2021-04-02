@@ -60,7 +60,7 @@ percentage increases in energy efficiency.
 For the car in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
-$\aprod{\eta} = \Sexpr{mpg_better}$~mpg, 
+$\amacro{\eta} = \Sexpr{mpg_better}$~mpg, 
 a \Sexpr{eta_car_perc_improvement}~\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
@@ -147,14 +147,14 @@ for convenience.
 
 \begin{equation} 
   \frac{\rasub{q}_s}{\rbempl{q}_s}
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} 
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqsps} 
         \tag{\ref{eq:approx_qshat_over_qsorig}}
 \end{equation}
 
 \begin{equation}
   \frac{\rasub{C}_o}{\rorig{C}_o}
       = \frac{\rasub{q}_o}{\rorig{q}_o}
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \tag{\ref{eq:Cdot_o_ratio}}
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} \tag{\ref{eq:Cdot_o_ratio}}
 \end{equation}
 
 

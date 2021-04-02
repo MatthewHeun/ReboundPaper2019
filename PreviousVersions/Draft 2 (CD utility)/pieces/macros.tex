@@ -21,7 +21,7 @@
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
-\newcommand{\aprod}[1]{\tilde{#1}}
+\newcommand{\amacro}[1]{\tilde{#1}}
 
 % Create the "before" commands
 \newcommand{\bempl}[1]{\orig{#1}}
@@ -35,7 +35,7 @@
 \newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\ramacro}[1]{\aprod{\rate{#1}}}
+\newcommand{\ramacro}[1]{\amacro{\rate{#1}}}
 
 % Rates before
 \newcommand{\rbempl}[1]{\rorig{#1}}
@@ -203,8 +203,8 @@ bottom=2pt}
 % Equations
 
 % Efficiency ratios
-\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
-\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+\newcommand{\etaratioinline}{\amacro{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\amacro{\eta}}{\bempl{\eta}}}
 
 % Derivative with respect to efficiency ratio
 \newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
@@ -246,22 +246,22 @@ bottom=2pt}
 \newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\md}}{\rbempl{C}_{\md}} - 1 \right) \rbempl{C}_{\md} I_E}{\Sdot}}
 
 % Equation for S_dot_dev
-\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
+\newcommand{\Sdoteqn}{\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\amacro{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
-\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
-                        {\frac{\aprod{\eta}}{\bempl{\eta}} - 1}}
+\newcommand{\Redsubeqn}{\frac{\left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
+                        {\frac{\amacro{\eta}}{\bempl{\eta}} - 1}}
                         
 % Equation for Re_isub
-\newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bempl{\eta}}  \right)}
-                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
-                          \frac{\aprod{\eta}}{\bempl{\eta}} \; 
+\newcommand{\Reisubeqn}{\frac{{\left( \frac{\amacro{\eta}}{\bempl{\eta}}  \right)}
+                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; 
+                          \frac{\amacro{\eta}}{\bempl{\eta}} \; 
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
 \newcommand{\Redinceqnapprox}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
-                  \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
+                  \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
+              {\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)}}
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}

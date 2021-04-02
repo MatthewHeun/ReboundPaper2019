@@ -1,7 +1,7 @@
 # This file contains single-line sensitivity graphs that we decided not to use for the paper.
 
 
-<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to post-EEU efficiency ($\\aprod{\\eta}$).", fig.width=6, fig.height=4, include=FALSE>>=
+<<eta_tilde_sens_graph, echo=FALSE, fig.cap="Total rebound ($Re_{tot}$) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$).", fig.width=6, fig.height=4, include=FALSE>>=
   sensitivity_graphs(rebound_data = actual_cases, parameterization = eta_sens_params,
                      x_var = "eta_engr_units_star", y_var = "Re_tot") +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
