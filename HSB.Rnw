@@ -2309,7 +2309,7 @@ Thus, the freed cash after the substitution effect
 translates into positive direct and indirect income
 rebound at the micro level. 
 
-Finally, at the macro level, the \prodeffect{} leads to productivity rebound
+Finally, at the macro level, the \macroeffect{} leads to productivity rebound
 ($Re_{\macro}$) of \Sexpr{Re_prod_car_char_perc}\%,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
@@ -2873,7 +2873,7 @@ The indirect income effect rebound is large
 due to the energy implications of increased spending on other goods.
 
 Finally, rebound due to the macroeconomic 
-\prodeffect{} 
+\macroeffect{} 
 ($Re_{\macro}$) is \Sexpr{Re_prod_lamp_char_perc}\%
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
