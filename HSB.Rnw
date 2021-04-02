@@ -550,8 +550,8 @@ at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device
 **** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
 such that
-$\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
-$\raprod{C}_{\md} > \rbempl{C}_{\md}$.
+$\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
+$\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
@@ -1439,7 +1439,7 @@ of the derivations of Eqs.~(\ref{eq:Re_dsub_CES}) and~(\ref{eq:Re_isub_CES}).
 The income rate of the device owner is $\rbempl{M}$, 
 which remains unchanged across the rebound effects, 
 such that
-$\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \raprod{M}$.
+$\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
 \emph{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and 
@@ -2975,7 +2975,7 @@ are less effective than further increases in the hybrid car's efficiency.
 
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 expected energy savings ($\Sdot$) increase faster than takeback 
-as $\raprod{\eta}$ increases.
+as $\ramacro{\eta}$ increases.
 Thus, total rebound ($Re_{tot}$, the ratio of 
 takeback to expected energy savings in Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows.
