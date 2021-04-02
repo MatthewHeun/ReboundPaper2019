@@ -111,7 +111,7 @@ the ratio of other goods spending, such that
 \end{equation}
 %
 at all rebound stages. 
-(See Appendix~\ref{sec:exogenous_p_o} for details.)
+(See Appendix~\ref{sec:non_energy_service_expenditure} for details.)
 
 
 %------------------------------

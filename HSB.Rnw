@@ -1588,7 +1588,7 @@ The ratio of rates of other goods consumed across the income effect is given by
 and is represented by segments \dbar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 Under the assumption that prices of other goods are exogenous
-(see Appendix~\ref{sec:exogenous_p_o}), 
+(see Appendix~\ref{sec:non_energy_service_expenditure}), 
 the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
 is equal to the ratio of rates of other goods expenditures ($\frac{\rasub{C}_o}{\rorig{C}_o}$)
 such that 
@@ -3468,11 +3468,11 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Exogenous $p_o$ assumption}
-\label{sec:exogenous_p_o}
+\section{Non-energy-service expenditures}
+\label{sec:non_energy_service_expenditure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/exogenous_p_o.tex}
+\input{pieces/non_energy_service_expenditure.tex}
 
 
 
