@@ -164,7 +164,7 @@ signify subtraction of a quantity at an earlier stage of Fig.~\ref{fig:flowchart
 from the same quantity at a later stage of Fig.~\ref{fig:flowchart}.
 E.g.,
 $\Delta \ainc{X} \equiv \ainc{X} - \binc{X}$, and
-$\Delta \aprod{X} \equiv \aprod{X} - \bprod{X}$.
+$\Delta \aprod{X} \equiv \aprod{X} - \bmacro{X}$.
 Lack of decoration on a difference term indicates a difference that spans all stages of Fig.~\ref{fig:flowchart}.
 E.g., $\Delta X \equiv \aprod{X} - \orig{X}$.
 $\Delta X$ is also the sum of differences across each stage in Fig.~\ref{fig:flowchart},
@@ -172,9 +172,9 @@ as shown below.
 %
 \begin{align}
 \Delta X &= \Delta \aprod{X} + \Delta \ainc{X} + \Delta \asub{X} + \Delta \aempl{X} \nonumber \\
-\Delta X &= (\aprod{X} - \bprod{X}) + (\ainc{X} - \binc{X})
+\Delta X &= (\aprod{X} - \bmacro{X}) + (\ainc{X} - \binc{X})
             + (\asub{X} - \bsub{X}) + (\aempl{X} - \bempl{X}) \nonumber \\
-\Delta X &= (\aprod{X} - \cancel{\bprod{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
+\Delta X &= (\aprod{X} - \cancel{\bmacro{X}}) + (\cancel{\ainc{X}} - \cancel{\binc{X}})
             + (\cancel{\asub{X}} - \cancel{\bsub{X}}) + (\cancel{\aempl{X}} - \bempl{X}) \nonumber \\
 \Delta X &= \aprod{X} - \orig{X}
 \end{align}
