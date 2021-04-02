@@ -69,6 +69,7 @@ energy efficiency increases by
 The third utility model (with Cobb-Douglas form) is
 mentioned briefly for completeness.
 We discard the Cobb-Douglas utility model, because
+it is inappropriate for a rebound analysis framework:
 it always gives 100 \% rebound.
 **** Revisit after Gregor edits text below. ****
 
