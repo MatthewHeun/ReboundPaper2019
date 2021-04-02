@@ -1172,7 +1172,7 @@ productivity rebound is given by
   Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
-After some algebra (see Appendix~\ref{sec:Re_prod}), 
+After some algebra (see Appendix~\ref{sec:Re_macro}), 
 we arrive at an expression for \macroeffectadj{} rebound:
 
 \begin{equation} \label{eq:Re_macro}
