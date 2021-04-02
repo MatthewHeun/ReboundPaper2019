@@ -1706,7 +1706,7 @@ After some algebra (see Appendix~\ref{sec:Re_prod}),
 we arrive at an expression for productivity effect rebound:
 
 \begin{equation} \label{eq:Re_prod}
-  Re_{\macro} = \Reprodeqn{} \; .
+  Re_{\macro} = \Remacroeqn{} \; .
 \end{equation}
 %
 
