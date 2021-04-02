@@ -30,7 +30,7 @@ that compares the perceived benefits of
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
 In this appendix, we describe three utility models.
-One utility model is an approximate  model
+The first utility model is an approximate  model
 that applies only for small and marginal
 changes in energy efficiency and 
 energy service price, 
@@ -43,7 +43,7 @@ We note that larger and non-marginal efficiency gains cause greater rebound
 than small and marginal efficiency gains.
 Thus, a mathematically rigorous rebound analysis framework needs to accommodate 
 large, non-marginal efficiency changes.
-A second utility model discussed in this appendix is the
+The second utility model discussed in this appendix is the
 Constant Elasticity of Substitution (CES)
 utility model which does, in fact,
 accommodate large, non-marginal 
@@ -66,7 +66,7 @@ For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
 
-A third utility model (with Cobb-Douglas form) is
+The third utility model (with Cobb-Douglas form) is
 mentioned briefly for completeness.
 We discard the Cobb-Douglas utility model, because
 it always gives 100 \% rebound.
@@ -131,7 +131,7 @@ the ratio of other goods spending, such that
 \end{equation}
 %
 at all rebound stages. 
-(See Appendix~\ref{sec:non_energy_service_expenditure} for details.)
+(See Appendix~\ref{sec:other_goods_expenditures} for details.)
 
 
 %------------------------------
