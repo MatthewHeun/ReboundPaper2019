@@ -1189,14 +1189,14 @@ As shown in Table~\ref{tab:prodeffect},
 productivity rebound is given by
 %
 \begin{equation} \label{eq:Re_prod_def}
-  Re_{\productivity} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
+  Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
 we arrive at an expression for \prodeffectadj{} rebound:
 %
 \begin{equation} \label{eq:Re_prod}
-  Re_{\productivity} = \Reprodeqn{} \; .
+  Re_{\macro} = \Reprodeqn{} \; .
 \end{equation}
 %
 
@@ -1210,7 +1210,7 @@ the sum of all rebound emerges from the four rebound effects
 (\empleffect{}, \subeffect{}, \inceffect{}, and \prodeffect{}).
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
-productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
+productivity effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_prod}))
 are expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,

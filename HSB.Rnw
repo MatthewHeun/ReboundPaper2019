@@ -1074,7 +1074,7 @@ In the energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph},
 point $a$ lies on the $Re_{tot} = 0\%$ line
 indicating that the $Re_{tot} = 0\%$ line 
 is the basis from which all rebound effects 
-($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\productivity}$)
+($Re_{empl}$, $Re_{sub}$, $Re_{inc}$, and $Re_{\macro}$)
 are measured.
 If rebound effects cause 
 total energy demand to return to the original energy consumption level 
@@ -1697,7 +1697,7 @@ As shown in Table~\ref{tab:prodeffect},
 productivity rebound is given by
 
 \begin{equation} \label{eq:Re_prod_def}
-  Re_{\productivity} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
+  Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
 Productivity effects are shown as segment \bartilde{}
@@ -1706,7 +1706,7 @@ After some algebra (see Appendix~\ref{sec:Re_prod}),
 we arrive at an expression for productivity effect rebound:
 
 \begin{equation} \label{eq:Re_prod}
-  Re_{\productivity} = \Reprodeqn{} \; .
+  Re_{\macro} = \Reprodeqn{} \; .
 \end{equation}
 %
 
@@ -1718,7 +1718,7 @@ we arrive at an expression for productivity effect rebound:
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
 (emplacement effect, substitution effect, income effect, and productivity effect).
-Productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
+Productivity effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_prod}))
 is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
@@ -1748,7 +1748,7 @@ $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim} and~\ref{eq:q_s_solution})),
 $Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
-$Re_{\productivity}$ (Eq.~(\ref{eq:Re_prod})).
+$Re_{\macro}$ (Eq.~(\ref{eq:Re_prod})).
 The total rebound sum ($Re_{sum}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
@@ -2310,7 +2310,7 @@ translates into positive direct and indirect income
 rebound at the micro level. 
 
 Finally, at the macro level, the \prodeffect{} leads to productivity rebound
-($Re_{\productivity}$) of \Sexpr{Re_prod_car_char_perc}\%,
+($Re_{\macro}$) of \Sexpr{Re_prod_car_char_perc}\%,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (transportation).
@@ -2874,11 +2874,11 @@ due to the energy implications of increased spending on other goods.
 
 Finally, rebound due to the macroeconomic 
 \prodeffect{} 
-($Re_{\productivity}$) is \Sexpr{Re_prod_lamp_char_perc}\%
+($Re_{\macro}$) is \Sexpr{Re_prod_lamp_char_perc}\%
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-(It is a coincidence that $Re_{\productivity}$ has the same value as $Re_{iinc}$
+(It is a coincidence that $Re_{\macro}$ has the same value as $Re_{iinc}$
 to 1 decimal place for the lighting example.)
 
 
@@ -2907,7 +2907,7 @@ shows the effects of key rebound parameters
 ($\aprod{\eta}$, $p_E$, $\eqspsUC$, and $k$)
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
-$Re_{dinc}$, $Re_{iinc}$, and $Re_{\productivity}$).
+$Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
 In the graphs, 
 nominal values for the rebound parameters are shown as points, 
 and sensitivity trends are shown as lines. 
@@ -3232,7 +3232,7 @@ The sensitivity of energy rebound
 to the productivity factor ($k$) is shown 
 in Fig.~\ref{fig:all_Re_terms_k_graph}.
 The productivity factor has a linear effect on total rebound
-through the productivity rebound component ($Re_{\productivity}$).
+through the productivity rebound component ($Re_{\macro}$).
 All other rebound components are constant as $k$ changes.
 
 A limitation of the productivity factor sensitivity analysis is that
