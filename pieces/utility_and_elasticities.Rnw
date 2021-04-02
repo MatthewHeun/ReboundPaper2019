@@ -33,11 +33,11 @@ In this appendix, we describe two utility models.
 One utility model is an approximate  model
 that applies only when
 changes in energy efficiency and 
-changes in service price are infinitesimally
-small ($\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$).
-In fact, infinitesimally small efficiency gains are
-likely to be uneconomic: 
-the increased capital expense will overwhelm the financial savings.
+changes in service price are marginal and small
+such that $\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$.
+We note that small efficiency gains are
+unlikely to be economic: 
+the capital cost of the EEU will overwhelm expected financial savings.
 Accordingly, 
 the real-world EEUs in this paper have very large percentage increases in energy efficiency.
 For the car in Section~\ref{sec:car_example}, 
@@ -48,23 +48,32 @@ a \Sexpr{eta_car_perc_improvement}~\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
-The approximate utility model is rarely applicable to real-world EEUs.
+Thus, the approximate utility model is rarely applicable to real-world EEUs.
 The approximate model is discussed for continuity with the literature only.
 (See, for example, \citet{Borenstein:2015aa}.)
-The other utility model is the CES utility model employed in the rebound framework.
+
+The other utility model is a 
+Constant Elasticity of Substitution (CES)
+utility model that underlies the substitution effect
+in this rebound framework.
+The CES utility model applies when changes in the energy service price
+and energy efficiency are non-marginal,
+as all real-world EEUs are expected to be.
 (See Section~\ref{sec:sub_effect_main_paper}.)
 
-Both utility models in the substitution effect
-rely upon elasticities to estimate consumption utility
-and the comparative benefits of 
+In the substitution effect, Both utility models
+rely upon elasticities to estimate 
+consumption utility and
+the comparative benefits of 
 consuming the energy service ($\Delta \rasub{q}_s$) and
 consuming other goods and services ($\Delta \rasub{C}_o$).
-Like the substitution effect,
+Similarly,
 the income effect also employs elasticities to determine changes to 
 the rate of energy service consumption ($\Delta \rainc{q}_s$) and
 the rate of other goods consumption ($\Delta \rainc{C}_o$).
 In the income effect, 
-elasticities describe the proportions of net income spent on the energy service
+elasticities describe the proportions of net income ($\rasub{N}$)
+spent on the energy service
 and other goods and services.
 
 In this appendix,
