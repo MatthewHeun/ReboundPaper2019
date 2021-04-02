@@ -29,7 +29,7 @@ the substitution effect requires a model for device owner utility
 that compares the perceived benefits of 
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
-In this appendix, we describe two utility models.
+In this appendix, we describe three utility models.
 One utility model is an approximate  model
 that applies only for small and marginal
 changes in energy efficiency and 
@@ -43,7 +43,7 @@ We note that larger and non-marginal efficiency gains cause greater rebound
 than small and marginal efficiency gains.
 Thus, a mathematically rigorous rebound analysis framework needs to accommodate 
 large, non-marginal efficiency changes.
-The second utility model discussed in this paper is a 
+A second utility model discussed in this appendix is the
 Constant Elasticity of Substitution (CES)
 utility model which does, in fact,
 accommodate large, non-marginal 
@@ -52,7 +52,6 @@ The CES utility model
 underlies the substitution effect
 in this rebound framework.
 (See Section~\ref{sec:sub_effect_main_paper}.)
-
 Furthermore,
 the CES utility model is needed for 
 the example EEUs in this paper,
@@ -67,7 +66,13 @@ For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
 
-In the substitution effect, both utility models
+A third utility model (with Cobb-Douglas form) is
+mentioned briefly for completeness.
+We discard the Cobb-Douglas utility model, because
+it always gives 100 \% rebound.
+**** Revisit after Gregor edits text below. ****
+
+In the substitution effect, all utility models 
 rely upon elasticities to estimate 
 consumption utility and
 the comparative benefits of 
@@ -332,7 +337,7 @@ with
   \fCs \equiv \frac{\rorig{C}_s}{\rorig{C}_s + \rorig{C}_o} \; .
 \end{equation}
 
-We note briefly (because we don't use it in this paper), 
+We note briefly (because we don't use it elsewhere in this paper), 
 that a common utility model takes the form of a Cobb-Douglas function
 
 \begin{equation} \label{eq:CD_utility}
@@ -341,7 +346,8 @@ that a common utility model takes the form of a Cobb-Douglas function
 \end{equation}
 %
 where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ gives the relative importance to utility
+$\alpha \in (0,1)$ is an elasticity 
+which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
 However, the uncompensated own-price elasticity ($\eqspsUC$)
