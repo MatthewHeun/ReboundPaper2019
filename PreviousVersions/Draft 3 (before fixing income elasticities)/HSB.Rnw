@@ -665,7 +665,7 @@ In each subsection, we
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:prodeffect}
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect}
 which provide a structure for energy and financial accounting.
 We begin with the \empleffect{}.
 
@@ -1165,7 +1165,7 @@ with consequent implications for additional energy consumption at the macro leve
 This should not be confused with a ``multiplier" from Keynesian economics,
 on which more in the discussion.
 
-As shown in Table~\ref{tab:prodeffect}, 
+As shown in Table~\ref{tab:macroeffect}, 
 productivity rebound is given by
 
 \begin{equation} \label{eq:Re_macro_def}
