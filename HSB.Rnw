@@ -552,6 +552,7 @@ procure (capital cost), operate, maintain, and dispose of the device
 such that
 $\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
 $\raprod{C}_{\md} > \rbempl{C}_{\md}$.
+(This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
