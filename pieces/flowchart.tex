@@ -10,7 +10,7 @@
   % \node[right=0.2cm of empl] (star) {$\aempl{}$};
   % \node[right=0.2cm of sub] (hat) {$\asub{~}$};
   % \node[right=0.2cm of inc] (bar) {$\ainc{~}$};
-  % \node[right=0.2cm of prod] (tilde) {$\amacro{~}$};
+  % \node[right=0.2cm of macro] (tilde) {$\amacro{~}$};
   \node(orig) at (0cm,0cm) {\strut $\circ$};
   \node[right=0.2cm of orig] (empl)[rounded corners, text=white, fill=emplcolor] {\strut emplacement};
   \node[right=0.2cm of empl] (star) {$*$};
@@ -18,8 +18,8 @@
   \node[right=0.2cm of sub] (hat) {$\wedge$};
   \node[right=0.2cm of hat] (inc)[rounded corners, text=black, fill=inccolor] {\strut income};
   \node[right=0.2cm of inc] (bar) {$-$};
-  \node[right=0.2cm of bar] (prod)[rounded corners, text=black, fill=macrocolor] {\strut productivity};
-  \node[right=0.2cm of prod] (tilde) {$\sim$};
+  \node[right=0.2cm of bar] (macro)[rounded corners, text=black, fill=macrocolor] {\strut macro};
+  \node[right=0.2cm of macro] (tilde) {$\sim$};
 
   % Draw arrows between main row boxes
   \draw[->] (orig) -- (empl);
@@ -28,13 +28,13 @@
   \draw[->] (sub) -- (hat);
   \draw[->] (hat) -- (inc);
   \draw[->] (inc) -- (bar);
-  \draw[->] (bar) -- (prod);
-  \draw[->] (prod) -- (tilde);
+  \draw[->] (bar) -- (macro);
+  \draw[->] (macro) -- (tilde);
   % Add nodes for rebound terms beneath nodes
   \node[below=0.1cm of empl] {$Re_{empl}$};
   \node[below=0.1cm of sub] {$Re_{sub}$};
   \node[below=0.1cm of inc] {$Re_{inc}$};
-  \node[below=0.1cm of prod] {$Re_{\macro}$};
+  \node[below=0.1cm of macro] {$Re_{\macro}$};
   % Add nodes for rebound terms above nodes
   \node[above=0.1cm of empl] {\footnotesize $Re_{dempl}$,$Re_{iempl}$};
   \node[above=0.1cm of sub] {\footnotesize $Re_{dsub}$,$Re_{isub}$};
