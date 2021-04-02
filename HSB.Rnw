@@ -1696,7 +1696,7 @@ a ``multiplier'' from Keynesian economics, on which more in the discussion.
 As shown in Table~\ref{tab:prodeffect}, 
 productivity rebound is given by
 
-\begin{equation} \label{eq:Re_prod_def}
+\begin{equation} \label{eq:Re_macro_def}
   Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
@@ -1705,7 +1705,7 @@ in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 After some algebra (see Appendix~\ref{sec:Re_prod}), 
 we arrive at an expression for productivity effect rebound:
 
-\begin{equation} \label{eq:Re_prod}
+\begin{equation} \label{eq:Re_macro}
   Re_{\macro} = \Remacroeqn{} \; .
 \end{equation}
 %
@@ -1718,7 +1718,7 @@ we arrive at an expression for productivity effect rebound:
 In the comprehensive framework,
 the sum of all rebound emerges from the four rebound effects
 (emplacement effect, substitution effect, income effect, and productivity effect).
-Productivity effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_prod}))
+Productivity effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_macro}))
 is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
@@ -1748,7 +1748,7 @@ $Re_{dsub}$ (Eqs.~(\ref{eq:Re_dsub_prelim} and~\ref{eq:q_s_solution})),
 $Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
-$Re_{\macro}$ (Eq.~(\ref{eq:Re_prod})).
+$Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
 The total rebound sum ($Re_{sum}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
