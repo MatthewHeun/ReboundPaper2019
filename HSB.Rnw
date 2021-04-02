@@ -1633,7 +1633,7 @@ The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
-In contrast, the growth effect is macroeconomic.
+In contrast, the macro effect is macroeconomic.
 Like other factor-augmenting technical change, 
 energy-augmenting technical change reduces production 
 costs and thereby enables more efficient
@@ -1649,7 +1649,7 @@ efficient economy is growing more than one without the improvement,
 taking back part of the expected energy savings. We call this the
 growth effect.
 
-The growth effect is just one instance of the phenomenon
+The macro effect is just one instance of the phenomenon
 that reducing the need for an input at the micro level can lead 
 to important and surprising counter-tendencies in the aggregate
 demand for that input.
@@ -1670,7 +1670,7 @@ all factor-augmenting technical change that accelerates economic
 growth can be analyzed in terms of its contribution to rebound 
 relative to counterfactual scenario of lower growth.
 
-To operationalize this growth effect, that ultimately leads to 
+To operationalize this macro effect, that ultimately leads to 
 higher incomes and spending on goods and energy services, we scale
 the net income~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, it is reasonable to assume that
@@ -1691,7 +1691,7 @@ In particular, if $k = 1$ and net income was 0.5 per cent of GDP,
 instead of respending only 0.1 per cent of GDP, respending 
 to the tune of 0.2 per cent of GDP would occur, and thus GDP 
 would grow by 0.1 per cent. This should not be confused with 
-a ``multiplier" from Keynesian economics, on which more in the discussion.
+a ``multiplier'' from Keynesian economics, on which more in the discussion.
 
 As shown in Table~\ref{tab:prodeffect}, 
 productivity rebound is given by
