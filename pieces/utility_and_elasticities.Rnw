@@ -31,15 +31,33 @@ consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
 In this appendix, we describe two utility models.
 One utility model is an approximate  model
-that applies only when
+that applies only for small and marginal
 changes in energy efficiency and 
-changes in service price are marginal and small,
+energy service price, 
 such that $\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$.
-We note that small efficiency gains are
-unlikely to be economic: 
-the capital cost of the EEU will overwhelm expected financial savings.
-Accordingly, 
-the real-world EEUs in this paper have very large percentage increases in energy efficiency.
+The approximate utility model 
+is discussed for continuity with the literature only.
+(See, for example, ******** Gregor: can you point to a paper that uses the elasticity equation? ****.)
+
+We note that larger and non-marginal efficiency gains cause greater rebound
+than small and marginal efficiency gains.
+Thus, a mathematically rigorous rebound analysis framework needs to accommodate 
+large, non-marginal efficiency changes.
+The second utility model discussed in this paper is a 
+Constant Elasticity of Substitution (CES)
+utility model which does, in fact,
+accommodate large, non-marginal 
+energy efficiency and energy service price changes.
+The CES utility model 
+underlies the substitution effect
+in this rebound framework.
+(See Section~\ref{sec:sub_effect_main_paper}.)
+
+Furthermore,
+the CES utility model is needed for 
+the example EEUs in this paper,
+which have very large, non-marginal
+percentage increases in energy efficiency.
 For the car in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
@@ -48,20 +66,8 @@ a \Sexpr{eta_car_perc_improvement}~\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
-Thus, the approximate utility model is rarely applicable to real-world EEUs.
-It is discussed for continuity with the literature only.
-(See, for example, \citet{Borenstein:2015aa}.)
 
-The other utility model is a 
-Constant Elasticity of Substitution (CES)
-utility model that underlies the substitution effect
-in this rebound framework.
-The CES utility model applies when changes in the energy service price
-and energy efficiency are non-marginal,
-as all real-world EEUs are expected to be.
-(See Section~\ref{sec:sub_effect_main_paper}.)
-
-In the substitution effect, Both utility models
+In the substitution effect, both utility models
 rely upon elasticities to estimate 
 consumption utility and
 the comparative benefits of 
