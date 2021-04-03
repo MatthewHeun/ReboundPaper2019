@@ -552,6 +552,7 @@ procure (capital cost), operate, maintain, and dispose of the device
 such that
 $\raprod{C}_{cap} > \rbempl{C}_{cap}$ and 
 $\raprod{C}_{\md} > \rbempl{C}_{\md}$.
+(This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed to be exogenous
@@ -1588,7 +1589,7 @@ The ratio of rates of other goods consumed across the income effect is given by
 and is represented by segments \dbar{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 Under the assumption that prices of other goods are exogenous
-(see Appendix~\ref{sec:non_energy_service_expenditure}), 
+(see Appendix~\ref{sec:other_goods_expenditures}), 
 the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
 is equal to the ratio of rates of other goods expenditures ($\frac{\rasub{C}_o}{\rorig{C}_o}$)
 such that 
@@ -3470,11 +3471,11 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Non-energy-service expenditures}
-\label{sec:non_energy_service_expenditure}
+\section{Other goods expenditures and constant $p_o$}
+\label{sec:other_goods_expenditures}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{pieces/non_energy_service_expenditure.tex}
+\input{pieces/other_goods_expenditures.tex}
 
 
 

@@ -29,17 +29,34 @@ the substitution effect requires a model for device owner utility
 that compares the perceived benefits of 
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
-In this appendix, we describe two utility models.
-One utility model is an approximate  model
-that applies only when
+In this appendix, we describe three utility models.
+The first utility model is an approximate  model
+that applies only for small and marginal
 changes in energy efficiency and 
-changes in service price are marginal and small,
+energy service price, 
 such that $\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$.
-We note that small efficiency gains are
-unlikely to be economic: 
-the capital cost of the EEU will overwhelm expected financial savings.
-Accordingly, 
-the real-world EEUs in this paper have very large percentage increases in energy efficiency.
+The approximate utility model 
+is discussed for continuity with the literature only.
+(See, for example, ******** Gregor: can you point to a paper that uses the elasticity equation? ****.)
+
+We note that larger and non-marginal efficiency gains cause greater rebound
+than small and marginal efficiency gains.
+Thus, a mathematically rigorous rebound analysis framework needs to accommodate 
+large, non-marginal efficiency changes.
+The second utility model discussed in this appendix is the
+Constant Elasticity of Substitution (CES)
+utility model which does, in fact,
+accommodate large, non-marginal 
+energy efficiency and energy service price changes.
+The CES utility model 
+underlies the substitution effect
+in this rebound framework.
+(See Section~\ref{sec:sub_effect_main_paper}.)
+Furthermore,
+the CES utility model is needed for 
+the example EEUs in this paper,
+which have very large, non-marginal
+percentage increases in energy efficiency.
 For the car in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
@@ -48,20 +65,15 @@ a \Sexpr{eta_car_perc_improvement}~\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
-Thus, the approximate utility model is rarely applicable to real-world EEUs.
-It is discussed for continuity with the literature only.
-(See, for example, \citet{Borenstein:2015aa}.)
 
-The other utility model is a 
-Constant Elasticity of Substitution (CES)
-utility model that underlies the substitution effect
-in this rebound framework.
-The CES utility model applies when changes in the energy service price
-and energy efficiency are non-marginal,
-as all real-world EEUs are expected to be.
-(See Section~\ref{sec:sub_effect_main_paper}.)
+The third utility model (with Cobb-Douglas form) is
+mentioned briefly for completeness.
+We discard the Cobb-Douglas utility model, because
+it is inappropriate for a rebound analysis framework:
+it always gives 100 \% rebound.
+**** Revisit after Gregor edits text below. ****
 
-In the substitution effect, Both utility models
+In the substitution effect, all utility models 
 rely upon elasticities to estimate 
 consumption utility and
 the comparative benefits of 
@@ -120,7 +132,7 @@ the ratio of other goods spending, such that
 \end{equation}
 %
 at all rebound stages. 
-(See Appendix~\ref{sec:non_energy_service_expenditure} for details.)
+(See Appendix~\ref{sec:other_goods_expenditures} for details.)
 
 
 %------------------------------
@@ -326,7 +338,7 @@ with
   \fCs \equiv \frac{\rorig{C}_s}{\rorig{C}_s + \rorig{C}_o} \; .
 \end{equation}
 
-We note briefly (because we don't use it in this paper), 
+We note briefly (because we don't use it elsewhere in this paper), 
 that a common utility model takes the form of a Cobb-Douglas function
 
 \begin{equation} \label{eq:CD_utility}
@@ -335,7 +347,8 @@ that a common utility model takes the form of a Cobb-Douglas function
 \end{equation}
 %
 where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ gives the relative importance to utility
+$\alpha \in (0,1)$ is an elasticity 
+which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
 However, the uncompensated own-price elasticity ($\eqspsUC$)
