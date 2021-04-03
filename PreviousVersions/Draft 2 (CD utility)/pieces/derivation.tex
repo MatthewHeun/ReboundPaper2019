@@ -40,7 +40,7 @@ capital expenditure rates, and
 maintenance and disposal expenditure rates
 are typical, and
 inequalities could switch direction for a specific EEU.
-\Prodeffect{} relationships are given for a single device only.
+\Macroeffect{} relationships are given for a single device only.
 If the EEU is deployed at scale across the economy, 
 the energy service consumption rate~($\rate{q}_s$), 
 device energy consumption rate~($\rate{E}_s$), 
@@ -58,7 +58,7 @@ will all increase.
 %++++++++++++++++++++++++++++++
 
 Derivations for rebound definitions and net income equations
-are presented in Tables~\ref{tab:empleffect}--\ref{tab:prodeffect},
+are presented in Tables~\ref{tab:empleffect}--\ref{tab:macroeffect},
 one for each stage in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
 each informs the other.
@@ -116,20 +116,20 @@ $\raempl{E}_s = \frac{\raempl{q}_s}{\aempl{\eta}}$.
 \end{equation}
 %
 With reference to Table~\ref{tab:analysis_assumptions}, 
-we use $\raempl{q}_s = \rbempl{q}_s$ and $\aempl{\eta} = \aprod{\eta}$ to obtain
+we use $\raempl{q}_s = \rbempl{q}_s$ and $\aempl{\eta} = \amacro{\eta}$ to obtain
 %
 \begin{equation}
-  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\rbempl{q}_s}{\aprod{\eta}} \; .
+  \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\rbempl{q}_s}{\amacro{\eta}} \; .
 \end{equation}
 %
-When the EEU increases efficiency such that $\aprod{\eta} > \bempl{\eta}$,
+When the EEU increases efficiency such that $\amacro{\eta} > \bempl{\eta}$,
 expected energy savings grows ($\Sdot > 0$)
 as the rate of final energy consumption declines,
 as expected.
-As $\aprod{\eta} \rightarrow \infty$,
+As $\amacro{\eta} \rightarrow \infty$,
 all final energy consumption is eliminated ($\raempl{E}_s \rightarrow 0$), and
 $\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$.
-(Of course, $\aprod{\eta} \rightarrow \infty$ is impossible. 
+(Of course, $\amacro{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
 
 After rearrangement and using $\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$, 
@@ -330,7 +330,7 @@ depending on the sign of the term $\raempl{C}_{\md}/\rbempl{C}_{\md} - 1$.
 Two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
-This section derives each in terms of energy service efficiencies ($\bempl{\eta}$ and $\aprod{\eta}$),
+This section derives each in terms of energy service efficiencies ($\bempl{\eta}$ and $\amacro{\eta}$),
 the service price elasticity of consumption ($\epsilon_{p_s}$), and
 utility function parameters ($\alpha$ and $\beta$).
 We begin with derivation of two ratios that are helpful later,
@@ -344,9 +344,9 @@ $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
 %..............................
 
 The EEU's energy efficiency increase
-($\aprod{\eta} > \bempl{\eta}$)
+($\amacro{\eta} > \bempl{\eta}$)
 causes the price of the energy service provided by the device to fall
-($\aprod{p}_s < \bempl{p}_s$).
+($\amacro{p}_s < \bempl{p}_s$).
 The substitution effect quantifies the amount by which
 the device owner, in response,
 increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
@@ -357,28 +357,28 @@ is given by the service price elasticity of consumption~($\epsilon_{p_s}$),
 such that
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\epsilon_{p_s}} \; .
 \end{equation}
 %
 We assume that the service price elasticity of consumption~($\epsilon_{p_s}$) is observable
 from service prices only.
 Note that a negative value for the service price elasticity of consumption is expected ($\epsilon_{p_s} < 0$),
-such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
+such that when the energy service price decreases ($\amacro{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
-$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+$\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
 gives
 %
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} \; .
                                                                         \tag{\ref{eq:q_ratio_func_of_eps}}
 \end{equation}
 %
 Again, note that the energy service price elasticity of consumption
 is negative ($\epsilon_{p_s} < 0$), so
-as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
+as energy service efficiency increases ($\amacro{\eta} > \bempl{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the substitution effect on other purchases,
@@ -417,13 +417,13 @@ Rearrangement gives
 Substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) and rearranging gives
 %
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{\eta}}{\bempl{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; . 
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{\eta}}{\bempl{\eta}}\right) ^ {\epsilon_{p_s} (\alpha / \beta)} \; . 
                                                                                               \tag{\ref{eq:qohat_qostar}}
 \end{equation}
 
 Note that the service price elasticity of consumption ($\epsilon_{p_s}$)
 is negative and utility function exponents ($\alpha$ and $\beta$) are positive, such that
-when energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
+when energy service efficiency increases ($\amacro{\eta} > \bempl{\eta}$),
 the quantity of other goods demanded decreases ($\rasub{q}_o < \rbsub{q}_o$),
 as expected for the substitution effect.
 Note, too, that if the device owner derives relatively more utility
@@ -446,7 +446,7 @@ As shown in Table~\ref{tab:subeffect}, direct substitution rebound is defined as
 %
 Expansion of the difference term and
 substitution of Eq.~(\ref{eq:typ_qs_eta_Edot}) in the form
-$\rasub{E}_s = \frac{\rasub{q}_s}{\aprod{\eta}}$
+$\rasub{E}_s = \frac{\rasub{q}_s}{\amacro{\eta}}$
 and
 $\rbsub{E}_s = \frac{\rbsub{q}_s}{\bempl{\eta}}$
 gives
@@ -458,27 +458,27 @@ gives
 and
 %
 \begin{equation}
-     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}{\Sdot} \; .
+     Re_{dsub} = \frac{\frac{\rasub{q}_s}{\amacro{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}{\Sdot} \; .
 \end{equation}
 %
 Substitution of Eq.~(\ref{eq:Sdot}) gives
 %
 \begin{equation}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\amacro{\eta}} - \frac{\rbsub{q}_s}{\bempl{\eta}}}
               {\Sdoteqn} \; .
 \end{equation}
 %
 Rearrangement of the numerator and canceling terms gives
 %
 \begin{equation}
-  Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\aprod{\eta}}} }
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\cancel{\aprod{\eta}}} \rbempl{E}_s} \; ,
+  Re_{dsub} = \frac{\left( \frac{\rasub{q}_s}{\rbsub{q}_s} - 1 \right) \frac{\rbsub{q}_s}{\cancel{\amacro{\eta}}} }
+              {\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\cancel{\amacro{\eta}}} \rbempl{E}_s} \; ,
 \end{equation}
 %
 and
 %
 \begin{equation}
-    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; \;
+    Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbsub{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; \;
                 \frac{\cancelto{\rbempl{E}_s}{\frac{\rbsub{q}_s}{\bempl{\eta}}}}{\rbempl{E}_s} \; .
 \end{equation}
 %
@@ -492,7 +492,7 @@ and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 
 Note that the service price elasticity of energy service consumption is
 expected to be negative ($\epsilon_{p_s} < 0$).
-For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+For example, when $\epsilon_{p_s} = -0.2$ and $\frac{\amacro{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
@@ -507,7 +507,7 @@ of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o
 %
 Substituting 1 and $\infty$ for $\etaratioinline$ gives
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
+  \lim_{\amacro{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
     = -\epsilon_{p_s} ( 1 )^{-(\epsilon_{p_s} + 1)}
     = -\epsilon_{p_s} \; ,                               \tag{\ref{eq:lim_Redsub_1}}
 \end{equation}
@@ -515,7 +515,7 @@ Substituting 1 and $\infty$ for $\etaratioinline$ gives
 and
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
+  \lim_{\amacro{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
     = -\epsilon_{p_s} ( \infty )^{-(\epsilon_{p_s} + 1)}
     = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
 \end{equation}
@@ -582,7 +582,7 @@ the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
       = \frac{\rasub{q}_o}{\rbsub{q}_o} 
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)}  \; .
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)}  \; .
 \end{equation}
 %
 Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
@@ -591,19 +591,19 @@ can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 %
 \begin{equation}
-  \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} \; .
+  \rasub{C}_o = \rbempl{C}_o \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} \; .
 \end{equation}
 
 Substituting Eq.~\ref{eq:Cdot_o_ratio} into Eq.~(\ref{eq:Re_isub_prelim}) gives
 %
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
+  Re_{isub} = \frac{\left[ \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{\epsilon_{p_s} (\alpha / \beta)} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 % %
 Substituting Eq.~\ref{eq:Sdot} gives
 %
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
+  Re_{isub} = \frac{\left[ \left(\frac{\amacro{\eta}}{\bempl{\eta}} \right)
                   ^{\epsilon_{p_s} (\alpha / \beta )} - 1  \right] \rbsub{C}_o I_E}
                   {\Sdoteqn} \; .
 \end{equation}
@@ -615,7 +615,7 @@ Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
 \end{equation}
 
 Because the service price elasticity of consumption is negative ($\epsilon_{p_s} < 0$),
-the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
+the energy service efficiency ratio is greater than 1 ($\amacro{\eta} > \bempl{\eta}$),
 and
 the ratio of utility exponents is positive ($\alpha / \beta > 0$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
@@ -671,7 +671,7 @@ The result depends on the value of $m$ ($\epsilon_{p_s} (\alpha/\beta) + 1$),
 such that a piecewise definition is required:
 %
 \begin{equation}
-  \lim_{\aprod{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
+  \lim_{\amacro{\eta}/\bempl{\eta} \to \infty} Re_{isub} =
   \begin{cases}
     -\frac{\rbempl{C}_0 I_E}{\rbempl{E}_s} \; , & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 < 1 \\
     0 \; ,                                      & \text{for } \epsilon_{p_s} (\alpha/\beta) + 1 = 1 \\
@@ -764,8 +764,8 @@ Substituting Eq.~(\ref{eq:typ_qs_eta_Edot}) and noting efficiency ($\eta$)
 equalities from Table~\ref{tab:analysis_assumptions} gives
 %
 \begin{equation}
-  \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\aprod{\eta}}}{\rbsub{q}_s / \cancel{\aprod{\eta}}} \right)
-                \left( \frac{\raempl{q}_s / \aprod{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
+  \rbinc{E}_s = \left( \frac{\rasub{q}_s / \cancel{\amacro{\eta}}}{\rbsub{q}_s / \cancel{\amacro{\eta}}} \right)
+                \left( \frac{\raempl{q}_s / \amacro{\eta}}{\rbempl{q}_s / \bempl{\eta}} \right)
                 \rbempl{E}_s \; .
 \end{equation}
 %
@@ -774,7 +774,7 @@ Canceling terms yields
 \begin{equation}
   \rbinc{E}_s = \left( \frac{\rasub{q}_s}{\rbsub{q}_s} \right)
                 \left( \cancel{\frac{\raempl{q}_s}{\rbempl{q}_s}} \right)
-                \left( \frac{\bempl{\eta}}{\aprod{\eta}}  \right)
+                \left( \frac{\bempl{\eta}}{\amacro{\eta}}  \right)
                 \rbempl{E}_s \; .
 \end{equation}
 %
@@ -783,7 +783,7 @@ Noting energy service consumption rate equalities from Table~\ref{tab:analysis_a
 %
 \begin{equation} \label{eq:E_dot_s_hat}
   \rbinc{E}_s = \frac{\rasub{q}_s}{\rbsub{q}_s}
-                \frac{\bempl{\eta}}{\aprod{\eta}}
+                \frac{\bempl{\eta}}{\amacro{\eta}}
                 \rbempl{E}_s \; .
 \end{equation}
 
@@ -857,11 +857,11 @@ and
 \end{equation}
 %
 Substituting the Eq.~(\ref{eq:typ_qs_eta_Edot}) as
-$\rainc{E}_s = \frac{\rainc{q}_s}{\aprod{\eta}}$ and  
-$\rbinc{E}_s = \frac{\rbinc{q}_s}{\aprod{\eta}}$ gives
+$\rainc{E}_s = \frac{\rainc{q}_s}{\amacro{\eta}}$ and  
+$\rbinc{E}_s = \frac{\rbinc{q}_s}{\amacro{\eta}}$ gives
 %
 \begin{equation}
-  Re_{dinc} = \frac{\left( \frac{\rainc{q}_s / \cancel{\aprod{\eta}}}{\rbinc{q}_s / \cancel{\aprod{\eta}}} - 1  \right) \rbinc{E}_s} 
+  Re_{dinc} = \frac{\left( \frac{\rainc{q}_s / \cancel{\amacro{\eta}}}{\rbinc{q}_s / \cancel{\amacro{\eta}}} - 1  \right) \rbinc{E}_s} 
               {\Sdot} \; .
 \end{equation}
 %
@@ -877,9 +877,9 @@ Substituting Eq.~(\ref{eq:E_dot_s_hat}) gives
 \begin{equation}
   Re_{dinc} = \frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
                   \frac{\rasub{q}_s}{\rbsub{q}_s}
-                \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}}
+                \cancel{\frac{\bempl{\eta}}{\amacro{\eta}}}
                 \cancel{\rbempl{E}_s}}
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\! \cancel{\frac{\bempl{\eta}}{\aprod{\eta}}} \cancel{\rbempl{E}_s}} \; .
+              {\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)\! \cancel{\frac{\bempl{\eta}}{\amacro{\eta}}} \cancel{\rbempl{E}_s}} \; .
 \end{equation}
 %
 Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
@@ -951,15 +951,15 @@ they add to the net income available to the device owner to spend on other goods
 
 
 %------------------------------
-\subsubsection{\Prodeffect{}} 
-\label{sec:Re_prod}
+\subsubsection{\Macroeffect{}} 
+\label{sec:Re_macro}
 %------------------------------
 
-Productivity rebound~($Re_{\productivity}$) is given by Eq.~(\ref{eq:Re_prod_def}).
+Productivity rebound~($Re_{\macro}$) is given by Eq.~(\ref{eq:Re_macro_def}).
 Substituting Eq.~(\ref{eq:N_dot_I_E_Sdot}) gives
 %
 \begin{equation}
-  Re_{\productivity} = \Reprodeqn{} \; . \tag{\ref{eq:Re_prod}}
+  Re_{\macro} = \Remacroeqn{} \; . \tag{\ref{eq:Re_macro}}
 \end{equation}
 
 
@@ -980,21 +980,21 @@ Substituting Eqs.~(\ref{eq:Re_empl_def}), (\ref{eq:Re_sub_def}), and~(\ref{eq:Re
   Re_{sum} = \; &Re_{emb} + Re_{\md}      & \mathrm{\empleffect} \nonumber \\
                 &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}  \nonumber \\
                 &+ Re_{dinc} + Re_{iinc}   & \mathrm{\inceffect}  \nonumber \\
-                &+ Re_{\productivity}               & \mathrm{\prodeffect}
+                &+ Re_{\macro}               & \mathrm{\macroeffect}
 \end{align}
 %
 Interestingly, 
 indirect income effect rebound~($Re_{iinc}$, Eq.~(\ref{eq:Re_iinc})) and
-productivity effect rebound~($Re_{\productivity}$, Eq.~(\ref{eq:Re_prod}))
+productivity effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_macro}))
 can be expressed in terms of other rebound effects.
-Substituting Eqs.~(\ref{eq:Re_iinc}) and~(\ref{eq:Re_prod}) gives
+Substituting Eqs.~(\ref{eq:Re_iinc}) and~(\ref{eq:Re_macro}) gives
 %
 \begin{align}
   Re_{sum} = \; &Re_{emb} + Re_{\md}      & \mathrm{\empleffect}                           \nonumber \\
                 &+ Re_{dsub} + Re_{isub}   & \mathrm{\subeffect}                            \nonumber \\
                 &+ Re_{dinc} + p_E I_E - Re_{cap} - Re_{\md} - p_E I_E Re_{dsub} 
                              - Re_{isub} - p_E I_E Re_{dinc}   & \mathrm{\inceffect}        \nonumber \\
-                &+ k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub} \; .  & \mathrm{\prodeffect}
+                &+ k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub} \; .  & \mathrm{\macroeffect}
 \end{align}
 %
 Rearranging distributes many indirect income effect and productivity effect terms 

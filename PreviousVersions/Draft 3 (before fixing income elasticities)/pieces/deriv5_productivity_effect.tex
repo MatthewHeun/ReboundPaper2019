@@ -12,16 +12,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%% Productivity Effect %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\derivheader{\refstepcounter{table} Table~\thetable \label{tab:prodeffect}. \bf{\ProdEffect}}
+\derivheader{\refstepcounter{table} Table~\thetable \label{tab:macroeffect}. \bf{\MacroEffect}}
 
 \sectionsep{}
 
 %%%%%%%%%% Before Productivity Effect %%%%%%%%%%
-\derivsection{before ($\bprod{~})$}
+\derivsection{before ($\bmacro{~})$}
 {
 % Before productivity energy
 \begin{equation}
-  \rbprod{E}
+  \rbmacro{E}
 \end{equation}
 }
 {
@@ -31,11 +31,11 @@
 \sectionsep{}
 
 %%%%%%%%%% After Productivity Effect %%%%%%%%%%
-\derivsection{after ($\aprod{~})$}
+\derivsection{after ($\amacro{~})$}
 {
 % After productivity energy
 \begin{equation}
-\raprod{E}
+\ramacro{E}
 \end{equation}
 }
 {
@@ -54,15 +54,15 @@
 Take differences to obtain the change in energy consumption,
 %
 \begin{equation}
-  \Delta \raprod{E} \equiv \raprod{E} - \rbprod{E} \; .
+  \Delta \ramacro{E} \equiv \ramacro{E} - \rbmacro{E} \; .
 \end{equation}
 %
-The energy change due to the productivity effect ($\Delta \raprod{E}$) 
+The energy change due to the productivity effect ($\Delta \ramacro{E}$) 
 is a scalar multiple ($k$) of net income ($\rbinc{N}$), 
 assumed to be spent at the energy intensity of the economy ($I_E$).
 %
 \begin{equation}
-  \Delta \raprod{E} = k \rbinc{N} I_E
+  \Delta \ramacro{E} = k \rbinc{N} I_E
 \end{equation}
 %
 All terms are energy takeback terms.
@@ -70,15 +70,15 @@ Divide by $\Sdot$
 to create rebound terms.
 %
 \begin{equation}
-  \frac{\Delta \raprod{E}}{\Sdot} = \frac{k \rbinc{N} I_E}{\Sdot}
+  \frac{\Delta \ramacro{E}}{\Sdot} = \frac{k \rbinc{N} I_E}{\Sdot}
 \end{equation}
 %
 Define 
-$Re_{\productivity} \equiv \frac{\Delta \raprod{E}}{\Sdot}$, 
+$Re_{\macro} \equiv \frac{\Delta \ramacro{E}}{\Sdot}$, 
 such that
 %
 \begin{equation}
-  Re_{\productivity} = \frac{k \rbinc{N} I_E}{\Sdot} \; . \tag{\ref{eq:Re_prod_def}}
+  Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; . \tag{\ref{eq:Re_macro_def}}
 \end{equation}
 %
 }

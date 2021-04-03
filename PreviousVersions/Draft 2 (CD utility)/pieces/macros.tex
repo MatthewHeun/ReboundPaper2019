@@ -21,13 +21,13 @@
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
-\newcommand{\aprod}[1]{\tilde{#1}}
+\newcommand{\amacro}[1]{\tilde{#1}}
 
 % Create the "before" commands
 \newcommand{\bempl}[1]{\orig{#1}}
 \newcommand{\bsub}[1]{\aempl{#1}}
 \newcommand{\binc}[1]{\asub{#1}}
-\newcommand{\bprod}[1]{\ainc{#1}}
+\newcommand{\bmacro}[1]{\ainc{#1}}
 
 % Decoration combinations
 % Rates after
@@ -35,20 +35,20 @@
 \newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\raprod}[1]{\aprod{\rate{#1}}}
+\newcommand{\ramacro}[1]{\amacro{\rate{#1}}}
 
 % Rates before
 \newcommand{\rbempl}[1]{\rorig{#1}}
 \newcommand{\rbsub}[1]{\raempl{#1}}
 \newcommand{\rbinc}[1]{\rasub{#1}}
-\newcommand{\rbprod}[1]{\rainc{#1}}
+\newcommand{\rbmacro}[1]{\rainc{#1}}
 
 %%%%% Subscript kerning
 
 \newcommand{\OM}{O\!M}
 % \newcommand{\md}{O\!M\!d}
 \newcommand{\md}{md}
-\newcommand{\productivity}{pr\!od}
+\newcommand{\macro}{pr\!od}
 
 
 %%%%% Convenient symbols
@@ -61,7 +61,7 @@
 \newcommand{\emplcolor}{red!25!white}
 \newcommand{\subcolor}{orange!25!white}
 \newcommand{\inccolor}{green!25!white}
-\newcommand{\prodcolor}{blue!25!white}
+\newcommand{\macrocolor}{blue!25!white}
 
 
 %%%%% Coloration of text background
@@ -105,10 +105,10 @@ bottom=2pt}
 \newcommand{\IncEffect}{\inlinebox[\inccolor]{Income Effect}}
 
 % Productivity effect
-\newcommand{\prodeffect}{\inlinebox[\prodcolor]{productivity effect}}
-\newcommand{\prodeffectadj}{\inlinebox[\prodcolor]{productivity-effect}}
-\newcommand{\Prodeffect}{\inlinebox[\prodcolor]{Productivity effect}}
-\newcommand{\ProdEffect}{\inlinebox[\prodcolor]{Productivity Effect}}
+\newcommand{\macroeffect}{\inlinebox[\macrocolor]{productivity effect}}
+\newcommand{\macroeffectadj}{\inlinebox[\macrocolor]{productivity-effect}}
+\newcommand{\Macroeffect}{\inlinebox[\macrocolor]{Productivity effect}}
+\newcommand{\MacroEffect}{\inlinebox[\macrocolor]{Productivity Effect}}
 
 
 
@@ -203,8 +203,8 @@ bottom=2pt}
 % Equations
 
 % Efficiency ratios
-\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
-\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+\newcommand{\etaratioinline}{\amacro{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\amacro{\eta}}{\bempl{\eta}}}
 
 % Derivative with respect to efficiency ratio
 \newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
@@ -246,22 +246,22 @@ bottom=2pt}
 \newcommand{\ReOMdeqn}{\frac{\left( \frac{\raempl{C}_{\md}}{\rbempl{C}_{\md}} - 1 \right) \rbempl{C}_{\md} I_E}{\Sdot}}
 
 % Equation for S_dot_dev
-\newcommand{\Sdoteqn}{\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
+\newcommand{\Sdoteqn}{\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)\!\frac{\bempl{\eta}}{\amacro{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
-\newcommand{\Redsubeqn}{\frac{\left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
-                        {\frac{\aprod{\eta}}{\bempl{\eta}} - 1}}
+\newcommand{\Redsubeqn}{\frac{\left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}} - 1}
+                        {\frac{\amacro{\eta}}{\bempl{\eta}} - 1}}
                         
 % Equation for Re_isub
-\newcommand{\Reisubeqn}{\frac{{\left( \frac{\aprod{\eta}}{\bempl{\eta}}  \right)}
-                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; 
-                          \frac{\aprod{\eta}}{\bempl{\eta}} \; 
+\newcommand{\Reisubeqn}{\frac{{\left( \frac{\amacro{\eta}}{\bempl{\eta}}  \right)}
+                          ^{\epsilon_{p_s} (\alpha / \beta)} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; 
+                          \frac{\amacro{\eta}}{\bempl{\eta}} \; 
                           \frac{\rbempl{C}_o I_E}{\rbempl{E}_s}}
 
 % Equation for Re_dinc
 \newcommand{\Redinceqnapprox}{\frac{\left[ \left( 1 + \frac{\rbinc{N}}{\rbempl{M}} \right) ^{\epsilon_{dinc}} - 1  \right] 
-                  \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
-              {\left( \frac{\aprod{\eta}}{\bempl{\eta}} - 1 \right)}}
+                  \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\epsilon_{p_s}}}
+              {\left( \frac{\amacro{\eta}}{\bempl{\eta}} - 1 \right)}}
 
 % Equation for Re_cap
 \newcommand{\Recapeqn}{\frac{\Delta \raempl{C}_{cap} I_E}{\Sdot}}
@@ -270,7 +270,7 @@ bottom=2pt}
 \newcommand{\Reiinceqnapprox}{p_E I_E - Re_{cap} - Re_{\md} - p_E I_E Re_{dsub} - Re_{isub} - p_E I_E Re_{dinc}}
 
 % Equation for Re_prod
-\newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub}}
+\newcommand{\Remacroeqn}{k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub}}
 
 % Equation for Re_tot
 \newcommand{\Retoteqn}{&Re_{emb} - (1+k) Re_{cap} - k Re_{\md}         \nonumber \\

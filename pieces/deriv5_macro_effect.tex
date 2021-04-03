@@ -3,52 +3,52 @@
 % before building the paper.
 %!TEX root = ../HSB.Rnw
 
-% This file contains the derivation for income effect rebound and net income.
+% This file contains the derivation for macro effect rebound.
 
 \begin{landscape}
 
 \linespread{1}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%% Productivity Effect %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%% Macro Effect %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \derivheader{\refstepcounter{table} Table~\thetable \label{tab:macroeffect}. \bf{\MacroEffect}}
 
 \sectionsep{}
 
-%%%%%%%%%% Before Productivity Effect %%%%%%%%%%
-\derivsection{before ($\bmacro{~})$}
+%%%%%%%%%% Before Macro Effect %%%%%%%%%%
+\derivsection{before ($-$)}
 {
-% Before productivity energy
+% Before macro energy
 \begin{equation}
   \rbmacro{E}
 \end{equation}
 }
 {
-% Before productivity financial
+% Before macro financial
 }
 
 \sectionsep{}
 
-%%%%%%%%%% After Productivity Effect %%%%%%%%%%
-\derivsection{after ($\amacro{~})$}
+%%%%%%%%%% After Macro Effect %%%%%%%%%%
+\derivsection{after ($\sim$)}
 {
-% After productivity energy
+% After macro energy
 \begin{equation}
 \ramacro{E}
 \end{equation}
 }
 {
-% After productivity financial
+% After macro financial
 }
 
 \sectionsep{}
 
-%%%%%%%%%%% Derivations for productivty Effect %%%%%%%%%%
+%%%%%%%%%%% Derivations for macro Effect %%%%%%%%%%
 \derivsection{}
-% Productivity effect: energy differences
+% Macro effect: energy differences
 {
-%%%%%%%%%% Energy Productivity Effect %%%%%%%%%%
+%%%%%%%%%% Energy Macro Effect %%%%%%%%%%
 ~
 
 Take differences to obtain the change in energy consumption,
@@ -57,7 +57,7 @@ Take differences to obtain the change in energy consumption,
   \Delta \ramacro{E} \equiv \ramacro{E} - \rbmacro{E} \; .
 \end{equation}
 %
-The energy change due to the productivity effect ($\Delta \ramacro{E}$) 
+The energy change due to the macro effect ($\Delta \ramacro{E}$) 
 is a scalar multiple ($k$) of net income ($\rbinc{N}$), 
 assumed to be spent at the energy intensity of the economy ($I_E$).
 %
@@ -83,7 +83,7 @@ such that
 %
 }
 {
-%%%%%%%%%% Financial Productivity Effect %%%%%%%%%%
+%%%%%%%%%% Financial Macro Effect %%%%%%%%%%
 ~
 \centering
 

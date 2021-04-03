@@ -14,9 +14,9 @@ the rate of other goods consumption ($\rasub{C}_o$)
 must be determined as a result of the substitution effect.
 
 The EEU's energy efficiency increase
-($\aprod{\eta} > \bempl{\eta}$)
+($\amacro{\eta} > \bempl{\eta}$)
 causes the price of the energy service provided by the device to fall
-($\aprod{p}_s < \bempl{p}_s$).
+($\amacro{p}_s < \bempl{p}_s$).
 The substitution effect quantifies the amount by which
 the device owner, in response,
 increases the consumption rate of the energy service ($\rasub{q}_s > \rbsub{q}_s$) and
@@ -50,39 +50,39 @@ Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
 in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
 
 \begin{equation}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\aprod{\eta}} - \frac{\rbsub{q}_s}{\aprod{\eta}}}{\Sdot} \; .
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\amacro{\eta}} - \frac{\rbsub{q}_s}{\amacro{\eta}}}{\Sdot} \; .
 \end{equation}
 %
 Rearranging produces
 
 \begin{equation}
   Re_{dsub} = \frac{ \left( \frac{\rasub{q}_s}{\rbempl{q}_s}
-                    - \frac{\rbsub{q}_s}{\rbempl{q}_s}  \right) \frac{\rbempl{q}_s}{\aprod{\eta}} }{\Sdot} \; .
+                    - \frac{\rbsub{q}_s}{\rbempl{q}_s}  \right) \frac{\rbempl{q}_s}{\amacro{\eta}} }{\Sdot} \; .
 \end{equation}
 %
 Recognizing that the rate of energy service consumption ($\rate{q}_s$)
 is unchanged across the emplacement effect leads to $\frac{\rbsub{q}_s}{\rbempl{q}_s} = 1$.
-Furthermore, $\frac{\rbempl{q}_s}{\aprod{\eta}}
-            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\aprod{\eta}}
-            = \rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}$,
+Furthermore, $\frac{\rbempl{q}_s}{\amacro{\eta}}
+            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\amacro{\eta}}
+            = \rbempl{E}_s \frac{\bempl{\eta}}{\amacro{\eta}}$,
 such that
 
 \begin{equation}
   Re_{dsub} = \left( \frac{\rasub{q}_s}{\rbempl{q}_s} - 1  \right)
-              \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\Sdot} \; .
+              \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\amacro{\eta}}}{\Sdot} \; .
 \end{equation}
 %
 Substituting Eq.~(\ref{eq:Sdot}) for $\Sdot$ and rearranging gives
 
 \begin{equation}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1}
-              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\aprod{\eta}}}{\frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s} \right) \; .
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1}
+              \left( \frac{\rbempl{E}_s \frac{\bempl{\eta}}{\amacro{\eta}}}{\frac{\bempl{\eta}}{\amacro{\eta}} \rbempl{E}_s} \right) \; .
 \end{equation}
 %
 Simplifying yields
 
 \begin{equation} \label{eq:Re_dsub_prelim}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\aprod{\eta}}{\bempl{\eta}} - 1} \; .
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; .
 \end{equation}
 %
 Eq.~(\ref{eq:Re_dsub_prelim}) is the basis for
@@ -130,7 +130,7 @@ is given by the service price elasticity of energy service consumption~($\eqsps$
 such that
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
 \end{equation}
 %
 Note that the energy service price elasticity of energy service consumption ($\eqsps$)
@@ -138,22 +138,22 @@ is (incorrectly) assumed constant along an indifference curve
 in the approximate method. 
 A negative value for the service price elasticity of energy service consumption
 is expected ($\eqsps < 0$),
-such that when the energy service price decreases ($\aprod{p}_s < \bempl{p}_s$),
+such that when the energy service price decreases ($\amacro{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
 $\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
-$\aprod{p}_s = \frac{\bempl{p}_E}{\aprod{\eta}}$
+$\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
 and noting that $\rbempl{q}_s = \raempl{q}_s$ gives
 gives
 
 \begin{equation} \label{eq:approx_qshat_over_qsorig}
-  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbempl{q}_s} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
 \end{equation}
 %
 Again, note that the energy service price elasticity of energy service consumption
 is negative ($\eqsps < 0$), so that
-as energy service efficiency increases ($\aprod{\eta} > \bempl{\eta}$),
+as energy service efficiency increases ($\amacro{\eta} > \bempl{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting Eq.~(\ref{eq:approx_qshat_over_qsorig}) into Eq.~(\ref{eq:Re_dsub_prelim})
@@ -165,7 +165,7 @@ yields the approximate expression for direct substitution rebound.
 
 Note that the service price elasticity of energy service consumption is
 expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\frac{\aprod{\eta}}{\bempl{\eta}} = 2$,
+For example, when $\eqsps = -0.2$ and $\frac{\amacro{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 With $\eqsps \in (-1, 0)$ expected,
@@ -186,12 +186,12 @@ the energy service price elasticity of other goods consumption~($\eqops$),
 such that
 
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\aprod{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; .
 \end{equation}
 %
 Because the energy service price elasticity of other goods consumption
 is positive ($\eqops > 0$),
-an energy service price decrease ($\aprod{p}_s < \bempl{p}_s$)
+an energy service price decrease ($\amacro{p}_s < \bempl{p}_s$)
 implies a reduction in the rate of consumption of other goods ($\rasub{q}_o < \rbsub{q}_o$).
 
 The energy service price is inversely proportional to 
@@ -230,7 +230,7 @@ Eq.~(\ref{eq:qohat_qostar}) can be added to find
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
       = \frac{\rasub{q}_o}{\rbsub{q}_o} 
-      = \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
 \end{equation}
 %
 Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
@@ -239,20 +239,20 @@ can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
 \begin{equation}
-  \rasub{C}_o = \rbempl{C}_o \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
+  \rasub{C}_o = \rbempl{C}_o \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
 \end{equation}
 
 Substituting $\rbsub{C}_o = \rbempl{C}_o$ into Eq.~\ref{eq:Cdot_o_ratio} and 
 the result into Eq.~(\ref{eq:Re_isub_prelim}) gives
 
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left( \frac{\aprod{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
+  Re_{isub} = \frac{\left[ \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 %
 Substituting Eq.~\ref{eq:Sdot} for $\Sdot$ gives
 
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left(\frac{\aprod{\eta}}{\bempl{\eta}} \right)
+  Re_{isub} = \frac{\left[ \left(\frac{\amacro{\eta}}{\bempl{\eta}} \right)
                   ^{-\eqops} - 1  \right] \rbsub{C}_o I_E}
                   {\Sdoteqn} \; .
 \end{equation}
@@ -264,7 +264,7 @@ Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
 \end{equation}
 
 Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
-the energy service efficiency ratio is greater than 1 ($\aprod{\eta} > \bempl{\eta}$),
+the energy service efficiency ratio is greater than 1 ($\amacro{\eta} > \bempl{\eta}$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
 Negative rebound indicates that indirect substitution effects 
@@ -325,7 +325,7 @@ Second, the equation of the \starstar{} expenditure line is
 
 \begin{equation} \label{eq:starstar_line}
   \frac{\rate{C}_o}{\rbempl{C}_o} = 
-      -\frac{\aprod{p}_s \rbempl{q}_s}
+      -\frac{\amacro{p}_s \rbempl{q}_s}
             {\rbempl{C}_o}
         \left(  \frac{\rate{q}_s}{\rbempl{q}_s} \right)
       + \frac{1}{\rbempl{C}_o} 
@@ -344,7 +344,7 @@ equal to the slope of the \iicirc{} indifference curve
 at the original utility rate of $\rate{u}/\rbempl{u} = 1$ (Eq.~(\ref{eq:slope_indifference_curve_u1})).
 
 \begin{equation}
-  -\frac{\aprod{p}_s \rbempl{q}_s}
+  -\frac{\amacro{p}_s \rbempl{q}_s}
         {\rbempl{C}_o} = 
     -\frac{\fCs}{1 - \fCs} \left( \frac{\rate{q}_s}{\rbempl{q}_s} \right)^{(\rho -1)} % \nonumber  \\
         \left[ \left( \frac{1}{1 - \fCs} \right) 
@@ -356,7 +356,7 @@ Solving for $\rate{q}_s/\rbempl{q}_s$ gives $\rasub{q}_s/\rbempl{q}_s$ as
 
 \begin{equation} \label{eq:q_s_solution}
   \frac{\rasub{q}_s}{\rbempl{q}_s} = \left\{ \fCs + (1-\fCs) 
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
                                                   ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho} \; .
 \end{equation}
 
@@ -381,7 +381,7 @@ to obtain
   \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \left( \frac{1}{1-\fCs} \right) 
                                      - \left( \frac{\fCs}{1-\fCs} \right)   
               \left\{ \fCs + (1-\fCs)
-                  \left[ \left( \frac{1-\fCs}{\fCs} \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
+                  \left[ \left( \frac{1-\fCs}{\fCs} \right) \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o}   \right] 
                       ^{\frac{\rho}{1-\rho}} \right\} ^{-1} \right\} ^{1/\rho} \; .
 \end{equation}
 
@@ -389,7 +389,7 @@ Simplifying gives
 
 \begin{equation} \label{eq:C_o_solution}
   \frac{\rasub{C}_o}{\rbempl{C}_o} = \left\{ \frac{1}{1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
+          \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\}} \right\} 
                                                 ^{1/\rho} \; .
 \end{equation}
 

@@ -21,13 +21,13 @@
 \newcommand{\aempl}[1]{{#1}^*}
 \newcommand{\asub}[1]{\hat{#1}}
 \newcommand{\ainc}[1]{\bar{#1}}
-\newcommand{\aprod}[1]{\tilde{#1}}
+\newcommand{\amacro}[1]{\tilde{#1}}
 
 % Create the "before" commands
 \newcommand{\bempl}[1]{\orig{#1}}
 \newcommand{\bsub}[1]{\aempl{#1}}
 \newcommand{\binc}[1]{\asub{#1}}
-\newcommand{\bprod}[1]{\ainc{#1}}
+\newcommand{\bmacro}[1]{\ainc{#1}}
 
 % Decoration combinations
 % Rates after
@@ -35,22 +35,20 @@
 \newcommand{\raempl}[1]{\aempl{\rate{#1}}}
 \newcommand{\rasub}[1]{\asub{\rate{#1}}}
 \newcommand{\rainc}[1]{\ainc{\rate{#1}}}
-\newcommand{\raprod}[1]{\aprod{\rate{#1}}}
+\newcommand{\ramacro}[1]{\amacro{\rate{#1}}}
 
 % Rates before
 \newcommand{\rbempl}[1]{\rorig{#1}}
 \newcommand{\rbsub}[1]{\raempl{#1}}
 \newcommand{\rbinc}[1]{\rasub{#1}}
-\newcommand{\rbprod}[1]{\rainc{#1}}
+\newcommand{\rbmacro}[1]{\rainc{#1}}
 
 %%%%% Subscript kerning
 
 % \newcommand{\OM}{O\!M}
 % \newcommand{\md}{O\!M\!d}
 \newcommand{\md}{md}
-% Can't be \prod, because \prod is already a command for the product symbol.
-\newcommand{\productivity}{pr\!od}
-% \newcommand{\productivity}{macr\!o} 
+\newcommand{\macro}{macr\!o}
 \newcommand{\life}{li\!f\!e}
 
 
@@ -76,13 +74,13 @@
 % \colorlet{emplcolor}{red!25!white}
 % \colorlet{subcolor}{orange!25!white}
 % \colorlet{inccolor}{green!25!white}
-% \colorlet{prodcolor}{blue!25!white}
+% \colorlet{macrocolor}{blue!25!white}
 
 % New Viridis "plasma" colours
 \definecolor{emplcolor}{HTML}{150789}
 \definecolor{subcolor}{HTML}{99149F}
 \definecolor{inccolor}{HTML}{E76F5A}
-\definecolor{prodcolor}{HTML}{F7E225}
+\definecolor{macrocolor}{HTML}{F7E225}
 
 
 
@@ -126,11 +124,11 @@ bottom=2pt}
 \newcommand{\Inceffect}{\inlinebox[inccolor]{\textcolor{black}{Income effect}}}
 \newcommand{\IncEffect}{\inlinebox[inccolor]{\textcolor{black}{Income Effect}}}
 
-% Productivity effect
-\newcommand{\prodeffect}{\inlinebox[prodcolor]{\textcolor{black}{productivity effect}}}
-\newcommand{\prodeffectadj}{\inlinebox[prodcolor]{\textcolor{black}{productivity-effect}}}
-\newcommand{\Prodeffect}{\inlinebox[prodcolor]{\textcolor{black}{Productivity effect}}}
-\newcommand{\ProdEffect}{\inlinebox[prodcolor]{\textcolor{black}{Productivity Effect}}}
+% Macro effect
+\newcommand{\macroeffect}{\inlinebox[macrocolor]{\textcolor{black}{macro effect}}}
+\newcommand{\macroeffectadj}{\inlinebox[macrocolor]{\textcolor{black}{macro-effect}}}
+\newcommand{\Macroeffect}{\inlinebox[macrocolor]{\textcolor{black}{Macro effect}}}
+\newcommand{\MacroEffect}{\inlinebox[macrocolor]{\textcolor{black}{Macro Effect}}}
 
 
 %%%%% minipage for assumptions and constraints tables
@@ -224,8 +222,8 @@ bottom=2pt}
 % Equations
 
 % Efficiency ratios
-\newcommand{\etaratioinline}{\aprod{\eta}/\bempl{\eta}}
-\newcommand{\etaratiostacked}{\frac{\aprod{\eta}}{\bempl{\eta}}}
+\newcommand{\etaratioinline}{\amacro{\eta}/\bempl{\eta}}
+\newcommand{\etaratiostacked}{\frac{\amacro{\eta}}{\bempl{\eta}}}
 
 % Derivative with respect to efficiency ratio
 \newcommand{\dbydetaeta}{\frac{\mathrm{d}}{\mathrm{d}(\etaratioinline{})}}
@@ -269,7 +267,7 @@ bottom=2pt}
 % Equation for S_dot_dev
 % \newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\!\etaratiostacked \rbempl{E}_s}
 \newcommand{\Sdoteqn}{\left( \etaratiostacked - 1 \right)\! 
-                            \frac{\bempl{\eta}}{\aprod{\eta}} \rbempl{E}_s}
+                            \frac{\bempl{\eta}}{\amacro{\eta}} \rbempl{E}_s}
 
 % Equation for Re_dsub
 \newcommand{\Redsubeqn}{\frac{\left( \etaratiostacked \right)^{-\eqsps} - 1}
@@ -287,12 +285,12 @@ bottom=2pt}
         
 % Equation for q_s_hat/q_s_orig
 \newcommand{\qssolution}{\left\{ \fCs + (1-\fCs)
-      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
+      \left[ \left(  \frac{1-\fCs}{\fCs}  \right) \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o}  \right]
                                                   ^{\frac{\rho}{1-\rho}} \right\} ^ {-1/\rho}}
 
 % Equation for C_o_hat/C_o_orig
 \newcommand{\Cosolution}{\left[ \left( 1 + \fCs \left\{ \left[ \left( \frac{1-\fCs}{\fCs} \right)
-          \frac{\aprod{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right)^{-1}  \right] 
+          \frac{\amacro{p}_s \rbempl{q}_s}{\rbempl{C}_o} \right] ^{1-\sigma} - 1 \right\} \right)^{-1}  \right] 
                                                 ^{1/\rho}}
 
 % Equation for Re_dsub for the CES utility model
@@ -338,8 +336,8 @@ bottom=2pt}
              \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
          {\etaratiostacked - 1}}
 
-% Equation for Re_prod
-\newcommand{\Reprodeqn}{k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub}}
+% Equation for Re_macro
+\newcommand{\Remacroeqn}{k p_E I_E - k Re_{cap} - k Re_{\md} - k p_E I_E Re_{dsub} - k Re_{isub}}
 
 % Equation for Re_tot
 \newcommand{\Retoteqn}{&Re_{emb} - k Re_{cap} + (1-k) Re_{\md}         \nonumber \\
@@ -375,7 +373,7 @@ bottom=2pt}
 
 % Construction lines
 \newcommand{\iicirc}{\seg{$\bempl{\text{i}}$}{black}{0.3 mm}{$\,\bempl{\text{i}}$}}
-\newcommand{\iibar}{\seg{$\bprod{\text{i}}$}{black}{0.3 mm}{$\,\bprod{\text{i}}$}}
+\newcommand{\iibar}{\seg{$\bmacro{\text{i}}$}{black}{0.3 mm}{$\,\bmacro{\text{i}}$}}
 \newcommand{\rr}{\seg{r}{black}{0.1 mm}{r}}
 \newcommand{\circcirc}{\seg{$\circ$}{black}{0.1 mm}{$\circ$}}
 \newcommand{\starstar}{\seg{$*$}{black}{0.1 mm}{$*$}}
@@ -392,5 +390,5 @@ bottom=2pt}
 \newcommand{\hatd}{\seg{$\wedge$}{inccolor}{0.6 mm}{$\,$d}}
 \newcommand{\dbar}{\seg{d}{inccolor}{0.6 mm}{$\,-$}}
 \newcommand{\hatbar}{\seg{$\wedge$}{inccolor}{0.6 mm}{$\,-$}}
-\newcommand{\bartilde}{\seg{$- \,$}{prodcolor}{0.6 mm}{$\, \sim$}}
+\newcommand{\bartilde}{\seg{$- \,$}{macrocolor}{0.6 mm}{$\, \sim$}}
 
