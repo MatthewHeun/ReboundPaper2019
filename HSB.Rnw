@@ -595,7 +595,7 @@ We use colored backgrounds on rebound effects for visual convenience.
 \label{fig:flowchart}
 \end{figure}
 
-Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:prod_effect_main_paper}), 
+Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:macro_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
 the device upgrade and four rebound effects, and 
 we derive rebound expressions for each. 
@@ -849,7 +849,7 @@ example_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
                                      # Re_inc arrow
                                      0.327, 0.904, example_arrow_angle, 
                                        0.157, annotation_colour, example_arrow_size,
-                                     # Re_prod arrow
+                                     # Re_macro arrow
                                      0.622, 0.904, example_arrow_angle, 
                                        0.146, annotation_colour, example_arrow_size) 
 rebound_results %>% 
@@ -1626,7 +1626,7 @@ so we get the `price effect'?---GS
 
 %------------------------------
 \subsubsection{\Macroeffect}
-\label{sec:prod_effect_main_paper}
+\label{sec:macro_effect_main_paper}
 %------------------------------
 
 The previous rebound effects
@@ -1810,7 +1810,7 @@ Delta_C_dot_o_hat_car_char <- val_to_string(case = "Car", val = ReboundTools::De
 Re_dinc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_dinc, to_perc = TRUE)
 Re_iinc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_iinc, to_perc = TRUE)
 N_dot_hat_car_char <- val_to_string(case = "Car", val = ReboundTools::hat_vars$N_dot_hat, digits = 2)
-Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 @
 
 
@@ -2031,7 +2031,7 @@ for the car example.
 Re_empl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
 Re_sub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
-Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
@@ -2372,7 +2372,7 @@ Re_dinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebou
 Re_iinc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_iinc, to_perc = TRUE)
 N_dot_hat_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::hat_vars$N_dot_hat, digits = 2)
 Delta_C_dot_o_bar_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::Delta_vars$Delta_C_dot_o_bar, digits = 2)
-Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 @
 
 
@@ -2579,7 +2579,7 @@ rebound_results %>%
 Re_empl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
 Re_sub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
-Re_prod_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_prod, to_perc = TRUE)
+Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
@@ -2637,7 +2637,7 @@ lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
-                                      95.5, 92851, paste0("'", Re_prod_lamp_char_perc, "%'"), 
+                                      95.5, 92851, paste0("'", Re_macro_lamp_char_perc, "%'"), 
                                         annotation_colour, 
                                         annotation_size, 
                                         lamp_Re_label_angle + 90,
@@ -2874,7 +2874,7 @@ due to the energy implications of increased spending on other goods.
 
 Finally, rebound due to the macroeconomic 
 \macroeffect{} 
-($Re_{\macro}$) is \Sexpr{Re_prod_lamp_char_perc}\%
+($Re_{\macro}$) is \Sexpr{Re_macro_lamp_char_perc}\%
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
@@ -3049,7 +3049,7 @@ Re_graph_params[["include_x_axis"]] <- TRUE
 Re_graph_params[["use_latex_legend"]] <- TRUE
 
 Re_terms_order <- ReboundTools::rebound_terms[c(ReboundTools::rebound_terms$Re_tot,
-                                                ReboundTools::rebound_terms$Re_prod,
+                                                ReboundTools::rebound_terms$Re_macro,
                                                 ReboundTools::rebound_terms$Re_dinc,
                                                 ReboundTools::rebound_terms$Re_iinc,
                                                 ReboundTools::rebound_terms$Re_dsub,
@@ -3367,6 +3367,8 @@ Writing--review \& editing.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 All data and calculations are stored at **** Leeds data repository URL. ****.
+An \texttt{R} package for performing all rebound calculations
+can be found at \url{https://github.com/MatthewHeun/ReboundTools}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
