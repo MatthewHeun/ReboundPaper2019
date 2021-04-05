@@ -30,7 +30,7 @@ that compares the perceived benefits of
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
 In this appendix, we describe three utility models.
-The first utility model is an approximate  model
+The first utility model is an approximate model
 that applies only for small and marginal
 changes in energy efficiency and 
 energy service price, 
@@ -66,11 +66,17 @@ For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
 
-The third utility model (with Cobb-Douglas form) is
-mentioned briefly for completeness.
-We discard the Cobb-Douglas utility model, because
-it is inappropriate for a rebound analysis framework:
-it always gives 100 \% rebound.
+For completeness,
+we brifly mention a third utility model with Cobb-Douglas form.
+The Cobb-Douglas utility model is a special case
+of the CES utility model
+with elasticity of substitution ($\sigma$) equal to 1.
+The Cobb-Douglas utility model has an unfortunate feature:
+it always gives 100 \% direct substitution rebound.
+That characteristic disqualifies its use in a mathematical framework
+that purports to estimate the magnitude of substitution effect rebound.  
+So, we reject the special case Cobb-Douglas utility model
+in favor of the generalized CES utility model.
 **** Revisit after Gregor edits text below. ****
 
 In the substitution effect, all utility models 
@@ -89,7 +95,7 @@ spent on the energy service
 and other goods and services.
 
 In this appendix,
-the approximate and CES utility models are described.
+the approximate, CES, and Cobb-Douglas utility models are described.
 Then, elasticities for the substitution effect are 
 discussed.
 Finally, elasticities for the income effect are discussed. 
@@ -351,6 +357,8 @@ $\alpha \in (0,1)$ is an elasticity
 which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
+The Cobb-Douglas model is a special case of the general CES utility model,
+with the elasticity of substitution ($\sigma$) equal to 1.
 However, the uncompensated own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always.
