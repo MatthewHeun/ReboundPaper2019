@@ -67,8 +67,8 @@ energy efficiency increases by
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
 
 For completeness,
-we brifly mention a third utility model with Cobb-Douglas form.
-The Cobb-Douglas utility model is a special case
+we briefly mention a third utility model with Cobb-Douglas form.
+The Cobb-Douglas utility model is a commonly-used special case
 of the CES utility model
 with elasticity of substitution ($\sigma$) equal to 1.
 The Cobb-Douglas utility model has an unfortunate feature:
@@ -385,17 +385,17 @@ Gregor to check Saunders (2008), which PB thinks may have said something similar
 %++++++++++++++++++++++++++++++
 
 The substitution effect requires a utility model.
-In this paper, we describe two utiliity models, 
-an approximate model and CES model.
-Both models require elasticities to describe consumer preferences.
-In fact, there are three elasticies across the two utility models:
+In this paper, we describe two utiliity models in detail: 
+an approximate model and a CES model.
+All utility models require elasticities to describe consumer preferences.
+In fact, there are three elasticies across the two utility models we discuss in detail:
 $\eqsps$, $\eqops$, and $\sigma$.
 The approximate method requires 
 the own price elasticity of energy service consumption ($\eqsps$) and
 the cross-price elasticity of energy service consumption ($\eqops$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
-None of elasticities required for the utility models
+None of the elasticities required for the approximate and CES utility models
 is estimable empirically.
 **** Gregor: can we say more about why this is so? ---MKH ****
 Thus, the starting point for determining the required elasticities 
