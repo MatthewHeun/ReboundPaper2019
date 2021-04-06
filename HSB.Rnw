@@ -911,7 +911,7 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Example", 
-                               graph_types = "Cost", 
+                               graph_types = "Expenditure", 
                                indexed = TRUE) + 
   # ggplot2::xlim(0, 1.1) +
   # ggplot2::ylim(0.9995, 1.0005) +
@@ -2160,7 +2160,7 @@ car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Car", 
-                               graph_types = "Cost") + 
+                               graph_types = "Expenditure") + 
   ggplot2::geom_text(data = car_cost_labels, 
                      mapping = ggplot2::aes(x = x, 
                                             y = y, 
@@ -2710,7 +2710,7 @@ lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Lamp", 
-                               graph_types = "Cost") + 
+                               graph_types = "Expenditure") + 
   ggplot2::geom_text(data = lamp_cost_labels, 
                      mapping = ggplot2::aes(x = x, 
                                             y = y, 
