@@ -2587,7 +2587,7 @@ Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::reboun
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
 lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                      240, 92838, '""^scriptstyle(degree)', 
+                                      240, 92842, 'degree', 
                                         stage_colour, orig_size, 0,
                                       27, 92842, 'a', 
                                         abcd_colour, abcd_size, 0,
