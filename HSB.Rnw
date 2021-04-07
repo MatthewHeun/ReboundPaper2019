@@ -202,13 +202,12 @@ due to various behavior and market responses.
 %+++
 
 The roots of energy rebound can be traced back to 
-William Stanley \citet{Jevons:1865}
+\citeauthor{Jevons:1865}
 who, in his report entitled \emph{The Coal Question},
-suggested that [p.~103]
-%Matt: I tried and failed to do italics in the Jevons quote
-``[i]t is wholly a confusion of ideas to suppose that the economical 
+said that
+``\emph{[i]t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
-The very contrary is the truth.''(original emphasis)
+The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
 A hundred years later, the 1970s oil crises gave a sharp
 %returned the (I deleted the 'returned' word as jevons only noted it, it wasnt his primary concern)
 focus to energy efficiency
@@ -297,8 +296,7 @@ of energy rebound is a crucially important goal.
 %++++++++++++++++++++++++++++++
 
 One of the challenges to better understanding energy rebound is its many
-%Matt - feels like too many words below, maybe delete 'aspects'?-PEB
-aspects, mechanisms, and effects, which in turn 
+mechanisms and effects, which in turn 
 has led to many different approaches to set out rebound typologies.
 The most common rebound typologies 
 distinguish between microeconomic effects (direct and indirect)
@@ -388,21 +386,12 @@ approach applied to energy intensive industry sectors.
 Meantime, estimates of macroeconomic rebound are very rare
 [e.g.,~\citet{Barker2009}]. 
 Instead, becoming more common 
-%-- but still quite rare -- (I think we can remove the 'rare' label, 
-% as we include 33 studies nearly all from 2010-2020 in our RSER paper)
 are studies 
-which estimate total rebound
-[i.e., sum of microeconomic and macroeconomic rebound 
-as shown in Table~\ref{tab:typology}]
-%have progressed in terms of numbers of studies and methods.
-%****
-%Is the preceding sentence complete?---MKH
-%Matt: I have amended and suggest we delete the commented text above--PEB
-%****
+which estimate total rebound, 
+(i.e., sum of microeconomic and macroeconomic rebound 
+as shown in Table~\ref{tab:typology}.
 A recent review of 33 studies by \citet{Brockway2021} 
-found 
-%the most common method is via (Matt: I think we can delete this, it kind of duplicates the CGE words which follow next---PEB)
-a dominant group of CGE-based studies, 
+found a dominant group of CGE-based studies, 
 such as \citet{Lecca2014}, \citet{Broberg2015}, and \citet{Wei2017},
 with a mean total rebound estimate (from 21 reviewed studies) of around 60~\%. 
 The remaining approaches split into three sub-methods: non-CGE macroeconomic models
@@ -414,11 +403,6 @@ was also found to be over 60~\%,
 leading the review authors \citep[p.~1]{Brockway2021} 
 to conclude that total rebound magnitudes 
 were ``larger than commonly assumed.''
-%Matt: I suggest we delete this text below.all these three papers below are included in the 33 RSER  studies included in the average values quoted above.--PEB
-Finally, increasing empirical support is emerging for 
-even larger total rebound estimates from 
-the producer side \citep{Saunders2013a} and for developing and 
-industrializing countries~\citep{VanBenthem2015, Brockway:2017a}.
 
 
 %++++++++++++++++++++++++++++++
@@ -452,23 +436,6 @@ and were followed, among others, by general equilibrium models, including
 \citet{Wei2010},
 \citet{Lemoine:2020aa}, and
 \citet{Fullerton:2019aa}.
-
-% Matt: we have A LOT in this paper. all about energy. i propose we cut out
-% the material text below, at least as a driving reason as to why we need
-% an energy rebound framework. we could move (and shorten) to the discussion
-% section and flag up that materials could be an extension to the framework.
-% my preference is to remove Magee and Zinnk refs and materials entirely, 
-%and keep this paper just to focus on energy.---PEB
-
-Extensions at the macroeconomic scale importantly include the 
-linkage to resource and material use, such as the study by ~\citet{Magee2017},
-who extended rebound theory to study the material impacts of 
-information and communications technology (ICT),
-finding little evidence of dematerialization.
-**** Here is where I think we can add the  
-~\citet{Zink2017}
-circular economy reference.---PEB
-Need a sentence around the Zink reference to show how it fits with the rest of the paragraph.---MKH ****
 
 Despite the growth of macroeconomic modeling frameworks to 
 estimate overall, or total rebound, three key issues remain. 
@@ -529,12 +496,8 @@ is tantamount to assuming rebound results.''
 %++++++++++++++++++++++++++++++
 
 **** Be sure we hit all of need, aim, contributions, and structure. ****
-%matt - i moved this para below, from being the last para of the previous 
-%section to become this 1st para of this section
 In summary, we find there is a strategic \emph{need} for
-a comprehensive, mathematically-rigorous rebound analysis framework 
-%is amply demonstrated by the preceding discussion.
-, one that 
+a comprehensive, mathematically-rigorous rebound analysis framework, one that 
 %
 \begin{enumerate*}[label={(\alph*)}]
 	
@@ -547,11 +510,8 @@ a comprehensive, mathematically-rigorous rebound analysis framework
 \end{enumerate*}
 %
 
-The \emph{aim} of this paper is therefore to extend the foundations laid by 
-\citet{Borenstein:2015aa}) and others, and 
-
-%fill the gap in the literature identified above
-develop such  rebound framework.
+The \emph{aim} of this paper is therefore to build upon the foundations laid by 
+\citet{Borenstein:2015aa}) and others to develop such rebound framework.
 The key \emph{contributions} of this paper are to
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -566,19 +526,15 @@ The key \emph{contributions} of this paper are to
         in a consistent and rigorous rebound framework, 
         
   \item provide a new way to visualize rebound effects, 
-        namely energy, cost, and preference path graphs,
+        namely energy, expenditure, and preference path graphs,
   
-  \item apply a general 
-  %CES (Matt - i removed CES as we havent mentioned it yet, i think general is enough, and then later we tell them its CES)
-  % also, matt, is the line below correct/needed? maybe we combine this item and the new one i added below (case study) into one?
-  utility function to rebound via empirically-plausible cost shares of other goods consumption,
+  \item apply a general utility function 
+        via empirically-plausible cost shares of other goods consumption,
   
   \item provide two numerical case study examples (of a car and LED lamp) 
-        to demonstrate the application of the framework
+        to demonstrate the application of the framework, and 
         
   \item link quantified rebound effects with
-% i am not sure we do this now? lets wait to see what comes up in teh discussion
-% i might prefer to delete this last one        
         actionable steps to minimize real-world rebound effects.
 
         
@@ -610,10 +566,7 @@ final-energy-to-service efficiency such that
 $\amacro{\eta} > \bempl{\eta}$,
 typically, but not always,
 at an increased expenditure rate to
-procure (capital cost), operate, maintain, and dispose of the device
-**** PB: GS suggests a citation here that indicates upgrades are usually more costly.---MKH ****,
-%Matt: i am not sure this is a general fact, or has references to support. it depends on the state of maturity of hte new EEU vs the incumbent technlogy. for example, the LED bulb would have been very expensive in 2010, but by 2020 its way cheaper than the incandescent bulb. So perhaps its best just to keep 'typically' and then not add a citation. ---PEB
-such that
+procure (capital cost), operate, maintain, and dispose of the device such that
 $\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
