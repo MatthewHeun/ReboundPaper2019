@@ -365,16 +365,16 @@ in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always.
 
 ****
-Gregor: We need to substantiate the claim the $Re_{dsub} = 1$ always
+Gregor: We need to substantiate the claim that $Re_{dsub} = 1$ always
 for the CD utility model. 
 Is there a small proof that we can include?  
 Or is it widely known?
 If it is widely known to economists
-(but maybe not to enegy people), 
+(but maybe not to energy people), 
 perhaps we should include the proof
-for completeness in the appendix. 
+for completeness in this appendix. 
 ****
-I.e, a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
+I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
 which is inappropriate for an analytical framework that purports to
 estimate the magnitude of rebound effects.
 **** Gregor to review and clean up. ---MKH ****
