@@ -250,7 +250,7 @@ we see three areas of rebound concern:
 and 
 3. modelling and policy-making that largely neglects rebound.
 
-First, to meet our Paris carbon reduction targets~\citep{masson-delmotte2018},
+First, to meet Paris Agreement carbon reduction targets~\citep{masson-delmotte2018},
 %increasing 
 energy efficiency measures are increasingly being expected to deliver
 absolute decoupling, where 
@@ -398,7 +398,7 @@ The remaining approaches split into three sub-methods: non-CGE macroeconomic mod
 (e.g., \citet{Barker2009} and \citet{Lemoine:2020aa}),
 econometric analysis (e.g., \citet{Wei2019} and \citet{Bruns2019}), and
 productivity or growth accounting studies (e.g., \citet{Lin2015}).
-The magnitude of total energy rebound from these non-CGE methods 
+The average magnitude of total energy rebound from these non-CGE methods 
 was also found to be over 60~\%,
 leading the review authors \citep[p.~1]{Brockway2021} 
 to conclude that total rebound magnitudes 
@@ -572,7 +572,7 @@ $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
-The final energy price ($p_E$) is assumed to be exogenous
+The final energy price ($p_E$) is assumed exogenous
 ($\amacro{p}_E = \bempl{p}_E$),
 so the final energy purchaser (i.e., the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
@@ -715,7 +715,7 @@ of expenditures rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
 
 The four rebound effects of Fig.~\ref{fig:flowchart} 
 (emplacement, substitution, income, and macro)
-are discussed in subsections below,
+are discussed in subsections below.
 In each subsection, we
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -769,14 +769,14 @@ with
 the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
 the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
-indicate constant expenditure rates (direct and indirect).
+indicate iso-expenditure line (direct and indirect).
 
 A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Lines of constant rates of indexed consumption of other goods and the energy service
 are shown with negative slope. 
-Indifference curves of constant utility are denoted by \iicirc{} and \iibar{}. 
+Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
 <<eeu_data, echo=FALSE>>=
@@ -1289,35 +1289,37 @@ The substitution effect is best described
 with reference to a preferences path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point, and 
-the line of constant expenditure is \circcirc{}.
+the line of constant expenditure, the budget constraint, is \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
-(\iicirc{}) at point $\circ$, indicating that 
+(\iicirc{}) at point $\circ$, the optimal consumption
+bundle prior to device upgrade.
+%indicating that 
 %
-\begin{enumerate*}[label={(\alph*)}]
+%\begin{enumerate*}[label={(\alph*)}]
 	
-  \item equilibrium conditions exist and 
+  %\item equilibrium conditions exist and 
   
-  \item the device owner is minimizing expenditures at the original utility level.
+%  \item the device owner is minimizing expenditures at the original utility level.
     
-\end{enumerate*}
+%\end{enumerate*}
 %
 After emplacement of the more-efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
-thereby altering the slope of the constant expenditure line,
-such that the \circcirc{} line becomes the \starstar{} line.
-The new constant expenditure line (\starstar{}) 
-is no longer tangent to the \iicirc{} indifference curve,
-meaning that the price change has disequilibrated the device owner's behavior. 
-To re-equilibrate,
-the device owner shifts consumption to the point where
-the slope of the indifference curve (\iicirc{}) matches to the slope of 
-expenditure line \starstar{}.
-The re-equilibrated consumption basket is represented by the $\wedge$ point
-in Fig.~\ref{fig:ExamplePrefsPathGraph}, 
-at which the \hathat{} expenditure line is tangent to the \iicirc{} indifference curve.
-The change in consumption caused by the substitution effect
-favors energy service consumption (because it is now less expensive)
+pivoting the budget constraint outward, to \starstar{}.
+%The new constant expenditure line (\starstar{}) 
+%is no longer tangent to the \iicirc{} indifference curve,
+%meaning that the price change has disequilibrated the device owner's behavior. 
+%To re-equilibrate,
+%the device owner shifts consumption to the point where
+%the slope of the indifference curve (\iicirc{}) matches to the slope of 
+%expenditure line \starstar{}.
+By definition, the substitution effect indicates the optimal
+consumption bundle at the $\wedge$ point, after a compensation variation has tightened the budget constraint to \hathat{} 
+in Fig.~\ref{fig:ExamplePrefsPathGraph}. The $\wedge$ shows
+consumption with new prices and utility at the level prior
+to the EEU, taking advantage of the lower energy service price 
+and hence favoring energy service consumption (because it is now less expensive)
 at the expense of other goods consumption (which are now relatively more expensive).
 
 The substitution effect can be decomposed into indirect
@@ -1338,26 +1340,29 @@ The approximate method assumes that
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-These assumptions are approximations that hold only 
-for infinitesimally small energy service price changes 
-($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
-Emplacing a more-efficient energy conversion device
-can cause the energy service price to change by a large amount
-($\aempl{p}_s <\!\!< \orig{p}_s$),
-thereby violating the assumptions of the approximate method. 
+These assumptions are approximations %that hold only 
+%for infinitesimally small energy service price changes 
+%($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
+that are unsuitable for non-marginal price changes %.
+%Emplacing a more-efficient energy conversion device
+%can cause the energy service price to change by a large amount
+($\aempl{p}_s <\!\!< \orig{p}_s$). %,
+%thereby violating the assumptions of the approximate method. 
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
-to vary along an indifference curve.
-Our only restriction is that the elasticity of substitution ($\sigma$)
-between consumption of the energy service ($\rate{q}_s$)
-and consumption of other goods ($\rate{C}_o$)
-remain constant along an indifference curve.
-(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
-Thus, the exact method utilizes 
-a constant elasticity of substitution (CES) utility model.
+to vary along an indifference curve. We 
+use a fully specified constant elasticity of substitution (CES) utility model, which allows the exact, direct calculation
+of the utility maximizing consumption bundle for any constraint.
+%Our only restriction is that the elasticity of substitution ($\sigma$)
+%between consumption of the energy service ($\rate{q}_s$)
+%and consumption of other goods ($\rate{C}_o$)
+%remain constant along an indifference curve.
+%(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
+%Thus, the exact method utilizes 
+%a constant elasticity of substitution (CES) utility model.
 The utility model describes the device owner's behavior
 as follows:
 
@@ -1633,14 +1638,6 @@ See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
 
 
-
-+++
-Should we add a subsection here on `economy-wide effects',
-that is changes in prices, including a lower energy price,
-so we get the `price effect'?---GS
-+++
-
-
 %------------------------------
 \subsubsection{\Macroeffect}
 \label{sec:macro_effect_main_paper}
@@ -1650,21 +1647,24 @@ The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
 **** Revisit this statement after we finalize our topology.---MKH ****
-In contrast, the macro effect is macroeconomic.
 Like other factor-augmenting technical change, 
-energy-augmenting technical change reduces production 
+energy-augmenting technical change can also have
+macroeconomic repercussions. It reduces production 
 costs and thereby enables more efficient
 production (process innovation) that typically results in growth.
 Additionally, as \citet{VanBenthem2015} notes, cheaper 
 energy services could facilitate the development and 
 deployment of new products (product innovation),
 an important driver of rising aggregate demand \citep{Szostack1995}. 
-Often the effect is subdivided into components that distinguish 
-structural change, employment and investment effects \citep{Brockway2021,Colmenares2020}. 
 The upshot is that while energy efficiency is higher, the more 
 efficient economy is growing more than one without the improvement,
-taking back part of the expected energy savings. We call this the
-growth effect.
+taking back part of the expected energy savings, producing
+macro rebound effects. Often this kind of rebound effect 
+is subdivided into
+components that distinguish scale, structural change, employment 
+and investment effects, as well as further price effects
+\citep{Brockway2021,Colmenares2020}. Here we group all of 
+these effects under the label macro rebound effect. 
 
 The macro effect is just one instance of the phenomenon
 that reducing the need for an input at the micro level can lead 
@@ -1672,9 +1672,10 @@ to important and surprising counter-tendencies in the aggregate
 demand for that input.
 Consider labor productivity: it has risen 20-fold
 in Western Europe and the U.S.\ since 1820 \citep{Maddison:2001aa}, 
-and yet today these countries employ more workers than ever before
-as richer people demand more goods and services, and productivity
-gains lead to new products. The same holds for energy.
+and yet today these countries employ many more workers,
+as the affluent populations demand more goods and services, and productivity
+gains have led to innumerable new products.
+The same holds for energy.
 While energy efficiency at the device-level has climbed 
 over the past centuries, energy consumption at the macro level 
 has also risen \citep{Fouquet2014}.
