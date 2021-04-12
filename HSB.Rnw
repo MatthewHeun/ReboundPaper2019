@@ -564,8 +564,7 @@ with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\amacro{\eta} > \bempl{\eta}$,
-typically, but not always,
-at an increased expenditure rate to
+possibly at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device such that
 $\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
@@ -691,21 +690,27 @@ Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to
   \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
 \end{align}
 %
-Third, expenditure rates~($\rate{C}$) are the product 
+Third, energy service expenditure rates~($\rate{C}_s$) are the product 
 of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 %
 \begin{align}
-  \rate{C} &= p_E \rate{E}_s \\
+  \rate{C}_s &= p_E \rate{E}_s \\
   \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
 \end{align}
 %
-Fourth, energy rates~($\rate{E}$) are the product 
-of expenditures rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+Fourth, indirect energy rates~($\rate{E}_j$) are the product 
+of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$).
 %
-\begin{align}
-  \rate{E} &= \rate{C} I_E \\
+\begin{align} \label{eq:indirect_energy_rates}
+  \rate{E}_j &= \rate{C}_j I_E \\
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
+%
+The subscript $j$ represents expenditures on non-energy items
+in this framework: 
+capital costs (subscript $cap$), 
+maintenance and disposal activities (subscript $\md$), or 
+other goods (subscript $o$).
 
 
 %++++++++++++++++++++++++++++++
@@ -1198,8 +1203,7 @@ Appendix~\ref{sec:Re_emb} to be
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
 $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
-Typically, but not always,
-rising energy efficiency is associated with increased device complexity,
+Rising energy efficiency can be associated with increased device complexity,
 additional energy consumption in manufacturing, and
 more embodied energy,
 such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$,
