@@ -136,28 +136,7 @@ library(xtable)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Terminology}
-\label{sec:terminology}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Some guidance regarding terms and style for the paper.
-
-\begin{enumerate}
-
-  \item What do we call a thing that converts electricity to light?  \emph{electric lamp}, (not light bulb).
-
-  \item What do we call assumed/known information? \emph{parameters} (not variables).
-  
-  \item Use double-dash (--) for em-dash.
-  
-  \item Use back ticks (``) and single quotes ('') for quotation marks.
-
-\end{enumerate}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction (total: 1000 words)}
+\section{Introduction}
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -549,7 +528,7 @@ Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods: development of the comprehensive analytical framework (MKH, currently at 2222 words, target was 1500 words)}
+\section{Methods: development of the comprehensive analytical framework}
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1083,9 +1062,12 @@ Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
+**** 
+GS asks if this paragraph should be moved elsewhere.
+****
 Because behavior changes are not considered
 in the direct emplacement effect,
-actual and expected energy savings rates are identical~($\Sdot$).
+actual and expected energy savings rates are identical, i.e.\ $\Sdot$.
 By definition, then, the direct emplacement effect causes no rebound.
 Thus, 
 
@@ -1105,17 +1087,16 @@ total energy demand to return to the original energy consumption level
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
 $Re_{tot} = 100\%$.
-Total rebound ($Re_{tot}$) is measured linearly between the
+Total rebound ($Re_{tot}$) is measured linearly between and beyond the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with decomposition to direct rebound in the $x$ direction and 
 indirect rebound in the $y$ direction.
 The region below and to the left of the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}
-exhibits negative rebound, indicating
-``hyperconservation'' (energy savings in excess of the expected energy savings).
+exhibits negative rebound, indicating hyperconservation.
 The region above and to the right of the $Re_{tot} = 100\%$ line 
-exhibits greater energy consumption after the EEU than before it,
-a condition known as ``backfire.''
+shows ``backfire,'' 
+i.e.\ greater energy consumption after the EEU than before it. 
 
 Although the direct emplacement effect does not cause rebound, 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows that
@@ -1147,20 +1128,23 @@ We note that the different terms
 capital cost rate, $\rate{C}_{cap}$)
 might seem to imply different processes, 
 but they actually refer to the same emplacement effect, 
-namely segment \ab{} in energy and expenditure path graphs
+namely energy segment \ab{} and expenditure segment \ab{} 
+in energy and expenditure path graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph} and
 \ref{fig:ExampleCostPathGraph}, respectively).
-Purchasing an upgraded device (which likely leads to $\rbempl{C}_{cap} \neq \raempl{C}_{cap}$)
+Purchasing an upgraded device
+(which likely leads to $\rbempl{C}_{cap} \neq \raempl{C}_{cap}$)
 will likely mean a changed embodied energy rate ($\rbempl{E}_{emb} \neq \raempl{E}_{emb}$) 
 to provide the same energy service.
-Our names for these segments reflect common usage 
+Our names for these aspects of rebound (embodied energy and capital cost)
+reflect common usage 
 in the energy and economics fields, respectively.
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
-embodied energy rates and
-capital cost rates (segments \ab{}) 
+embodied energy rates and capital cost rates
+(represented by energy segment \ab{} and expenditure segment \ab{}, respectively) 
 move in the same direction (both negative).
-However, segments \ab{} could both move in the positive direction, or
+However, both segments \ab{} could move in the positive direction, or
 they could move in opposite directions, 
 depending on the results of the independent analyses for 
 embodied energy and capital cost rates.
@@ -1298,39 +1282,24 @@ the line of constant expenditure, the budget constraint, is \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
 (\iicirc{}) at point $\circ$, the optimal consumption
 bundle prior to device upgrade.
-%indicating that 
-%
-%\begin{enumerate*}[label={(\roman*)}]
-	
-  %\item equilibrium conditions exist and 
-  
-%  \item the device owner is minimizing expenditures at the original utility level.
-    
-%\end{enumerate*}
-%
 After emplacement of the more-efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
 pivoting the budget constraint outward, to \starstar{}.
-%The new constant expenditure line (\starstar{}) 
-%is no longer tangent to the \iicirc{} indifference curve,
-%meaning that the price change has disequilibrated the device owner's behavior. 
-%To re-equilibrate,
-%the device owner shifts consumption to the point where
-%the slope of the indifference curve (\iicirc{}) matches to the slope of 
-%expenditure line \starstar{}.
 By definition, the substitution effect indicates the optimal
-consumption bundle at the $\wedge$ point, after a compensation variation has tightened the budget constraint to \hathat{} 
-in Fig.~\ref{fig:ExamplePrefsPathGraph}. The $\wedge$ shows
-consumption with new prices and utility at the level prior
-to the EEU, taking advantage of the lower energy service price 
-and hence favoring energy service consumption (because it is now less expensive)
+consumption bundle at the $\wedge$ point,
+after a compensation variation has tightened the budget constraint to \hathat{} 
+in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The $\wedge$ point shows consumption with new prices and utility
+at the level prior to the EEU,
+taking advantage of the lower energy service price, 
+hence favoring energy service consumption (because it is now less expensive)
 at the expense of other goods consumption (which are now relatively more expensive).
 
-The substitution effect can be decomposed into indirect
-(the decrease in other goods consumption, segment \starc{}) and 
-direct
-(the increase in energy service consumption, segment \chat{})
+The substitution effect can be decomposed into 
+indirect (the decrease in other goods consumption, segment \starc{}) 
+and 
+direct (the increase in energy service consumption, segment \chat{})
 components.
 The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
@@ -1338,38 +1307,31 @@ and~\ref{fig:ExampleCostPathGraph}, respectively.
 
 An approximate method
 is often used in the literature
-(e.g., see \citet{Borenstein:2015aa})
+(e.g., see \citet{Borenstein:2015aa}
+**** Does Borenstein actually use this approach? 
+I couldn't find it ---MKH
+****)
 for determining 
-the post-substitution effect point, and therefore $Re_{dsub}$ and $Re_{isub}$.
+the post-substitution effect point
+and therefore $Re_{dsub}$ and $Re_{isub}$.
 The approximate method assumes that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-These assumptions are approximations %that hold only 
-%for infinitesimally small energy service price changes 
-%($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
-that are unsuitable for non-marginal price changes %.
-%Emplacing a more-efficient energy conversion device
-%can cause the energy service price to change by a large amount
-($\aempl{p}_s <\!\!< \orig{p}_s$). %,
-%thereby violating the assumptions of the approximate method. 
+These assumptions are approximations 
+that are unsuitable for non-marginal price changes 
+($\aempl{p}_s <\!\!< \orig{p}_s$). 
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
-to vary along an indifference curve. We 
-use a fully specified constant elasticity of substitution (CES) utility model, which allows the exact, direct calculation
+to vary along an indifference curve. 
+We use a fully specified 
+constant elasticity of substitution (CES) utility model,
+which allows the exact, direct calculation
 of the utility maximizing consumption bundle for any constraint.
-%Our only restriction is that the elasticity of substitution ($\sigma$)
-%between consumption of the energy service ($\rate{q}_s$)
-%and consumption of other goods ($\rate{C}_o$)
-%remain constant along an indifference curve.
-%(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
-%Thus, the exact method utilizes 
-%a constant elasticity of substitution (CES) utility model.
-The utility model describes the device owner's behavior
-as follows:
+The utility model describes the device owner's behavior as
 
 \begin{equation} \label{eq:ces_utility}
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
@@ -1395,10 +1357,8 @@ Direct substitution effect rebound ($Re_{dsub}$) is given by
 which can be rearranged to
 
 \begin{equation} \label{eq:Re_dsub_prelim}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; ,
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; .
 \end{equation}
-%
-as shown in Appendix~\ref{sec:Redsub_expression}.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
@@ -1411,10 +1371,8 @@ which can be rearranged to
 \begin{equation} \label{eq:Re_isub_prelim}
   Re_{isub} = \frac{\frac{\rasub{C}_o}{\rorig{C}_o} - 1}{\etaratiostacked - 1} \; 
                           \etaratiostacked \; 
-                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
-%
-as shown in Appendix~\ref{sec:Reisub_expression}.
 
 To find the post-substitution effect point ($\wedge$),
 we solve for the location on the \iicirc{} indifference curve
@@ -1431,9 +1389,6 @@ and
 \begin{equation} \label{eq:C_o_solution}
   \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; .
 \end{equation}
-%
-See Appendix~\ref{sec:Resub_exact_method} for details
-of the derivations of Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution}).
 
 Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
@@ -1454,8 +1409,9 @@ via the CES utility model.
 \end{equation}
 
 See Appendix~\ref{sec:Resub_exact_method} for details
-of the derivations of Eqs.~(\ref{eq:Re_dsub_CES}) and~(\ref{eq:Re_isub_CES}).
-
+of the derivations of Eqs.~(\ref{eq:Re_dsub_prelim}), 
+(\ref{eq:Re_isub_prelim}), and 
+(\ref{eq:q_s_solution})--(\ref{eq:Re_isub_CES}).
 
 
 %------------------------------
@@ -1753,7 +1709,7 @@ we find
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Calculations: two examples (PB, 2000 words)}
+\section{Calculations: two examples}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1815,7 +1771,7 @@ $Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
-The total rebound sum ($Re_{sum}$)
+The total rebound sum ($Re_{tot}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
  
@@ -3330,7 +3286,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion (GS, 1000 words)}
+\section{Discussion}
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
