@@ -723,7 +723,7 @@ The four rebound effects of Fig.~\ref{fig:flowchart}
 are discussed in subsections below.
 In each subsection, we
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item define each rebound effect and
   
