@@ -569,7 +569,7 @@ for the device owner is
 \end{equation}
 %
 where 
-original net income ($\rorig{N}$) is zero.
+original net savings ($\rorig{N}$) is zero.
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
@@ -1423,15 +1423,15 @@ The income rate of the device owner is $\rbempl{M}$,
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
-\emph{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
+Freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and 
 the substitution effect leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Derivations of expressions for gross and net income from the 
-emplacement effect ($\rate{G}$) and
-the substitution effect ($\rasub{N}$)
+Derivations of expressions for freed cash from the 
+emplacement effect ($\rate{G}$)
+and net savings after the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
@@ -1441,9 +1441,9 @@ Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
 In this framework,
 the income effect must satisfy several constraints.
-The first constraint is that net income ($\rasub{N}$) should be completely re-spent.
+The first constraint is that net savings ($\rasub{N}$) should be completely re-spent.
 I.e, the income effect should satisfy the budget constraint
-such that net income is zero after
+such that net savings is zero after
 the income effect ($\rainc{N} = 0$).
 This constraint can be seen in 
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
@@ -1453,7 +1453,7 @@ for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
 satisfy the first constraint.
 
-The second constraint is that net income should be re-spent on only 
+The second constraint is that net savings should be re-spent on only 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -1493,11 +1493,11 @@ direct and indirect income effect rebound.
 %..............................
 
 The income elasticity of energy service consumption ($\eqsM$)
-quantifies the amount of net income spent 
+quantifies the amount of net savings spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 (See Appendix~\ref{sec:utility_and_elasticities} 
 for additional information about elasticities.)
-Spending of net income on the energy service 
+Spending of net savings on the energy service 
 leads to direct income effect rebound ($Re_{dinc}$).
 
 The ratio of rates of energy service consumed across the income effect is given by
@@ -1524,7 +1524,7 @@ adjusts income ($\rorig{M}$) to account for
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
-        gross income ($\rate{G}$)
+        freed cash ($\rate{G}$)
         from the emplacement effect and
   
   \item expenditure adjustments 
@@ -1546,7 +1546,7 @@ the expression for direct income rebound is
   Re_{dinc} = \Redinceqnexact{} \; .
 \end{equation}
 %
-If there is no net income after the substitution effect ($\rasub{N} = 0$), 
+If there is no net savings after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
@@ -1558,9 +1558,9 @@ of income effect rebound.
 %..............................
 
 The income elasticity of other goods consumption ($\eqoM$)
-quantifies the amount of net income spent 
+quantifies the amount of net savings spent 
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
-Spending of net income on other goods and services
+Spending of net savings on other goods and services
 leads to indirect income effect rebound ($Re_{iinc}$).
 
 The ratio of rates of other goods consumed across the income effect is given by
@@ -1651,12 +1651,12 @@ relative to counterfactual scenario of lower growth.
 
 To operationalize this macro effect, that ultimately leads to 
 higher incomes and spending on goods and energy services, we scale
-the net income~($\rasub{N}$) gained by device owners at the micro level.
+the net savings~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, it is reasonable to assume that
-net income ($\rasub{N}$) is spent in the economy at the average 
+net savings ($\rasub{N}$) is spent in the economy at the average 
 energy intensity of the economy ($I_E$).
 
-Scaling from net income ($\rasub{N}$) at the device level
+Scaling from net savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is an unexplored area.
 In the absence of better information,
 we express this scaling simply by a macro factor ($k$)
