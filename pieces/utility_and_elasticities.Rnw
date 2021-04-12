@@ -490,7 +490,7 @@ in the CES utility model is given by
 Thus, the elasticity of substitution ($\sigma$) 
 can be determined from two pieces of readily-available information:
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item the uncompensated own price elasticity ($\eqspsUC$) and 
   

@@ -499,7 +499,7 @@ is tantamount to assuming rebound results.''
 In summary, we find there is a strategic \emph{need} for
 a comprehensive, mathematically-rigorous rebound analysis framework, one that 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item is built from microeconomic foundations, 
   
@@ -514,7 +514,7 @@ The \emph{aim} of this paper is therefore to build upon the foundations laid by
 \citet{Borenstein:2015aa}) and others to develop such rebound framework.
 The key \emph{contributions} of this paper are to
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item describe a consistent and mathematically-rigorous rebound framework
         in which direct and indirect dimensions of 
@@ -738,7 +738,7 @@ which provide a parallel structure for energy and financial accounting.
 
 Important quantities for the derivations are
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
   
@@ -755,7 +755,8 @@ rebound path graphs.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
-notional rebound path graphs for energy consumption, expenditures, and preferences.
+notional rebound path graphs of energy consumption, expenditures, and preferences
+for purposes of illustration.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate numerical examples.
@@ -766,7 +767,7 @@ and
 the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
-indicate constant total energy consumption
+indicate energy consumption isoquants
 (direct and indirect) at each point.
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
@@ -774,13 +775,13 @@ with
 the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
 the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
-indicate iso-expenditure line (direct and indirect).
+indicate expenditure isoquants (direct and indirect).
 
 A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
-Lines of constant rates of indexed consumption of other goods and the energy service
-are shown with negative slope. 
+Isoquants of indexed other goods and energy service consumption 
+are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
@@ -1053,7 +1054,7 @@ on segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 The indirect effects of EEU emplacement are
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
@@ -1254,7 +1255,7 @@ See Appendix~\ref{sec:Re_OMd} for details of the derivation.
 
 Neoclassical consumer theory distinguishes between
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item substituting energy service consumption for
         other goods consumption due to the lower post-EEU price of the energy service 
@@ -1272,7 +1273,7 @@ the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
 It involves
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 
   \item an increase in consumption of the energy service,
         a direct substitution effect (subscript $dsub$) and
@@ -1299,7 +1300,7 @@ The \circcirc{} line is tangent to the lower indifference curve
 bundle prior to device upgrade.
 %indicating that 
 %
-%\begin{enumerate*}[label={(\alph*)}]
+%\begin{enumerate*}[label={(\roman*)}]
 	
   %\item equilibrium conditions exist and 
   
@@ -1498,7 +1499,7 @@ satisfy the first constraint.
 
 The second constraint is that net income should be re-spent on only 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item additional spending on the energy service ($\rainc{q}_s > \rbinc{q}_s$, segment \hatd{}) and
   
@@ -1564,7 +1565,7 @@ For the purposes of the income effect,
 the effective income equation (Eq.~(\ref{eq:effective_income})) 
 adjusts income ($\rorig{M}$) to account for 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
         gross income ($\rate{G}$)
@@ -1683,7 +1684,7 @@ The same holds for energy.
 While energy efficiency at the device-level has climbed 
 over the past centuries, energy consumption at the macro level 
 has also risen \citep{Fouquet2014}.
-It is important to recognise the generality of this result.
+It is important to recognize the generality of this result.
 +++ here possible about th 69 inputs, and the long run growth
 in iron demand -- GS+++
 Typically the focus is on the effects on output of factor-augmenting
