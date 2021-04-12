@@ -1435,7 +1435,7 @@ and net savings after the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
-income from the EEU
+savings from the EEU
 (segments \hatd{} and \dbar{} in 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
