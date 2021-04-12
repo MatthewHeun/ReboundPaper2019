@@ -1704,7 +1704,7 @@ After algebra and canceling of terms,
 we find
 %
 \begin{align} \label{eq:Re_tot}  
-  Re_{sum} = \; \Retoteqn{} \; .
+  Re_{tot} = \; \Retoteqn{} \; .
 \end{align}
 
 
