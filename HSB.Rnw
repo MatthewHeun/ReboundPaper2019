@@ -136,28 +136,7 @@ library(xtable)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Terminology}
-\label{sec:terminology}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Some guidance regarding terms and style for the paper.
-
-\begin{enumerate}
-
-  \item What do we call a thing that converts electricity to light?  \emph{electric lamp}, (not light bulb).
-
-  \item What do we call assumed/known information? \emph{parameters} (not variables).
-  
-  \item Use double-dash (--) for em-dash.
-  
-  \item Use back ticks (``) and single quotes ('') for quotation marks.
-
-\end{enumerate}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction (total: 1000 words)}
+\section{Introduction}
 \label{sec:introduction}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -499,7 +478,7 @@ is tantamount to assuming rebound results.''
 In summary, we find there is a strategic \emph{need} for
 a comprehensive, mathematically-rigorous rebound analysis framework, one that 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item is built from microeconomic foundations, 
   
@@ -514,7 +493,7 @@ The \emph{aim} of this paper is therefore to build upon the foundations laid by
 \citet{Borenstein:2015aa}) and others to develop such rebound framework.
 The key \emph{contributions} of this paper are to
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item describe a consistent and mathematically-rigorous rebound framework
         in which direct and indirect dimensions of 
@@ -549,7 +528,7 @@ Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods: development of the comprehensive analytical framework (MKH, currently at 2222 words, target was 1500 words)}
+\section{Methods: development of the comprehensive analytical framework}
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -564,8 +543,7 @@ with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
 final-energy-to-service efficiency such that
 $\amacro{\eta} > \bempl{\eta}$,
-typically, but not always,
-at an increased expenditure rate to
+possibly at an increased expenditure rate to
 procure (capital cost), operate, maintain, and dispose of the device such that
 $\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
@@ -591,7 +569,7 @@ for the device owner is
 \end{equation}
 %
 where 
-original net income ($\rorig{N}$) is zero.
+original net savings ($\rorig{N}$) is zero.
 Note that
 the vocabulary and mathematical notation for rebound effects is extensive;
 Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
@@ -691,21 +669,27 @@ Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to
   \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
 \end{align}
 %
-Third, expenditure rates~($\rate{C}$) are the product 
+Third, energy service expenditure rates~($\rate{C}_s$) are the product 
 of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 %
 \begin{align}
-  \rate{C} &= p_E \rate{E}_s \\
+  \rate{C}_s &= p_E \rate{E}_s \\
   \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
 \end{align}
 %
-Fourth, energy rates~($\rate{E}$) are the product 
-of expenditures rates~($\rate{C}$) and energy intensity of the economy~($I_E$).
+Fourth, indirect energy rates~($\rate{E}_j$) are the product 
+of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$).
 %
-\begin{align}
-  \rate{E} &= \rate{C} I_E \\
+\begin{align} \label{eq:indirect_energy_rates}
+  \rate{E}_j &= \rate{C}_j I_E \\
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
 \end{align}
+%
+The subscript $j$ represents expenditures on non-energy items
+in this framework: 
+capital costs (subscript $cap$), 
+maintenance and disposal activities (subscript $\md$), or 
+other goods (subscript $o$).
 
 
 %++++++++++++++++++++++++++++++
@@ -718,7 +702,7 @@ The four rebound effects of Fig.~\ref{fig:flowchart}
 are discussed in subsections below.
 In each subsection, we
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item define each rebound effect and
   
@@ -733,7 +717,7 @@ which provide a parallel structure for energy and financial accounting.
 
 Important quantities for the derivations are
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item direct and indirect energy consumption rates ($\rate{E}_{dir}$, $\rate{E}_{indir}$), 
   
@@ -750,7 +734,8 @@ rebound path graphs.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
-notional rebound path graphs for energy consumption, expenditures, and preferences.
+notional rebound path graphs of energy consumption, expenditures, and preferences
+for purposes of illustration.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate numerical examples.
@@ -761,7 +746,7 @@ and
 the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
-indicate constant total energy consumption
+indicate energy consumption isoquants
 (direct and indirect) at each point.
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
@@ -769,13 +754,13 @@ with
 the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
 the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
-indicate iso-expenditure line (direct and indirect).
+indicate expenditure isoquants (direct and indirect).
 
 A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
-Lines of constant rates of indexed consumption of other goods and the energy service
-are shown with negative slope. 
+Isoquants of indexed other goods and energy service consumption 
+are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
 
@@ -1048,7 +1033,7 @@ on segments \circa{} in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively.
 The indirect effects of EEU emplacement are
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
@@ -1077,9 +1062,12 @@ Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
+**** 
+GS asks if this paragraph should be moved elsewhere.
+****
 Because behavior changes are not considered
 in the direct emplacement effect,
-actual and expected energy savings rates are identical~($\Sdot$).
+actual and expected energy savings rates are identical, i.e.\ $\Sdot$.
 By definition, then, the direct emplacement effect causes no rebound.
 Thus, 
 
@@ -1099,17 +1087,16 @@ total energy demand to return to the original energy consumption level
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
 $Re_{tot} = 100\%$.
-Total rebound ($Re_{tot}$) is measured linearly between the
+Total rebound ($Re_{tot}$) is measured linearly between and beyond the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with decomposition to direct rebound in the $x$ direction and 
 indirect rebound in the $y$ direction.
 The region below and to the left of the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}
-exhibits negative rebound, indicating
-``hyperconservation'' (energy savings in excess of the expected energy savings).
+exhibits negative rebound, indicating hyperconservation.
 The region above and to the right of the $Re_{tot} = 100\%$ line 
-exhibits greater energy consumption after the EEU than before it,
-a condition known as ``backfire.''
+shows ``backfire,'' 
+i.e.\ greater energy consumption after the EEU than before it. 
 
 Although the direct emplacement effect does not cause rebound, 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows that
@@ -1141,20 +1128,23 @@ We note that the different terms
 capital cost rate, $\rate{C}_{cap}$)
 might seem to imply different processes, 
 but they actually refer to the same emplacement effect, 
-namely segment \ab{} in energy and expenditure path graphs
+namely energy segment \ab{} and expenditure segment \ab{} 
+in energy and expenditure path graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph} and
 \ref{fig:ExampleCostPathGraph}, respectively).
-Purchasing an upgraded device (which likely leads to $\rbempl{C}_{cap} \neq \raempl{C}_{cap}$)
+Purchasing an upgraded device
+(which likely leads to $\rbempl{C}_{cap} \neq \raempl{C}_{cap}$)
 will likely mean a changed embodied energy rate ($\rbempl{E}_{emb} \neq \raempl{E}_{emb}$) 
 to provide the same energy service.
-Our names for these segments reflect common usage 
+Our names for these aspects of rebound (embodied energy and capital cost)
+reflect common usage 
 in the energy and economics fields, respectively.
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
-embodied energy rates and
-capital cost rates (segments \ab{}) 
+embodied energy rates and capital cost rates
+(represented by energy segment \ab{} and expenditure segment \ab{}, respectively) 
 move in the same direction (both negative).
-However, segments \ab{} could both move in the positive direction, or
+However, both segments \ab{} could move in the positive direction, or
 they could move in opposite directions, 
 depending on the results of the independent analyses for 
 embodied energy and capital cost rates.
@@ -1198,8 +1188,7 @@ Appendix~\ref{sec:Re_emb} to be
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
 $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
-Typically, but not always,
-rising energy efficiency is associated with increased device complexity,
+Rising energy efficiency can be associated with increased device complexity,
 additional energy consumption in manufacturing, and
 more embodied energy,
 such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$,
@@ -1250,7 +1239,7 @@ See Appendix~\ref{sec:Re_OMd} for details of the derivation.
 
 Neoclassical consumer theory distinguishes between
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item substituting energy service consumption for
         other goods consumption due to the lower post-EEU price of the energy service 
@@ -1268,7 +1257,7 @@ the expenditure minimizing consumption bundle for
 a given level of payoff (or utility). 
 It involves
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 
   \item an increase in consumption of the energy service,
         a direct substitution effect (subscript $dsub$) and
@@ -1293,39 +1282,24 @@ the line of constant expenditure, the budget constraint, is \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
 (\iicirc{}) at point $\circ$, the optimal consumption
 bundle prior to device upgrade.
-%indicating that 
-%
-%\begin{enumerate*}[label={(\alph*)}]
-	
-  %\item equilibrium conditions exist and 
-  
-%  \item the device owner is minimizing expenditures at the original utility level.
-    
-%\end{enumerate*}
-%
 After emplacement of the more-efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
 pivoting the budget constraint outward, to \starstar{}.
-%The new constant expenditure line (\starstar{}) 
-%is no longer tangent to the \iicirc{} indifference curve,
-%meaning that the price change has disequilibrated the device owner's behavior. 
-%To re-equilibrate,
-%the device owner shifts consumption to the point where
-%the slope of the indifference curve (\iicirc{}) matches to the slope of 
-%expenditure line \starstar{}.
 By definition, the substitution effect indicates the optimal
-consumption bundle at the $\wedge$ point, after a compensation variation has tightened the budget constraint to \hathat{} 
-in Fig.~\ref{fig:ExamplePrefsPathGraph}. The $\wedge$ shows
-consumption with new prices and utility at the level prior
-to the EEU, taking advantage of the lower energy service price 
-and hence favoring energy service consumption (because it is now less expensive)
+consumption bundle at the $\wedge$ point,
+after a compensation variation has tightened the budget constraint to \hathat{} 
+in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+The $\wedge$ point shows consumption with new prices and utility
+at the level prior to the EEU,
+taking advantage of the lower energy service price, 
+hence favoring energy service consumption (because it is now less expensive)
 at the expense of other goods consumption (which are now relatively more expensive).
 
-The substitution effect can be decomposed into indirect
-(the decrease in other goods consumption, segment \starc{}) and 
-direct
-(the increase in energy service consumption, segment \chat{})
+The substitution effect can be decomposed into 
+indirect (the decrease in other goods consumption, segment \starc{}) 
+and 
+direct (the increase in energy service consumption, segment \chat{})
 components.
 The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
@@ -1333,38 +1307,31 @@ and~\ref{fig:ExampleCostPathGraph}, respectively.
 
 An approximate method
 is often used in the literature
-(e.g., see \citet{Borenstein:2015aa})
+(e.g., see \citet{Borenstein:2015aa}
+**** Does Borenstein actually use this approach? 
+I couldn't find it ---MKH
+****)
 for determining 
-the post-substitution effect point, and therefore $Re_{dsub}$ and $Re_{isub}$.
+the post-substitution effect point
+and therefore $Re_{dsub}$ and $Re_{isub}$.
 The approximate method assumes that 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
 are constant along an indifference curve.
-These assumptions are approximations %that hold only 
-%for infinitesimally small energy service price changes 
-%($\Delta \aempl{p}_s \equiv \aempl{p}_s - \bempl{p}_s \approx 0$).
-that are unsuitable for non-marginal price changes %.
-%Emplacing a more-efficient energy conversion device
-%can cause the energy service price to change by a large amount
-($\aempl{p}_s <\!\!< \orig{p}_s$). %,
-%thereby violating the assumptions of the approximate method. 
+These assumptions are approximations 
+that are unsuitable for non-marginal price changes 
+($\aempl{p}_s <\!\!< \orig{p}_s$). 
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
 the energy service price elasticity of energy service consumption ($\eqsps$) and
 the energy service price elasticity of other goods consumption ($\eqops$)
-to vary along an indifference curve. We 
-use a fully specified constant elasticity of substitution (CES) utility model, which allows the exact, direct calculation
+to vary along an indifference curve. 
+We use a fully specified 
+constant elasticity of substitution (CES) utility model,
+which allows the exact, direct calculation
 of the utility maximizing consumption bundle for any constraint.
-%Our only restriction is that the elasticity of substitution ($\sigma$)
-%between consumption of the energy service ($\rate{q}_s$)
-%and consumption of other goods ($\rate{C}_o$)
-%remain constant along an indifference curve.
-%(See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
-%Thus, the exact method utilizes 
-%a constant elasticity of substitution (CES) utility model.
-The utility model describes the device owner's behavior
-as follows:
+The utility model describes the device owner's behavior as
 
 \begin{equation} \label{eq:ces_utility}
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
@@ -1390,10 +1357,8 @@ Direct substitution effect rebound ($Re_{dsub}$) is given by
 which can be rearranged to
 
 \begin{equation} \label{eq:Re_dsub_prelim}
-  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; ,
+  Re_{dsub} = \frac{\frac{\rasub{q}_s}{\rbempl{q}_s} - 1}{\frac{\amacro{\eta}}{\bempl{\eta}} - 1} \; .
 \end{equation}
-%
-as shown in Appendix~\ref{sec:Redsub_expression}.
 
 Indirect substitution effect rebound ($Re_{isub}$) is given by
 
@@ -1406,10 +1371,8 @@ which can be rearranged to
 \begin{equation} \label{eq:Re_isub_prelim}
   Re_{isub} = \frac{\frac{\rasub{C}_o}{\rorig{C}_o} - 1}{\etaratiostacked - 1} \; 
                           \etaratiostacked \; 
-                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+                          \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
-%
-as shown in Appendix~\ref{sec:Reisub_expression}.
 
 To find the post-substitution effect point ($\wedge$),
 we solve for the location on the \iicirc{} indifference curve
@@ -1426,9 +1389,6 @@ and
 \begin{equation} \label{eq:C_o_solution}
   \frac{\rasub{C}_o}{\rbempl{C}_o} = \Cosolution{} \; .
 \end{equation}
-%
-See Appendix~\ref{sec:Resub_exact_method} for details
-of the derivations of Eqs.~(\ref{eq:q_s_solution}) and~(\ref{eq:C_o_solution}).
 
 Eq.~(\ref{eq:q_s_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_dsub_prelim})
@@ -1449,8 +1409,9 @@ via the CES utility model.
 \end{equation}
 
 See Appendix~\ref{sec:Resub_exact_method} for details
-of the derivations of Eqs.~(\ref{eq:Re_dsub_CES}) and~(\ref{eq:Re_isub_CES}).
-
+of the derivations of Eqs.~(\ref{eq:Re_dsub_prelim}), 
+(\ref{eq:Re_isub_prelim}), and 
+(\ref{eq:q_s_solution})--(\ref{eq:Re_isub_CES}).
 
 
 %------------------------------
@@ -1462,15 +1423,15 @@ The income rate of the device owner is $\rbempl{M}$,
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
-\emph{Gross} income from the EEU is given by Eq.~(\ref{eq:G_dot})
+Freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and 
 the substitution effect leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Derivations of expressions for gross and net income from the 
-emplacement effect ($\rate{G}$) and
-the substitution effect ($\rasub{N}$)
+Derivations of expressions for freed cash from the 
+emplacement effect ($\rate{G}$)
+and net savings after the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 Rebound from the income effect quantifies the rate of additional energy demand 
 that arises when the energy conversion device owner spends net
@@ -1480,9 +1441,9 @@ Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
 In this framework,
 the income effect must satisfy several constraints.
-The first constraint is that net income ($\rasub{N}$) should be completely re-spent.
+The first constraint is that net savings ($\rasub{N}$) should be completely re-spent.
 I.e, the income effect should satisfy the budget constraint
-such that net income is zero after
+such that net savings is zero after
 the income effect ($\rainc{N} = 0$).
 This constraint can be seen in 
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
@@ -1492,9 +1453,9 @@ for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
 satisfy the first constraint.
 
-The second constraint is that net income should be re-spent on only 
+The second constraint is that net savings should be re-spent on only 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item additional spending on the energy service ($\rainc{q}_s > \rbinc{q}_s$, segment \hatd{}) and
   
@@ -1532,11 +1493,11 @@ direct and indirect income effect rebound.
 %..............................
 
 The income elasticity of energy service consumption ($\eqsM$)
-quantifies the amount of net income spent 
+quantifies the amount of net savings spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 (See Appendix~\ref{sec:utility_and_elasticities} 
 for additional information about elasticities.)
-Spending of net income on the energy service 
+Spending of net savings on the energy service 
 leads to direct income effect rebound ($Re_{dinc}$).
 
 The ratio of rates of energy service consumed across the income effect is given by
@@ -1560,10 +1521,10 @@ For the purposes of the income effect,
 the effective income equation (Eq.~(\ref{eq:effective_income})) 
 adjusts income ($\rorig{M}$) to account for 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
-        gross income ($\rate{G}$)
+        freed cash ($\rate{G}$)
         from the emplacement effect and
   
   \item expenditure adjustments 
@@ -1585,7 +1546,7 @@ the expression for direct income rebound is
   Re_{dinc} = \Redinceqnexact{} \; .
 \end{equation}
 %
-If there is no net income after the substitution effect ($\rasub{N} = 0$), 
+If there is no net savings after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
@@ -1597,9 +1558,9 @@ of income effect rebound.
 %..............................
 
 The income elasticity of other goods consumption ($\eqoM$)
-quantifies the amount of net income spent 
+quantifies the amount of net savings spent 
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
-Spending of net income on other goods and services
+Spending of net savings on other goods and services
 leads to indirect income effect rebound ($Re_{iinc}$).
 
 The ratio of rates of other goods consumed across the income effect is given by
@@ -1679,7 +1640,7 @@ The same holds for energy.
 While energy efficiency at the device-level has climbed 
 over the past centuries, energy consumption at the macro level 
 has also risen \citep{Fouquet2014}.
-It is important to recognise the generality of this result.
+It is important to recognize the generality of this result.
 +++ here possible about th 69 inputs, and the long run growth
 in iron demand -- GS+++
 Typically the focus is on the effects on output of factor-augmenting
@@ -1690,12 +1651,12 @@ relative to counterfactual scenario of lower growth.
 
 To operationalize this macro effect, that ultimately leads to 
 higher incomes and spending on goods and energy services, we scale
-the net income~($\rasub{N}$) gained by device owners at the micro level.
+the net savings~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, it is reasonable to assume that
-net income ($\rasub{N}$) is spent in the economy at the average 
+net savings ($\rasub{N}$) is spent in the economy at the average 
 energy intensity of the economy ($I_E$).
 
-Scaling from net income ($\rasub{N}$) at the device level
+Scaling from net savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is an unexplored area.
 In the absence of better information,
 we express this scaling simply by a macro factor ($k$)
@@ -1743,12 +1704,12 @@ After algebra and canceling of terms,
 we find
 %
 \begin{align} \label{eq:Re_tot}  
-  Re_{sum} = \; \Retoteqn{} \; .
+  Re_{tot} = \; \Retoteqn{} \; .
 \end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Calculations: two examples (PB, 2000 words)}
+\section{Calculations: two examples}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1810,7 +1771,7 @@ $Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
-The total rebound sum ($Re_{sum}$)
+The total rebound sum ($Re_{tot}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
  
@@ -3057,7 +3018,7 @@ such as capital expenditure rate ($\raempl{C}_{cap}$).
 More-efficient devices are likely to be more expensive.
 
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis limits.)", fig.width=6, fig.height=4>>=
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] %in% c("Car", "Lamp"))
 
@@ -3325,7 +3286,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Discussion (GS, 1000 words)}
+\section{Discussion}
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

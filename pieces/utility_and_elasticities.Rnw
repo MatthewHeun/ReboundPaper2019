@@ -91,7 +91,7 @@ the income effect also employs elasticities to determine changes to
 the rate of energy service consumption ($\Delta \rainc{q}_s$) and
 the rate of other goods consumption ($\Delta \rainc{C}_o$).
 In the income effect, 
-elasticities describe the proportions of net income ($\rasub{N}$)
+elasticities describe the proportions of net savings ($\rasub{N}$)
 spent on the energy service
 and other goods and services.
 
@@ -490,7 +490,7 @@ in the CES utility model is given by
 Thus, the elasticity of substitution ($\sigma$) 
 can be determined from two pieces of readily-available information:
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item the uncompensated own price elasticity ($\eqspsUC$) and 
   
@@ -506,7 +506,7 @@ can be determined from two pieces of readily-available information:
 %++++++++++++++++++++++++++++++
 
 The income effect requires two elasticities to 
-estimate the respending of net income:
+estimate the respending of net savings:
 the income elasticity of energy service consumption ($\eqsM$) and
 the income elasticity of other goods consumption ($\eqoM$).
 Due to the homotheticity assumption,

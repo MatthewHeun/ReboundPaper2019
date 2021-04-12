@@ -23,11 +23,11 @@ For each energy rebound effect in Fig.~\ref{fig:flowchart},
 energy and financial analysis must be performed.
 The purposes of the analyses are to determine for each effect
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 
   \item an expression for energy rebound~($Re$) for the effect and
 
-  \item an equation for net income~($\rate{N}$) remaining after the effect.
+  \item an equation for net savings~($\rate{N}$) remaining after the effect.
 
 \end{enumerate*}
 
@@ -58,7 +58,7 @@ will all increase in proportion to the number of devices emplaced.
 \label{sec:derivations}
 %++++++++++++++++++++++++++++++
 
-Derivations for rebound definitions and net income equations
+Derivations for rebound definitions and net savings equations
 are presented in Tables~\ref{tab:empleffect}--\ref{tab:macroeffect},
 one for each rebound effect in Fig.~\ref{fig:flowchart}.
 Energy and financial analyses are shown side by side, because
@@ -79,12 +79,12 @@ that justify zeroing each term.
   Zeroed term & Justification (from Table~\ref{tab:analysis_assumptions}). \\
   \midrule
   $\cancelto{0}{\Delta \raempl{C}_o}$    & $\rorig{C}_o = \raempl{C}_o$ ($\rate{C}_o$ unchanged across emplacement effect.) \\
-  $\cancelto{0}{\rorig{N}}$              & $0 = \rorig{N}$ (Net income is zero prior to the EEU.) \\
+  $\cancelto{0}{\rorig{N}}$              & $0 = \rorig{N}$ (Net savings is zero prior to the EEU.) \\
   $\cancelto{0}{\Delta \rasub{E}_{emb}}$ & $\rbsub{E}_{emb} = \rasub{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across substitution effect.) \\
   $\cancelto{0}{\Delta \rasub{C}_{\md}}$ & $\rbsub{C}_{\md} = \rasub{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across substitution effect.) \\
   $\cancelto{0}{\Delta \rainc{E}_{emb}}$ & $\rbinc{E}_{emb} = \rainc{E}_{emb}$ ($\rate{E}_{emb}$ unchanged across income effect.) \\
   $\cancelto{0}{\Delta \rainc{C}_{\md}}$ & $\rbinc{C}_{\md} = \rainc{C}_{\md}$ ($\rate{C}_{\md}$ unchanged across income effect.) \\
-  $\cancelto{0}{\rainc{N}}$              & $\rainc{N} = 0$ (All net income is re-spent in the income effect.) \\
+  $\cancelto{0}{\rainc{N}}$              & $\rainc{N} = 0$ (All net savings is re-spent in the income effect.) \\
   \bottomrule
 \end{tabular}
 \label{tab:zeroed_terms}
@@ -205,7 +205,7 @@ and finally to disposal.
 For simplicity, we group maintenance with disposal to form
 two distinct indirect emplacement rebound effects:
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item an embodied energy effect ($Re_{emb}$) and 
   
@@ -263,8 +263,7 @@ Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy reboun
 Embodied energy rebound can be either positive or negative, depending on 
 the sign of the term
 $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
-Typically, but not always,
-rising energy efficiency is associated with increased device complexity
+Rising energy efficiency can be associated with increased device complexity
 and more embodied energy,
 such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$.
 However, if the upgraded device has longer life than the original device
@@ -697,20 +696,20 @@ The income rate of the device owner is $\rbempl{M}$,
 which remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
-Gross income from the EEU is given by Eq.~(\ref{eq:G_dot})
+Freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
 In combination, the emplacement effect and
 the substitution effect leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
-Derivations of expressions for gross and net income from the 
-emplacement effect ($\rate{G}$) and
-the substitution effect ($\rasub{N}$)
+Derivations of expressions for 
+freed cash from the emplacement effect ($\rate{G}$) and
+net savings after the substitution effect ($\rasub{N}$)
 are presented in Tables~\ref{tab:empleffect} and~\ref{tab:subeffect}.
 
-In this framework, all net income ($\rasub{N}$) is spent either 
+In this framework, all net savings ($\rasub{N}$) is spent either 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item on additional energy service ($\rainc{q}_s > \rbinc{q}_s$) or
   
@@ -742,7 +741,7 @@ where effective income ($\Mdothatprime$) is
 Homotheticity means that $\eqsM = 1$ and $\eqoM = 1$.
 
 The budget constraint across the income effect (Eq.~(\ref{eq:inc_budget_constraint})) 
-ensures that all net income available after the substitution effect ($\rasub{N}$) 
+ensures that all net savings available after the substitution effect ($\rasub{N}$) 
 is re-spent across the income effect, 
 such that $\rainc{N} = 0$.
 Appendix~\ref{sec:proof_income_elasticities} proves that
@@ -751,7 +750,7 @@ satsify the budget constraint (Eq.~\ref{eq:inc_budget_constraint}).
 
 The purpose of this section is derivation of expressions for 
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item direct income rebound~($Re_{dinc}$) 
         arising from increased consumption of the energy service 
@@ -870,7 +869,7 @@ gives
   Re_{dinc} = \Redinceqnexact{} \; . \tag{\ref{eq:Re_dinc}}
 \end{equation}
 %
-If there is no net income ($\rasub{N} = 0$), 
+If there is no net savings ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 
 The next step is to develop an expression for $Re_{iinc}$
@@ -936,7 +935,7 @@ of the indirect income rebound expression:
   Re_{iinc} = \Reiinceqnexact{} \; . \tag{\ref{eq:Re_iinc}}
 \end{equation}
 %
-If there is no net income ($\rasub{N} = 0$), 
+If there is no net savings ($\rasub{N} = 0$), 
 indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
 
 
@@ -946,7 +945,7 @@ indirect income effect rebound is zero ($Re_{iinc} = 0$), as expected.
 %------------------------------
 
 Macro rebound~($Re_{\macro}$) is given by Eq.~(\ref{eq:Re_macro_def}).
-Substituting Eq.~(\ref{eq:N_dot_after_sub}) for net income~($\rbinc{N}$) gives
+Substituting Eq.~(\ref{eq:N_dot_after_sub}) for net savings~($\rbinc{N}$) gives
 
 \begin{equation}
   Re_{\macro} = \frac{k \rate{G} I_E}{\Sdot}
