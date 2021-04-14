@@ -1315,8 +1315,8 @@ for determining
 the post-substitution effect point
 and therefore $Re_{dsub}$ and $Re_{isub}$.
 The approximate method assumes that 
-the energy service price elasticity of energy service consumption ($\eqspsC$) and
-the energy service price elasticity of other goods consumption ($\eqopsC$)
+the compensated energy service price elasticity of energy service consumption ($\eqspsC$) and
+the compensated energy service price elasticity of other goods consumption ($\eqopsC$)
 are constant along an indifference curve.
 These assumptions are approximations 
 that are unsuitable for non-marginal price changes 
@@ -1714,7 +1714,7 @@ we find
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Section 3 refs to add
-Possibly include in section 3 calcs (for own-price  elasticities) 
+Possibly include in section 3 calcs (for own-price elasticities) 
 and/or section 4 discussion
 \citet{Mills2014},
 \citet{Saunders2012},
