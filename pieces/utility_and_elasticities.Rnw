@@ -154,14 +154,14 @@ for convenience.
 
 \begin{equation} 
   \frac{\rasub{q}_s}{\rbempl{q}_s}
-      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqsps} 
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsC} 
         \tag{\ref{eq:approx_qshat_over_qsorig}}
 \end{equation}
 
 \begin{equation}
   \frac{\rasub{C}_o}{\rorig{C}_o}
       = \frac{\rasub{q}_o}{\rorig{q}_o}
-      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} \tag{\ref{eq:Cdot_o_ratio}}
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqopsC} \tag{\ref{eq:Cdot_o_ratio}}
 \end{equation}
 
 
@@ -385,7 +385,7 @@ Gregor to check Saunders (2008), which PB thinks may have said something similar
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Elasticities for the substitution effect ($\eqsps$, $\eqops$, and $\sigma$)}
+\subsection{Elasticities for the substitution effect ($\eqspsC$, $\eqopsC$, and $\sigma$)}
 \label{sec:elasticities_for_sub_effect}
 %++++++++++++++++++++++++++++++
 
@@ -394,10 +394,10 @@ In this paper, we describe two utiliity models in detail:
 an approximate model and a CES model.
 All utility models require elasticities to describe consumer preferences.
 In fact, there are three elasticies across the two utility models we discuss in detail:
-$\eqsps$, $\eqops$, and $\sigma$.
+$\eqspsC$, $\eqopsC$, and $\sigma$.
 The approximate method requires 
-the own price elasticity of energy service consumption ($\eqsps$) and
-the cross-price elasticity of energy service consumption ($\eqops$).
+the own price elasticity of energy service consumption ($\eqspsC$) and
+the cross-price elasticity of energy service consumption ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
 None of the elasticities required for the approximate and CES utility models
@@ -411,7 +411,7 @@ which can be estimated empirically from
 
 
 %------------------------------
-\subsubsection{Elasticities for the approximate utility model ($\eqsps$ and $\eqops$)} 
+\subsubsection{Elasticities for the approximate utility model ($\eqspsC$ and $\eqopsC$)} 
 \label{sec:elasticities_approx}
 %------------------------------
 
@@ -420,23 +420,23 @@ can be derived using the Slutsky equation
 **** Gregor to provide a reference to Slutsky eqaution ****, 
 whereby the uncompensated ($UC$) own price elasticity 
 of the energy service ($\eqspsUC$) 
-is decomposed into the compensated price elasticity ($\eqsps$) and
+is decomposed into the compensated price elasticity ($\eqspsC$) and
 the income elasticity ($\eqsM$) as follows:
 
 \begin{equation} \label{eq:slutsky}
-  \eqspsUC = \eqsps - \fCs \eqsM \; ,
+  \eqspsUC = \eqspsC - \fCs \eqsM \; ,
 \end{equation}
 %
 where $\fCs$ is given by Eq.~(\ref{eq:fCs}). and 
 $\eqsM$ is given in Section~\ref{sec:income_elasticities}.
-Solving for the compensated own price elasticity ($\eqsps$) gives
+Solving for the compensated own price elasticity ($\eqspsC$) gives
 
 \begin{equation} \label{eq:eqsps}
-  \eqsps = \eqspsUC + \fCs \eqsM \; .
+  \eqspsC = \eqspsUC + \fCs \eqsM \; .
 \end{equation}
 
 A similar argument allows straightforward derivation 
-of the cross price elasticity ($\eqops$).
+of the cross price elasticity ($\eqopsC$).
 With \citet{Hicks1934}, 
 we note that the uncompensated cross price elasticity ($\eqopsUC$)
 can generally be expressed as
@@ -452,25 +452,25 @@ We set Eq.~(\ref{eq:Allen}) equal to
 the cross-price version of the Slutsky equation
 
 \begin{equation} \label{eq:slutsky_cross}
-  \eqopsUC = \eqops - \fCs \eqoM \; ,
+  \eqopsUC = \eqopsC - \fCs \eqoM \; ,
 \end{equation}
 %
 to obtain
 
 \begin{equation}
-  \fCs (\sigma - \eqoM) = \eqops - \fCs \eqoM \; .
+  \fCs (\sigma - \eqoM) = \eqopsC - \fCs \eqoM \; .
 \end{equation}
 %
-Solving for $\eqops$ gives
+Solving for $\eqopsC$ gives
 
 \begin{equation} \label{eq:eqops_general}
-  \eqops = \fCs \sigma \; .
+  \eqopsC = \fCs \sigma \; .
 \end{equation}
 %
 Substituting $\sigma$ from Section~\ref{sec:elasticity_ces} (Eq.~(\ref{eq:sigma})) gives
 
 \begin{equation} \label{eq:eqops}
-  \eqops = \frac{\fCs (\fCs + \eqspsUC)}{\fCs - 1} \; .
+  \eqopsC = \frac{\fCs (\fCs + \eqspsUC)}{\fCs - 1} \; .
 \end{equation}
 
 

@@ -8,9 +8,9 @@ The rebound framework employs four elasticities:
 %
 \begin{itemize}
 
-  \item the energy service price elasticity of energy service consumption (own price elasticity, $\eqsps$),
+  \item the energy service price elasticity of energy service consumption (own price elasticity, $\eqspsC$),
 
-  \item the energy service price elasticity of other goods consumption (cross price elasticity, $\eqops$), 
+  \item the energy service price elasticity of other goods consumption (cross price elasticity, $\eqopsC$), 
   
   \item the income elasticity of energy service consumption ($\eqsM$), and 
   
@@ -28,24 +28,24 @@ of empirically-estimated or readily-available data.
 Analytical expressions for the elasticities can be derived using the Slutsky equation, 
 whereby the uncompensated (UC) own price elasticity 
 of the energy service ($\eqspsUC$) 
-is decomposed into the compensated price elasticity ($\eqsps$) and
+is decomposed into the compensated price elasticity ($\eqspsC$) and
 the income elasticity ($\eqsM$) as follows:
 
 \begin{equation} \label{eq:slutsky}
-  \eqspsUC = \eqsps - \fCs \eqsM \; ,
+  \eqspsUC = \eqspsC - \fCs \eqsM \; ,
 \end{equation}
 %
 where $\fCs$ is the fraction of expenditure
 on the energy service ($\rbempl{C}_s$)
 relative to the sum of expenditures on the energy service and other goods
 ($\rbempl{C}_s + \rbempl{C}_o$). 
-Solving for the compensated own price elasticity ($\eqsps$) gives
+Solving for the compensated own price elasticity ($\eqspsC$) gives
 
 \begin{equation} \label{eq:eqsps}
-  \eqsps = \eqspsUC + \fCs \eqsM \; .
+  \eqspsC = \eqspsUC + \fCs \eqsM \; .
 \end{equation}
 %
-The compensated own price elasticity ($\eqsps$)
+The compensated own price elasticity ($\eqspsC$)
 can be determined from two sources of information:
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -61,7 +61,7 @@ can be determined from two sources of information:
 \end{enumerate*}
 
 A similar argument allows straightforward derivation 
-of the cross price elasticity ($\eqops$).
+of the cross price elasticity ($\eqopsC$).
 With \citet{Hicks1934}, 
 note that uncompensated cross price elasticity can generally be expressed as
 
@@ -76,13 +76,13 @@ We set Eq.~(\ref{eq:Allen}) equal to
 the cross-price version of the Slutsky equation
 
 \begin{equation} \label{eq:slutsky_cross}
-  \eqopsUC = \eqops - \fCs \eqoM \; ,
+  \eqopsUC = \eqopsC - \fCs \eqoM \; ,
 \end{equation}
 %
-and solve for $\eqops$ to find
+and solve for $\eqopsC$ to find
 
 \begin{equation} \label{eq:eqops_general}
-  \eqops = \fCs \sigma \; .
+  \eqopsC = \fCs \sigma \; .
 \end{equation}
 %
 The elasticity of substitution ($\sigma$)
@@ -107,9 +107,9 @@ causing $Re_{dsub} = 1$ always,
 by Eq.~(\ref{eq:Re_dsub}).
 
 **** Gregor: Is the uncompensated own-price elasticity ($\eqspsUC$) $-1$
-or is the compensated own-price elasticity ($\eqsps$) $-1$?
+or is the compensated own-price elasticity ($\eqspsC$) $-1$?
 Eq.~(\ref{eq:Re_dsub}) shows that direct substitution rebound is a function of the
-compensated own-price elasticity ($\eqsps$), which, if -1, gives unitary direct substitution rebound.
+compensated own-price elasticity ($\eqspsC$), which, if -1, gives unitary direct substitution rebound.
 ****
 
 I.e, a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
@@ -134,16 +134,16 @@ Due to homotheticity,
 all income elasticities are unitary in the CES utility model
 ($\eqsM = 1$ and $\eqoM = 1$).
 Therefore,
-the compensated own price elasticity ($\eqsps$) can be
+the compensated own price elasticity ($\eqspsC$) can be
 determined from empirically available information
 (namely, $\eqspsUC$ and $\fCs$)
 after substituting $\eqsM = 1$ into Eq.~(\ref{eq:eqsps}):
 
 \begin{equation} \label{eq:eqsps_final}
-  \eqsps = \eqspsUC + \fCs \; .
+  \eqspsC = \eqspsUC + \fCs \; .
 \end{equation}
 
-For the cross price elasticity ($\eqops$),
+For the cross price elasticity ($\eqopsC$),
 \citet{Gortz1977} shows that
 the elasticity of substitution ($\sigma$)
 for the CES utility model is given by
@@ -155,7 +155,7 @@ for the CES utility model is given by
 Substituting Eq.~(\ref{eq:sigma}) into Eq.~(\ref{eq:eqops_general}) yields
 
 \begin{equation} \label{eq:eqops}
-  \eqops = \frac{\fCs (\fCs + \eqspsUC)}{\fCs - 1} \; .
+  \eqopsC = \frac{\fCs (\fCs + \eqspsUC)}{\fCs - 1} \; .
 \end{equation}
 
 Thus, assuming the CES utility model,
@@ -164,7 +164,7 @@ $\eqsM = 1$,
 $\eqoM = 1$,
 Eq.~(\ref{eq:eqsps_final}), and
 Eq.~(\ref{eq:eqops}).
-To calculate values for $\eqsps$ and $\eqops$,
+To calculate values for $\eqspsC$ and $\eqopsC$,
 estimates of only two parameters are needed:
 %
 \begin{enumerate*}[label={(\alph*)}]
@@ -175,4 +175,4 @@ estimates of only two parameters are needed:
 
 \end{enumerate*}
 %
-$\eqsps$ is empirically estimable and $\fCs$ is readily available.
+$\eqspsC$ is empirically estimable and $\fCs$ is readily available.
