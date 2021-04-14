@@ -427,7 +427,7 @@ the income elasticity ($\eqsM$) as follows:
   \eqspsUC = \eqspsC - \fCs \eqsM \; ,
 \end{equation}
 %
-where $\fCs$ is given by Eq.~(\ref{eq:fCs}). and 
+where $\fCs$ is given by Eq.~(\ref{eq:fCs}), and 
 $\eqsM$ is given in Section~\ref{sec:income_elasticities}.
 Solving for the compensated own price elasticity ($\eqspsC$) gives
 
