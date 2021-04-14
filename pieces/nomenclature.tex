@@ -34,7 +34,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $G$ & freed cash [\$] \\
   $I$ & energy intensity of economic activity [MJ/\$] \\
   $k$ & macro factor [--] \\
-  $m$ & temporary variable for $1 - \eqops$ [--] \\
+  $m$ & temporary variable for $1 - \eqopsC$ [--] \\
   $M$ & income [\$] \\
   $N$ & net savings [\$] \\
   $p$ & price [\$] \\
@@ -60,14 +60,16 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   \toprule
   Greek letter & Meaning [example units] \\
   \midrule
-  $\Delta$ & difference (later quantity $-$ earlier quantity, see Table~\ref{tab:analysis_assumptions}) \\
+  $\Delta$   & difference (later quantity $-$ earlier quantity, see Table~\ref{tab:analysis_assumptions}) \\
   $\epsilon$ & elasticity [--] \\
-  $\eqsM$  & income ($\dot{M}$) elasticity of energy service consumption ($\dot{q}_s$) [--] \\
-  $\eqoM$  & income ($\dot{M}$) elasticity of other goods consumption ($\dot{q}_o$) [--] \\
-  $\eqsps$ & energy service price ($p_s$) elasticity of energy service consumption ($\dot{q}_s$) [--] \\
-  $\eqops$ & energy service price ($p_s$) elasticity of other goods consumption ($\dot{q}_o$) [--] \\
-  $\eta$ & final-energy-to-service efficiency [vehicle-km/MJ] \\
-  $\sigma$ & elasticity of substitution between the energy service ($\rbempl{q}_s$) and other goods ($\rbempl{q}_o$) [--] \\
+  $\eqsM$    & income ($\dot{M}$) elasticity of energy service consumption ($\dot{q}_s$) [--] \\
+  $\eqoM$    & income ($\dot{M}$) elasticity of other goods consumption ($\dot{q}_o$) [--] \\
+  $\eqspsUC$ & uncompensated (Marshallian) energy service price ($p_s$) elasticity of energy service consumption ($\dot{q}_s$) [--] \\
+  $\eqopsUC$ & uncompensated (Marshallian) energy service price ($p_s$) elasticity of other goods consumption ($\dot{q}_o$) [--] \\
+  $\eqspsC$   & compensated energy service price ($p_s$) elasticity of energy service consumption ($\dot{q}_s$) [--] \\
+  $\eqopsC$   & compensated energy service price ($p_s$) elasticity of other goods consumption ($\dot{q}_o$) [--] \\
+  $\eta$     & final-energy-to-service efficiency [vehicle-km/MJ] \\
+  $\sigma$   & elasticity of substitution between the energy service ($\rbempl{q}_s$) and other goods ($\rbempl{q}_o$) [--] \\
   \bottomrule
 \end{tabular}
 \label{tab:greek}
@@ -131,6 +133,7 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   Subscript & Meaning \\
   \midrule
   $0$ & quantity at an initial time \\
+  $c$ & compensated \\
   $cap$ & capital costs \\
   $dev$ & device \\
   $dempl$ & direct emplacement effect \\
@@ -139,8 +142,8 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $dir$ & direct effects (at the energy conversion device) \\
   $dsub$ & direct substitution effect \\
   $emb$ & embodied \\
-  $i$ & index for an other good purchased in the economy \\
-  $j$ & represents one of $cap$, $md$, or $o$ in Eq.~($\ref{eq:indirect_energy_rates}$) \\
+  $i$ & index for other goods purchased in the economy \\
+  $j$ & one of $cap$, $md$, or $o$ in Eq.~($\ref{eq:indirect_energy_rates}$) \\
   $iempl$ & indirect emplacement effects \\
   $iinc$ & indirect income effect \\
   $indir$ & indirect effects (beyond the energy conversion device) \\
@@ -153,7 +156,6 @@ Table~\ref{tab:subscripts} shows subscripts and their meanings.
   $\macro$ & macro effect \\
   $s$ & service stage of the energy conversion chain \\
   $tot$ & sum of all rebound effects in the framework \\
-  $UC$ & uncompensated \\
   \bottomrule
 \end{tabular}
 \label{tab:subscripts}

@@ -293,8 +293,8 @@ indirect substitution rebound ($Re_{isub}$).
 This section derives each in terms of 
 energy service efficiencies ($\bempl{\eta}$ and $\amacro{\eta}$) and
 the service price elasticities 
-of energy service consumption ($\eqsps$) and
-other goods consumption ($\eqops$).
+of energy service consumption ($\eqspsC$) and
+other goods consumption ($\eqopsC$).
 We begin with derivation of two ratios that are helpful later,
 $\frac{\rasub{q}_s}{\rbsub{q}_s}$ and
 $\frac{\rasub{q}_o}{\rbsub{q}_o}$.
@@ -316,15 +316,15 @@ decreases the consumption rate of other goods ($\rasub{q}_o < \rbsub{q}_o$).
 (See Appendix~\ref{sec:elasticities} for information about elasticities.)
 
 The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of energy service consumption~($\eqsps$),
+is given by the service price elasticity of energy service consumption~($\eqspsC$),
 such that
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\eqspsC} \; .
 \end{equation}
 %
 Note that a negative value for the service price elasticity of energy service consumption
-is expected ($\eqsps < 0$),
+is expected ($\eqspsC < 0$),
 such that when the energy service price decreases ($\amacro{p}_s < \bempl{p}_s$),
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
@@ -334,30 +334,30 @@ $\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
 gives
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsC} \; .
                                                                         \tag{\ref{eq:q_ratio_func_of_eps}}
 \end{equation}
 %
 Again, note that the energy service price elasticity of energy service consumption
-is negative ($\eqsps < 0$), so that
+is negative ($\eqspsC < 0$), so that
 as energy service efficiency increases ($\amacro{\eta} > \bempl{\eta}$),
 the energy service consumption rate increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the substitution effect on other purchases,
 we introduce a second elasticity, 
-the service price elasticity of other goods consumption~($\eqops$).
+the service price elasticity of other goods consumption~($\eqopsC$).
 See Appendix~\ref{sec:elasticities} for constraints on the relationship between the
-energy service price elasticity of energy service consumption~($\eqsps$) and the
-energy service price elasticity of other goods consumption~($\eqops$).
+energy service price elasticity of energy service consumption~($\eqspsC$) and the
+energy service price elasticity of other goods consumption~($\eqopsC$).
 
 The ratio of other goods consumption on both sides of the substitution effect is given by
 
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right) ^ {\eqops} \; . 
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right) ^ {\eqopsC} \; . 
 \end{equation}
 %
 Note that the service price elasticity of other good consumption
-is expected to be positive ($\eqops > 0$).
+is expected to be positive ($\eqopsC > 0$).
 As the energy service price decreases~($\amacro{p}_s < \bempl{p_s}$), 
 consumption of other goods is expected to decrease ($\rasub{q}_o < \rbsub{q}_o$), 
 because constant utility is assumed across the substitution effect.
@@ -368,7 +368,7 @@ $\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
 gives
 
 \begin{equation}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right) ^ {-\eqops} \; . 
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right) ^ {-\eqopsC} \; . 
                                                                                               \tag{\ref{eq:qohat_qostar}}
 \end{equation}
 
@@ -433,8 +433,8 @@ and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
-expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\frac{\amacro{\eta}}{\bempl{\eta}} = 2$,
+expected to be negative ($\eqspsC < 0$).
+For example, when $\eqspsC = -0.2$ and $\frac{\amacro{\eta}}{\bempl{\eta}} = 2$,
 $Re_{dsub} = 0.15$.
 
 To find the values for $Re_{dsub}$ in the limits where $\etaratioinline{} \to 1$ or 
@@ -442,30 +442,30 @@ $\etaratioinline{} \to \infty$, we take derivatives of numerator and denominator
 of Eq.~(\ref{eq:Re_dsub}) with respect to $\etaratioinline{}$ and invoke L'H\^{o}pital's rule.
 
 \begin{equation}
-  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqsps}  \right]}
+  \frac{\dbydetaeta{}\left[ \left( \etaratiostacked{} - 1 \right)^{-\eqspsC}  \right]}
            {\dbydetaeta{}\left[ \etaratiostacked{} - 1\right]}
-    = -\eqsps \left( \etaratiostacked{} \right)^{-(\eqsps + 1)}
+    = -\eqspsC \left( \etaratiostacked{} \right)^{-(\eqspsC + 1)}
 \end{equation}
 %
 Substituting 1 and $\infty$ for $\etaratioinline$ gives
 
 \begin{equation}
   \lim_{\amacro{\eta}/\bempl{\eta} \to 1^{\!+}} Re_{dsub} 
-    = -\eqsps ( 1 )^{-(\eqsps + 1)}
-    = -\eqsps \; ,                               \tag{\ref{eq:lim_Redsub_1}}
+    = -\eqspsC ( 1 )^{-(\eqspsC + 1)}
+    = -\eqspsC \; ,                               \tag{\ref{eq:lim_Redsub_1}}
 \end{equation}
 %
 and
 
 \begin{equation}
   \lim_{\amacro{\eta}/\bempl{\eta} \to \infty} Re_{dsub} 
-    = -\eqsps ( \infty )^{-(\eqsps + 1)}
+    = -\eqspsC ( \infty )^{-(\eqspsC + 1)}
     = 0 \; ,                                              \tag{\ref{eq:lim_Redsub_infty}}
 \end{equation}
 %
-because $\eqsps \in [-1, 0)$ and, therefore, $(\eqsps + 1) > 0$.
+because $\eqspsC \in [-1, 0)$ and, therefore, $(\eqspsC + 1) > 0$.
 
-With $\eqsps \in (-1, 0)$ expected,
+With $\eqspsC \in (-1, 0)$ expected,
 direct substitution rebound will never be larger than 1.
 The direct substitution effect alone
 can never cause backfire. 
@@ -525,7 +525,7 @@ the preceding two equations can be set equal and Eq.~(\ref{eq:qohat_qostar}) can
 \begin{equation} \label{eq:Cdot_o_ratio}
   \frac{\rasub{C}_o}{\rbsub{C}_o} 
       = \frac{\rasub{q}_o}{\rbsub{q}_o} 
-      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops}  \; .
+      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqopsC}  \; .
 \end{equation}
 %
 Note that Eq.~(\ref{eq:Cdot_o_ratio}) 
@@ -534,20 +534,20 @@ can be used to determine the rate of expenditures
 on other goods in the economy~($\rasub{C}_o$) by
 
 \begin{equation}
-  \rasub{C}_o = \rbempl{C}_o \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} \; .
+  \rasub{C}_o = \rbempl{C}_o \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqopsC} \; .
 \end{equation}
 
 Substituting Eq.~\ref{eq:Cdot_o_ratio} into Eq.~(\ref{eq:Re_isub_prelim}) gives
 
 \begin{equation}
-  Re_{isub} = \frac{\left[ \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqops} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
+  Re_{isub} = \frac{\left[ \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqopsC} - 1  \right] \rbsub{C}_o I_E} {\Sdot} \; .
 \end{equation}
 %
 Substituting Eq.~\ref{eq:Sdot} gives
 
 \begin{equation}
   Re_{isub} = \frac{\left[ \left(\frac{\amacro{\eta}}{\bempl{\eta}} \right)
-                  ^{-\eqops} - 1  \right] \rbsub{C}_o I_E}
+                  ^{-\eqopsC} - 1  \right] \rbsub{C}_o I_E}
                   {\Sdoteqn} \; .
 \end{equation}
 %
@@ -557,7 +557,7 @@ Noting that $\rbsub{C}_o = \rbempl{C}_o$ and rearranging yields
   Re_{isub} = \Reisubeqn{} \; . \tag{\ref{eq:Re_isub}}
 \end{equation}
 
-Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
+Because the service price elasticity of other goods consumption is positive ($\eqopsC > 0$) and
 the energy service efficiency ratio is greater than 1 ($\amacro{\eta} > \bempl{\eta}$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
@@ -574,7 +574,7 @@ First, rearranging Eq.~(\ref{eq:Re_isub}) gives
   Re_{isub} = \frac{\left( \etaratiostacked{} \right)^m - \etaratiostacked{}}{\left( \etaratiostacked{} \right) - 1} \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
-where $m \equiv 1 - \eqops$.
+where $m \equiv 1 - \eqopsC$.
 Taking the derivatives of numerator and denominator of Eq.~(\ref{eq:Re_isub})
 with respect to $\etaratioinline{}$ gives
 
@@ -596,7 +596,7 @@ Substituting for $m$ gives
 
 \begin{equation}
   \lim_{\etaratioinline \to 1^{+}} Re_{isub} 
-        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
+        = -\eqopsC \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; . \tag{\ref{eq:lim_Reisub_1}}
 \end{equation}
 
 Similarly, 
@@ -607,7 +607,7 @@ substituting $\etaratioinline = \infty$ and invoking L'H\^{o}pital's rule gives
         = \left[ m ( \infty )^{m-1} - 1 \right] \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; .
 \end{equation}
 %
-Because $\eqops \in (0, 1)$ is expected **** Check with Gregor.  Is this true? ****,
+Because $\eqopsC \in (0, 1)$ is expected **** Check with Gregor.  Is this true? ****,
 $0 < m < 1$ is expected, $m - 1 < 0$ is expected, and
 
 \begin{equation}
@@ -821,7 +821,7 @@ Canceling terms and substituting Eq.~(\ref{eq:q_ratio_func_of_eps}) gives
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
+($\eqsM$ becomes more positive or $\eqspsC$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 The next step is to develop an expression for $Re_{iinc}$
@@ -897,7 +897,7 @@ direct income rebound ($Re_{dinc}$, Eq.~(\ref{eq:Re_dinc})).
 Simplification gives
 
 \begin{equation} \label{eq:Re_d}
-  Re_d = \frac{ \left( \etaratiostacked \right)^{-\eqsps}
+  Re_d = \frac{ \left( \etaratiostacked \right)^{-\eqspsC}
              \left( 1 + \frac{\rasub{N}}{\rbempl{M}} \right)^{\eqsM}   - 1}
          {\etaratiostacked - 1} \; .
 \end{equation}

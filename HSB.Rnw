@@ -1315,8 +1315,8 @@ for determining
 the post-substitution effect point
 and therefore $Re_{dsub}$ and $Re_{isub}$.
 The approximate method assumes that 
-the energy service price elasticity of energy service consumption ($\eqsps$) and
-the energy service price elasticity of other goods consumption ($\eqops$)
+the energy service price elasticity of energy service consumption ($\eqspsC$) and
+the energy service price elasticity of other goods consumption ($\eqopsC$)
 are constant along an indifference curve.
 These assumptions are approximations 
 that are unsuitable for non-marginal price changes 
@@ -1324,8 +1324,8 @@ that are unsuitable for non-marginal price changes
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
-the energy service price elasticity of energy service consumption ($\eqsps$) and
-the energy service price elasticity of other goods consumption ($\eqops$)
+the energy service price elasticity of energy service consumption ($\eqspsC$) and
+the energy service price elasticity of other goods consumption ($\eqopsC$)
 to vary along an indifference curve. 
 We use a fully specified 
 constant elasticity of substitution (CES) utility model,
@@ -1987,10 +1987,10 @@ as shown below in Table~\ref{tab:car_stages_table}.
   $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
   Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
-  $\eqsps$ [--]                                           &                                &   \\    
+  $\eqspsC$ [--]                                           &                                &   \\    
   \midrule   
   Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
-  $\eqops$ [--]                                           &                                &   \\ 
+  $\eqopsC$ [--]                                           &                                &   \\ 
   \midrule   
   Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Assumed value. \\
   $\eqsM$ [--]                                            &                                &   \\ 
@@ -2546,10 +2546,10 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
   Price elasticity of demand for lighting                 &  $\Sexpr{e_qs_ps_lamp_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
-  $\eqsps$ [--]                                           &           &   \\    
+  $\eqspsC$ [--]                                           &           &   \\    
   \midrule   
   Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
-  $\eqops$ [--]                                           &           &   \\ 
+  $\eqopsC$ [--]                                           &           &   \\ 
   \midrule   
   Income elasticity of demand for lighting                &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
   $\eqsM$ [--]                                            &           &   \\ 
@@ -3235,7 +3235,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
                     graph_params = Re_graph_params) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::scale_x_reverse() +
-  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]*","*UC]),
+  ggplot2::labs(x = expression(epsilon[dot(q)[s]*","*p[s]]),
                 y = "Rebound terms [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),

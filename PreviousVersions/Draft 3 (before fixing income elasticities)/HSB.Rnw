@@ -818,20 +818,20 @@ direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 Substitution effect rebound  
 can be expressed in terms of energy service efficiencies ($\bempl{\eta}$ and $\amacro{\eta}$),
-the service price elasticity of energy service consumption ($\eqsps$), and
-the service price elasticity of other goods consumption ($\eqops$).
+the service price elasticity of energy service consumption ($\eqspsC$), and
+the service price elasticity of other goods consumption ($\eqopsC$).
 See Appendix~\ref{sec:elasticities} for further details about elasticities.
 
 The relationship between energy service price and energy service consumption rate
-is given by the service price elasticity of energy service consumption~($\eqsps$),
+is given by the service price elasticity of energy service consumption~($\eqspsC$),
 such that
 
 \begin{equation}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \frac{\amacro{p}_s}{\bempl{p}_s} \right)^{\eqspsC} \; .
 \end{equation}
 %
 We assume that the service price elasticity of consumption is 
-no greater than zero ($\eqsps < 0$)
+no greater than zero ($\eqspsC < 0$)
 under standard assumptions on convex preferences.
 % Note that a negative value for the service price elasticity of energy service consumption 
 % means that when the energy service price decreases ($\amacro{p}_s < \bempl{p}_s$),
@@ -843,26 +843,26 @@ $\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
 gives
 
 \begin{equation} \label{eq:q_ratio_func_of_eps}
-  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \etaratiostacked \right)^{-\eqsps} \; .
+  \frac{\rasub{q}_s}{\rbsub{q}_s} = \left( \etaratiostacked \right)^{-\eqspsC} \; .
 \end{equation}
 %
 Because the energy service price elasticity of energy service consumption
-is negative ($\eqsps < 0$),
+is negative ($\eqspsC < 0$),
 an energy service efficiency increase ($\amacro{\eta} > \bempl{\eta}$),
 implies an energy service consumption rate increase ($\rasub{q}_s > \rbsub{q}_s$).
 
 To quantify the \subeffect{} on other purchases,
 we introduce another elasticity:
-the energy service price elasticity of other goods consumption~($\eqops$).
+the energy service price elasticity of other goods consumption~($\eqopsC$).
 Appendix~\ref{sec:Re_sub} shows that
 
 \begin{equation} \label{eq:qohat_qostar}
-  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqops} \; .
+  \frac{\rasub{q}_o}{\rbsub{q}_o} = \left( \etaratiostacked \right) ^ {-\eqopsC} \; .
 \end{equation}
 %
 (See Appendix~\ref{sec:elasticities} for relationships among the elasticities.)
 Because the energy service price elasticity of other goods consumption
-is positive ($\eqops > 0$),
+is positive ($\eqopsC > 0$),
 an energy service efficiency increase ($\amacro{\eta} > \bempl{\eta}$)
 implies a reduction in the rate of consumption of other goods ($\rasub{q}_o > \rbsub{q}_o$).
 
@@ -880,14 +880,14 @@ gives
 \end{equation}
 
 Note that the service price elasticity of energy service consumption is
-expected to be negative ($\eqsps < 0$).
-For example, when $\eqsps = -0.2$ and $\etaratiostacked = 2$,
+expected to be negative ($\eqspsC < 0$).
+For example, when $\eqspsC = -0.2$ and $\etaratiostacked = 2$,
 $Re_{dsub} = 0.15$.
 
 Furthermore, L'H\^{o}pital's rule can be invoked to find
 
 \begin{equation} \label{eq:lim_Redsub_1}
-  \lim_{\etaratioinline \to 1^{\!+}} Re_{dsub} = -\eqsps \; ,
+  \lim_{\etaratioinline \to 1^{\!+}} Re_{dsub} = -\eqspsC \; ,
 \end{equation}
 %
 and
@@ -896,7 +896,7 @@ and
   \lim_{\etaratioinline \to \infty} Re_{dsub} = 0 \; .
 \end{equation}
 %
-With $\eqsps \in (-1, 0)$ expected,
+With $\eqspsC \in (-1, 0)$ expected,
 direct substitution rebound will never be larger than 1.
 Thus, the direct substitution effect alone
 can never cause backfire. 
@@ -926,7 +926,7 @@ we find
   Re_{isub} = \Reisubeqn{} \; .
 \end{equation}
 
-Because the service price elasticity of other goods consumption is positive ($\eqops > 0$) and
+Because the service price elasticity of other goods consumption is positive ($\eqopsC > 0$) and
 the energy service efficiency ratio is greater than 1 ($\amacro{\eta} > \bempl{\eta}$),
 indirect substitution rebound will be negative always ($Re_{isub} < 0$),
 as expected.
@@ -936,7 +936,7 @@ Invoking L'H\^{o}pital's rule gives
 
 \begin{equation} \label{eq:lim_Reisub_1}
   \lim_{\etaratioinline \to 1^{\!+}} Re_{isub} 
-        = -\eqops \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
+        = -\eqopsC \frac{\rbempl{C}_o I_E}{\rbempl{E}_s} \; ,
 \end{equation}
 %
 and
@@ -1001,7 +1001,7 @@ an expression for direct income rebound is
 If there is no net income ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
 As either of the elasticities get stronger 
-($\eqsM$ becomes more positive or $\eqsps$ becomes more negative), 
+($\eqsM$ becomes more positive or $\eqspsC$ becomes more negative), 
 direct income rebound~($Re_{dinc}$) grows.
 
 Any net monetary savings not spent on procuring more of the energy service
