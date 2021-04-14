@@ -1816,8 +1816,8 @@ k_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$k,
 
 # Parameters for elasticity table
 e_qs_ps_UC_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qs_ps_UC, digits = 1)
-e_qs_ps_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qs_ps, digits = 3)
-e_qo_ps_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qo_ps, digits = 3)
+e_qs_ps_C_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qs_ps_C, digits = 3)
+e_qo_ps_C_car_char <- val_to_string(case = "Car", val = ReboundTools::orig_vars$e_qo_ps_C, digits = 3)
 e_qs_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qs_M, digits = 1)
 e_qo_M_car_char <- val_to_string(case = "Car", val = ReboundTools::eeu_base_params$e_qo_M, digits = 1)
 
@@ -1986,10 +1986,10 @@ as shown below in Table~\ref{tab:car_stages_table}.
   Marshallian (uncompensated) price elasticity of demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
   $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
+  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_C_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqspsC$ [--]                                           &                                &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_C_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqopsC$ [--]                                           &                                &   \\ 
   \midrule   
   Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Assumed value. \\
@@ -2367,11 +2367,10 @@ k_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$
 
 # Third table
 e_qs_ps_UC_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qs_ps_UC, digits = 1)
-e_qs_ps_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qs_ps, digits = 4)
-e_qo_ps_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qo_ps, digits = 5)
+e_qs_ps_lamp_C_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qs_ps_C, digits = 4)
+e_qo_ps_lamp_C_char <- val_to_string(case = "Lamp", val = ReboundTools::orig_vars$e_qo_ps_C, digits = 5)
 e_qs_M_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qs_M, digits = 1)
 e_qo_M_lamp_char <- val_to_string(case = "Lamp", val = ReboundTools::eeu_base_params$e_qo_M, digits = 1)
-
 
 # Results discussion
 Re_dempl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_dempl, to_perc = TRUE, digits = 1)
@@ -2545,10 +2544,10 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Marshallian (uncompensated) price elasticity of demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
   $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
-  Price elasticity of demand for lighting                 &  $\Sexpr{e_qs_ps_lamp_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
+  Price elasticity of demand for lighting                 &  $\Sexpr{e_qs_ps_lamp_C_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqspsC$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
+  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_C_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqopsC$ [--]                                           &           &   \\ 
   \midrule   
   Income elasticity of demand for lighting                &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
@@ -3218,7 +3217,7 @@ For example, negative direct substitution rebound ($Re_{dsub} < 0$)
 is obtained when $\left| \eqspsUC \right| < \fCs$,
 because Eq.~(\ref{eq:sigma}) pushes 
 the elasticity of substitution negative ($\sigma < 0$).
-In reality, smaller negative (closer to 0) own price elasticity ($\eqspsUC$)
+In reality, smaller negative (closer to 0) uncompensated own price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
 thereby avoiding the uneconomic condition.
 However, multi-variate dynamics are not captured by univariate sensitivity studies.

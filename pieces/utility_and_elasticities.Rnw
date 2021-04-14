@@ -354,7 +354,7 @@ that a common utility model takes the form of a Cobb-Douglas function
 \end{equation}
 %
 where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ is an elasticity 
+$\alpha \in (0,1)$ is an output elasticity 
 which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
@@ -396,8 +396,8 @@ All utility models require elasticities to describe consumer preferences.
 In fact, there are three elasticies across the two utility models we discuss in detail:
 $\eqspsC$, $\eqopsC$, and $\sigma$.
 The approximate method requires 
-the own price elasticity of energy service consumption ($\eqspsC$) and
-the cross-price elasticity of energy service consumption ($\eqopsC$).
+the compensated own price elasticity of energy service consumption ($\eqspsC$) and
+the compensated cross-price elasticity of energy service consumption ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
 None of the elasticities required for the approximate and CES utility models
@@ -415,10 +415,11 @@ which can be estimated empirically from
 \label{sec:elasticities_approx}
 %------------------------------
 
-Analytical expressions for the elasticities in the approximate utility model
+Analytical expressions for the compensated elasticities
+in the approximate utility model
 can be derived using the Slutsky equation
 **** Gregor to provide a reference to Slutsky eqaution ****, 
-whereby the uncompensated ($UC$) own price elasticity 
+whereby the uncompensated own price elasticity 
 of the energy service ($\eqspsUC$) 
 is decomposed into the compensated price elasticity ($\eqspsC$) and
 the income elasticity ($\eqsM$) as follows:
@@ -436,7 +437,7 @@ Solving for the compensated own price elasticity ($\eqspsC$) gives
 \end{equation}
 
 A similar argument allows straightforward derivation 
-of the cross price elasticity ($\eqopsC$).
+of the compensated cross price elasticity ($\eqopsC$).
 With \citet{Hicks1934}, 
 we note that the uncompensated cross price elasticity ($\eqopsUC$)
 can generally be expressed as
