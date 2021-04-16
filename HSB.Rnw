@@ -2705,7 +2705,7 @@ rebound_results %>%
 @
 
 
-<<LampCostGraph, echo = FALSE, fig.cap="Cost path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampCostGraph, echo = FALSE, fig.cap="Expenditure path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_cost_line_angle <- -24
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                     9, 27392.8, 'degree', 
