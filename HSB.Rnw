@@ -3389,38 +3389,7 @@ is relatively cheap, real-world liquidity
 constraints can still prevent device owners 
 from making any upgrade at all \citep{Fowlie2018}.
 
-rebounds are relative to microeconomic 
-ones, depending on what total rebound is 
-considered likely. By interpreting it 
-as multiples of the expected freed cash 
-from a zero-rebound improvement, it is 
-a natural link to Hulten’s theorem, 
-that postulates aggregate growth to 
-be proportional to individual or sectoral 
-efficiency improvements and their 
-(Domar) weight in the economy 
-\citep{Hulten1978}. Since it is expressed 
-in monetary terms, it relates well 
-to a microeconomic ‘freed cash’ 
-multiplier k. It also relates to 
-‘multiplier effects’ discussions in 
-\citet{Borenstein2015} and 
-\citet{Gillingham2016} but derives 
-these from supply-side productivity 
-increases at the root of the kind of 
-growth involved in macroeconomic 
-rebound, not from a demand-driving 
-increase in spending without a prior 
-productivity increase. Since Hulten’s 
-theorem is only an approximation and 
-economy-wide rebound effects are large 
-relative to estimates of microeconomic 
-rebound, this also opens up questions 
-about nonlinearities recently stressed 
-by \citet{Baqaee2019}, and confirmed 
-at the sectoral level as impacting 
-rebounds by \citet{blackburn2020energy}.
-he framework also links to the total or 
+The framework also links to the total or 
 economy-wide rebound literature by relating 
 the size of macroeconomic rebound to that 
 of the microeconomic rebound in a term that 
@@ -3439,13 +3408,44 @@ indirect and macroeconomic rebound effects
 \citep{Colmenares2020,Brockway2021}. The 
 k factor in the model allows to build 
 intuition for how large macroeconomic 
+rebounds are relative to microeconomic 
+ones, depending on what total rebound is 
+considered likely. By interpreting it 
+as multiples of the expected freed cash 
+from a zero-rebound improvement, it is 
+a natural link to Hulten’s theorem, 
+that postulates aggregate growth to 
+be proportional to individual or sectoral 
+efficiency improvements and their 
+(Domar) weight in the economy 
+\citep{Hulten1978}. Since it is expressed 
+in monetary terms, it relates well 
+to a microeconomic ‘freed cash’ 
+multiplier k. It also relates to 
+‘multiplier effects’ discussions in 
+\citet{Borenstein:2015aa} and 
+\citet{Gillingham2016} but derives 
+these from supply-side productivity 
+increases at the root of the kind of 
+growth involved in macroeconomic 
+rebound, not from a demand-driving 
+increase in spending without a prior 
+productivity increase. Since Hulten’s 
+theorem is only an approximation and 
+economy-wide rebound effects are large 
+relative to estimates of microeconomic 
+rebound, this also opens up questions 
+about nonlinearities recently stressed 
+by \citet{Baqaee2019}, and confirmed 
+at the sectoral level as impacting 
+rebounds by \citet{blackburn2020energy}.
 
 One limitation of the present framework 
 is that it focuses only on consumers. 
 However, the choice to focus on them 
 came naturally from a desire to build 
 on the strong foundations by 
-\citet{Borenstein2015} and others in 
+\citet{Borenstein:2015aa} and others in 
 the hope of elucidating how their 
 conceptual models can be precisely unified, 
 and the widespread discussion of 
