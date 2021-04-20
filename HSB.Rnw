@@ -3263,8 +3263,8 @@ different values of $k$ imply a different macro-economy.
 
 
 <<all_Re_terms_k_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to the macro factor ($k$).", fig.width=6, fig.height=4>>=
-k_sens_params <- list(Car = list(k = seq(0.5, 2.0, by = 0.5)),
-                      Lamp = list(k = seq(0.5, 2.0, by = 0.5)))
+k_sens_params <- list(Car = list(k = seq(0.5, 2.5, by = 0.5)),
+                      Lamp = list(k = seq(0.5, 2.5, by = 0.5)))
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_params,
                     x_var = "k", 
@@ -3280,6 +3280,34 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
   MKHthemes::xy_theme() +
   ggplot2::theme(legend.text.align = 0)
 @
+
+
+
+%------------------------------
+\subsubsection{Effect of capital cost ($\aempl{C}_{cap}$)} 
+\label{sec:effect_of_capital_cost}
+%------------------------------
+
+<<all_Re_terms_C_cap_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to capital cost ($\\aempl{C}_{cap}$).", fig.width=6, fig.height=4>>=
+C_dot_cap_sens_params <- list(Car = list(C_cap_star = seq(26000, 30000, by = 1000)),
+                              Lamp = list(C_cap_star = seq(0.5, 10.0, by = 0.1)))
+
+rebound_terms_graph(rebound_data = actual_cases, parameterization = C_dot_cap_sens_params,
+                    x_var = "C_cap_star", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
+  ggplot2::scale_x_continuous(breaks = c(1, 2, 4, 6, 8, 10, 26000, 28000, 30000)) + 
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::labs(x = expression(C[cap]^"*"*" [$]"),
+                y = "Rebound terms [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme() +
+  ggplot2::theme(legend.text.align = 0)
+@
+
+
 
 
 
