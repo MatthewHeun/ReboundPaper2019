@@ -1793,7 +1793,7 @@ which can also be checked against Eq.~(\ref{eq:Re_tot}).
 As discussed in Section~\ref{sec:macro_effect_main_paper},
 the link between microeconomic factors and macro rebound effects 
 is a largely unexplored area. 
-For now, we assume $k = 1$ for both case studies.
+For now, we assume a placeholder value of $k = 1$ for both case studies.
 We return to the matter of quantifying $k$
 in the Discussion (Section~\ref{sec:discussion}).
  
@@ -3552,10 +3552,47 @@ Focus on consequences of comprehensive framework
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
-As presented above, the rebound framework assumed 
-a placeholder value of 1 for the macro factor ($k$).
+We note, again, that few studies explore the macro rebound space.
+Most focus on microeconomic effects or total rebound.
+As suggested by \citet{Borenstein:2015aa} and others, 
+we bridge micro to macro through the use of the macro factor ($k$).
+For the results presented in Section~\ref{sec:examples}, 
+we assumed a placeholder value of $k = 1$.
 However, the framework allows, for the first time, 
-estimation of values for $k$.
+estimations of values for $k$.
+
+To calibrate the macro factor,
+we treat $k$ as a residual
+whose value is chosen such that macro rebound ($Re_{\macro}$)
+is sufficient to achieve an expected value for $Re_{tot}$.
+The expected value for $Re_{tot}$ is obtained from a survey
+in \citet{Brockway2021}
+of XXXX recent papers that estimate total rebound. 
+\citet[p.~15]{Brockway2021} found that 
+``economy-wide rebound effects erode more than half of the energy savings
+from improved energy efficiency.''
+A detailed review of their results indicates that 
+$Re_{tot} = 0.60$
+**** is this the right number? ****
+is the appropriate total rebound for calibrating $k$.
+The calibration gives $k = ****$ for the car example and $k = ****$ for the lamp example.
+These differing estimates of $k$ would give the exact same $Re_{tot}$, 0.60****.
+
+Intuition indicates that total rebound from one EEU is likely to be different from 
+total rebound from another EEU.
+Intuition also suggests that values of $k$ should be similar across EEUs, because
+\$1 of freed cash should have the same macroeconomic stimulative effect,
+regardless of the EEU the produced it.
+Following these intuitions, 
+we select for the purposes of illustration $k = 2$
+being between the $k$ values estimated from the car example and the lamp example.
+With $k = 2$, estimates of $Re_{\macro}$ in Tables
+**** and **** will double to **** and ****.
+Total rebound becomes **** and **** for the car and lamp examples, respectively.
+
+
+
+
 
 
 
