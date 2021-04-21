@@ -536,13 +536,12 @@ In this section, we develop a mathematical model
 for the comprehensive rebound framework.
 We assume an energy conversion device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
-The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
+The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
-$\rbempl{q}_s$ (in vehicle km/year)
+$\rbempl{q}_s$ (in vehicle-km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
-final-energy-to-service efficiency such that
-$\amacro{\eta} > \bempl{\eta}$%
+final-energy-to-service efficiency%
 \footnote{
   Note that energy service efficiency ($\eta$) improves
   between the original ($\circ$) and
@@ -554,14 +553,15 @@ $\amacro{\eta} > \bempl{\eta}$%
   ($\aempl{\eta}$, $\asub{\eta}$, $\ainc{\eta}$, and $\amacro{\eta}$)
   as $\amacro{\eta}$
   to match the nomenclature of \citet{Borenstein:2015aa}.
-  The same approach to nomencalture is taken with other quantities such as 
+  The same approach to nomenclature is taken with other quantities such as 
   the capital cost rate ($\rate{C}_{cap}$) and 
   maintenance and disposal cost rate ($\rate{C}_{md}$).
 }%
-,
-possibly at an increased expenditure rate to
-procure (capital cost), operate, maintain, and dispose of the device such that
-$\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
+such that
+$\amacro{\eta} > \bempl{\eta}$,
+possibly at an increased cost to
+procure (capital cost), maintain, and dispose of the device such that
+$\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
