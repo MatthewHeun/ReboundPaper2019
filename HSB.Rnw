@@ -3554,7 +3554,7 @@ Focus on consequences of comprehensive framework
 
 We note, again, that few studies explore the macro rebound space.
 Most focus on microeconomic effects or total rebound.
-As suggested by \citet{Borenstein:2015aa} and others, 
+Inspired by \citet{Borenstein:2015aa} and others, 
 we bridge micro to macro through the use of the macro factor ($k$).
 For the results presented in Section~\ref{sec:examples}, 
 we assumed a placeholder value of $k = 1$.
@@ -3582,9 +3582,9 @@ Intuition indicates that total rebound from one EEU is likely to be different fr
 total rebound from another EEU.
 Intuition also suggests that values of $k$ should be similar across EEUs, because
 \$1 of freed cash should have the same macroeconomic stimulative effect,
-regardless of the EEU the produced it.
+regardless of the EEU that produced it.
 Following these intuitions, 
-we select for the purposes of illustration $k = 2$
+we select for the purposes of illustration $k = 2$,
 being between the $k$ values estimated from the car example and the lamp example.
 With $k = 2$, estimates of $Re_{\macro}$ in Tables
 **** and **** will double to **** and ****.
