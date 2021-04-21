@@ -3552,22 +3552,28 @@ Focus on consequences of comprehensive framework
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
-We note, again, that few rebound studies explore the macro rebound space.
-Most focus on microeconomic effects or total rebound.
+We note, again, that 
+most rebound focus on microeconomic effects or total rebound.
+Few rebound studies the macro rebound space.
 Inspired by \citet{Borenstein:2015aa} and others, 
-we bridge micro to macro through the use of the macro factor ($k$), 
+we bridge micro to macro with the macro factor ($k$), 
 as discussed in Section~\ref{sec:macro_effect_main_paper}.
 For the results presented in Section~\ref{sec:examples}, 
-we assumed a placeholder value of $k = 1$.
+we assumed a placeholder value of $k = 1$,
+meaning that every \$1 of freed cash
+(post emplacement and after the substitution effect)
+generates \$1 of additional economic activity in the broader economy
+after being re-spent by the device owner.
 However, the framework presented in Section~\ref{sec:framework} and
 the results obtained in Section~\ref{sec:examples}
 allow, for the first time, 
 estimates of values for $k$.
 
 To calibrate the macro factor,
-we treat $k$ as a residual
-whose value is to be chosen such that macro rebound ($Re_{\macro}$)
-is sufficient to achieve an expected value for $Re_{tot}$.
+we treat macro rebound ($Re_{\macro}$) as a residual.
+The macro factor ($k$) becomes an unknown whose value is to be chosen
+such that $Re_{\macro}$
+is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
 average total rebound of $Re_{tot} = 0.63$.
@@ -3580,26 +3586,24 @@ Intuition also suggests that values of $k$ should be similar across EEUs, becaus
 \$1 of freed cash should have the same macroeconomic stimulative effect,
 regardless of the EEU that produced it.
 Following these intuitions, 
-we select for the purposes of illustration $k = 2$,
-being between the $k$ values estimated from the car example and the lamp example.
+we select, for the purposes of illustration, $k = 2$,
+being between the $k$ values estimated from the car and lamp examples.
+Note that $k = 2$ implies that every \$1 of freed cash
+spent by the device owner 
+generates \$2 of additional economic activity in the broader economy.
 
-After calibrating $k$, we see that the placeholder value of $k = 1$
-underestimated $Re_{macro}$.
+After calibrating $k = 2$, we see that choosing a placeholder value of $k = 1$
+underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
 In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
-the macro effect lines should be twice as long as they appear.
+the macro effect segments (\bartilde{})
+should be twice as long as they appear.
 In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
-the estimates of $Re_{macro}$
-should double to **** and ****, 
-and total rebound becomes 
-**** and **** 
-for the car and lamp examples, respectively.
-
-
-
-
-
-
-
+the values of macro rebound ($Re_{\macro}$) should double to
+**** and ****, and
+the values of total rebound ($Re_{tot}$) should increase to 
+**** and ****
+for the car and lamp examples,
+respectively.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
