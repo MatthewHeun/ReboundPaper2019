@@ -3552,31 +3552,27 @@ Focus on consequences of comprehensive framework
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
-We note, again, that few studies explore the macro rebound space.
+We note, again, that few rebound studies explore the macro rebound space.
 Most focus on microeconomic effects or total rebound.
 Inspired by \citet{Borenstein:2015aa} and others, 
-we bridge micro to macro through the use of the macro factor ($k$).
+we bridge micro to macro through the use of the macro factor ($k$), 
+as discussed in Section~\ref{sec:macro_effect_main_paper}.
 For the results presented in Section~\ref{sec:examples}, 
 we assumed a placeholder value of $k = 1$.
-However, the framework allows, for the first time, 
-estimations of values for $k$.
+However, the framework presented in Section~\ref{sec:framework} and
+the results obtained in Section~\ref{sec:examples}
+allow, for the first time, 
+estimates of values for $k$.
 
 To calibrate the macro factor,
 we treat $k$ as a residual
-whose value is chosen such that macro rebound ($Re_{\macro}$)
+whose value is to be chosen such that macro rebound ($Re_{\macro}$)
 is sufficient to achieve an expected value for $Re_{tot}$.
-The expected value for $Re_{tot}$ is obtained from a survey
-in \citet{Brockway2021}
-of XXXX recent papers that estimate total rebound. 
-\citet[p.~15]{Brockway2021} found that 
-``economy-wide rebound effects erode more than half of the energy savings
-from improved energy efficiency.''
-A detailed review of their results indicates that 
-$Re_{tot} = 0.60$
-**** is this the right number? ****
-is the appropriate total rebound for calibrating $k$.
-The calibration gives $k = ****$ for the car example and $k = ****$ for the lamp example.
-These differing estimates of $k$ would give the exact same $Re_{tot}$, 0.60****.
+We take the expected value for $Re_{tot}$ from 
+\citet{Brockway2021} who surveyed 33 recent studies to find
+average total rebound of $Re_{tot} = 0.63$.
+The calibrated value of $k$ that gives $Re_{tot} = 0.63$
+is $k = ****$ for the car example and $k = ****$ for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
 total rebound from another EEU.
@@ -3586,9 +3582,17 @@ regardless of the EEU that produced it.
 Following these intuitions, 
 we select for the purposes of illustration $k = 2$,
 being between the $k$ values estimated from the car example and the lamp example.
-With $k = 2$, estimates of $Re_{\macro}$ in Tables
-**** and **** will double to **** and ****.
-Total rebound becomes **** and **** for the car and lamp examples, respectively.
+
+After calibrating $k$, we see that the placeholder value of $k = 1$
+underestimated $Re_{macro}$.
+In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
+the macro effect lines should be twice as long as they appear.
+In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
+the estimates of $Re_{macro}$
+should double to **** and ****, 
+and total rebound becomes 
+**** and **** 
+for the car and lamp examples, respectively.
 
 
 
