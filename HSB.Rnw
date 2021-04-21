@@ -536,13 +536,12 @@ In this section, we develop a mathematical model
 for the comprehensive rebound framework.
 We assume an energy conversion device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
-The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
+The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
-$\rbempl{q}_s$ (in vehicle km/year)
+$\rbempl{q}_s$ (in vehicle-km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
-final-energy-to-service efficiency such that
-$\amacro{\eta} > \bempl{\eta}$%
+final-energy-to-service efficiency%
 \footnote{
   Note that energy service efficiency ($\eta$) improves
   between the original ($\circ$) and
@@ -554,14 +553,15 @@ $\amacro{\eta} > \bempl{\eta}$%
   ($\aempl{\eta}$, $\asub{\eta}$, $\ainc{\eta}$, and $\amacro{\eta}$)
   as $\amacro{\eta}$
   to match the nomenclature of \citet{Borenstein:2015aa}.
-  The same approach to nomencalture is taken with other quantities such as 
+  The same approach to nomenclature is taken with other quantities such as 
   the capital cost rate ($\rate{C}_{cap}$) and 
   maintenance and disposal cost rate ($\rate{C}_{md}$).
 }%
-,
-possibly at an increased expenditure rate to
-procure (capital cost), operate, maintain, and dispose of the device such that
-$\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
+such that
+$\amacro{\eta} > \bempl{\eta}$,
+possibly at an increased cost to
+procure (capital cost), maintain, and dispose of the device such that
+$\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
@@ -3552,31 +3552,33 @@ Focus on consequences of comprehensive framework
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
-We note, again, that few studies explore the macro rebound space.
-Most focus on microeconomic effects or total rebound.
+We note, again, that 
+most rebound focus on microeconomic effects or total rebound.
+Few rebound studies the macro rebound space.
 Inspired by \citet{Borenstein:2015aa} and others, 
-we bridge micro and macro through the use of the macro factor ($k$).
+we bridge micro and macro with the macro factor ($k$), 
+as discussed in Section~\ref{sec:macro_effect_main_paper}.
 For the results presented in Section~\ref{sec:examples}, 
-we assumed a placeholder value of $k = 1$.
-However, the framework allows, for the first time, 
-estimations of values for $k$.
+we assumed a placeholder value of $k = 1$,
+meaning that every \$1 of freed cash
+(post emplacement and after the substitution effect)
+generates \$1 of additional economic activity in the broader economy
+after being re-spent by the device owner.
+However, the framework presented in Section~\ref{sec:framework} and
+the results obtained in Section~\ref{sec:examples}
+allow, for the first time, 
+estimates of values for $k$.
 
 To calibrate the macro factor,
-we treat $k$ as a residual
-whose value is chosen such that macro rebound ($Re_{\macro}$)
-is sufficient to achieve an expected value for $Re_{tot}$.
-The expected value for $Re_{tot}$ is obtained from a survey
-in \citet{Brockway2021}
-of XXXX recent papers that estimate total rebound. 
-\citet[p.~15]{Brockway2021} found that 
-``economy-wide rebound effects erode more than half of the energy savings
-from improved energy efficiency.''
-A detailed review of their results indicates that 
-$Re_{tot} = 0.60$
-**** is this the right number? ****
-is the appropriate total rebound for calibrating $k$.
-The calibration gives $k = ****$ for the car example and $k = ****$ for the lamp example.
-These differing estimates of $k$ would give the exact same $Re_{tot}$, 0.60****.
+we treat macro rebound ($Re_{\macro}$) as a residual.
+The macro factor ($k$) becomes an unknown whose value is to be chosen
+such that $Re_{\macro}$
+is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
+We take the expected value for $Re_{tot}$ from 
+\citet{Brockway2021} who surveyed 33 recent studies to find
+average total rebound of $Re_{tot} = 0.63$.
+The calibrated value of $k$ that gives $Re_{tot} = 0.63$
+is $k = ****$ for the car example and $k = ****$ for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
 total rebound from another EEU.
@@ -3584,18 +3586,24 @@ Intuition also suggests that values of $k$ should be similar across EEUs, becaus
 \$1 of freed cash should have the same macroeconomic stimulative effect,
 regardless of the EEU that produced it.
 Following these intuitions, 
-we select for the purposes of illustration $k = 2$,
-being between the $k$ values estimated from the car example and the lamp example.
-With $k = 2$, estimates of $Re_{\macro}$ in Tables
-**** and **** will double to **** and ****.
-Total rebound becomes **** and **** for the car and lamp examples, respectively.
+we select, for the purposes of illustration, $k = 2$,
+being between the $k$ values estimated from the car and lamp examples.
+Note that $k = 2$ implies that every \$1 of freed cash
+spent by the device owner 
+generates \$2 of additional economic activity in the broader economy.
 
-
-
-
-
-
-
+After calibrating $k = 2$, we see that choosing a placeholder value of $k = 1$
+underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
+In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
+the macro effect segments (\bartilde{})
+should be twice as long as they appear.
+In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
+the values of macro rebound ($Re_{\macro}$) should double to
+**** and ****, and
+the values of total rebound ($Re_{tot}$) should increase to 
+**** and ****
+for the car and lamp examples,
+respectively.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
