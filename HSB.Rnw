@@ -54,9 +54,8 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Toward a Comprehensive Energy-Economy \\
-        Analytical Framework for \\
-        Energy Rebound}
+\title{Toward a mathematically-rigorous analytical framework
+       for microeconomic energy rebound effects}
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -90,17 +89,46 @@ Leeds, LS2 9JT, UK}
 %% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-A concise and factual abstract is required.
-The abstract should state briefly 
-the purpose of the research, 
-the principal results, and
-major conclusions. 
-An abstract is often presented separately from the article, 
-so it must be able to stand alone.
-For this reason, References should be avoided, but if essential, 
-then cite the author(s) and year(s).
-Also, non-standard or uncommon abbreviations should be avoided, but
-if essential they must be defined at their first mention in the abstract itself.
+% A concise and factual abstract is required.
+% The abstract should state briefly 
+% the purpose of the research, 
+% the principal results, and
+% major conclusions. 
+% An abstract is often presented separately from the article, 
+% so it must be able to stand alone.
+% For this reason, References should be avoided, but if essential, 
+% then cite the author(s) and year(s).
+% Also, non-standard or uncommon abbreviations should be avoided, but
+% if essential they must be defined at their first mention in the abstract itself.
+(219 words at present) \\
+Implementation of widespread energy efficiency measures
+is a key global strategy to meet Paris emissions targets. 
+However, energy rebound threatens to take back some efficiency-based
+energy reductions via behavior changes and economic effects.
+Empirical evidence is growing that rebound effects may be 
+larger than typically assumed, 
+which could in turn mean that efforts to reduce carbon emissions 
+via efficiency will be less effective than supposed.
+Unfortunately, 
+much of the work on microeconomic (device level) rebound 
+is empirical and lacks detailed theoretical foundations, 
+which inhibits understanding of rebound mechanisms and 
+puts modeling and policy formulation at risk.
+In response, 
+we build upon microeconomic fundamentals
+to develop a mathematically-rigorous analytical framework 
+for microeconomic energy rebound effects, 
+covering both direct and indirect channels 
+for emplacement, substitution, and income effects. 
+The analytical framework includes the use of a general utility function and
+leads to an innovative sequence of three graphs that show 
+energy, expenditure, and preference rebound paths.
+Further, we provide two detailed case studies of energy efficiency upgrades 
+to a car and and an electric lamp and 
+find microeconomic rebounds of **** 24\% **** and **** 29\% **** respectively. 
+Through a macroeconomic factor we link these microeconomic results 
+to find total rebound of **** and **** for the car and lamp examples, respectively.
+Policy options to mitigate each rebound component are discussed.
 \end{abstract}
 
 
