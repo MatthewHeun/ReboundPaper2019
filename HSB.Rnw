@@ -536,13 +536,12 @@ In this section, we develop a mathematical model
 for the comprehensive rebound framework.
 We assume an energy conversion device (say, an automobile)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
-The final energy is available at price $\bempl{p}_E$ (in \$/MJ).
+The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
-$\rbempl{q}_s$ (in vehicle km/year)
+$\rbempl{q}_s$ (in vehicle-km/year)
 with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
-final-energy-to-service efficiency such that
-$\amacro{\eta} > \bempl{\eta}$%
+final-energy-to-service efficiency%
 \footnote{
   Note that energy service efficiency ($\eta$) improves
   between the original ($\circ$) and
@@ -554,14 +553,15 @@ $\amacro{\eta} > \bempl{\eta}$%
   ($\aempl{\eta}$, $\asub{\eta}$, $\ainc{\eta}$, and $\amacro{\eta}$)
   as $\amacro{\eta}$
   to match the nomenclature of \citet{Borenstein:2015aa}.
-  The same approach to nomencalture is taken with other quantities such as 
+  The same approach to nomenclature is taken with other quantities such as 
   the capital cost rate ($\rate{C}_{cap}$) and 
   maintenance and disposal cost rate ($\rate{C}_{md}$).
 }%
-,
-possibly at an increased expenditure rate to
-procure (capital cost), operate, maintain, and dispose of the device such that
-$\ramacro{C}_{cap} > \rbempl{C}_{cap}$ and 
+such that
+$\amacro{\eta} > \bempl{\eta}$,
+possibly at an increased cost to
+procure (capital cost), maintain, and dispose of the device such that
+$\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
@@ -1637,11 +1637,10 @@ The upshot is that while energy efficiency is higher, the more
 efficient economy is growing more than one without the improvement,
 taking back part of the expected energy savings, producing
 macro rebound effects. Often this kind of rebound effect 
-is subdivided into
-components that distinguish scale, structural change, employment 
-and investment effects, as well as further price effects
-\citep{Brockway2021,Colmenares2020}. Here we group all of 
-these effects under the label macro rebound effect. 
+is subdivided into components that distinguish 
+scale, structural change, employment and investment effects, 
+as well as further price effects \citep{Colmenares2020,Brockway2021}.
+Here we group all of these effects under the label macro rebound effect. 
 
 The macro effect is just one instance of the phenomenon
 that reducing the need for an input at the micro level can lead 
@@ -1790,6 +1789,13 @@ $Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
 The total rebound sum ($Re_{tot}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
+
+As discussed in Section~\ref{sec:macro_effect_main_paper},
+the link between microeconomic factors and macro rebound effects 
+is a largely unexplored area. 
+For now, we assume a placeholder value of $k = 1$ for both case studies.
+We return to the matter of quantifying $k$
+in the Discussion (Section~\ref{sec:discussion}).
  
 
 %++++++++++++++++++++++++++++++
@@ -1897,10 +1903,10 @@ as shown below in Table~\ref{tab:car_stages_table}.
 \begin{tabular}{ r c c l }
   \toprule
     Description                  & Ford Fusion & Ford Fusion & Data sources and notes\\ 
-    Parameters [units]                                & (gasoline) & (hybrid EV) &  \\
+    Parameters [units]                              & (gasoline) & (hybrid EV) &  \\
   \midrule
   Fuel efficiency                           & \Sexpr{mpg_worse} & \Sexpr{mpg_better} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
-  $\bempl{\eta}$, $\amacro{\eta}$ [mpg]              &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
+  $\bempl{\eta}$, $\amacro{\eta}$ [mpg]             &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
                                                     &           &          & I-4, 2.0 L engine. \\
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
@@ -2042,7 +2048,7 @@ rebound_results %>%
     Case = NULL
   ) %>% 
   ReboundTools::stages_table(label = "tab:car_stages_table", 
-                             caption = "Results for car example.", 
+                             caption = "Results for car example with macro factor ($k$) assumed to be 1.", 
                              digits = digs_car, 
                              align = "lrrrrrr") %>% 
   print(include.rownames = FALSE, 
@@ -2052,6 +2058,7 @@ rebound_results %>%
         format.args = list(big.mark = ","),
         math.style.negative = TRUE)
 @
+
 
 %------------------------------
 \subsubsection{Results} 
@@ -2073,7 +2080,7 @@ Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::reboun
 Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
-<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example.", fig.width=6, fig.height=4>>=
+<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example with macro factor ($k$) assumed to be 1.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
 
@@ -2284,7 +2291,7 @@ rebound_results %>%
   ReboundTools::rebound_results_table(include_subtotals = FALSE, 
                                       rebound_terms = ReboundTools::rebound_terms[!names(ReboundTools::rebound_terms) %in% "Re_cap"],
                                       label = "tab:car_results", 
-                                      caption = "Car example: rebound results.", 
+                                      caption = "Car example: rebound results with macro factor ($k$) assumed to be 1.", 
                                       digits = 1, 
                                       align = "rrr") %>% 
   print(include.rownames = FALSE, 
@@ -2348,7 +2355,8 @@ translates into positive direct and indirect income
 rebound at the micro level. 
 
 Finally, at the macro level, the \macroeffect{} leads to macro rebound
-($Re_{\macro}$) of \Sexpr{Re_macro_car_char_perc}\%,
+($Re_{\macro}$) of \Sexpr{Re_macro_car_char_perc}\%
+with $k$ assumed to be 1,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (transportation).
@@ -2600,7 +2608,7 @@ rebound_results %>%
     Case = NULL
   ) %>% 
   ReboundTools::stages_table(label = "tab:lamp_stages_table", 
-                             caption = "Results for lamp example.", 
+                             caption = "Results for lamp example with macro factor ($k$) assumed to be 1.", 
                              digits = digs_lamp, 
                              align = "lrrrrrr") %>% 
   print(include.rownames = FALSE, 
@@ -2620,7 +2628,7 @@ Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebo
 Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
-<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example with macro factor ($k$) assumed to be 1.", fig.width=6, fig.height=4>>=
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
 lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
@@ -2844,7 +2852,7 @@ rebound_results %>%
   ReboundTools::rebound_results_table(include_subtotals = FALSE, 
                                       rebound_terms = ReboundTools::rebound_terms[!names(ReboundTools::rebound_terms) %in% "Re_cap"],
                                       label = "tab:lamp_results", 
-                                      caption = "Lamp example: rebound results.", 
+                                      caption = "Lamp example: rebound results with macro factor ($k$) assumed to be 1.", 
                                       digits = 1, 
                                       align = "rrr") %>% 
   print(include.rownames = FALSE, 
@@ -2912,6 +2920,7 @@ due to the energy implications of increased spending on other goods.
 Finally, rebound due to the macroeconomic 
 \macroeffect{} 
 ($Re_{\macro}$) is \Sexpr{Re_macro_lamp_char_perc}\%
+with $k$ assume to be 1,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
@@ -2933,15 +2942,16 @@ between rebound parameters and rebound magnitudes.
 Key rebound parameters include 
 post-EEU efficiency ($\amacro{\eta}$),
 energy price ($p_E$),
-uncompensated own price elasticity of energy service consumption ($\eqspsUC$), and
-the macro factor ($k$).
+uncompensated own price elasticity of energy service consumption ($\eqspsUC$), 
+the macro factor ($k$), and 
+capital cost ($\aempl{C}_{cap}$)..
 Sensitivity analyses must be undertaken carefully,
-because rebound parameters are rarely
-independent of each other.
+because rebound parameters are not expected to be 
+independent.
 
 In each subsection below, a series of graphs
 shows the effects of key rebound parameters
-($\amacro{\eta}$, $p_E$, $\eqspsUC$, and $k$)
+($\amacro{\eta}$, $p_E$, $\eqspsUC$, $\aempl{C}_{cap}$, and $k$)
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
@@ -3029,8 +3039,7 @@ most sensitive to changes in post-EEU efficiency ($\amacro{\eta}$),
 A limitation of the efficiency sensitivity analysis is that 
 post-EEU efficiency ($\amacro{\eta}$)
 is unlikely to be independent of other factors, 
-such as capital expenditure rate ($\raempl{C}_{cap}$).
-More-efficient devices are likely to be more expensive.
+such as capital cost ($\amacro{C}_{cap}$).
 
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
@@ -3113,6 +3122,51 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
 
 
 %------------------------------
+\subsubsection{Effect of capital cost ($\amacro{C}_{cap}$)} 
+\label{sec:effect_of_capital_cost}
+%------------------------------
+
+The sensitivity of energy rebound
+to capital cost ($\amacro{C}_{cap}$) is shown
+in Fig.~\ref{fig:all_Re_terms_C_cap_graph}.
+All other things being equal,
+as capital cost of the EEU rises, 
+less cash is freed by the EEU,
+leading to smaller income, macro, and total rebound.
+The same effects would be observed
+with increasing maintenance and disposal cost rate ($\ramacro{C}_{\md}$).
+
+A limitation of the capital cost sensitivity analysis is that
+capital cost ($\amacro{C}_{cap}$) is unlikely to be
+independent of $\amacro{\eta}$.
+Within a given energy efficiency technology
+(e.g., hybrid cars or LED lamps),
+greater capital cost ($\amacro{C}_{cap}$) may be associated with
+greater service efficiency ($\amacro{\eta}$).
+$\amacro{C}_{cap}$ and $\amacro{\eta}$ should probably be varied jointly,
+not independently.
+
+<<all_Re_terms_C_cap_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to capital cost ($\\amacro{C}_{cap}$).", fig.width=6, fig.height=4>>=
+C_dot_cap_sens_params <- list(Car = list(C_cap_star = seq(26000, 30000, by = 1000)),
+                              Lamp = list(C_cap_star = seq(0.5, 10.0, by = 0.1)))
+
+rebound_terms_graph(rebound_data = actual_cases, parameterization = C_dot_cap_sens_params,
+                    x_var = "C_cap_star", 
+                    Re_terms = Re_terms_order,
+                    graph_params = Re_graph_params) +
+  ggplot2::scale_x_continuous(breaks = c(1, 2, 4, 6, 8, 10, 26000, 28000, 30000)) + 
+  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
+  ggplot2::labs(x = expression(tilde(C)[cap]*" [$]"),
+                y = "Rebound terms [-]",
+                colour = ggplot2::element_blank(),
+                size = ggplot2::element_blank(),
+                linetype = ggplot2::element_blank()) +
+  MKHthemes::xy_theme() +
+  ggplot2::theme(legend.text.align = 0)
+@
+
+
+%------------------------------
 \subsubsection{Effect of energy price ($p_E$)} 
 \label{sec:effect_of_energy_price}
 %------------------------------
@@ -3172,13 +3226,10 @@ energy price is not independent of other parameters.
 Indeed, other rebound parameters
 would change along with energy price
 (especially if moving from one country to another),
-including capital expenditure rate ($\raempl{C}_{cap}$), 
-maintenance and disposal expenditure rate ($\raempl{C}_{\md}$),
+including capital cost ($\amacro{C}_{cap}$), 
+maintenance and disposal expenditure rate ($\ramacro{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
-energy service consumption rates ($\rbempl{q}_s$).
-
-
-
+energy service consumption rate ($\rbempl{q}_s$).
 
 <<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
  p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
@@ -3239,7 +3290,6 @@ thereby avoiding the uneconomic condition.
 However, multi-variate dynamics are not captured by univariate sensitivity studies.
 **** Gregor: is the above correct? ---MKH ****
 
-
 <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis scale.)", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, -0.1, by = 0.01)),
                         Lamp = list(e_qs_ps_UC = seq(-0.7, -0.1, by = 0.01)))
@@ -3268,15 +3318,14 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
 The sensitivity of energy rebound 
 to the macro factor ($k$) is shown 
 in Fig.~\ref{fig:all_Re_terms_k_graph}.
-The macro factor has a linear effect on total rebound
+The macro factor has a linear effect on total rebound ($Re_{tot}$)
 through the macro rebound component ($Re_{\macro}$).
-All other rebound components are constant as $k$ changes.
+All other rebound components are constant as $k$ varies.
 
 A limitation of the macro factor sensitivity analysis is that
 the macro factor ($k$) is unlikely to be 
 independent of $I_E$, because 
 different values of $k$ imply a different macro-economy.
-
 
 <<all_Re_terms_k_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to the macro factor ($k$).", fig.width=6, fig.height=4>>=
 k_sens_params <- list(Car = list(k = seq(0.5, 2.5, by = 0.5)),
@@ -3296,36 +3345,6 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
   MKHthemes::xy_theme() +
   ggplot2::theme(legend.text.align = 0)
 @
-
-
-
-%------------------------------
-\subsubsection{Effect of capital cost ($\aempl{C}_{cap}$)} 
-\label{sec:effect_of_capital_cost}
-%------------------------------
-
-<<all_Re_terms_C_cap_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to capital cost ($\\aempl{C}_{cap}$).", fig.width=6, fig.height=4>>=
-C_dot_cap_sens_params <- list(Car = list(C_cap_star = seq(26000, 30000, by = 1000)),
-                              Lamp = list(C_cap_star = seq(0.5, 10.0, by = 0.1)))
-
-rebound_terms_graph(rebound_data = actual_cases, parameterization = C_dot_cap_sens_params,
-                    x_var = "C_cap_star", 
-                    Re_terms = Re_terms_order,
-                    graph_params = Re_graph_params) +
-  ggplot2::scale_x_continuous(breaks = c(1, 2, 4, 6, 8, 10, 26000, 28000, 30000)) + 
-  ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
-  ggplot2::labs(x = expression(C[cap]^"*"*" [$]"),
-                y = "Rebound terms [-]",
-                colour = ggplot2::element_blank(),
-                size = ggplot2::element_blank(),
-                linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme() +
-  ggplot2::theme(legend.text.align = 0)
-@
-
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3527,6 +3546,96 @@ Focus on consequences of comprehensive framework
 
 \end{enumerate}
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Macro rebound}
+\label{sec:macro_rebound_discussion}
+%++++++++++++++++++++++++++++++
+
+<<Calibrate_k, echo = FALSE>>=
+Re_tot_expected <- 0.63
+calibrated_k <- rebound_results %>% 
+  dplyr::filter(.data[["Case"]] %in% c("Car", "Lamp")) %>% 
+  ReboundTools::calibrate_k(Re_tot_expected)
+
+# Land on k = 3 as a median value.
+# Do a sensitivity study with those k values to recalculate everything.
+k_cal_vals <- list(Car = list(k = 3),
+                   Lamp = list(k = 3))
+
+rebound_analysis_with_cal_k <- rebound_data %>% 
+  dplyr::filter(.data[["Case"]] %in% c("Car", "Lamp")) %>% 
+  ReboundTools::parametric_analysis(parameterization = k_cal_vals,
+                                    include_orig_point = FALSE)
+Re_macro_car_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Car") %>% 
+  magrittr::extract2("Re_macro")
+Re_macro_lamp_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Lamp") %>% 
+  magrittr::extract2("Re_macro")
+Re_tot_car_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Car") %>% 
+  magrittr::extract2("Re_tot")
+Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Lamp") %>% 
+  magrittr::extract2("Re_tot")
+@
+
+We note, again, that 
+most rebound focus on microeconomic effects or total rebound.
+Few rebound studies the macro rebound space.
+Inspired by \citet{Borenstein:2015aa} and others, 
+we bridge micro and macro with the macro factor ($k$), 
+as discussed in Section~\ref{sec:macro_effect_main_paper}.
+For the results presented in Section~\ref{sec:examples}, 
+we assumed a placeholder value of $k = 1$,
+meaning that every \$1 of freed cash
+(post emplacement and after the substitution effect)
+generates \$1 of additional economic activity in the broader economy
+after being re-spent by the device owner.
+However, the framework presented in Section~\ref{sec:framework} and
+the results obtained in Section~\ref{sec:examples}
+allow, for the first time, 
+estimates of values for $k$.
+
+To calibrate the macro factor,
+we treat macro rebound ($Re_{\macro}$) as a residual.
+The macro factor ($k$) becomes an unknown parameter whose value is to be chosen
+such that $Re_{\macro}$
+is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
+We take the expected value for $Re_{tot}$ from 
+\citet{Brockway2021} who surveyed 33 recent studies to find
+average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
+The calibrated values of $k$ that give $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% are
+$k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$ for the car example and
+$k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ for the lamp example.
+
+Intuition indicates that total rebound from one EEU is likely to be different from 
+total rebound from another EEU.
+Intuition also suggests that values of $k$ should be similar across EEUs, because
+\$1 of freed cash should have the same macroeconomic stimulative effect,
+regardless of the EEU that produced it.
+Following these intuitions, 
+we select, for the purposes of illustration, $k = 3$,
+being between the $k$ values estimated from the car and lamp examples.
+Note that $k = 3$ implies that every \$1 of freed cash
+spent by the device owner 
+generates \$3 of additional economic activity in the broader economy.
+
+After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
+underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
+In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
+the macro effect segments (\bartilde{})
+should be three times as long as they appear.
+In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
+the values of macro rebound ($Re_{\macro}$) should triple to
+\Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
+\Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\% and
+the values of total rebound ($Re_{tot}$) should increase to 
+\Sexpr{formatC(Re_tot_car_k_3*100, digits = 3)}\% and
+\Sexpr{formatC(Re_tot_lamp_k_3*100, digits = 3)}\%
+for the car and lamp examples,
+respectively.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
