@@ -105,15 +105,17 @@ Implementation of widespread energy efficiency measures
 is a key global strategy to meet Paris emissions targets. 
 However, energy rebound threatens to take back some efficiency-based
 energy reductions via behavior changes and economic effects.
-Empirical evidence is growing that rebound effects may be 
+Evidence is growing that rebound effects may be 
 larger than typically assumed, 
-which could in turn mean that efforts to reduce carbon emissions 
-via efficiency will be less effective than supposed.
+which could mean efficiency-based efforts to reduce carbon emissions 
+will be less effective than supposed.
 Unfortunately, 
 much of the work on microeconomic (device level) rebound 
 is empirical and lacks detailed theoretical foundations, 
-which inhibits understanding of rebound mechanisms and 
-puts modeling and policy formulation at risk.
+inhibiting understanding of rebound mechanisms.
+Lacking a theoretical foundation for rebound, 
+energy modeling and energy efficiency policies are at risk
+of being ineffective.
 In response, 
 we build upon microeconomic fundamentals
 to develop a mathematically-rigorous analytical framework 
