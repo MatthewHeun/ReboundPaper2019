@@ -3552,6 +3552,35 @@ Focus on consequences of comprehensive framework
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
+<<Calibrate_k, echo = FALSE>>=
+Re_tot_expected <- 0.63
+calibrated_k <- rebound_results %>% 
+  dplyr::filter(.data[["Case"]] %in% c("Car", "Lamp")) %>% 
+  ReboundTools::calibrate_k(Re_tot_expected)
+
+# Land on k = 3 as a median value.
+# Do a sensitivity study with those k values to recalculate everything.
+k_cal_vals <- list(Car = list(k = 3),
+                   Lamp = list(k = 3))
+
+rebound_analysis_with_cal_k <- rebound_data %>% 
+  dplyr::filter(.data[["Case"]] %in% c("Car", "Lamp")) %>% 
+  ReboundTools::parametric_analysis(parameterization = k_cal_vals,
+                                    include_orig_point = FALSE)
+Re_macro_car_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Car") %>% 
+  magrittr::extract2("Re_macro")
+Re_macro_lamp_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Lamp") %>% 
+  magrittr::extract2("Re_macro")
+Re_tot_car_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Car") %>% 
+  magrittr::extract2("Re_tot")
+Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>% 
+  dplyr::filter(.data[["Case"]] == "Lamp") %>% 
+  magrittr::extract2("Re_tot")
+@
+
 We note, again, that 
 most rebound focus on microeconomic effects or total rebound.
 Few rebound studies the macro rebound space.
@@ -3571,14 +3600,15 @@ estimates of values for $k$.
 
 To calibrate the macro factor,
 we treat macro rebound ($Re_{\macro}$) as a residual.
-The macro factor ($k$) becomes an unknown whose value is to be chosen
+The macro factor ($k$) becomes an unknown parameter whose value is to be chosen
 such that $Re_{\macro}$
 is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
-average total rebound of $Re_{tot} = 0.63$.
-The calibrated value of $k$ that gives $Re_{tot} = 0.63$
-is $k = ****$ for the car example and $k = ****$ for the lamp example.
+average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
+The calibrated values of $k$ that give $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% are
+$k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$ for the car example and
+$k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
 total rebound from another EEU.
@@ -3586,22 +3616,24 @@ Intuition also suggests that values of $k$ should be similar across EEUs, becaus
 \$1 of freed cash should have the same macroeconomic stimulative effect,
 regardless of the EEU that produced it.
 Following these intuitions, 
-we select, for the purposes of illustration, $k = 2$,
+we select, for the purposes of illustration, $k = 3$,
 being between the $k$ values estimated from the car and lamp examples.
-Note that $k = 2$ implies that every \$1 of freed cash
+Note that $k = 3$ implies that every \$1 of freed cash
 spent by the device owner 
-generates \$2 of additional economic activity in the broader economy.
+generates \$3 of additional economic activity in the broader economy.
 
-After calibrating $k = 2$, we see that choosing a placeholder value of $k = 1$
+After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
 In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
 the macro effect segments (\bartilde{})
-should be twice as long as they appear.
+should be three times as long as they appear.
 In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
-the values of macro rebound ($Re_{\macro}$) should double to
-**** and ****, and
+the values of macro rebound ($Re_{\macro}$) should triple to
+\Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
+\Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\% and
 the values of total rebound ($Re_{tot}$) should increase to 
-**** and ****
+\Sexpr{formatC(Re_tot_car_k_3*100, digits = 3)}\% and
+\Sexpr{formatC(Re_tot_lamp_k_3*100, digits = 3)}\%
 for the car and lamp examples,
 respectively.
 
