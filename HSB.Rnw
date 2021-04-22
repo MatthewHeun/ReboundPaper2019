@@ -3660,7 +3660,7 @@ the values of macro rebound ($Re_{\macro}$) should triple to
 \Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
 \Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\% and
 the values of total rebound ($Re_{tot}$) should increase to 
-\Sexpr{formatC(Re_tot_car_k_3*100, digits = 3)}\% and
+\Sexpr{sprintf("%.1f", round(Re_tot_car_k_3*100), 1)}\% and
 \Sexpr{formatC(Re_tot_lamp_k_3*100, digits = 3)}\%
 for the car and lamp examples,
 respectively.
