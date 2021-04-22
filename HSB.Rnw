@@ -3328,14 +3328,14 @@ independent of $I_E$, because
 different values of $k$ imply a different macro-economy.
 
 <<all_Re_terms_k_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to the macro factor ($k$).", fig.width=6, fig.height=4>>=
-k_sens_params <- list(Car = list(k = seq(0.5, 2.5, by = 0.5)),
-                      Lamp = list(k = seq(0.5, 2.5, by = 0.5)))
+k_sens_params <- list(Car = list(k = seq(0.5, 3.5, by = 0.5)),
+                      Lamp = list(k = seq(0.5, 3.5, by = 0.5)))
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_params,
                     x_var = "k", 
                     Re_terms = Re_terms_order,
                     graph_params = Re_graph_params) +
-  ggplot2::scale_y_continuous(breaks = seq(-0.2, 0.8, by = 0.2)) + 
+  ggplot2::scale_y_continuous(breaks = seq(-0.2, 1, by = 0.2)) + 
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") +
   ggplot2::labs(x = expression("k [-]"),
                 y = "Rebound terms [-]",
