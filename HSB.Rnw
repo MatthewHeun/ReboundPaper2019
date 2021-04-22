@@ -2159,7 +2159,7 @@ car_Re_arrows <- tibble::tribble(~x, ~y, ~angle, ~radius, ~colour, ~size,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Car", 
-                               graph_types = "Energy") +
+                            graph_types = "Energy") +
   ggplot2::geom_spoke(data = car_Re_arrows, 
                         mapping = ggplot2::aes(x = x,
                                                y = y,
@@ -2205,7 +2205,7 @@ car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Car", 
-                               graph_types = "Expenditure") + 
+                            graph_types = "Expenditure") + 
   ggplot2::geom_text(data = car_cost_labels, 
                      mapping = ggplot2::aes(x = x, 
                                             y = y, 
@@ -2266,7 +2266,7 @@ car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Car", 
-                               graph_types = "Preferences") + 
+                            graph_types = "Preferences") + 
   ggplot2::geom_text(data = car_prefs_labels, 
                      mapping = ggplot2::aes(x = x, 
                                             y = y, 
