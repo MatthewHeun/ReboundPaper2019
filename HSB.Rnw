@@ -105,31 +105,36 @@ Implementation of widespread energy efficiency measures
 is a key global strategy to meet Paris emissions targets. 
 However, energy rebound threatens to take back some efficiency-based
 energy reductions via behavior changes and economic effects.
-Evidence is growing that rebound effects may be 
+Evidence is growing that rebound effects are 
 larger than typically assumed, 
 which could mean efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
 Unfortunately, 
 much of the work on microeconomic (device level) rebound 
-is empirical and lacks detailed theoretical foundations, 
+is empirical and lacks rigorous theoretical foundations, 
 inhibiting understanding of rebound mechanisms.
-Lacking a theoretical foundation for rebound, 
-energy modeling and energy efficiency policies are at risk
-of being ineffective.
+Lacking a strong theoretical foundation for rebound, 
+energy modeling and energy efficiency policy are at risk
+of being ineffective at efficiency-based emissions reductions.
 In response, 
 we build upon microeconomic fundamentals
 to develop a mathematically-rigorous analytical framework 
 for microeconomic energy rebound effects, 
-covering both direct and indirect channels 
+covering direct and indirect channels 
 for emplacement, substitution, and income effects. 
 The analytical framework includes the use of a general utility function and
 leads to an innovative sequence of three graphs that show 
 energy, expenditure, and preference rebound paths.
-Further, we provide two detailed case studies of energy efficiency upgrades 
-to a car and and an electric lamp and 
-find microeconomic rebounds of **** 24\% **** and **** 29\% **** respectively. 
-Through a macroeconomic factor we link these microeconomic results 
-to find total rebound of **** and **** for the car and lamp examples, respectively.
+The macroeconomic framework is linked to macroeconomic rebound through a macroeconomic factor.
+Further, the framework is exercised on two detailed case studies of energy efficiency upgrades: 
+a car and and an electric lamp.
+We find find microeconomic rebounds of 24\% and 29\% 
+and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
+**** 
+Note that these numbers are not automatically calculated.
+Double-check before submission. 
+****
+**** Should we include the micro number somewhere in the paper? ****
 Policy options to mitigate each rebound component are discussed.
 \end{abstract}
 
