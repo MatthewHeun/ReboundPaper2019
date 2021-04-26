@@ -103,7 +103,7 @@ Leeds, LS2 9JT, UK}
 (219 words at present) \\
 Implementation of widespread energy efficiency measures
 is a key global strategy to meet Paris emissions targets. 
-However, energy rebound threatens to take back some efficiency-based
+However, energy rebound can take back efficiency-based
 energy reductions via behavior changes and economic effects.
 Evidence is growing that rebound effects are 
 larger than typically assumed, 
@@ -122,20 +122,20 @@ to develop a mathematically-rigorous analytical framework
 for microeconomic energy rebound effects, 
 covering direct and indirect channels 
 for emplacement, substitution, and income effects. 
-The analytical framework includes the use of a general utility function and
-leads to an innovative sequence of three graphs that show 
+The analytical framework uses a utility model and
+leads to a sequence of graphs that show 
 energy, expenditure, and preference rebound paths.
-The macroeconomic framework is linked to macroeconomic rebound through a macroeconomic factor.
-Further, the framework is exercised on two detailed case studies of energy efficiency upgrades: 
-a car and and an electric lamp.
+The microeconomic framework is linked to macroeconomic rebound through a macroeconomic factor.
+Further, the framework is exercised on two case studies: 
+energy efficiency upgrades of a car and and an electric lamp.
 We find find microeconomic rebounds of 24\% and 29\% 
 and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
 **** 
-Note that these numbers are not automatically calculated.
+These numbers are not automatically calculated.
 Double-check before submission. 
 ****
-**** Should we include the micro number somewhere in the paper? ****
-Policy options to mitigate each rebound component are discussed.
+**** Should we include the micro numbers somewhere in the paper? ****
+Policy options to mitigate rebound components are discussed.
 \end{abstract}
 
 
