@@ -215,14 +215,24 @@ due to various behavior and market responses.
 %This is the merged edit of MKH's and my suggested changes to avoid circularity. ---GS
 %+++
 
-The roots of energy rebound can be traced back to 
+The roots of energy rebound can be famously traced back to 
 \citeauthor{Jevons:1865}
 who, in his report entitled \emph{The Coal Question},
 said that
 ``\emph{[i]t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
-A hundred years later, the 1970s oil crises gave a sharp
+In fact, less famously the origins extend further back. 
+Jevons includes a quote by \citet{Williams1840}, 
+who in turn had taken it from \citet[p.~161]{Parkes1838},
+who wrote ``The economy of fuel is the secret of the economy of the steam-engine; 
+it is the fountain of its power, and the adopted measure of its effects. 
+Whatever, therefore, conduces to increase the efficiency of coal, 
+and to diminish the cost of its use, 
+directly tends to augment the value of the steam-engine, 
+and to enlarge the field of its operations.''
+
+Over one hundred years later, the 1970s oil crises gave a sharp
 %returned the (I deleted the 'returned' word as jevons only noted it, it wasnt his primary concern)
 focus to energy efficiency
 and the debate over the 
