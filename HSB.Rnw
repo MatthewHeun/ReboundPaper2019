@@ -102,7 +102,7 @@ Leeds, LS2 9JT, UK}
 % if essential they must be defined at their first mention in the abstract itself.
 (219 words at present) \\
 Implementation of widespread energy efficiency measures
-is a key global strategy to meet Paris emissions targets. 
+is a key global strategy to meet Paris greenhouse gas emissions targets. 
 However, energy rebound can take back efficiency-based
 energy reductions via behavior changes and economic effects.
 Evidence is growing that rebound effects are 
@@ -110,11 +110,11 @@ larger than typically assumed,
 which could mean efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
 Unfortunately, 
-much of the work on microeconomic (device level) rebound 
+much of the work on microeconomic rebound at the device level
 is empirical and lacks rigorous theoretical foundations, 
 inhibiting understanding of rebound mechanisms.
-Lacking a strong theoretical foundation for rebound, 
-energy modeling and energy efficiency policy are at risk
+Lacking a strong theoretical foundation for microeconomic rebound, 
+energy modeling and energy efficiency policy at the macro level are at risk
 of being ineffective at efficiency-based emissions reductions.
 In response, 
 we build upon microeconomic fundamentals
@@ -122,16 +122,16 @@ to develop a mathematically-rigorous analytical framework
 for microeconomic energy rebound effects, 
 covering direct and indirect channels 
 for emplacement, substitution, and income effects. 
-The analytical framework uses a utility model and
-leads to a sequence of graphs that show 
-energy, expenditure, and preference rebound paths.
+The analytical framework uses a utility model 
+to obtain a sequence of graphs that show rebound paths
+through energy, expenditure, and preference spaces.
 The microeconomic framework is linked to macroeconomic rebound through a macroeconomic factor.
 Further, the framework is exercised on two case studies: 
 energy efficiency upgrades of a car and and an electric lamp.
 We find find microeconomic rebounds of 24\% and 29\% 
 and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
 **** 
-These numbers are not automatically calculated.
+These numbers are not automatically recalculated.
 Double-check before submission. 
 ****
 **** Should we include the micro numbers somewhere in the paper? ****
