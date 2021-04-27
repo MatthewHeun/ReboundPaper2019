@@ -134,7 +134,6 @@ and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
 These numbers are not automatically recalculated.
 Double-check before submission. 
 ****
-**** Should we include the micro numbers somewhere in the paper? ****
 Policy options to mitigate rebound components are discussed.
 \end{abstract}
 
@@ -2190,6 +2189,7 @@ for the car example.
 Re_empl_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
 Re_sub_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_micro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_micro, to_perc = TRUE)
 Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
@@ -2467,6 +2467,8 @@ Thus, the freed cash after the substitution effect
 ($\rasub{N} = \Sexpr{N_dot_hat_car_char}$~\$/year) 
 translates into positive direct and indirect income
 rebound at the micro level. 
+Total micro rebound (emplacement, substitution, and income effects)
+sums to $Re_{micro} = \Sexpr{Re_micro_car_char_perc}$\%.
 
 Finally, at the macro level, the \macroeffect{} leads to macro rebound
 ($Re_{\macro}$) of \Sexpr{Re_macro_car_char_perc}\%
@@ -2738,6 +2740,7 @@ rebound_results %>%
 Re_empl_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_empl, to_perc = TRUE)
 Re_sub_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_sub, to_perc = TRUE)
 Re_inc_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_inc, to_perc = TRUE)
+Re_micro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_micro, to_perc = TRUE)
 Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
@@ -3030,6 +3033,8 @@ some of the additional income to increased consumption of lighting.
 The indirect income effect rebound is large
 ($Re_{iinc} = \Sexpr{Re_iinc_lamp_char_perc}$\%), 
 due to the energy implications of increased spending on other goods.
+Total micro rebound (emplacement, substitution, and income effects)
+sums to $Re_{micro} = \Sexpr{Re_micro_lamp_char_perc}$\%.
 
 Finally, rebound due to the macroeconomic 
 \macroeffect{} 
