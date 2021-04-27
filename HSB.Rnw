@@ -206,37 +206,30 @@ library(xtable)
 
 
 Energy rebound is a phenomenon whereby 
-some expected energy savings do not occur 
+some expected energy savings fail to materialize 
 after an energy efficiency upgrade (EEU), 
-due to various behavior and market responses.
-
-%+++
-%This is the merged edit of MKH's and my suggested changes to avoid circularity. ---GS
-%+++
-
-The roots of energy rebound can be famously traced back to 
+due to behavior changes and economic effects.
+Famously, the roots of energy rebound trace back to 
 \citeauthor{Jevons:1865}
 who, in his report entitled \emph{The Coal Question},
 said that
 ``\emph{[i]t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
-In fact, less famously the origins extend further back. 
-Jevons includes a quote by \citet{Williams1840}, 
-who in turn had taken it from \citet[p.~161]{Parkes1838},
+Less famously, the origins of rebound extend back to \citet{Williams1840}
+who quoted \citeauthor{Parkes1838}
 who wrote ``The economy of fuel is the secret of the economy of the steam-engine; 
 it is the fountain of its power, and the adopted measure of its effects. 
 Whatever, therefore, conduces to increase the efficiency of coal, 
 and to diminish the cost of its use, 
 directly tends to augment the value of the steam-engine, 
-and to enlarge the field of its operations.''
+and to enlarge the field of its operations''~\citep[p.~161]{Parkes1838}.
+For nearly 200 years, efficiency gains at the device level
+have been understood to drive energy consumption growth at the macro level.
 
-Over one hundred years later, the 1970s oil crises gave a sharp
-%returned the (I deleted the 'returned' word as jevons only noted it, it wasnt his primary concern)
-focus to energy efficiency
-and the debate over the 
-%size and (I deleted 'size' as duplicate word to magnitude)
-magnitude of rebound heated up. 
+More than one hundred years after \citeauthor{Jevons:1865},
+the oil crises of the 1970s shone a light on energy efficiency,
+and a debate over the magnitude of rebound intensified. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested that energy rebound could be large, 
 while others, 
@@ -250,68 +243,80 @@ was defined by \citet[p.~212]{Herring1999} as
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-%The macroeconomic feedback mechanisms and their size lie at the heart of the debate,
+**** PB: I can't find this quote in Herring. ---MKH ****
 Debate over the size of energy rebound continues today.
-Advocates of small rebound (say, less than 50~\%),
+Advocates of small rebound (say, less than 50\%),
 such as \citet{Gillingham:2013aa, Gillingham2016},
 suggest ``the rebound effect is overplayed,'' 
+**** PB: Need a page number for this quote. ---MKH ****
 while others, 
 including \citet{Saunders2015} and \citet{Stern2020}
 claim the evidence for large rebound
-(greater than, say, 50~\% and in some cases above 100~\%, which is known as ``backfire'')
+(greater than, say, 50\% and in some cases above 100\%, which is known as ``backfire'')
 is growing.
 
-The topic of energy rebound is important;
-it is much more than an academic debate, 
-because there is a lot at stake. 
-If indeed large rebound does exist,
-then there are at least 
-%we see 
-three resulting areas of 
-%rebound 
-concern: 
-1. hampering of carbon reduction efforts, 
-2. increases to resource and material consumption rates, 
-and 
-3. modelling and policy-making 
-%that largely neglects rebound.
-may not adequately include rebound effects.
+% The magnitude of energy rebound is much more than an academic debate, 
+% because there is a lot at stake. 
+% Large rebound, if it exists, will mean that
+% efficiency-based efforts to reduce carbon emissions will be less effective than supposed.
+% To meet the carbon reduction targets of the Paris Agreement~\citep{masson-delmotte2018},
+% energy efficiency measures are increasingly being expected to deliver
+% absolute decoupling, where 
+% energy consumption and CO$_2$ emissions decrease
+% amidst continued economic growth.
+% Taking just one example,
+% by 2050
+% energy efficiency contributes 37~\% of 
+% energy-related global carbon emissions reductions in
+% the International Energy Agency's Sustainable Development scenario relative to
+% its Stated Policies scenario (which itself includes planned energy efficiency)
+% ~\citep[Fig.~2.1] {InternationalEnergyAgency2019}.
+% However as \citet{Brockway2021} note, 
+% such reductions in energy consumption 
+% would represent a structural break with the historical record
+% of close energy-GDP coupling,
+% assuming continued economic growth.
+% The key issue for Paris is that 
+% higher-than-anticipated global energy demand 
+% would likely require more fossil fuels 
+% (not all the additional energy would be sourced from renewables), 
+% and thus hamper climate change mitigation efforts.
 
-First, to meet Paris Agreement carbon reduction targets~\citep{masson-delmotte2018},
-%increasing 
-energy efficiency measures are increasingly being expected to deliver
-absolute decoupling, where 
-%decreasing 
-energy consumption and CO$_2$ emissions decrease
-amidst continued economic growth.
-Taking just one example,
-by 2050
+Amidst the rebound debate,
+energy efficiency measures are expected to deliver
+CO$_2$ emissions reductions in support of
+Paris Agreement targets~\citep{masson-delmotte2018},
+even while world economies grow.
+For example, by 2050
 energy efficiency contributes 37~\% of 
 energy-related global carbon emissions reductions in
 the International Energy Agency's Sustainable Development scenario relative to
 its Stated Policies scenario (which itself includes planned energy efficiency)
-~\citep[Fig.~2.1] {InternationalEnergyAgency2019}.
-However as \citet{Brockway2021} note, 
-such reductions in energy consumption 
+~\citep[Fig.~2.1]{InternationalEnergyAgency2019}.
+As \citet{Brockway2021} note, 
+the required reductions in energy consumption 
 would represent a structural break with the historical record
-of close energy-GDP coupling,
-assuming continued economic growth.
-The key issue for Paris is that 
-higher-than-anticipated global energy demand 
-would likely require more fossil fuels 
-(not all the additional energy would be sourced from renewables), 
-and thus hamper climate change mitigation efforts.
+of close energy-GDP coupling.
+Thus, the magnitude of energy rebound is much more than an academic debate, 
+because there is a lot at stake. 
+Large rebound, if it exists, will mean that
+efficiency-based efforts to reduce carbon emissions will be less effective than supposed, 
+and achieving Paris targets will be at risk.
 
-Second, increased energy rebound may also lead to 
-higher-than-supposed material and resource requirements, 
-due to the latter's strong connection to energy rebound 
-%as the interactions between energy rebound and increasing material and resource are significant
-~\citep{VandenBergh2009, FontVivanco2018}, 
-%Given the
-and the existing
-global coupling of material consumption
-to economic growth ~\citep{Haberl2020, Wiedmann2020}.
-%it may not possible to separate energy rebound from rising material consumption and resource extraction.
+% Second, increased energy rebound may also lead to 
+% higher-than-supposed material and resource requirements, 
+% due to the latter's strong connection to energy rebound 
+% %as the interactions between energy rebound and increasing material and resource are significant
+% ~\citep{VandenBergh2009, FontVivanco2018}, 
+% %Given the
+% and the existing
+% global coupling of material consumption
+% to economic growth ~\citep{Haberl2020, Wiedmann2020}.
+% %it may not possible to separate energy rebound from rising material consumption and resource extraction.
+
+
+Something here about policy and models not including rebound.
+
 
 Third, energy rebound is rarely included in either 
 energy models~\citep{Brockway2021} or
