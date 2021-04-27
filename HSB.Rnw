@@ -3696,7 +3696,7 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
 @
 
 We note, again, that 
-most rebound focus on microeconomic effects or total rebound.
+most rebound analyses focus on either microeconomic effects or total rebound.
 Few rebound studies the macro rebound space.
 Inspired by \citet{Borenstein:2015aa} and others, 
 we bridge micro and macro with the macro factor ($k$), 
