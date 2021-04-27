@@ -238,17 +238,19 @@ claimed that rebound was likely small.
 
 The so-called \emph{Khazzoom-Brookes Postulate}, 
 named by \citet{Saunders:1992aa},
-was defined by \citet[p.~212]{Herring1999} as
+was defined by \citet[p.~214]{Herring1999} as
 ``increased energy-efficiency at the microeconomic level,
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
 **** PB: I can't find this quote in Herring. ---MKH ****
+*** MKH: its on page 214 not page 212.---PEB****
 Debate over the size of energy rebound continues today.
 Advocates of small rebound (say, less than 50\%),
-such as \citet{Gillingham:2013aa, Gillingham2016},
-suggest ``the rebound effect is overplayed,'' 
+such as \citet[p.~475]{Gillingham:2013aa},
+who suggested ``the rebound effect is overplayed,'' 
 **** PB: Need a page number for this quote. ---MKH ****
+***MKH: its the title of his 2013 paper, so i dropped the 2016 ref, and added a page number.---PEB****
 while others, 
 including \citet{Saunders2015} and \citet{Stern2020}
 claim the evidence for large rebound
