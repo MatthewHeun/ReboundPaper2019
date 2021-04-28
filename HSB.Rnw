@@ -321,16 +321,15 @@ at the device and throughout the economy, respectively.
 Lacking a strong theoretical foundation for microeconomic rebound, 
 macro energy modeling and energy efficiency policy are at risk
 of being ineffective to achieve efficiency-based CO$_2$ emissions reductions.
-
-Further adding to that risk is the fact that 
+Adding to that risk, 
 energy rebound is rarely included in either 
 energy models~\citep{Brockway2021} or
 energy policy-making~\citep{fontvivanco2016},
 limiting our ability to assess the interactions among
 rebound, energy demand, and carbon emissions going forward.
 
-Bringing these concerns together, further theoretical and empirical research
-is vital to advance our understanding of energy rebound, 
+Bringing these concerns together, further theoretical and empirical research is vital
+to advance our understanding of energy rebound, 
 to formulate effective energy policy, and 
 to take appropriate climate mitigation actions.
 
@@ -340,22 +339,16 @@ to take appropriate climate mitigation actions.
 \label{sec:rebound_typologies}
 %++++++++++++++++++++++++++++++
 
-One of the challenges to better understanding energy rebound is it comprises
-%its 
+A challenge to understanding energy rebound is that it comprises
 many mechanisms and effects, which in turn 
-has led to many different approaches to set out rebound typologies.
+has led to many different rebound typologies.
 Commonly, 
-%The most common 
 rebound typologies 
 distinguish between microeconomic effects 
-%(direct and indirect)
 (at the single device or person level)
 and 
 macroeconomic effects
-(broader, economy-wide responses)
-~\citep{greening2000, Barker2009, FontVivanco2018}. 
-%~\citet{greening2000} split total rebound into two parts:microeconomic rebound (direct and indirect) and macroeconomic (economy-wide effects and transformational effects).+++ Greening et al actually talk about a 'macroeconomic view' (p.390) and 'macroeconomic implications' (p.399) but not a macroeconomic rebound ---GS +++
-%+++PB - i agreed with gregor, so easier to remove the greening macro text)+++
+(broader, economy-wide responses)~\citep{greening2000, Barker2009, FontVivanco2018}. 
 \citet{Jenkins2011} split microeconomic rebound effects into
 direct (income and substitution effects) and 
 indirect (respending and embodied effects), 
@@ -364,16 +357,13 @@ sets out five macroeconomic rebound effects:
 embodied energy effects, respending effects, output effects, energy market effects, and composition effects.
 \citet{Santarius2016} and \citet{Lange2021} 
 introduce 
-%distinguish 
-meso (i.e., sector) level
-%scale 
-rebound, as an intermediate layer between 
-micro and macro rebound.
+meso (i.e., sectoral) level rebound
+between the micro and macro levels.
 \citet{VandenBergh2011} distinguishes 14 types of rebound, 
 providing, perhaps, the greatest complexity. 
 Table~\ref{tab:typology} 
-attempts to summarize and reconcile some of the existing typologies,
-versus the typology adopted for our paper.
+attempts to summarize and reconcile some of the existing typologies
+and sets out the typology for this paper. 
 \citet[p.~6]{madlener2016}, 
 reviewing 35 years of rebound research, noted that 
 ``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
@@ -381,9 +371,7 @@ by the many different versions'' of rebound typologies.
 
 \begin{table}
 \caption{Rebound typology based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.
-         **** We need to move Emplacement effects ahead of substitution and income effects 
-              to maintain same order as rest of paper.---MKH ****
-         **** Convert to a \LaTeX{} table?---MKH ****}
+**** Is this caption correct? We cite different authors in the column headings. ---MKH ****}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
@@ -408,8 +396,7 @@ by the many different versions'' of rebound typologies.
 %provided (I changed to led, as there were others involved, across multiple publications)
 an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
-He found 
-that the most prevalent type of study focused on direct (microeconomic) rebound 
+He found that the most prevalent type of study focused on direct (microeconomic) rebound 
 at the household level, with studies typically estimating small rebound magnitudes (10--30~\%).
 In contrast, Sorrell noted that evidence for macroeconomic rebound 
 was much weaker but could produce larger magnitudes, 
