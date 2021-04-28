@@ -100,21 +100,20 @@ Leeds, LS2 9JT, UK}
 % then cite the author(s) and year(s).
 % Also, non-standard or uncommon abbreviations should be avoided, but
 % if essential they must be defined at their first mention in the abstract itself.
-(219 words at present) \\
+(226 words at present) \\
 Implementation of widespread energy efficiency measures
 is a key global strategy to meet Paris greenhouse gas emissions targets. 
-However, energy rebound can take back efficiency-based
+However, energy rebound can ``take back'' efficiency-based
 energy reductions via behavior changes and economic effects.
 Evidence is growing that rebound effects are 
 larger than typically assumed, 
-which could mean efficiency-based efforts to reduce carbon emissions 
+meaning that efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
-Unfortunately, 
-much of the work on microeconomic rebound at the device level
-is empirical and lacks rigorous theoretical foundations, 
+Most work on energy rebound is empirical and microeconomic.
+Unfortunately, that work lacks rigorous theoretical foundations, 
 inhibiting understanding of rebound mechanisms.
 Lacking a strong theoretical foundation for microeconomic rebound, 
-energy modeling and energy efficiency policy at the macro level are at risk
+macro energy modeling and energy efficiency policy are at risk
 of being ineffective at efficiency-based emissions reductions.
 In response, 
 we build upon microeconomic fundamentals
@@ -125,16 +124,17 @@ for emplacement, substitution, and income effects.
 The analytical framework uses a utility model 
 to obtain a sequence of graphs that show rebound paths
 through energy, expenditure, and preference spaces.
-The microeconomic framework is linked to macroeconomic rebound through a macroeconomic factor.
+The microeconomic framework is linked to 
+macroeconomic rebound through a macroeconomic factor.
 Further, the framework is exercised on two case studies: 
-energy efficiency upgrades of a car and and an electric lamp.
+energy efficiency upgrades of a car and an electric lamp.
 We find find microeconomic rebounds of 24\% and 29\% 
 and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
 **** 
 These numbers are not automatically recalculated.
 Double-check before submission. 
 ****
-Policy options to mitigate rebound components are discussed.
+Policy options to mitigate rebound effects are discussed.
 \end{abstract}
 
 
@@ -216,9 +216,10 @@ said that
 ``\emph{[i]t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
-Less famously, the origins of rebound extend back to \citet{Williams1840}
+Less famously, the origins of rebound extend backward from \citeauthor{Jevons:1865}
+to \citet{Williams1840}
 who quoted \citeauthor{Parkes1838}
-who wrote ``The economy of fuel is the secret of the economy of the steam-engine; 
+who wrote ``[t]he economy of fuel is the secret of the economy of the steam-engine; 
 it is the fountain of its power, and the adopted measure of its effects. 
 Whatever, therefore, conduces to increase the efficiency of coal, 
 and to diminish the cost of its use, 
@@ -239,20 +240,16 @@ claimed that rebound was likely small.
 The so-called \emph{Khazzoom-Brookes Postulate}, 
 named by \citet{Saunders:1992aa},
 was defined by \citet[p.~214]{Herring1999} as
-``increased energy-efficiency at the microeconomic level,
+``increased energy-efficiency at the micro-economic level,
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
-**** PB: I can't find this quote in Herring. ---MKH ****
-*** MKH: its on page 214 not page 212.---PEB****
 Debate over the size of energy rebound continues today.
 Advocates of small rebound (say, less than 50\%),
-such as \citet[p.~475]{Gillingham:2013aa},
-who suggested ``the rebound effect is overplayed,'' 
-**** PB: Need a page number for this quote. ---MKH ****
-***MKH: its the title of his 2013 paper, so i dropped the 2016 ref, and added a page number.---PEB****
+such as \citeauthor{Gillingham:2013aa},
+suggest ``the rebound effect is overplayed''~\citet[p.~475]{Gillingham:2013aa},
 while others, 
-including \citet{Saunders2015} and \citet{Stern2020}
+including \citet{Saunders2015} and \citet{Stern2020},
 claim the evidence for large rebound
 (greater than, say, 50\% and in some cases above 100\%, which is known as ``backfire'')
 is growing.
@@ -288,7 +285,7 @@ Amidst the rebound debate,
 energy efficiency measures are expected to deliver
 CO$_2$ emissions reductions in support of
 Paris Agreement targets~\citep{masson-delmotte2018},
-even while world economies grow.
+even while the world economy grows.
 For example, by 2050
 energy efficiency contributes 37~\% of 
 energy-related global carbon emissions reductions in
@@ -303,7 +300,7 @@ Thus, the magnitude of energy rebound is much more than an academic debate,
 because there is a lot at stake. 
 Large rebound, if it exists, will mean that
 efficiency-based efforts to reduce carbon emissions will be less effective than supposed, 
-and achieving Paris targets will be at risk.
+and achieving Paris emissions reduction targets will be at risk.
 
 % Second, increased energy rebound may also lead to 
 % higher-than-supposed material and resource requirements, 
@@ -316,23 +313,26 @@ and achieving Paris targets will be at risk.
 % to economic growth ~\citep{Haberl2020, Wiedmann2020}.
 % %it may not possible to separate energy rebound from rising material consumption and resource extraction.
 
+Most work on energy rebound is empirical and microeconomic.
+Unfortunately, that work lacks rigorous theoretical foundations,
+inhibiting understanding of rebound mechanisms
+along direct and indirect channels
+at the device and throughout the economy, respectively.
+Lacking a strong theoretical foundation for microeconomic rebound, 
+macro energy modeling and energy efficiency policy are at risk
+of being ineffective to achieve efficiency-based CO$_2$ emissions reductions.
 
-Something here about policy and models not including rebound.
-
-
-Third, energy rebound is rarely included in either 
+Further adding to that risk is the fact that 
+energy rebound is rarely included in either 
 energy models~\citep{Brockway2021} or
-policy-making~\citep{fontvivanco2016},
+energy policy-making~\citep{fontvivanco2016},
 limiting our ability to assess the interactions among
-rebound, energy demand
-carbon emissions, and
-material and resource consumption.
+rebound, energy demand, and carbon emissions going forward.
 
-%Thus
 Bringing these concerns together, further theoretical and empirical research
-is vital to advance our understanding energy rebound 
-and take appropriate actions.
-%we believe estimating the magnitude of energy rebound is a crucially important goal.
+is vital to advance our understanding of energy rebound, 
+to formulate effective energy policy, and 
+to take appropriate climate mitigation actions.
 
 
 %++++++++++++++++++++++++++++++
