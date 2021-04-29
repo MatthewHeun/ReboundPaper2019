@@ -211,8 +211,7 @@ after an energy efficiency upgrade (EEU),
 due to behavior changes and economic effects.
 Famously, the roots of energy rebound trace back to 
 \citeauthor{Jevons:1865}
-who, in his report entitled \emph{The Coal Question},
-said that
+who, in his report entitled \emph{The Coal Question}, said 
 ``\emph{[i]t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
@@ -225,11 +224,9 @@ Whatever, therefore, conduces to increase the efficiency of coal,
 and to diminish the cost of its use, 
 directly tends to augment the value of the steam-engine, 
 and to enlarge the field of its operations''~\citep[p.~161]{Parkes1838}.
-Thus, for nearly 200 years, efficiency gains at the device level
-have been understood to drive energy consumption growth at 
-%the macro level.
-least at the microeconomic level.
-+++MKH: when you read jevons and parkes they are both referring to increased use of energy in that device, i.e. micro-level. so i switched from macro to micro. if you agree remove this comment+++ PEB
+Thus, for nearly 200 years, it has been understood 
+that efficiency gains may, paradoxically, 
+drive growth in energy consumption.
 
 More than one hundred years after \citeauthor{Jevons:1865},
 the oil crises of the 1970s shone a light on energy efficiency,
@@ -248,14 +245,14 @@ while leading to a reduction of energy use at this level,
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
 Debate over the size of energy rebound continues today.
-Advocates of small rebound (say, less than 50\%),
-such as \citeauthor{Gillingham:2013aa},
-suggest ``the rebound effect is overplayed''~\citet[p.~475]{Gillingham:2013aa},
+Advocates of small rebound (less than, say, 50~\%),
+suggest ``the rebound effect is overplayed''~\citep[p.~475]{Gillingham:2013aa},
 while others, 
 including \citet{Saunders2015} and \citet{Stern2020},
 claim the evidence for large rebound
-(greater than, say, 50\% and in some cases above 100\%, which is known as ``backfire'')
+(greater than 50~\%)
 is growing.
+(Rebound above 100\% is known as ``backfire.'')
 
 % The magnitude of energy rebound is much more than an academic debate, 
 % because there is a lot at stake. 
@@ -334,23 +331,24 @@ at the microeconomic scale (direct and indirect)
 continue to suggest relatively small
 microeconomic rebound magnitudes
 of less than 40~\%. 
-(See \citet{Greene2012, Thomas:2013ab, Antal:2014aa, Chitnis2014, Stapleton:2016}.)
+(See \citet{Greene2012}, \citet{Thomas:2013ab}, \citet{Antal:2014aa}, 
+\citet{Chitnis2014}, and \citet{Stapleton:2016}.)
 Commonly, microeconomic rebound estimates are based on own-sector (direct)
 and/or
 cross-sector (indirect, re-spending) price elasticities,
 as set out by \citet{Gillingham2016}. 
 \citet{dahlqvist2021rebound} provides an example of this price elasticity 
-approach applied to energy intensive industry sectors.
+approach applied to energy-intensive industry sectors.
 
 Meantime, estimates of macroeconomic rebound remain very rare
 (e.g.,~\citet{Barker2009}). 
 However, a growing number of studies estimate the magnitude of total rebound, 
-(the sum of microeconomic and macroeconomic rebound).
+the sum of microeconomic and macroeconomic rebound.
 A recent review of 33 studies by \citet{Brockway2021} 
-found a dominant group of Computational General Equilibrium (CGE) studies, 
+found a large group of 21 Computational General Equilibrium (CGE) studies, 
 such as \citet{Lecca2014}, \citet{Broberg2015}, and \citet{Wei2017},
-with a mean total rebound estimate (from 21 reviewed studies) of around 60~\%. 
-The remaining approaches split into three sub-methods: 
+with a mean total rebound estimate of around 60~\%. 
+A smaller group of studies used three other methods:
 non-CGE macroeconomic models
 (e.g., \citet{Barker2009} and \citet{Lemoine:2020aa}),
 econometric analysis (e.g., \citet{Wei2019} and \citet{Bruns2019}), and
@@ -359,7 +357,7 @@ Like the CGE studies,
 the average estimate of total rebound magnitude from non-CGE methods 
 was found to be over 60~\%,
 leading the review authors to conclude that total rebound magnitudes 
-were ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
+are ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
 
 % %++++++++++++++++++++++++++++++
 % \subsection{Rebound typologies}
@@ -420,14 +418,13 @@ of rebound into income and substitution effects; and
 However, lifecycle and end-of-life considerations are not typically included 
 in microeconomic rebound frameworks, and 
 models of consumer preferences lack robustness.
-%a robust model of consumer preferences is rarely included.
 (\citet{Babacan:2020aa} provides a rare example 
-of life-cycle analysis effects of the energy efficient device.)
+of analysis of life-cycle analysis effects of the energy efficient device.)
 
 To date, frameworks for estimating the magnitude of \emph{macroeconomic} rebound effects
 have included an amplification mechanism from micro to macro, 
 the result of energy productivity gains
-from the energy efficiency upgrade~\citep{Dimitropoulos2007, Sorrell:2010ul}.
+from the energy efficiency upgrade (EEU) \citep{Dimitropoulos2007, Sorrell:2010ul}.
 \citeauthor{Borenstein:2015aa} described macro effects as follows:
 ``the economy [expands] by more than the private income gain
 enjoyed by the owner of the upgraded appliance'' \citep[p.~11]{Borenstein:2015aa}.
@@ -463,16 +460,16 @@ Later works continued the APF approach, including
 general equilibrium frameworks for total rebound,
 overcoming limitations of partial equilibrium frameworks where, 
 for example, markets by definition cannot fully close 
-and thus miss some rebound channels ~\citet{Figus2016}.
+and thus miss some rebound channels~\citep{Figus2016}.
 Further general equilibrium studies of rebound followed, including
 \citet{Wei2010},
 \citet{Lemoine:2020aa}, and
 \citet{Fullerton:2019aa}.
 
-Despite the growth of theoretical rebound contributions in several types of frameworks,
+Despite the growth of rebound contributions in several types of frameworks,
 particularly in the last decade,
 several key issues remain. 
-First, key limitations remain in microeconomic rebound frameworks, including
+First, key limitations remain in \emph{microeconomic} rebound frameworks, including
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -537,7 +534,7 @@ In particular the framework should be one that
   \item builds upon microeconomic foundations and 
         carefully distinguishes among microeconomic components,
   
-  \item incorporates at least indicative, plausible macroeconomic multiplier values
+  \item incorporates indicative, plausible macroeconomic multiplier values
         to provide a better link between micro and macro effects, and 
 
   \item enables analysis of real energy efficiency upgrades.
@@ -560,7 +557,7 @@ The key \emph{contributions} of this paper are
         in a consistent and rigorous rebound framework, 
         
   \item providing a new way to visualize rebound effects, 
-        namely energy, expenditure, and preference path graphs,
+        namely via energy, expenditure, and preference path graphs,
   
   \item applying a general CES utility function 
         via empirically-plausible cost shares of other goods consumption,
@@ -597,16 +594,15 @@ We begin with our rebound typology.
 
 A challenge to understanding energy rebound is that it comprises
 many mechanisms and effects.
-
 We follow convention to distinguish between
 microeconomic effects (at the single device or person level)
 and 
 macroeconomic effects (broader, economy-wide responses).
-(See \citet{greening2000, Barker2009, FontVivanco2018}.) 
+(See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
 With \citet{Jenkins2011} and others, 
 we split microeconomic rebound effects into
 direct (income and substitution effects) and 
-indirect (respending and embodied effects).
+indirect (embodied energy, maintenance and disposal, and respending effects).
 
 Like other authors, we recognize many macroeconomic effects.
 \citet{Sorrell:2009cg} 
@@ -623,11 +619,8 @@ Table~\ref{tab:typology}
 summarizes and reconciles some of the existing typologies
 and sets out the typology for this paper. 
 
-%based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.**** Is this caption correct? We cite different authors in the column headings. ---MKH ****
-%+MKH: i removed hte author list from teh caption, we quote authors in teh main table itself, so dont need it in the caption.
-
 \begin{table}
-\caption{Rebound typology adopted with comparison to existing literature}
+\caption{Rebound typology adopted with comparison to existing literature.}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
@@ -673,7 +666,7 @@ As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed exogenous
 ($\amacro{p}_E = \bempl{p}_E$),
-so the final energy purchaser (i.e., the device owner) is a price taker.
+so the final energy purchaser (the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
 
@@ -698,7 +691,7 @@ notation elements used throughout the paper, including
 symbols, Greek letters, decorations, and subscripts.
 The notation elements 
 can be mixed to comprise a rich and expressive ``language'' of energy rebound.
-We use colored backgrounds on rebound effects for visual convenience. 
+In several places, we use colored backgrounds on rebound effects for visual convenience. 
 
 \begin{figure}
 \centering
@@ -827,14 +820,15 @@ In each subsection, we
 	
   \item define each rebound effect and
   
-  \item develop mathematical rebound expressions.
+  \item show mathematical expressions for rebound.
     
 \end{enumerate*}
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
 See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect}
-which provide a parallel structure for energy and financial accounting.
+which provide a parallel structure for energy and financial accounting
+across all rebound effects.
 
 Important quantities for the derivations are
 %
@@ -859,7 +853,7 @@ notional rebound path graphs of energy consumption, expenditures, and preference
 for purposes of illustration.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
-rebound path graphs (with scales) illustrate numerical examples.
+rebound path graphs (with scales) illustrate the numerical examples.
 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows a notional energy path graph, with 
 the direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
@@ -868,7 +862,7 @@ the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate energy consumption isoquants
-(direct and indirect) at each point.
+(direct and indirect) at key points.
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
@@ -878,7 +872,7 @@ Lines with negative slope through points $\circ$ and $a$
 indicate expenditure isoquants (direct and indirect).
 
 A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
-The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown in the abscissa, and
+The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown on the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Isoquants of indexed other goods and energy service consumption 
 are shown as lines with negative slope. 
