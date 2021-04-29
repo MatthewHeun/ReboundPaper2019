@@ -1002,7 +1002,7 @@ rebound_results %>%
 
 
 <<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path.", fig.width=6, fig.height=4>>=
-cost_line_angle <- -16.5
+cost_line_angle <- -16.3
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        1.01, 1.003, 'degree', 
                                        stage_colour, orig_size, 0,
@@ -1010,7 +1010,7 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        abcd_colour, abcd_size, 0,
                                        0.09, 0.972, 'b', 
                                        abcd_colour, abcd_size, 0,
-                                       0.125, 0.956, 'scriptstyle("*")', 
+                                       0.128, 0.955, '"*"', 
                                        stage_colour, star_size, 0,
                                        0.09, 0.936, 'c', 
                                        abcd_colour, abcd_size, 0,
@@ -1022,8 +1022,12 @@ example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        stage_colour, bar_size, 0,
                                        0.635, 1.02, 'Original~expenditure', 
                                        annotation_colour, annotation_size, cost_line_angle,
+                                       0.43, 0.944, 'After~emplacement', 
+                                       annotation_colour, annotation_size, cost_line_angle,
                                        0.55, 0.9825, 'After~expected~savings', 
-                                       annotation_colour, annotation_size, cost_line_angle)
+                                       annotation_colour, annotation_size, cost_line_angle,
+                                       0.17, 0.9416, 'After~CV', 
+                                       annotation_colour, annotation_size-1, cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Example", 
