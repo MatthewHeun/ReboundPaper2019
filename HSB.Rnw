@@ -3713,7 +3713,7 @@ after being re-spent by the device owner.
 However, the framework presented in Section~\ref{sec:framework} and
 the results obtained in Section~\ref{sec:examples}
 allow, for the first time, 
-estimates of values for $k$.
+estimates of a value for $k$.
 
 To calibrate the macro factor,
 we treat macro rebound ($Re_{\macro}$) as a residual.
@@ -3723,28 +3723,35 @@ is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
 average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
-The calibrated values of $k$ that give $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% are
+The calibrated values of $k$ that gives $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
+for both examples are
 $k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$ for the car example and
 $k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
-total rebound from another EEU.
+total rebound from a different EEU.
 Intuition also suggests that values of $k$ should be similar across EEUs, because
 \$1 of freed cash should have the same macroeconomic stimulative effect,
 regardless of the EEU that produced it.
 ****
 GS: I think you will object to the previous sentences.
+But we need a way to move from our two estimates of $k$ to 
+a single value ($k = 3$).
 Feel free to suggest alternatives. ---MKH
 ****
 Following these intuitions, 
 we select, for the purposes of illustration, $k = 3$,
-being between the $k$ values estimated from the car and lamp examples.
+being between the values of $k$ estimated from the car and lamp examples.
 Note that $k = 3$ implies that every \$1 of freed cash
 spent by the device owner 
 generates \$3 of additional economic activity in the broader economy.
 **** 
 GS: Is there any way to validate $k = 3$? 
 $k = 3$ implies MPC = 2/3.
+But I don't think we want to lean on MPC = 2/3.
+We essentially assume MPC = 1 when we constrain the "bar" point to lie on the original expenditure 
+line in the expenditure path graphs.
+So maybe we could validate $k = 3$ in another way?
 ****
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
@@ -3755,7 +3762,7 @@ should be three times longer than they appear.
 In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
 the values of macro rebound ($Re_{\macro}$) should triple to
 \Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
-\Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\% and
+\Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\%, and
 the values of total rebound ($Re_{tot}$) should increase to 
 \Sexpr{sprintf("%.1f", round(Re_tot_car_k_3*100), 1)}\% and
 \Sexpr{formatC(Re_tot_lamp_k_3*100, digits = 3)}\%
@@ -3780,8 +3787,8 @@ The framework
         carefully distinguishes among microeconomic components,
   
   \item incorporates, for the first time,
-        a plausible macroeconomic multiplier value ($k = 3$)
-        to provide a better link between micro and macro effects, and 
+        a plausible value for the macro factor ($k = 3$)
+        to provide a better link between macro and micro effects, and 
 
   \item enables analysis of real EEUs.
 
@@ -3792,7 +3799,7 @@ we can draw several important conclusions.
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item The car and lamp examples (Section!\ref{sec:examples} show that
+  \item The car and lamp examples (Section~\ref{sec:examples} show that
         a mathematically-rigorous rebound framework enables
         quantification of the magnitudes of all rebound mechanisms, including 
         direct and indirect channels 
@@ -3803,12 +3810,14 @@ we can draw several important conclusions.
   
   \item The sensitivity studies
         (Figs.~\ref{fig:all_Re_terms_eta_graph}--\ref{fig:all_Re_terms_k_graph})
-        show that rebound estimates for the examples 
-        are most sensitive to
+        show that rebound estimates  
+        are more sensitive to
         the price of energy ($p_E$),
         the uncompensated own-price elasticity 
         of energy service consumption ($\eqspsUC$), and
-        the macro factor ($k$).
+        the macro factor ($k$) than
+        efficiency ($\amacro{\eta}$) or
+        capital cost ($\amacro{C}_{cap}$).
         
   \item The discussion (Section~\ref{sec:discussion}) shows that
         rebound mitigation policies must be tailored to each rebound mechanism.
