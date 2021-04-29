@@ -2283,28 +2283,32 @@ rebound_results %>%
 
 
 <<CarCostGraph, echo=FALSE, fig.cap="Expenditure path, car example.", fig.width=6, fig.height=4>>=
-car_cost_line_angle <- -27
+car_cost_line_angle <- -29.5
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    1280, 26150, 'degree', 
-                                     stage_colour, orig_size, 0,
+                                   stage_colour, orig_size, 0,
                                    759, 26150, 'a', 
-                                     abcd_colour, abcd_size, 0,
+                                   abcd_colour, abcd_size, 0,
                                    770, 26025, 'b', 
-                                     abcd_colour, abcd_size, 0,
+                                   abcd_colour, abcd_size, 0,
                                    770, 25937, '"*"', 
-                                     stage_colour, star_size, 0,
-                                   770, 25892, 'c', 
-                                     abcd_colour, abcd_size, 0,
-                                   816, 25880, '"^"', 
-                                     stage_colour, hat_size, 0,
+                                   stage_colour, star_size, 0,
+                                   750, 25867, 'c', 
+                                   abcd_colour, abcd_size, 0,
+                                   816, 25896, '"^"', 
+                                   stage_colour, hat_size, 0,
                                    855, 25870, 'd', 
-                                     abcd_colour, abcd_size, 0,
+                                   abcd_colour, abcd_size, 0,
                                    830, 26557, 'bold("_")', 
-                                     stage_colour, bar_size, 0,
+                                   stage_colour, bar_size, 0,
                                    1075, 26350, 'Original~expenditure', 
-                                     annotation_colour, annotation_size, car_cost_line_angle,
+                                   annotation_colour, annotation_size, car_cost_line_angle,
                                    950, 25958, 'After~expected~savings', 
-                                     annotation_colour, annotation_size, car_cost_line_angle)
+                                   annotation_colour, annotation_size, car_cost_line_angle,
+                                   710, 26010, 'After~empl.', 
+                                   annotation_colour, annotation_size-1, car_cost_line_angle,
+                                   710, 25950, 'After~CV', 
+                                   annotation_colour, annotation_size-1, car_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Car", 
@@ -2317,6 +2321,7 @@ rebound_results %>%
                                             size = size,
                                             angle = angle), 
                      parse = TRUE) +
+  ggplot2::scale_x_continuous(limits = c(680, NA)) +
   MKHthemes::xy_theme()
 @
 
@@ -2836,28 +2841,32 @@ rebound_results %>%
 
 
 <<LampCostGraph, echo = FALSE, fig.cap="Expenditure path, lamp example.", fig.width=6, fig.height=4>>=
-lamp_cost_line_angle <- -24
+lamp_cost_line_angle <- -23
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                     9, 27392.8, 'degree', 
-                                      stage_colour, orig_size, 0,
+                                    stage_colour, orig_size, 0,
                                     0.9, 27392.8, 'a', 
-                                      abcd_colour, abcd_size, 0,
-                                    0.57, 27391.6, '"b,"',
-                                      abcd_colour, abcd_size, 0,
-                                    0.79, 27391.33, '"*"', 
-                                      stage_colour, star_size, 0,
+                                    abcd_colour, abcd_size, 0,
+                                    1.18, 27391.7, '"b"', 
+                                    abcd_colour, abcd_size, 0,
+                                    0.8, 27390.65, '"*"',
+                                    stage_colour, star_size, 0,
                                     0.85, 27387, 'c', 
-                                      abcd_colour, abcd_size, 0,
-                                    2.3, 27386.5, '"^"', 
-                                      stage_colour, hat_size, 0,
-                                    2.5, 27387, 'd', 
-                                      abcd_colour, abcd_size, 0,
+                                    abcd_colour, abcd_size, 0,
+                                    2.3, 27386.4, '"^"', 
+                                    stage_colour, hat_size, 0,
+                                    2.53, 27387.33, 'd', 
+                                    abcd_colour, abcd_size, 0,
                                     2.55, 27399.2, 'bold("_")', 
-                                      stage_colour, bar_size, 0,
-                                    5, 27396.7, 'Original~expenditure',
-                                      annotation_colour, annotation_size, lamp_cost_line_angle,
-                                    4, 27389.7, 'After~expected~savings',
-                                      annotation_colour, annotation_size, lamp_cost_line_angle)
+                                    stage_colour, bar_size, 0,
+                                    5.25, 27396.4, 'Original~expenditure',
+                                    annotation_colour, annotation_size, lamp_cost_line_angle,
+                                    3.75, 27388.1, 'After~emplacement',
+                                    annotation_colour, annotation_size, lamp_cost_line_angle,
+                                    3.1, 27386.68, 'After~CV',
+                                    annotation_colour, annotation_size-1, lamp_cost_line_angle,
+                                    4.1, 27389.7, 'After~expected~savings',
+                                    annotation_colour, annotation_size, lamp_cost_line_angle)
 
 rebound_results %>% 
   ReboundTools::path_graphs(cases = "Lamp", 
@@ -3691,9 +3700,9 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
 
 We note, again, that 
 most rebound analyses focus on either microeconomic effects or total rebound.
-Few rebound studies the macro rebound space.
+Few rebound studies have explored the macro rebound space.
 Inspired by \citet{Borenstein:2015aa} and others, 
-we bridge micro and macro with the macro factor ($k$), 
+we bridge macro and micro with the macro factor ($k$), 
 as discussed in Section~\ref{sec:macro_effect_main_paper}.
 For the results presented in Section~\ref{sec:examples}, 
 we assumed a placeholder value of $k = 1$,
@@ -3723,6 +3732,10 @@ total rebound from another EEU.
 Intuition also suggests that values of $k$ should be similar across EEUs, because
 \$1 of freed cash should have the same macroeconomic stimulative effect,
 regardless of the EEU that produced it.
+****
+GS: I think you will object to the previous sentences.
+Feel free to suggest alternatives. ---MKH
+****
 Following these intuitions, 
 we select, for the purposes of illustration, $k = 3$,
 being between the $k$ values estimated from the car and lamp examples.
@@ -3734,7 +3747,7 @@ After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
 In Figs.~\ref{fig:CarEnergyGraph} and~\ref{fig:LampEnergyGraph},
 the macro effect segments (\bartilde{})
-should be three times as long as they appear.
+should be three times longer than they appear.
 In Tables~\ref{tab:car_results} and~\ref{tab:lamp_results},
 the values of macro rebound ($Re_{\macro}$) should triple to
 \Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
