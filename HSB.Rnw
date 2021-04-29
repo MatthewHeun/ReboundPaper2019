@@ -228,8 +228,7 @@ Thus, for nearly 200 years, it has been understood
 that efficiency gains may, paradoxically, 
 drive growth in energy consumption.
 
-More than one hundred years after \citeauthor{Jevons:1865},
-the oil crises of the 1970s shone a light on energy efficiency,
+The oil crises of the 1970s shone a light on energy efficiency,
 and a debate over the magnitude of rebound intensified. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested that energy rebound could be large, 
