@@ -225,8 +225,11 @@ Whatever, therefore, conduces to increase the efficiency of coal,
 and to diminish the cost of its use, 
 directly tends to augment the value of the steam-engine, 
 and to enlarge the field of its operations''~\citep[p.~161]{Parkes1838}.
-For nearly 200 years, efficiency gains at the device level
-have been understood to drive energy consumption growth at the macro level.
+Thus, for nearly 200 years, efficiency gains at the device level
+have been understood to drive energy consumption growth at 
+%the macro level.
+least at the microeconomic level.
++++MKH: when you read jevons and parkes they are both referring to increased use of energy in that device, i.e. micro-level. so i switched from macro to micro. if you agree remove this comment+++ PEB
 
 More than one hundred years after \citeauthor{Jevons:1865},
 the oil crises of the 1970s shone a light on energy efficiency,
@@ -283,6 +286,7 @@ is growing.
 
 Amidst the rebound debate,
 energy efficiency measures are expected to deliver
+energy-related 
 CO$_2$ emissions reductions in support of
 Paris Agreement targets~\citep{masson-delmotte2018},
 even while the world economy grows.
@@ -415,7 +419,8 @@ of rebound into income and substitution effects; and
 \citet{Sun:2018aa}, who considered direct rebound including device effects.
 However, lifecycle and end-of-life considerations are not typically included 
 in microeconomic rebound frameworks, and 
-a robust model of consumer preferences is rarely included.
+models of consumer preferences lack robustness.
+%a robust model of consumer preferences is rarely included.
 (\citet{Babacan:2020aa} provides a rare example 
 of life-cycle analysis effects of the energy efficient device.)
 
@@ -618,9 +623,11 @@ Table~\ref{tab:typology}
 summarizes and reconciles some of the existing typologies
 and sets out the typology for this paper. 
 
+%based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.**** Is this caption correct? We cite different authors in the column headings. ---MKH ****
+%+MKH: i removed hte author list from teh caption, we quote authors in teh main table itself, so dont need it in the caption.
+
 \begin{table}
-\caption{Rebound typology based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.
-**** Is this caption correct? We cite different authors in the column headings. ---MKH ****}
+\caption{Rebound typology adopted with comparison to existing literature}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
