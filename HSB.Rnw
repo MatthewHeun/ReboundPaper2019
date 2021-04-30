@@ -2932,7 +2932,7 @@ sums to $Re_{micro} = \Sexpr{Re_micro_lamp_char_perc}$\%.
 Finally, rebound due to the macroeconomic 
 \macroeffect{} 
 ($Re_{\macro}$) is \Sexpr{Re_macro_lamp_char_perc}\%
-with $k$ assume to be 1,
+with $k$ assumed to be 1,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
@@ -2956,16 +2956,16 @@ post-EEU efficiency ($\amacro{\eta}$),
 energy price ($p_E$),
 uncompensated own price elasticity of energy service consumption ($\eqspsUC$), 
 the macro factor ($k$), and 
-capital cost ($\aempl{C}_{cap}$)..
+capital cost ($\amacro{C}_{cap}$).
 Sensitivity analyses must be undertaken carefully,
 because rebound parameters are not expected to be 
 independent.
 
 In each subsection below, a series of graphs
 shows the effects of key rebound parameters
-($\amacro{\eta}$, $p_E$, $\eqspsUC$, $\aempl{C}_{cap}$, and $k$)
+($\amacro{\eta}$, $p_E$, $\eqspsUC$, $\amacro{C}_{cap}$, and $k$)
 on energy rebound ($Re_{tot}$) and its components
-($Re_{emb}$, $Re_{cap}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
+($Re_{emb}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
 In the graphs, 
 nominal values for the rebound parameters are shown as points, 
@@ -3228,9 +3228,9 @@ providing an indication of possible energy price variations.
 All other things being equal, 
 if U.S.\ residents paid Germany's electricity prices,
 energy rebound would be 
-\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}\%
+$\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}$\%
 for the car example and 
-\Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}\%
+$\Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}$\%
 for the lamp example.
 
 A limitation of the energy price sensitivity analysis arises from the fact that
@@ -3595,7 +3595,8 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
 
 We note, again, that 
 most rebound analyses focus on either microeconomic effects or total rebound.
-Few rebound studies have explored the macro rebound space.
+Few rebound studies have explored the macro space 
+between micro and total rebound.
 Inspired by \citet{Borenstein:2015aa} and others, 
 we bridge macro and micro with the macro factor ($k$), 
 as discussed in Section~\ref{sec:macro_effect_main_paper}.
@@ -3608,7 +3609,7 @@ after being re-spent by the device owner.
 However, the framework presented in Section~\ref{sec:framework} and
 the results obtained in Section~\ref{sec:examples}
 allow, for the first time, 
-estimates of a value for $k$.
+estimates for a value of $k$.
 
 To calibrate the macro factor,
 we treat macro rebound ($Re_{\macro}$) as a residual.
@@ -3618,7 +3619,7 @@ is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
 average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
-The calibrated values of $k$ that gives $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
+The calibrated values of $k$ that give identical $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
 for both examples are
 $k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$ for the car example and
 $k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ for the lamp example.
@@ -3682,7 +3683,7 @@ The framework
   \item builds upon microeconomic foundations and 
         carefully distinguishes among microeconomic components,
   
-  \item incorporates, for the first time,
+  \item identifies and incorporates, for the first time,
         a plausible value for the macro factor ($k = 3$)
         to provide a better link between macro and micro effects, and 
 
