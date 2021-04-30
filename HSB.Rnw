@@ -180,31 +180,6 @@ library(xtable)
 \label{sec:background}
 %++++++++++++++++++++++++++++++
 
-% General discussion of the importance of rebound, 
-% non-microeconomic references.
-% Here are some references from Matt's database that you may want to include:
-% \citet{Jevons:1866uy}, 
-% \citet{Saunders:1992aa, Saunders:2000aa}, 
-% \citet{Sorrell:2007um, Sorrell:2009cg, Sorrell:2010ul},
-% \citet{Brockway:2017a}, 
-% \citet{Tsao:2010},
-% \citet{Chitnis:2015}, 
-% \citet{Stapleton:2016}, 
-% \citet{Sun:2018aa}, 
-% \citet{Fullerton:2019aa},
-% etc.
-% 
-% More studies on large rebound.
-% What is missing is an overall framework for rebound to catch all aspects.
-% Some people have captured parts.
-% 
-% We develop framework itself. 
-% Follow-on question: need for a case-study example of exercising the framework.
-% We provide a guide for application.
-% We make it operational.
-
-
-
 Energy rebound is a phenomenon whereby 
 some expected energy savings fail to materialize 
 after an energy efficiency upgrade (EEU), 
@@ -253,33 +228,6 @@ claim the evidence for large rebound
 is growing.
 (Rebound above 100\% is known as ``backfire.'')
 
-% The magnitude of energy rebound is much more than an academic debate, 
-% because there is a lot at stake. 
-% Large rebound, if it exists, will mean that
-% efficiency-based efforts to reduce carbon emissions will be less effective than supposed.
-% To meet the carbon reduction targets of the Paris Agreement~\citep{masson-delmotte2018},
-% energy efficiency measures are increasingly being expected to deliver
-% absolute decoupling, where 
-% energy consumption and CO$_2$ emissions decrease
-% amidst continued economic growth.
-% Taking just one example,
-% by 2050
-% energy efficiency contributes 37\% of 
-% energy-related global carbon emissions reductions in
-% the International Energy Agency's Sustainable Development scenario relative to
-% its Stated Policies scenario (which itself includes planned energy efficiency)
-% ~\citep[Fig.~2.1] {InternationalEnergyAgency2019}.
-% However as \citet{Brockway2021} note, 
-% such reductions in energy consumption 
-% would represent a structural break with the historical record
-% of close energy-GDP coupling,
-% assuming continued economic growth.
-% The key issue for Paris is that 
-% higher-than-anticipated global energy demand 
-% would likely require more fossil fuels 
-% (not all the additional energy would be sourced from renewables), 
-% and thus hamper climate change mitigation efforts.
-
 Amidst the rebound debate,
 energy efficiency measures are expected to deliver
 energy-related 
@@ -301,17 +249,6 @@ because there is a lot at stake.
 Large rebound, if it exists, will mean that
 efficiency-based efforts to reduce carbon emissions will be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
-
-% Second, increased energy rebound may also lead to 
-% higher-than-supposed material and resource requirements, 
-% due to the latter's strong connection to energy rebound 
-% %as the interactions between energy rebound and increasing material and resource are significant
-% ~\citep{VandenBergh2009, FontVivanco2018}, 
-% %Given the
-% and the existing
-% global coupling of material consumption
-% to economic growth ~\citep{Haberl2020, Wiedmann2020}.
-% %it may not possible to separate energy rebound from rising material consumption and resource extraction.
 
 \citet{Sorrell:2007um} led
 an important systematic review of energy rebound estimates,
@@ -357,47 +294,6 @@ the average estimate of total rebound magnitude from non-CGE methods
 was found to be over 60\%,
 leading the review authors to conclude that total rebound magnitudes 
 are ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
-
-% %++++++++++++++++++++++++++++++
-% \subsection{Rebound typologies}
-% \label{sec:rebound_typologies}
-% %++++++++++++++++++++++++++++++
-% 
-% A challenge to understanding energy rebound is that it comprises
-% many mechanisms and effects, which in turn 
-% has led to many different rebound typologies.
-% Commonly, rebound typologies distinguish between
-% microeconomic effects (at the single device or person level)
-% and 
-% macroeconomic effects (broader, economy-wide responses).
-% (See \citet{greening2000, Barker2009, FontVivanco2018}.) 
-% \citet{Jenkins2011} split microeconomic rebound effects into
-% direct (income and substitution effects) and 
-% indirect (respending and embodied effects), 
-% while \citet{Sorrell:2009cg} 
-% sets out five macroeconomic rebound effects:
-% embodied energy effects, respending effects, output effects, energy market effects, and composition effects.
-% \citet{Santarius2016} and \citet{Lange2021} 
-% introduce 
-% meso (i.e., sectoral) level rebound
-% between the micro and macro levels.
-% \citet{VandenBergh2011} distinguishes 14 types of rebound, 
-% providing, perhaps, the greatest complexity. 
-% Table~\ref{tab:typology} 
-% attempts to summarize and reconcile some of the existing typologies
-% and sets out the typology for this paper. 
-% \citet[p.~6]{madlener2016}, 
-% reviewing 35 years of rebound research, noted that 
-% ``the reader is sometimes overwhelmed (at best) and often confused (at worst) 
-% by the many different versions'' of rebound typologies.
-% 
-% \begin{table}
-% \caption{Rebound typology based on \citet{greening2000}, \citet{Jenkins2011}, and \citet{Thomas:2013ab}.
-% **** Is this caption correct? We cite different authors in the column headings. ---MKH ****}
-% \centering
-% \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-% \label{tab:typology}
-% \end{table}
 
 
 %++++++++++++++++++++++++++++++
