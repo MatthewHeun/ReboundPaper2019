@@ -3909,14 +3909,12 @@ This research did not receive any specific grant from funding agencies
 in the public, commercial, or not-for-profit sectors.
 
 The authors are grateful for comments from internal reviewers
-Fred Haan, Becky Haney, and Jeremy Van Antwerp (from Calvin University); 
-Nathan Chan (University of Massachusetts and Amherst); and 
-Zeke Marshall (from the University of Leeds).
-They contributed substantially to the quality of the framework and the manuscript. 
-
-The authors benefitted from discussions with Daniele Girardi and Christopher Blackburn.
-
-The authors thank the students of MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
+Fred Haan, Becky Haney, and Jeremy Van Antwerp (Calvin University); 
+Nathan Chan (University of Massachusetts at Amherst); and 
+Zeke Marshall (University of Leeds).
+The authors benefitted from discussions with Daniele Girardi and Christopher Blackburn 
+(University of Massachusetts at Amherst).
+Finally, the authors thank the students of author MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 
