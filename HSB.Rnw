@@ -598,8 +598,8 @@ microeconomic effects (at the single device or person level)
 and 
 macroeconomic effects (broader, economy-wide responses).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
-With \citet{Jenkins2011} and others, 
-we split microeconomic rebound effects into
+We also follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
+by splitting microeconomic rebound effects into
 direct (income and substitution effects) and 
 indirect (embodied energy, maintenance and disposal, and respending effects).
 
@@ -3574,7 +3574,7 @@ lead to a mix of income
 general equilibrium rebound effects (letting prices adjust). 
 Yet classifications continue to distinguish 
 indirect and macroeconomic rebound effects \citep{Colmenares2020,Brockway2021}. 
-The macroeconomc factor ($k$) in our framework
+The macroeconomic factor ($k$) in our framework
 allows to build intuition for how large macroeconomic rebounds are
 relative to microeconomic ones, 
 depending on what total rebound is considered likely. 
