@@ -463,7 +463,7 @@ and thus miss some rebound channels~\citep{Figus2016}.
 Further general equilibrium studies of rebound followed, including
 \citet{Wei2010},
 \citet{Lemoine:2020aa}, and
-\citet{Fullerton:2019aa}.
+\citet{Fullerton2020}.
 
 Despite the growth of rebound contributions in several types of frameworks,
 particularly in the last decade,
