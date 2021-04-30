@@ -238,11 +238,11 @@ claimed that rebound was likely small.
 
 The so-called \emph{Khazzoom-Brookes Postulate}, 
 named by \citet{Saunders:1992aa},
-was defined by \citet[p.~214]{Herring1999} as
+was defined by \citeauthor{Herring1999} as
 ``increased energy-efficiency at the micro-economic level,
 while leading to a reduction of energy use at this level, 
 leads not to a reduction, but instead to an increase in energy use, 
-at the national, or macroeconomic level.''
+at the national, or macroeconomic level''~\citep[p.~214]{Herring1999}.
 Debate over the size of energy rebound continues today.
 Advocates of small rebound (less than, say, 50\%),
 suggest ``the rebound effect is overplayed''~\citep[p.~475]{Gillingham:2013aa},
@@ -525,7 +525,7 @@ to take appropriate climate change mitigation actions.
 
 There is a strategic \emph{need} for a mathematically-rigorous rebound framework
 to firm up theoretical foundations, enable empirical analysis, and 
-guide policy. 
+guide energy policy-making. 
 In particular the framework should be one that 
 %
 \begin{enumerate*}[label={(\roman*)}]
