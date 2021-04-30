@@ -308,7 +308,9 @@ are often estimated via energy service price elasticities (e.g.,~\citet{Schipper
 Recent microeconomic advances include those by 
 \citet{Thomas:2013aa}, who set out a detailed framework of direct and indirect microeconomic effects;
 \citet{Borenstein:2015aa}, who provided a detailed decomposition
-of rebound into income and substitution effects; and
+of rebound into income and substitution effects;
+\citet{Chan2015}, who analyzed welfare
+implications of the rebound effect; and
 \citet{Sun:2018aa}, who considered direct rebound including device effects.
 However, lifecycle and end-of-life considerations are not typically included 
 in microeconomic rebound frameworks, and 
@@ -368,9 +370,11 @@ First, key limitations remain in \emph{microeconomic} rebound frameworks, includ
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item the lack of application of a general utility function, 
-        such as the CES utility function of \citet{blackburn2020energy}
-        to describe consumer preferences and 
+	\item inseparability of substitution and income effects when
+	bringing theoretical framework to data examples
+  %\item the lack of application of a general utility function, 
+  %      such as the CES utility function of \citet{blackburn2020energy}
+  %      to describe consumer preferences and 
   
   \item the lack of an operationalizable link between micro and macro effects.
     
@@ -378,8 +382,11 @@ First, key limitations remain in \emph{microeconomic} rebound frameworks, includ
 
 Second, there is a paucity of both theoretical and empirical work on the idea of a
 \emph{macroeconomic} multiplier.
-There is a lack of specification of exactly \emph{how} macroeconomic rebound effects 
-couple to microeconomic factors
+In particular, it is unclear both by what exact channel
+a macroeconomic multiplier effect couples with microeconomic
+effects, and what is its size
+%There is a lack of specification of exactly \emph{how} macroeconomic rebound effects 
+%couple to microeconomic factors
 
 Third, frameworks which estimate \emph{total} rebound 
 are typically contingent upon the type of production function assumed
@@ -394,11 +401,14 @@ often work with aggregate energy and economic variables,
 rarely discriminating between microeconomic and macroeconomic rebound components.
 
 In summary, most work on energy rebound is empirical and microeconomic.
-In our opinion, that work lacks rigorous theoretical foundations,
+In our opinion, while the microeconomic theory is available,
+it is scattered  across papers, and has not been
+developed in a way that simultaneously
+allows estimating empirically all microeconomic rebounds,
 inhibiting understanding of rebound mechanisms
 along direct and indirect channels
 at the device level and throughout the economy.
-Lacking strong theoretical foundations,
+Lacking integrated theoretical foundations,
 macro energy modeling and energy efficiency policy are at risk
 of being ineffective to achieve efficiency-based CO$_2$ emissions reductions.
 Adding to that risk,
