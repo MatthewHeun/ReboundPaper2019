@@ -3686,26 +3686,21 @@ The framework
         a plausible value for the macro factor ($k = 3$)
         to provide a better link between macro and micro effects, and 
 
-  \item enables analysis of real EEUs.
+  \item enables empirical estimation of rebound magnitudes for real energy efficiency upgrades.
 
 \end{enumerate*}
 
 From the development and application of the rebound framework, 
-we can draw several important conclusions.
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item The car and lamp examples (Section~\ref{sec:examples} show that
+we can draw four important conclusions.
+First, the car and lamp examples (Section~\ref{sec:examples} show that
         a mathematically-rigorous rebound framework enables
         quantification of the magnitudes of all rebound mechanisms, including 
         direct and indirect channels 
         for emplacement, substitution, and income effects.
-
-  \item The examples also show that magnitudes of rebound effects
-        vary with the type of energy efficiency upgrade (EEU) performed.
-  
-  \item The sensitivity studies
-        (Figs.~\ref{fig:all_Re_terms_eta_graph}--\ref{fig:all_Re_terms_k_graph})
+Second, the examples also show that magnitudes of rebound effects
+        vary with the type of energy efficiency upgrade performed.
+Third, the sensitivity studies
+        (Section~\ref{sec:sensitivity_analyses})
         show that rebound estimates  
         are more sensitive to
         the price of energy ($p_E$),
@@ -3714,26 +3709,34 @@ we can draw several important conclusions.
         the macro factor ($k$) than
         efficiency ($\amacro{\eta}$) or
         capital cost ($\amacro{C}_{cap}$).
-        
-  \item The discussion (Section~\ref{sec:discussion}) shows that
-        rebound mitigation policies must be tailored to each rebound mechanism.
-        Thus, quantification of rebound magnitudes is an important 
-        precursor to devising energy efficiency policies
+Last, the discussion (Section~\ref{sec:discussion}) shows that
+        rebound mitigation policies should be
+        tailored to each rebound mechanism and its magnitude.
+        Thus, quantification of rebound magnitudes by mechanism 
+        is an important precursor to devising energy efficiency policies
         that limit rebound effects, thereby 
         enabling energy efficiency to be a 
         more effective climate change mitigation strategy.
 
-\end{enumerate*}
-
-Future work could include 
+Future work could be pursued in several areas. 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item exploring other utility models for the substitution effect and
+  \item Other utility models could be explored for the substitution effect.
   
-  \item deeper exploration of macro rebound, including better estimates 
+  \item Further empirical studies could be performed
+        to show estimate the magnitude of different 
+        rebound mechanisms in a range of real-life case studies.
+
+  \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$).
+
+  \item The rebound framework could be extended to producer-sided energy rebound mechanisms.
     
+  \item The rebound framework presented here could be embeded 
+        in energy-economy models to better include rebound effects 
+        in macro energy modeling and energy policy discussions.
+
 \end{enumerate*}
 
 
@@ -3742,7 +3745,7 @@ Future work could include
 \label{sec:competing_interests}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Declarations of interest: none
+Declarations of interest: none.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
