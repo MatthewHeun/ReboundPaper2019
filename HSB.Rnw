@@ -244,12 +244,12 @@ while leading to a reduction of energy use at this level,
 leads not to a reduction, but instead to an increase in energy use, 
 at the national, or macroeconomic level.''
 Debate over the size of energy rebound continues today.
-Advocates of small rebound (less than, say, 50~\%),
+Advocates of small rebound (less than, say, 50\%),
 suggest ``the rebound effect is overplayed''~\citep[p.~475]{Gillingham:2013aa},
 while others, 
 including \citet{Saunders2015} and \citet{Stern2020},
 claim the evidence for large rebound
-(greater than 50~\%)
+(greater than 50\%)
 is growing.
 (Rebound above 100\% is known as ``backfire.'')
 
@@ -264,7 +264,7 @@ is growing.
 % amidst continued economic growth.
 % Taking just one example,
 % by 2050
-% energy efficiency contributes 37~\% of 
+% energy efficiency contributes 37\% of 
 % energy-related global carbon emissions reductions in
 % the International Energy Agency's Sustainable Development scenario relative to
 % its Stated Policies scenario (which itself includes planned energy efficiency)
@@ -287,7 +287,7 @@ CO$_2$ emissions reductions in support of
 Paris Agreement targets~\citep{masson-delmotte2018},
 even while the world economy grows.
 For example, by 2050
-energy efficiency contributes 37~\% of 
+energy efficiency contributes 37\% of 
 energy-related global carbon emissions reductions in
 the International Energy Agency's Sustainable Development scenario relative to
 its Stated Policies scenario (which itself includes planned energy efficiency)
@@ -317,19 +317,19 @@ and achieving Paris emissions reduction targets will be at risk.
 an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
 He found that most studies focused on direct (microeconomic) rebound at the household level,
-with studies typically estimating small rebound magnitudes (10--30~\%).
+with studies typically estimating small rebound magnitudes (10--30\%).
 In contrast, \citeauthor{Sorrell:2007um} 
 noted that weaker evidence for macroeconomic rebound indicates larger magnitudes, 
 stating ``there are few published studies and these have a number 
 of flaws. \ldots{} 
 While little confidence can be placed in the available estimates, 
-several studies suggest that economy-wide [i.e., macroeconomic] rebound effects may frequently exceed 50~\%.''
+several studies suggest that economy-wide [i.e., macroeconomic] rebound effects may frequently exceed 50\%.''
 Since the~\citet{Sorrell:2007um} review,
 empirical estimates of (typically) household-level energy rebound
 at the microeconomic scale (direct and indirect)
 continue to suggest relatively small
 microeconomic rebound magnitudes
-of less than 40~\%. 
+of less than 40\%. 
 (See \citet{Greene2012}, \citet{Thomas:2013ab}, \citet{Antal:2014aa}, 
 \citet{Chitnis2014}, and \citet{Stapleton:2016}.)
 Commonly, microeconomic rebound estimates are based on own-sector (direct)
@@ -346,7 +346,7 @@ the sum of microeconomic and macroeconomic rebound.
 A recent review of 33 studies by \citet{Brockway2021} 
 found a large group of 21 Computational General Equilibrium (CGE) studies, 
 such as \citet{Lecca2014}, \citet{Broberg2015}, and \citet{Wei2017},
-with a mean total rebound estimate of around 60~\%. 
+with a mean total rebound estimate of around 60\%. 
 A smaller group of studies used three other methods:
 non-CGE macroeconomic models
 (e.g., \citet{Barker2009} and \citet{Lemoine:2020aa}),
@@ -354,7 +354,7 @@ econometric analysis (e.g., \citet{Wei2019} and \citet{Bruns2019}), and
 productivity or growth accounting studies (e.g., \citet{Lin2015}).
 Like the CGE studies, 
 the average estimate of total rebound magnitude from non-CGE methods 
-was found to be over 60~\%,
+was found to be over 60\%,
 leading the review authors to conclude that total rebound magnitudes 
 are ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
 
@@ -1725,7 +1725,6 @@ of income effect rebound.
 The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature.
-**** Revisit this statement after we finalize our topology.---MKH ****
 Like other factor-augmenting technical change, 
 energy-augmenting technical change can also have
 macroeconomic repercussions. It reduces production 
@@ -3775,7 +3774,8 @@ respectively.
 \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this paper we have developed a mathematically-rigorous rebound framework
+In this paper,
+we have developed a mathematically-rigorous rebound framework
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
@@ -3846,7 +3846,7 @@ Future work could include
 \label{sec:competing_interests}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Declarations of interest: none
+The authors have no competing interests to declare.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3908,19 +3908,15 @@ If no funding has been provided for the research, please include the following s
 This research did not receive any specific grant from funding agencies 
 in the public, commercial, or not-for-profit sectors.
 
-**** Also list internal reviewers. ****
-
-Tiago Domingoes, Jeremy Van Antwerp, Zeke Marshall
-
-Internal reviewers
-Adam Marquardt (Calvin University), 
-Paul Steenwyk (Calvin University), and 
-****
-contributed substantially to the quality of the framework and the manuscript. 
+The authors are grateful for comments from internal reviewers
+Fred Haan, Becky Haney, and Jeremy Van Antwerp (from Calvin University); 
+Nathan Chan (University of Massachusetts and Amherst); and 
+Zeke Marshall (from the University of Leeds).
+They contributed substantially to the quality of the framework and the manuscript. 
 
 The authors benefitted from discussions with Daniele Girardi and Christopher Blackburn.
 
-The authors thank the students of M.K.H.'s Fall 2019 Thermal Systems Design course (ENGR333) 
+The authors thank the students of MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 
