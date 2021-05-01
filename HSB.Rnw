@@ -212,10 +212,9 @@ of the debate before this sentence.
 How can the debate ``intensify'' if the debate has not yet been introduced
 to the readers? ---MKH ****. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
-suggested that energy rebound could be large, 
-while others, 
-including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
-claimed that rebound was likely small.
+suggested energy rebound could be large.
+Others, including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
+claimed rebound was likely to be small.
 
 The so-called \emph{Khazzoom-Brookes Postulate}, 
 named by \citet{Saunders:1992aa},
@@ -242,7 +241,7 @@ Paris Agreement targets~\citep{masson-delmotte2018},
 even while the world economy grows.
 For example, by 2050
 energy efficiency is expected to contribute 37\% of 
-energy-related global carbon emissions reductions
+energy-related carbon emissions reductions globally
 in the International Energy Agency's Sustainable Development scenario
 (relative to its Stated Policies scenario, 
 which itself includes planned energy efficiency)
@@ -267,7 +266,8 @@ noted that weaker evidence for macroeconomic rebound indicates larger magnitudes
 stating ``there are few published studies and these have a number 
 of flaws. \ldots{} 
 While little confidence can be placed in the available estimates, 
-several studies suggest that economy-wide [i.e., macroeconomic] rebound effects may frequently exceed 50\%.''
+several studies suggest that economy-wide [macroeconomic] rebound effects 
+may frequently exceed 50\%.''
 Since the~\citet{Sorrell:2007um} review,
 empirical estimates of (typically) household-level energy rebound
 at the microeconomic scale (direct and indirect)
@@ -392,12 +392,11 @@ First, key limitations remain in \emph{microeconomic} rebound frameworks, includ
 
 Second, there is a paucity of both theoretical and empirical work on the idea of a
 \emph{macroeconomic} multiplier.
-In particular, both 
+Two things are unclear:
 the channel by which a macroeconomic multiplier effect 
 would couple to microeconomic effects 
 and 
-the magnitude of a macroeconomic multiplier 
-are unclear.
+the appropriate magnitude of a macroeconomic multiplier.
 
 Third, frameworks which estimate \emph{total} rebound 
 are highly dependent upon the type of production function assumed
