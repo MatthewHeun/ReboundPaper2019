@@ -283,8 +283,8 @@ as set out by \citet{Gillingham2016}.
 \citet{dahlqvist2021rebound} provides an example of this price elasticity 
 approach applied to energy-intensive industry sectors.
 
-Meantime, estimates of macroeconomic rebound remain very rare
-(e.g.,~\citet{Barker2009}). 
+Meantime, estimates of macroeconomic rebound remain very rare.
+(See \citet{Barker2009} for an exception that proves the rule.) 
 However, a growing number of studies estimate the magnitude of total rebound, 
 the sum of microeconomic and macroeconomic rebound.
 A recent review of 33 studies by \citet{Brockway2021} 
@@ -371,7 +371,7 @@ general equilibrium frameworks for total rebound,
 overcoming limitations of partial equilibrium frameworks where
 markets by definition cannot fully close 
 and thus miss some rebound channels~\citep{Figus2016}.
-Further general equilibrium studies of rebound followed, including
+Further general equilibrium studies of total rebound followed, including
 \citet{Wei2010},
 \citet{Lemoine:2020aa}, and
 \citet{Fullerton2020}.
@@ -411,8 +411,8 @@ often work with aggregate energy and economic variables,
 rarely discriminating between microeconomic and macroeconomic rebound components.
 
 In summary, most work on energy rebound is empirical and microeconomic.
-In our opinion, while the microeconomic theory is available,
-it is scattered  across papers and
+In our opinion, although the microeconomic theory is available,
+it is scattered across papers and
 has not been developed in a way that 
 allows simultaneous empirical estimation of all microeconomic rebounds,
 inhibiting understanding of rebound mechanisms
