@@ -342,17 +342,17 @@ These macro effects are hypothesized to operate
 via a numerical multiplier~\citep{Borenstein:2015aa, Lange2019}.
 Discussions of a macro multiplier effect
 have been purely conceptual, 
-with the size of the macro factor being a central issue.
+with the magnitude of the macro factor being a central issue.
 \citet{Howarth1997} and \citet{Schipper2000}
-claim that the macroeconomic rebound multiplier effect is small. 
+claim the macroeconomic rebound multiplier effect is small. 
 \citet{Aucott2014}, \citet{Enflo2009}, and \citet{Bataille2017}
 are among those who claim the macroeconomic multiplier is much larger. 
-\citeauthor{Dimitropoulos2007} suggested that
+\citeauthor{Dimitropoulos2007} suggested
 ``[o]ne of the main reasons behind the debate is the lack of a rigorous theoretical framework
 that can describe the mechanisms and consequences of 
 the rebound effect at the macro-economic level''~\citep[p.~6354]{Dimitropoulos2007}.
 In a recent review on energy productivity, 
-\citeauthor{Elkomy2020} found that
+\citeauthor{Elkomy2020} found
 ``[w]hile many researchers suggest that energy and productivity are linked, 
 there is relatively little consensus in the empirical literatures 
 either confirming or rejecting these views. 
@@ -379,7 +379,7 @@ Further general equilibrium studies of total rebound followed, including
 Despite the growth of rebound contributions in several types of frameworks,
 particularly in the last decade,
 several key issues remain. 
-First, key limitations remain in \emph{microeconomic} rebound frameworks, including
+First, limitations of \emph{microeconomic} rebound frameworks include
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -390,19 +390,19 @@ First, key limitations remain in \emph{microeconomic} rebound frameworks, includ
     
 \end{enumerate*}
 
-Second, there is a paucity of both theoretical and empirical work on the idea of a
+Second, there is a paucity of both theoretical and empirical work on the
 \emph{macroeconomic} multiplier.
-Two things are unclear:
+At least two things are unclear:
 the channel by which a macroeconomic multiplier effect 
 would couple to microeconomic effects 
 and 
 the appropriate magnitude of a macroeconomic multiplier.
 
-Third, frameworks which estimate \emph{total} rebound 
-are highly dependent upon the type of production function assumed
-(Cobb-Douglas, CES, etc.) and
-choice of substitution elasticity.
-As \citeauthor{Saunders2008} noted,
+Third, results from frameworks which estimate \emph{total} rebound 
+are highly dependent upon two assumptions: 
+the type of production function used (Cobb-Douglas, CES, etc.) and
+the chosen value of the elasticity of substitution.
+As \citeauthor{Saunders2008} noted, the
 ``choice of production/cost function can pre-determine the results related to rebound \ldots{}
 [and choosing] values for these [elasticity of substitution] parameters
 is tantamount to assuming rebound results''~\citet[p.~2207-2208]{Saunders2008}.
@@ -411,14 +411,15 @@ often work with aggregate energy and economic variables,
 rarely discriminating between microeconomic and macroeconomic rebound components.
 
 In summary, most work on energy rebound is empirical and microeconomic.
-In our opinion, although the microeconomic theory is available,
-it is scattered across papers and
-has not been developed in a way that 
-allows simultaneous empirical estimation of all microeconomic rebounds,
-inhibiting understanding of rebound mechanisms
+And although the microeconomic theory is available,
+it is scattered across papers, and
+it has not been developed in a way that 
+allows simultaneous empirical estimation of all microeconomic rebounds.
+This state of affairs
+inhibits understanding of rebound mechanisms
 along direct and indirect channels
 at the device level and throughout the economy.
-Lacking integrated theoretical foundations,
+In the absence of integrated theoretical foundations,
 macro energy modeling and energy efficiency policy are at risk
 of being ineffective to achieve efficiency-based CO$_2$ emissions reductions.
 Adding to that risk,
