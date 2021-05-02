@@ -3713,9 +3713,9 @@ The framework
 
 From the development and application of the rebound framework, 
 we can draw four important conclusions.
-First, the car and lamp examples (Section~\ref{sec:examples} show that
+First, the car and lamp examples (Section~\ref{sec:examples}) show that
         a mathematically-rigorous rebound framework enables
-        quantification of the magnitudes of all rebound mechanisms, including 
+        quantification of magnitudes of all rebound mechanisms, including 
         direct and indirect channels 
         for emplacement, substitution, and income effects.
 Second, the examples also show that magnitudes of rebound effects
@@ -3727,7 +3727,7 @@ Third, the sensitivity studies
         the price of energy ($p_E$),
         the uncompensated own-price elasticity 
         of energy service consumption ($\eqspsUC$), and
-        the macro factor ($k$) than
+        the macro factor ($k$) than either
         efficiency ($\amacro{\eta}$) or
         capital cost ($\amacro{C}_{cap}$).
 Last, the discussion (Section~\ref{sec:discussion}) shows that
