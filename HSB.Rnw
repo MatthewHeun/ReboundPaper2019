@@ -110,10 +110,12 @@ larger than typically assumed,
 meaning that efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
 Most work on energy rebound is empirical and microeconomic.
-Unfortunately, that work lacks rigorous theoretical foundations, 
-inhibiting understanding of rebound mechanisms.
-Lacking a strong theoretical foundation for microeconomic rebound, 
-macro energy modeling and energy efficiency policy are at risk
+Although microeconomic theory is available,
+it is scattered across papers and
+lacks rigorous theoretical foundations, a situation that
+inhibits understanding of rebound mechanisms.
+Furthermore, there is a paucity of both theoretical and empirical work on macro rebound.
+Thus, macro energy modeling and energy efficiency policy are at risk
 of being ineffective at efficiency-based emissions reductions.
 In response, 
 we build upon microeconomic fundamentals
