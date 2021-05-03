@@ -3652,8 +3652,10 @@ We take the expected value for $Re_{tot}$ from
 average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
 The calibrated values of $k$ that give identical $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
 for both examples are
-$k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$ for the car example and
-$k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ for the lamp example.
+$k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$
+for the car example and
+$k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ 
+for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
 total rebound from a different EEU.
@@ -3703,7 +3705,7 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we have developed a mathematically-rigorous rebound framework
+we have developed a mathematically-rigorous, consumer-sided rebound analysis framework
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
@@ -3712,7 +3714,7 @@ The framework
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item builds upon microeconomic foundations and 
-        carefully distinguishes among microeconomic components,
+        carefully distinguishes among microeconomic rebound effects,
   
   \item identifies and incorporates, for the first time,
         a plausible value for the macro factor ($k = 3$)
@@ -3757,7 +3759,7 @@ Future work could be pursued in several areas.
   \item Other utility models could be explored for the substitution effect.
   
   \item Further empirical studies could be performed
-        to show estimate the magnitude of different 
+        to estimate the magnitude of different 
         rebound mechanisms in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
@@ -3845,7 +3847,7 @@ Nathan Chan (University of Massachusetts at Amherst); and
 Zeke Marshall (University of Leeds).
 The authors benefitted from discussions with Daniele Girardi and Christopher Blackburn 
 (University of Massachusetts at Amherst).
-Finally, the authors thank the students of author MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
+Finally, the authors thank the students in author MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 
