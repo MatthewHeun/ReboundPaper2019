@@ -1298,8 +1298,8 @@ This section develops mathematical expressions
 for substitution effect rebound ($Re_{sub}$).
 (The next section addresses income effect rebound, $Re_{inc}$.)
 The substitution effect alters compensated demand, 
-the expenditure minimizing consumption bundle for
-a given level of payoff (or utility). 
+the expenditure minimizing consumption bundle that
+maintains utility at the pre-EEU upgrade, given the new prices. 
 It involves
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -1320,24 +1320,24 @@ The substitution effect is shown by segments
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
 
 The substitution effect is best described 
-with reference to a preferences path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
+with reference to a consumption path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point, and 
 the line of constant expenditure, the budget constraint, is \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
 (\iicirc{}) at point $\circ$, the optimal consumption
 bundle prior to device upgrade.
-After emplacement of the more-efficient device
+After emplacement of the more efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
 pivoting the budget constraint outward, to \starstar{}.
 By definition, the substitution effect indicates the optimal
-consumption bundle at the $\wedge$ point,
-after a compensation variation has tightened the budget constraint to \hathat{} 
+consumption bundle at the $\wedge$ point, after a compensating variation  
+translates into a lower budget constraint \hathat{} 
 in Fig.~\ref{fig:ExamplePrefsPathGraph}.
-The $\wedge$ point shows consumption with new prices and utility
+The $\wedge$ point shows consumption with new prices yielding utility
 at the level prior to the EEU,
-taking advantage of the lower energy service price, 
+by taking advantage of the lower energy service price, 
 hence favoring energy service consumption (because it is now less expensive)
 at the expense of other goods consumption (which are now relatively more expensive).
 
@@ -1348,14 +1348,15 @@ direct (the increase in energy service consumption, segment \chat{})
 components.
 The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
-and~\ref{fig:ExampleCostPathGraph}, respectively.
+and~\ref{fig:ExampleCostPathGraph}, respectively. In particular, the 
+latter indicates the expenditure after the compensating (CV).
 
 An approximate method
 is often used in the literature
 (e.g., see \citet{Borenstein:2015aa}
 **** Does Borenstein actually use this approach? 
 I couldn't find it ---MKH
-****)
+**** +++ See footnote 43, no? ---GS +++)
 for determining 
 the post-substitution effect point
 and therefore $Re_{dsub}$ and $Re_{isub}$.
@@ -1363,15 +1364,16 @@ The approximate method assumes that
 the compensated energy service price elasticity of energy service consumption ($\eqspsC$) and
 the compensated energy service price elasticity of other goods consumption ($\eqopsC$)
 are constant along an indifference curve.
-These assumptions are approximations 
-that are unsuitable for non-marginal price changes 
-($\aempl{p}_s <\!\!< \orig{p}_s$). 
+Whether that is true depends on the utility function used.
+In general, constant price elasticities are approximations 
+that are only applicable to marginal price changes. 
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
 the energy service price elasticity of energy service consumption ($\eqspsC$) and
 the energy service price elasticity of other goods consumption ($\eqopsC$)
-to vary along an indifference curve. 
+to vary along an indifference curve, allowing analysis of
+non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
 We use a fully specified 
 constant elasticity of substitution (CES) utility model,
 which allows the exact, direct calculation
@@ -1464,14 +1466,15 @@ of the derivations of Eqs.~(\ref{eq:Re_dsub_prelim}),
 \label{sec:inc_effect_main_paper}
 %------------------------------
 
-The income rate of the device owner is $\rbempl{M}$, 
-which remains unchanged across the rebound effects, 
+The monetary income rate of the device owner, $\rbempl{M}$, 
+remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
-Freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
+Thanks to the energy service price, real income rises, 
+and freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-In combination, the emplacement effect and 
-the substitution effect leave the device owner with
+Emplacement effect expenditure and compensating variation
+modify freed cash to leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for freed cash from the 
@@ -1486,19 +1489,21 @@ Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
 
 In this framework,
 the income effect must satisfy several constraints.
-The first constraint is that net savings ($\rasub{N}$) should be completely re-spent.
-I.e, the income effect should satisfy the budget constraint
-such that net savings is zero after
+First, net savings must be zero after
 the income effect ($\rainc{N} = 0$).
+The monetary budget constraint $\rbempl{M}$ holds, so that only 
+net savings ($\rasub{N}$) can be re-spent. Due to standard non-satiation
+assumptions on preference (and in particular for the CES utility function),
+net savings should be completely re-spent.
 This constraint can be seen in 
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
 where the post-income-effect point ($-$) returns to the original expenditure line.
 See Appendix~\ref{sec:proof_income_elasticities}
 for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
-satisfy the first constraint.
+satisfy the first constraints.
 
-The second constraint is that net savings should be re-spent on only 
+Second, net savings should be re-spent on only 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -1510,24 +1515,17 @@ The second constraint is that net savings should be re-spent on only
 %
 This constraint is satisfied by construction below.
 
-The third constraint is that 
-additional spending on the energy service 
-and other goods 
-should be allocated in the same proportion as 
-post-substitution-effect expenditures on the energy service and other goods.
-Thus,
-although spending on both the energy service and other goods increases across the income effect,
-the proportion of spending on the energy service and other goods
-should not change across the income effect.
+A third constraint follows from the homothetic
+preferences in a CES utility function but need not hold in general.
+Additional spending on the energy service  and other goods 
+is allocated in the same proportion as post-substitution-effect 
+expenditures on the energy service and other goods.
 This constraint is also satisfied by construction below, 
-particularly via an effective income ($\Mdothatprime$). 
-Proof that this constraint is satisfied can be seen in 
-preference path graphs
+particularly via an effective income ($\Mdothatprime$) (+++ Matt: I'm having trouble following your effective income. Isn't it just $\rbempl{M}-\rasub{N}$ and is it helpful to introduce a new term? ---GS+++). 
+This constraint can be seen in the preference path graph
 where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
-lie along ray \rr{}.
-(Ray \rr{} is formed by drawing a line from the origin 
-through the post-substitution-effect point ($\wedge$) and beyond.
-See Fig.~\ref{fig:ExamplePrefsPathGraph}.)
+lie along ray \rr{}, from the origin in ee Fig.~\ref{fig:ExamplePrefsPathGraph}.
+However, our framework also accommodates non-homothetic preferences. (+++ Matt: do you agree? ---GS+++)
 
 We next show expressions for 
 direct and indirect income effect rebound.
@@ -1651,69 +1649,58 @@ of income effect rebound.
 
 The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
-are microeconomic in nature.
-Like other factor-augmenting technical change, 
-energy-augmenting technical change can also have
-macroeconomic repercussions. It reduces production 
-costs and thereby enables more efficient
-production (process innovation) that typically results in growth.
-Additionally, as \citet{VanBenthem2015} notes, cheaper 
+are microeconomic in nature. However, it follows immediately
+from the assumption on the income effect that the economy grows.
+As the price level in the economy has fallen, consumption of goods
+grows. This expansion is captured by Hulten's \citeyear{Hulten1978}
+theorem, which states that the
+economy grows at the rate of the efficiency increase in some part of the
+economy, scaled by that part's expenditure share in the economy. \citet{blackburn2020energy}
+show that this also holds for factor-augmenting technical change and
+use it to calculate a scale effect rebound. 
+
+However, this is a static effect, that does not interrogate the possible
+follow-up technological change induced by the EEU.\footnote{In the first year, the
+technological improvement could even have contractionary effects \citep{Basu2006}.}
+As \citet{VanBenthem2015} notes, cheaper 
 energy services could facilitate the development and 
 deployment of new products (product innovation),
-an important driver of rising aggregate demand \citep{Szostack1995}. 
-The upshot is that while energy efficiency is higher, the more 
-efficient economy is growing more than one without the improvement,
-taking back part of the expected energy savings, producing
-macro rebound effects. Often this kind of rebound effect 
-is subdivided into components that distinguish 
-scale, structural change, employment and investment effects, 
+an important driver of rising aggregate demand \citep{Szostack1995}. To
+capture all the channels by which this dynamic effect operates, 
+reviews have distinguished scale, 
+structural change, employment and investment effects, 
 as well as further price effects \citep{Colmenares2020,Brockway2021}.
-Here we group all of these effects under the label macro rebound effect. 
+Our rebound framework operates as average annual effect over 
+device lifetime; therefore dynamic effects that take time to unfold matter.
 
-The macro effect is just one instance of the phenomenon
-that reducing the need for an input at the micro level can lead 
-to important and surprising counter-tendencies in the aggregate
-demand for that input.
-Consider labor productivity: it has risen 20-fold
-in Western Europe and the U.S.\ since 1820 \citep{Maddison:2001aa}, 
-and yet today these countries employ many more workers,
-as the affluent populations demand more goods and services, and productivity
-gains have led to innumerable new products.
-The same holds for energy.
-While energy efficiency at the device-level has climbed 
-over the past centuries, energy consumption at the macro level 
-has also risen \citep{Fouquet2014}.
-It is important to recognize the generality of this result.
-+++ here possible about th 69 inputs, and the long run growth
-in iron demand -- GS+++
-Typically the focus is on the effects on output of factor-augmenting
-technical change. But once expected savings of that factor are of interest, 
-all factor-augmenting technical change that accelerates economic 
-growth can be analyzed in terms of its contribution to rebound 
-relative to counterfactual scenario of lower growth.
+
+Recently, \citet[p.~11]{Borenstein:2015aa} has addressed these effects from the demand side,
+by noting that ``income effect rebound will be larger economy-wide than 
+would be inferred from evaluating only the direct income gain from 
+the end user's transaction" and likening it to the Keynesian macroeconomic multiplier.
+While the mechanism at work is not an autonomous expansion of expenditure in
+an otherwise unchanged economy but a productivity improvement, 
+Borenstein is right to highlight that supply side 
+and demand side effects will ultimately both play a role in the macroeconomic rebound.
+His approach furthermore has the advantage in that it can be directly
+linked to our income effect and its consequences for rebound. 
 
 To operationalize this macro effect, that ultimately leads to 
 higher incomes and spending on goods and energy services, we scale
 the net savings~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, it is reasonable to assume that
 net savings ($\rasub{N}$) is spent in the economy at the average 
-energy intensity of the economy ($I_E$).
-
+energy intensity of the economy ($I_E$). 
 Scaling from net savings ($\rasub{N}$) at the device level
-to productivity-driven growth at the macro level is an unexplored area.
+to productivity-driven growth at the macro level is an unexplored area,
+as \citet{Borenstein:2015aa} notes.
 In the absence of better information,
 we express this scaling simply by a macro factor ($k$)
 with $k \ge 0$ expected.
 $k = 0$ means there is no macroeconomic productivity boost
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
-with consequent implications for additional energy consumption at the macro level.
-**** MKH to check this GS sentence: 
-In particular, if $k = 1$ and net income was 0.5 per cent of GDP, 
-instead of respending only 0.1 per cent of GDP, respending 
-to the tune of 0.2 per cent of GDP would occur, and thus GDP 
-would grow by 0.1 per cent. This should not be confused with 
-a ``multiplier'' from Keynesian economics, on which more in the discussion.
+with consequent implications for additional energy consumption in the economy.
 
 As shown in Table~\ref{tab:macroeffect}, 
 macro rebound is given by
@@ -3330,8 +3317,10 @@ the elasticity of substitution negative ($\sigma < 0$).
 In reality, smaller negative (closer to 0) uncompensated own price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
 thereby avoiding the uneconomic condition.
-However, multi-variate dynamics are not captured by univariate sensitivity studies.
-**** Gregor: is the above correct? ---MKH ****
+However, a univariate sensitivity study cannot capture this effect, and so is
+bsed used for smaller variations in those parameters that affect others.
+%However, multi-variate dynamics are not captured by univariate sensitivity studies.
+%**** Gregor: is the above correct? ---MKH ****
 
 <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis scale.)", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, -0.1, by = 0.01)),
