@@ -55,7 +55,9 @@
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{Toward a mathematically-rigorous analytical framework
-       for microeconomic energy rebound effects}
+       for microeconomic energy rebound effects \\
+       OR \\
+       Toward a mathematically-rigorous, consumer-sided rebound analysis framework}
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -100,43 +102,46 @@ Leeds, LS2 9JT, UK}
 % then cite the author(s) and year(s).
 % Also, non-standard or uncommon abbreviations should be avoided, but
 % if essential they must be defined at their first mention in the abstract itself.
-(226 words at present) \\
+(242 words at present) \\
 Implementation of widespread energy efficiency measures
-is a key global strategy to meet Paris greenhouse gas emissions targets. 
+is an important global strategy to meet Paris greenhouse gas emissions targets. 
 However, energy rebound can ``take back'' efficiency-based
 energy reductions via behavior changes and economic effects.
 Evidence is growing that rebound effects are 
 larger than typically assumed, 
 meaning that efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
-Most work on energy rebound is empirical and microeconomic.
+% The problem
+To date, most work on energy rebound is empirical and microeconomic.
 Although microeconomic theory is available,
 it is scattered across papers and
-lacks rigorous theoretical foundations, a situation that
-inhibits understanding of rebound mechanisms.
+lacks rigorous theoretical foundations.
 Furthermore, there is a paucity of both theoretical and empirical work on macro rebound.
-Thus, macro energy modeling and energy efficiency policy are at risk
+Consequently, understanding of rebound mechanisms is inhibited, and 
+macro energy modeling and energy efficiency policy are at risk
 of being ineffective at efficiency-based emissions reductions.
+% Our response
 In response, 
-we build upon microeconomic fundamentals
-to develop a mathematically-rigorous analytical framework 
-for microeconomic energy rebound effects, 
-covering direct and indirect channels 
-for emplacement, substitution, and income effects. 
-The analytical framework uses a utility model 
-to obtain a sequence of graphs that show rebound paths
-through energy, expenditure, and preference spaces.
-The microeconomic framework is linked to 
-macroeconomic rebound through a macroeconomic factor.
-Further, the framework is exercised on two case studies: 
+we develop a mathematically-rigorous, consumer-sided rebound analysis framework
+for energy rebound effects.
+We build upon microeconomic fundamentals and
+employ a constant elasticity of substitution utility model to 
+describe direct and indirect channels 
+for emplacement, substitution, and income rebound effects. 
+We utilize a macroeconomic factor to link
+macro to micro rebound effects.
+A sequence of graphs shows rebound paths through energy, expenditure, and preference spaces.
+The framework is applied to two case studies: 
 energy efficiency upgrades of a car and an electric lamp.
-We find find microeconomic rebounds of 24\% and 29\% 
+% Results
+We find microeconomic rebounds of 24\% and 29\% 
 and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
 **** 
 These numbers are not automatically recalculated.
 Double-check before submission. 
 ****
-Policy options to mitigate rebound effects are discussed.
+Sensitivity studies are performed, and 
+policy options to mitigate rebound effects are discussed.
 \end{abstract}
 
 
@@ -218,13 +223,6 @@ suggested energy rebound could be large.
 Others, including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
 claimed rebound was likely to be small.
 
-The so-called \emph{Khazzoom-Brookes Postulate}, 
-named by \citet{Saunders:1992aa},
-was defined by \citeauthor{Herring1999} as
-``increased energy-efficiency at the micro-economic level,
-while leading to a reduction of energy use at this level, 
-leads not to a reduction, but instead to an increase in energy use, 
-at the national, or macroeconomic level''~\citep[p.~214]{Herring1999}.
 Debate over the size of energy rebound continues today.
 Advocates of small rebound (less than, say, 50\%),
 suggest ``the rebound effect is overplayed''~\citep[p.~475]{Gillingham:2013aa},
@@ -285,7 +283,8 @@ as set out by \citet{Gillingham2016}.
 \citet{dahlqvist2021rebound} provides an example of this price elasticity 
 approach applied to energy-intensive industry sectors.
 
-Meantime, estimates of macroeconomic rebound remain very rare.
+While estimates of microeconomic rebound are common, 
+estimates of macroeconomic rebound remain very rare.
 (See \citet{Barker2009} for an exception that proves the rule.) 
 However, a growing number of studies estimate the magnitude of total rebound, 
 the sum of microeconomic and macroeconomic rebound.
@@ -318,8 +317,9 @@ we survey existing rebound frameworks.
 
 Theoretical rebound frameworks have been advanced for the 
 consideration of microeconomic, macroeconomic, and total energy rebound.
-At the \emph{microeconomic} scale, direct and indirect rebound
-are often estimated via energy service price elasticities (e.g.,~\citet{Schipper2000}).
+At the \emph{microeconomic} level,
+direct and indirect rebound are often estimated 
+via energy service price elasticities (e.g.,~\citet{Schipper2000}).
 Recent microeconomic advances include those by 
 \citet{Thomas:2013aa}, who set out a detailed framework of direct and indirect microeconomic effects;
 \citet{Borenstein:2015aa}, who provided a detailed decomposition
@@ -333,7 +333,14 @@ models of consumer preferences lack robustness.
 (\citet{Babacan:2020aa} provides a rare example 
 of analysis of life-cycle analysis effects of the energy efficient device.)
 
-To date, frameworks for estimating the magnitude of \emph{macroeconomic} rebound effects
+The importance of interactions between microeconomic and \emph{macroeconomic}
+rebound effects is suggested by the so-called \emph{Khazzoom-Brookes Postulate} \citep{Saunders:1992aa}, 
+defined by \citeauthor{Herring1999} as
+``increased energy-efficiency at the micro-economic level,
+while leading to a reduction of energy use at this level, 
+leads not to a reduction, but instead to an increase in energy use, 
+at the national, or macroeconomic level''~\citep[p.~214]{Herring1999}.
+To date, frameworks for estimating the magnitude of macroeconomic rebound effects
 have included an amplification mechanism from micro to macro, 
 the result of energy productivity gains
 from the energy efficiency upgrade (EEU) \citep{Dimitropoulos2007, Sorrell:2010ul}.
@@ -378,7 +385,7 @@ Further general equilibrium studies of total rebound followed, including
 \citet{Lemoine:2020aa}, and
 \citet{Fullerton2020}.
 
-Despite the growth of rebound contributions in several types of frameworks,
+Despite the growth of rebound contributions in micro, macro, and total frameworks,
 particularly in the last decade,
 several key issues remain. 
 First, limitations of \emph{microeconomic} rebound frameworks include
@@ -413,10 +420,12 @@ often work with aggregate energy and economic variables,
 rarely discriminating between microeconomic and macroeconomic rebound components.
 
 In summary, most work on energy rebound is empirical and microeconomic.
-And although the microeconomic theory is available,
+And although microeconomic theory is available,
 it is scattered across papers, and
 it has not been developed in a way that 
 allows simultaneous empirical estimation of all microeconomic rebounds.
+Furthermore, macroeconomic rebound and links to micro rebound
+are virtually unexplored territory.
 This state of affairs
 inhibits understanding of rebound mechanisms
 along direct and indirect channels
@@ -460,19 +469,19 @@ In particular the framework should be one that
 \end{enumerate*}
 %
 The \emph{aim} of this paper is therefore to build upon the foundations laid by 
-\citet{Borenstein:2015aa}) and others to develop such rebound framework.
+\citet{Borenstein:2015aa}) and others to develop a
+mathematically-rigorous, consumer-sided rebound analysis framework.
 The key \emph{contributions} of this paper are 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item describing a consistent and mathematically-rigorous rebound framework
+  \item describing a consistent and mathematically-rigorous, consumer-sided rebound analysis framework
         in which direct and indirect dimensions of 
-        substitution and income effects
-        are connected,
+        substitution and income effects are connected,
         
   \item showing that embodied energy, maintenance and disposal activities, 
         replacements, and macroeconomic effects can be accommodated 
-        in a consistent and rigorous rebound framework, 
+        in a consistent rebound framework, 
         
   \item providing a new way to visualize rebound effects, 
         namely via energy, expenditure, and preference path graphs,
@@ -489,19 +498,19 @@ The key \emph{contributions} of this paper are
 \end{enumerate*}
 
 The remainder of this paper is \emph{structured} as follows.
-Section~\ref{sec:framework} describes the comprehensive analytical framework.
-Section~\ref{sec:examples} provides two calculation examples, 
-a hybrid car and an LED lamp.
+Section~\ref{sec:framework} describes the mathematically-rigorous, consumer-sided rebound analysis framework.
+Section~\ref{sec:examples} provides two calculation examples, a hybrid car and an LED lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods: development of the comprehensive analytical framework}
+\section{Methods: development of the rebound framework}
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we develop a mathematically-rigorous rebound analysis framework.
+In this section, we develop a mathematically-rigorous, consumer-sided rebound analysis framework, 
+hereafter called ``the framework.''
 We begin with our rebound typology. 
 
 
@@ -513,16 +522,15 @@ We begin with our rebound typology.
 A challenge to understanding energy rebound is that it comprises
 many mechanisms and effects.
 We follow convention to distinguish between
-microeconomic effects (at the single device or person level)
+microeconomic effects (at the single device or device owner level)
 and 
 macroeconomic effects (broader, economy-wide responses).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
-We also follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
-by splitting microeconomic rebound effects into
-direct (income and substitution effects) and 
-indirect (embodied energy, maintenance and disposal, and respending effects).
+We follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
+in splitting microeconomic effects into direct and indirect effects.
 
-Like other authors, we recognize many macroeconomic effects.
+Like other authors, we recognize many macroeconomic effects, 
+even if we don't later distinguish among them.
 \citet{Sorrell:2009cg} 
 sets out five macroeconomic rebound effects:
 embodied energy effects, respending effects, output effects, energy market effects, and composition effects.
