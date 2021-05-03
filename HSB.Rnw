@@ -1948,7 +1948,9 @@ as shown below in Table~\ref{tab:car_stages_table}.
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
-   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs \\
+   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs.  \\
+                                                    &           &          & Ford Fusion Energi car includes a \$4,000 tax rebate correct at the time of writing, \\
+                                                    &           &          & which makes the purchase cost cheaper than the incumbent Ford Fusion car. \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
                                                     &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
@@ -1959,12 +1961,13 @@ as shown below in Table~\ref{tab:car_stages_table}.
    Lifespan                     & \Sexpr{t_life_orig_car_char}  & \Sexpr{t_life_star_car_char} & Lifetime taken as 14 years, based on 13--17 years for U.S.\ cars \\
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Berla:2016} and 14 years for UK cars from \\
                                                     &           &          & \citet{SMMT:2020}. \\
-   \midrule
+ \midrule
    Embodied energy             & \Sexpr{E_emb_orig_car_char}    & \Sexpr{E_emb_star_car_char}   & 34,000 MJ for gasoline car taken from \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & \citet{Argonne_National_Laboratory:2010}. \\
                                                     &           &          & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
                                                     &           &          & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
-                                                    &           &          & manufacture (PEB refs to follow). Battery lifetime assumed same as car lifetime, based on \\
+                                                    &           &          & manufacture (PEB refs to follow). \\
+                                                    &           &          & Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
   Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
