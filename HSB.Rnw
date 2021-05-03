@@ -3797,7 +3797,7 @@ Validation,
 Visualization,
 Writing--original draft,
 Writing--review \& editing.
-\textbf{Gregor Semienuik}: 
+\textbf{Gregor Semieniuk}: 
 Conceptualization, 
 Formal analysis, 
 Writing--original draft,
