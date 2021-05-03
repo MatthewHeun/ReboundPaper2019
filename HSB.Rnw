@@ -1814,7 +1814,9 @@ $Re_{isub}$ (Eq.~(\ref{eq:Re_isub_prelim} and~\ref{eq:C_o_solution})),
 $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
-The total rebound sum ($Re_{tot}$)
+The total rebound 
+%sum 
+($Re_{tot}$)
 is given by the sum of the above components,
 which can also be checked against Eq.~(\ref{eq:Re_tot}).
 
@@ -1827,7 +1829,7 @@ in the Discussion (Section~\ref{sec:discussion}).
  
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 1: Automobile}
+\subsection{Case 1: Purchase of new car}
 \label{sec:car_example}
 %++++++++++++++++++++++++++++++
 
@@ -1889,13 +1891,20 @@ Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::reboun
 
 For the first example, 
 we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
-versus the incumbent (Ford Fusion SE). 
+to replace an incumbent car (Ford Fusion SE). 
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
-in the gas-electric hybrid Energi car.  
-The automobile case study has a very large
+in the gasoline-electric hybrid Energi car.  
+The automobile case study features 
+%has 
+a 
+%very 
+large
 initial capital investment
-and the long-term benefit of decreased direct energy costs. 
+versus
+%and 
+the long-term benefit of decreased direct energy costs 
+for the same energy service (mileage/year). 
 
 
 %------------------------------
@@ -1955,7 +1964,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & \citet{Argonne_National_Laboratory:2010}. \\
                                                     &           &          & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
                                                     &           &          & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
-                                                    &           &          & manufacture. Battery lifetime assumed same as car lifetime, based on \\
+                                                    &           &          & manufacture (PEB refs to follow). Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
   Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
@@ -2357,7 +2366,7 @@ Rebound due to the maintenance and disposal effect
 because of the slightly lower maintenance and disposal costs
 for the hybrid EV car.
 
-The \subeffect{} effect has two components:
+The \subeffect{} has two components:
 direct and indirect substitution effect rebound.
 Rebound from direct substitution ($Re_{dsub}$) is 
 positive, as expected (\Sexpr{Re_dsub_car_char_perc}\%). 
@@ -2390,7 +2399,9 @@ rebound at the micro level.
 Total micro rebound (emplacement, substitution, and income effects)
 sums to $Re_{micro} = \Sexpr{Re_micro_car_char_perc}$\%.
 
-Finally, at the macro level, the \macroeffect{} leads to macro rebound
+Finally, 
+%at the macro level, 
+the \macroeffect{} leads to macro rebound
 ($Re_{\macro}$) of \Sexpr{Re_macro_car_char_perc}\%
 with $k$ assumed to be 1,
 due to economic expansion caused by 
@@ -2459,13 +2470,15 @@ Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebo
 
 For our second example, 
 we consider purchasing a light emitting diode (LED) electric lamp, 
-versus a baseline incandescent electric lamp. 
+to replace a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
 in terms of energy service delivery (measured in lumens), 
 the key difference being the energy required to provide that energy service. 
-The electric lamp case study has a very low 
-initial capital investment (negative, actually!)
-and a long-term benefit of decreased direct energy costs.
+The electric lamp case study has a low 
+initial capital investment 
+(negative versus the existing incandescent lamp, actually!)
+and a long-term benefit of decreased direct energy cost 
+for the same energy service (lumens/year).
 
 
 %------------------------------
@@ -2962,13 +2975,13 @@ sums to $Re_{micro} = \Sexpr{Re_micro_lamp_char_perc}$\%.
 
 Finally, rebound due to the macroeconomic 
 \macroeffect{} 
-($Re_{\macro}$) is \Sexpr{Re_macro_lamp_char_perc}\%
+($Re_{\macro}$) is coincidentally also \Sexpr{Re_macro_lamp_char_perc}\%
 with $k$ assumed to be 1,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-(It is a coincidence that $Re_{\macro}$ has the same value as $Re_{iinc}$
-to 1 decimal place for the lighting example.)
+%(It is a coincidence that $Re_{\macro}$ has the same value as $Re_{iinc}$to 1 decimal place for the lighting example.)
+%+++I commented out the last sentence and inserted 'coincidentally also' in line above, as its shorter and it doesnt need a line by itself.+++PEB 
 
 
 %++++++++++++++++++++++++++++++
@@ -2984,28 +2997,33 @@ can show important trends, tendencies, and relationships
 between rebound parameters and rebound magnitudes.
 Key rebound parameters include 
 post-EEU efficiency ($\amacro{\eta}$),
+capital cost ($\amacro{C}_{cap}$),
 energy price ($p_E$),
-uncompensated own price elasticity of energy service consumption ($\eqspsUC$), 
-the macro factor ($k$), and 
-capital cost ($\amacro{C}_{cap}$).
+uncompensated own-price elasticity of energy service consumption ($\eqspsUC$), 
+and the macro factor ($k$).
 Sensitivity analyses must be undertaken carefully,
 because rebound parameters are not expected to be 
 independent.
 
 In each subsection below, a series of graphs
-shows the effects of key rebound parameters
-($\amacro{\eta}$, $p_E$, $\eqspsUC$, $\amacro{C}_{cap}$, and $k$)
+shows the effects of varying each of these five key rebound parameters
+($\amacro{\eta}$, 
+$\amacro{C}_{cap}$, 
+$p_E$, 
+$\eqspsUC$, 
+and $k$)
 on energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
 In the graphs, 
 nominal values for the rebound parameters are shown as points, 
 and sensitivity trends are shown as lines. 
-A limitation of each sensitivity analysis is noted.
+A limitation of each sensitivity analysis 
+is noted at the end of each subsection.
 
 
 %------------------------------
-\subsubsection{Effect of efficiency ($\amacro{\eta}$)} 
+\subsubsection{Effect of post-EEU efficiency ($\amacro{\eta}$)} 
 \label{sec:effect_of_efficiency}
 %------------------------------
 
@@ -3252,12 +3270,14 @@ German energy prices%
   For the lamp example,
   the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~\citep{bundesministerium}.
   Converting currency (at 1 \euro{} = 1.21 USD) and
-  physical units gives 6.18~\$/gallon and 0.363~\$/kW-hr.}
+  physical units gives 6.18~\$/USgallon and 0.363~\$/kW-hr.}
 %
 are shown as vertical lines,
 providing an indication of possible energy price variations.
 All other things being equal, 
-if U.S.\ residents paid Germany's electricity prices,
+if U.S.\ residents paid Germany's energy
+%electricity 
+prices,
 energy rebound would be 
 $\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}$\%
 for the car example and 
@@ -3274,14 +3294,14 @@ maintenance and disposal expenditure rate ($\ramacro{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rate ($\rbempl{q}_s$).
 
-<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).", fig.width=6, fig.height=4>>=
+<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).German energy prices denoted by vertical line.", fig.width=6, fig.height=4>>=
  p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
                          Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
  price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
- #                               "Car", "GBR", 6.48,     # $/gal
+ #                               "Car", "GBR", 6.48,     # $/USgal
  #                               "Lamp", "GBR", 0.28,    # $/W-hr
-                               "Car", "DEU", 6.18,     # $/gal
+                               "Car", "DEU", 6.18,     # $/USgal
                                "Lamp", "DEU", 0.363)   # $/W-hr
 rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_params, 
                     x_var = "p_E_engr_units", 
