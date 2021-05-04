@@ -1352,10 +1352,7 @@ and~\ref{fig:ExampleCostPathGraph}, respectively.
 
 An approximate method
 is often used in the literature
-(e.g., see \citet{Borenstein:2015aa}
-**** Does Borenstein actually use this approach? 
-I couldn't find it ---MKH
-****)
+(e.g., see \citet[p.~17, footnote~43]{Borenstein:2015aa})
 for determining 
 the post-substitution effect point
 and therefore $Re_{dsub}$ and $Re_{isub}$.
