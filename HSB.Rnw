@@ -3042,11 +3042,13 @@ Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 both takeback and expected energy savings ($\Sdot$)
 increase with post-EEU efficiency ($\amacro{\eta}$), 
 but the relationship is asymptotic.
-There are diminishing returns to increasing efficiency,
-leading to saturation at very high efficiencies.
-
-Saturation occurs because each additional increment of efficiency gain
-leads to marginally less energy savings. 
+Each unit increase of fuel economy or lighting efficacy is less effective than
+the previous unit increase of fuel economy or lighting efficacy
+for saving energy.
+At very high levels of fuel economy economy or lighting efficacy, 
+a unit increase leads to almost no additional energy savings.
+Thus, we can say there are diminishing returns of fuel economy and lighting efficacy,
+leading to saturation of energy savings at very high levels of fuel economy and lighting efficacy.
 A simple example illustrates.
 A $\bempl{\eta} = 25$ mpg car drives $\bempl{q}_s = 100$ miles 
 using $\bempl{E}_s = 4$ gallons of gasoline.
