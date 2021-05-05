@@ -3646,7 +3646,7 @@ calculate rebound. Another possibility that growth is less than
 \$3 but that the macroeconomic ``energy price effect" (a decline in 
 energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. From a demand-side perspective
-entertained by \ref{Borenstein:2015aa}, this could be interpreted as
+entertained by \citet{Borenstein:2015aa}, this could be interpreted as
 a marginal propensity to consume of 2/3 of the recipients of the money
 spent via the income effect by the device owner. 
 
