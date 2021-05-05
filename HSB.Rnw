@@ -133,7 +133,7 @@ describe direct and indirect channels
 for emplacement, substitution, and income rebound effects. 
 We utilize a macroeconomic factor to link
 macro to micro rebound effects.
-A sequence of graphs shows rebound paths through energy, expenditure, and preference spaces.
+A sequence of graphs shows rebound paths through energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
 energy efficiency upgrades of a car and an electric lamp.
 % Results
@@ -487,7 +487,7 @@ The key \emph{contributions} of this paper are
         in a consistent rebound framework, 
         
   \item providing a new way to visualize rebound effects, 
-        namely via energy, expenditure, and preference path graphs,
+        namely via energy, expenditure, and consumption path graphs,
   
   \item applying a general CES utility function 
         via empirically-plausible cost shares of other goods consumption,
@@ -777,8 +777,8 @@ These important rebound quantities can be illustrated via
 rebound path graphs.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph} show
-notional rebound path graphs of energy consumption, expenditures, and preferences
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
+notional rebound path graphs through energy, expenditure, and consumption spaces
 for purposes of illustration.
 The notional path graphs are not quantified; there is no scale on the axes.
 Later (Section~\ref{sec:examples}), 
@@ -800,7 +800,7 @@ the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
 Lines with negative slope through points $\circ$ and $a$
 indicate expenditure isoquants (direct and indirect).
 
-A notional preferences path graph is shown in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+A notional consumption path graph is shown in Fig.~\ref{fig:ExampleConsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown on the abscissa, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
 Isoquants of indexed other goods and energy service consumption 
@@ -986,7 +986,7 @@ rebound_results %>%
 @
 
 
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional preferences path.", fig.width=6, fig.height=4>>=
+<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional consumption path.", fig.width=6, fig.height=4>>=
 orig_line_label_size <- orig_size - 3
 star_line_label_size <- star_size - 4
 hat_line_label_size <- hat_size - 3
@@ -1060,7 +1060,7 @@ rebound_results %>%
 @
 
 In the subsections that follow, the notional graphs
-(Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph})
+(Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph})
 serve to illustrate the development of the rebound framework.
 We begin with the emplacement effect.
 
@@ -1320,10 +1320,10 @@ direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 The substitution effect is shown by segments
 \starc{} (indirect component) and \chat{} (direct component) 
-in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 
 The substitution effect is best described 
-with reference to a consumption path graph (Fig.~\ref{fig:ExamplePrefsPathGraph}).
+with reference to a consumption path graph (Fig.~\ref{fig:ExampleConsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point, and 
 the line of constant expenditure, the budget constraint, is \circcirc{}.
@@ -1337,7 +1337,7 @@ pivoting the budget constraint outward, to \starstar{}.
 By definition, the substitution effect indicates the optimal
 consumption bundle at the $\wedge$ point, after a compensating variation  
 translates into a lower budget constraint \hathat{} 
-in Fig.~\ref{fig:ExamplePrefsPathGraph}.
+in Fig.~\ref{fig:ExampleConsPathGraph}.
 The $\wedge$ point shows consumption with new prices yielding utility
 at the level prior to the EEU,
 by taking advantage of the lower energy service price, 
@@ -1485,7 +1485,7 @@ Rebound from the income effect quantifies the rate of additional energy demand
 that arises when the energy conversion device owner spends net
 savings from the EEU
 (segments \hatd{} and \dbar{} in 
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}).
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}).
 
 In this framework,
 the income effect must satisfy several constraints.
@@ -1521,10 +1521,10 @@ Additional spending on the energy service  and other goods
 is allocated in the same proportion as post-substitution-effect 
 expenditures on the energy service and other goods.
 This constraint is also satisfied by construction below, 
-particularly via an effective income ($\Mdothatprime$) (+++ Matt: I'm having trouble following your effective income. Isn't it just $\rbempl{M}-\rasub{N}$ and is it helpful to introduce a new term? ---GS+++). 
-This constraint can be seen in the preference path graph
+particularly via an effective income ($\Mdothatprime$)
+This constraint can be seen in the consumption path graph
 where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
-lie along ray \rr{}, from the origin in ee Fig.~\ref{fig:ExamplePrefsPathGraph}.
+lie along ray \rr{}, from the origin in ee Fig.~\ref{fig:ExampleConsPathGraph}.
 However, our framework also accommodates non-homothetic preferences. (+++ Matt: do you agree? ---GS+++)
 
 We next show expressions for 
@@ -1552,7 +1552,7 @@ The ratio of rates of energy service consumed across the income effect is given 
 Homotheticity means that $\eqsM = 1$.
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
-in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 
 Effective income ($\Mdothatprime$) is given by 
 
@@ -1613,7 +1613,7 @@ The ratio of rates of other goods consumed across the income effect is given by
 \end{equation}
 %
 and is represented by segments \dbar{} 
-in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExamplePrefsPathGraph}.
+in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 Under the assumption that prices of other goods are exogenous
 (see Appendix~\ref{sec:other_goods_expenditures}), 
 the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
@@ -1685,14 +1685,14 @@ and demand side effects will ultimately both play a role in the macroeconomic re
 His approach furthermore has the advantage in that it can be directly
 linked to our income effect and its consequences for rebound. 
 
-To operationalize this macro effect, that ultimately leads to 
+To operationalize the macro rebound effect, that ultimately leads to 
 higher incomes and spending on goods and energy services, we scale
-the net savings~($\rasub{N}$) gained by device owners at the micro level.
+the post-substitution-effect net savings~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, it is reasonable to assume that
 net savings ($\rasub{N}$) is spent in the economy at the average 
 energy intensity of the economy ($I_E$). 
 Scaling from net savings ($\rasub{N}$) at the device level
-to productivity-driven growth at the macro level is an unexplored area,
+to productivity-driven growth at the macro level is unexplored territory,
 as \citet{Borenstein:2015aa} notes.
 In the absence of better information,
 we express this scaling simply by a macro factor ($k$)
@@ -1701,6 +1701,9 @@ $k = 0$ means there is no macroeconomic productivity boost
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption in the economy.
+We choose $k = 1$ as a placeholder value.
+See the Discussion (Section~\ref{sec:discussion}) for more details
+on the value of $k$..
 
 As shown in Table~\ref{tab:macroeffect}, 
 macro rebound is given by
@@ -2091,7 +2094,7 @@ rebound_results %>%
 \label{sec:Car_results}
 %------------------------------
 
-Results are represented graphically in energy, cost, preference path graphs
+Results are represented graphically in energy, cost, consumption path graphs
 in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
 The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect
@@ -2250,7 +2253,7 @@ rebound_results %>%
 @
 
 
-<<CarPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, car example.", fig.width=6, fig.height=4>>=
+<<CarPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, car example.", fig.width=6, fig.height=4>>=
 car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                     1.005, 1.0016, 'degree', 
                                       stage_colour, orig_size, 
@@ -2811,7 +2814,7 @@ rebound_results %>%
 @
 
 
-<<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Preferences path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                      1.05, 1.00002, 'degree', 
                                        stage_colour, orig_size,
@@ -2877,7 +2880,7 @@ rebound_results %>%
 \label{sec:lamp_results}
 %------------------------------
 
-Results are represented graphically in energy, cost, and preference path graphs
+Results are represented graphically in energy, cost, and consumption path graphs
 in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
 The energy path graph (Fig.~\ref{fig:LampEnergyGraph})
 shows the size of each rebound effect
@@ -3483,7 +3486,7 @@ for hybrid car purchases in the US to date.%
 At the same time, in the energy plane,
 the higher embodied energy of the hybrid car
 already leads to a slightly positive emplacement rebound
-(Fig.~\ref{fig:ExamplePrefsPathGraph}).
+(Fig.~\ref{fig:ExampleConsPathGraph}).
 LED lamps also increase freed cash and also reduce embodied energy demand
 at the emplacement stage
 as their longer lifetime more than makes up for their higher installation costs.
@@ -3574,7 +3577,7 @@ Matt ---GS+++.
 %  \item Graphs clarify understanding of disparate discussions of rebound effects. 
 %        Engineers start with energy path graph.
 %        Accountants and business leaders start with cost path graph.
-%        Economists start with preferences path graph. 
+%        Economists start with consumption path graph. 
 %        But they all hang together.
         
 %  \item Clarification of k factor
@@ -3844,7 +3847,7 @@ Zeke Marshall (University of Leeds).
 The authors benefitted from discussions with 
 Daniele Girardi (University of Massachusetts at Amherst) and 
 Christopher Blackburn (Bureau of Economic Analysis).
-Finally, the authors thank the students of author MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
+Finally, the authors thank the students of MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 

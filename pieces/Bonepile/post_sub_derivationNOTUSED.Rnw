@@ -302,7 +302,7 @@ the elasticity of substitution ($\sigma$) between
 the consumption rate of the energy service ($\rate{q}_s$)
 and the expenditure rate for other goods ($\rate{C}_o$).
 
-Figure~\ref{fig:ExamplePrefsPathGraph} 
+Figure~\ref{fig:ExampleConsPathGraph} 
 (especially segments \starc{} and \chat{})
 illustrates features
 of the exact method for determining the new consumption bundle.

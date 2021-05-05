@@ -209,7 +209,7 @@ prior to the EEU.
 For example, line \circcirc{} is tangent to preference curve 
 \iicirc{}
 at point $\circ$
-in Figs.~\ref{fig:ExamplePrefsPathGraph}, 
+in Figs.~\ref{fig:ExampleConsPathGraph}, 
 \ref{fig:CarPrefsGraph}, and 
 \ref{fig:LampPrefsGraph}.
 
@@ -230,7 +230,7 @@ a form convenient for drawing
 constant utility rate ($\rate{u}/\rbempl{u}$) indifference curves in 
 $\rate{C}_o/\rbempl{C}_o$ vs.\ 
 $\rate{q}_s/\rbempl{q}_s$ space.
-(See Figs.~\ref{fig:ExamplePrefsPathGraph}, 
+(See Figs.~\ref{fig:ExampleConsPathGraph}, 
 \ref{fig:CarPrefsGraph}, and 
 \ref{fig:LampPrefsGraph}.)
 In $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space, 
