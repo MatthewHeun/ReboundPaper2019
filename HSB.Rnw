@@ -986,7 +986,7 @@ rebound_results %>%
 @
 
 
-<<ExamplePrefsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional consumption path.", fig.width=6, fig.height=4>>=
+<<ExampleConsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional consumption path.", fig.width=6, fig.height=4>>=
 orig_line_label_size <- orig_size - 3
 star_line_label_size <- star_size - 4
 hat_line_label_size <- hat_size - 3
@@ -2095,7 +2095,7 @@ rebound_results %>%
 %------------------------------
 
 Results are represented graphically in energy, cost, consumption path graphs
-in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarPrefsGraph}.
+in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarConsGraph}.
 The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect
 for the car example.
@@ -2253,7 +2253,7 @@ rebound_results %>%
 @
 
 
-<<CarPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, car example.", fig.width=6, fig.height=4>>=
+<<CarConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, car example.", fig.width=6, fig.height=4>>=
 car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                     1.005, 1.0016, 'degree', 
                                       stage_colour, orig_size, 
@@ -2814,7 +2814,7 @@ rebound_results %>%
 @
 
 
-<<LampPrefsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, lamp example.", fig.width=6, fig.height=4>>=
 lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                      1.05, 1.00002, 'degree', 
                                        stage_colour, orig_size,
@@ -2881,7 +2881,7 @@ rebound_results %>%
 %------------------------------
 
 Results are represented graphically in energy, cost, and consumption path graphs
-in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampPrefsGraph}.
+in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampConsGraph}.
 The energy path graph (Fig.~\ref{fig:LampEnergyGraph})
 shows the size of each rebound effect
 for the lamp example.
@@ -2942,11 +2942,11 @@ compared to the incandescent lamp
 leading to increased consumption of lighting
 (from $\rbsub{q}_s = \Sexpr{q_dot_s_star_lamp_char}$~lm-hr/year
 to $\rasub{q}_s = \Sexpr{q_dot_s_hat_lamp_char}$~lm-hr/year)
-as shown by segment \chat{} in Fig.~\ref{fig:LampPrefsGraph}.
+as shown by segment \chat{} in Fig.~\ref{fig:LampConsGraph}.
 To maintain constant utility, 
 consumption of other goods is reduced
 ($\Delta \rasub{C}_o = \Sexpr{Delta_C_dot_o_hat_lamp_char}$~\$/year), 
-as shown by segment \starc{} in Fig.~\ref{fig:LampPrefsGraph},
+as shown by segment \starc{} in Fig.~\ref{fig:LampConsGraph},
 yielding indirect substitution effect rebound
 ($Re_{isub}$) of $\Sexpr{Re_isub_lamp_char_perc}$\%.
 
