@@ -57,7 +57,10 @@
 \title{Toward a mathematically-rigorous analytical framework
        for microeconomic energy rebound effects \\
        OR \\
-       Toward a mathematically-rigorous, consumer-sided rebound analysis framework}
+       Toward a mathematically-rigorous, consumer-sided rebound analysis framework\\
+       OR \\
+       Towards a comprehensive analytical framework
+       for microeconomic energy rebound effects}
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3384,82 +3387,80 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The framework presented here is the first to our knowledge
-to integrate all components of the microeconomic rebound or
-alternatively the sum of direct and indirect rebound 
-for consumers in an analytically consistent 
-yet numerically precise, operationalizable manner. 
-The sets of three graphs that simultaneously 
-trace energy demand, expenditure, and consumption 
-decision for every rebound component summarize 
-this integration. 
-While the possibility of decomposing direct and indirect rebound effects 
-into substitution and income effects was 
-adumbrated by \citet{Khazzoom1980}, 
+The comprehensiveness of the analytical framework combined with
+its numerical precision illustrated in two examples are novel. To illustrate, 
+one novel dimension concerns the integration of precise 
+income and substitution effect, including
+for non-marginal efficiency improvements. The possibility 
+of decomposing direct and indirect rebound effects into 
+substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
 clearly spelt out by \citet{greening2000}, and
-considerably developed by \citet{Borenstein:2015aa}, 
-applications that analyze direct and indirect rebound
-typically only draw a stylized graph 
+numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
+yet, numerically precise investigations that analyze the 
+microeconomic rebound typically only draw a stylized graph 
 of the consumption space with indifference curves 
 to highlight substitution and income effects 
 and then revert to working directly with demand functions
 from the almost ideal demand system \citep{Thomas:2013aa,Moshiri2017,Li2018}. 
-Since the present framework works directly with utility maximization and 
-exactly calculates effects in both energy and consumption space,
-it helps build intuition how behavioral income and substitution effects hang together 
-with energy rebound effects. 
-For instance, in the car example,
-the substitution component of the direct rebound
-(the \chat{} segment in Fig.~\ref{fig:CarEnergyGraph}) 
-is larger than the income component of direct rebound 
-(segment \hatd{}). 
-In other words, most of the additional, 
-energy-intensive energy service ``transport'' 
-occurs as a result of the price decline, 
-not the freed cash.
-Policy seeking to simultaneously push energy efficiency and
-limit the rebound effect might therefore
-be more effective when seeking to make driving more costly to limit 
-substitution, 
-rather than taxing away the freed cash to limit income effects, 
-an intuition that accords with the results in \citet{Hart2018}, 
-who finds high rebounds when innovating in energy intensive industry, 
-like gasoline-powered transport.
+Another novel dimension is the integration not only 
+of these direct and indirect income and substitution effects, 
+but also embodied energy and life cycle effects from emplacement. 
+These effects are the energy aspect of the important difference 
+between costless technology upgrades  or (costly) mandated efficiency 
+increases \citep{Gillingham:2013aa,Fullerton2020},which is not typically 
+included in microeconomic frameworks \citep{Azevedo2014,Gillingham:2020aa}.
+The inclusion of the macroeconomic multiplier is novel as well. 
+These aspects merit a few observations on policy and on 
+the relationship with macroeconomic rebound.
 
-This approach also rigorously incorporates
-the ``cost of making efficiency improvements'' \citep{Gillingham:2013aa},
-both in monetary terms and energy terms,
-which is not typically included in estimates \citep{Azevedo2014,Gillingham:2020aa}.
-The emplacement effect distributes costs and embodied energy demand
-evenly across the device's lifetime.%
-\footnote{
-  Introducing time preference would complicate the calculation but
-  leave the qualitative results intact.
-}
-The monetary effects are
-then introduced as a lumpsum tax/subsidy
-added to freed cash after the compensating variation, and
-thereby increases or decreases the income effect,
-as \citet{Gillingham2016a} suggests doing.
-In particular this treatment allows to accommodate straightforwardly
-the ``zero-cost breakthrough'' approach,
-where the efficiency improvement is gifted to the device owner
-as well as the ``policy-induced'' improvement \citep{Gillingham2016}.
+\subsection{Policy considerations}
+There are two dimensions in which the examples relate to policy. First,
+the sensitivity to parameter can be analyzed for each and second 
+the examples can be compared with each other. Considering sensitivity,
+note first from Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} that
+the larger the energy efficiency improvement, the smaller the rebound
+effect. This is driven mainly by a declining direct rebound effect, as
+the price elasticity declines and users approach saturation. Hence,
+more of the freed cash is plowed into (lower energy intensity) other 
+goods, which decreases the rebound. This result only obtains when operating
+with a parameterized utility function. If the approximate method were
+used the price elasticity would be constant and rebound could not decline.
+This illustrates that except in the special case of constant price
+elasticity utility functions (like Cobb-Douglas which additional implies 
+100\% direct rebound - see appendix +++XXX+++) some demand saturation is
+built into a standard microeconomic framwork without additional assumptions.
+This also shows that aiming for large, one-oof efficiency improvements - such as from
+internal combustion engine to hybrid vehicle - can help mitigate rebound
+effects.\footnote{In principle the same could be achieved by many incremental
+improvements, but that might leave more space for adaptation and changes in
+preferences leading to higher price elasticities. +++ delete this unless good
+evidence or an example can be found ---GS+++}
+
+Next, an increase in device cost (whether overnight capital cost or lifecycle) 
+has a strong negative effect on both income rebound effects, shown 
+in Fig.~\ref{fig:all_Re_terms_C_cap_graph}. Introduced as a lumpsum 
+tax/subsidy added to freed cash after 
+the compensating variation it increases or decreases the income effect
+as \citet{Gillingham2016a} suggests doing.\footnote{If non-homothetic preferences
+are modeled, the variation in the budget constraint would also affect the substitution effect.}
+The examples assume that as a device needs replacement it is only the
+difference in overnight capital and lifecycle cost difference between more
+and less efficient device that matter. The framework easily allows for
+introducing a costly ``policy-induced'' improvement \citep{Gillingham2016}
+by setting the non-EEU device costs to zero. It would drastically reduce
+the rebound effect in the car case, but not the lamp case as in the latter
+the capital and lifecycle costs are so small compared to operating cost savings. 
 Intriguingly, while the policy-induced effect
 is typically seen as reducing freed cash and hence income effects
-(e.g.. by mandating to buy more efficient and costly appliances),
-the car example above shows that a tax rebate leads to a lower annual spend
-once the existing tax rebate in the United States is considered
-(segments \ab{} and \bstar{} in Fig.~\ref{fig:CarCostGraph}),
-at least when the car purchase is made when the device
-owner needed to replace the device anyway.%
-\footnote{
-  An early purchase, say due to impending bans
-  on certain internal combustion engine cars,
-  can also be modeled by adjusting the capital costs
-  to account for the lower cost had the old car been kept.
-}
-At the same time,
+(e.g. by mandating to buy more efficient and costly appliances),
+the car example above shows that a tax rebate of \$4,000 currently
+in place in the US +++check with Matt ---GS+++ actually leads to a lower 
+annual spend after upgrade (segments \ab{} and \bstar{} in Fig.~\ref{fig:CarCostGraph}),
+as long as the car purchase is made when the device
+owner needed to replace the device anyway, a reasonable assumption
+for hybrid car purchases in the US to date.%
+
+At the same time, in the energy plane,
 the higher embodied energy of the hybrid car
 already leads to a slightly positive emplacement rebound
 (Fig.~\ref{fig:ExamplePrefsPathGraph}).
@@ -3472,69 +3473,62 @@ It can also increase rebound effects,
 but at the income stage as more freed cash is available
 from emplacement as shown in the expenditure graphs in
 Figs.~\ref{fig:CarCostGraph} and~\ref{fig:LampCostGraph}
-(segments \ab{} and \bstar{}).
-Of course, even if the efficient option is relatively cheap, 
-real-world liquidity constraints can still prevent device owners
-from making any upgrade at all \citep{Fowlie2018}.
+(segments \ab{} and \bstar{}). At the same time, higher capital
+cost often comes with higher efficiency, which we discussed above
+reduced energy rebound from saturation effects, so the trade-off is
+somewhat reduced.
+Of course, as with all capital goods purchases,
+even if the efficient option is relatively cheap over its
+lifetime, liquidity constraints can still prevent device owners
+from making any upgrade with higher overnight capital costs at all \citep{Fowlie2018}.
 
-The framework also links to the total or economy-wide rebound literature
-by relating the size of macroeconomic rebound 
-to that of the microeconomic rebound 
-in a term that corresponds to magnitudes in the microeconomic framework. 
-As noted in the introduction *** to revisit --- GS ***, 
-an increasing number of studies compute an economy-wide rebound. 
-The indirect rebound effect is not typically reported separately 
-as changes in all prices 
-lead to a mix of income 
-(holding prices of other goods constant) and
-general equilibrium rebound effects (letting prices adjust). 
-Yet classifications continue to distinguish 
-indirect and macroeconomic rebound effects \citep{Colmenares2020,Brockway2021}. 
-The macroeconomic factor ($k$) in our framework
-allows to build intuition for how large macroeconomic rebounds are
-relative to microeconomic ones, 
-depending on what total rebound is considered likely. 
-By interpreting it **** antecedent? **** as multiples of the expected freed cash 
-from a zero-rebound improvement, 
-it is a natural link to Hulten’s theorem, 
-that postulates aggregate growth to be proportional to individual or sectoral 
-efficiency improvements and their (Domar) weight in the economy 
-\citep{Hulten1978}. 
-Since it **** antecedent? **** is expressed in monetary terms, 
-it **** antecedent? **** relates well to a microeconomic ``freed cash''
-multiplier $k$.
-It **** antecedent **** also relates to `multiplier effects' discussions in 
-\citet{Borenstein:2015aa} and \citet{Gillingham2016} but
-derives these **** antecedent? **** from supply-side productivity increases
-at the root of the kind of growth involved in macroeconomic rebound, 
-not from a demand-driving increase in spending 
-without a prior productivity increase. 
-Since Hulten's theorem is only an approximation and 
-economy-wide rebound effects are large relative to
-estimates of microeconomic rebound, 
-this **** antecedent? **** also opens up questions 
-about nonlinearities recently stressed by \citet{Baqaee2019}, and
-confirmed at the sectoral level as impacting rebounds by \citet{blackburn2020energy}.
+An additional insight comes from varying the energy price.
+This problem is salient as Fig.~\ref{fig:all_Re_terms_p_E_graph} shows
+end user energy prices in Germany are about 3 times as high as in the US.
+Perhaps surprisingly, rebound increases with initial energy price.
+This is because every unit energy saved leads to more freed cash. While
+the direct substitution effect declines due to higher marginal rate of
+substitution at higher relative prices and hence lower substitution towards
+energy consumption in absolute terms, both income effects - and the macro effect -
+more than make up for this decline. Naturally higher energy prices are likely
+to induce a lower energy intensity of consumption in the first place.
 
-One limitation of the present framework is that it focuses only on consumers. 
-However, the choice to focus on them comes naturally from a desire 
-to build on the strong foundations by \citet{Borenstein:2015aa} and others 
-in the hope of elucidating how their conceptual models can be precisely unified, and
-the widespread discussion of substitution and income effects from consumer theory. 
-Moreover, thanks to the strong parallels between consumer and producer theory, 
-it is a relatively small step to converting the results to an application to producers. 
-To keep the exposition tractable, here we only show the consumer side.
+All of these insights are in addition to the usually considered
+sensitivity: the price elasticity of energy service use, which
+has a strong effect on the rebound via the direct substitution effect
+(Fig.~\ref{fig:all_Re_terms_eps_graph}). Comparing the two case studies 
+in that graph and focussing on the central estimates (disks),
+throws additional light on the context 
+dependence of relative rebound magnitudes.
+In the car example, the substitution component of the direct rebound
+(the \chat{} segment in Fig.~\ref{fig:CarEnergyGraph}) 
+is larger than the income component of direct rebound 
+(segment \hatd{}), at least at a price elasticity of -0.2 or above. 
+In other words, most of the additional, 
+energy-intensive energy service ``transport'' 
+occurs as a result of the price decline, 
+not the freed cash. The same is not true for the (lower service energy
+intensity) lamp example, at least at a price elasticity at or below -0.4.
+Policy seeking to simultaneously push energy efficiency and
+limit the rebound effect might therefore
+be more effective in the car example when seeking to make 
+driving more costly to limit substitution, 
+rather than taxing away the freed cash to limit income effects, 
+an intuition that accords with the results in \citet{Hart2018}, 
+who finds high rebounds when innovating in energy intensive industry, 
+like gasoline-powered transport.
 
-Within the consumer framework, 
-another limitation is the use of a CES production function, 
-with its homotheticity of preferences forcing non-satiation.
-Its strength is a relatively straightforward derivation of results, and
-hence tractability of results. 
+All of these insights are derived using a CES production function
+that restricts preferences to homotheticity.
+Its strength is a relatively straightforward derivation, and
+hence tractability, of results. 
 We provide a tool to users where they can make alternative assumptions 
-to generate non-homothetic preferences (satiation) 
+to generate non-homothetic preferences 
 by using an approximate version that operates with constant elasticities 
-as in Borenstein *** check this with 
-Matt --- G ***. 
+as in Borenstein +++check this with 
+Matt ---GS+++. 
+
+
 %Gregor did you want this ref in section 2 methods or
 %section 4 discussion / elsewhere?
 %\citet{Safarzynska2018},
@@ -3542,45 +3536,34 @@ Matt --- G ***.
 %Section 4 Discussion – when comparing our car rebound to others.  
 %\citet{Galvin2020}
 
-%Of course, this generality between energy on the one hand
-%and other inputs (XXXXX and labor) on the other hand
-%raises the question whether it is appropriate to speak of a rebound effect at all.
-%Isn't all technological progress just a rebound effect?
-%We put it the opposite way:
-%macroeconomic rebound effects are the consequences of technological change,
-%whether
-%in utilization of XXXXXX,
-%in utilization of labor, or
-%in utilization of energy.
+%At our meeting of 11 March, we brainstormed these topics for the Discussion:
 
-At our meeting of 11 March, we brainstormed these topics for the Discussion:
-
-Focus on consequences of comprehensive framework
+%Focus on consequences of comprehensive framework
 %
-\begin{enumerate}
+%\begin{enumerate}
 
-  \item Saturated demand (service price elasticity of energy service consumption = 0) 
-        may still lead to rebound, because of rebound effects elsewhere in the system
+  %\item Saturated demand (service price elasticity of energy service consumption = 0) 
+  %      may still lead to rebound, because of rebound effects elsewhere in the system
 
-  \item Clear picture of significance of each rebound mechanism is available 
-        from the framework. 
-        Thus, can formulate policy options to mitigate the largest rebound effects
+%  \item Clear picture of significance of each rebound mechanism is available 
+%        from the framework. 
+%        Thus, can formulate policy options to mitigate the largest rebound effects
   
-  \item Provide a list of policies that mitigate each rebound effect
+%  \item Provide a list of policies that mitigate each rebound effect
   
-  \item Graphs clarify understanding of disparate discussions of rebound effects. 
-        Engineers start with energy path graph.
-        Accountants and business leaders start with cost path graph.
-        Economists start with preferences path graph. 
-        But they all hang together.
+%  \item Graphs clarify understanding of disparate discussions of rebound effects. 
+%        Engineers start with energy path graph.
+%        Accountants and business leaders start with cost path graph.
+%        Economists start with preferences path graph. 
+%        But they all hang together.
         
-  \item Clarification of k factor
+%  \item Clarification of k factor
 
-\end{enumerate}
+% \end{enumerate}
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Macro rebound}
+\subsection{Macroeconomic rebound}
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
@@ -3613,6 +3596,10 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
   magrittr::extract2("Re_tot")
 @
 
+The framework also links to the total or economy-wide rebound literature
+by relating the size of macroeconomic rebound 
+to that of the microeconomic rebound 
+in a term that corresponds to magnitudes in the microeconomic framework. 
 We note, again, that 
 most rebound analyses focus on either microeconomic effects or total rebound.
 Few rebound studies have explored the macro space 
@@ -3628,8 +3615,7 @@ generates \$1 of additional economic activity in the broader economy
 after being re-spent by the device owner.
 However, the framework presented in Section~\ref{sec:framework} and
 the results obtained in Section~\ref{sec:examples}
-allow, for the first time, 
-estimates for a value of $k$.
+allow, for the first time, some initial discussion about a value of $k$.
 
 To calibrate the macro factor,
 we treat macro rebound ($Re_{\macro}$) as a residual.
@@ -3647,30 +3633,22 @@ $k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$
 for the lamp example.
 
 Intuition indicates that total rebound from one EEU is likely to be different from 
-total rebound from a different EEU.
-Intuition also suggests that values of $k$ should be similar across EEUs, because
-\$1 of freed cash should have the same macroeconomic stimulative effect,
-regardless of the EEU that produced it.
-****
-GS: I think you will object to the previous sentences.
-But we need a way to move from our two estimates of $k$ to 
-a single value ($k = 3$).
-Feel free to suggest alternatives. ---MKH
-****
-Following these intuitions, 
-we select, for the purposes of illustration, $k = 3$,
+total rebound from a different EEU. For the purposes of illustration
+we set $k = 3$,
 being between the values of $k$ estimated from the car and lamp examples.
 Note that $k = 3$ implies that every \$1 of freed cash
 spent by the device owner 
 generates \$3 of additional economic activity in the broader economy.
-**** 
-GS: Is there any way to validate $k = 3$? 
-$k = 3$ implies MPC = 2/3.
-But I don't think we want to lean on MPC = 2/3.
-We essentially assume MPC = 1 when we constrain the "bar" point to lie on the original expenditure 
-line in the expenditure path graphs.
-So maybe we could validate $k = 3$ in another way?
-****
+This can be thought of as the average economic growth generated by the
+device over its lifetime, or three times Hulten's prediction over.
+We multiply this freed cash by the energy intensity of the economy to 
+calculate rebound. Another possibility that growth is less than 
+\$3 but that the macroeconomic ``energy price effect" (a decline in 
+energy prices due to the fallen demand) induces consumption at a higher
+energy intensity than that of the pre-EEU economy. From a demand-side perspective
+entertained by \ref{Borenstein:2015aa}, this could be interpreted as
+a marginal propensity to consume of 2/3 of the recipients of the money
+spent via the income effect by the device owner. 
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
@@ -3698,6 +3676,15 @@ we have developed a mathematically-rigorous, consumer-sided rebound analysis fra
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
+The framework is the first to our knowledge
+to integrate all components of the microeconomic rebound or
+alternatively the sum of direct and indirect rebound 
+for consumers in an analytically consistent 
+yet numerically precise, operationalizable manner. 
+The sets of three graphs that simultaneously 
+trace energy demand, expenditure, and consumption 
+decision for every rebound component summarize 
+this integration. 
 The framework 
 %
 \begin{enumerate*}[label={(\roman*)}]
