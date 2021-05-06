@@ -1,8 +1,9 @@
 % Energy Economics Author Guide: 
 % https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
 
-\documentclass[preprint]{elsarticle}
-% \documentclass[1p]{elsarticle}
+\documentclass[review]{elsarticle}      % For the review process; lots of space between lines
+% \documentclass[preprint]{elsarticle}    % For submission
+% \documentclass[1p]{elsarticle}          % Single spacing closer to published version
 
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -1917,7 +1918,11 @@ Tables~\ref{tab:car_parameters}--\ref{tab:car_elasticity_parameters},
 and the equations of Section~\ref{sec:framework},
 we calculate important values at each rebound stage,
 as shown below in Table~\ref{tab:car_stages_table}.
-
+Note that Table~\ref{tab:car_stages_table} applies to the car owner.
+Across the macro effect (segment \bartilde{} in Fig.~\ref{fig:CarEnergyGraph}), 
+changes occur only in the macroeconomy.
+For the car owner, no changes are observed across the macro effect.
+Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identical.
 
 % Reduce spacing between table rows henceforth.
 \renewcommand{\arraystretch}{0.6}
@@ -2088,16 +2093,6 @@ rebound_results %>%
         math.style.negative = TRUE)
 @
 
-
-NOTE: in Table~\ref{tab:car_stages_table}, 
-the tilde stage is AFTER the macro effect has occurred. 
-Cdoto and Mdot do NOT change across the macro effect for the car owner. 
-In fact, nothing changes across segment \bartilde{}, 
-because the car owner’s economic situation does not change 
-across the macro effect (from bar to tilde). 
-The only changes that occur across the macro effect are in the macroeconomy 
-and would not be seen by the car owner.
-  
   
 %------------------------------
 \subsubsection{Results} 
@@ -2503,6 +2498,11 @@ Tables~\ref{tab:lamp_parameters}--\ref{tab:lamp_elasticity_parameters}
 and the equations of Section~\ref{sec:framework} in hand,
 we calculate important values at each rebound stage,
 as shown below in Table~\ref{tab:lamp_stages_table}.
+Similar to Table~\ref{tab:car_stages_table}, 
+Table~\ref{tab:lamp_stages_table} applies to the lamp owner.
+For the lamp owner, no changes are observed across the macro effect.
+Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identical.
+
 
 
 \begin{landscape}
@@ -2883,14 +2883,6 @@ rebound_results %>%
   MKHthemes::xy_theme()
 @
 
-NOTE: in Table~\ref{tab:lamp_stages_table}, 
-the tilde stage is AFTER the macro effect has occurred. 
-Cdoto and Mdot do NOT change across the macro effect for the lamp owner. 
-In fact, nothing changes across segment \bartilde{}, 
-because the lamp owner’s economic situation does not change 
-across the macro effect (from bar to tilde). 
-The only changes that occur across the macro effect are in the macroeconomy 
-and would not be seen by the lamp owner.
 
 %------------------------------
 \subsubsection{Results} 
