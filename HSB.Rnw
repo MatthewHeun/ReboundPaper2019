@@ -56,13 +56,17 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Toward a mathematically-rigorous analytical framework
-       for microeconomic energy rebound effects \\
-       OR \\
-       Toward a mathematically-rigorous, consumer-sided rebound analysis framework\\
-       OR \\
-       Towards a comprehensive analytical framework
-       for microeconomic energy rebound effects}
+\title{Toward a comprehensive, consumer-sided \\
+       energy rebound analysis framework}
+
+% Bonepile
+% Toward a mathematically-rigorous analytical framework
+% for microeconomic energy rebound effects \\
+% OR \\
+% Toward a mathematically-rigorous, consumer-sided rebound analysis framework\\
+% OR \\
+% Towards a comprehensive analytical framework
+% for microeconomic energy rebound effects
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
