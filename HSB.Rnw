@@ -1655,10 +1655,10 @@ including economic growth.
 As the price level in the economy falls, 
 consumption of goods grows, and the economy expands. 
 Efficiency-driven economic expansion is
-described by Hulten's theorem~\citeyear{Hulten1978},
+described by \citeauthor{Hulten1978}'s theorem,
 which states that the economy grows at the rate 
 of an efficiency increase in some part of the economy, 
-scaled by that part's expenditure share.
+scaled by that part's expenditure share~\citep{Hulten1978}.
 \citet{blackburn2020energy}  
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -1719,7 +1719,7 @@ resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption in the economy.
 For now, we choose $k = 1$ as a placeholder value,
-with further exploration of the magnitude of $k$ in Section~\ref{sec:discussion}.
+with further exploration of its magnitude in Section~\ref{sec:discussion}.
 
 As shown in Table~\ref{tab:macroeffect}, 
 macro rebound is given by
