@@ -167,7 +167,9 @@ policy options to mitigate rebound effects are discussed.
 Energy rebound \sep Conservation \sep Backfire \sep 
 Energy efficiency \sep Energy economics \sep Elasticity of substitution \\
 Gregor's suggestion: Energy efficiency \sep Energy rebound \sep Energy services 
-\sep Life cycle rebound \sep Substitution and income effect \sep Macroeconomic rebound
+\sep Life cycle rebound \sep Substitution and income effect \sep Macroeconomic rebound \\
+Paul's suggestion: Energy efficiency \sep Energy rebound \sep Microeconomic rebound 
+\sep Consumer rebound \sep Substitution and income effect \sep Macroeconomic rebound \\
 \end{keyword}
 
 \end{frontmatter}
