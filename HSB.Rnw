@@ -3840,20 +3840,14 @@ can be found at \url{https://github.com/MatthewHeun/ReboundTools}.
 \label{sec:acknowledgements}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-List funding sources in this standard way to facilitate compliance to funder's requirements:
-Funding: This work was supported by the National Institutes of Health [grant numbers xxxx, yyyy]; 
-the Bill \& Melinda Gates Foundation, Seattle, WA [grant number zzzz];
-and the United States Institutes of Peace [grant number aaaa].
+%List funding sources in this standard way to facilitate compliance to funder's requirements: Funding: This work was supported by the National Institutes of Health [grant numbers xxxx, yyyy]; the Bill \& Melinda Gates Foundation, Seattle, WA [grant number zzzz]; and the United States Institutes of Peace [grant number aaaa].
 
-It is not necessary to include detailed descriptions on the program or type of grants and awards.
-When funding is from a block grant or other resources available to
-a university, college, or other research institution, 
-submit the name of the institute or organization that provided the funding.
+%It is not necessary to include detailed descriptions on the program or type of grants and awards. When funding is from a block grant or other resources available toa university, college, or other research institution, submit the name of the institute or organization that provided the funding.
 
-If no funding has been provided for the research, please include the following sentence:
-This research did not receive any specific grant from funding agencies 
-in the public, commercial, or not-for-profit sectors.
+%If no funding has been provided for the research, please include the following sentence: This research did not receive any specific grant from funding agencies  in the public, commercial, or not-for-profit sectors.
 
+Paul Brockway’s time was funded by the UK Research and Innovation (UKRI) 
+Council, supported under EPSRC Fellowship award EP/R024254/1.
 The authors are grateful for comments from internal reviewers
 Fred Haan, Becky Haney, and Jeremy Van Antwerp (Calvin University); 
 Nathan Chan (University of Massachusetts at Amherst); and 
@@ -3861,7 +3855,8 @@ Zeke Marshall (University of Leeds).
 The authors benefitted from discussions with 
 Daniele Girardi (University of Massachusetts at Amherst) and 
 Christopher Blackburn (Bureau of Economic Analysis).
-Finally, the authors thank the students of MKH's Fall 2019 Thermal Systems Design course (ENGR333) 
+Finally, the authors thank the students of MKH's Fall 2019 
+Thermal Systems Design course (ENGR333) 
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 
