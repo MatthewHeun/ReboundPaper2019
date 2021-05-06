@@ -221,13 +221,7 @@ that efficiency gains may, paradoxically,
 drive growth in energy consumption.
 
 The oil crises of the 1970s shone a light on energy efficiency,
-and a debate over the magnitude of rebound intensified
-**** PB: In my mind, I always say ``ensued'' or ``erupted'' instead of ``intensified'' here. 
-Could we make that change and remain true to the history? 
-The problem with ``intensified'' is that we haven't established the existence
-of the debate before this sentence. 
-How can the debate ``intensify'' if the debate has not yet been introduced
-to the readers? ---MKH ****. 
+and the modern debate over the magnitude of rebound commenced. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested energy rebound could be large.
 Others, including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
