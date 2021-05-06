@@ -166,14 +166,11 @@ policy options to mitigate rebound effects are discussed.
 
 \begin{keyword}
 % Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+Energy efficiency \sep Energy rebound \sep Energy services \sep Microeconomic rebound \sep
+Substitution and income effect \sep Macroeconomic rebound
+
 % Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
- JEL codes: D11, O33, Q41, Q54, Q55 %https://www.aeaweb.org/jel/guide/jel.php
-Energy rebound \sep Conservation \sep Backfire \sep 
-Energy efficiency \sep Energy economics \sep Elasticity of substitution \\
-Gregor's suggestion: Energy efficiency \sep Energy rebound \sep Energy services 
-\sep Life cycle rebound \sep Substitution and income effect \sep Macroeconomic rebound \\
-Paul's suggestion: Energy efficiency \sep Energy rebound \sep Microeconomic rebound 
-\sep Consumer rebound \sep Substitution and income effect \sep Macroeconomic rebound \\
+\emph{JEL codes:} D11 \sep O33 \sep Q41 \sep Q54 \sep Q55 %https://www.aeaweb.org/jel/guide/jel.php
 \end{keyword}
 
 \end{frontmatter}
