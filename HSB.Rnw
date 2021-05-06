@@ -1932,7 +1932,7 @@ as shown below in Table~\ref{tab:car_stages_table}.
     Description                  & Ford Fusion & Ford Fusion & Data sources and notes\\ 
     Parameters [units]                              & (gasoline) & (hybrid EV) &  \\
   \midrule
-  Fuel efficiency                           & \Sexpr{mpg_worse} & \Sexpr{mpg_better} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
+  Fuel economy                           & \Sexpr{mpg_worse} & \Sexpr{mpg_better} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
   $\bempl{\eta}$, $\amacro{\eta}$ [mpg]             &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
                                                     &           &          & I-4, 2.0 L engine. \\
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
@@ -2089,6 +2089,16 @@ rebound_results %>%
 @
 
 
+NOTE: in Table~\ref{tab:car_stages_table}, 
+the tilde stage is AFTER the macro effect has occurred. 
+Cdoto and Mdot do NOT change across the macro effect for the car owner. 
+In fact, nothing changes across segment \bartilde{}, 
+because the car owner’s economic situation does not change 
+across the macro effect (from bar to tilde). 
+The only changes that occur across the macro effect are in the macroeconomy 
+and would not be seen by the car owner.
+  
+  
 %------------------------------
 \subsubsection{Results} 
 \label{sec:Car_results}
@@ -2363,7 +2373,7 @@ direct and indirect substitution effect rebound.
 Rebound from direct substitution ($Re_{dsub}$) is 
 positive, as expected (\Sexpr{Re_dsub_car_char_perc}\%). 
 The car owner will prefer more driving, 
-because of fuel efficiency enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
+because of fuel economy enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
 the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
 Conversely, the indirect substitution effect ($Re_{isub}$)
@@ -2402,7 +2412,7 @@ energy service (transportation).
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Case 2: Electric lamp}
+\subsection{Case 2: Purchase of new electric lamp}
 \label{sec:lamp_example}
 %++++++++++++++++++++++++++++++
 
@@ -2562,16 +2572,15 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Lighting consumption prior to upgrade   & \Sexpr{q_dot_s_orig_lamp_char}  & Calculation: (530 lm) (3 hrs/day) (365 days/year). \\
   $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
-  Real median personal income U.S.\, in 2018                   & 33,706        & Source: \citet{St_Louis_Fed:2019}.\\
+  Real median personal income U.S.\, in 2018                   & 33,706        & Refer to Table~\ref{tab:car_economic_parameters}\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ Disposable income /                                    & 0.88268       & Source:  National and Products Accounts (NIPA) \\
-  real income (minus current taxes)                         &               & Table 2.1. Personal Income and Its Disposition \\
-  {} [--]                                                   &               & \citep{US_BEA:2020}. \\
+  U.S.\ Disposable income /                                    & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters} \\
+  real income (minus current taxes)                         &               &  \\
+  {} [--]                                                   &               &  \\
   \midrule
-  Share of savings from disposable income                   & 0.079         & Source: National and Products Accounts (NIPA) \\
-  {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition \\ 
-                                                            &               & \citep{US_BEA:2020}. \\
+  Share of savings from disposable income                   & 0.079         & Refer to Table~\ref{tab:car_economic_parameters} \\
+  {} [--]                                                   &               &  \\ 
   \midrule
   Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
@@ -2874,6 +2883,14 @@ rebound_results %>%
   MKHthemes::xy_theme()
 @
 
+NOTE: in Table~\ref{tab:lamp_stages_table}, 
+the tilde stage is AFTER the macro effect has occurred. 
+Cdoto and Mdot do NOT change across the macro effect for the lamp owner. 
+In fact, nothing changes across segment \bartilde{}, 
+because the lamp owner’s economic situation does not change 
+across the macro effect (from bar to tilde). 
+The only changes that occur across the macro effect are in the macroeconomy 
+and would not be seen by the lamp owner.
 
 %------------------------------
 \subsubsection{Results} 
