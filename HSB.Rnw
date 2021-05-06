@@ -3344,7 +3344,7 @@ In reality, smaller negative (closer to 0) uncompensated own price elasticity ($
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
 thereby avoiding the uneconomic condition.
 However, a univariate sensitivity study cannot capture this effect, and so is
-bsed used for smaller variations in those parameters that affect others.
+best used for smaller variations in those parameters that affect others.
 %However, multi-variate dynamics are not captured by univariate sensitivity studies.
 %**** Gregor: is the above correct? ---MKH ****
 
