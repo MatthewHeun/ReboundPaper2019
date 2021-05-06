@@ -37,7 +37,7 @@ energy service price,
 such that $\Delta \aempl{\eta} \approx 0$ and $\Delta \aempl{p}_s \approx 0$.
 The approximate utility model 
 is discussed for continuity with the literature only.
-(See, for example, ******** Gregor: can you point to a paper that uses the elasticity equation? ****.)
+(See, for example, \citet{Borenstein:2015aa}.)
 
 We note that larger and non-marginal efficiency gains cause greater rebound
 (measured in joules)
@@ -71,15 +71,18 @@ For completeness,
 we briefly mention a third utility model with Cobb-Douglas form.
 The Cobb-Douglas utility model is a commonly-used special case
 of the CES utility model
-with elasticity of substitution ($\sigma$) equal to 1.
-The Cobb-Douglas utility model has an unfortunate feature:
-it always gives 100 \% direct substitution rebound.
+with elasticity of substitution ($\sigma$) equal to 1. It simplifies
+many derivations due to a number of strong assumptions on behavior.
+The simplicity of Cobb-Douglas utility model has side effects:
+among them is that it always gives 100 \% direct substitution rebound.
 That characteristic disqualifies its use in a mathematical framework
 that purports to estimate the magnitude of substitution effect rebound.  
 So, we reject the special case Cobb-Douglas utility model
 in favor of the generalized CES utility model.
-**** Revisit after Gregor edits text below. ****
 
++++ Not sure what you're trying to say with the now beginning paragraph, Matt.
+In its current form I'm tempted to ask to delete it, but I must be
+missing something. ---GS+++
 In the substitution effect, all utility models 
 rely upon elasticities to estimate 
 consumption utility and
@@ -354,7 +357,7 @@ that a common utility model takes the form of a Cobb-Douglas function
 \end{equation}
 %
 where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ is an output elasticity 
+$\alpha \in (0,1)$ is an weighing parameter 
 which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
@@ -364,20 +367,20 @@ However, the uncompensated own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always.
 
-****
-Gregor: We need to substantiate the claim that $Re_{dsub} = 1$ always
-for the CD utility model. 
-Is there a small proof that we can include?  
-Or is it widely known?
-If it is widely known to economists
-(but maybe not to energy people), 
-perhaps we should include the proof
-for completeness in this appendix. 
-****
+To see this, note that the Cobb-Douglas Marshallian demand of any good (illustrated
+for the energy service here) is of the form
+\begin{equation} \label{eq:CD_marshall}
+  \rate{q}_s^m = \alpha M /p_s
+\end{equation}
+where M is the income and the superscript m denotes Marshallian demand.
+The price elasticity of demand is therefore
+\begin{equation} \label{eq:CD_marshall}
+  \eqspsUC = \dfrac{\partial \rate{q}_s^m}{\partial p_s} \dfrac{p_s}{\rate{q}_s^m} = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} =-1
+\end{equation}
 I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
 which is inappropriate for an analytical framework that purports to
 estimate the magnitude of rebound effects.
-**** Gregor to review and clean up. ---MKH ****
++++ Matt, please check my notation on the CD elasticitiy. ---GS+++
 
 ****
 Gregor to check Saunders (2008), which PB thinks may have said something similar. ---MKH 
@@ -396,19 +399,16 @@ All utility models require elasticities to describe consumer preferences.
 In fact, there are three elasticies across the two utility models we discuss in detail:
 $\eqspsC$, $\eqopsC$, and $\sigma$.
 The approximate method requires 
-the compensated own price elasticity of energy service consumption ($\eqspsC$) and
-the compensated cross-price elasticity of energy service consumption ($\eqopsC$).
+the compensated price elasticity of energy service demand ($\eqspsC$) and
+the compensated cross-price elasticity of energy service demand ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
-None of the elasticities required for the approximate and CES utility models
-is estimable empirically.
-**** Gregor: can we say more about why this is so? ---MKH ****
-Thus, the starting point for determining the required elasticities 
-is the \emph{un}compensated own price elasticity 
-of energy service consumption ($\eqspsUC$), 
-which can be estimated empirically from
-**** more here from Gregor ****. 
-
+Since the \emph{un}compensated price elasticity of energy service 
+demand ($\eqspsUC$), tends to be more widely estimated,
+e.g. in studies about driver behavior \citep{Gillingham:2020aa}, the usual
+approach is to use it and the Slutsky equation to derive the compensated
+elasticity. The CES model then imposes enough restrictions to determine
+the elasticity of substitution.
 
 %------------------------------
 \subsubsection{Elasticities for the approximate utility model ($\eqspsC$ and $\eqopsC$)} 
@@ -417,9 +417,8 @@ which can be estimated empirically from
 
 Analytical expressions for the compensated elasticities
 in the approximate utility model
-can be derived using the Slutsky equation
-**** Gregor to provide a reference to Slutsky eqaution ****, 
-whereby the uncompensated own price elasticity 
+can be derived using the Slutsky equation, 
+whereby the price elasticity 
 of the energy service ($\eqspsUC$) 
 is decomposed into the compensated price elasticity ($\eqspsC$) and
 the income elasticity ($\eqsM$) as follows:
@@ -430,16 +429,16 @@ the income elasticity ($\eqsM$) as follows:
 %
 where $\fCs$ is given by Eq.~(\ref{eq:fCs}), and 
 $\eqsM$ is given in Section~\ref{sec:income_elasticities}.
-Solving for the compensated own price elasticity ($\eqspsC$) gives
+Solving for the compensated price elasticity ($\eqspsC$) gives
 
 \begin{equation} \label{eq:eqsps}
   \eqspsC = \eqspsUC + \fCs \eqsM \; .
 \end{equation}
 
 A similar argument allows straightforward derivation 
-of the compensated cross price elasticity ($\eqopsC$).
+of the compensated cross-price elasticity ($\eqopsC$).
 With \citet{Hicks1934}, 
-we note that the uncompensated cross price elasticity ($\eqopsUC$)
+we note that the uncompensated cross-price elasticity ($\eqopsUC$)
 can generally be expressed as
 
 \begin{equation} \label{eq:Allen}
