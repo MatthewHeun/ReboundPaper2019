@@ -1,7 +1,8 @@
 % Energy Economics Author Guide: 
 % https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
 
-\documentclass[review]{elsarticle}
+\documentclass[preprint]{elsarticle}
+% \documentclass[1p]{elsarticle}
 
 \usepackage{lineno}
 \modulolinenumbers[5]
