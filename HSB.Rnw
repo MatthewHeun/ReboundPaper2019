@@ -165,11 +165,11 @@ policy options to mitigate rebound effects are discussed.
 % https://www.aeaweb.org/jel/guide/jel.php   
 
 \begin{keyword}
-% Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
+% Maximum of 6 keywords.
 Energy efficiency \sep Energy rebound \sep Energy services \sep Microeconomic rebound \sep
 Substitution and income effect \sep Macroeconomic rebound
 
-% Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
+% Maximum of 6 JEL codes.
 \emph{JEL codes:} D11 \sep O33 \sep Q41 \sep Q54 \sep Q55 %https://www.aeaweb.org/jel/guide/jel.php
 \end{keyword}
 
@@ -1653,19 +1653,32 @@ of income effect rebound.
 
 The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
-are microeconomic in nature. However, it follows immediately
-from the assumption on the income effect that the economy grows.
-As the price level in the economy has fallen, consumption of goods
-grows. This expansion is captured by Hulten's \citeyear{Hulten1978}
-theorem, which states that the
-economy grows at the rate of the efficiency increase in some part of the
-economy, scaled by that part's expenditure share in the economy. \citet{blackburn2020energy}
-show that this also holds for factor-augmenting technical change and
-use it to calculate a scale effect rebound. 
-
-However, this is a static effect, that does not interrogate the possible
-follow-up technological change induced by the EEU.\footnote{In the first year, the
-technological improvement could even have contractionary effects \citep{Basu2006}.}
+are microeconomic in nature. 
+% However, it follows immediately
+% from the assumption on the income effect that the economy grows.
+However, the changes at the micro level have macroeconomic implications,
+including economic growth.
+As the price level in the economy falls, 
+consumption of goods grows, and the economy expands. 
+This expansion is captured by Hulten's theorem~\citeyear{Hulten1978},
+which states that the economy grows at the rate 
+of an efficiency increase in some part of the economy, 
+scaled by that part's expenditure share in the economy.
+\citet{blackburn2020energy} show that 
+%
+\begin{enumerate*}[label={(\roman*)}]
+	
+  \item Hulten's theorem also applies to factor-augmenting technical change and
+  
+  \item express rebound as a scale effect.
+    
+\end{enumerate*}
+However, the scale effect is static and does not account for
+the possible follow-up technological change induced by the EEU.%
+\footnote{
+  In the first year, 
+  the technological improvement could even have contractionary effects \citep{Basu2006}.
+}
 As \citet{VanBenthem2015} notes, cheaper 
 energy services could facilitate the development and 
 deployment of new products (product innovation),
