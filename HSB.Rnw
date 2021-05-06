@@ -162,9 +162,11 @@ policy options to mitigate rebound effects are discussed.
 \begin{keyword}
 % Maximum of 6 keywords. \texttt{elsarticle.cls}\sep \LaTeX\sep Elsevier \sep template
 % Maximum of 6 JEL codes. \MSC[2010] 00-01 \sep  99-00
-% JEL codes: https://www.aeaweb.org/jel/guide/jel.php
+ JEL codes: D11, O33, Q41, Q54, Q55 %https://www.aeaweb.org/jel/guide/jel.php
 Energy rebound \sep Conservation \sep Backfire \sep 
-Energy efficiency \sep Energy economics \sep Elasticity of substitution
+Energy efficiency \sep Energy economics \sep Elasticity of substitution \\
+Gregor's suggestion: Energy efficiency \sep Energy rebound \sep Energy services 
+\sep Life cycle rebound \sep Substitution and income effect \sep Macroeconomic rebound
 \end{keyword}
 
 \end{frontmatter}
@@ -1111,9 +1113,6 @@ Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
   \Sdot = \Sdoteqn \; .
 \end{equation}
 
-**** 
-GS asks if this paragraph should be moved elsewhere.
-****
 Because behavior changes are not considered
 in the direct emplacement effect,
 actual and expected energy savings rates are identical, i.e.\ $\Sdot$.
@@ -1362,8 +1361,8 @@ for determining
 the post-substitution effect point
 and therefore $Re_{dsub}$ and $Re_{isub}$.
 The approximate method assumes that 
-the compensated energy service price elasticity of energy service consumption ($\eqspsC$) and
-the compensated energy service price elasticity of other goods consumption ($\eqopsC$)
+the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
+the compensated energy service cross-price elasticity of other goods demand ($\eqopsC$)
 are constant along an indifference curve.
 Whether that is true depends on the utility function used.
 In general, constant price elasticities are approximations 
@@ -1371,8 +1370,8 @@ that are only applicable to marginal price changes.
 Appendix~\ref{sec:Re_sub} contains details of the approximate method.
 
 Here, we present an exact method that allows 
-the energy service price elasticity of energy service consumption ($\eqspsC$) and
-the energy service price elasticity of other goods consumption ($\eqopsC$)
+the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
+the compensated energy service cross-price elasticity of other goods demand ($\eqopsC$)
 to vary along an indifference curve, allowing analysis of
 non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
 We use a fully specified 
@@ -1536,7 +1535,7 @@ direct and indirect income effect rebound.
 \label{sec:direct_income_effect}
 %..............................
 
-The income elasticity of energy service consumption ($\eqsM$)
+The income elasticity of energy service demand ($\eqsM$)
 quantifies the amount of net savings spent 
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 (See Appendix~\ref{sec:utility_and_elasticities} 
@@ -1601,7 +1600,7 @@ of income effect rebound.
 \label{sec:indirect_income_effect}
 %..............................
 
-The income elasticity of other goods consumption ($\eqoM$)
+The income elasticity of other goods demand ($\eqoM$)
 quantifies the amount of net savings spent 
 on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
 Spending of net savings on other goods and services
@@ -1760,7 +1759,7 @@ for case study examples are given.
 
 Section 3 refs to add (or appendix D)
 Text from Gregor email, need to translate into paper
-Discharging of action item CES utility - is it novel?
+Discharging of action item CES utility - is it novel? +++ We decided it's not ---GS+++
 
 %Well, I haven’t seen anyone use CES utility fitted 
 %to an actual two sector model. 
@@ -2035,19 +2034,19 @@ as shown below in Table~\ref{tab:car_stages_table}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
+  Price elasticity of car use demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & Source: \citet{Borenstein:2015aa}. **** Is Borenstein correct? **** \\
   $\eqspsUC$ [--]                                         &                                &   \\ 
   \midrule
-  Price elasticity of demand for car use                  &   $\Sexpr{e_qs_ps_C_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
+  Compensated price elasticity of car use demand                   &   $\Sexpr{e_qs_ps_C_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqspsC$ [--]                                           &                                &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_C_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
+  Compensated cross-price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_C_car_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqopsC$ [--]                                           &                                &   \\ 
   \midrule   
-  Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Assumed value. \\
+  Income elasticity of demand for car use                 &   \Sexpr{e_qs_M_car_char}      & Follows from CES utility function. \\
   $\eqsM$ [--]                                            &                                &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_car_char}      & Assumed value. \\
+  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_car_char}      & Follows from CES utility function. \\
   $\eqoM$ [--]                                            &                                &   \\
   \bottomrule
 \end{tabular}
@@ -2606,19 +2605,19 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
   Description & Value & Data sources and notes \\
   Parameter [units] & & \\
   \midrule
-  Marshallian (uncompensated) price elasticity of demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
+  Price elasticity of lighting demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & Source: \citet{Borenstein:2015aa}. **** Need lamp ref. **** \\
   $\eqspsUC$ [--]                                         &           &   \\ 
   \midrule
-  Price elasticity of demand for lighting                 &  $\Sexpr{e_qs_ps_lamp_C_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
+  Compensated price elasticity of lighting demand                 &  $\Sexpr{e_qs_ps_lamp_C_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
   $\eqspsC$ [--]                                           &           &   \\    
   \midrule   
-  Cross price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_C_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
+  Compensated cross-price elasticity of demand for other goods        &   \Sexpr{e_qo_ps_lamp_C_char}     & Calculated via Eq.~(\ref{eq:eqops}).  \\
   $\eqopsC$ [--]                                           &           &   \\ 
   \midrule   
-  Income elasticity of demand for lighting                &   \Sexpr{e_qs_M_lamp_char}     & Assumed value. \\
+  Income elasticity of lighting demand                &   \Sexpr{e_qs_M_lamp_char}     & Follows from CES utility function. \\
   $\eqsM$ [--]                                            &           &   \\ 
   \midrule   
-  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_lamp_char}     & Assumed value. \\
+  Income elasticity of demand for other goods             &   \Sexpr{e_qo_M_lamp_char}     & Follows from CES utility function. \\
   $\eqoM$ [--]                                            &           &   \\
   \bottomrule
 \end{tabular}
@@ -2991,7 +2990,7 @@ Key rebound parameters include
 post-EEU efficiency ($\amacro{\eta}$),
 capital cost ($\amacro{C}_{cap}$),
 energy price ($p_E$),
-uncompensated own-price elasticity of energy service consumption ($\eqspsUC$), 
+price elasticity of energy service demand ($\eqspsUC$), 
 and the macro factor ($k$).
 Sensitivity analyses must be undertaken carefully,
 because rebound parameters are not expected to be 
@@ -3322,7 +3321,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
 %------------------------------
 
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows the variation of total rebound ($Re_{tot}$)
-with uncompensated own-price elasticity of energy service consumption ($\eqspsUC$).
+with the price elasticity of energy service demand ($\eqspsUC$).
 The effect is exponential:
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
 The lamp example shows stronger exponential variation than the car example.
@@ -3333,21 +3332,18 @@ substantially with $\eqspsUC$,
 because freed cash increases substantially with $\eqspsUC$ in the lamp example. 
 
 A limitation of the elasticity sensitivity study derives from limitations of the 
-CES utility model itself, 
-namely that numerical extremes are approached only asymptotically. 
-**** Gregor to add more intelligence here. ---MKH ****
+CES utility model itself, which constraints price elasticity varitaion
+given an elasticity of substitution.
 Indeed, uneconomic conditions should be avoided.
 For example, negative direct substitution rebound ($Re_{dsub} < 0$)
 is obtained when $\left| \eqspsUC \right| < \fCs$,
 because Eq.~(\ref{eq:sigma}) pushes 
 the elasticity of substitution negative ($\sigma < 0$).
-In reality, smaller negative (closer to 0) uncompensated own price elasticity ($\eqspsUC$)
+In reality, smaller negative (closer to 0) price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
 thereby avoiding the uneconomic condition.
 However, a univariate sensitivity study cannot capture this effect, and so is
 best used for smaller variations in those parameters that affect others.
-%However, multi-variate dynamics are not captured by univariate sensitivity studies.
-%**** Gregor: is the above correct? ---MKH ****
 
 <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis scale.)", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, -0.1, by = 0.01)),
@@ -3444,7 +3440,7 @@ the examples can be compared with each other. Considering sensitivity,
 note first from Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} that
 the larger the energy efficiency improvement, the smaller the rebound
 effect. This is driven mainly by a declining direct rebound effect, as
-the price elasticity declines and users approach saturation. Hence,
+the price elasticity of energy service demand declines and users approach saturation. Hence,
 more of the freed cash is plowed into (lower energy intensity) other 
 goods, which decreases the rebound. This result only obtains when operating
 with a parameterized utility function. If the approximate method were
@@ -3518,7 +3514,7 @@ more than make up for this decline. Naturally higher energy prices are likely
 to induce a lower energy intensity of consumption in the first place.
 
 All of these insights are in addition to the usually considered
-sensitivity: the price elasticity of energy service use, which
+sensitivity: the price elasticity of energy service demand, which
 has a strong effect on the rebound via the direct substitution effect
 (Fig.~\ref{fig:all_Re_terms_eps_graph}). Comparing the two case studies 
 in that graph and focussing on the central estimates (disks),
@@ -3738,8 +3734,8 @@ Third, the sensitivity studies
         show that rebound estimates  
         are more sensitive to
         the price of energy ($p_E$),
-        the uncompensated own-price elasticity 
-        of energy service consumption ($\eqspsUC$), and
+        the elasticity 
+        of energy service demand ($\eqspsUC$), and
         the macro factor ($k$) than either
         efficiency ($\amacro{\eta}$) or
         capital cost ($\amacro{C}_{cap}$).
