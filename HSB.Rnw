@@ -131,7 +131,7 @@ macro energy modeling and energy efficiency policy are at risk
 of being ineffective at efficiency-based emissions reductions.
 % Our response
 In response, 
-we develop a mathematically-rigorous, consumer-sided rebound analysis framework
+we develop a comprehensive, consumer-sided rebound analysis framework
 for energy rebound effects.
 We build upon microeconomic fundamentals and
 employ a constant elasticity of substitution utility model to 
@@ -318,31 +318,32 @@ leading the review authors to conclude that total rebound magnitudes
 are ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
 
 Comparing one study to the next is complicated by 
-the wide variety of theoretical frameworks employed in rebound analysis.
+the wide variety of rebound analysis frameworks employed in rebound analysis.
 So before formally defining the scope and aims of this paper,
 one of which is consolidation of technical and economic foundations, 
 we survey existing rebound frameworks.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Rebound frameworks}
+\subsection{Rebound analysis frameworks}
 \label{sec:rebound_frameworks}
 %++++++++++++++++++++++++++++++
 
-Theoretical rebound frameworks have been advanced for the 
+Rebound analysis frameworks have been advanced for the 
 consideration of microeconomic, macroeconomic, and total energy rebound.
 At the \emph{microeconomic} level,
 direct and indirect rebound are often estimated 
 via energy service price elasticities (e.g.,~\citet{Schipper2000}).
 Recent microeconomic advances include those by 
-\citet{Thomas:2013aa}, who set out a detailed framework of direct and indirect microeconomic effects;
+\citet{Thomas:2013aa}, who set out a detailed rebound analysis framework
+of direct and indirect microeconomic effects;
 \citet{Borenstein:2015aa}, who provided a detailed decomposition
 of rebound into income and substitution effects;
 \citet{Chan2015}, who analyzed welfare
 implications of the rebound effect; and
 \citet{Sun:2018aa}, who considered direct rebound including device effects.
 However, lifecycle and end-of-life considerations are not typically included 
-in microeconomic rebound frameworks, and 
+in microeconomic rebound analysis frameworks, and 
 models of consumer preferences lack robustness.
 (\citet{Babacan:2020aa} provides a rare example 
 of analysis of life-cycle analysis effects of the energy efficient device.)
@@ -383,7 +384,7 @@ In some cases (notably the relationship between capital and energy),
 we do not appear to have robust methodologies for making empirical assessments''~\citep[p.~1]{Elkomy2020}.
 
 \citet{Saunders:1992aa} made the earliest attempt
-at a theoretical framework for \emph{total} energy rebound
+at a framework for \emph{total} energy rebound
 based on neoclassical aggregate production functions (APFs).
 Later works continued the APF approach, including
 \citet{Saunders:2000aa, Saunders2008},
@@ -402,12 +403,12 @@ Further general equilibrium studies of total rebound followed, including
 Despite the growth of rebound contributions in micro, macro, and total frameworks,
 particularly in the last decade,
 several key issues remain. 
-First, limitations of \emph{microeconomic} rebound frameworks include
+First, limitations of \emph{microeconomic} rebound analysis frameworks include
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
 	\item inseparability of substitution and income effects when
-	      applying theoretical frameworks to real energy efficiency upgrades and
+	      applying rebound analysis frameworks to real energy efficiency upgrades and
 
   \item the lack of an operationalizable link between micro and macro effects.
     
@@ -421,7 +422,7 @@ would couple to microeconomic effects
 and 
 the appropriate magnitude of a macroeconomic multiplier.
 
-Third, results from frameworks which estimate \emph{total} rebound 
+Third, results from analysis frameworks which estimate \emph{total} rebound 
 are highly dependent upon two assumptions: 
 the type of production function used (Cobb-Douglas, CES, etc.) and
 the chosen value of the elasticity of substitution.
@@ -429,7 +430,7 @@ As \citeauthor{Saunders2008} noted, the
 ``choice of production/cost function can pre-determine the results related to rebound \ldots{}
 [and choosing] values for these [elasticity of substitution] parameters
 is tantamount to assuming rebound results''~\citet[p.~2207-2208]{Saunders2008}.
-Furthermore, frameworks at the total rebound level
+Furthermore, analysis frameworks at the total rebound level
 often work with aggregate energy and economic variables,
 rarely discriminating between microeconomic and macroeconomic rebound components.
 
@@ -465,7 +466,7 @@ to take appropriate climate change mitigation actions.
 \label{sec:aim_contribution_structure}
 %++++++++++++++++++++++++++++++
 
-There is a strategic \emph{need} for a mathematically-rigorous rebound framework
+There is a strategic \emph{need} for a comprehensive rebound analysis framework
 to firm up theoretical foundations, enable empirical analysis, and 
 guide energy policy-making. 
 In particular the framework should be one that 
@@ -484,7 +485,7 @@ In particular the framework should be one that
 %
 The \emph{aim} of this paper is therefore to build upon the foundations laid by 
 \citet{Borenstein:2015aa}) and others to develop a
-mathematically-rigorous, consumer-sided rebound analysis framework.
+comprehensive, consumer-sided rebound analysis framework.
 The key \emph{contributions} of this paper are 
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -495,7 +496,7 @@ The key \emph{contributions} of this paper are
         
   \item showing that embodied energy, maintenance and disposal activities, 
         replacements, and macroeconomic effects can be accommodated 
-        in a consistent rebound framework, 
+        in a consistent rebound analysis framework, 
         
   \item providing a new way to visualize rebound effects, 
         namely via energy, expenditure, and consumption path graphs,
@@ -504,7 +505,7 @@ The key \emph{contributions} of this paper are
         via empirically-plausible cost shares of other goods consumption,
   
   \item providing two numerical case studies (a car and an electric lamp) 
-        to demonstrate the application of the framework, and 
+        to demonstrate the application of the rebound analysis framework, and 
         
   \item linking quantified rebound effects with
         actionable steps to minimize real-world rebound effects.
@@ -512,7 +513,7 @@ The key \emph{contributions} of this paper are
 \end{enumerate*}
 
 The remainder of this paper is \emph{structured} as follows.
-Section~\ref{sec:framework} describes the mathematically-rigorous, consumer-sided rebound analysis framework.
+Section~\ref{sec:framework} describes the comprehensive, consumer-sided rebound analysis framework.
 Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
@@ -523,8 +524,8 @@ Section~\ref{sec:conclusion} concludes.
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we develop a mathematically-rigorous, consumer-sided rebound analysis framework, 
-hereafter called ``the framework.''
+In this section, we develop a comprehensive, consumer-sided rebound analysis framework 
+(concisely, ``the framework'').
 We begin with our rebound typology. 
 
 
@@ -1072,7 +1073,7 @@ rebound_results %>%
 
 In the subsections that follow, the notional graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph})
-serve to illustrate the development of the rebound framework.
+serve to illustrate the development of the framework.
 We begin with the emplacement effect.
 
 
@@ -1176,7 +1177,7 @@ consistent with a lower capital expenditure rate
 a reduced maintenance and disposal expenditure rate
 ($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
 
-One of the unique features of this rebound framework
+One of the unique features of this framework
 is that independent analyses of embodied energy and 
 capital costs of the EEU are expected.
 We note that the different terms 
@@ -1533,7 +1534,7 @@ particularly via an effective income ($\Mdothatprime$)
 This constraint can be seen in the consumption path graph
 where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
 lie along ray \rr{}, from the origin in ee Fig.~\ref{fig:ExampleConsPathGraph}.
-However, our framework also accommodates non-homothetic preferences. (+++ Matt: do you agree? ---GS+++)
+However, this framework also accommodates non-homothetic preferences. (+++ Matt: do you agree? ---GS+++)
 
 We next show expressions for 
 direct and indirect income effect rebound.
@@ -1685,7 +1686,7 @@ possible follow-up technological change induced by the EEU%
   In the first year, 
   the technological improvement could even have contractionary effects \citep{Basu2006}.
 }.
-Our rebound framework incorporates annual average effects over 
+The framework incorporates annual average effects over 
 the lifetime of the upgraded device, so
 dynamic effects that take time to unfold matter.
 To describe all the channels by which these dynamic effects operate, 
@@ -1753,8 +1754,7 @@ we arrive at an expression for macro effect rebound:
 \label{sec:total_rebound_main_paper}
 %++++++++++++++++++++++++++++++
 
-In the comprehensive framework,
-the sum of all rebound emerges from the four rebound effects
+The sum of all rebound emerges from the four rebound effects
 (emplacement effect, substitution effect, income effect, and macro effect).
 Macro effect rebound~($Re_{\macro}$, Eq.~(\ref{eq:Re_macro}))
 is expressed in terms of other rebound effects.
@@ -1815,8 +1815,8 @@ Discharging of action item CES utility - is it novel? +++ We decided it's not --
 \citet{Li2018},
 \citet{Moshiri2017},
 
-To demonstrate application of the 
-rebound analysis framework developed in Section~\ref{sec:framework},
+To demonstrate application of the framework
+developed in Section~\ref{sec:framework},
 we select two case studies:
 energy efficiency upgrades for a car and an electric lamp.
 We first collect parameter values
@@ -3023,7 +3023,7 @@ energy service (lighting).
 
 Sensitivity analyses show the effect of 
 independently-varied parameters on total rebound and rebound components.
-In the context of this rebound framework,
+In the context of this framework,
 sensitivity analyses
 can show important trends, tendencies, and relationships
 between rebound parameters and rebound magnitudes.
@@ -3098,7 +3098,7 @@ in Eq.~(\ref{eq:Sdot}) gives $\Sdot = \rbempl{E}_s$,
 not $\infty$. 
 Thus, efficiency saturation must occur.
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}
-shows that the rebound framework correctly replicates the
+shows that the framework correctly replicates the
 expected efficiency saturation trends.
 
 Saturation is especially noticeable in the lamp example
@@ -3448,7 +3448,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The comprehensiveness of the analytical framework combined with
+The comprehensiveness of the framework combined with
 its numerical precision illustrated in two examples are novel. To illustrate, 
 one novel dimension concerns the integration of precise 
 income and substitution effect, including
@@ -3660,7 +3660,7 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
 The framework also links to the total or economy-wide rebound literature
 by relating the size of macroeconomic rebound 
 to that of the microeconomic rebound 
-in a term that corresponds to magnitudes in the microeconomic framework. 
+in a term that corresponds to magnitudes in the microeconomic portion of the framework. 
 We note, again, that 
 most rebound analyses focus on either microeconomic effects or total rebound.
 Few rebound studies have explored the macro space 
@@ -3735,7 +3735,7 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we have developed a mathematically-rigorous, consumer-sided rebound analysis framework
+we have developed a comprehensive, consumer-sided rebound analysis framework
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
@@ -3763,10 +3763,10 @@ The framework
 
 \end{enumerate*}
 
-From the development and application of the rebound framework, 
+From the development and application of the framework, 
 we can draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
-        a mathematically-rigorous rebound framework enables
+        the framework enables
         quantification of magnitudes of all rebound mechanisms, including 
         direct and indirect channels 
         for emplacement, substitution, and income effects.
@@ -3804,9 +3804,9 @@ Future work could be pursued in several areas.
   \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$).
 
-  \item The rebound framework could be extended to producer-sided energy rebound mechanisms.
+  \item The framework could be extended to producer-sided energy rebound mechanisms.
     
-  \item The rebound framework presented here could be embeded 
+  \item The framework presented here could be embeded 
         in energy-economy models to better include rebound effects 
         in macro energy modeling and energy policy discussions.
 
@@ -3914,7 +3914,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of comprehensive rebound framework}
+\section{Derivation of comprehensive, consumer-sided rebound analysis framework}
 \label{sec:derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

@@ -42,7 +42,7 @@ is discussed for continuity with the literature only.
 We note that larger and non-marginal efficiency gains cause greater rebound
 (measured in joules)
 than small and marginal efficiency gains.
-Thus, a mathematically rigorous rebound analysis framework needs to accommodate 
+Thus, any rebound analysis framework needs to accommodate 
 large, non-marginal efficiency changes.
 The second utility model discussed in this appendix is the
 Constant Elasticity of Substitution (CES)
@@ -51,7 +51,7 @@ accommodate large, non-marginal
 energy efficiency and energy service price changes.
 The CES utility model 
 underlies the substitution effect
-in this rebound framework.
+in this framework.
 (See Section~\ref{sec:sub_effect_main_paper}.)
 Furthermore,
 the CES utility model is needed for 
@@ -75,7 +75,7 @@ with elasticity of substitution ($\sigma$) equal to 1. It simplifies
 many derivations due to a number of strong assumptions on behavior.
 The simplicity of Cobb-Douglas utility model has side effects:
 among them is that it always gives 100 \% direct substitution rebound.
-That characteristic disqualifies its use in a mathematical framework
+That characteristic disqualifies its use in a rebound analysis framework
 that purports to estimate the magnitude of substitution effect rebound.  
 So, we reject the special case Cobb-Douglas utility model
 in favor of the generalized CES utility model.
@@ -378,7 +378,7 @@ The price elasticity of demand is therefore
   \eqspsUC = \dfrac{\partial \rate{q}_s^m}{\partial p_s} \dfrac{p_s}{\rate{q}_s^m} = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} =-1
 \end{equation}
 I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
-which is inappropriate for an analytical framework that purports to
+which is inappropriate for a rebound analysis framework that purports to
 estimate the magnitude of rebound effects.
 +++ Matt, please check my notation on the CD elasticitiy. ---GS+++
 
