@@ -265,13 +265,23 @@ an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
 He found that most studies focused on direct (microeconomic) rebound at the household level,
 with studies typically estimating small rebound magnitudes (10--30\%).
-In contrast, \citeauthor{Sorrell:2007um} 
-noted that weaker evidence for macroeconomic rebound indicates larger magnitudes, 
-stating ``there are few published studies and these have a number 
-of flaws. \ldots{} 
-While little confidence can be placed in the available estimates, 
-several studies suggest that economy-wide [macroeconomic] rebound effects 
-may frequently exceed 50\%.''
+In contrast, 
+%\citeauthor{Sorrell:2007um}
+he found
+%noted that 
+weaker evidence for macroeconomic rebound, but for 
+%indicates 
+larger magnitudes, 
+stating \citet[p.9]{Sorrell:2007um}
+``This evidence base is both small and subject to a number of important methodological weaknesses, making it difficult to draw any general conclusions. 
+However, the available studies suggest that economy-wide [macroeconomic] 
+rebound effects may frequently exceed 50\%.''
+%there are few published studies and these have a number 
+%of flaws. \ldots{} 
+%While little confidence can be placed in the available estimates, 
+%several studies suggest that economy-wide [macroeconomic] rebound effects 
+%may frequently exceed 50\%.
+
 Since the~\citet{Sorrell:2007um} review,
 empirical estimates of (typically) household-level energy rebound
 at the microeconomic scale (direct and indirect)
@@ -493,7 +503,7 @@ The key \emph{contributions} of this paper are
   \item applying a general CES utility function 
         via empirically-plausible cost shares of other goods consumption,
   
-  \item providing two numerical case studies (a car and an LED lamp) 
+  \item providing two numerical case studies (a car and an electric lamp) 
         to demonstrate the application of the framework, and 
         
   \item linking quantified rebound effects with
@@ -503,7 +513,7 @@ The key \emph{contributions} of this paper are
 
 The remainder of this paper is \emph{structured} as follows.
 Section~\ref{sec:framework} describes the mathematically-rigorous, consumer-sided rebound analysis framework.
-Section~\ref{sec:examples} provides two calculation examples, a hybrid car and an LED lamp.
+Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
@@ -562,7 +572,7 @@ and sets out the typology for this paper.
 \label{sec:rebound_mechanisms}
 %++++++++++++++++++++++++++++++
 
-We assume an energy conversion device (say, an automobile)
+We assume an energy conversion device (say, a car)
 that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
@@ -1808,7 +1818,7 @@ Discharging of action item CES utility - is it novel? +++ We decided it's not --
 To demonstrate application of the 
 rebound analysis framework developed in Section~\ref{sec:framework},
 we select two case studies:
-energy efficiency upgrades for an automobile and an electric lamp.
+energy efficiency upgrades for a car and an electric lamp.
 We first collect parameter values
 for the equations for
 eight rebound components:
@@ -1896,16 +1906,17 @@ Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::reboun
 
 
 For the first example, 
-we consider the purchase of a more fuel efficient car (Ford Fusion Energi), 
-to replace an incumbent car (Ford Fusion SE). 
+we consider the purchase of a more fuel efficient car, 
+namely a gasoline-electric Ford Fusion Hybrid car,
+to replace a conventional gasoline Ford Fusion car. 
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
-in the gasoline-electric hybrid Energi car.  
-The automobile case study features 
+in the hybrid car.  
+The car case study features 
 %has 
 a 
 %very 
-large
+larger
 initial capital investment
 versus
 %and 
@@ -1959,10 +1970,10 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
                                                     &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
    Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs.  \\
-                                                    &           &          & Ford Fusion Energi car includes a \$4,000 tax rebate correct at the time of writing, \\
+                                                    &           &          & Ford Fusion Hybrid car includes a \$4,000 tax rebate correct at the time of writing, \\
                                                     &           &          & which makes the purchase cost cheaper than the incumbent Ford Fusion car. \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Fusion gasoline costs from \\
-                                                    &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Energi car costs from \citet{Edmunds:2019_energi_fusion}. \\
+                                                    &           &          & \citet{Edmunds:2019_gasoline_fusion}. Fusion Hybrid car costs from \citet{Edmunds:2019_energi_fusion}. \\
  \midrule
    Ownership duration            & \Sexpr{t_own_orig_car_char}  & \Sexpr{t_own_star_car_char}  & U.S.\ car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
    $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
@@ -1983,7 +1994,7 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
   $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
                                                     &           &          & Fusion gasoline car maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
-                                                    &           &          & Fusion Energi maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
+                                                    &           &          & Fusion Hybrid maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
   \bottomrule
 \end{tabular}
 \end{center}
@@ -2335,7 +2346,7 @@ rebound_results %>%
 @
 
 
-The base results for the automobile upgrade are shown in Table~\ref{tab:car_results}.
+The base results for the car upgrade are shown in Table~\ref{tab:car_results}.
 
 <<car_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
