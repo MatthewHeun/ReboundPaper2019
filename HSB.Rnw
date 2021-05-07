@@ -1986,8 +1986,8 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
    Embodied energy             & \Sexpr{E_emb_orig_car_char}    & \Sexpr{E_emb_star_car_char}   & 34,000 MJ for gasoline car taken from \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & \citet{Argonne_National_Laboratory:2010}. \\
                                                     &           &          & We assume an additional 6,000 MJ added for Hybrid Electric Vehicle (HEV) \\
-                                                    &           &          & battery, as HEV typically 10--25\% of total LCA energy of vehicle  \\
-                                                    &           &          & manufacture (PEB refs to follow). \\
+                                                    &           &          & battery, as HEV typically adds 10--25\% to total LCA energy of vehicle  \\
+                                                    &           &          & manufacture \citet{onat2015conventional}. \\
                                                     &           &          & Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
