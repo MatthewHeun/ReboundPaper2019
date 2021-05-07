@@ -438,8 +438,8 @@ And although microeconomic theory is available,
 it is scattered across papers, and
 it has not been developed in a way that 
 allows simultaneous empirical estimation of all microeconomic rebounds.
-Furthermore, macroeconomic rebound and links to micro rebound
-are virtually unexplored territory.
+Furthermore, macroeconomic rebound and its links to micro rebound
+is virtually unexplored territory.
 This state of affairs
 inhibits understanding of rebound mechanisms
 along direct and indirect channels
