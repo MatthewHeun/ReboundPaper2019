@@ -3448,35 +3448,64 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The comprehensiveness of the framework combined with
-its numerical precision illustrated in two examples are novel. 
-To illustrate, 
-one novel dimension concerns the integration of precise 
-income and substitution effect, including
-for non-marginal efficiency improvements. The possibility 
-of decomposing direct and indirect rebound effects into 
-substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
-clearly spelt out by \citet{greening2000}, and
-numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
-yet, numerically precise investigations that analyze the 
-microeconomic rebound typically only draw a stylized graph 
-of the consumption space with indifference curves 
-to highlight substitution and income effects 
-and then revert to working directly with demand functions
-from the almost ideal demand system \citep{Thomas:2013aa,Moshiri2017,Li2018}. 
-Another novel dimension is the integration not only 
-of these direct and indirect income and substitution effects, 
-but also embodied energy and life cycle effects from emplacement. 
-These effects are the energy aspect of the important difference 
-between costless technology upgrades  or (costly) mandated efficiency 
-increases \citep{Gillingham:2013aa,Fullerton2020},which is not typically 
-included in microeconomic frameworks \citep{Azevedo2014,Gillingham:2020aa}.
-The inclusion of the macroeconomic multiplier is novel as well. 
-These aspects merit a few observations on policy and on 
-the relationship with macroeconomic rebound.
+The comprehensive, consumer-sided rebound analysis framework 
+presented herein 
+has several novel aspects that deserve mention and further discussion.
+First, the framework is, to our knowledge, the first to enable 
+numerically-precise calculation of several microeconomic rebound effects
+and a macro effect.
+The two examples show the benefits of the framework for such calculations.
 
+Another novelty of our work involves expressing 
+numerically precise income and substitution effects
+for non-marginal efficiency improvements
+in numerically precise graphics. 
+The possibility of decomposing direct and indirect rebound effects into 
+substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
+spelt out clearly by \citet{greening2000}, and
+numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
+Yet, past investigations of microeconomic rebound
+typically show only stylized graphs of indifference curves in the consumption space, 
+even if they are numerically precise in other respects 
+\citep{Thomas:2013aa,Moshiri2017,Li2018}.
+**** 
+Gregor:  
+The following leftover sentence fragment 
+seems like a different point.
+Do you want to write up a separate point on this?
+``despite reliance on demand functions in a near-ideal
+demand system \citep{Thomas:2013aa,Moshiri2017,Li2018}.'' 
+---MKH 
+****
+Our precisely drawn rebound path graphs
+(Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph})
+through energy, expenditure, and consumption spaces
+aid comprehension of and intuition about the various rebound effects.
+
+Another novel aspect of this work is the integration of
+embodied energy and maintenance and disposal effects of the EEU. 
+These effects are the energy manifestation of the important difference 
+between costless technology upgrades or (costly) mandated efficiency 
+increases \citep{Gillingham:2013aa,Fullerton2020}.
+Embodied energy and maintenance and disposal effects are not typically 
+included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
+Most rebound frameworks assume costless upgrade in both financial and energy terms.
+
+Finally, this framework is the first, to our knowledge, 
+to operationalize the macroeconomic factor and 
+to identify the place to link macro to micro effects. 
+The novel aspects of this framework merit additional observations
+on policy and 
+on the relationship between microeconomic and macroeconomic rebound effects.
+
+
+%++++++++++++++++++++++++++++++
 \subsection{Policy considerations}
-There are two dimensions in which the examples relate to policy. First,
+\label{sec:policy}
+%++++++++++++++++++++++++++++++
+
+There are two dimensions in which the examples relate to policy. 
+First,
 the sensitivity to parameter can be analyzed for each and second 
 the examples can be compared with each other. Considering sensitivity,
 note first from Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} that
