@@ -3449,7 +3449,8 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The comprehensiveness of the framework combined with
-its numerical precision illustrated in two examples are novel. To illustrate, 
+its numerical precision illustrated in two examples are novel. 
+To illustrate, 
 one novel dimension concerns the integration of precise 
 income and substitution effect, including
 for non-marginal efficiency improvements. The possibility 
@@ -3802,7 +3803,7 @@ Future work could be pursued in several areas.
         rebound mechanisms in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
-        for the macro factor ($k$).
+        for the macro factor ($k$) and its relation to the marginal propensity to consume.
 
   \item The framework could be extended to producer-sided energy rebound mechanisms.
     
