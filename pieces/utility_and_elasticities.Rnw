@@ -380,12 +380,10 @@ The price elasticity of demand is therefore
 I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
 which is inappropriate for an analytical framework that purports to
 estimate the magnitude of rebound effects.
+\citet{Saunders2008} discusses similar problems
+in a rebound analysis context with the Cobb-Douglas
+production function.
 +++ Matt, please check my notation on the CD elasticitiy. ---GS+++
-
-****
-Gregor to check Saunders (2008), which PB thinks may have said something similar. ---MKH 
-****
-
 
 %++++++++++++++++++++++++++++++
 \subsection{Elasticities for the substitution effect ($\eqspsC$, $\eqopsC$, and $\sigma$)}
