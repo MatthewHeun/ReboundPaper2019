@@ -1534,7 +1534,8 @@ particularly via an effective income ($\Mdothatprime$)
 This constraint can be seen in the consumption path graph
 where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
 lie along ray \rr{}, from the origin in ee Fig.~\ref{fig:ExampleConsPathGraph}.
-However, this framework also accommodates non-homothetic preferences. (+++ Matt: do you agree? ---GS+++)
+However, this framework could accommodate non-homothetic preferences
+for spending across the income effect.
 
 We next show expressions for 
 direct and indirect income effect rebound.
@@ -3516,7 +3517,7 @@ Intriguingly, while the policy-induced effect
 is typically seen as reducing freed cash and hence income effects
 (e.g. by mandating to buy more efficient and costly appliances),
 the car example above shows that a tax rebate of \$4,000 currently
-in place in the US +++check with Matt ---GS+++ actually leads to a lower 
+actually leads to a lower 
 annual spend after upgrade (segments \ab{} and \bstar{} in Fig.~\ref{fig:CarCostGraph}),
 as long as the car purchase is made when the device
 owner needed to replace the device anyway, a reasonable assumption
