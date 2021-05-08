@@ -3773,23 +3773,39 @@ But Fig.~\ref{fig:all_Re_terms_p_E_graph} shows that rebound effects
 may reduce the effectiveness of using energy price 
 as a policy lever to reduce energy consumption.
 
-All of these insights are in addition to the usually considered
-sensitivity: the price elasticity of energy service demand, which
-has a strong effect on the rebound via the direct substitution effect
-(Fig.~\ref{fig:all_Re_terms_eps_graph}). Comparing the two case studies 
-in that graph and focussing on the central estimates (disks),
-throws additional light on the context 
-dependence of relative rebound magnitudes.
-In the car example, the substitution component of the direct rebound
+All of these insights are prior to considering the sensitivity
+of rebound to the price elasticity of energy service consumption ($\eqspsC$)
+****
+Gregor:
+I assume you mean the COMPENSATED price elasticity here.
+Am I right?
+I think it's good to add the symbol, which I have.
+---MKH
+****
+, which has a strong effect on rebound via the direct substitution effect
+(Fig.~\ref{fig:all_Re_terms_eps_graph}).
+Comparing the base values (dots) for the two case studies
+reveals information about the context dependence of relative rebound magnitudes. 
+In the car example, the direct substitution effect
 (the \chat{} segment in Fig.~\ref{fig:CarEnergyGraph}) 
-is larger than the income component of direct rebound 
-(segment \hatd{}), at least at a price elasticity of -0.2 or above. 
-In other words, most of the additional, 
-energy-intensive energy service ``transport'' 
-occurs as a result of the price decline, 
-not the freed cash. The same is not true for the (lower service energy
-intensity) lamp example, at least at a price elasticity at or below -0.4.
-Policy seeking to simultaneously push energy efficiency and
+is larger than the direct income effect(segment \hatd{}), 
+at least at a price elasticity of $\eqspsC < -0.2$. 
+Gregor: 
+Did I get the symbol and the inequality right?
+---MKH
+****
+In other words, most of the additional consumption of  
+the energy-intensive energy service ``transport'' 
+occurs as a result of the price decline,
+not the freed cash. 
+The same is not true for the (lower service energy intensity) 
+lamp example, at least when price elasticity $\eqspsC > -0.4$.
+****
+Gregor: 
+Did I get the symbol and the inequality right?
+---MKH
+****
+Policy seeking to increase the cost to encourage energy efficiency and
 limit the rebound effect might therefore
 be more effective in the car example when seeking to make 
 driving more costly to limit substitution, 
