@@ -73,31 +73,29 @@ The Cobb-Douglas utility model is a commonly-used special case
 of the CES utility model
 with elasticity of substitution ($\sigma$) equal to 1. 
 The Cobb-Douglas utility model simplifies many derivations due to a number of strong assumptions on behavior.
-The simplicity of Cobb-Douglas utility model has side effects:
-among them is that it always gives 100\% direct substitution rebound.
+However, the simplicity of Cobb-Douglas utility model has side effects:
+especially that it always gives 100\% direct substitution rebound.
 That characteristic disqualifies its use in a rebound analysis framework
 that purports to estimate the magnitude of substitution effect rebound.  
 So, we reject the special case Cobb-Douglas utility model
 in favor of the generalized CES utility model.
 
-+++ Not sure what you're trying to say with the now beginning paragraph, Matt.
-In its current form I'm tempted to ask to delete it, but I must be
-missing something. ---GS+++
-In the substitution effect, all utility models 
-rely upon elasticities to estimate 
-consumption utility and
-the comparative benefits of 
-consuming the energy service ($\Delta \rasub{q}_s$) and
-consuming other goods and services ($\Delta \rasub{C}_o$).
-Similarly,
-the income effect also employs elasticities to determine changes to 
-the rate of energy service consumption ($\Delta \rainc{q}_s$) and
-the rate of other goods consumption ($\Delta \rainc{C}_o$).
-In the income effect, 
-elasticities describe the proportions of net savings ($\rasub{N}$)
-spent on the energy service
-and other goods and services.
-
+Both the substitution effect and the income effect
+use elasticities to model consumer preferences. 
+% In the substitution effect, all utility models
+% rely upon elasticities to estimate
+% consumption utility and
+% the comparative benefits of
+% consuming the energy service ($\Delta \rasub{q}_s$) and
+% consuming other goods and services ($\Delta \rasub{C}_o$).
+% Similarly,
+% the income effect also employs elasticities to determine changes to
+% the rate of energy service consumption ($\Delta \rainc{q}_s$) and
+% the rate of other goods consumption ($\Delta \rainc{C}_o$).
+% In the income effect,
+% elasticities describe the proportions of net savings ($\rasub{N}$)
+% spent on the energy service
+% and other goods and services.
 In this appendix,
 the approximate, CES, and Cobb-Douglas utility models are described.
 Then, elasticities for the substitution effect are 
@@ -369,13 +367,16 @@ causing $Re_{dsub} = 1$ always.
 
 To see this, note that the Cobb-Douglas Marshallian demand of any good (illustrated
 for the energy service here) is of the form
+%
 \begin{equation} \label{eq:CD_marshall}
-  \rate{q}_s^m = \alpha M /p_s
+  \rate{q}_{s,m} = \alpha \rate{M} /p_s
 \end{equation}
-where M is the income and the superscript m denotes Marshallian demand.
+%
+where M is the income and the subscript m denotes Marshallian demand.
 The price elasticity of demand is therefore
 \begin{equation} \label{eq:CD_marshall}
-  \eqspsUC = \dfrac{\partial \rate{q}_s^m}{\partial p_s} \dfrac{p_s}{\rate{q}_s^m} = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} =-1
+  \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_s^m} 
+    = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} =-1
 \end{equation}
 I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
 which is inappropriate for a rebound analysis framework that purports to
