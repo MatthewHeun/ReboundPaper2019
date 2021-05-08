@@ -3515,7 +3515,7 @@ the rebound effect in the car case, but not the lamp case as in the latter
 the capital and lifecycle costs are so small compared to operating cost savings. 
 Intriguingly, while the policy-induced effect
 is typically seen as reducing freed cash and hence income effects
-(e.g. by mandating to buy more efficient and costly appliances),
+(e.g., by mandating to buy more efficient and costly appliances),
 the car example above shows that a tax rebate of \$4,000 currently
 actually leads to a lower 
 annual spend after upgrade (segments \ab{} and \bstar{} in Fig.~\ref{fig:CarCostGraph}),
@@ -3585,12 +3585,15 @@ All of these insights are derived using a CES production function
 that restricts preferences to homotheticity.
 Its strength is a relatively straightforward derivation, and
 hence tractability, of results. 
-We provide a tool to users where they can make alternative assumptions 
-to generate non-homothetic preferences 
-by using an approximate version that operates with constant elasticities 
-as in Borenstein +++check this with 
-Matt ---GS+++. 
+% The \texttt{R} package \texttt{ReboundTools} provides a way to make alternative assumptions 
+% to generate non-homothetic preferences, namely
+% by using an approximate version that operates with constant elasticities 
+% as in Borenstein +++check this with 
+% Matt ---GS+++. 
 
+% The ReboundTools package allows constant price elasticity of energy service consumption, 
+% but that is different from homothetic preferences across the income effect.
+% So I took Gregor's sentence out of the paper.
 
 %Gregor did you want this ref in section 2 methods or
 %section 4 discussion / elsewhere?
