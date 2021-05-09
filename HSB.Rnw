@@ -3962,4 +3962,13 @@ using an early version of this framework.
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Income and macro effects and relation to marginal propensity to consume}
+\label{sec:income_macro_mpc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{pieces/mpc.tex}
+
+
+
 \end{document}
