@@ -3479,15 +3479,6 @@ Yet, past investigations of microeconomic rebound
 typically show only stylized graphs of indifference curves in the consumption space, 
 even if they are numerically precise in other respects 
 \citep{Thomas:2013aa,Moshiri2017,Li2018}.
-**** 
-Gregor:  
-The following leftover sentence fragment 
-seems like a different point.
-Do you want to write up a separate point on this?
-``despite reliance on demand functions in a near-ideal
-demand system \citep{Thomas:2013aa,Moshiri2017,Li2018}.'' 
----MKH 
-****
 Our precisely drawn rebound path graphs
 (Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph})
 through energy, expenditure, and consumption spaces
