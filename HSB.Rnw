@@ -2636,7 +2636,7 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   \midrule
   Price elasticity of lighting demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & We adopt $-0.4$ as our baseline value, as the average of last 50 years \\
   $\eqspsUC$ [--]                                                             &           &   from \citep[Fig.~4]{Fouquet2014} \\  
-                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses a range of $0.4$ -- $-0.8$, \\   
+                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses a range of $-0.4$ -- $-0.8$, \\   
                                                             &            &     based on \citet{Fouquet2011}. \\
   \midrule
   Compensated price elasticity of lighting demand                 &  $\Sexpr{e_qs_ps_lamp_C_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
@@ -3079,8 +3079,8 @@ a savings of $\Sdot = 0.67$ gallons.
 Another 5 mpg boost in efficiency (to $\amacro{\eta} = 35$ mpg)
 will use $\aempl{E}_s = 2.86$ gal to drive 100 miles, 
 a further expected savings of only $\Sdot = 0.47$ gallons.
-Each successive 5 mpg boost in efficiency 
-is expected to save less energy than the previous 5 mpg boost in efficiency.
+Each successive 5 mpg boost in fuel economy 
+is expected to save less energy than the previous 5 mpg boost in fuel economy
 
 Saturation can be seen mathematically, too.
 Taking the limit as $\amacro{\eta} \rightarrow \infty$ 
@@ -3107,7 +3107,7 @@ are less effective than further increases in the hybrid car's efficiency.
 
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 expected energy savings ($\Sdot$) increase faster than takeback 
-as $\ramacro{\eta}$ increases.
+as $\amacro{\eta}$ increases.
 Thus, total rebound ($Re_{tot}$, the ratio of 
 takeback to expected energy savings in Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows.
@@ -3125,6 +3125,20 @@ A limitation of the efficiency sensitivity analysis is that
 post-EEU efficiency ($\amacro{\eta}$)
 is unlikely to be independent of other factors, 
 such as capital cost ($\amacro{C}_{cap}$).
+
+Note that the sensitivity analysis on post-upgrade efficiency 
+($\amacro{\eta}$, Fig.~\ref{fig:all_Re_terms_eta_graph})
+is the only sensitivity analysis that requires careful explication
+of both the numerator and denominator of Eq.~(\ref{eq:Re_takeback}),
+as in Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}, 
+because both the numerator and denominator of Eq.~\ref{eq:Re_takeback}
+changes when post-upgrade efficiency ($\amacro{\eta}$) changes.
+The denominator of Eq.~(\ref{eq:Re_takeback}) doesn't change for
+the sensitivity analyses of Figs.~\ref{fig:all_Re_terms_C_cap_graph}--\ref{fig:all_Re_terms_k_graph}.
+Thus, for the remaining sensitivity analyses, 
+when the rebound percentage increases (decreases), 
+energy takeback in the numerator of Eq.~(\ref{eq:Re_takeback})
+increases (decreases) proportionally.
 
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
@@ -3299,9 +3313,7 @@ German energy prices%
 are shown as vertical lines,
 providing an indication of possible energy price variations.
 All other things being equal, 
-if U.S.\ residents paid Germany's energy
-%electricity 
-prices,
+if U.S.\ residents paid Germany's energy prices,
 energy rebound would be 
 $\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}$\%
 for the car example and 
@@ -3352,7 +3364,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
 %------------------------------
 
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows the variation of total rebound ($Re_{tot}$)
-with the price elasticity of energy service demand ($\eqspsUC$).
+with the uncompensated price elasticity of energy service demand ($\eqspsUC$).
 The effect is exponential:
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
 The lamp example shows stronger exponential variation than the car example.
@@ -3363,9 +3375,9 @@ substantially with $\eqspsUC$,
 because freed cash increases substantially with $\eqspsUC$ in the lamp example. 
 
 A limitation of the elasticity sensitivity study derives from limitations of the 
-CES utility model itself, which constraints price elasticity varitaion
+CES utility model itself, which constrains price elasticity variation
 given an elasticity of substitution.
-Indeed, uneconomic conditions should be avoided.
+Uneconomic conditions should be avoided.
 For example, negative direct substitution rebound ($Re_{dsub} < 0$)
 is obtained when $\left| \eqspsUC \right| < \fCs$,
 because Eq.~(\ref{eq:sigma}) pushes 
@@ -3373,8 +3385,8 @@ the elasticity of substitution negative ($\sigma < 0$).
 In reality, smaller negative (closer to 0) price elasticity ($\eqspsUC$)
 would correlate with a smaller fraction of expenses spent on the energy service ($\fCs$), 
 thereby avoiding the uneconomic condition.
-However, a univariate sensitivity study cannot capture this effect, and so is
-best used for smaller variations in those parameters that affect others.
+However, a univariate sensitivity study cannot capture this effect and is
+best used for smaller variations in $\eqspsUC$.
 
 <<all_Re_terms_eps_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to uncompensated energy service price elasticity of energy demand ($\\eqspsUC$). (Note reversed $x$-axis scale.)", fig.width=6, fig.height=4>>=
 eps_sens_params <- list(Car = list(e_qs_ps_UC = seq(-0.7, -0.1, by = 0.01)),
@@ -3706,7 +3718,7 @@ energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. From a demand-side perspective
 entertained by \citet{Borenstein:2015aa}, this growth could be interpreted as
 a marginal propensity to consume of 2/3 of the recipients of the money
-spent via the income effect by the device owner, or a propensity to consumer of 3/4 starting with the device owner. These values are in the upper half of recent estimates of the marginal propensity to consume \citep{Carroll2017}. Again, we stress that the analogy with the marginal propensity is made to provide a link with Borenstein's approach, even though the mechanism we consider is supply-side productivity growth.
+spent via the income effect by the device owner, or a propensity to consume of 3/4 starting with the device owner. These values are in the upper half of recent estimates of the marginal propensity to consume \citep{Carroll2017}. Again, we stress that the analogy with the marginal propensity is made to provide a link with Borenstein's approach, even though the mechanism we consider is supply-side productivity growth.
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
@@ -3735,14 +3747,12 @@ that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
 The framework is the first to our knowledge
-to integrate all components of the microeconomic rebound or
-alternatively the sum of direct and indirect rebound 
-for consumers in an analytically consistent 
-yet numerically precise, operationalizable manner. 
+to integrate all components of the microeconomic rebound 
+(or alternatively the sum of direct and indirect rebound for consumers) 
+in an analytically consistent yet numerically precise and operationalizable manner. 
 The sets of three graphs that simultaneously 
 trace energy demand, expenditure, and consumption 
-decision for every rebound component summarize 
-this integration. 
+decisions for every rebound component display and summarize this integration. 
 The framework 
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -3762,29 +3772,27 @@ From the development and application of the framework,
 we can draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all rebound mechanisms, including 
+        quantification of magnitudes of all microeconomic rebound mechanisms, including 
         direct and indirect channels 
         for emplacement, substitution, and income effects.
-Second, the examples also show that magnitudes of rebound effects
+Second, the examples show that magnitudes of rebound effects
         vary with the type of energy efficiency upgrade performed.
 Third, the sensitivity studies
         (Section~\ref{sec:sensitivity_analyses})
-        show that rebound estimates  
-        are more sensitive to
+        enable evaluation of rebound sensitivies to imporant parameters. 
+        For the examples in this paper, total rebound is   
+        more sensitive to
         the price of energy ($p_E$),
-        the elasticity 
-        of energy service demand ($\eqspsUC$), and
-        the macro factor ($k$) than either
+        the elasticity of energy service demand ($\eqspsUC$), and
+        the macro factor ($k$) 
+        than either
         efficiency ($\amacro{\eta}$) or
         capital cost ($\amacro{C}_{cap}$).
 Last, the discussion (Section~\ref{sec:discussion}) shows that
-        rebound mitigation policies should be
-        tailored to each rebound mechanism and its magnitude.
-        Thus, quantification of rebound magnitudes by mechanism 
+        rebound is a headwind for efficiency-led energy reduction and CO$_2$ mitigation policies.
+        Quantification of rebound effect magnitudes
         is an important precursor to devising energy efficiency policies
-        that limit rebound effects, thereby 
-        enabling energy efficiency to be a 
-        more effective climate change mitigation strategy.
+        that would both encourage efficiency and limit rebound effects.
 
 Future work could be pursued in several areas. 
 %
