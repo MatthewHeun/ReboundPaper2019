@@ -1773,20 +1773,20 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Section 3 refs to add
-Possibly include in section 3 calcs (for own-price elasticities) 
-and/or section 4 discussion
-\citet{Mills2014},
-\citet{Saunders2012},
-\citet{Schleich2014},
-
-Section 3 ref to add, at place where elasticity estimates 
-for case study examples are given.
-\citet{Gillingham:2020aa},
-
-Section 3 refs to add (or appendix D)
-Text from Gregor email, need to translate into paper
-Discharging of action item CES utility - is it novel? +++ We decided it's not ---GS+++
+% Section 3 refs to add
+% Possibly include in section 3 calcs (for own-price elasticities) 
+% and/or section 4 discussion
+% \citet{Mills2014},
+% \citet{Saunders2012},
+% \citet{Schleich2014},
+% 
+% Section 3 ref to add, at place where elasticity estimates 
+% for case study examples are given.
+% \citet{Gillingham:2020aa},
+% 
+% Section 3 refs to add (or appendix D)
+% Text from Gregor email, need to translate into paper
+% Discharging of action item CES utility - is it novel? +++ We decided it's not ---GS+++
 
 %Well, I haven’t seen anyone use CES utility fitted 
 %to an actual two sector model. 
@@ -1811,10 +1811,10 @@ Discharging of action item CES utility - is it novel? +++ We decided it's not --
 %But I haven’t had a chance to study the Moshiri (2017) appendix B 
 %that might give a better picture of whether others can do that or not. 
 
-\citet{Broberg2015},
-\citet{Hart2018},
-\citet{Li2018},
-\citet{Moshiri2017},
+% \citet{Broberg2015},
+% \citet{Hart2018},
+% \citet{Li2018},
+% \citet{Moshiri2017},
 
 To demonstrate application of the framework
 developed in Section~\ref{sec:framework},
@@ -3490,14 +3490,15 @@ with a parameterized utility function. If the approximate method were
 used the price elasticity would be constant and rebound could not decline.
 This illustrates that except in the special case of constant price
 elasticity utility functions (like Cobb-Douglas which additional implies 
-100\% direct rebound - see appendix +++XXX+++) some demand saturation is
-built into a standard microeconomic framwork without additional assumptions.
-This also shows that aiming for large, one-oof efficiency improvements - such as from
+100\% direct rebound -- see Appendix~\ref{sec:utility_and_elasticities}) some demand saturation is
+built into a standard microeconomic framework without additional assumptions.
+This also shows that aiming for large, one-off efficiency improvements - such as from
 internal combustion engine to hybrid vehicle - can help mitigate rebound
-effects.\footnote{In principle the same could be achieved by many incremental
-improvements, but that might leave more space for adaptation and changes in
-preferences leading to higher price elasticities. +++ delete this unless good
-evidence or an example can be found ---GS+++}
+effects.
+% \footnote{In principle the same could be achieved by many incremental
+% improvements, but that might leave more space for adaptation and changes in
+% preferences leading to higher price elasticities. +++ delete this unless good
+% evidence or an example can be found ---GS+++}
 
 Next, an increase in device cost (whether overnight capital cost or lifecycle) 
 has a strong negative effect on both income rebound effects, shown 
