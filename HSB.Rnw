@@ -3747,11 +3747,10 @@ that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
 The framework is the first to our knowledge
-to integrate all components of the microeconomic rebound 
-(or alternatively the sum of direct and indirect rebound for consumers) 
+to integrate all components of direct and indirect microeconomic rebound for consumers
 in an analytically consistent yet numerically precise and operationalizable manner. 
-The sets of three graphs that simultaneously 
-trace energy demand, expenditure, and consumption 
+The sets of three rebound path graphs that simultaneously 
+track energy, expenditure, and consumption 
 decisions for every rebound component display and summarize this integration. 
 The framework 
 %
