@@ -3440,95 +3440,295 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The comprehensiveness of the framework combined with
-its numerical precision illustrated in two examples are novel. 
-To illustrate, 
-one novel dimension concerns the integration of precise 
-income and substitution effect, including
-for non-marginal efficiency improvements. The possibility 
-of decomposing direct and indirect rebound effects into 
-substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
-clearly spelt out by \citet{greening2000}, and
-numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
-yet, numerically precise investigations that analyze the 
-microeconomic rebound typically only draw a stylized graph 
-of the consumption space with indifference curves 
-to highlight substitution and income effects 
-and then revert to working directly with demand functions
-from the almost ideal demand system \citep{Thomas:2013aa,Moshiri2017,Li2018}. 
-Another novel dimension is the integration not only 
-of these direct and indirect income and substitution effects, 
-but also embodied energy and life cycle effects from emplacement. 
-These effects are the energy aspect of the important difference 
-between costless technology upgrades  or (costly) mandated efficiency 
-increases \citep{Gillingham:2013aa,Fullerton2020},which is not typically 
-included in microeconomic frameworks \citep{Azevedo2014,Gillingham:2020aa}.
-The inclusion of the macroeconomic multiplier is novel as well. 
-These aspects merit a few observations on policy and on 
-the relationship with macroeconomic rebound.
+In this discussion, we highlight several novel characteristics
+of the comprehensive, consumer-sided rebound analysis framework.
+Next, we show how the novel aspects of the framework enable insights
+on energy policy, especially policies to encourage energy efficiency yet avoid rebound. 
+Finally, we discuss the macro factor, one of the original features of this paper.
 
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Novel aspects of the framework}
+\label{sec:framework_novelties}
+%++++++++++++++++++++++++++++++
+
+In this section, we highlight four novel characteristics of the rebound analysis framework.
+First, the framework is, to our knowledge, the first to enable 
+numerically-precise calculation of several microeconomic rebound effects
+and a macro effect.
+The two examples show the benefits of the framework for such calculations.
+
+Another novelty of our work involves expressing 
+numerically precise income and substitution effects
+for non-marginal efficiency improvements
+in numerically precise graphics. 
+The possibility of decomposing direct and indirect rebound effects into 
+substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
+spelt out clearly by \citet{greening2000}, and
+numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
+Yet, past investigations of microeconomic rebound
+typically show only stylized graphs of indifference curves in the consumption space, 
+even if they are numerically precise in other respects 
+\citep{Thomas:2013aa,Moshiri2017,Li2018}.
+Our precisely drawn rebound path graphs
+(Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph})
+through energy, expenditure, and consumption spaces
+aid comprehension of and intuition about the various rebound effects.
+
+The third novel aspect of this framework is its inclusion of
+embodied energy and maintenance and disposal effects of the EEU. 
+These effects are the energy manifestation of the important difference 
+between costless technology upgrades or (costly) mandated efficiency 
+increases \citep{Gillingham:2013aa,Fullerton2020}.
+Embodied energy and maintenance and disposal effects are not typically 
+included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
+Most rebound frameworks assume costless upgrade in both financial and energy terms.
+This framework shows that it is possible to include such effects.
+
+Finally, this framework is the first, to our knowledge, 
+to operationalize the macroeconomic factor and 
+to identify the place to link macro to micro effects. 
+
+
+%++++++++++++++++++++++++++++++
 \subsection{Policy considerations}
-There are two dimensions in which the examples relate to policy. First,
-the sensitivity to parameter can be analyzed for each and second 
-the examples can be compared with each other. Considering sensitivity,
-note first from Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} that
-the larger the energy efficiency improvement, the smaller the rebound
-effect. This is driven mainly by a declining direct rebound effect, as
-the price elasticity of energy service demand declines and users approach saturation. Hence,
-more of the freed cash is plowed into (lower energy intensity) other 
-goods, which decreases the rebound. This result only obtains when operating
-with a parameterized utility function. If the approximate method were
-used the price elasticity would be constant and rebound could not decline.
-This illustrates that except in the special case of constant price
-elasticity utility functions (like Cobb-Douglas which additional implies 
-100\% direct rebound -- see Appendix~\ref{sec:utility_and_elasticities}) some demand saturation is
-built into a standard microeconomic framework without additional assumptions.
-This also shows that aiming for large, one-off efficiency improvements - such as from
-internal combustion engine to hybrid vehicle - can help mitigate rebound
-effects.
-% \footnote{In principle the same could be achieved by many incremental
-% improvements, but that might leave more space for adaptation and changes in
-% preferences leading to higher price elasticities. +++ delete this unless good
-% evidence or an example can be found ---GS+++}
+\label{sec:policy}
+%++++++++++++++++++++++++++++++
+
+We take for granted that it is desirable
+to reduce energy consumption via energy efficiency to reduce CO$_2$ emissions.
+For energy efficiency to be as effective as possible, rebound should be kept low.
+The sensitivity analyses of Section~\ref{sec:sensitivity_analyses}
+enable exploration of policies that promote energy efficiency 
+yet minimize rebound effects.
+
+We note first from Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} that
+the larger the energy efficiency improvement, the smaller the rebound effect. 
+This result is driven mainly by a declining direct rebound effect
+as efficiency rises (Fig.~\ref{fig:all_Re_terms_eta_graph}), 
+as the own price elasticity of energy service demand ($\eqspsC$)
+****
+Gregor:
+I assume this is the COMPENSATED price elasticity of energy service demand.
+I added the symbol for clarity.
+Is that right?
+---MKH
+****
+declines and
+users approach saturation. 
+****
+Gregor:
+This is a subtle point, but you mention that the compensated own-price elasticity ($\eqspsC$) declines 
+as efficiency rises.
+However, in Appendix D.2.2, $\eqspsC$ looks to be constant, especially in Eq.~(\ref{eq:sigma}).
+Can you clarify this point?
+---MKH
+****
+Hence,
+more of the freed cash is spent on (lower energy intensity) other goods, 
+thereby decreasing rebound.
+It is important to note that rebound decreasing with efficiency is only possible
+with a parameterized utility function. 
+****
+Gregor:
+Does ``parameterized'' mean ``CES''? 
+It is not clear to me that it does.
+Is there a better word than ``parameterized''?
+---MKH
+****
+If the approximate utility model were used (Appendix~\ref{sec:other_goods_expenditures}), 
+the own price elasticity ($\eqspsC$) would remain constant as efficiency rises,
+and rebound would not decline.
+This discussion show that except in the special case of constant price
+elasticity utility models
+(like Cobb-Douglas, which implies 100\% direct rebound 
+as shown in Appendix~\ref{sec:utility_and_elasticities}),
+some demand saturation is built into a standard microeconomic frameworks without additional assumptions.
+**** 
+Gregor:
+What does ``standard'' mean here?
+Also, what does ``without additional assumptions'' mean here?
+What additional assumptions could be made?
+Can you be more specific?
+And do we need all this about saturation?
+Isn't the main point that large, one-off efficiency improvements 
+would reduce rebound?
+---MKH
+****
+
+****
+Move the above text to the results section?
+And delete the bits below about large, one-off efficiency increases?
+---MKH 
+****
+
+Further, this discussion implies that policies which aim for
+large, one-off efficiency improvements
+(such as from the conventional car to a hybrid car
+****
+Gregor: 
+Should we rather talk about the lamps here? 
+The lamp example undergoes a HUGE one-off efficiency improvement, 
+much bigger than the car.
+---MKH
+****)
+can help mitigate rebound effects.%
+\footnote{
+  In principle the same level of rebound could be achieved by many incremental
+  efficiency improvements, 
+  but incremental efficiency improvements might leave more space 
+  for adaptation and changes in preferences,
+  leading to higher price elasticities. 
+  +++ delete this unless good
+  evidence or an example can be found ---GS+++
+}
+****
+Gregor:
+I don't think we should make this claim. 
+Larger energy efficiency gains lead to larger numerator changes,
+even if the denominator gets bigger faster.  
+The planet responds to the numerator, 
+not to the combination of the numerator and denominator.
+---MKH
+****
 
 Next, an increase in device cost (whether overnight capital cost or lifecycle) 
-has a strong negative effect on both income rebound effects, shown 
-in Fig.~\ref{fig:all_Re_terms_C_cap_graph}. Introduced as a lumpsum 
+has a strong negative effect on both direct and indirect income rebound effects,
+as shown in Fig.~\ref{fig:all_Re_terms_C_cap_graph}. 
+Introduced as a lumpsum 
 tax/subsidy added to freed cash after 
-the compensating variation it increases or decreases the income effect
-as \citet{Gillingham2016a} suggests doing.\footnote{If non-homothetic preferences
-are modeled, the variation in the budget constraint would also affect the substitution effect.}
+the compensating variation,
+it
+****
+Gregor:
+What is the antecedent for ``it''?
+---MKH
+****
+increases or decreases the income effect
+as \citet{Gillingham2016a} suggests doing
+****
+Whatever Gillingham suggests doing is not clear from this sentence.
+Can you clarify?
+---MKH
+****
+.%
+\footnote{
+  If non-homothetic preferences are modeled, 
+  the variation in the budget constraint would also affect the substitution effect.
+  ****
+  Gregor: 
+  Is this footnote necessary? 
+  I probably don't have the background to understand it, 
+  so I don't understand it at the moment.
+  That's probably why I don't see what this footnote is adding to the manuscript.
+  ---MKH
+  ****
+}
 The examples assume that as a device needs replacement it is only the
 difference in overnight capital and lifecycle cost difference between more
-and less efficient device that matter. The framework easily allows for
-introducing a costly ``policy-induced'' improvement \citep{Gillingham2016}
-by setting the non-EEU device costs to zero. It would drastically reduce
+and less efficient device that matter.
+****
+Gregor:
+I would say the previous sentence as
+``In the framework, the difference in capital cost rate 
+between the original and upgraded devices matters
+for emplacement rebound.
+As such, the framework accommodates ...''
+Is my suggestion an improvement?
+---MKH
+****
+The framework accommodates a costly ``policy-induced'' improvement \citep{Gillingham2016}
+by setting the non-EEU device costs to zero.
+****
+Gregor:
+By ``non-EEU device,'' do you mean the original device?
+And which costs? Capital? Maintenance and disposal?
+And why set to zero? 
+Wouldn't you want to set the 
+difference between original and upgraded capital cost rates
+to zero to reduce emplacement rebound effects?
+---MKH
+****
+It 
+****
+Gregor:
+What is the antecedent for ``It'' here?
+---MKH
+****
+would drastically reduce
 the rebound effect in the car case, but not the lamp case as in the latter
 the capital and lifecycle costs are so small compared to operating cost savings. 
+****
+Gregor:
+We hardly use the term ``lifecycle'' costs elsewhere in the paper.
+(The only other places are in the Introduction and in the typology table.)
+Are you suggesting that we introduce the term ``lifecycle?'' 
+If so, how would you like to define it?
+(As a synonym for ``maintenance and disposal?'')
+And where should we introduce the term?
+---MKH
+****
 Intriguingly, while the policy-induced effect
+****
+It is not clear to me what is ``the policy induced effect.''
+I'm just guessing, but do you mean 
+energy efficiency incentives?
+If so, that doesn't make sense with the next part of the sentence:
+``reducing freed cash.''
+because incentives would increase freed cash, no?
+Can you clarify?
+Oh, now I think I see.
+You mean energy efficiency standards, not energy efficiency incentives.
+I think this paragraph needs to be clarified quite a bit.
+---MKH
+****
 is typically seen as reducing freed cash and hence income effects
-(e.g., by mandating to buy more efficient and costly appliances),
+(e.g. by mandating to buy more efficient and costly appliances
+****
+Gregor:
+But in our LED example, the LED lamp is LESS costly, not more, 
+when measured as a cost rate.
+So I don't think we can assume, as you are here, 
+that the more efficient device is also the more expensive device.
+---MKH
+),
 the car example above shows that a tax rebate of \$4,000 currently
 actually leads to a lower 
 annual spend after upgrade (segments \ab{} and \bstar{} in Fig.~\ref{fig:CarCostGraph}),
 as long as the car purchase is made when the device
 owner needed to replace the device anyway, a reasonable assumption
-for hybrid car purchases in the US to date.%
+for hybrid car purchases in the US to date.
+****
+Gregor:
+See \url{https://fueleconomy.gov/feg/taxevb.shtml}.
+Looks like rebates are up to \$7500.
+---MKH
+****
 
-At the same time, in the energy plane,
-the higher embodied energy of the hybrid car
-already leads to a slightly positive emplacement rebound
-(Fig.~\ref{fig:ExampleConsPathGraph}).
-LED lamps also increase freed cash and also reduce embodied energy demand
-at the emplacement stage
-as their longer lifetime more than makes up for their higher installation costs.
-This illustrates a policy trade-off:
-subsidizing more efficient devices can incentivize uptake.
-It can also increase rebound effects,
-but at the income stage as more freed cash is available
-from emplacement as shown in the expenditure graphs in
-Figs.~\ref{fig:CarCostGraph} and~\ref{fig:LampCostGraph}
-(segments \ab{} and \bstar{}). At the same time, higher capital
+At the same time, 
+the higher embodied energy rate ($\ramacro{E}_{emb} > \rorig{E}_{emb}$)
+of the hybrid car already leads to a slightly positive emplacement rebound
+on the energy path graph (Fig.~\ref{fig:CarEnergyGraph}).
+In contrast, LED lamps reduce the embodied energy rate ($\ramacro{E}_{emb} < \rorig{E}_{emb}$),
+because their longer lifetime ($\amacro{t}_{life} > \orig{t}_{life}$)
+more than makes up for their higher embodied energy costs.
+Looking at the income effect, 
+the car and lamp examples illustrate a policy trade-off:
+subsidizing more efficient devices can incentivize uptake of energy efficient devices
+but increase rebound effects, because
+more freed cash is available after emplacement.
+(See the expenditure path graphs in
+Figs.~\ref{fig:CarCostGraph} and~\ref{fig:LampCostGraph}, especially
+segments \ab{} and \bstar{}).
+****
+Gregor:
+I think the next sentence should not be included,
+because I think we should delete the discussion about
+Avoiding high rebound with large, one-off efficiency gains.
+---MKH
+****
+At the same time, higher capital
 cost often comes with higher efficiency, which we discussed above
 reduced energy rebound from saturation effects, so the trade-off is
 somewhat reduced.
@@ -3536,41 +3736,65 @@ Of course, as with all capital goods purchases,
 even if the efficient option is relatively cheap over its
 lifetime, liquidity constraints can still prevent device owners
 from making any upgrade with higher overnight capital costs at all \citep{Fowlie2018}.
+So incentives are sometimes needed to jump-start markets for higher efficiency devices.
+This analysis cautions about the potential income and macro effect 
+rebound implications of such incentives.
 
-An additional insight comes from varying the energy price.
+Additional insights come from considering rebound sensitivity to energy price ($p_E$).
 This problem is salient as Fig.~\ref{fig:all_Re_terms_p_E_graph} shows
-end user energy prices in Germany are about 3 times as high as in the US.
-Perhaps surprisingly, rebound increases with initial energy price.
-This is because every unit energy saved leads to more freed cash. While
-the direct substitution effect declines due to higher marginal rate of
-substitution at higher relative prices and hence lower substitution towards
-energy consumption in absolute terms, both income effects - and the macro effect -
-more than make up for this decline. Naturally higher energy prices are likely
-to induce a lower energy intensity of consumption in the first place.
+end user energy prices in Germany are about 3 times those in the US.
+Perhaps surprisingly, rebound increases with energy price, because
+every unit energy saved leads to more freed cash.
+Although the direct substitution effect declines at higher energy prices
+due to higher marginal rate of substitution and less substitution towards
+energy consumption in absolute terms, 
+both direct and indirect income effects (and the macro effect)
+more than compensate.
+Naturally, higher energy prices are likely
+to induce less energy consumption in the first place.
+But Fig.~\ref{fig:all_Re_terms_p_E_graph} shows that rebound effects
+may reduce the effectiveness of using energy price 
+as a policy lever to reduce energy consumption.
 
-All of these insights are in addition to the usually considered
-sensitivity: the price elasticity of energy service demand, which
-has a strong effect on the rebound via the direct substitution effect
-(Fig.~\ref{fig:all_Re_terms_eps_graph}). Comparing the two case studies 
-in that graph and focussing on the central estimates (disks),
-throws additional light on the context 
-dependence of relative rebound magnitudes.
-In the car example, the substitution component of the direct rebound
+All of these insights are prior to considering the sensitivity
+of rebound to the price elasticity of energy service consumption ($\eqspsC$)
+****
+Gregor:
+I assume you mean the COMPENSATED price elasticity here.
+Am I right?
+I think it's good to add the symbol, which I have.
+---MKH
+****
+, which has a strong effect on rebound via the direct substitution effect
+(Fig.~\ref{fig:all_Re_terms_eps_graph}).
+Comparing the base values (dots) for the two case studies
+reveals information about the context dependence of relative rebound magnitudes. 
+In the car example, the direct substitution effect
 (the \chat{} segment in Fig.~\ref{fig:CarEnergyGraph}) 
-is larger than the income component of direct rebound 
-(segment \hatd{}), at least at a price elasticity of -0.2 or above. 
-In other words, most of the additional, 
-energy-intensive energy service ``transport'' 
-occurs as a result of the price decline, 
-not the freed cash. The same is not true for the (lower service energy
-intensity) lamp example, at least at a price elasticity at or below -0.4.
+is larger than the direct income effect(segment \hatd{}), 
+at least at a price elasticity of $\eqspsC < -0.2$. 
+Gregor: 
+Did I get the symbol and the inequality right?
+---MKH
+****
+In other words, most of the additional consumption of  
+the energy-intensive energy service ``transport'' 
+occurs as a result of the price decline,
+not the freed cash. 
+The same is not true for the (lower service energy intensity) 
+lamp example, at least when price elasticity $\eqspsC > -0.4$.
+****
+Gregor: 
+Did I get the symbol and the inequality right?
+---MKH
+****
 Policy seeking to simultaneously push energy efficiency and
 limit the rebound effect might therefore
-be more effective in the car example when seeking to make 
-driving more costly to limit substitution, 
-rather than taxing away the freed cash to limit income effects, 
-an intuition that accords with the results in \citet{Hart2018}, 
-who finds high rebounds when innovating in energy intensive industry, 
+be more effective in the car example when seeking to make
+driving more costly to limit substitution,
+rather than taxing away the freed cash to limit income effects,
+an intuition that accords with the results in \citet{Hart2018},
+who finds high rebounds when innovating in energy intensive industry,
 like gasoline-powered transport.
 
 All of these insights are derived using a CES production function
