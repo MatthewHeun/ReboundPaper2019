@@ -35,9 +35,7 @@ and
 where
 
 \begin{equation}
-  \Mdothatprime \equiv \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} 
-                       - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
-                                                                \tag{\ref{eq:effective_income}}
+  \effinceqn \; . \tag{\ref{eq:effective_income}}
 \end{equation}
 %
 This appendix proves that the income preference equations 
@@ -107,47 +105,26 @@ Dividing by $\rbinc{N}$ and multiplying by $\Mdothatprime$ gives
 Substituting Eq.~(\ref{eq:effective_income}) for $\Mdothatprime$ gives
 
 \begin{equation}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} 
-                       - \rate{G} + p_E \Delta \rbinc{E}_s + \Delta \rbinc{C}_o \; .
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rorig{M} - \raempl{C}_{cap} - \raempl{C}_{\md} - \rasub{N} \; .
 \end{equation}
 %
-Expanding differences yields
+Substituting Eq.~(\ref{eq:M_acct_asub}) for $\rorig{M}$, 
+because $\rorig{M} = \rasub{M}$, gives
 
 \begin{equation}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rbempl{M} - \rbempl{C}_{cap} - \rbempl{C}_{\md} - \rate{G} 
-            + p_E \rasub{E}_s - p_E \rbsub{E}_s + \rasub{C}_o - \rbsub{C}_o \; .
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} p_E \rasub{E}_s + \rasub{C}_{cap} + \rasub{C}_{\md} + \rasub{C}_o + \cancel{\rasub{N}}
+    - \raempl{C}_{cap} - \raempl{C}_{\md} - \cancel{\rasub{N}} \; .
 \end{equation}
 %
-Recognizing that $\raempl{M} = \rbempl{M}$ and 
-substituting Eq.~(\ref{eq:M_acct_aemp}) for $\rbsub{M}$
-leads to 
-
-\begin{align}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \; & \cancel{p_E \rbsub{E}_s} + \rbsub{C}_{cap} + \rbsub{C}_{\md}
-                                              + \cancel{\rbsub{C}_o} + \rbsub{N} \nonumber \\
-                                            & - \rbempl{C}_{cap} - \rbempl{C}_{\md} - \rate{G}
-                                              + p_E \rasub{E}_s - \cancel{p_E \rbsub{E}_s}
-                                              + \rasub{C}_o - \cancel{\rbsub{C}_o} \; .
-\end{align}
-%
-Eliminating terms, substituting Eq.~(\ref{eq:G_dot}) for $\rate{G}$, and 
-forming difference terms $\Delta \rbsub{C}_{cap}$ and $\Delta \rbsub{C}_{\md}$ gives
+Cancelling terms and recognizing that $\raempl{C}_{cap} = \rasub{C}_{cap}$, $\raempl{C}_{\md} = \rasub{C}_{\md}$, and
+$\rasub{C}_s = p_E \rasub{E}_s$ gives
 
 \begin{equation}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} p_E \rasub{E}_s + \rasub{C}_o
-                                            + \Delta \rbsub{C}_{cap} + \Delta \rbsub{C}_{\md}
-                                            - p_E \Sdot + \rbsub{N} \; .
+  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} \rasub{C}_s + \cancel{\rasub{C}_{cap}} + \cancel{\rasub{C}_{\md}} + \rasub{C}_o
+        - \cancel{\rasub{C}_{cap}} - \cancel{\rasub{C}_{\md}} \; .
 \end{equation}
 %
-Substituting Eq.~(\ref{eq:N_dot_star_empl}) for $\raempl{N}$ gives 
-
-\begin{align}
-  \rbinc{C}_s + \rbinc{C}_o \stackrel{?}{=} p_E \rasub{E}_s + \rasub{C}_o
-        & + \cancel{\Delta \rbsub{C}_{cap}} + \cancel{\Delta \rbsub{C}_{\md}} - \cancel{p_E \Sdot} \nonumber \\
-        & - \cancel{\Delta \rbsub{C}_{cap}} - \cancel{\Delta \rbsub{C}_{\md}} + \cancel{p_E \Sdot} \; .
-\end{align}
-%
-Finally, eliminating terms and recognizing that $p_E \rbinc{E}_s = \rbinc{C}_s$ leads to
+Cancelling terms gives
 
 \begin{equation}
   \rbinc{C}_s + \rbinc{C}_o \stackrel{\checkmark}{=} \rbinc{C}_s + \rbinc{C}_o \; ,

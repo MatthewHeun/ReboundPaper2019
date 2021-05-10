@@ -1570,18 +1570,8 @@ Effective income ($\Mdothatprime$) is given by
 For the purposes of the income effect, 
 the effective income equation (Eq.~(\ref{eq:effective_income})) 
 adjusts income ($\rorig{M}$) to account for 
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
-        freed cash ($\rate{G}$)
-        from the emplacement effect and
-  
-  \item expenditure adjustments 
-        ($p_E \Delta \rasub{E}_s$ and $\Delta \rasub{C}_o$)
-        from the substitution effect. 
-    
-\end{enumerate*}
+sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
+net income ($\rasub{N}$).
 
 As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
 
