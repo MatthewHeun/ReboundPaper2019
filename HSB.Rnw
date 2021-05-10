@@ -3718,7 +3718,14 @@ energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. From a demand-side perspective
 entertained by \citet{Borenstein:2015aa}, this growth could be interpreted as
 a marginal propensity to consume of 2/3 of the recipients of the money
-spent via the income effect by the device owner, or a propensity to consume of 3/4 starting with the device owner. These values are in the upper half of recent estimates of the marginal propensity to consume \citep{Carroll2017}. Again, we stress that the analogy with the marginal propensity is made to provide a link with Borenstein's approach, even though the mechanism we consider is supply-side productivity growth.
+spent via the income effect by the device owner or 
+a propensity to consume of 3/4 starting with the device owner. 
+(See Appendix~\ref{sec:income_macro_mpc}.)
+These values are in the upper half of recent estimates 
+of the marginal propensity to consume \citep{Carroll2017}.
+Again, we stress that the analogy with the marginal propensity 
+is made to provide a link with Borenstein's approach, 
+even though the mechanism we consider is supply-side productivity growth.
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
