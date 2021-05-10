@@ -1,9 +1,9 @@
 % Energy Economics Author Guide: 
 % https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
 
-\documentclass[review]{elsarticle}      % For the review process; lots of space between lines
+% \documentclass[review]{elsarticle}      % For the review process; lots of space between lines
 % \documentclass[preprint]{elsarticle}    % For submission
-% \documentclass[1p]{elsarticle}          % Single spacing closer to published version
+\documentclass[1p]{elsarticle}          % Single spacing closer to published version
 
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -111,7 +111,6 @@ Leeds, LS2 9JT, UK}
 % then cite the author(s) and year(s).
 % Also, non-standard or uncommon abbreviations should be avoided, but
 % if essential they must be defined at their first mention in the abstract itself.
-(242 words at present) \\
 Implementation of widespread energy efficiency measures
 is an important global strategy to meet Paris greenhouse gas emissions targets. 
 However, energy rebound can ``take back'' efficiency-based
