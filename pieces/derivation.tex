@@ -132,8 +132,8 @@ No other effects are considered.
 %
 The final energy consumption rates ($\rbempl{E}_s$ and $\raempl{E}_s$) 
 can be written as Eq.~(\ref{eq:typ_qs_eta_Edot}) in the forms
-$\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$ and 
-$\raempl{E}_s = \frac{\raempl{q}_s}{\aempl{\eta}}$. 
+$\rbempl{E}_s = \rbempl{q}_s/\bempl{\eta}$ and 
+$\raempl{E}_s = \raempl{q}_s/\aempl{\eta}$. 
 
 \begin{equation}
   \Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} - \frac{\raempl{q}_s}{\aempl{\eta}}
@@ -152,11 +152,11 @@ as the rate of final energy consumption declines,
 as expected.
 As $\amacro{\eta} \rightarrow \infty$,
 all final energy consumption is eliminated ($\raempl{E}_s \rightarrow 0$), and
-$\Sdot = \frac{\rbempl{q}_s}{\bempl{\eta}} = \rbempl{E}_s$.
+$\Sdot = \rbempl{q}_s/\bempl{\eta} = \rbempl{E}_s$.
 (Of course, $\amacro{\eta} \rightarrow \infty$ is impossible. 
 See \citet{Paoli:2020aa} for a recent discussion of upper limits to device efficiencies.)
 
-After rearrangement and using $\rbempl{E}_s = \frac{\rbempl{q}_s}{\bempl{\eta}}$, 
+After rearrangement and using $\rbempl{E}_s = \rbempl{q}_s/\bempl{\eta}$, 
 we obtain a convenient form
 
 \begin{equation}
@@ -252,8 +252,7 @@ The change in embodied final energy due to the EEU (expressed as a rate) is give
 $\raempl{E}_{emb} - \rbempl{E}_{emb}$.
 After substitution and algebraic rearrangement,
 the change in embodied energy rate due to the EEU can be expressed as
-$\left( \frac{\aempl{E}_{emb}}{\bempl{E}_{emb}}
-  \frac{\bempl{t}_{\life}}{\aempl{t}_{\life}} - 1 \right) \rbempl{E}_{emb}$, 
+$[ (\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1 ] \rbempl{E}_{emb}$, 
 a term that represents energy savings taken back due to embodied energy effects.
 Thus, Eq.~(\ref{eq:Re_takeback}) can be employed to write embodied energy rebound as
 %
@@ -362,7 +361,7 @@ Direct substitution effect rebound ($Re_{dsub}$) is given by
 \end{equation}
 %
 Substituting the typical relationship of Eq.~(\ref{eq:typ_qs_eta_Edot})
-in the form $\rate{E}_s = \frac{\rate{q}_s}{\eta}$ gives
+in the form $\rate{E}_s = \rate{q}_s/\eta$ gives
 
 \begin{equation}
   Re_{dsub} = \frac{\frac{\rasub{q}_s}{\amacro{\eta}} - \frac{\rbsub{q}_s}{\amacro{\eta}}}{\Sdot} \; .
@@ -376,10 +375,10 @@ Rearranging produces
 \end{equation}
 %
 Recognizing that the rate of energy service consumption ($\rate{q}_s$)
-is unchanged across the emplacement effect leads to $\frac{\rbsub{q}_s}{\rbempl{q}_s} = 1$.
-Furthermore, $\frac{\rbempl{q}_s}{\amacro{\eta}}
-            = \frac{\rbempl{q}_s}{\bempl{\eta}} \frac{\bempl{\eta}}{\amacro{\eta}}
-            = \rbempl{E}_s \frac{\bempl{\eta}}{\amacro{\eta}}$,
+is unchanged across the emplacement effect leads to $\rbsub{q}_s/\rbempl{q}_s = 1$.
+Furthermore, $\rbempl{q}_s/\amacro{\eta}
+            = (\rbempl{q}_s/\bempl{\eta}) (\bempl{\eta}/\amacro{\eta})
+            = \rbempl{E}_s (\bempl{\eta}/\amacro{\eta})$,
 such that
 
 \begin{equation}
@@ -424,7 +423,7 @@ Rearranging gives
 \end{equation}
 %
 Recognizing that expenditures on other goods are constant across the emplacement effect gives
-$\frac{\raempl{C}_o}{\rbempl{C}_o} = 1$ and
+$\raempl{C}_o/\rbempl{C}_o = 1$ and
 
 \begin{equation}
   Re_{isub} = \left(\frac{\rasub{C}_o}{\rbempl{C}_o} - 1  \right) \frac{\rbempl{C}_o I_E }{\Sdot} \; .
@@ -477,8 +476,8 @@ such that when the energy service price decreases ($\amacro{p}_s < \bempl{p}_s$)
 the rate of energy service consumption increases ($\rasub{q}_s > \rbsub{q}_s$).
 
 Substituting Eq.~(\ref{eq:ps_pE_eta}) in the form
-$\bempl{p}_s = \frac{\bempl{p}_E}{\bempl{\eta}}$ and
-$\amacro{p}_s = \frac{\bempl{p}_E}{\amacro{\eta}}$
+$\bempl{p}_s = \bempl{p}_E/\bempl{\eta}$ and
+$\amacro{p}_s = \bempl{p}_E/\amacro{\eta}$
 and noting that $\rbempl{q}_s = \raempl{q}_s$ gives
 gives
 
@@ -501,7 +500,7 @@ yields the approximate expression for direct substitution rebound.
 The compensated price elasticity of energy service demand is
 expected to be negative ($\eqspsC < 0$), 
 such that, e.g.,  
-$\eqspsC = -0.2$ and $\frac{\amacro{\eta}}{\bempl{\eta}} = 2$
+$\eqspsC = -0.2$ and $\amacro{\eta}/\bempl{\eta} = 2$
 yields $Re_{dsub} = 0.15$.
 
 With $\eqspsC \in (-1, 0)$ expected,
@@ -918,7 +917,7 @@ and Eq.~(\ref{eq:Sdot}) for $\rate{S}_{dev}$ yields
               \rbinc{C}_o I_E}{\Sdoteqn} \; .
 \end{equation}
 %
-Sutstituting $\frac{\rasub{C}_o}{\rorig{C}_o} \rorig{C}_o$ for $\rasub{C}_o$,  
+Sutstituting $(\rasub{C}_o/\rorig{C}_o) \rorig{C}_o$ for $\rasub{C}_o$,  
 recognizing that $\rbsub{C}_o = \rbempl{C}_o$, and simplifying gives 
 
 \begin{equation}

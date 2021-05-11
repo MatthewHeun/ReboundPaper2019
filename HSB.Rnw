@@ -1612,8 +1612,8 @@ and is represented by segments \dbar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 Under the assumption that prices of other goods are exogenous
 (see Appendix~\ref{sec:other_goods_expenditures}), 
-the ratio of rates of other goods consumption ($\frac{\rasub{q}_o}{\rorig{q}_o}$)
-is equal to the ratio of rates of other goods expenditures ($\frac{\rasub{C}_o}{\rorig{C}_o}$)
+the ratio of rates of other goods consumption ($\rasub{q}_o/\rorig{q}_o$)
+is equal to the ratio of rates of other goods expenditures ($\rasub{C}_o/\rorig{C}_o$)
 such that 
 
 \begin{equation} \label{eq:Corat_eqoM}

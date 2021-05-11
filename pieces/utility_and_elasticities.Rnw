@@ -110,14 +110,14 @@ Finally, elasticities for the income effect are discussed.
 
 A utility model gives the ratio of energy service consumption rate 
 and other goods consumption rates across the substitution effect
-($\frac{\rasub{q}_s}{\rbsub{q}_s}$ and 
-$\frac{\rasub{q}_o}{\rbsub{q}_o}$, 
+($\rasub{q}_s/\rbsub{q}_s$ and 
+$\rasub{q}_o/\rbsub{q}_o$, 
 respectively).
 In so doing, 
 utility models quantify the decrease in other goods consumption
-($\frac{\rasub{q}_o}{\rbsub{q}_o} < 1$)
+($\rasub{q}_o\rbsub{q}_o < 1$)
 caused by the increase of energy service consumption
-($\frac{\rasub{q}_s}{\rbsub{q}_s} > 1$)
+($\rasub{q}_s\rbsub{q}_s > 1$)
 resulting from the decrease of the energy service price ($\aempl{p}_s < \orig{p}_s$).
 Across the substitution effect, 
 the utility increase of the larger energy service consumption rate
@@ -183,7 +183,7 @@ is normalized by (indexed to) parameters before emplacement:
         + (1-a) \left( \frac{\rate{q}_o}{\rbempl{q}_o} \right)^\rho  \right]^{(1/\rho)} \; ,
 \end{equation}
 %
-where $\rho = \frac{\sigma - 1}{\sigma}$,
+where $\rho = (\sigma - 1)/\sigma$,
 $a$ is a share parameter (determined below), and 
 $\sigma$ is the elasticity of substitution between
 the normalized consumption rate of the energy service and 
@@ -377,7 +377,7 @@ The price elasticity of demand is therefore
 
 \begin{equation} \label{eq:elasticity_one_for_CD}
   \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_{s,m}} 
-    = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} = -1 \; .
+    = -\dfrac{\alpha \rate{M}}{p_s^2} \dfrac{ p_s^2}{\alpha \rate{M}} = -1 \; .
 \end{equation}
 %
 I.e., a Cobb-Douglas model of consumer utility already presumes 100\% direct rebound,
