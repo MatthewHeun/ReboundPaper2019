@@ -1,9 +1,9 @@
 % Energy Economics Author Guide: 
 % https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
 
-% \documentclass[review]{elsarticle}      % For the review process; lots of space between lines
+\documentclass[review]{elsarticle}      % For the review process; lots of space between lines
+% \documentclass[1p]{elsarticle}          % Single spacing closer to published version
 % \documentclass[preprint]{elsarticle}    % For submission
-\documentclass[1p]{elsarticle}          % Single spacing closer to published version
 
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -1453,7 +1453,7 @@ via the CES utility model.
 
 Eq.~(\ref{eq:C_o_solution}) can be substituted directly
 into Eq.~(\ref{eq:Re_isub_prelim})
-to obtain an expression for direct substitution rebound ($Re_{isub}$)
+to obtain an expression for indirect substitution rebound ($Re_{isub}$)
 via the CES utility model.
 
 \begin{equation} \label{eq:Re_isub_CES}
