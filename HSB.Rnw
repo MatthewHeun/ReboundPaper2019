@@ -3180,7 +3180,11 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
-  MKHthemes::xy_theme()
+  MKHthemes::xy_theme() + 
+  ggplot2::theme(        
+    # Move the facet labels out of the graphs slightly.
+    strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2))
+  )
 @
 
 
@@ -3212,7 +3216,9 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme() + 
-  ggplot2::theme(legend.text.align = 0)
+  ggplot2::theme(legend.text.align = 0, 
+                 # Move the facet labels out of the graphs slightly.
+                 strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2)))
 @
 
 
@@ -3257,7 +3263,9 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = C_dot_cap_se
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme() +
-  ggplot2::theme(legend.text.align = 0)
+  ggplot2::theme(legend.text.align = 0,
+                 # Move the facet labels out of the graphs slightly.
+                 strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2)))
 @
 
 
@@ -3350,7 +3358,9 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme() +
-  ggplot2::theme(legend.text.align = 0)
+  ggplot2::theme(legend.text.align = 0,
+                 # Move the facet labels out of the graphs slightly.
+                 strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2)))
 @
 
 
@@ -3400,7 +3410,9 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eps_sens_par
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme() +
-  ggplot2::theme(legend.text.align = 0)
+  ggplot2::theme(legend.text.align = 0,
+                 # Move the facet labels out of the graphs slightly.
+                 strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2)))
 @
 
 
@@ -3437,7 +3449,9 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
   MKHthemes::xy_theme() +
-  ggplot2::theme(legend.text.align = 0)
+  ggplot2::theme(legend.text.align = 0,
+                 # Move the facet labels out of the graphs slightly.
+                 strip.text.x = ggplot2::element_text(margin = ggplot2::margin(b = 2)))
 @
 
 
