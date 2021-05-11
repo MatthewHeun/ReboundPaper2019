@@ -367,14 +367,14 @@ causing $Re_{dsub} = 1$ always.
 
 To see this, note that the Cobb-Douglas Marshallian demand of any good (illustrated
 for the energy service here) is of the form
-%
+
 \begin{equation} \label{eq:CD_marshall}
   \rate{q}_{s,m} = \alpha \rate{M} / p_s \; ,
 \end{equation}
 %
 where $\rate{M}$ is the income rate and the subscript $m$ denotes Marshallian demand.
 The price elasticity of demand is therefore
-%
+
 \begin{equation} \label{eq:elasticity_one_for_CD}
   \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_{s,m}} 
     = -\dfrac{\alpha M}{p_s^2} \dfrac{ p_s^2}{\alpha M} = -1 \; .
