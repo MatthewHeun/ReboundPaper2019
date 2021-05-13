@@ -2000,10 +2000,10 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
                                                             &               & \citet{US_DoT:2018}. \\
   \midrule
-  Real median personal income U.S., in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  Real median personal income U.S., in 2018                 & 34,317        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ eisposable income /                                    & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
+  U.S.\ disposable income /                                 & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   real income (minus current taxes)                         &               & National and Products Accounts (NIPA) \\
   {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
@@ -2013,7 +2013,7 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
+  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from U.S.\ Energy Information Agency (EIA) data \\
@@ -2581,17 +2581,17 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   Lighting consumption prior to upgrade   & \Sexpr{q_dot_s_orig_lamp_char}  & Calculation: (530 lm) (3 hrs/day) (365 days/year). \\
   $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
-  Real median personal income U.S.\, in 2018                   & 33,706        & Refer to Table~\ref{tab:car_economic_parameters}.\\
+  Real median personal income U.S.\, in 2018                & 34,317        & Refer to Table~\ref{tab:car_economic_parameters}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ disposable income /                                    & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters}. \\
+  U.S.\ disposable income /                                 & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters}. \\
   real income (minus current taxes)                         &               &  \\
   {} [--]                                                   &               &  \\
   \midrule
   Share of savings from disposable income                   & 0.079         & Refer to Table~\ref{tab:car_economic_parameters}. \\
   {} [--]                                                   &               &  \\ 
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
+  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2020 average household electricity price \\
