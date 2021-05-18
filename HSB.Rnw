@@ -56,14 +56,14 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Toward a comprehensive, consumer-sided \\
+\title{Toward a comprehensive, consumer-based \\
        energy rebound analysis framework}
 
 % Bonepile
 % Toward a mathematically-rigorous analytical framework
 % for microeconomic energy rebound effects \\
 % OR \\
-% Toward a mathematically-rigorous, consumer-sided rebound analysis framework\\
+% Toward a mathematically-rigorous, consumer-based rebound analysis framework\\
 % OR \\
 % Towards a comprehensive analytical framework
 % for microeconomic energy rebound effects
@@ -130,19 +130,20 @@ macro energy modeling and energy efficiency policy are at risk
 of being ineffective at efficiency-based emissions reductions.
 % Our response
 In response, 
-we develop a comprehensive, consumer-sided rebound analysis framework.
+we develop a comprehensive, consumer-based rebound analysis framework.
 We build upon microeconomic fundamentals and
 employ a constant elasticity of substitution utility model to 
 describe direct and indirect channels 
 for emplacement, substitution, and income rebound effects. 
 We utilize a macroeconomic factor to link
 macro to micro rebound effects.
-A sequence of graphs shows rebound paths through energy, expenditure, and consumption spaces.
+A sequence of novel graphs shows rebound paths through energy, 
+expenditure, and consumption spaces.
 The framework is applied to two case studies: 
 upgrades of a car and an electric lamp.
 % Results
 We find microeconomic rebounds of 24\% and 29\% 
-and total rebound of 49\% and 86\% for the car and lamp examples, respectively.
+and total rebound of 33\% and 48\% for the car and lamp examples, respectively.
 % **** 
 % These numbers are not automatically recalculated.
 % Double-check before submission. 
@@ -205,7 +206,8 @@ who, in his report entitled \emph{The Coal Question}, said
 ``[\emph{i}]\emph{t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
-Less famously, the origins of rebound extend backward from \citeauthor{Jevons:1865}
+Less famously, the origins of rebound may extend further backward 
+from \citeauthor{Jevons:1865}
 to \citet{Williams1840}
 who quoted \citeauthor{Parkes1838}
 who wrote ``[t]he economy of fuel is the secret of the economy of the steam-engine; 
@@ -218,7 +220,7 @@ For nearly 200 years, then, it has been understood
 that efficiency gains may, paradoxically, 
 drive growth in energy consumption.
 
-The oil crises of the 1970s shone a light on energy efficiency,
+The oil crises of the 1970s shone a light back onto energy efficiency,
 and the modern debate over the magnitude of energy rebound commenced. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested rebound could be large.
@@ -254,8 +256,8 @@ would represent a structural break with the historical record
 of tight coupling between energy consumption and GDP.
 Thus, the magnitude of energy rebound is much more than an academic debate, 
 because there is a lot at stake. 
-Large rebound, if it exists, will mean that
-efficiency-based efforts to reduce carbon emissions will be less effective than supposed, 
+Large rebound, if it exists, means that
+efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
 
 \citet{Sorrell:2007um} led
@@ -374,7 +376,7 @@ either confirming or rejecting these views.
 In some cases (notably the relationship between capital and energy), 
 we do not appear to have robust methodologies for making empirical assessments''~\citep[p.~1]{Elkomy2020}.
 
-\citet{Saunders:1992aa} made the earliest attempt
+\citet{Saunders:1992aa} made perhaps the earliest attempt
 at a framework for \emph{total} energy rebound
 based on neoclassical aggregate production functions (APFs).
 Later works continued the APF approach, including
@@ -476,12 +478,12 @@ In particular the framework should be one that
 %
 The \emph{aim} of this paper is therefore to build upon the foundations laid by 
 \citet{Borenstein:2015aa}) and others to develop a
-comprehensive, consumer-sided energy rebound analysis framework.
+comprehensive, consumer-based energy rebound analysis framework.
 The key \emph{contributions} of this paper are 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item describing a consistent and mathematically-rigorous, consumer-sided energy rebound analysis framework
+  \item describing a consistent and mathematically-rigorous, consumer-based energy rebound analysis framework
         in which direct and indirect dimensions of 
         substitution and income effects are connected,
         
@@ -503,7 +505,7 @@ The key \emph{contributions} of this paper are
 \end{enumerate*}
 
 The remainder of this paper is \emph{structured} as follows.
-Section~\ref{sec:framework} describes the comprehensive, consumer-sided rebound analysis framework.
+Section~\ref{sec:framework} describes the comprehensive, consumer-based rebound analysis framework.
 Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
@@ -514,7 +516,7 @@ Section~\ref{sec:conclusion} concludes.
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we develop a comprehensive, consumer-sided energy rebound analysis framework 
+In this section, we develop a comprehensive, consumer-based energy rebound analysis framework 
 (concisely, ``the framework'').
 We begin with our rebound typology. 
 
@@ -1394,7 +1396,7 @@ The device owner's utility
 is determined by
 the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods and services ($\rate{C}_o$).
-The share parameter ($\fCs$) is taken from the orignal (pre-EEU) consumption basket.
+The share parameter ($\fCs$) is taken from the original (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the (constant) elasticity of substitution ($\sigma$) 
 as $\rho \equiv (\sigma - 1)/\sigma$.
 See Appendix~\ref{sec:utility_and_elasticities}
@@ -1688,7 +1690,7 @@ Ultimately, these dynamic rebound effects lead to
 higher incomes and more spending on goods and energy services than otherwise would be the case 
 in the absence of the EEU.
 
-Recently, \citeauthor{Borenstein:2015aa} has addressed these macro effects from the demand side,
+\citeauthor{Borenstein:2015aa} has addressed these macro effects from the demand side,
 noting that ``income effect rebound will be larger economy-wide than 
 would be inferred from evaluating only the direct income gain from 
 the end user's transaction'' \citep[p.~11]{Borenstein:2015aa} and 
@@ -2048,9 +2050,9 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   \midrule
   Price elasticity of car use demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & We adopt $-0.2$ as our baseline value, based on U.S.\ studies including \\
   $\eqspsUC$ [--]                                           &           &  \citet{Gillingham:2020aa}, who estimated a value of $-0.1$, \\
-                                                           &           &   \citet{goetzke2018}, who estimated values between $-0.05$ -- $-0.23$, \\  
-                                                             &           &   and \citet{Parry2005}, who estimated values of $-0.1$ -- $-0.3$. \\  
-                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses a value of $-0.1$ -- $-0.4$, \\   
+                                                           &           &   \citet{goetzke2018}, who estimated values between $-0.05$ and $-0.23$, \\  
+                                                             &           &   and \citet{Parry2005}, who estimated values between $-0.1$ and $-0.3$. \\  
+                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses values of $-0.1$ to $-0.4$, \\   
                                                             &            &     based on \citet{Parry2005}. \\
   \midrule
   Compensated price elasticity of car use demand                   &   $\Sexpr{e_qs_ps_C_car_char}$   & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
@@ -2378,7 +2380,7 @@ The \subeffect{} has two components:
 direct and indirect substitution effect rebound.
 Rebound from direct substitution ($Re_{dsub}$) is 
 positive, as expected (\Sexpr{Re_dsub_car_char_perc}\%). 
-The car owner will prefer more driving, 
+The car owner will, on average, prefer more driving, 
 because of fuel economy enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
 the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
@@ -2480,13 +2482,13 @@ For our second example,
 we consider purchasing a light emitting diode (LED) electric lamp
 to replace a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
-in terms of energy service delivery (measured in lumens), 
+in terms of energy service delivery (measured in lumen output per lamp), 
 the key difference being the energy required to provide that energy service. 
 The LED lamp has a low 
 initial capital investment rate
 (negative versus the incumbent incandescent lamp, actually!)
 and a long-term benefit of decreased direct energy expenditures
-for the same energy service (lm-hr/year).
+for the same annual energy service (lm-hr/year).
 
 
 %------------------------------
@@ -2625,7 +2627,7 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   \midrule
   Price elasticity of lighting demand  &   $\Sexpr{e_qs_ps_UC_lamp_char}$  & We adopt $-0.4$ as our baseline value, as the average of last 50 years \\
   $\eqspsUC$ [--]                                                             &           &   from \citep[Fig.~4]{Fouquet2014} \\  
-                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses a range of $-0.4$ -- $-0.8$, \\   
+                                                            &           &  For comparison, \citet{Borenstein:2015aa} uses a range of $-0.4$ to $-0.8$, \\   
                                                             &            &     based on \citet{Fouquet2011}. \\
   \midrule
   Compensated price elasticity of lighting demand                 &  $\Sexpr{e_qs_ps_lamp_C_char}$      & Calculated via the Slutsky Equation (Eq.~(\ref{eq:slutsky})).  \\
@@ -3461,10 +3463,10 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we highlight several novel characteristics
-of the comprehensive, consumer-sided energy rebound analysis framework.
+of the comprehensive, consumer-based energy rebound analysis framework.
 Next, we show how the framework enables insights
 on energy policy, especially policies to encourage energy efficiency. 
-Finally, we discuss the macro factor ($k$), one of the novel features of this paper.
+Finally, we discuss below the macro factor ($k$), one of the novel features of this paper.
 
 
 %++++++++++++++++++++++++++++++
@@ -3483,7 +3485,7 @@ numerically precise income and substitution effects
 for non-marginal efficiency improvements
 in numerically precise graphics. 
 The possibility of decomposing direct and indirect rebound effects into 
-substitution and income effects was adumbrated by \citet{Khazzoom1980}, 
+substitution and income effects was outlined by \citet{Khazzoom1980}, 
 spelt out clearly by \citet{greening2000}, and
 numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
 Yet, past investigations of microeconomic rebound
@@ -3517,7 +3519,7 @@ to identify the place to link macro to micro effects.
 
 We take for granted that it is desirable
 to reduce energy consumption via energy efficiency to reduce CO$_2$ emissions.
-For energy efficiency to be as effective as possible, rebound should be kept low.
+For energy efficiency to be as effective as possible, rebound should be minimised.
 The sensitivity analyses of Section~\ref{sec:sensitivity_analyses}
 enable exploration of several policy options that are often suggested
 to promote energy efficiency:
@@ -3713,12 +3715,12 @@ respectively.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Conclusions (MKH, 500 words. Currently at 250 words.)}
+\section{Conclusions}
 \label{sec:conclusion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we have developed a comprehensive, consumer-sided rebound analysis framework
+we have developed a comprehensive, consumer-based rebound analysis framework
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
@@ -3784,7 +3786,7 @@ Future work could be pursued in several areas.
 
   \item The framework could be extended to producer-sided energy rebound mechanisms.
     
-  \item The framework presented here could be embeded 
+  \item The framework presented here could be embedded 
         in energy-economy models to better include rebound effects 
         in macro energy modeling and energy policy discussions.
 
@@ -3892,7 +3894,7 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Derivation of comprehensive, consumer-sided rebound analysis framework}
+\section{Derivation of comprehensive, consumer-based rebound analysis framework}
 \label{sec:derivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
