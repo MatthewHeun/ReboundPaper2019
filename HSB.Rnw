@@ -565,7 +565,17 @@ and sets out the typology for this paper.
 %++++++++++++++++++++++++++++++
 
 We assume an energy conversion device (say, a car)
-that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
+that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
+\footnote{
+  Note that
+  the vocabulary and mathematical notation for rebound effects is extensive;
+  Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
+  notation elements used throughout the paper, including
+  symbols, Greek letters, decorations, and subscripts.
+  The notation elements 
+  can be mixed to comprise a rich and expressive ``language'' of energy rebound.
+  In several places, we use colored backgrounds on rebound effects for visual convenience. 
+}.
 The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
 $\rbempl{q}_s$ (in vehicle-km/year)
@@ -616,14 +626,6 @@ for the device owner is
 %
 where 
 original net savings ($\rorig{N}$) is zero.
-Note that
-the vocabulary and mathematical notation for rebound effects is extensive;
-Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-notation elements used throughout the paper, including
-symbols, Greek letters, decorations, and subscripts.
-The notation elements 
-can be mixed to comprise a rich and expressive ``language'' of energy rebound.
-In several places, we use colored backgrounds on rebound effects for visual convenience. 
 
 \begin{figure}
 \centering
@@ -1572,13 +1574,14 @@ adjusts income ($\rorig{M}$) to account for
 sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
 net income ($\rasub{N}$).
 
-As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
+Direct income rebound is defined as
 
 \begin{equation} \label{eq:Re_dinc_def}
   Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
 \end{equation}
 %
-After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_dinc}), 
+(See Table~\ref{tab:inceffect}.)
+After substitution, rearranging, and canceling of terms (Appendix~\ref{sec:Re_dinc}), 
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
@@ -1627,7 +1630,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
-After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_iinc}), 
+After substitution, rearranging, and canceling of terms (Appendix~\ref{sec:Re_iinc}), 
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
@@ -1720,13 +1723,13 @@ with consequent implications for additional energy consumption in the economy.
 For now, we choose $k = 1$ as a placeholder value,
 with further exploration of its magnitude in Section~\ref{sec:discussion}.
 
-As shown in Table~\ref{tab:macroeffect}, 
-macro rebound is given by
+Macro rebound is given by
 
 \begin{equation} \label{eq:Re_macro_def}
   Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
+(See Table~\ref{tab:macroeffect}.) 
 Macro effects are shown as segment \bartilde{}
 in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 After some algebra (see Appendix~\ref{sec:Re_macro}), 
@@ -1756,7 +1759,7 @@ we find
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Calculations: two examples}
+\section{Two applications of the rebound framework}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -3211,7 +3214,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
-                y = "Re values [-]",
+                y = "Rebound terms [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -3353,7 +3356,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
   ggplot2::scale_y_continuous(breaks = seq(-0.2, 1, by = 0.2)) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
-                y = "Re values [-]",
+                y = "Rebound terms [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -3687,11 +3690,12 @@ energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. 
 Third, from the demand-side perspective
 entertained by \citet{Borenstein:2015aa}, 
-$k = 3$ could be interpreted as a marginal propensity to consume of 75\%. 
+$k = 3$ could be interpreted as 
+a marginal propensity to consume (MPC) of 75\%. 
 (See Appendix~\ref{sec:income_macro_mpc}.)
 $\MPC = 0.75$ is a reasonable number, 
 being in the upper half of recent estimates by \citet{Carroll2017}.
-(The analogy with marginal propensity to consume
+(The analogy with MPC
 makes a link to Borenstein's approach, 
 even though we consider the macro effect to be 
 driven by supply-side productivity growth.)
@@ -3780,7 +3784,7 @@ Future work could be pursued in several areas.
         rebound mechanisms in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
-        for the macro factor ($k$) and its relation to the marginal propensity to consume.
+        for the macro factor ($k$) and its relation to the MPC.
 
   \item The framework could be extended to producer-sided energy rebound mechanisms.
     
@@ -3938,7 +3942,8 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Income and macro effects and relation to marginal propensity to consume}
+\section{Income and macro effects and relation to the
+marginal propensity to consume (MPC)}
 \label{sec:income_macro_mpc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
