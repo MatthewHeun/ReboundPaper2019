@@ -258,10 +258,24 @@ Large rebound, if it exists, will mean that
 efficiency-based efforts to reduce carbon emissions will be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
 
+Those who study energy rebound usually identify 
+locations and levels of rebound.
+Rebound \emph{locations} are typically divided between 
+direct rebound effects 
+(associated with energy to run the energy conversion device) and
+indirect rebound effects
+(energy effects of other expenditures in the broader economy).
+Rebound \emph{levels} are typically aligned with economic levels, namely
+micro
+(rebound at the single device level within a static economy)
+and
+macro
+(rebound caused by dynamic responses of the broader economy).
+
 \citet{Sorrell:2007um} led
 an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
-He found that most studies focused on direct (microeconomic) rebound at the household level,
+He found that most studies focused on direct, microeconomic rebound at the household level,
 with studies typically estimating small rebound magnitudes (10--30\%).
 In contrast, 
 he found
@@ -524,8 +538,8 @@ We begin with our rebound typology.
 \label{sec:rebound_typology}
 %++++++++++++++++++++++++++++++
 
-A challenge to understanding energy rebound is that it comprises
-many mechanisms and effects.
+% A challenge to understanding energy rebound is that it comprises
+% many mechanisms and effects.
 We follow convention to distinguish between
 microeconomic effects (at the single device or device owner level)
 and 
@@ -533,7 +547,9 @@ macroeconomic effects (broader, economy-wide responses
 to a single device upgrade).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
 We follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
-in splitting microeconomic effects into direct and indirect effects.
+in splitting microeconomic effects into 
+direct effects (associated with energy to run the energy conversion device) and
+indirect effects (associated with other expenditures) effects.
 
 Like other authors, we recognize many macroeconomic effects, 
 even if we don't later distinguish among them.
