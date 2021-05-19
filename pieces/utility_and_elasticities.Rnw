@@ -69,7 +69,7 @@ energy efficiency increases by
 
 For completeness,
 we briefly mention a third utility model with Cobb-Douglas form.
-The Cobb-Douglas utility model is a commonly-used special case
+The Cobb-Douglas utility model is a commonly used special case
 of the CES utility model
 with elasticity of substitution ($\sigma$) equal to 1. 
 The Cobb-Douglas utility model simplifies many derivations due to a number of strong assumptions on behavior.
@@ -174,7 +174,7 @@ for convenience.
 The CES utility model is given by Eq.~(\ref{eq:ces_utility}).
 Here, its derivation is shown.
 
-The constant elasticity of substitution (CES) model for utility ($\rate{u}$)
+The CES model for utility ($\rate{u}$)
 is normalized by (indexed to) parameters before emplacement:
 
 \begin{equation}
@@ -490,7 +490,7 @@ in the CES utility model is given by
 \end{equation}
 %
 Thus, the elasticity of substitution ($\sigma$) 
-can be determined from two pieces of readily-available information:
+can be determined from two pieces of readily available information:
 %
 \begin{enumerate*}[label={(\roman*)}]
 	

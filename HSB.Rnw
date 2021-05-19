@@ -60,10 +60,10 @@
        energy rebound analysis framework}
 
 % Bonepile
-% Toward a mathematically-rigorous analytical framework
+% Toward a mathematically rigorous analytical framework
 % for microeconomic energy rebound effects \\
 % OR \\
-% Toward a mathematically-rigorous, consumer-based rebound analysis framework\\
+% Toward a mathematically rigorous, consumer-based rebound analysis framework\\
 % OR \\
 % Towards a comprehensive analytical framework
 % for microeconomic energy rebound effects
@@ -202,15 +202,15 @@ after an energy efficiency upgrade (EEU),
 due to behavior changes and economic effects.
 Famously, the roots of energy rebound trace back to 
 \citeauthor{Jevons:1865}
-who, in his report entitled \emph{The Coal Question}, said 
+who, in \emph{The Coal Question}, said 
 ``[\emph{i}]\emph{t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
 The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
 Less famously, the origins of rebound may extend further backward 
 from \citeauthor{Jevons:1865}
 to \citet{Williams1840}
-who quoted \citeauthor{Parkes1838}
-who wrote ``[t]he economy of fuel is the secret of the economy of the steam-engine; 
+who quoted \citeauthor{Parkes1838}:
+``[t]he economy of fuel is the secret of the economy of the steam-engine; 
 it is the fountain of its power, and the adopted measure of its effects. 
 Whatever, therefore, conduces to increase the efficiency of coal, 
 and to diminish the cost of its use, 
@@ -262,12 +262,12 @@ and achieving Paris emissions reduction targets will be at risk.
 
 Those who study energy rebound usually identify 
 locations and levels of rebound.
-Rebound \emph{locations} are typically divided between 
+Rebound \emph{locations} typically include
 direct rebound effects 
 (associated with energy to run the energy conversion device) and
 indirect rebound effects
 (energy effects of other expenditures in the broader economy).
-Rebound \emph{levels} are typically aligned with economic levels, namely
+Rebound \emph{levels} typically align with economic levels, namely
 micro
 (rebound at the single device level within a static economy)
 and
@@ -277,7 +277,7 @@ macro
 \citet{Sorrell:2007um} led
 an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
-He found that most studies focused on direct, microeconomic rebound at the household level,
+He found that most studies focused on direct, microeconomic rebound in the household,
 with studies typically estimating small rebound magnitudes (10--30\%).
 In contrast, 
 he found
@@ -290,8 +290,8 @@ However, the available studies suggest that economy-wide [macroeconomic]
 rebound effects may frequently exceed 50\%'' \citep[p.~9]{Sorrell:2007um}.
 
 Since the~\citet{Sorrell:2007um} review,
-empirical estimates of (typically) household-level energy rebound
-at the microeconomic scale (direct and indirect)
+empirical estimates of (typically) household energy rebound
+at the microeconomic level (both direct and indirect locations)
 continue to suggest relatively small
 microeconomic rebound magnitudes
 of less than 40\%. 
@@ -415,7 +415,7 @@ First, limitations of \emph{microeconomic} rebound analysis frameworks include
 \begin{enumerate*}[label={(\roman*)}]
 	
 	\item inseparability of substitution and income effects when
-	      applying rebound analysis frameworks to real energy efficiency upgrades and
+	      applying rebound analysis frameworks to real EEUs and
 
   \item the lack of an operationalizable link between micro and macro effects.
     
@@ -431,7 +431,7 @@ the appropriate magnitude of a macroeconomic multiplier.
 
 Third, results from analysis frameworks which estimate \emph{total} rebound 
 are highly dependent upon two assumptions: 
-the type of production function used (Cobb-Douglas, CES, etc.) and
+the type of production function used (Cobb-Douglas, constant elasticity of substitution (CES), etc.) and
 the chosen value of the elasticity of substitution.
 As \citeauthor{Saunders2008} noted, the
 ``choice of production/cost function can pre-determine the results related to rebound \ldots{}
@@ -450,8 +450,7 @@ Furthermore, macroeconomic rebound and its links to micro rebound
 is virtually unexplored territory.
 This state of affairs
 inhibits understanding of rebound mechanisms
-along direct and indirect channels
-at the device level and throughout the economy.
+at direct and indirect locations and micro and macro levels.
 In the absence of integrated theoretical foundations,
 macro energy modeling and energy efficiency policy are at risk
 of being ineffective to achieve efficiency-based CO$_2$ emissions reductions.
@@ -486,7 +485,7 @@ In particular the framework should be one that
   \item incorporates indicative, plausible macroeconomic multiplier values
         to provide a better link between micro and macro effects, and 
 
-  \item enables analysis of real energy efficiency upgrades.
+  \item enables analysis of real EEUs.
   
 \end{enumerate*}
 %
@@ -497,7 +496,7 @@ The key \emph{contributions} of this paper are
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item describing a consistent and mathematically-rigorous, consumer-based energy rebound analysis framework
+  \item describing a consistent and mathematically rigorous, consumer-based energy rebound analysis framework
         in which direct and indirect dimensions of 
         substitution and income effects are connected,
         
@@ -509,7 +508,7 @@ The key \emph{contributions} of this paper are
         namely via energy, expenditure, and consumption path graphs,
   
   \item applying a general CES utility function 
-        via empirically-plausible cost shares of other goods consumption,
+        via empirically plausible cost shares of other goods consumption,
   
   \item providing two numerical case studies (a car and an electric lamp) 
         to demonstrate the application of the rebound analysis framework, and 
@@ -591,7 +590,7 @@ that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
   notation elements used throughout the paper, including
   symbols, Greek letters, decorations, and subscripts.
   The notation elements 
-  can be mixed to comprise a rich and expressive ``language'' of energy rebound.
+  can be mixed to provide a rich and expressive ``language'' of energy rebound.
   In several places, we use colored backgrounds on rebound effects for visual convenience. 
 }.
 The final energy is available at price $p_E$ (in \$/MJ).
@@ -651,7 +650,7 @@ original net savings ($\rorig{N}$) is zero.
   \input{pieces/flowchart.tex}
 \caption{Flowchart of rebound effects and decorations.
          Rebound effects are arranged in the order of their discussion in this paper.
-         The left-ro-right order does not necessarily represent 
+         The left-to-right order does not necessarily represent 
          the progression of rebound effects through time.}
 \label{fig:flowchart}
 \end{figure}
@@ -778,7 +777,7 @@ In each subsection, we
 %
 Detailed derivations of all rebound expressions 
 can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect}
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect},
 which provide a parallel structure for energy and financial accounting
 across all rebound effects.
 
@@ -803,7 +802,7 @@ detailed mathematical descriptions of rebound path graphs.)
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
 notional rebound path graphs through energy, expenditure, and consumption spaces
 for purposes of illustration.
-The notional path graphs are not quantified; there is no scale on the axes.
+The notional path graphs are not quantified; there are no scales on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate the numerical examples.
 
@@ -1161,7 +1160,7 @@ Thus, the line of constant energy consumption through the $\circ$ point is label
 $Re_{tot} = 100\%$.
 Total rebound ($Re_{tot}$) is measured linearly between and beyond the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
-with decomposition to direct rebound in the $x$ direction and 
+with direct rebound in the $x$ direction and 
 indirect rebound in the $y$ direction.
 The region below and to the left of the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}
@@ -1232,13 +1231,13 @@ The EEU causes the embodied energy of the energy conversion device to change
 from $\orig{E}_{emb}$ to $\aempl{E}_{emb}$.
 
 However, for simplicity, we spread all embodied energy
-over the lifetime of the device,
-an equal amount assigned to each period.
-(We later take the same approach to capital costs and
-maintenance and disposal costs.)
+over the lifetime of the device
+to provide a uniform embodied energy rate ($\rate{E}_{emb}$),
+(We later take the same approach to capital costs ($\rate{C}_{cap}$) and
+maintenance and disposal costs ($\rate{C}_{\md}$).)
 A justification for spreading embodied energy purchase costs comes from considering
 device replacements by many consumers across several years.
-In the aggregate, evenly-spaced (in time) replacements
+In the aggregate, evenly spaced (in time) replacements
 work out to the same embodied energy in every period.
 
 Thus, we allocate embodied energy over the life of the original and upgraded devices
@@ -1400,7 +1399,7 @@ the compensated energy service cross-price elasticity of other goods demand ($\e
 to vary along an indifference curve, allowing analysis of
 non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
 We use a fully specified 
-constant elasticity of substitution (CES) utility model,
+CES utility model,
 which allows the exact, direct calculation
 of the utility maximizing consumption bundle for any constraint.
 The utility model describes the device owner's behavior as
@@ -3022,7 +3021,7 @@ energy service (lighting).
 %++++++++++++++++++++++++++++++
 
 Sensitivity analyses show the effect of 
-independently-varied parameters on total rebound and rebound components.
+independently varied parameters on total rebound and rebound components.
 In the context of this framework,
 sensitivity analyses
 can show important trends, tendencies, and relationships
@@ -3495,7 +3494,7 @@ Finally, we discuss below the macro factor ($k$), one of the novel features of t
 
 In this section, we highlight four novel characteristics of the rebound analysis framework.
 First, the framework is, to our knowledge, the first to enable 
-numerically-precise calculation of several microeconomic rebound effects
+numerically precise calculation of several microeconomic rebound effects
 and a macro effect.
 The two examples show the benefits of the framework for such calculations.
 
@@ -3716,7 +3715,7 @@ being in the upper half of recent estimates by \citet{Carroll2017}.
 (The analogy with MPC
 makes a link to Borenstein's approach, 
 even though we consider the macro effect to be 
-driven by supply-side productivity growth.)
+driven by supply side productivity growth.)
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 underestimated $Re_{\macro}$ and, therefore, $Re_{tot}$.
