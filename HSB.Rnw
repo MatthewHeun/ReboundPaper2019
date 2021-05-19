@@ -1376,7 +1376,7 @@ components.
 The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
 and~\ref{fig:ExampleCostPathGraph}, respectively. In particular, the 
-latter indicates the expenditure after the compensating (CV).
+latter indicates the expenditure after the compensating variation (CV).
 
 An approximate utility model
 is often used in the literature
@@ -1419,7 +1419,7 @@ as $\rho \equiv (\sigma - 1)/\sigma$.
 See Appendix~\ref{sec:utility_and_elasticities}
 for further details of the CES utility model.
 
-Direct substitution effect rebound ($Re_{dsub}$) is given by
+Direct substitution effect rebound ($Re_{dsub}$) is
 
 \begin{equation} \label{eq:Re_dsub_def}
   Re_{dsub} = \frac{\Delta \rasub{E}_s}{\Sdot} \; ,
