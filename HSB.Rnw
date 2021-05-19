@@ -1497,7 +1497,7 @@ $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
 Thanks to the energy service price decline, real income rises, 
 and freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-Emplacement effect expenditures and compensating variation
+Emplacement effect expenditures and CV
 modify freed cash to leave the device owner with
 \emph{net} income ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
@@ -1511,8 +1511,7 @@ savings from the EEU
 (segments \hatd{} and \dbar{} in 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}).
 
-In this framework,
-the income effect must satisfy several constraints.
+The income effect must satisfy several constraints.
 First, net savings must be zero after
 the income effect ($\rainc{N} = 0$).
 The monetary budget constraint $\rbempl{M}$ holds, so that only 
@@ -1574,7 +1573,8 @@ The ratio of rates of energy service consumed across the income effect is given 
   \incprefseqn \; .
 \end{equation}
 %
-Homotheticity means that $\eqsM = 1$.
+Homotheticity means that $\eqsM = 1$, 
+but not all net income ($\rbinc{N}$) is spent on more energy for the energy conversion device.
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
@@ -1606,7 +1606,14 @@ the expression for direct income rebound is
 \end{equation}
 %
 If there is no net savings after the substitution effect ($\rasub{N} = 0$), 
-direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.
+direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.%
+\footnote{
+  Zero net income ($\rasub{N} = 0$) could occur if 
+  an increase in capital cost rate ($\Delta \raempl{C}_{cap}$) and
+  maintenance and disposal cost rate ($\Delta \raempl{C}_{\md}$)
+  consume all freed cash ($\rate{G}$) and savings from the CV.
+}
+%
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
 
@@ -1666,8 +1673,6 @@ of income effect rebound.
 The previous rebound effects
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature. 
-% However, it follows immediately
-% from the assumption on the income effect that the economy grows.
 However, the changes at the micro level have important implications at the macro level,
 including economic expansion.
 As the price level in the economy falls, 
@@ -1693,11 +1698,11 @@ possible follow-up technological change induced by the EEU%
   In the first year, 
   the technological improvement could even have contractionary effects \citep{Basu2006}.
 }.
-The framework incorporates annual average effects over 
+This framework incorporates annual average effects over 
 the lifetime of the upgraded device, 
 so dynamic effects that take time to unfold matter.
-To describe all the channels by which these dynamic effects operate, 
-authors distinguish among several macro rebound effects:
+To describe all the mechanisms by which these dynamic effects operate, 
+the literature distinguishes among several macro rebound effects:
 a scale effect, a structural change effect, employment and investment effects, 
 and further price effects \citep{Colmenares2020,Brockway2021}.
 As \citet{VanBenthem2015} notes, 
@@ -1725,20 +1730,28 @@ linked to our income effect and its consequences for macroeconomic rebound.
 To operationalize the macro rebound effect, we scale
 the post-substitution-effect net savings~($\rasub{N}$) gained by device owners at the micro level.
 As argued by \citet{Antal:2014aa}, 
-it is reasonable to assume that net savings ($\rasub{N}$) are spent in the economy at the average 
+it is reasonable to assume in aggregate that
+net savings ($\rasub{N}$) are spent in the economy at the average 
 energy intensity of the economy ($I_E$). 
 Scaling from net savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is unexplored territory,
 as \citet{Borenstein:2015aa} notes.
 In the absence of better information,
 we express this scaling simply by a macro factor ($k$)
-with $k \ge 0$ expected.
+with $k \ge 0$ expected.%
+\footnote{
+  $k$ has units of \$ of economic growth created per \$ of net savings
+  after the substitution effect ($\rasub{N}$).
+}
+%
 $k = 0$ means there is no macroeconomic productivity boost
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption in the economy.
 For now, we choose $k = 1$ as a placeholder value,
-with further exploration of its magnitude in Section~\ref{sec:discussion}.
+with further exploration of its effect on total rebound 
+in Section~\ref{sec:effect_of_macro_factor} and
+its magnitude in Section~\ref{sec:macro_rebound_discussion}.
 
 Macro rebound is given by
 
