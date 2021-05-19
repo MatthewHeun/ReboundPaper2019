@@ -260,10 +260,24 @@ Large rebound, if it exists, means that
 efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
 
+Those who study energy rebound usually identify 
+locations and levels of rebound.
+Rebound \emph{locations} are typically divided between 
+direct rebound effects 
+(associated with energy to run the energy conversion device) and
+indirect rebound effects
+(energy effects of other expenditures in the broader economy).
+Rebound \emph{levels} are typically aligned with economic levels, namely
+micro
+(rebound at the single device level within a static economy)
+and
+macro
+(rebound caused by dynamic responses of the broader economy).
+
 \citet{Sorrell:2007um} led
 an important systematic review of energy rebound estimates,
 considering over 500 studies and reports from around the world.
-He found that most studies focused on direct (microeconomic) rebound at the household level,
+He found that most studies focused on direct, microeconomic rebound at the household level,
 with studies typically estimating small rebound magnitudes (10--30\%).
 In contrast, 
 he found
@@ -526,8 +540,8 @@ We begin with our rebound typology.
 \label{sec:rebound_typology}
 %++++++++++++++++++++++++++++++
 
-A challenge to understanding energy rebound is that it comprises
-many mechanisms and effects.
+% A challenge to understanding energy rebound is that it comprises
+% many mechanisms and effects.
 We follow convention to distinguish between
 microeconomic effects (at the single device or device owner level)
 and 
@@ -535,7 +549,9 @@ macroeconomic effects (broader, economy-wide responses
 to a single device upgrade).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
 We follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
-in splitting microeconomic effects into direct and indirect effects.
+in splitting microeconomic effects into 
+direct effects (associated with energy to run the energy conversion device) and
+indirect effects (associated with other expenditures) effects.
 
 Like other authors, we recognize many macroeconomic effects, 
 even if we don't later distinguish among them.
@@ -567,7 +583,17 @@ and sets out the typology for this paper.
 %++++++++++++++++++++++++++++++
 
 We assume an energy conversion device (say, a car)
-that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
+that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
+\footnote{
+  Note that
+  the vocabulary and mathematical notation for rebound effects is extensive;
+  Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
+  notation elements used throughout the paper, including
+  symbols, Greek letters, decorations, and subscripts.
+  The notation elements 
+  can be mixed to comprise a rich and expressive ``language'' of energy rebound.
+  In several places, we use colored backgrounds on rebound effects for visual convenience. 
+}.
 The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
 $\rbempl{q}_s$ (in vehicle-km/year)
@@ -618,14 +644,6 @@ for the device owner is
 %
 where 
 original net savings ($\rorig{N}$) is zero.
-Note that
-the vocabulary and mathematical notation for rebound effects is extensive;
-Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-notation elements used throughout the paper, including
-symbols, Greek letters, decorations, and subscripts.
-The notation elements 
-can be mixed to comprise a rich and expressive ``language'' of energy rebound.
-In several places, we use colored backgrounds on rebound effects for visual convenience. 
 
 \begin{figure}
 \centering
@@ -702,7 +720,7 @@ the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination
 (the examples in Section~\ref{sec:examples}) are shown
 beneath each equation.
-%
+
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
   \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber \\
@@ -710,7 +728,7 @@ beneath each equation.
 \end{align}
 %
 Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
-%
+
 \begin{align} \label{eq:ps_pE_eta}
   p_s &= \frac{p_E}{\eta} \\
   \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber \\
@@ -719,7 +737,7 @@ Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to
 %
 Third, energy service expenditure rates~($\rate{C}_s$) are the product 
 of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
-%
+
 \begin{align}
   \rate{C}_s &= p_E \rate{E}_s \\
   \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
@@ -727,7 +745,7 @@ of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 %
 Fourth, indirect energy rates~($\rate{E}_j$) are the product 
 of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$).
-%
+
 \begin{align} \label{eq:indirect_energy_rates}
   \rate{E}_j &= \rate{C}_j I_E \\
   \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
@@ -1574,13 +1592,14 @@ adjusts income ($\rorig{M}$) to account for
 sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
 net income ($\rasub{N}$).
 
-As shown in Table~\ref{tab:inceffect}, direct income rebound is defined as
+Direct income rebound is defined as
 
 \begin{equation} \label{eq:Re_dinc_def}
   Re_{dinc} \equiv \frac{\Delta \rainc{E}_s}{\Sdot} \; .
 \end{equation}
 %
-After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_dinc}), 
+(See Table~\ref{tab:inceffect}.)
+After substitution, rearranging, and canceling of terms (Appendix~\ref{sec:Re_dinc}), 
 the expression for direct income rebound is
 
 \begin{equation} \label{eq:Re_dinc}
@@ -1629,7 +1648,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
-After much substitution, rearranging, and canceling of terms (see Appendix~\ref{sec:Re_iinc}), 
+After substitution, rearranging, and canceling of terms (Appendix~\ref{sec:Re_iinc}), 
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
@@ -1751,14 +1770,14 @@ is expressed in terms of other rebound effects.
 (Derivation details can be found in Appendix~\ref{sec:total_rebound}.)
 After algebra and canceling of terms,
 we find
-%
+
 \begin{align} \label{eq:Re_tot}  
   Re_{tot} = \; \Retoteqn{} \; .
 \end{align}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Calculations: two examples}
+\section{Two applications of the rebound framework}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2002,10 +2021,10 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
                                                             &               & \citet{US_DoT:2018}. \\
   \midrule
-  Real median personal income U.S., in 2018                   & 33,706        & Taken from \citet{St_Louis_Fed:2019}.\\
+  Real median personal income U.S., in 2018                 & 34,317        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ eisposable income /                                    & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
+  U.S.\ disposable income /                                 & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   real income (minus current taxes)                         &               & National and Products Accounts (NIPA) \\
   {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
@@ -2015,7 +2034,7 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
+  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from U.S.\ Energy Information Agency (EIA) data \\
@@ -2583,17 +2602,17 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   Lighting consumption prior to upgrade   & \Sexpr{q_dot_s_orig_lamp_char}  & Calculation: (530 lm) (3 hrs/day) (365 days/year). \\
   $\rbempl{q}_s$ [lm-hr/year]                               &               & \\
   \midrule
-  Real median personal income U.S.\, in 2018                   & 33,706        & Refer to Table~\ref{tab:car_economic_parameters}.\\
+  Real median personal income U.S.\, in 2018                & 34,317        & Refer to Table~\ref{tab:car_economic_parameters}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ disposable income /                                    & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters}. \\
+  U.S.\ disposable income /                                 & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters}. \\
   real income (minus current taxes)                         &               &  \\
   {} [--]                                                   &               &  \\
   \midrule
   Share of savings from disposable income                   & 0.079         & Refer to Table~\ref{tab:car_economic_parameters}. \\
   {} [--]                                                   &               &  \\ 
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$33,706\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
+  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2020 average household electricity price \\
@@ -3213,7 +3232,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = eta_sens_par
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
-                y = "Re values [-]",
+                y = "Rebound terms [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -3355,7 +3374,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
   ggplot2::scale_y_continuous(breaks = seq(-0.2, 1, by = 0.2)) +
   ggplot2::facet_wrap(facets = "Case", scales = "free_x") + 
   ggplot2::labs(x = expression(p[E]*" [$/gal (Car) or $/kW-hr (Lamp)]"),
-                y = "Re values [-]",
+                y = "Rebound terms [-]",
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -3689,11 +3708,12 @@ energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. 
 Third, from the demand-side perspective
 entertained by \citet{Borenstein:2015aa}, 
-$k = 3$ could be interpreted as a marginal propensity to consume of 75\%. 
+$k = 3$ could be interpreted as 
+a marginal propensity to consume (MPC) of 75\%. 
 (See Appendix~\ref{sec:income_macro_mpc}.)
 $\MPC = 0.75$ is a reasonable number, 
 being in the upper half of recent estimates by \citet{Carroll2017}.
-(The analogy with marginal propensity to consume
+(The analogy with MPC
 makes a link to Borenstein's approach, 
 even though we consider the macro effect to be 
 driven by supply-side productivity growth.)
@@ -3782,7 +3802,7 @@ Future work could be pursued in several areas.
         rebound mechanisms in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
-        for the macro factor ($k$) and its relation to the marginal propensity to consume.
+        for the macro factor ($k$) and its relation to the MPC.
 
   \item The framework could be extended to producer-sided energy rebound mechanisms.
     
@@ -3916,8 +3936,7 @@ using an early version of this framework.
 \label{sec:utility_and_elasticities}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \input{pieces/utility_and_elasticities.Rnw}
-<<UtilityAppendix,child="pieces/utility_and_elasticities.Rnw">>=
+<<UtilityAppendix, child="pieces/utility_and_elasticities.Rnw">>=
 @
 
 
@@ -3941,7 +3960,8 @@ using an early version of this framework.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Income and macro effects and relation to marginal propensity to consume}
+\section{Income and macro effects and relation to the
+marginal propensity to consume (MPC)}
 \label{sec:income_macro_mpc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
