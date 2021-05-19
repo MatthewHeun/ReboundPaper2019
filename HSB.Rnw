@@ -1722,16 +1722,16 @@ with consequent implications for additional energy consumption in the economy.
 For now, we choose $k = 1$ as a placeholder value,
 with further exploration of its magnitude in Section~\ref{sec:discussion}.
 
-As shown in Table~\ref{tab:macroeffect}, 
-macro rebound is given by
+Macro rebound is given by
 
 \begin{equation} \label{eq:Re_macro_def}
   Re_{\macro} = \frac{k \rbinc{N} I_E}{\Sdot} \; .
 \end{equation}
 %
+(See Table~\ref{tab:macroeffect}.) 
 Macro effects are shown as segment \bartilde{}
 in Fig.~\ref{fig:ExampleEnergyPathGraph}.
-After some algebra (see Appendix~\ref{sec:Re_macro}), 
+After some algebra (Appendix~\ref{sec:Re_macro}), 
 we arrive at an expression for macro effect rebound:
 
 \begin{equation} \label{eq:Re_macro}
