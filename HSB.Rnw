@@ -1949,7 +1949,7 @@ in Table~\ref{tab:car_parameters}.
 Second, we require several general parameters, 
 mainly relating to the U.S.\ economy and personal finances 
 of the average U.S.\ citizen. 
-The parameters and the values used in the study 
+The parameters and the values used in the car example 
 are given in Table~\ref{tab:car_economic_parameters}.
 Third, we require elasticity parameters, 
 as given in Table~\ref{tab:car_elasticity_parameters}.
@@ -2532,7 +2532,7 @@ First, the basic lamp parameters are summarized in Table~\ref{tab:lamp_parameter
 Second, we require several general parameters, 
 mainly relating to the U.S.\ economy and 
 personal finances of the average U.S.\ citizen. 
-The parameters and the values used in the study 
+The parameters and the values used in the lamp example 
 are given below in Table~\ref{tab:lamp_economic_parameters}.
 Third, we require the elasticity parameters, 
 as shown in Table~\ref{tab:lamp_elasticity_parameters}.
@@ -3517,7 +3517,7 @@ for non-marginal efficiency improvements
 in numerically precise graphics. 
 The possibility of decomposing direct and indirect rebound effects into 
 substitution and income effects was outlined by \citet{Khazzoom1980}, 
-spelt out clearly by \citet{greening2000}, and
+spelled out clearly by \citet{greening2000}, and
 numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
 Yet, past investigations of microeconomic rebound
 typically show only stylized graphs of indifference curves in the consumption space, 
@@ -3579,17 +3579,15 @@ absolute energy savings are expected to increase as efficiency grows.
 However, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that 
 takeback increases with efficiency, so caution is merited.
 
-Larger efficiency increases can require higher capital investment within a given technology.
-To encourage market penetration of higher-efficiency devices, 
-regulators may be tempted to reduce costs to device purchasers via rebates or subsidies, 
-the topic of the next section.
-
 
 %------------------------------
 \subsubsection{Rebates or subsidies} 
 \label{sec:policy:rebates_or_subsidies}
 %------------------------------
 
+Larger efficiency increases can require higher capital investment within a given technology.
+To encourage market penetration of higher-efficiency devices, 
+regulators may be tempted to reduce costs to device purchasers via rebates or subsidies.
 Rebates or subsidies can be offered to device purchasers to incentivize adoption of 
 energy-efficiency technologies and grow their markets.
 Doing so effectively reduces the capital cost of energy efficiency devices ($\amacro{C}_{cap}$).
@@ -3614,7 +3612,8 @@ the topic of the next section.
 %------------------------------
 
 Carbon taxes reduce net income earned by device owners after the EEU
-by raising the effective price of fossil energy and the price of any fossil energy-powered energy service,
+by raising the effective price of fossil energy and the price 
+of any fossil energy-powered energy service,
 such as non-electric cars.
 By raising input prices,
 consumers are incentivized to use less of the energy service and 
@@ -3622,7 +3621,8 @@ buy more-efficient devices.
 However, increasing the price of energy means that subsequent 
 increases in energy efficiency provide increasing net income.
 Fig.~\ref{fig:all_Re_terms_p_E_graph} shows that energy rebound rises with energy price.
-The route to higher rebound from rising energy prices is through the income and macro effects.
+The route to higher rebound from rising energy prices is through the income and macro effects
+(assuming non-zero macro factor ($k$)).
 Thus, policymakers should be aware that raising energy prices will not be as effective 
 as presumed, due to rebound effects.
 Naturally, higher energy prices are likely
@@ -3720,8 +3720,7 @@ energy prices due to the fallen demand) induces consumption at a higher
 energy intensity than that of the pre-EEU economy. 
 Third, from the demand-side perspective
 entertained by \citet{Borenstein:2015aa}, 
-$k = 3$ could be interpreted as 
-a marginal propensity to consume (MPC) of 75\%. 
+$k = 3$ could be interpreted as $\MPC = 0.75$. 
 (See Appendix~\ref{sec:income_macro_mpc}.)
 $\MPC = 0.75$ is a reasonable number, 
 being in the upper half of recent estimates by \citet{Carroll2017}.
@@ -3752,7 +3751,7 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we have developed a comprehensive, consumer-based rebound analysis framework
+we developed a comprehensive, consumer-based rebound analysis framework
 that solidifies theoretical foundations for energy rebound,
 enables empirical analysis, and 
 can be used to guide energy efficiency policy.
@@ -3910,8 +3909,8 @@ using an early version of this framework.
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
 
-% Gives a helpful "Appendix" label
-\section*{Appendix}
+% Gives a helpful "Appendices" label
+\section*{Appendices}
 
 % Labels each appendix as A, B, C, etc. instead of Appendix A, Appendix B, Appendix C, etc.
 \renewcommand{\thesection}{\Alph{section}}
