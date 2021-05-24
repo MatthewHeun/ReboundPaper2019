@@ -469,7 +469,9 @@ energy policy-making~\citep{fontvivanco2016},
 limiting our ability to assess the interactions among
 rebound, energy demand, and carbon emissions going forward.
 
-Bringing these concerns together, further theoretical and empirical research is vital
+Bringing these concerns together, further 
+%theoretical and empirical 
+research is vital
 to advance our understanding of energy rebound, 
 to formulate effective energy policy, and 
 to take appropriate climate change mitigation actions.
