@@ -579,7 +579,7 @@ summarizes and reconciles some of the existing typologies
 and sets out the typology for this paper. 
 
 \begin{table}
-\caption{Rebound typology adopted with comparison to existing literature.}
+\caption{Chosen rebound typology with comparison to existing literature.}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
