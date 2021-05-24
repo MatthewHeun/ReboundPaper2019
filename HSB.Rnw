@@ -235,9 +235,9 @@ including \citet{Saunders2015} and \citet{Stern2020},
 claim the evidence for large rebound
 (greater than 50\%)
 is growing.
-(Rebound above 100\% is known as ``backfire,'' - \citet{Saunders:2000aa}). 
-\citet{sonnberger2018rebound} suggest that rebound is 
-evidenced by an acceleration of everyday life.
+(Rebound above 100\% is known as ``backfire'' \citep{Saunders:2000aa}.)
+\citet{sonnberger2018rebound} suggest that the acceleration of everyday life 
+is evidence of rebound.
 
 Amidst the rebound debate,
 energy efficiency measures are expected to deliver
