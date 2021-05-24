@@ -235,7 +235,7 @@ including \citet{Saunders2015} and \citet{Stern2020},
 claim the evidence for large rebound
 (greater than 50\%)
 is growing.
-(Rebound above 100\% is known as ``backfire.'')
+(Rebound above 100\% is known as ``backfire,'' - \citet{Saunders:2000aa})
 
 Amidst the rebound debate,
 energy efficiency measures are expected to deliver
@@ -243,16 +243,20 @@ energy-related
 CO$_2$ emissions reductions in support of
 Paris Agreement targets~\citep{masson-delmotte2018},
 even while the world economy grows.
-For example, by 2050
-energy efficiency is expected to contribute 37\% of 
+As one 
+%For 
+example, by 2050
+energy efficiency is relied on 
+%expected 
+to contribute 37\% of 
 energy-related carbon emissions reductions globally
 in the International Energy Agency's Sustainable Development scenario
 (relative to its Stated Policies scenario, 
 which itself includes planned energy efficiency)
 ~\citep[Fig.~2.1]{InternationalEnergyAgency2019}.
-As \citet{Brockway2021} note, 
+However, as \citep[Fig.1 and Fig.2]{Brockway2021} show, 
 the expected reductions in energy consumption 
-would represent a structural break with the historical record
+would represent a significant structural break with the historical record
 of tight coupling between energy consumption and GDP.
 Thus, the magnitude of energy rebound is much more than an academic debate, 
 because there is a lot at stake. 
@@ -316,7 +320,7 @@ with a mean total rebound estimate of around 60\%.
 A smaller group of studies used three other methods:
 non-CGE macroeconomic models
 (e.g., \citet{Barker2009} and \citet{Lemoine:2020aa}),
-econometric analysis (e.g., \citet{Wei2019} and \citet{Bruns2019}), and
+econometric analysis (e.g., \citet{Wei2019}, \citet{Yan2019}, and \citet{Bruns2019}), and
 productivity or growth accounting studies (e.g., \citet{Lin2015}).
 Like the CGE studies, 
 the average estimate of total rebound magnitude from non-CGE methods 
@@ -341,7 +345,7 @@ microeconomic, macroeconomic, and total energy rebound.
 At the \emph{microeconomic} level,
 direct and indirect rebound are often estimated 
 via energy service price elasticities (e.g.,~\citet{Schipper2000}).
-Recent microeconomic advances include those by 
+Advances at the microeconomic level include those by 
 \citet{Thomas:2013aa}, who set out a detailed rebound analysis framework
 of direct and indirect microeconomic effects;
 \citet{Borenstein:2015aa}, who provided a detailed decomposition
@@ -356,7 +360,9 @@ models of consumer preferences lack robustness.
 of analysis of life-cycle analysis effects of the energy efficient device.)
 
 The importance of interactions between microeconomic and \emph{macroeconomic}
-rebound effects is suggested by the so-called \emph{Khazzoom-Brookes Postulate} \citep{Saunders:1992aa}, 
+rebound effects is suggested by the 
+%so-called 
+\emph{Khazzoom-Brookes Postulate} \citep{Saunders:1992aa}, 
 defined by \citeauthor{Herring1999} as
 ``increased energy-efficiency at the micro-economic level,
 while leading to a reduction of energy use at this level, 
@@ -482,7 +488,7 @@ In particular the framework should be one that
   \item builds upon microeconomic foundations and 
         carefully distinguishes among microeconomic rebound mechanisms,
   
-  \item incorporates indicative, plausible macroeconomic multiplier values
+  \item incorporates plausible macroeconomic multiplier values
         to provide a better link between micro and macro effects, and 
 
   \item enables analysis of real EEUs.
