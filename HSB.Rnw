@@ -423,7 +423,7 @@ First, limitations of \emph{microeconomic} rebound analysis frameworks include
 \begin{enumerate*}[label={(\roman*)}]
 	
 	\item inseparability of substitution and income effects when
-	      applying rebound analysis frameworks to real EEUs and
+	      in applied analysis of EEUs and
 
   \item the lack of an operationalizable link between micro and macro effects.
     
@@ -439,7 +439,7 @@ the appropriate magnitude of a macroeconomic multiplier.
 
 Third, results from analysis frameworks which estimate \emph{total} rebound 
 are highly dependent upon two assumptions: 
-the type of production function used (Cobb-Douglas, constant elasticity of substitution (CES), etc.) and
+the type of utility function used (Cobb-Douglas, constant elasticity of substitution (CES), etc.) and
 the chosen value of the elasticity of substitution.
 As \citeauthor{Saunders2008} noted, the
 ``choice of production/cost function can pre-determine the results related to rebound \ldots{}
@@ -801,7 +801,7 @@ Important quantities for the derivations are
   
   \item the consumption rate of the energy service ($\rate{q}_s$), and
   
-  \item the consumption rate of other goods ($\rate{C}_o$).
+  \item the expenditure rate on other consumption goods ($\rate{C}_o$).
     
 \end{enumerate*}
 %
@@ -1334,20 +1334,27 @@ Neoclassical consumer theory distinguishes between
 This section develops mathematical expressions 
 for substitution effect rebound ($Re_{sub}$).
 (The next section addresses income effect rebound, $Re_{inc}$.)
-The substitution effect alters compensated demand, 
+The substitution effect alters compensated demand, which is the demand for
 the expenditure minimizing consumption bundle that
-maintains utility at the pre-EEU upgrade, given the new prices. 
-It involves
+maintains utility at the pre-EEU upgrade, given the new prices. Compensated
+demand is a technical term for a thought experiment from welfare economics: 
+the device owner's budget is altered so that the owner is ``compensated" 
+for the change in price and continues just to be
+able to reach the same level of utility as before. The change in 
+the budget is called compensating variation.
+The substitution effect involves
 %
 \begin{enumerate*}[label={(\roman*)}]
 
   \item an increase in consumption of the energy service,
         a direct substitution effect (subscript $dsub$) and
 
-  \item a compensating decrease in consumption of other goods,
-        an indirect substitution effect (subscript $isub$).
+  \item a decrease in consumption of other goods,
+        an indirect substitution effect (subscript $isub$),
 
 \end{enumerate*}
+where the shift from other goods to energy service demand
+is caused by the change in relative prices.
 %
 Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
@@ -1385,8 +1392,7 @@ direct (the increase in energy service consumption, segment \chat{})
 components.
 The impact of the substitution effect on energy consumption rates and expenditure rates
 can be seen in Figs.~\ref{fig:ExampleEnergyPathGraph}
-and~\ref{fig:ExampleCostPathGraph}, respectively. In particular, the 
-latter indicates the expenditure after the compensating variation (CV).
+and~\ref{fig:ExampleCostPathGraph}, respectively.
 
 An approximate utility model
 is often used in the literature
@@ -1400,7 +1406,7 @@ the compensated energy service cross-price elasticity of other goods demand ($\e
 are constant along an indifference curve.
 Whether that is true depends on the utility function used.
 Constant price elasticities (as in the approximate utility model)
-are approximations that are only applicable to marginal price changes. 
+are approximations that are in general only applicable to marginal price changes. 
 Appendix~\ref{sec:Re_sub} contains details of the approximate utility model.
 
 Here, we present an exact method that allows 
