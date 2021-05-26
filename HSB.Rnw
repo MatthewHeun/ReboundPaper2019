@@ -2082,9 +2082,9 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from U.S.\ Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,306 (spend on energy service) \\
+  Fractional spend on original energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,306 (spend on energy service) \\
   $\fCs$ [--]                                               &               & / [\$19,115 (other goods) + \$1,306 (energy service)] = 0.064, \\
-                                                            &               & where spend on energy service = 12,416 miles / 42 mpg \\
+                                                            &               & where spend on energy service = 12,416 miles / 25 mpg \\
                                                             &               & $\times$ \$2.63/gallon = \$1,306. \\
   \midrule
   Macro factor                                              & \Sexpr{k_car_char}           & Assumed value. \\  
@@ -2661,10 +2661,10 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2018 average US household electricity price \\
   $p_E$ [\$/kW-hr]                                          &               & \citep{US_EIA:2020_electricity}.  \\
   \midrule
-  Fractional spend on energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$9/year (spend on energy service) / \\
+  Fractional spend on original energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$8.5/year (spend on energy service) / \\
   $\fCs$ [--]                                               &               & [\$27,920/year (other goods) + \$8.5/year (energy service)] = 0.00030, \\
                                                             &               & where spend on energy service = 580,350 lm-hrs/year /  \\
-                                                            &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1287/kW-hr = \$8.5/year.  \\
+                                                            &               & 8.83 lm/W / 1000 W/kW $\times$ \$0.1287/kW-hr = \$8.5/year.  \\
   \midrule
   Macro factor                                              & \Sexpr{k_lamp_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
