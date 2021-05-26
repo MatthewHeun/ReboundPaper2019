@@ -2004,20 +2004,18 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
     Parameters [units]                              & (gasoline) & (hybrid EV) &  \\
   \midrule
   Fuel economy                           & \Sexpr{mpg_worse} & \Sexpr{mpg_better} & Combined cycle mpg value taken from \citet{Car_Connection:2020}, \\
-  $\bempl{\eta}$, $\amacro{\eta}$ [mpg]             &           &          & Turbo Premium Unleaded for Titanium FWD model with Intercooled  \\
-                                                    &           &          & I-4, 2.0 L engine. \\
+  $\bempl{\eta}$, $\amacro{\eta}$ [mpg]             &           &          & for Titanium FWD 2020 model with Intercooled I-4, 2.0 L engine.   \\
                                                     &           &          & Combined cycle mpg value taken from \citet{Car_Connection:2020},\\
-                                                    &           &          & for Titanium FWD model with Gas/Electric I-4, 2.0 L engine. \\
+                                                    &           &          & for Titanium FWD 2020 model with Gas/Electric I-4, 2.0 L engine. \\
   \midrule
-   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs.  \\
-                                                    &           &          & Ford Fusion Hybrid car includes a \$4,000 tax rebate correct at the time of writing, \\
-                                                    &           &          & which makes the purchase cost cheaper than the conventional Ford Fusion car. \\
+   Capital expenditure rate      & \Sexpr{C_dot_cap_orig_car_char}     & \Sexpr{C_dot_cap_star_car_char}    & Seven year annual, averaged capital costs = purchase + finance costs  \\
    $\rbempl{C}_{cap}$, $\raempl{C}_{cap}$ [\$/year] &           &          & -- resale value (purchase -- depreciation). Ford Fusion gasoline costs from \\
-                                                    &           &          & \citet{Edmunds:2019_gasoline_fusion}. Ford Fusion Hybrid car costs from \citet{Edmunds:2019_energi_fusion}. \\
+                                                    &           &          & \citet{Edmunds:2020_fusion_gasoline}. \\
+                                                    &           &          & Ford Fusion Hybrid car costs from \citet{Edmunds:2020_fusion_hybrid}. \\
  \midrule
-   Ownership duration            & \Sexpr{t_own_orig_car_char}  & \Sexpr{t_own_star_car_char}  & U.S.\ car ownership (from new) length taken from \citet{BusinessWire:2015}, \\
-   $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          & and has risen from 52 months (2005) to 79 months (2015), so assumed as \\
-                                                    &           &          & 84 months in 2019 (7 years) for our example. \\
+   Ownership duration            & \Sexpr{t_own_orig_car_char}  & \Sexpr{t_own_star_car_char}  & U.S.\ car ownership (from new) length from \citet{BusinessWire:2015}, \\
+   $\bempl{t}_{own}$, $\aempl{t}_{own}$ [years]     &           &          & and has risen from 52 months (2005) to 79 months (2015), so  \\
+                                                    &           &          & taken as 84 months in 2020 (7 years) for our example. \\
  \midrule
    Lifespan                     & \Sexpr{t_life_orig_car_char}  & \Sexpr{t_life_star_car_char} & Lifetime taken as 14 years, based on 13--17 years for U.S.\ cars \\
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Berla:2016} and 14 years for UK cars from \\
@@ -2025,16 +2023,17 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
  \midrule
    Embodied energy             & \Sexpr{E_emb_orig_car_char}    & \Sexpr{E_emb_star_car_char}   & 34,000 MJ for conventional Ford Fusion gasoline car taken from \\
    $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & \citet{Argonne_National_Laboratory:2010}. \\
-                                                    &           &          & We assume an additional 6,000 MJ added for Ford Fusion Hybrid Electric Vehicle (HEV) \\
-                                                    &           &          & battery, as HEV typically adds 10--25\% to total LCA energy of vehicle  \\
-                                                    &           &          & manufacture \citet{onat2015conventional}. \\
+                                                    &           &          & We assume an additional 6,000 MJ added for Ford Fusion \\
+                                                    &           &          & Hybrid Electric Vehicle (HEV) battery, as HEV typically adds 10--25\% \\
+                                                    &           &          & to total LCA energy of vehicle manufacture \citet{onat2015conventional}. \\
                                                     &           &          & Battery lifetime assumed same as car lifetime, based on \\
                                                     &           &          & \citet{nordelof2014environmental}, and \citet{onat2015conventional}. \\
  \midrule
   Maintenance and disposal expenditure rate  & \Sexpr{C_dot_md_orig_car_char}  & \Sexpr{C_dot_md_star_car_char}    & Seven year annual, averaged maintenance costs = sum of insurance, \\
-  $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees (excluding financing, depreciation, fuel). \\
-                                                    &           &          & Ford Fusion maintenance costs from \citet{Edmunds:2019_gasoline_fusion}. \\
-                                                    &           &          & Ford Fusion Hybrid maintenance costs from \citet{Edmunds:2019_energi_fusion}. \\
+  $\rbempl{C}_{\md}$, $\raempl{C}_{\md}$ [\$/year]  &           &          & maintenance, repairs, taxes, and fees \\
+                                                    &           &          & (excluding financing, depreciation, fuel). \\
+                                                    &           &          & Ford Fusion maintenance costs from \citet{Edmunds:2020_fusion_gasoline}. \\
+                                                    &           &          & Ford Fusion Hybrid maintenance costs from \citet{Edmunds:2020_fusion_hybrid}. \\
   \bottomrule
 \end{tabular}
 \end{center}
@@ -2055,33 +2054,34 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   Description & Value & Data sources and notes \\ 
   Parameter [units] & & \\
   \midrule
-  Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average U.S.\ vehicle miles/year, taken from \citet{Car_Insurance:2019}.  \\
-  $\rbempl{q}_s$ [miles/year]                               &               & This is slightly higher than the average driver miles/year (13,476) from \\
-                                                            &               & \citet{US_DoT:2018}. \\
+  Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average U.S.\ vehicle miles/year, calculated from \citet{Car_Insurance:2019}.  \\
+  $\rbempl{q}_s$ [miles/year]                               &               & This is slightly lower than the average driver miles/year (13,476) \\
+                                                            &               & \citet{US_DoT:2018},as there are \\
+                                                            &               & more registered US vehicles than drivers. \\
   \midrule
   Real median personal income U.S., in 2018                 & 34,317        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ disposable income /                                 & 0.88268       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
+  U.S.\ 2018 disposable income /                            & 0.88319       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   real income (minus current taxes)                         &               & National and Products Accounts (NIPA) \\
   {} [--]                                                   &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\ 
   \midrule
-  Share of savings from disposable income                   & 0.079         & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
+  Share of savings from 2018 disposable income              & 0.07848       & Taken from U.S.\ Bureau of Economic Analysis (BEA) \\
   {} [--]                                                   &               & National and Products Accounts (NIPA) \\ 
                                                             &               & Table 2.1. Personal Income and Its Disposition, \\
                                                             &               & \citet{US_BEA:2020}, \\
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$ \\
+  Personal consumption in 2018                  & \Sexpr{M_dot_orig_car_char}      & Calculation: $(\$34,317\mathrm{/year}) (0.88319) (1 - 0.07848)$ \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
   Price of gasoline                       & \Sexpr{p_E_orig_car_char}       & Taken from U.S.\ Energy Information Agency (EIA) data \\
   $p_E$ [\$/gallon]                                         &               & \citet{US_EIA:2020_gasoline} \\
   \midrule  
-  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,275 (spend on energy service) \\
-  $\fCs$ [--]                                               &               & / [\$19,234 (other goods) + \$1,275 (energy service)] = 0.062, \\
-                                                            &               & where spend on energy service = 14,425 miles / 42 mpg \\
-                                                            &               & $\times$ \$2.21/gallon = \$1,275. \\
+  Fractional spend on energy service      & \Sexpr{f_Cs_orig_car_char}      & Calculation: \$1,306 (spend on energy service) \\
+  $\fCs$ [--]                                               &               & / [\$19,115 (other goods) + \$1,306 (energy service)] = 0.064, \\
+                                                            &               & where spend on energy service = 12,416 miles / 42 mpg \\
+                                                            &               & $\times$ \$2.63/gallon = \$1,306. \\
   \midrule
   Macro factor                                              & \Sexpr{k_car_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
@@ -2107,8 +2107,9 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identic
   \midrule
   Price elasticity of car use demand  & $\Sexpr{e_qs_ps_UC_car_char}$  & We adopt $-0.2$ as our baseline value, based on U.S.\ studies including \\
   $\eqspsUC$ [--]                                           &           &  \citet{Gillingham:2020aa}, who estimated a value of $-0.1$, \\
-                                                           &           &   \citet{goetzke2018}, who estimated values between $-0.05$ and $-0.23$, \\  
-                                                             &           &   and \citet{Parry2005}, who estimated values between $-0.1$ and $-0.3$. \\  
+                                                           &           &   \citet{goetzke2018}, who estimated values \\
+                                                           &          &     between $-0.05$ and $-0.23$, and \citet{Parry2005},\\  
+                                                             &           &   who estimated values between $-0.1$ and $-0.3$. \\  
                                                             &           &  For comparison, \citet{Borenstein:2015aa} uses values of $-0.1$ to $-0.4$, \\   
                                                             &            &     based on \citet{Parry2005}. \\
   \midrule
@@ -2598,18 +2599,18 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
    $\bempl{t}_{\life}$, $\aempl{t}_{\life}$ [years] &           &          & from \citet{Home_Depot:2020_Inc_bulb} \\
                                                     &           &          & and  \citet{Home_Depot:2020_LED_bulb}. \\
    \midrule
-   Life cycle analysis (LCA) embodied energy  & \Sexpr{E_emb_orig_lamp_char}      & \Sexpr{E_emb_star_lamp_char}     & Base document: Table 4.5 Manufacturing Energy  \\
-   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Primary energy (MJ/20 Million lumen hours), \\
+   Life cycle analysis (LCA) embodied energy  & \Sexpr{E_emb_orig_lamp_char}      & \Sexpr{E_emb_star_lamp_char}     & Base document: Table 4.5 Manufacturing Phase Primary  \\
+   $\bempl{E}_{emb}$, $\aempl{E}_{emb}$ [MJ]        &           &          & Energy (MJ/20 million lumen-hours), contained in \\
                                                     &           &          & U.S.\ DoE Life-cycle assessment of energy and environmental \\
-                                                    &           &          & impacts of LED lighting products \\
-                                                    &           &          & \citep{US_DoE:2012}. \\
-                                                    &           &          & Incandescent: \\
+                                                    &           &          & impacts of LED lighting products \citep{US_DoE:2012}.\\
+                                                    &           &          & Incandescent lamp: \\
                                                     &           &          & LCA energy = 42.2 MJ/20 million lumen-hours.  \\
                                                     &           &          & Lifetime output = 530 lumens $\times$ 3 hours/day \\
                                                     &           &          & $\times$ 365 days/year $\times$ 1.8 years = 1,044,630 lumen-hrs.\\
                                                     &           &          & Thus LCA energy / lamp =  42.2 $\times$ 1.0446/20 = 2.21 MJ. \\
-                                                    &           &          & LED:  \\
-                                                    &           &          & LCA energy = 132 MJ/20 Million lumen-hours for pack of 5 LED lamps. \\
+                                                    &           &          & LED lamp:  \\
+                                                    &           &          & LCA energy = 132 MJ/20 Million lumen-hours \\
+                                                    &           &          & for pack of 5 LED lamps. \\
                                                     &           &          & Lifetime output = 450 lumens $\times$ 3 hours/day  \\
                                                     &           &          & $\times$ 365 days/year $\times$ 10 years = 4,926,405 lumen-hrs. \\
                                                     &           &          & Thus LCA energy / lamp =  132 MJ/5 $\times$ 4.9264/20 = 6.5 MJ. \\ 
@@ -2643,23 +2644,23 @@ Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identi
   Real median personal income U.S.\, in 2018                & 34,317        & Refer to Table~\ref{tab:car_economic_parameters}.\\
   {} [\$/year]                                              &               & \\
   \midrule
-  U.S.\ disposable income /                                 & 0.88268       & Refer to Table~\ref{tab:car_economic_parameters}. \\
+  U.S.\ 2018 disposable income /                            & 0.88319       & Refer to Table~\ref{tab:car_economic_parameters}. \\
   real income (minus current taxes)                         &               &  \\
   {} [--]                                                   &               &  \\
   \midrule
-  Share of savings from disposable income                   & 0.079         & Refer to Table~\ref{tab:car_economic_parameters}. \\
+  Share of savings from 2018 disposable income              & 0.07848       & Refer to Table~\ref{tab:car_economic_parameters}. \\
   {} [--]                                                   &               &  \\ 
   \midrule
-  Personal consumption                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$34,317\mathrm{/year}) (0.88268) (1 - 0.079)$. \\
+  Personal consumption in 2018                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$34,317\mathrm{/year}) (0.88319) (1 - 0.07848)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2020 average household electricity price \\
+  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2018 average US household electricity price \\
   $p_E$ [\$/kW-hr]                                          &               & \citep{US_EIA:2020_electricity}.  \\
   \midrule
   Fractional spend on energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$9/year (spend on energy service) / \\
-  $\fCs$ [--]                                               &               & [\$27,391/year (other goods) + \$9/year (energy service)] = 0.00032, \\
+  $\fCs$ [--]                                               &               & [\$27,920/year (other goods) + \$8.5/year (energy service)] = 0.00030, \\
                                                             &               & where spend on energy service = 580,350 lm-hrs/year /  \\
-                                                            &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1355/kW-hr = \$9/year.  \\
+                                                            &               & 81.8 lm/W / 1000 W/kW $\times$ \$0.1287/kW-hr = \$8.5/year.  \\
   \midrule
   Macro factor                                              & \Sexpr{k_lamp_char}           & Assumed value. \\  
   $k$ [--]                                                  &               &               \\
