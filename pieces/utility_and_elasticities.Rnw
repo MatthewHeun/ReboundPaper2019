@@ -346,6 +346,12 @@ with
   \fCs \equiv \frac{\rorig{C}_s}{\rorig{C}_s + \rorig{C}_o} \; .
 \end{equation}
 
+
+%------------------------------
+\subsubsection{Cobb-Douglas utility model}
+\label{sec:CD_utility_model}
+%------------------------------
+
 We note briefly (because we don't use it elsewhere in this paper), 
 that a common utility model takes the form of a Cobb-Douglas function
 
@@ -359,14 +365,15 @@ $\alpha \in (0,1)$ is an weighing parameter
 which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
-The Cobb-Douglas model is a special case of the general CES utility model,
+The Cobb-Douglas utility model is a special case of the general CES utility model,
 with the elasticity of substitution ($\sigma$) equal to 1.
 However, the uncompensated own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is $-1$,
 causing $Re_{dsub} = 1$ always.
 
-To see this, note that the Cobb-Douglas Marshallian demand of any good (illustrated
-for the energy service here) is of the form
+To show that $Re_{dsub} = 1$ always, 
+start with the Cobb-Douglas Marshallian demand 
+for the energy service of the form
 
 \begin{equation} \label{eq:CD_marshall}
   \rate{q}_{s,m} = \alpha \rate{M} / p_s \; ,
