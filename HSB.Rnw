@@ -260,9 +260,13 @@ However, as \citep[Fig.1 and Fig.2]{Brockway2021} show,
 the expected reductions in energy consumption 
 would represent a significant structural break with the historical record
 of tight coupling between energy consumption and GDP.
+The same study also found that 
+``many of the mechanisms driving rebound effects are overlooked by 
+integrated assessment and global energy models'' ~\citep[p.~1]{Brockway2021}.
 Thus, the magnitude of energy rebound is much more than an academic debate, 
 because there is a lot at stake. 
-Large rebound, if it exists, means that
+Large rebound, if it exists and at the same time is not fully 
+included in models and associated policies, would mean that
 efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
 
@@ -313,22 +317,24 @@ approach applied to energy-intensive industry sectors.
 While estimates of microeconomic rebound are common, 
 estimates of macroeconomic rebound remain very rare.
 (See \citet{Barker2009} for an exception that proves the rule.) 
-However, a growing number of studies estimate the magnitude of total rebound, 
-the sum of microeconomic and macroeconomic rebound.
-A recent review of 33 studies by \citet{Brockway2021} 
-found a large group of 21 Computational General Equilibrium (CGE) studies, 
-such as \citet{Lecca2014}, \citet{Broberg2015}, and \citet{Wei2017},
+However, a growing number of studies are estimating 
+the magnitude of total rebound 
+(the sum of microeconomic and macroeconomic rebound),
+and finding large rebound values.
+Indeed, a recent review of 33 such studies found an 
+average total rebound magnitude of over 60\%, 
+which was suggested as being 
+``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
+First, was a group of 21 Computational General Equilibrium (CGE) studies, 
+including \citet{Lecca2014}, \citet{Broberg2015}, and \citet{Wei2017},
 with a mean total rebound estimate of around 60\%. 
-A smaller group of studies used three other methods:
+Second, a smaller group of 12 studies using three other methods
+also had an average estimate of total rebound magnitude of over 60\%:
 non-CGE macroeconomic models
 (e.g., \citet{Barker2009} and \citet{Lemoine:2020aa}),
-econometric analysis (e.g., \citet{Wei2019}, \citet{Yan2019}, and \citet{Bruns2019}), and
+econometric analysis (e.g., \citet{Wei2019}, \citet{Yan2019}, 
+and \citet{Bruns2019}), and
 productivity or growth accounting studies (e.g., \citet{Lin2015}).
-Like the CGE studies, 
-the average estimate of total rebound magnitude from non-CGE methods 
-was found to be over 60\%,
-leading the review authors to conclude that total rebound magnitudes 
-are ``larger than commonly assumed''~\citep[p.~1]{Brockway2021}.
 
 Comparing one study to the next is complicated by 
 the wide variety of rebound analysis frameworks employed in rebound analysis.
