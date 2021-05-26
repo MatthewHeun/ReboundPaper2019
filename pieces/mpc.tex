@@ -7,11 +7,12 @@
 can be prepresented by a multiplier, which we call the macro factor ($k$).
 \citeauthor{Borenstein:2015aa}'s formulation and our implementation 
 are reminiscent of the marginal propensity to consume (MPC).
-In this appendix, we show the relationship between the macro factor ($k$) and MPC.
+In this appendix, we show the relationship between the macro factor ($k$) and $\MPC$.
 
-The relationship between the macro factor ($k$) and MPC spans
+The relationship between the macro factor ($k$) and $\MPC$ spans
 the income and macro effects.
-In this framework, the device owner's net income ($\rasub{N}$) is respent completely.
+In this framework, the device owner's net income 
+after the substitution effect ($\rasub{N}$) is respent completely.
 One may assume that firms and other consumers who receive the net income have a 
 marginal propensity to re-spend of $\MPC$.
 The total spending throughout the economy of each year's net income ($\rasub{N}$)
@@ -23,7 +24,9 @@ is given by the infinite series
 %
 where the first term ($1 \times \rasub{N}$) represents spending of net income by the device owner
 in the direct and indirect income effects, and
-the remaining terms represent macro-effect spending in the broader economy.
+the remaining terms 
+[$(\MPC + \MPC^2 + \MPC^3 + \ldots) \rasub{N}$]
+represent macro-effect spending in the broader economy.
 
 The macro effect portion of the spending can be represented by the macro factor ($k$).
 
@@ -31,10 +34,17 @@ The macro effect portion of the spending can be represented by the macro factor 
   (1 + \MPC + \MPC^2 + \MPC^3 + \ldots) \rasub{N} = (1 + k) \rasub{N}
 \end{equation}
 
-Cancelling terms and simplifying the infinite series to its convergent fraction gives
+Cancelling $\rasub{N}$ and simplifying the infinite series to its converged fraction
+(assuming $\MPC < 1$) gives
+
+\begin{equation}
+  \frac{1}{1 - \MPC} = 1 + k \; .
+\end{equation}
+%
+Solving for $k$ yields
 
 \begin{equation} \label{eq:mpc_and_k_converged}
-  \frac{1}{\frac{1}{\MPC} - 1} = k \; .
+  k = \frac{1}{\frac{1}{\MPC} - 1} \; .
 \end{equation}
 
 If $k = 3$, as in Section~\ref{sec:macro_rebound_discussion}, 
