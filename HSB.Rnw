@@ -349,7 +349,14 @@ we survey existing rebound frameworks.
 \label{sec:rebound_frameworks}
 %++++++++++++++++++++++++++++++
 
-Rebound analysis frameworks have been developed for 
+Rebound analysis frameworks%
+\footnote{
+  We use the word ``framework'' to mean 
+  the basic structure for analysis of a system or concept,
+  in this case energy rebound.
+}
+%
+have been developed for 
 microeconomic, macroeconomic, and total energy rebound.
 At the \emph{microeconomic} level,
 direct and indirect rebound are often estimated 
@@ -584,6 +591,8 @@ providing, perhaps, the greatest complexity.
 Table~\ref{tab:typology} 
 summarizes and reconciles some of the existing typologies
 and sets out the typology for this paper. 
+Fig.~\ref{fig:flowchart} identifies the rebound effects and stages
+used in this paper.
 
 \begin{table}
 \caption{Chosen rebound typology with comparison to existing literature.}
@@ -591,6 +600,17 @@ and sets out the typology for this paper.
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
 \end{table}
+
+\begin{figure}
+\centering
+  % The file is a Tikz picture.
+  \input{pieces/flowchart.tex}
+\caption{Flowchart of rebound effects and decorations.
+         Rebound effects are arranged in the order of their discussion in this paper.
+         The left-to-right order does not necessarily represent 
+         the progression of rebound effects through time.}
+\label{fig:flowchart}
+\end{figure}
 
 
 %++++++++++++++++++++++++++++++
@@ -634,14 +654,14 @@ final-energy-to-service efficiency%
 such that
 $\amacro{\eta} > \bempl{\eta}$,
 possibly at an increased cost to
-procure (capital cost), maintain, and dispose of the device such that
+emplace (capital cost), maintain, and dispose of the device such that
 $\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
 As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed exogenous
-($\amacro{p}_E = \bempl{p}_E$),
+($\bempl{p}_E = \bsub{p}_E = \binc{p}_E = \bmacro{p}_E  = \amacro{p}_E$),
 so the final energy purchaser (the device owner) is a price taker.
 (Relaxing the exogenous final energy price assumption
 would require a full-economy model that is beyond the scope of this paper.)
@@ -660,17 +680,6 @@ for the device owner is
 %
 where 
 original net savings ($\rorig{N}$) is zero.
-
-\begin{figure}
-\centering
-  % The file is a Tikz picture.
-  \input{pieces/flowchart.tex}
-\caption{Flowchart of rebound effects and decorations.
-         Rebound effects are arranged in the order of their discussion in this paper.
-         The left-to-right order does not necessarily represent 
-         the progression of rebound effects through time.}
-\label{fig:flowchart}
-\end{figure}
 
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:macro_effect_main_paper}), 
 we walk through the several conceptual stages of rebound, including
