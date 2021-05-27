@@ -589,13 +589,26 @@ between the micro and macro levels.
 providing, perhaps, the greatest complexity. 
 
 Table~\ref{tab:typology} 
-summarizes and reconciles some of the existing typologies
-and sets out the typology for this paper. 
-Fig.~\ref{fig:flowchart} identifies the rebound effects and stages
-used in this paper.
+summarizes existing typologies and
+establishes the typology for this paper. 
+Rebound effects (emplacement, substitution, income, and macro), 
+locations (direct and indirect), and 
+scales (micro and macro) 
+are identified.
+
+Fig.~\ref{fig:flowchart} shows rebound effects
+arranged in left-to-right order of their discussion in this paper.
+Rebound symbols are shown above each effect ($Re_{empl}$, etc.).
+Nomenclature for direct and indirect locations are shown beneath each effect ($Re_{dempl}$, etc.).
+Decorations for each stage are given between the effects
+($\circ$, $*$, etc.).
+Names for the decorations are given at the bottom of the figure
+(``orig,'' ``star,'' etc.).
+The left-to-right order does not necessarily represent 
+the progression of rebound effects through time.
 
 \begin{table}
-\caption{Chosen rebound typology with comparison to existing literature.}
+\caption{Rebound typology (right column) with comparison to existing literature (center column).}
 \centering
 \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
 \label{tab:typology}
@@ -605,10 +618,7 @@ used in this paper.
 \centering
   % The file is a Tikz picture.
   \input{pieces/flowchart.tex}
-\caption{Flowchart of rebound effects and decorations.
-         Rebound effects are arranged in the order of their discussion in this paper.
-         The left-to-right order does not necessarily represent 
-         the progression of rebound effects through time.}
+\caption{Flowchart of rebound effects and decorations.}
 \label{fig:flowchart}
 \end{figure}
 
