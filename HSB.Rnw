@@ -629,7 +629,16 @@ the progression of rebound effects through time.
 %++++++++++++++++++++++++++++++
 
 We assume an energy conversion device (say, a car)
-that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
+that consumes final energy%
+\footnote{
+  Conventionally, stages of the energy conversion chain are 
+  primary energy (e.g., coal, oil, natural gas, wind, and solar),
+  final energy (e.g., electricity and refined petroleum),  
+  useful energy (e.g., heat, light, and mechanical drive), and 
+  energy services (e.g., transport, illumination, and space heating).
+}
+%
+(say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
 \footnote{
   Note that
   the vocabulary and mathematical notation for rebound effects is extensive;
@@ -640,12 +649,13 @@ that consumes final energy (say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
   can be mixed to provide a rich and expressive ``language'' of energy rebound.
   In several places, we use colored backgrounds on rebound effects for visual convenience. 
 }.
+%
 The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
 $\rbempl{q}_s$ (in vehicle-km/year)
-with final-energy-to-service efficiency $\bempl{\eta}$ (in km/MJ).
+with final-to-service efficiency $\bempl{\eta}$ (in km/MJ).
 An energy efficiency upgrade (EEU) increases
-final-energy-to-service efficiency%
+final-to-service efficiency%
 \footnote{
   Note that energy service efficiency ($\eta$) improves
   between the original ($\circ$) and
@@ -668,7 +678,7 @@ emplace (capital cost), maintain, and dispose of the device such that
 $\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
 $\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
 (This is not a costless EEU.)
-As final-energy-to-service efficiency~($\eta$) increases,
+As final-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed exogenous
 ($\bempl{p}_E = \bsub{p}_E = \binc{p}_E = \bmacro{p}_E  = \amacro{p}_E$),
@@ -696,9 +706,8 @@ where
 original net savings ($\rorig{N}$) is zero.
 
 Later (Sections~\ref{sec:empl_effect_main_paper}--\ref{sec:macro_effect_main_paper}), 
-we walk through the several conceptual stages of rebound, including
-the device upgrade and four rebound effects, and 
-we derive rebound expressions for each. 
+we walk through four rebound effects, 
+deriving rebound expressions for each. 
 But first 
 we define rebound relationships 
 (Section~\ref{sec:rebound_relationships}) and 
@@ -737,7 +746,7 @@ Simplifying gives
 %
 Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
 
-We define rebound at the final energy stage, 
+We define rebound at the final energy stage of the energy conversion chain,
 because that is the point of energy purchase by the device owner.
 To simplify derivations, 
 we choose not to apply final-to-primary energy multipliers
@@ -745,6 +754,7 @@ to final energy rates in the numerators and denominators of rebound expressions
 derived from Eqs.~(\ref{eq:Re_def}) and~(\ref{eq:Re_takeback});
 they divide out anyway.
 Henceforth, we drop the adjective ``final'' 
+on the noun ``energy,''
 unless there is reason to indicate a specific stage of the energy conversion chain.
 
 
@@ -756,7 +766,7 @@ unless there is reason to indicate a specific stage of the energy conversion cha
 With the rebound notation of Appendix~\ref{sec:nomenclature}, 
 four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
-is the product of final-to-services efficiency~($\eta$) and
+is the product of final-to-service efficiency~($\eta$) and
 the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
 Typical units for automotive transport and illumination
 (the examples in Section~\ref{sec:examples}) are shown
@@ -3139,7 +3149,7 @@ lamp_efficacy_ratio <- (rebound_results %>% dplyr::filter(Case == "Lamp") %>% dp
 @
 
 Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
-both takeback and expected energy savings ($\Sdot$)
+both the energy takeback rate and expected energy savings ($\Sdot$)
 increase with post-EEU efficiency ($\amacro{\eta}$), 
 but the relationship is asymptotic.
 Each unit increase of fuel economy or lighting efficacy is less effective than
@@ -3185,7 +3195,7 @@ As a result, further increases in the LED lamp's efficiency
 are less effective than further increases in the hybrid car's efficiency.
 
 That said, actual savings is the difference between the expected energy savings line (solid line)
-and the take back line (dashed line) in Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}.
+and the takeback line (dashed line) in Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}.
 Because the gap between the lines grows, 
 higher efficiency yields actual energy savings,
 even after accounting for rebound effects.
@@ -3195,7 +3205,7 @@ Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that
 expected energy savings ($\Sdot$) increase faster than takeback 
 as $\amacro{\eta}$ increases.
 Thus, total rebound ($Re_{tot}$, the ratio of 
-takeback to expected energy savings in Eq.~\ref{eq:Re_takeback}),
+takeback rate to expected energy savings rate in Eq.~\ref{eq:Re_takeback}),
 decreases as efficiency grows.
 The lamp exhibits a relatively smaller rebound decline with efficiency,
 because the lamp example is closer to saturation than the car example.
@@ -3223,7 +3233,7 @@ The denominator of Eq.~(\ref{eq:Re_takeback}) doesn't change for
 the sensitivity analyses of Figs.~\ref{fig:all_Re_terms_C_cap_graph}--\ref{fig:all_Re_terms_k_graph}.
 Thus, for the remaining sensitivity analyses, 
 when the rebound percentage increases (decreases), 
-energy takeback in the numerator of Eq.~(\ref{eq:Re_takeback})
+the energy takeback rate in the numerator of Eq.~(\ref{eq:Re_takeback})
 increases (decreases) proportionally.
 
 
@@ -3266,7 +3276,7 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
   ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = FALSE) + 
   ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = FALSE) +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
-                y = expression("Takeback and "*dot(S)[dev]*" [MJ/yr]"),
+                y = expression("Takeback rate and "*dot(S)[dev]*" [MJ/yr]"),
                 colour = ggplot2::element_blank(),
                 size = ggplot2::element_blank(),
                 linetype = ggplot2::element_blank()) +
@@ -3631,10 +3641,10 @@ direct rebound effect as efficiency rises (Fig.~\ref{fig:all_Re_terms_eta_graph}
 driven by the declining own price elasticity of energy service demand ($\eqspsUC$). 
 So raising the minimum efficiency required to participate in a market is beneficial.
 Indeed, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows the gap between 
-expected energy savings and takeback grows with efficiency, so
+the expected energy savings rate and the takeback rate grows with efficiency, so
 absolute energy savings are expected to increase as efficiency grows.
 However, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that 
-takeback increases with efficiency, so caution is merited.
+the takeback rate increases with efficiency, so caution is merited.
 
 
 %------------------------------
