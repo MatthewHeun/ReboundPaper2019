@@ -199,7 +199,7 @@ library(xtable)
 
 Energy rebound is a phenomenon whereby 
 some expected energy savings fail to materialize 
-after an energy efficiency upgrade (EEU), 
+after an energy efficiency upgrade (EEU)
 due to behavior changes and economic effects.
 Famously, the roots of energy rebound trace back to 
 \citeauthor{Jevons:1865}
