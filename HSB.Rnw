@@ -600,7 +600,7 @@ Fig.~\ref{fig:flowchart} shows rebound effects
 arranged in left-to-right order of their discussion in this paper.
 Rebound symbols are shown above each effect ($Re_{empl}$, etc.).
 Nomenclature for direct and indirect locations are shown beneath each effect ($Re_{dempl}$, etc.).
-Decorations for each stage are given between the effects
+Decorations for each stage are shown between rebound effects
 ($\circ$, $*$, etc.).
 Names for the decorations are given at the bottom of the figure
 (``orig,'' ``star,'' etc.).
@@ -717,8 +717,8 @@ Energy rebound is defined as
 \end{equation}
 %
 where both actual and expected final energy savings rates are expected positive.
-Final energy ``takeback'' is the rate at which final energy savings are eroded by rebound effects,
-and the actual final energy savings rate is the expected final energy savings rate less takeback.
+Final energy ``takeback'' is defined as expected final energy savings rate less 
+actual final energy savings rate.
 Note that takeback can be negative, indicating an increase in the final energy savings rate
 relative to the expected final energy savings rate, sometimes called hyperconservation.
 Thus,
