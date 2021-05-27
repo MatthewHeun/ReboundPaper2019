@@ -177,6 +177,7 @@ Substitution and income effects \sep Macroeconomic rebound
 <<setup, echo=FALSE, message=FALSE>>=
 library(dplyr)
 library(magrittr)
+library(MKHthemes)
 library(ReboundTools)
 library(tidyr)
 library(xtable)
@@ -1038,7 +1039,7 @@ labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                             annotation_colour, hat_size,
                           0.7, 0.989, '"^"',
                             line_label_colour, hat_line_label_size,
-                          3.5, 0.974, '"^"', 
+                          3.5, 0.975, '"^"', 
                             line_label_colour, hat_line_label_size,
                           2.52, 0.983, 'd', 
                             abcd_colour, abcd_size,
