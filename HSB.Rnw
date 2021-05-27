@@ -810,30 +810,17 @@ of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$)
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Rebound effects}
-\label{sec:rebound_effects}
+\subsection{Rebound path graphs}
+\label{sec:rebound_path_graphs}
 %++++++++++++++++++++++++++++++
 
-The four rebound effects of Fig.~\ref{fig:flowchart} 
-(emplacement, substitution, income, and macro)
-are discussed in subsections below.
-In each subsection, we
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item define each rebound effect and
-  
-  \item show mathematical expressions for rebound.
-    
-\end{enumerate*}
-%
-Detailed derivations of all rebound expressions 
-can be found in Appendix~\ref{sec:derivation}.
-See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect},
-which provide a parallel structure for energy and financial accounting
-across all rebound effects.
-
-Important quantities for the derivations are
+One novel contribution of this paper is visualization of rebound effects in three planes:
+the energy plane, the expenditure plane, and the demand plane.
+Each plane contains a path graph that illustrates adjustments
+to energy consumption, expenditures, and demand as a result of the EEU.
+(See Appendix~\ref{sec:graph_details} for 
+detailed mathematical descriptions of rebound path graphs.)
+Important quantities for the path graphs are
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -846,37 +833,40 @@ Important quantities for the derivations are
   \item the expenditure rate on other consumption goods ($\rate{C}_o$).
     
 \end{enumerate*}
-%
-These important rebound quantities can be illustrated via
-rebound path graphs.
-(See Appendix~\ref{sec:graph_details} for 
-detailed mathematical descriptions of rebound path graphs.)
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
-notional rebound path graphs through energy, expenditure, and consumption spaces
-for purposes of illustration.
+
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleDemandPathGraph} show
+notional rebound path graphs on the energy, expenditure, and demand planes.
 The notional path graphs are not quantified; there are no scales on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate the numerical examples.
 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows a notional energy path graph, with 
-the direct energy consumption rate ($\rate{E}_{dir}$) on the abscissa
+the direct energy consumption rate ($\rate{E}_{dir}$) on the $x$-axis
 and
-the indirect energy consumption rate ($\rate{E}_{indir}$) on the ordinate.
+the indirect energy consumption rate ($\rate{E}_{indir}$) on the $y$-axis.
+Points $\circ$, $*$, $\wedge$, $-$, and $\sim$ represent the rebound stages
+between the rebound effects,
+as shown in Fig.~\ref{fig:flowchart}.
+Points $a$, $b$, $c$, and $d$ represent intermediate stages,
+between direct emplacement and embodied adjustments of the emplacement effect ($a$), 
+between embodied and maintenance and disposal adjustments of the emplacement effect ($b$), 
+between indirect and direct substitution effects ($c$), and
+between direct and indirect income effects ($d$).
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate energy consumption isoquants
-(direct and indirect) at key points.
+(sum of direct and indirect components) at key points.
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
-the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the abscissa and 
-the indirect expenditure rate ($\rate{C}_{indir}$) on the ordinate.
-Lines with negative slope through points $\circ$ and $a$
-indicate expenditure isoquants (direct and indirect).
+the direct expenditure rate on the energy service ($\rate{C}_{dir}$) on the $x$-axis and 
+the indirect expenditure rate ($\rate{C}_{indir}$) on the $y$-axis.
+Lines with negative slope through points $\circ$, $a$, $*$, and $\wedge$
+indicate expenditure isoquants (sum of direct and indirect components).
 
-A notional consumption path graph is shown in Fig.~\ref{fig:ExampleConsPathGraph}.
-The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown on the abscissa, and
-the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the ordinate.
+A notional consumption path graph is shown in Fig.~\ref{fig:ExampleDemandPathGraph}.
+The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown on the $x$-axis, and
+the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the $y$-axis.
 Isoquants of indexed other goods and energy service consumption 
 are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
@@ -889,7 +879,7 @@ rebound_results <- ReboundTools::rebound_analysis(rebound_data)
 @
 
 
-<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Notional energy path.", fig.width=6, fig.height=4>>=
+<<ExampleEnergyPathGraph,  echo=FALSE, warning=FALSE, fig.cap="Notional energy path graph.", fig.width=6, fig.height=4>>=
 stage_size <- 10
 orig_size <- stage_size
 star_size <- stage_size
@@ -1005,7 +995,7 @@ rebound_results %>%
 @
 
 
-<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path.", fig.width=6, fig.height=4>>=
+<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path graph.", fig.width=6, fig.height=4>>=
 cost_line_angle <- -14
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        1.01, 1.003, 'degree', 
@@ -1060,7 +1050,7 @@ rebound_results %>%
 @
 
 
-<<ExampleConsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional consumption path.", fig.width=6, fig.height=4>>=
+<<ExampleDemandPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional demand path graph.", fig.width=6, fig.height=4>>=
 orig_line_label_size <- orig_size - 3
 star_line_label_size <- star_size - 4
 hat_line_label_size <- hat_size - 3
@@ -1141,6 +1131,23 @@ rebound_results %>%
                  axis.title.x = ggplot2::element_text(margin = ggplot2::margin(t = 6)))
 @
 
+
+%++++++++++++++++++++++++++++++
+\subsection{Rebound effects}
+\label{sec:rebound_effects}
+%++++++++++++++++++++++++++++++
+
+The four rebound effects shown in the rebound path graphs
+(emplacement, substitution, income, and macro)
+are discussed in subsections below.
+In each subsection, we
+define each rebound effect and
+show mathematical expressions for rebound ($Re$) caused by each effect.
+Detailed derivations of all rebound expressions 
+can be found in Appendix~\ref{sec:derivation}.
+See, in particular, Tables~\ref{tab:empleffect}--\ref{tab:macroeffect},
+which provide a parallel structure for energy and financial accounting
+across all rebound effects.
 In the subsections that follow, the notional graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph})
 serve to illustrate the development of the framework.
@@ -3806,7 +3813,7 @@ the values of macro rebound ($Re_{\macro}$) should triple to
 \Sexpr{formatC(Re_macro_car_k_3*100, digits = 3)}\% and
 \Sexpr{formatC(Re_macro_lamp_k_3*100, digits = 3)}\%, and
 the values of total rebound ($Re_{tot}$) should increase to 
-\Sexpr{sprintf("%.1f", round(Re_tot_car_k_3*100), 1)}\% and
+\Sexpr{sprintf("%.1f", round(Re_tot_car_k_3*100, 1))}\% and
 \Sexpr{formatC(Re_tot_lamp_k_3*100, digits = 3)}\%
 for the car and lamp examples,
 respectively.
