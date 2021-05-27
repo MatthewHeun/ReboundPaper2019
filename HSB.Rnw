@@ -643,7 +643,7 @@ that consumes final energy%
   Note that
   the vocabulary and mathematical notation for rebound effects is extensive;
   Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-  notation elements used throughout the paper, including
+  decoration elements used throughout the paper, including
   symbols, Greek letters, decorations, and subscripts.
   The notation elements 
   can be mixed to provide a rich and expressive ``language'' of energy rebound.
@@ -767,10 +767,14 @@ With the rebound notation of Appendix~\ref{sec:nomenclature},
 four typical relationships emerge.
 First, the consumption rate of the energy service~($\rate{q}_s$)
 is the product of final-to-service efficiency~($\eta$) and
-the rate of energy consumption by the energy conversion machine~($\rate{E}_s$).
+the rate of energy consumption by the energy conversion device~($\rate{E}_s$).
 Typical units for automotive transport and illumination
 (the examples in Section~\ref{sec:examples}) are shown
-beneath each equation.
+beneath each equation%
+\footnote{
+  Note that ``pass'' is short for ``passenger,'' and
+  ``lm'' is the SI notation for lumen, a lighting unit.
+}.
 
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
