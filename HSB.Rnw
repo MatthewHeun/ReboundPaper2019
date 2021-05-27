@@ -614,7 +614,7 @@ used in this paper.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Rebound mechanisms}
+\subsection{Rebound effects}
 \label{sec:rebound_mechanisms}
 %++++++++++++++++++++++++++++++
 
@@ -662,10 +662,14 @@ As final-energy-to-service efficiency~($\eta$) increases,
 the price of the energy service~($p_s$) declines.
 The final energy price ($p_E$) is assumed exogenous
 ($\bempl{p}_E = \bsub{p}_E = \binc{p}_E = \bmacro{p}_E  = \amacro{p}_E$),
-so the final energy purchaser (the device owner) is a price taker.
-(Relaxing the exogenous final energy price assumption
-would require a full-economy model that is beyond the scope of this paper.)
-
+so the final energy purchaser (the device owner) is a price taker%
+\footnote{
+  Relaxing the exogenous final energy price assumption
+  would require a full-economy model that is beyond the scope of this paper.
+  Rebound due to energy price change is included in the macro effect.
+  (See Table~\ref{tab:typology}.)
+}
+.
 Initially, the device owner spends income ($\rorig{M}$)
 on final energy for the device ($\rorig{C}_s = p_E \rorig{E}_s$), 
 annualized capital costs for the device ($\rorig{C}_{cap}$), 
