@@ -716,21 +716,23 @@ Energy rebound is defined as
   Re \equiv 1 - \frac{\text{actual final energy savings rate}}{\text{expected final energy savings rate}} \; ,
 \end{equation}
 %
-where both actual and expected final energy savings rates are expected positive.
-Final energy ``takeback'' is defined as expected final energy savings rate less 
+where both actual and expected final energy savings rates are in \$/year 
+and expected positive.
+Final energy ``takeback'' rate is defined as expected final energy savings rate less 
 actual final energy savings rate.
-Note that takeback can be negative, indicating an increase in the final energy savings rate
-relative to the expected final energy savings rate, sometimes called hyperconservation.
+Note that the takeback rate can be negative, indicating that the actual final energy savings rate
+is greater than the expected final energy savings rate, 
+a condition called hyperconservation.
 Thus,
 
 \begin{equation}
-  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback}}{\text{expected final energy savings rate}} \; .
+  Re = 1 - \frac{\text{expected final energy savings rate} - \text{takeback rate}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
 Simplifying gives
 
 \begin{equation} \label{eq:Re_takeback}
-  Re = \frac{\text{takeback}}{\text{expected final energy savings rate}} \; .
+  Re = \frac{\text{takeback rate}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
 Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
