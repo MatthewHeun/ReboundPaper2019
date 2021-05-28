@@ -56,8 +56,9 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Toward a comprehensive, consumer-based \\
-       energy rebound analysis framework}
+\title{Analytical support estimating \\
+       micro and macro rebound effects \\
+       for particular energy efficiency upgrades}
 
 % Bonepile
 % Toward a mathematically rigorous analytical framework
@@ -67,6 +68,8 @@
 % OR \\
 % Towards a comprehensive analytical framework
 % for microeconomic energy rebound effects
+% Toward a comprehensive, consumer-based \\
+% energy rebound analysis framework \\
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
