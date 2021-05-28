@@ -1033,7 +1033,7 @@ rebound_results %>%
 @
 
 
-<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path graph.", fig.width=6, fig.height=4>>=
+<<ExampleCostPathGraph, echo=FALSE, fig.cap="Notional expenditure path graph. CV is compensating variation.", fig.width=6, fig.height=4>>=
 cost_line_angle <- -14
 example_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                        1.01, 1.003, 'degree', 
@@ -1831,36 +1831,45 @@ However, the dynamic macro rebound mechanism
 is not an autonomous expansion of expenditure in an otherwise unchanged economy 
 (like the Keynesian multiplier).
 Rather, macroeconomic rebound is caused by an energy productivity improvement.
-That said, \citeauthor{Borenstein:2015aa} is right to highlight that supply side 
+It takes less energy to generate the same economic output, because 
+energy efficiency has improved.
+
+\citet{Borenstein:2015aa} notes that scaling from net savings ($\rasub{N}$) at the device level
+to productivity-driven growth at the macro level is unexplored territory.
+He is right to highlight that supply side 
 and demand side effects both play a role in the macroeconomic rebound.
 Furthermore, \citeauthor{Borenstein:2015aa}'s approach has the advantage that it can be directly
 linked to our income effect and its consequences for macroeconomic rebound. 
 
+One of the contributions of this paper is the first implementation of the 
+macro rebound multiplier idea.
 To operationalize the macro rebound effect, we scale
-the post-substitution-effect net savings~($\rasub{N}$) gained by device owners at the micro level.
-As argued by \citet{Antal:2014aa}, 
-it is reasonable to assume in aggregate that
-net savings ($\rasub{N}$) are spent in the economy at the average 
-energy intensity of the economy ($I_E$). 
-Scaling from net savings ($\rasub{N}$) at the device level
-to productivity-driven growth at the macro level is unexplored territory,
-as \citet{Borenstein:2015aa} notes.
-In the absence of better information,
-we express this scaling simply by a macro factor ($k$)
-with $k \ge 0$ expected.%
+the net savings gained by device owners at the micro level
+by a macro factor ($k$) that represents the economic activity generated
+by the infinite series of respending of the energy cost savings%
 \footnote{
-  $k$ has units of \$ of economic growth created per \$ of net savings
-  after the substitution effect ($\rasub{N}$).
-}
+  $k$ has units of \$ of economic growth created per \$ of spending 
+  by the device owner in the income effect ($\rbinc{N}$).
+}.
 %
+$k \ge 0$ is expected.
 $k = 0$ means there is no macroeconomic productivity boost
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption in the economy.
-For now, we choose $k = 1$ as a placeholder value,
-with further exploration of its effect on total rebound 
-in Section~\ref{sec:effect_of_macro_factor} and
-its magnitude in Section~\ref{sec:macro_rebound_discussion}.
+(See Appendix~\ref{sec:income_macro_mpc} 
+for the mathematical relationship between $k$ and $\MPC$.)
+In the absence of detailed information, 
+we assume (with \citet{Antal:2014aa}) that macro effect spending
+implies energy consumption according to 
+the average energy intensity of the economy ($I_E$).
+
+**** GS: A paragraph here about reasonable values for $\MPC$. ---MKH ****
+
+For now, we choose $\MPC = 0.5$ and $k = 1$ as a placeholder value,
+with further exploration of the macro effect
+in Sections~\ref{sec:effect_of_macro_factor} 
+and~\ref{sec:macro_rebound_discussion}.
 
 Macro rebound is given by
 
@@ -2269,7 +2278,7 @@ Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::reboun
 Re_tot_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
-<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path, car example with macro factor ($k$) assumed to be 1.", fig.width=6, fig.height=4>>=
+<<CarEnergyGraph, echo=FALSE, fig.cap="Energy path graph for the car example. Macro factor ($k$) is assumed to be 1.", fig.width=6, fig.height=4>>=
 car_Re_label_angle <- -77
 car_Re_arrow_angle <- pi/180 * 3.1
 
@@ -2368,7 +2377,7 @@ rebound_results %>%
 @
 
 
-<<CarCostGraph, echo=FALSE, fig.cap="Expenditure path, car example.", fig.width=6, fig.height=4>>=
+<<CarCostGraph, echo=FALSE, fig.cap="Expenditure path graph for the car example. CV is compensating variation.", fig.width=6, fig.height=4>>=
 car_cost_line_angle <- -29.5
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    1280, 26150, 'degree', 
@@ -2412,7 +2421,7 @@ rebound_results %>%
 @
 
 
-<<CarConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, car example.", fig.width=6, fig.height=4>>=
+<<CarConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path graph for the car example.", fig.width=6, fig.height=4>>=
 car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                     1.005, 1.0016, 'degree', 
                                       stage_colour, orig_size, 
@@ -2832,7 +2841,7 @@ Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebo
 Re_tot_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebound_terms$Re_tot, to_perc = TRUE)
 @
 
-<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path, lamp example with macro factor ($k$) assumed to be 1.", fig.width=6, fig.height=4>>=
+<<LampEnergyGraph, echo = FALSE, warning=FALSE, fig.cap="Energy path graph for the lamp example. Macro factor ($k$) is assumed to be 1.", fig.width=6, fig.height=4>>=
 lamp_Re_label_angle <- -62
 lamp_Re_arrow_angle <- pi/180 * 15.5
 lamp_energy_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
@@ -2933,7 +2942,7 @@ rebound_results %>%
 @
 
 
-<<LampCostGraph, echo = FALSE, fig.cap="Expenditure path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampCostGraph, echo = FALSE, fig.cap="Expenditure pathgraph for the lamp example. CV is compensating variation.", fig.width=6, fig.height=4>>=
 lamp_cost_line_angle <- -23
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                     9, 27392.8, 'degree', 
@@ -2977,7 +2986,7 @@ rebound_results %>%
 @
 
 
-<<LampConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path, lamp example.", fig.width=6, fig.height=4>>=
+<<LampConsGraph, echo=FALSE, warning=FALSE, fig.cap="Consumption path for the lamp example.", fig.width=6, fig.height=4>>=
 lamp_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                      1.05, 1.00002, 'degree', 
                                        stage_colour, orig_size,
