@@ -203,8 +203,7 @@ Eq.~(\ref{eq:ces_utility_with_a}) is the functional form of the CES utility mode
 whose share parameter ($a$) is yet to be determined.
 The correct expression for the share parameter ($a$) is found from the 
 equilibrium requirement,
-namely that the slope of the indifference curve is tangent to 
-(has the same slope as) the expenditure curve
+namely that the expenditure curve is tangent to the indifference curve
 in $\rate{C}_o/\rbempl{C}_o$ vs.\ $\rate{q}_s/\rbempl{q}_s$ space
 prior to the EEU.
 For example, line \circcirc{} is tangent to preference curve 
