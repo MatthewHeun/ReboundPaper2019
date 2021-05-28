@@ -817,10 +817,15 @@ of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$)
 \label{sec:rebound_path_graphs}
 %++++++++++++++++++++++++++++++
 
-One novel contribution of this paper is visualization of rebound effects in three planes:
-the energy plane, the expenditure plane, and the demand plane.
+Any comprehensive rebound analysis must track
+energy, expenditures, and consumption
+at the device (direct location) and elsewhere in the economy (indirect location)
+across all adjustments for all rebound effects. 
+One novel contribution of this paper is visualization of rebound effects 
+in three planes:
+the energy plane, the expenditure plane, and the consumption plane.
 Each plane contains a path graph that illustrates adjustments
-to energy consumption, expenditures, and demand as a result of the EEU.
+to energy consumption, expenditures, and consumption as a result of the EEU.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
 Important quantities for the path graphs are
@@ -836,9 +841,11 @@ Important quantities for the path graphs are
   \item the expenditure rate on other consumption goods ($\rate{C}_o$).
     
 \end{enumerate*}
+In rebound path graphs, direct effects are placed on the $x$-axis, and 
+indirect effects are placed placed on the $y$-axis.
 
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleDemandPathGraph} show
-notional rebound path graphs on the energy, expenditure, and demand planes.
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
+notional rebound path graphs on the energy, expenditure, and consumption planes.
 The notional path graphs are not quantified; there are no scales on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate the numerical examples.
@@ -850,15 +857,37 @@ the indirect energy consumption rate ($\rate{E}_{indir}$) on the $y$-axis.
 Points $\circ$, $*$, $\wedge$, $-$, and $\sim$ represent the rebound stages
 between the rebound effects,
 as shown in Fig.~\ref{fig:flowchart}.
-Points $a$, $b$, $c$, and $d$ represent intermediate stages,
-between direct emplacement and embodied adjustments of the emplacement effect ($a$), 
-between embodied and maintenance and disposal adjustments of the emplacement effect ($b$), 
-between indirect and direct substitution effects ($c$), and
-between direct and indirect income effects ($d$).
+Points $a$, $b$, $c$, and $d$ represent intermediate stages.
 Lines with negative slope through points 
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate energy consumption isoquants
 (sum of direct and indirect components) at key points.
+
+Table~\ref{tab:path_graph_segments} shows 
+segments and rebound effects for all rebound path graphs.
+
+\begin{table}
+\centering % Centered table
+\caption{Rebound path graph segments.} 
+\begin{tabular}{r l l c}
+  \toprule
+  Segment      & Rebound effect            & Symbol          & Equation \\
+  \midrule
+  \circa{}     & Direct emplacement        & $Re_{dempl}$    & \ref{eq:Re_dempl0} \\
+  \ab{}        & Embodied energy           & $Re_{emb}$      & \ref{eq:Re_emb} \\
+  \bstar{}     & Maintenance and disposal  & $Re_{\md}$      & \ref{eq:Re_md} \\
+  \midrule
+  \starc{}     & Indirect substitution     & $Re_{isub}$     & \ref{eq:Re_isub_CES} \\ 
+  \chat{}      & Direct substitution       & $Re_{dsub}$     & \ref{eq:Re_dsub_CES} \\ 
+  \midrule
+  \hatd{}      & Direct income             & $Re_{dinc}$     & \ref{eq:Re_dinc} \\ 
+  \dbar{}      & Indirect income           & $Re_{iinc}$     & \ref{eq:Re_iinc} \\ 
+  \midrule
+  \bartilde{}  & Macro                     & $Re_{macro}$    & \ref{eq:Re_macro_def} \\
+  \bottomrule
+\end{tabular}
+\label{tab:path_graph_segments}
+\end{table}
 
 A notional expenditure path graph is shown in Fig.~\ref{fig:ExampleCostPathGraph}, 
 with 
@@ -867,13 +896,19 @@ the indirect expenditure rate ($\rate{C}_{indir}$) on the $y$-axis.
 Lines with negative slope through points $\circ$, $a$, $*$, and $\wedge$
 indicate expenditure isoquants (sum of direct and indirect components).
 
-A notional consumption path graph is shown in Fig.~\ref{fig:ExampleDemandPathGraph}.
+A notional consumption path graph is shown in Fig.~\ref{fig:ExampleConsPathGraph}.
 The indexed rate of energy service consumption ($\rate{q}_s/\rbempl{q}_s$) is shown on the $x$-axis, and
 the indexed rate of other goods consumption ($\rate{C}_o/\rbempl{C}_o$) is shown on the $y$-axis.
 Isoquants of indexed other goods and energy service consumption 
 are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
+Note that stages $\circ$, $a$, $b$, and $*$ collapse to the same point
+on the consumption path graph, because both
+the rate of energy service consumption and 
+the rate of other goods consumption are
+unchanged across the emplacement effect
+($\raempl{q}_s = \rbempl{q}_s$ and $\raempl{C}_o = \rbempl{C}_o$, respectively).
 
 <<eeu_data, echo=FALSE>>=
 # Load our test cases and perform rebound analyses.
@@ -1053,7 +1088,7 @@ rebound_results %>%
 @
 
 
-<<ExampleDemandPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional demand path graph.", fig.width=6, fig.height=4>>=
+<<ExampleConsPathGraph, echo=FALSE, warning=FALSE, fig.cap="Notional consumption path graph.", fig.width=6, fig.height=4>>=
 orig_line_label_size <- orig_size - 3
 star_line_label_size <- star_size - 4
 hat_line_label_size <- hat_size - 3
@@ -1175,11 +1210,7 @@ The indirect effects of EEU emplacement are
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item changes%
-          \footnote{
-            ``Changes'' means rates \emph{after} the EEU less rates \emph{before} the EEU.
-          }
-        in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
+  \item changes in the embodied energy rate ($\Delta \raempl{E}_{emb}$)
         (segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}), 
   
   \item changes in the capital expenditure rate ($\Delta \raempl{C}_{cap}$)
@@ -1228,6 +1259,8 @@ total energy demand to return to the original energy consumption level
 all expected energy savings are taken back by rebound effects. 
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
 $Re_{tot} = 100\%$.
+The contribution of each rebound effect to total rebound 
+is the distance each component's segment moves across the rebound isoquants.  
 Total rebound ($Re_{tot}$) is measured linearly between and beyond the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with direct rebound in the $x$ direction and 
