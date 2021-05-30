@@ -2381,7 +2381,7 @@ rebound_results %>%
 
 
 <<CarCostGraph, echo=FALSE, fig.cap="Expenditure path graph for the car example. CV is compensating variation.", fig.width=6, fig.height=4>>=
-car_cost_line_angle <- -29.5
+car_cost_line_angle <- -33
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                    1295, 26600, 'degree', 
                                    stage_colour, orig_size, 0,
@@ -2434,7 +2434,7 @@ car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                       annotation_colour, star_size,
                                     1.071, 0.998, '"^"',  
                                       stage_colour, hat_size, 
-                                    1.108, 1.0336, 'bold("_")',  
+                                    1.118, 1.0283, 'bold("_")',  
                                       stage_colour, bar_size, 
                                     0.9, 1.0076, 'degree', 
                                       line_label_colour, orig_line_label_size, 
@@ -2452,9 +2452,9 @@ car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                       line_label_colour, hat_line_label_size, 
                                     1.12, 0.9965, 'd', 
                                       abcd_colour, abcd_size,
-                                    0.9, 1.04, '"_"', 
+                                    0.9, 1.037, '"_"', 
                                       line_label_colour, bar_line_label_size, 
-                                    1.3, 1.024, '"_"', 
+                                    1.275, 1.0215, '"_"', 
                                       line_label_colour, bar_line_label_size, 
                                     1.128, 1.04, 'r', 
                                       line_label_colour, r_line_label_size,
@@ -2464,9 +2464,9 @@ car_prefs_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size,
                                       line_label_colour, i_line_label_size,
                                     1.27, 0.9933, 'i*degree', 
                                       line_label_colour, i_line_label_size,
-                                    1.01, 1.0397, 'bar(i)', 
+                                    0.97, 1.0385, 'bar(i)', 
                                       line_label_colour, i_line_label_size,
-                                    1.29, 1.0295, 'bar(i)', 
+                                    1.275, 1.025, 'bar(i)', 
                                       line_label_colour, i_line_label_size,
                                     )
 
