@@ -2383,29 +2383,29 @@ rebound_results %>%
 <<CarCostGraph, echo=FALSE, fig.cap="Expenditure path graph for the car example. CV is compensating variation.", fig.width=6, fig.height=4>>=
 car_cost_line_angle <- -29.5
 car_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
-                                   1280, 26150, 'degree', 
+                                   1295, 26600, 'degree', 
                                    stage_colour, orig_size, 0,
-                                   759, 26150, 'a', 
+                                   777, 26640, 'a', 
                                    abcd_colour, abcd_size, 0,
-                                   770, 26025, 'b', 
+                                   767, 26576, 'b', 
                                    abcd_colour, abcd_size, 0,
-                                   770, 25937, '"*"', 
+                                   791, 26530, '"*"', 
                                    stage_colour, star_size, 0,
-                                   750, 25867, 'c', 
+                                   766, 26475, 'c', 
                                    abcd_colour, abcd_size, 0,
-                                   816, 25896, '"^"', 
+                                   835, 26435, '"^"', 
                                    stage_colour, hat_size, 0,
-                                   855, 25870, 'd', 
+                                   873, 26480, 'd', 
                                    abcd_colour, abcd_size, 0,
-                                   830, 26557, 'bold("_")', 
+                                   845, 27070, 'bold("_")', 
                                    stage_colour, bar_size, 0,
-                                   1075, 26350, 'Original~expenditure', 
+                                   1075, 26885, 'Original~expenditure', 
                                    annotation_colour, annotation_size, car_cost_line_angle,
-                                   950, 25958, 'After~expected~savings', 
+                                   930, 26495, 'After~exp.~sav.', 
                                    annotation_colour, annotation_size, car_cost_line_angle,
-                                   710, 26010, 'After~empl.', 
+                                   720, 26620, 'After~empl.', 
                                    annotation_colour, annotation_size-1, car_cost_line_angle,
-                                   710, 25950, 'After~CV', 
+                                   705, 26580, 'After~CV', 
                                    annotation_colour, annotation_size-1, car_cost_line_angle)
 
 rebound_results %>% 
@@ -2419,7 +2419,7 @@ rebound_results %>%
                                             size = size,
                                             angle = angle), 
                      parse = TRUE) +
-  ggplot2::scale_x_continuous(limits = c(680, NA)) +
+  ggplot2::scale_x_continuous(limits = c(700, NA)) +
   MKHthemes::xy_theme()
 @
 
