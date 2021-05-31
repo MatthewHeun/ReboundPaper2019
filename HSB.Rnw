@@ -2945,21 +2945,21 @@ rebound_results %>%
                                             colour = colour, 
                                             size = size,
                                             angle = angle), 
-                     parse = TRUE, ) +
+                     parse = TRUE) +
   MKHthemes::xy_theme()
 @
 
 
 <<LampCostGraph, echo = FALSE, fig.cap="Expenditure pathgraph for the lamp example. CV is compensating variation.", fig.width=6, fig.height=4>>=
-lamp_cost_line_angle <- -23
+lamp_cost_line_angle <- -23.6
 lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                     8.6, 27921.7, 'degree', 
                                       stage_colour, orig_size, 0,
                                     0.85, 27921.7, 'a', 
                                       abcd_colour, abcd_size, 0,
-                                    1.18, 27921.7, '"b"', 
+                                    1.05, 27920.7, '"b"', 
                                       abcd_colour, abcd_size, 0,
-                                    0.8, 27920.65, '"*"',
+                                    0.75, 27920, '"*"',
                                       stage_colour, star_size, 0,
                                     0.8, 27916.5, 'c', 
                                       abcd_colour, abcd_size, 0,
@@ -2971,7 +2971,7 @@ lamp_cost_labels <- tibble::tribble(~x, ~y, ~lab, ~colour, ~size, ~angle,
                                       stage_colour, bar_size, 0,
                                     5.25, 27925, 'Original~expenditure',
                                       annotation_colour, annotation_size, lamp_cost_line_angle,
-                                    3.75, 27918, 'After~emplacement',
+                                    3.75, 27917.2, 'After~emplacement',
                                       annotation_colour, annotation_size, lamp_cost_line_angle,
                                     1.54, 27917.3, 'After~CV',
                                       annotation_colour, annotation_size-1, lamp_cost_line_angle,
@@ -2989,7 +2989,9 @@ rebound_results %>%
                                             size = size,
                                             angle = angle), 
                      parse = TRUE) +
-  
+  ggplot2::scale_x_continuous(breaks = seq(2, 8, by = 2)) +
+  ggplot2::scale_y_continuous(breaks = seq(27916, 27928, by = 2)) +
+
   MKHthemes::xy_theme()
 @
 
