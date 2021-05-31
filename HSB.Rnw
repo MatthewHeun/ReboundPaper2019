@@ -3418,7 +3418,7 @@ $\amacro{C}_{cap}$ and $\amacro{\eta}$ should probably be varied jointly,
 not independently.
 
 <<all_Re_terms_C_cap_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to capital cost ($\\amacro{C}_{cap}$).", fig.width=6, fig.height=4>>=
-C_dot_cap_sens_params <- list(Car = list(C_cap_star = seq(26000, 30000, by = 1000)),
+C_dot_cap_sens_params <- list(Car = list(C_cap_star = seq(30000, 36000, by = 1000)),
                               Lamp = list(C_cap_star = seq(0.5, 10.0, by = 0.1)))
 
 rebound_terms_graph(rebound_data = actual_cases, parameterization = C_dot_cap_sens_params,
