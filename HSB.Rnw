@@ -1420,8 +1420,12 @@ Neoclassical consumer theory distinguishes between
         other goods consumption due to the lower post-EEU price of the energy service 
         (the substitution effect) and
   
-  \item re-spending the higher real income (the income effect) (for the original development see \citet{Slutsky1915} and \citet{Allen1936}, for a modern introduction %\citet{Nicholson2017}
-  ). 
+  \item re-spending the higher real income (the income effect)%
+        \footnote{
+          For the original development **** of the income effect? ---MKH ****
+          see \citet{Slutsky1915} and \citet{Allen1936}.
+          For a modern introduction see \citet{Nicholson2017}.
+        }.
     
 \end{enumerate*}
 %
