@@ -278,7 +278,8 @@ and achieving Paris emissions reduction targets will be at risk.
 \label{sec:rebound_frameworks}
 %++++++++++++++++++++++++++++++
 
-Several authors have developed frameworks for analyzing energy rebound.
+Rebound analysis frameworks are used to estimate the magnitude of rebound effects and total rebound
+for an EEU.
 We use the word ``framework'' to mean 
 the basic structure for analysis of a system or concept,
 in this case energy rebound.
@@ -315,6 +316,13 @@ Finally, the macro effect accounts for long-run economic expansion
 (and subsequent rising energy consumption),
 because the EEU decreases input costs for the device owner.
 
+\begin{table}
+  \caption{Rebound typology (right column) with comparison to existing literature (center column).}
+  \centering
+  \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
+  \label{tab:typology}
+\end{table}
+
 A thorough analysis of energy rebound should be conducted in several conceptual ``spaces''
 in which changes occur because of the EEU.
 Each rebound effect should be analyzed for its changes 
@@ -325,21 +333,28 @@ at other locations and sectors throughout the economy (indirect).
 Finally, changes should be analyzed on both 
 microeconomic and macroeconomic scales.
 
+In fact, similar to the problem of defining the microeconomic foundations of macroeconomics,
+*********
+
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
-account for all effects, locations, and scales
-in all of energy, expenditure, and consumption spaces.
+account for all effects, locations, and scales.
 Everything links together!
 The emplacement effect
-frees the device owners cash to be spent in the substitution effect, 
-with associated energy implications.
+frees the device owners cash to be spent in the substitution effect.
 The substitution effect provides net savings to be spent in the income effect, 
 again with energy implications.
 And the rate of net savings initiates the macro effect.
-Comprehensive rebound analysis frameworks that account for 
-energy, expenditure, and consumption spaces are needed.
 
-
+Furthermore, it is important that rebound analysis frameworks include all of 
+energy, expenditure, and consumption spaces.
+Similar to the rebound effects,
+energy, expenditure, and consumption are all linked together.
+For example, 
+net income respent on more of the energy service will have different energy implications
+from net income spent on other goods and services.
+The device owner's consumption preferences (expressed in the consumption space)
+have repercussions in both the energy and expenditure spaces. 
 
 
 %------------------------------
@@ -347,10 +362,36 @@ energy, expenditure, and consumption spaces are needed.
 \label{sec:previous_frameworks}
 %------------------------------
 
+Several scholars have developed rebound analysis frameworks.
+Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
+relevant to the discussion above.
+
+\begin{table}
+  \caption{Previous rebound analysis frameworks.}
+  \centering
+  \includegraphics[width=1\linewidth]{figure_other/PreviousFrameworksTable.pdf}
+  \label{tab:previous_frameworks}
+\end{table}
+
+**** Gregor describe the table here. 
+Probably easiest to go author-by-author, 
+i.e., use the columns of the table
+as the outer organizational structure of these paragraphs. ---MKH ****
 
 
 
 
+
+**** Then end with this sentence or something similar. ---MKH ****
+
+After reviewing relevant rebound analysis frameworks, 
+we find that none of the existing frameworks 
+combines all needed features.
+Specifically, no previous rebound analysis framework 
+combines all rebound effects, locations, and scales
+across energy, expenditure, and consumption spaces
+a detailed model of consumer preferences, and
+non-marginal energy service price changes.
 
 
 
@@ -720,12 +761,12 @@ Names for the decorations are given at the bottom of the figure
 The left-to-right order does not necessarily represent 
 the progression of rebound effects through time.
 
-\begin{table}
-\caption{Rebound typology (right column) with comparison to existing literature (center column).}
-\centering
-\includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-\label{tab:typology}
-\end{table}
+% \begin{table}
+% \caption{Rebound typology (right column) with comparison to existing literature (center column).}
+% \centering
+% \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
+% \label{tab:typology}
+% \end{table}
 
 \begin{figure}
 \centering
