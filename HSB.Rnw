@@ -254,11 +254,15 @@ example, by 2050
 energy efficiency is expected to
 contribute 37\% of 
 energy-related carbon emissions reductions globally
-in the International Energy Agency's Sustainable Development scenario
-(relative to its Stated Policies scenario, 
-which itself includes planned energy efficiency)
-~\citep[Fig.~2.1]{InternationalEnergyAgency2019}.
-However, as \citep[Fig.1 and Fig.2]{Brockway2021} show, 
+in the International Energy Agency's (IEA's) Sustainable Development 
+scenario~\citep[Fig.~2.1]{InternationalEnergyAgency2019}%
+\footnote{
+  Note that emissions reductions in the Sustainable Development scenario
+  are relative to the IEA's Stated Policies scenario, 
+  which itself includes planned energy efficiency.
+}.
+%
+However, as \citet[Fig.~1 and Fig.~2]{Brockway2021} show, 
 the expected reductions in energy consumption 
 would represent a significant structural break with the historical record
 of tight coupling between energy consumption and GDP.
@@ -289,27 +293,38 @@ the description and explication of rebound effects, locations, and scales
 in energy, expenditure, and consumption spaces
 to enable estimation of rebound for a particular EEU.
 Rebound frameworks are operationalized by a series of equations,
-typically ending with an equation to estimate 
-total rebound from an EEU across all effects, locations, and scales.
+typically ending with a summation equation for
+total rebound across all effects, locations, and scales.
+In the subsections that follow, 
+rebound frameworks are further elucidated and
+important characteristics of rebound frameworks are discussed.
 
-Table~\ref{tab:typology} shows our rebound typology, 
-including several rebound effects, locations, and scales.
+%------------------------------
+\subsubsection{Rebound typologies} 
+\label{sec:rebound_typologies}
+%------------------------------
+
+Table~\ref{tab:typology} shows our rebound typology.
+A comprehensive rebound framework will include 
+emplacement, substitution, income, and macro effects.
 The emplacement effect of an EEU includes 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item expected energy savings, assuming no behavioral changes;
   
-  \item embodied energy effects, i.e., changes in the embodied energy rate 
-        of the energy conversion device across the EEU; and 
+  \item embodied energy effects, i.e., changes across the EEU of the embodied energy rate 
+        of the energy conversion device; and 
         
-  \item maintenance and disposal effects (changes in the energy implications of 
-        these activities due to the EEU).
+  \item maintenance and disposal effects 
+        (changes in the energy implications of 
+        these activities caused by the EEU).
     
 \end{enumerate*}
 %
-The substitution effect accounts for behavior changes caused by the EEU,
-typically increased use of the upgraded device and decreased consumption of other goods.
+The substitution effect accounts for behavior changes across the EEU,
+typically increased use of the upgraded device and decreased consumption of other goods,
+such that device owner utility is unchanged.
 The emplacement and substitution effects create net monetary savings
 which is spent in the income effect on more of the energy service and more other goods. 
 Finally, the macro effect accounts for long-run economic expansion 
@@ -323,46 +338,114 @@ because the EEU decreases input costs for the device owner.
   \label{tab:typology}
 \end{table}
 
-A thorough analysis of energy rebound should be conducted in several conceptual ``spaces''
-in which changes occur because of the EEU.
-Each rebound effect should be analyzed for its changes 
-to energy, to expenditures, and to goods and service consumption.
-Furthermore, changes to energy, expenditure, and consumption should be assessed both 
-at the location of the upgraded device (direct) and
-at other locations and sectors throughout the economy (indirect).
-Finally, changes should be analyzed on both 
-microeconomic and macroeconomic scales.
-
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
 account for all effects, locations, and scales.
 Everything links together!
 The emplacement effect
-frees the device owners cash to be spent in the substitution effect.
-The substitution effect provides net savings to be spent in the income effect, 
+frees the device owners cash to be spent in the income effect
+with energy implications.
+The substitution effect describes behavior adjustments that 
+provide net savings to be spent in the income effect, 
 again with energy implications.
 And the rate of net savings initiates the macro effect.
 (We note here and explore in detail later that 
 the link between microeconomic and macroeconomic scales 
 is largely unexplored territory.)
 
-Furthermore, it is important that rebound analysis frameworks include all of 
+
+%------------------------------
+\subsubsection{Rebound spaces} 
+\label{sec:rebound_spaces}
+%------------------------------
+
+A comprehensive rebound framework will enable analyses in several conceptual ``spaces''
+in which changes occur because of the EEU.
+Each rebound effect should be analyzed for its changes 
+to energy, to expenditures, and to goods and services consumption.
+Furthermore, changes to energy, expenditure, and consumption should be assessed both 
+at the location of the upgraded device (direct) and
+at other locations and sectors throughout the economy (indirect).
+Finally, changes should be analyzed on both 
+microeconomic and macroeconomic scales.
+
+It is important that rebound analysis be conducted in all of 
 energy, expenditure, and consumption spaces.
 Similar to the rebound effects,
 energy, expenditure, and consumption are all linked together.
-For example, 
-net income respent on more of the energy service will have different energy implications
-from net income spent on other goods and services.
+To give just a few examples, 
+net income respent on more of the energy service 
+(described in the expenditure space)
+will have different energy implications
+from net income spent on other goods and services
+(described in the energy space).
 The device owner's consumption preferences (expressed in the consumption space)
-have repercussions in both the energy and expenditure spaces. 
+have repercussions in both the energy and expenditure spaces.
+Embodied energy (in the energy space) may be larger
+for more expensive upgrades (in the expenditure space).
 
 
 %------------------------------
-\subsubsection{Previous frameworks} 
+\subsubsection{Consumer preferences} 
+\label{sec:consumer_preferences}
+%------------------------------
+
+A comprehensive rebound framework will include a detailed description of consumer preferences,
+because device owner preferences drive the substitution effect.
+By ``detailed,'' we mean **** GS to complete subsubsection as 1 or 2 paragraphs. ---MKH ****
+
+
+%------------------------------
+\subsubsection{Non-marginal energy efficiency changes} 
+\label{sec:non_marginal_changes}
+%------------------------------
+
+A comprehensive rebound framework will allow non-marginal efficiency changes,
+because the EEU often involves a very large percentage increase in energy efficiency.
+A good example of non-marginal energy efficiency changes is 
+replacing incandescent lamps with Light Emitting Diode (LED) lamps.
+For such EEUs, energy efficiency can go up by nearly a factor of 10!
+
+
+%------------------------------
+\subsubsection{Operationalizable} 
+\label{sec:operationalizable}
+%------------------------------
+
+An operationalizable rebound analysis framework is one that includes
+sufficient descriptions of energy rebound 
+for all effects, locations, and scales
+in all spaces (energy, expenditure, and consumption).
+**** GS to add more here. ---MKH ****
+
+
+%++++++++++++++++++++++++++++++
+\subsection{Previous frameworks} 
 \label{sec:previous_frameworks}
-%------------------------------
+%++++++++++++++++++++++++++++++
 
-Several scholars have developed rebound analysis frameworks.
+Bringing together the high stakes of energy efficiency 
+\emph{vis-\`{a}-vis} emissions goals
+and the characteristics of rebound frameworks discussed above,
+we see that comprehensive rebound frameworks will be best for 
+developing energy efficiency policy to address CO$_2$ emissions targets. 
+A comprehensive picture of rebound is needed to construct
+effective energy efficiency policy for fighting 
+climate change.
+Effective policy should be built on firm theoretical foundations and empirical analysis
+to guide effective energy efficiency policy making.
+
+In fact, several scholars have developed rebound analysis frameworks previously.
+It is worthwhile to evaluate those frameworks for
+the key features discussed above: 
+analysis at all effects, locations, and scales; 
+analysis in energy, expenditure, and consumption spaces; 
+detailed model of consumer preferences; 
+non-marginal energy efficiency changes; and 
+operationalizable.
+Only when these characteristics are present, 
+a comprehensive picture of rebound can emerge.
+
 Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
 relevant to the discussion above.
 
@@ -373,10 +456,12 @@ relevant to the discussion above.
   \label{tab:previous_frameworks}
 \end{table}
 
-**** Gregor describe the table here. 
+**** GS: describe the table here. 
 Probably easiest to go author-by-author, 
 i.e., use the columns of the table
-as the outer organizational structure of these paragraphs. ---MKH ****
+as the outer organizational structure of these paragraphs.
+Maybe talk about notional sketches instead of numerically-precise 
+graphs? ---MKH ****
 
 
 
@@ -384,34 +469,27 @@ as the outer organizational structure of these paragraphs. ---MKH ****
 
 **** Then end with this sentence or something similar. ---MKH ****
 
-After reviewing relevant rebound analysis frameworks, 
-we find that none of the existing frameworks 
-has all needed features.
+After reviewing relevant previous rebound analysis frameworks, 
+we find that none has all needed features.
+**** Probably be more complimentary to the previous work. 
+It provides a base on which a comprehensive framework can be built. ---MKH ***
 Specifically, no previous rebound analysis framework 
 combines all rebound effects, locations, and scales
-across energy, expenditure, and consumption spaces;
-a detailed model of consumer preferences; and
-non-marginal energy service price changes.
+across energy, expenditure, and consumption spaces
+with 
+a detailed model of consumer preferences and
+non-marginal energy service price changes
+in an operationalizable manner.
 Simply put, there is no existing comprehensive rebound analysis framework.
 
 
 
 
-
-
-
-
-
-
-
-
-
-
 % Commented text below is from the previous introduction.
-% We can consider it to be an organ donor for the new introdcution, 
+% We can consider it to be an organ donor for the new introduction, 
 % when needed.
-
-
+% Or, some pieces of the commented text below can find their ways to 
+% other sections of the paper.
 
 % Those who study energy rebound usually identify 
 % locations and levels of rebound.
