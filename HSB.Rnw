@@ -114,8 +114,9 @@ Leeds, LS2 9JT, UK}
 % then cite the author(s) and year(s).
 % Also, non-standard or uncommon abbreviations should be avoided, but
 % if essential they must be defined at their first mention in the abstract itself.
+**** Not yet edited to reflect new introduction. ---MKH ****
 Implementation of widespread energy efficiency measures
-is an important global strategy to meet Paris greenhouse gas emissions targets. 
+is an important global strategy to meet Paris greenhouse gas emissions reduction targets. 
 However, energy rebound can ``take back'' efficiency-based
 energy reductions via behavior changes and economic effects.
 Evidence is growing that rebound effects are 
@@ -426,10 +427,15 @@ in all spaces (energy, expenditure, and consumption).
 \label{sec:previous_frameworks}
 %++++++++++++++++++++++++++++++
 
+**** Should we also discuss the different types of frameworks from the 
+previous version of the introduction? 
+I'm thinking about microeconomic, macroeconomic (rare), and 
+CGE, non-CGE? ---MKH ****
+
 Bringing together the high stakes of energy efficiency 
-\emph{vis-\`{a}-vis} emissions goals
+\emph{vis-\`{a}-vis} emissions reduction goals
 and the characteristics of rebound frameworks discussed above,
-we see that comprehensive rebound frameworks will be best for 
+we see that comprehensive rebound frameworks are needed for 
 developing energy efficiency policy to address CO$_2$ emissions targets. 
 A comprehensive picture of rebound is needed to construct
 effective energy efficiency policy for fighting 
@@ -452,7 +458,8 @@ Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frame
 relevant to the discussion above.
 
 \begin{table}
-  \caption{Previous rebound analysis frameworks.}
+  \caption{Previous rebound analysis frameworks. **** This table is not correct. We need to decide which 
+           frameworks to include and their characteristics. ---MKH ****}
   \centering
   \includegraphics[width=1\linewidth]{figure_other/PreviousFrameworksTable.pdf}
   \label{tab:previous_frameworks}
@@ -812,11 +819,11 @@ Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Methods: development of the rebound framework}
+\section{Methods: development of the comprehensive rebound framework}
 \label{sec:framework}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we develop a comprehensive, consumer-based energy rebound analysis framework 
+In this section, we develop a comprehensive energy rebound analysis framework 
 (concisely, ``the framework'').
 We begin with our rebound typology. 
 
