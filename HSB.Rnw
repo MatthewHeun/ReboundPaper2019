@@ -434,7 +434,7 @@ CGE, non-CGE? ---MKH ****
 
 Bringing together the high stakes of energy efficiency 
 \emph{vis-\`{a}-vis} emissions reduction goals
-and the characteristics of rebound frameworks discussed above,
+and the desirable characteristics of rebound frameworks discussed above,
 we see that comprehensive rebound frameworks are needed for 
 developing energy efficiency policy to address CO$_2$ emissions targets. 
 A comprehensive picture of rebound is needed to construct
