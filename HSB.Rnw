@@ -1412,7 +1412,8 @@ See Appendix~\ref{sec:Re_OMd} for details of the derivation.
 \label{sec:sub_effect_main_paper}
 %------------------------------
 
-Neoclassical consumer theory distinguishes between
+Neoclassical consumer theory decpomposes price-induced
+behavior change into
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -1422,7 +1423,7 @@ Neoclassical consumer theory distinguishes between
   
   \item re-spending the higher real income (the income effect)%
         \footnote{
-          For the original development **** of the income effect? ---MKH ****
+          For the original development of the decomposition
           see \citet{Slutsky1915} and \citet{Allen1936}.
           For a modern introduction see \citet{Nicholson2017}.
         }.
@@ -1430,7 +1431,9 @@ Neoclassical consumer theory distinguishes between
 \end{enumerate*}
 %
 This section develops mathematical expressions 
-for substitution effect rebound ($Re_{sub}$).
+for substitution effect rebound ($Re_{sub}$),
+thereby accepting the standard neoclassical assumptions
+about consumer behavior.
 (The next section addresses income effect rebound, $Re_{inc}$.)
 The substitution effect alters compensated demand, which is the demand for
 the expenditure minimizing consumption bundle that
@@ -1472,18 +1475,20 @@ bundle prior to device upgrade.
 After emplacement of the more efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
-pivoting the budget constraint outward, to \starstar{}.
-By definition, the substitution effect indicates the optimal
-consumption bundle at the $\wedge$ point, after a compensating variation  
+pivoting the budget constraint counterclockwise around the y-axis intercept. The budget line \starstar{} indicates the
+cost of purchasing the original consumption bundle
+at the new prices.
+By definition, the substitution effect indicates the different, optimal
+consumption bundle at the $\wedge$ point. 
+This compensating variation
 translates into a lower budget constraint \hathat{} 
 in Fig.~\ref{fig:ExampleConsPathGraph}.
 The $\wedge$ point shows consumption with new prices yielding utility
-at the level prior to the EEU,
-by taking advantage of the lower energy service price, 
-hence favoring energy service consumption (because it is now less expensive)
-at the expense of other goods consumption (which are now relatively more expensive).
+at the level prior to the EEU and minimizing expenditure, 
+by consuming more of the relatively less costly energy service consumption and less of the relatively more costly
+other consumption goods.
 
-The substitution effect can be decomposed into 
+The rebound from the substitution effect can be decomposed into 
 indirect (the decrease in other goods consumption, segment \starc{}) 
 and 
 direct (the increase in energy service consumption, segment \chat{})
@@ -1611,9 +1616,9 @@ $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
 Thanks to the energy service price decline, real income rises, 
 and freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-Emplacement effect expenditures and CV
+Emplacement effect expenditures and compensating variation
 modify freed cash to leave the device owner with
-\emph{net} income ($\rasub{N}$) from the EEU,
+\emph{net} savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
 Derivations of expressions for freed cash from the 
 emplacement effect ($\rate{G}$)
@@ -1623,24 +1628,25 @@ Rebound from the income effect quantifies the rate of additional energy demand
 that arises when the energy conversion device owner spends net
 savings from the EEU
 (segments \hatd{} and \dbar{} in 
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}).
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}), and is determined by several constraints.
 
-The income effect must satisfy several constraints.
-First, net savings must be zero after
+The income effect under utility maximization
+satisfies the budget constraint, so that
+net savings are zero after
 the income effect ($\rainc{N} = 0$).
-The monetary budget constraint $\rbempl{M}$ holds, so that only 
-net savings ($\rasub{N}$) can be re-spent. Due to standard non-satiation
-assumptions on preference (and in particular for the CES utility function),
-net savings should be completely re-spent.
+%The monetary budget constraint $\rbempl{M}$ holds, so that only 
+%net savings ($\rasub{N}$) can be re-spent.
+%Standard non-satiation assumptions on preferences (and in particular for the CES utility function),
+%net savings should be completely re-spent.
 This constraint can be seen in 
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
 where the post-income-effect point ($-$) returns to the original expenditure line.
 See Appendix~\ref{sec:proof_income_elasticities}
 for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
-satisfy the first constraint.
+satisfy the budget constraint.
 
-Second, net savings should be re-spent on only 
+Net savings are re-spent completely on
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -1652,18 +1658,21 @@ Second, net savings should be re-spent on only
 %
 This constraint is satisfied by construction below.
 
-A third constraint follows from the homothetic
-preferences in a CES utility function but need not hold in general.
-Additional spending on the energy service and other goods 
-is allocated in the same proportion as post-substitution-effect 
-expenditures on the energy service and other goods.
-This constraint is also satisfied by construction below, 
+The proportions in which spending is allocated
+depends on preferences, which prescribe
+an income expansion. The CES utility function 
+allocates spending on the energy service and other goods in the same proportion as post-substitution-effect 
+expenditures on the energy service and other goods,
+due to its homotheticity, so that the income
+expansion path is a ray.
+This constraint is satisfied by construction below, 
 particularly via an effective income ($\Mdothatprime$).
-This constraint can be seen in the consumption path graph
-where the pre- and post-income-effect points ($\wedge$ and $-$, respectively)
+In the consumption path graph, the pre- and post-income-effect 
+points ($\wedge$ and $-$, respectively)
 lie along ray \rr{} from the origin through point $\wedge$ in Fig.~\ref{fig:ExampleConsPathGraph}.
 However, this framework could accommodate non-homothetic preferences
-for spending across the income effect.
+for spending across the income effect (turning the income
+expansion path into a more general curve).
 
 We next show expressions for 
 direct and indirect income effect rebound.
@@ -1688,7 +1697,7 @@ The ratio of rates of energy service consumed across the income effect is given 
 \end{equation}
 %
 Homotheticity means that $\eqsM = 1$, 
-but not all net income ($\rbinc{N}$) is spent on more energy for the energy conversion device.
+but not all net savings ($\rbinc{N}$) are spent on more energy for the energy conversion device.
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
@@ -1703,7 +1712,7 @@ For the purposes of the income effect,
 the effective income equation (Eq.~(\ref{eq:effective_income})) 
 adjusts income ($\rorig{M}$) to account for 
 sunk costs ($\raempl{C}_{cap}$ and $\raempl{C}_{\md}$) and
-net income ($\rasub{N}$).
+net savings ($\rasub{N}$).
 
 Direct income rebound is defined as
 
@@ -1722,7 +1731,7 @@ the expression for direct income rebound is
 If there is no net savings after the substitution effect ($\rasub{N} = 0$), 
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.%
 \footnote{
-  Zero net income ($\rasub{N} = 0$) could occur if 
+  Zero net savings ($\rasub{N} = 0$) could occur if 
   an increase in capital cost rate ($\Delta \raempl{C}_{cap}$) and
   maintenance and disposal cost rate ($\Delta \raempl{C}_{\md}$)
   consume all freed cash ($\rate{G}$) and savings from the CV.
@@ -1795,7 +1804,7 @@ Efficiency-driven economic expansion is
 described by \citeauthor{Hulten1978}'s theorem,
 which states that the economy grows at the rate 
 of an efficiency increase in some part of the economy, 
-scaled by that part's expenditure share~\citep{Hulten1978}.
+scaled by that part's share in gross output~\citep{Hulten1978}.
 \citeauthor{blackburn2020energy}  
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -3482,12 +3491,11 @@ after emplacement of the energy efficient device.
 German energy prices%
 \footnote{
   For the car example,
-  the gasoline price in Germany is taken as 1.35 \euro{}/liter for ``super gasoline'' (95 octane),
-  an approximate average price over the last five years~\citep{finanzen}.
+  the gasoline price in Germany is taken as *** check if we confirm this change of gasoline price: *** 1.42 \euro{}/liter for the average ``super gasoline'' (95 octane) price in 2018~\citep{finanzen}.
   For the lamp example,
-  the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~\citep{bundesministerium}.
+  the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~ for the 2018 price of a household using 3.5MWh/year, an average value for German households~\citep{bundesministerium}.
   Converting currency (at 1 \euro{} = \$1.21) and
-  physical units gives 6.18~\$/USgallon and 0.363~\$/kW-hr.}
+  physical units gives *** check if we confirm this change of gasoline price*** 6.50~\$/USgallon and 0.363~\$/kW-hr.}
 %
 are shown as vertical lines,
 providing an indication of possible energy price variations.
@@ -3738,11 +3746,14 @@ Doing so effectively reduces the capital cost of energy efficiency devices ($\am
 However, Fig.~\ref{fig:all_Re_terms_C_cap_graph} shows that reducing capital cost 
 increases energy rebound, 
 the route being, predominantly, the income effect 
-where more net income is available to spend on more of the energy service and other goods.
-Thus, policymakers should be aware that rebound will reduce the effectiveness of rebates and subsidies
+where more net savings are available to spend on 
+more of the energy service and other goods.
+Thus, policymakers should be aware that rebound will 
+reduce the effectiveness of rebates and subsidies
 to generate actual energy savings. 
 We note in passing that the framework accommodates 
-both costless upgrades and a costly ``policy-induced'' improvement \citep{Gillingham2016}.
+both costless upgrades and a costly ``policy-induced'' 
+improvement \citep{Gillingham2016}.
 
 To avoid rebound generated by rebates or subsidies, 
 policymakers may want to implement energy taxes, 
@@ -3751,26 +3762,32 @@ the topic of the next section.
 
 
 %------------------------------
-\subsubsection{Carbon taxes} 
+\subsubsection{Carbon price} 
 \label{sec:splicy:energy_taxes}
 %------------------------------
 
-Carbon taxes reduce net income earned by device owners after the EEU
+A carbon price or other penalty on consuming (fossil) energy (enacted 
+alongside the EEU) reduces net savings
+earned by device owners after the EEU
 by raising the effective price of fossil energy and the price 
 of any fossil energy-powered energy service,
-such as non-electric cars.
-By raising input prices,
-consumers are incentivized to use less of the energy service and 
-buy more-efficient devices.
+such as a hybrid or internal combustion engine car.
+By raising the relative price of the energy service,
+the substitution effect shrinks. Moreover, consumers are incentivized 
+to buy more-efficient devices or consider substitutes.
 However, increasing the price of energy means that subsequent 
-increases in energy efficiency provide increasing net income.
+increases in energy efficiency provide increasing net savings.
 Fig.~\ref{fig:all_Re_terms_p_E_graph} shows that energy rebound rises with energy price.
-The route to higher rebound from rising energy prices is through the income and macro effects
-(assuming non-zero macro factor ($k$)).
-Thus, policymakers should be aware that raising energy prices will not be as effective 
+The route to higher rebound from rising energy prices 
+is through the income and macro effects (assuming non-zero macro factor ($k$)).
+Thus, policymakers should be aware that raising 
+energy prices will not be as effective 
 as presumed, due to rebound effects.
 Naturally, higher energy prices are likely
-to induce structural change towards an overall less energy-intensive economy (e.g. more public transport);
+to induce structural change towards an overall 
+less energy-intensive economy which could be designed by
+policy makers with complementary policies to increase the availability of 
+substitutes (e.g. more public transport);
 yet, rebound effects become more pronounced.
 
 
@@ -3849,14 +3866,14 @@ For the purposes of illustration we set $k = 3$,
 being between the values of $k$ 
 estimated from the car and lamp examples.
 Note that $k = 3$ implies that 
-every \$1 of net income spent by the device owner 
+every \$1 of net savings spent by the device owner
 generates \$3 of additional economic 
 activity in the broader economy.
 We multiply $k \rasub{N}$ by the energy intensity of the economy to 
 find the energy implications of respending in the economy.
 There are three ways to interpret $k = 3$.
 First, $k = 3$ can be considered to be the average long-run 
-economic growth generated by the owner spending each \$1 of net income,
+economic growth generated by the owner spending each \$1 of net savings,
 or three times over the growth implied by applying Hulten's theorem.
 Second, it could be that growth is less than 
 \$3 but that the macroeconomic ``energy price effect" (a decline in 
