@@ -209,7 +209,7 @@ Famously, the roots of energy rebound trace back to
 who, in \emph{The Coal Question}, said 
 ``[\emph{i}]\emph{t is wholly a confusion of ideas to suppose that the economical 
 use of fuel is equivalent to a diminished consumption. 
-The very contrary is the truth}'' (emphasis in original) \citet[p.~103]{Jevons:1865}.
+The very contrary is the truth}'' \citep[p.~103, emphasis in original]{Jevons:1865}.
 Less famously, the origins of rebound may extend further backward 
 from \citeauthor{Jevons:1865}
 to \citet{Williams1840}
@@ -262,14 +262,14 @@ scenario~\citep[Fig.~2.1]{InternationalEnergyAgency2019}%
   which itself includes planned energy efficiency.
 }.
 %
-However, as \citet[Fig.~1 and Fig.~2]{Brockway2021} show, 
+However, as a previous study by the present authors and others shows, 
 the expected reductions in energy consumption 
 would represent a significant structural break with the historical record
-of tight coupling between energy consumption and GDP.
+of tight coupling between energy consumption and GDP \citep[Figs.~1 and~2]{Brockway2021}.
 The same study also found that 
 ``many of the mechanisms driving rebound effects are overlooked by 
 integrated assessment and global energy models'' ~\citep[p.~1]{Brockway2021}.
-Thus, the magnitude of energy rebound is much more than an academic debate, 
+Thus, energy rebound is much more than an academic debate, 
 because there is a lot at stake. 
 Large rebound, if it exists and if it is not fully 
 included in models from which policies are derived, would mean that
@@ -323,13 +323,15 @@ The emplacement effect of an EEU includes
 \end{enumerate*}
 %
 The substitution effect accounts for behavior changes across the EEU,
-typically increased use of the upgraded device and decreased consumption of other goods,
-such that device owner utility is unchanged.
+typically increased use of the upgraded device and decreased consumption of other goods.
 The emplacement and substitution effects create net monetary savings
 which is spent in the income effect on more of the energy service and more other goods. 
 Finally, the macro effect accounts for long-run economic expansion 
 (and subsequent rising energy consumption),
 because the EEU decreases input costs for the device owner.
+Rebound locations include direct (at the upgraded device) and
+indirect (in other locations and economic sectors). 
+Rebound scales include microeconomic and macroeconomic.
 
 \begin{table}
   \caption{Rebound typology (right column) with comparison to existing literature (center column).}
@@ -483,6 +485,47 @@ in an operationalizable manner.
 Simply put, there is no existing comprehensive rebound analysis framework.
 
 
+%++++++++++++++++++++++++++++++
+\subsection{Need, aim, contributions, and structure}
+\label{sec:aim_contribution_structure}
+%++++++++++++++++++++++++++++++
+
+There is a strategic \emph{need} for a comprehensive rebound analysis framework
+to firm up theoretical foundations, enable empirical analysis, and 
+guide effective energy efficiency policy-making.
+In particular the framework should be one that 
+combines all rebound effects, locations, and scales
+across energy, expenditure, and consumption spaces
+with 
+a detailed model of consumer preferences and
+non-marginal energy service price changes
+in an operationalizable manner.
+The \emph{aim} of this paper is therefore to build upon 
+the strong foundations laid by 
+\citet{Borenstein:2015aa}) and others 
+**** Give names. Everyone in the table? ---MKH **** 
+to develop a
+comprehensive energy rebound analysis framework.
+The key \emph{contributions} of this paper are 
+%
+\begin{enumerate*}[label={(\roman*)}]
+	
+  \item developing a comprehensive rebound analysis framework
+        with the characteristics described above,
+        
+  \item providing the first (to our knowledge) visualizations of rebound effects
+        in energy, expenditure, and consumption spaces, and 
+        
+  \item creating the first (to our knowledge) operationalized link between 
+        rebound effects on macro and micro scales. 
+  
+\end{enumerate*}
+
+The remainder of this paper is \emph{structured} as follows.
+Section~\ref{sec:framework} describes the comprehensive, rebound analysis framework.
+Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
+Section~\ref{sec:discussion} discusses the results, and 
+Section~\ref{sec:conclusion} concludes.
 
 
 % Commented text below is from the previous introduction.
@@ -711,61 +754,61 @@ Simply put, there is no existing comprehensive rebound analysis framework.
 % to take appropriate climate change mitigation actions.
 
 
-%++++++++++++++++++++++++++++++
-\subsection{Need, aim, contributions, and structure}
-\label{sec:aim_contribution_structure}
-%++++++++++++++++++++++++++++++
-
-There is a strategic \emph{need} for a comprehensive rebound analysis framework
-to firm up theoretical foundations, enable empirical analysis, and 
-guide energy policy-making. 
-In particular the framework should be one that 
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item builds upon microeconomic foundations and 
-        carefully distinguishes among microeconomic rebound mechanisms,
-  
-  \item incorporates plausible macroeconomic multiplier values
-        to provide a better link between micro and macro effects, and 
-
-  \item enables analysis of real EEUs.
-  
-\end{enumerate*}
-%
-The \emph{aim} of this paper is therefore to build upon the foundations laid by 
-\citet{Borenstein:2015aa}) and others to develop a
-comprehensive, consumer-based energy rebound analysis framework.
-The key \emph{contributions} of this paper are 
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item describing a consistent and mathematically rigorous, consumer-based energy rebound analysis framework
-        in which direct and indirect dimensions of 
-        substitution and income effects are connected,
-        
-  \item showing that embodied energy, maintenance and disposal activities, 
-        replacements, and macroeconomic effects can be accommodated 
-        in a consistent framework, 
-        
-  \item providing a new way to visualize rebound effects, 
-        namely via energy, expenditure, and consumption path graphs,
-  
-  \item applying a general CES utility function 
-        via empirically plausible cost shares of other goods consumption,
-  
-  \item providing two numerical case studies (a car and an electric lamp) 
-        to demonstrate the application of the rebound analysis framework, and 
-        
-  \item an assessment of the rebound implications from policies to enhance energy efficiency.
-        
-\end{enumerate*}
-
-The remainder of this paper is \emph{structured} as follows.
-Section~\ref{sec:framework} describes the comprehensive, consumer-based rebound analysis framework.
-Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
-Section~\ref{sec:discussion} discusses the results, and 
-Section~\ref{sec:conclusion} concludes.
+% %++++++++++++++++++++++++++++++
+% \subsection{Need, aim, contributions, and structure}
+% \label{sec:aim_contribution_structure}
+% %++++++++++++++++++++++++++++++
+% 
+% There is a strategic \emph{need} for a comprehensive rebound analysis framework
+% to firm up theoretical foundations, enable empirical analysis, and 
+% guide energy policy-making. 
+% In particular the framework should be one that 
+% %
+% \begin{enumerate*}[label={(\roman*)}]
+% 	
+%   \item builds upon microeconomic foundations and 
+%         carefully distinguishes among microeconomic rebound mechanisms,
+%   
+%   \item incorporates plausible macroeconomic multiplier values
+%         to provide a better link between micro and macro effects, and 
+% 
+%   \item enables analysis of real EEUs.
+%   
+% \end{enumerate*}
+% %
+% The \emph{aim} of this paper is therefore to build upon the foundations laid by 
+% \citet{Borenstein:2015aa}) and others to develop a
+% comprehensive, consumer-based energy rebound analysis framework.
+% The key \emph{contributions} of this paper are 
+% %
+% \begin{enumerate*}[label={(\roman*)}]
+% 	
+%   \item describing a consistent and mathematically rigorous, consumer-based energy rebound analysis framework
+%         in which direct and indirect dimensions of 
+%         substitution and income effects are connected,
+%         
+%   \item showing that embodied energy, maintenance and disposal activities, 
+%         replacements, and macroeconomic effects can be accommodated 
+%         in a consistent framework, 
+%         
+%   \item providing a new way to visualize rebound effects, 
+%         namely via energy, expenditure, and consumption path graphs,
+%   
+%   \item applying a general CES utility function 
+%         via empirically plausible cost shares of other goods consumption,
+%   
+%   \item providing two numerical case studies (a car and an electric lamp) 
+%         to demonstrate the application of the rebound analysis framework, and 
+%         
+%   \item an assessment of the rebound implications from policies to enhance energy efficiency.
+%         
+% \end{enumerate*}
+% 
+% The remainder of this paper is \emph{structured} as follows.
+% Section~\ref{sec:framework} describes the comprehensive, consumer-based rebound analysis framework.
+% Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
+% Section~\ref{sec:discussion} discusses the results, and 
+% Section~\ref{sec:conclusion} concludes.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
