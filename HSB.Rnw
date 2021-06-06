@@ -457,13 +457,17 @@ a comprehensive picture of rebound can emerge.
 Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
 relevant to the discussion above.
 
-\begin{table}
-  \caption{Previous rebound analysis frameworks. **** This table is not correct. We need to decide which 
-           frameworks to include and their characteristics. ---MKH ****}
-  \centering
-  \includegraphics[width=1\linewidth]{figure_other/PreviousFrameworksTable.pdf}
-  \label{tab:previous_frameworks}
-\end{table}
+% \begin{table}
+%   \caption{Previous rebound analysis frameworks. **** This table is not correct. We need to decide which 
+%            frameworks to include and their characteristics. ---MKH ****}
+%   \centering
+%   \includegraphics[width=1\linewidth]{figure_other/PreviousFrameworksTable.pdf}
+%   \label{tab:previous_frameworks}
+% \end{table}
+
+\input{pieces/prev_frameworks_table.tex}
+
+
 
 **** GS: describe the table here. 
 Probably easiest to go author-by-author, 
