@@ -276,6 +276,9 @@ Large rebound, if it exists and if it is not fully
 included in models from which policies are derived, would mean that
 efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
+So understanding the magnitude of energy rebound resulting from an EEU is important.
+Thus, developing clear and comprehensive way
+to estimate rebound is essential.
 
 
 %++++++++++++++++++++++++++++++
