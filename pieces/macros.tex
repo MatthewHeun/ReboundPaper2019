@@ -404,3 +404,22 @@ bottom=2pt}
 \newcommand{\hatbar}{\seg{$\wedge$}{inccolor}{0.6 mm}{$\,-$}}
 \newcommand{\bartilde}{\seg{$- \,$}{macrocolor}{0.6 mm}{$\, \sim$}}
 
+
+% Rotated text for tables
+% See
+% https://tex.stackexchange.com/questions/98388/how-to-make-table-with-rotated-table-headers-in-latex/98439#98439
+% for details.
+\newcommand{\rot}{\rotatebox{90}}
+
+
+% A "rating" command for filled circles with tikz.
+% See 
+% https://tex.stackexchange.com/questions/194955/get-partly-filled-circle-symbol-scale-linearly-with-parameter
+% for details.
+\newcommand{\rating}[2][0.75ex]{%
+  \pgfmathsetmacro\th{asin(#2/50-1)}% (theta angle of polar coordinates)
+    \tikz{%
+      \fill[black] (\th:#1) arc (\th:-180-\th:#1) -- cycle;
+      \draw[black, thin, radius=#1] (0,0) circle;
+    }%
+}
