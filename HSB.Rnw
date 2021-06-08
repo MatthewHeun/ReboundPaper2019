@@ -201,6 +201,39 @@ library(xtable)
 \label{sec:background}
 %++++++++++++++++++++++++++++++
 
+****
+Gregor:
+Here is a draft paragraph like we discussed yesterday.
+I don't particularly like it.
+It repeats information that should be in the abstract.
+And it steals the thunder of paragraphs that are to come.
+But maybe I didn't capture your thoughts about this.
+Take a look and let me know what you think. 
+---MKH 
+****
+
+Energy rebound is a phenomenon whereby 
+some expected energy savings fail to materialize 
+after an energy efficiency upgrade (EEU)
+due to behavior changes and economic effects.
+If large rebound exists, energy efficiency 
+may be less effective than supposed to  
+reduce energy consumption and carbon emissions, and 
+Paris objectives may be at risk.
+For accurate analysis of the size of rebound from any EEU, 
+rebound frameworks should be comprehensive, 
+accounting for all rebound effects
+in energy, expenditure, and consumption spaces
+with a detailed model of consumer responses 
+to non-marginal energy efficiency changes.
+
+
+****
+Here is where the paper began prior to writing the preceding paragraph. 
+---MKH
+****
+
+
 Energy rebound is a phenomenon whereby 
 some expected energy savings fail to materialize 
 after an energy efficiency upgrade (EEU)
@@ -299,6 +332,12 @@ to enable estimation of rebound for a particular EEU.
 Rebound frameworks are operationalized by a series of equations,
 typically ending with a summation equation for
 total rebound across all effects, locations, and scales.
+For accurate analysis of the size of rebound from any EEU, 
+rebound frameworks should be comprehensive, 
+accounting for all rebound effects
+in energy, expenditure, and consumption spaces
+with a detailed model of consumer responses 
+to non-marginal energy efficiency changes.
 In the subsections that follow, 
 rebound frameworks are further elucidated and
 important characteristics of rebound frameworks are discussed.
