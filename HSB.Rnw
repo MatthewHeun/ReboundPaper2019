@@ -241,11 +241,11 @@ and to diminish the cost of its use,
 directly tends to augment the value of the steam-engine, 
 and to enlarge the field of its operations''~\citep[p.~161]{Parkes1838}.
 For nearly 200 years, then, it has been understood 
-that efficiency gains may, paradoxically, 
-drive growth in energy consumption.
+that efficiency gains may be taken back or, paradoxically, 
+even drive growth in energy consumption.
 
 The oil crises of the 1970s shone a light back onto energy efficiency,
-and the modern debate over the magnitude of energy rebound commenced. 
+and a modern debate over the magnitude of energy rebound commenced. 
 On one side, scholars including \citet{Brookes1979, Brookes1990} and \citet{Khazzoom1980} 
 suggested rebound could be large.
 Others, including \citet{Lovins1988} and \citet{Grubb1990, Grubb1992},
@@ -282,8 +282,8 @@ scenario~\citep[Fig.~2.1]{InternationalEnergyAgency2019}%
   which itself includes planned energy efficiency.
 }.
 %
-However, as a previous study by the present authors and others shows, 
-the expected reductions in energy consumption 
+However, a study (by the present authors and two others) shows 
+that the expected reductions in energy consumption 
 would represent a significant structural break with the historical record
 of tight coupling between energy consumption and GDP \citep[Figs.~1 and~2]{Brockway2021}.
 The same study also found that 
@@ -296,7 +296,7 @@ included in models from which policies are derived, would mean that
 efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
 So understanding the magnitude of energy rebound resulting from an EEU is important.
-Thus, developing clear and comprehensive way
+Thus, developing clear and comprehensive ways
 to estimate rebound is essential.
 
 
@@ -306,7 +306,7 @@ to estimate rebound is essential.
 %++++++++++++++++++++++++++++++
 
 Rebound analysis frameworks are used to estimate the magnitude of rebound effects and total rebound
-for an EEU.
+from an EEU.
 We use the word ``framework'' to mean 
 the basic structure for analysis of a system or concept,
 in this case energy rebound.
@@ -324,6 +324,7 @@ accounting for all rebound effects
 in energy, expenditure, and consumption spaces
 with a detailed model of consumer responses 
 to non-marginal energy efficiency changes.
+
 In the subsections that follow, 
 rebound frameworks are further elucidated and
 important characteristics of rebound frameworks are discussed.
@@ -464,23 +465,20 @@ Bringing together the high stakes of energy efficiency
 \emph{vis-\`{a}-vis} emissions reduction goals
 and the desirable characteristics of rebound frameworks discussed above,
 we see that comprehensive rebound frameworks are needed for 
-developing energy efficiency policy to address CO$_2$ emissions targets. 
-A comprehensive picture of rebound is needed to construct
-effective energy efficiency policy for fighting 
-climate change.
-Effective policy should be built on firm theoretical foundations and empirical analysis
-to guide effective energy efficiency policy making.
+developing energy efficiency policy to meet emissions targets. 
+Effective policy should be informed by rebound analyses conducted within
+a comprehensive rebound framework with firm theoretical foundations.
 
-In fact, several scholars have developed rebound analysis frameworks previously.
+In fact, several scholars have developed rebound analysis frameworks.
 It is worthwhile to evaluate those frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
 analysis in energy, expenditure, and consumption spaces; 
-detailed model of consumer preferences; 
+detailed model of consumer preferences;
 non-marginal energy efficiency changes; and 
 operationalizable.
-Only when these characteristics are present, 
-a comprehensive picture of rebound can emerge.
+Only when these characteristics are present can  
+a comprehensive picture of rebound emerge.
 
 Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
 relevant to the discussion above.
