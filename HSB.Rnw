@@ -3817,15 +3817,32 @@ Substitution effects decrease with energy price, because
 at high energy price, less behavior adjustment is needed to re-equilibrate 
 after emplacement of the energy efficient device.
 
+<<GermanPrices, echo=FALSE>>=
+price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
+                              "Car", "DEU", rebound_data %>% 
+                                dplyr::filter(Case == "Car - Germany") %>% 
+                                magrittr::extract2("p_E_engr_units"),     # $/USgal
+                              "Lamp", "DEU", rebound_data %>% 
+                                dplyr::filter(Case == "Lamp - Germany") %>% 
+                                magrittr::extract2("p_E_engr_units"))     # $/W-hr
+@
+
 German energy prices%
 \footnote{
   For the car example,
-  the gasoline price in Germany is taken as *** check if we confirm this change of gasoline price: *** 1.42 \euro{}/liter for the average ``super gasoline'' (95 octane) price in 2018~\citep{finanzen}.
+  the gasoline price in Germany is taken as 1.42 \euro{}/liter for the average ``super gasoline'' (95 octane) 
+  price in 2018~\citep{finanzen}.
   For the lamp example,
   the electricity price in Germany is taken as 0.3 \euro{}/kW-hr for the 2018 price of a household using 3.5~MWh/year,
   an average value for German households~\citep{bundesministerium}.
   Converting currency (at 1 \euro{} = \$1.21) and
-  physical units gives *** check if we confirm this change of gasoline price*** 6.50~\$/US~gallon and 0.363~\$/kW-hr.}
+  physical units gives 
+  \Sexpr{price_data %>% 
+           dplyr::filter(Country == "DEU" & Case == "Car") %>% 
+           magrittr::extract2("p_E_engr_units")}~\$/US~gallon and 
+  \Sexpr{price_data %>% 
+           dplyr::filter(Country == "DEU" & Case == "Lamp") %>% 
+           magrittr::extract2("p_E_engr_units")}~\$/kW-hr.}
 %
 are shown as vertical lines,
 providing an indication of possible energy price variations.
@@ -3847,15 +3864,10 @@ maintenance and disposal expenditure rate ($\ramacro{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rate ($\rbempl{q}_s$).
 
-<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).German energy prices denoted by vertical line.", fig.width=6, fig.height=4>>=
- p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
-                         Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
+<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).German energy prices denoted by vertical lines.", fig.width=6, fig.height=4>>=
+p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
+                        Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
- price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
- #                               "Car", "GBR", 6.48,     # $/USgal
- #                               "Lamp", "GBR", 0.28,    # $/W-hr
-                               "Car", "DEU", 6.18,     # $/USgal
-                               "Lamp", "DEU", 0.363)   # $/W-hr
 rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_params, 
                     x_var = "p_E_engr_units", 
                     Re_terms = Re_terms_order,
