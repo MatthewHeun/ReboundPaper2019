@@ -360,17 +360,26 @@ that a common utility model takes the form of a Cobb-Douglas function
 \end{equation}
 %
 where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ is an weighing parameter 
+$\alpha \in (0,1)$ is an weighting parameter 
 which describes the utility
 of consuming the energy service ($\rate{q}_s$)
 relative to consuming other goods ($\rate{q}_o$).
 The Cobb-Douglas utility model is a special case of the general CES utility model,
 with the elasticity of substitution ($\sigma$) equal to 1.
 This simplicity leads to a number of desirable theoretical features for a variety of
-contexts but it is not of use for rebound analysis as it leads to a direct
-rebound, $Re_{dsub}+Re_{isub} = 1$, by definition.
+contexts. 
+However, the Cobb-Douglas utility model is not usable for rebound analysis, because 
+it leads to a direct rebound, $Re_{dsub} + Re_{isub} = 1$, by definition.
+**** GS: you said 
 
-To see this, note first that the own-price elasticity ($\eqspsUC$)
+direct rebound, $Re_{dsub} + Re_{isub} = 1$, by definition.
+
+but $Re_{dsub} + Re_{isub}$ is substitution rebound, not direct rebound. 
+Maybe change to ``substitution rebound ($Re_{sub} = Re_{dsub} + Re_{isub}$) equal to 1.''?
+---MKH ****
+
+To see that substitution rebound is 100\%,
+note first that the uncompensated own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is a constant $-1$.
 The Cobb-Douglas uncompensated (Marshallian) demand 
 for the energy service is of the form
@@ -379,7 +388,8 @@ for the energy service is of the form
   \rate{q}_{s} = \alpha \rate{M} / p_s \; ,
 \end{equation}
 %
-where $\rate{M}$ is the income rate as before. The price elasticity of demand is therefore
+where $\rate{M}$ is the income rate as before. 
+The price elasticity of demand is therefore
 
 \begin{equation} \label{eq:elasticity_one_for_CD}
   \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_{s,m}} 
@@ -394,6 +404,15 @@ rebounds with simple elasticities and in particular
       = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsUC} 
        =  \frac{\amacro{\eta}}{\bempl{\eta}}  
 \end{equation}
+%
+
+**** But why are you using the approximate model, Eq.~\ref{eq:approx_qshat_over_qsorig}? 
+We argue elsewhere that the approximate model is in appropriate.
+How can we rely on the approximate model to make our point here? 
+---MKH
+****
+
+
 In other words the Cobb-Douglas model of consumer utility assumes demand
 for the energy service grows in the same proportion as its efficiency rises,
 precisely offsetting energy demand reductions from efficiency.
