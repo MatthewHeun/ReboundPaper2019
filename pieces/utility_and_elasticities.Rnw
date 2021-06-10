@@ -368,7 +368,7 @@ The Cobb-Douglas utility model is a special case of the general CES utility mode
 with the elasticity of substitution ($\sigma$) equal to 1.
 This simplicity leads to a number of desirable theoretical features for a variety of
 contexts but it is not of use for rebound analysis as it leads to a direct
-rebound, $Re_{dsub}+Re_{isub} = 1$, by definition.
+rebound, $Re_{dsub}+Re_{dinc} = 1$, by definition.
 
 To see this, note first that the own-price elasticity ($\eqspsUC$)
 in the Cobb-Douglas utility model is a constant $-1$.
@@ -387,7 +387,7 @@ where $\rate{M}$ is the income rate as before. The price elasticity of demand is
 \end{equation}
 %
 at every point in the consumption space. Therefore one can calculate exact
-rebounds with simple elasticities and in particular
+rebounds with elasticities and in particular
 
 \begin{equation} \label{eq:CD_direct}
   \frac{\rainc{q}_s}{\rbempl{q}_s}
