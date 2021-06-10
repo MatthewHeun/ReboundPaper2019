@@ -1865,7 +1865,16 @@ which can be rearranged to
 To find the post-substitution effect point ($\wedge$),
 we solve for the location on the \iicirc{} indifference curve
 where its slope is equal to the slope of the
-\starstar{} expenditure line.
+\starstar{} expenditure line, 
+assuming the CES utility model%
+\footnote{
+  Other utility models could be used.
+  Regardless of the utility model, expressions for
+  $\rasub{q}_s/\rorig{q}_s$ and
+  $\rasub{C}_o/\rorig{C}_o$
+  must be determined
+  and substituted into Eqs.~\ref{eq:Re_dsub_prelim} and~\ref{eq:Re_isub_prelim}.
+}.
 The results are
 
 \begin{equation} \label{eq:q_s_solution}
