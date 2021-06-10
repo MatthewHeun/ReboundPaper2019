@@ -3864,7 +3864,7 @@ maintenance and disposal expenditure rate ($\ramacro{C}_{\md}$),
 energy intensity of the economy ($I_E$), and
 energy service consumption rate ($\rbempl{q}_s$).
 
-<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$).German energy prices denoted by vertical lines.", fig.width=6, fig.height=4>>=
+<<all_Re_terms_p_E_graph, echo=FALSE, fig.cap="Sensitivity of rebound components to energy price ($p_E$). German energy prices denoted by vertical lines.", fig.width=6, fig.height=4>>=
 p_E_sens_params <- list(Car = list(p_E_engr_units = seq(1, 8, by = 0.5)),
                         Lamp = list(p_E_engr_units = seq(0.05, 0.4, by = 0.01)))
 
