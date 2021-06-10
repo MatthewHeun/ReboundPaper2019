@@ -418,6 +418,7 @@ approach is to use it and the Slutsky equation to derive the compensated
 elasticity. The CES model then imposes enough restrictions to determine
 the elasticity of substitution.
 
+
 %------------------------------
 \subsubsection{Elasticities for the approximate utility model ($\eqspsC$ and $\eqopsC$)} 
 \label{sec:elasticities_approx}
