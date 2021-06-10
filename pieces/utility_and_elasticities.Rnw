@@ -406,7 +406,7 @@ rebounds with simple elasticities and in particular
 \end{equation}
 %
 
-**** But why are you using the approximate model, Eq.~\ref{eq:approx_qshat_over_qsorig}? 
+**** GS: But why are you using the approximate model, Eq.~\ref{eq:approx_qshat_over_qsorig}? 
 We argue elsewhere that the approximate model is in appropriate.
 How can we rely on the approximate model to make our point here? 
 ---MKH
