@@ -368,10 +368,11 @@ The Cobb-Douglas utility model is a special case of the general CES utility mode
 with the elasticity of substitution ($\sigma$) equal to 1.
 This simplicity leads to a number of desirable theoretical features for a variety of
 contexts but it is not of use for rebound analysis as it leads to a direct
-rebound, $Re_{dsub}+Re_{dinc} = 1$, by definition.
+rebound ($Re_{dsub} + Re_{dinc}$) of 1, by definition.
 
-To see this, note first that the own-price elasticity ($\eqspsUC$)
-in the Cobb-Douglas utility model is a constant $-1$.
+To see how $Re_{dsub} + Re_{dinc} = 1$,
+note that the own-price elasticity ($\eqspsUC$)
+in the Cobb-Douglas utility model is a constant, namely $-1$.
 The Cobb-Douglas uncompensated (Marshallian) demand 
 for the energy service is of the form
 
