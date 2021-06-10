@@ -102,6 +102,24 @@ Then, elasticities for the substitution effect are
 discussed.
 Finally, elasticities for the income effect are discussed. 
 
+Before proceeding with the utility models,
+we note that the rate of other goods consumption ($\rate{q}_o$)
+is not known independently from the prices of other goods ($p_o$).
+With the assumption that the prices of other goods do not change
+across rebound effects
+(i.e., $p_o$ is exogenous), 
+the ratio of other goods consumption is equal to 
+the ratio of other goods spending, such that
+
+\begin{equation} \label{eq:exogenous_p_o}
+  \frac{\rate{q}_o}{\rbempl{q}_o} 
+      = \frac{\rate{C}_o/\cancel{p_o}}{\rbempl{C}_o/\cancel{p_o}} 
+      = \frac{\rate{C}_o}{\rbempl{C}_o}
+\end{equation}
+%
+at all rebound stages. 
+(See Appendix~\ref{sec:other_goods_expenditures} for details.)
+
 
 %++++++++++++++++++++++++++++++
 \subsection{Utility models for the substitution effect}
@@ -123,24 +141,6 @@ Across the substitution effect,
 the utility increase of the larger energy service consumption rate
 must be exactly offset
 by the utility decrease of the smaller other goods consumption rate.
-
-Before proceeding with the utility models,
-we note that the rate of other goods consumption ($\rate{q}_o$)
-is not known independently from the prices of other goods ($p_o$).
-With the assumption that the prices of other goods do not change
-across rebound effects
-(i.e., $p_o$ is exogenous), 
-the ratio of other goods consumption is equal to 
-the ratio of other goods spending, such that
-
-\begin{equation} \label{eq:exogenous_p_o}
-  \frac{\rate{q}_o}{\rbempl{q}_o} 
-      = \frac{\rate{C}_o/\cancel{p_o}}{\rbempl{C}_o/\cancel{p_o}} 
-      = \frac{\rate{C}_o}{\rbempl{C}_o}
-\end{equation}
-%
-at all rebound stages. 
-(See Appendix~\ref{sec:other_goods_expenditures} for details.)
 
 
 %------------------------------
@@ -175,7 +175,7 @@ The CES utility model is given by Eq.~(\ref{eq:ces_utility}).
 Here, its derivation is shown.
 
 The CES model for utility ($\rate{u}$)
-is normalized by (indexed to) parameters before emplacement:
+is normalized by (indexed to) conditions prior to emplacement:
 
 \begin{equation}
   \frac{\rate{u}}{\rbempl{u}} = 
