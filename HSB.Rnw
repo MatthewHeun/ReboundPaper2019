@@ -1069,21 +1069,21 @@ Typical units for automotive transport and illumination
 beneath each equation%
 \footnote{
   Note that ``pass'' is short for ``passenger,'' and
-  ``lm'' is the SI notation for lumen, a lighting unit.
+  ``lm'' is the SI notation for the lumen, a lighting unit.
 }.
 
 \begin{align} \label{eq:typ_qs_eta_Edot}
   \rate{q}_s &= \eta \rate{E}_s \\
-  \text{pass-km/yr} &= [\text{pass-km/MJ}] [\text{MJ/yr}] \nonumber \\
-  \text{lm-hr/yr} &= [\text{lm-hr/MJ}] [\text{MJ/yr}] \nonumber
+  \text{[pass-km/yr]} &= \text{[pass-km/MJ]} \text{[MJ/yr]} \nonumber \\
+  \text{[lm-hr/yr]} &= [\text{lm-hr/MJ}] \text{[MJ/yr]} \nonumber
 \end{align}
 %
 Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
 
 \begin{align} \label{eq:ps_pE_eta}
   p_s &= \frac{p_E}{\eta} \\
-  \text{\$/pass-km} &= \frac{\$/\text{MJ}}{\text{pass-km/MJ}} \nonumber \\
-  \text{\$/lm-hr} &= \frac{\$/\text{MJ}}{\text{lm-hr/MJ}} \nonumber
+  \text{[\$/pass-km]} &= \frac{[\$/\text{MJ}]}{\text{[pass-km/MJ]}} \nonumber \\
+  \text{[\$/lm-hr]} &= \frac{[\$/\text{MJ}]}{\text{[lm-hr/MJ]}} \nonumber
 \end{align}
 %
 Third, energy service expenditure rates~($\rate{C}_s$) are the product 
@@ -1091,7 +1091,7 @@ of energy price~($p_E$) and device energy consumption rates~($\rate{E}_s$).
 
 \begin{align}
   \rate{C}_s &= p_E \rate{E}_s \\
-  \text{\$/yr} &= [\text{\$/MJ}][\text{MJ/yr}] \nonumber
+  \text{[\$/yr]} &= \text{[\$/MJ]}\text{[MJ/yr]} \nonumber
 \end{align}
 %
 Fourth, indirect energy rates~($\rate{E}_j$)
@@ -1101,7 +1101,7 @@ of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$)
 
 \begin{align} \label{eq:indirect_energy_rates}
   \rate{E}_j &= \rate{C}_j I_E \\
-  \text{MJ/yr} &= [\text{\$/yr}][\text{MJ/\$}] \nonumber
+  \text{[MJ/yr]} &= \text{[\$/yr]}\text{[MJ/\$]} \nonumber
 \end{align}
 
 
