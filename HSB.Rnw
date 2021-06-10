@@ -3451,7 +3451,16 @@ and embodied energy rebound is negative
 Rebound due to the maintenance and disposal effect
 ($Re_{\md}$) is \Sexpr{Re_md_lamp_char_perc}\%,
 because we assume no difference in maintenance and disposal costs between 
-the incandescent lamp and the LED lamp.
+the incandescent lamp and the LED lamp%
+\footnote{
+  Maintenance cost rates for both incandescent and LED lamps are likely to be equal, because both are negligible;
+  lamps are usually installed and forgotten.
+  Real world disposal cost differences between the incandescent and LED technologies
+  are also likely to be negligible. 
+  However, if ``disposal'' includes recycling processes, 
+  cost rates may be different between the two technologies
+  due to the wide variety of materials in LED lamps compared to incandescent lamps.
+}.
 
 Direct \subeffect{} rebound 
 ($Re_{dsub}$) is \Sexpr{Re_dsub_lamp_char_perc}\%
@@ -3809,9 +3818,10 @@ German energy prices%
   For the car example,
   the gasoline price in Germany is taken as *** check if we confirm this change of gasoline price: *** 1.42 \euro{}/liter for the average ``super gasoline'' (95 octane) price in 2018~\citep{finanzen}.
   For the lamp example,
-  the electricity price in Germany is taken as 0.3 \euro{}/kW-hr~ for the 2018 price of a household using 3.5MWh/year, an average value for German households~\citep{bundesministerium}.
+  the electricity price in Germany is taken as 0.3 \euro{}/kW-hr for the 2018 price of a household using 3.5~MWh/year,
+  an average value for German households~\citep{bundesministerium}.
   Converting currency (at 1 \euro{} = \$1.21) and
-  physical units gives *** check if we confirm this change of gasoline price*** 6.50~\$/USgallon and 0.363~\$/kW-hr.}
+  physical units gives *** check if we confirm this change of gasoline price*** 6.50~\$/US~gallon and 0.363~\$/kW-hr.}
 %
 are shown as vertical lines,
 providing an indication of possible energy price variations.
