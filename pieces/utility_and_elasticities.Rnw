@@ -390,9 +390,9 @@ at every point in the consumption space. Therefore one can calculate exact
 rebounds with simple elasticities and in particular
 
 \begin{equation} \label{eq:CD_direct}
-  \frac{\rasub{q}_s}{\rbempl{q}_s}
+  \frac{\rainc{q}_s}{\rbempl{q}_s}
       = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsUC} 
-       = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right) 
+       =  \frac{\amacro{\eta}}{\bempl{\eta}}  
 \end{equation}
 In other words the Cobb-Douglas model of consumer utility assumes demand
 for the energy service grows in the same proportion as its efficiency rises,
