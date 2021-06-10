@@ -2180,6 +2180,9 @@ by the infinite series of respending of the energy cost savings%
 The macro factor ($k$) can be likened to 
 the total respending derived from
 a marginal propensity to consume ($\MPC$).
+$k$ represents spending in the broader economy 
+after the income effect has occurred
+and is not tied to any particular EEU or economic sector.
 $k \ge 0$ is expected.
 $k = 0$ means there is no dynamic effect
 resulting from the energy efficiency upgrade.
