@@ -3636,7 +3636,7 @@ Note that the sensitivity analysis on post-upgrade efficiency
 is the only sensitivity analysis that requires careful explication
 of both the numerator and denominator of Eq.~(\ref{eq:Re_takeback}),
 as in Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}, 
-because both the numerator and denominator of Eq.~\ref{eq:Re_takeback}
+because both the numerator and denominator of Eq.~(\ref{eq:Re_takeback})
 changes when post-upgrade efficiency ($\amacro{\eta}$) changes.
 The denominator of Eq.~(\ref{eq:Re_takeback}) doesn't change for
 the sensitivity analyses of Figs.~\ref{fig:all_Re_terms_C_cap_graph}--\ref{fig:all_Re_terms_k_graph}.
