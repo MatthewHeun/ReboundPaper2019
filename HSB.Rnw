@@ -4302,6 +4302,9 @@ Future work could be pursued in several areas.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$) and its relation to the MPC.
+        The rebound effects of the distribution of $\MPC$ values 
+        across various socioeconomic groups~\citep{Carroll2017}
+        could be explored.
 
   \item The framework could be extended to producer-sided energy rebound mechanisms.
     
