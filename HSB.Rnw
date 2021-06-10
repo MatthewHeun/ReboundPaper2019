@@ -2201,7 +2201,7 @@ with further exploration of the macro effect
 in Sections~\ref{sec:effect_of_macro_factor} 
 and~\ref{sec:macro_rebound_discussion}.
 We assume as a first approximation
-(and with \citet{Antal:2014aa}) that macro effect spending
+(and with \citet{Antal:2014aa} and \citet{Borenstein:2015aa}) that macro effect spending
 implies energy consumption according to 
 the average energy intensity of the economy ($I_E$).
 Macro rebound is given by
