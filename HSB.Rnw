@@ -337,6 +337,10 @@ important characteristics of rebound frameworks are discussed.
 Table~\ref{tab:typology} shows our rebound typology.
 A comprehensive rebound framework will include 
 emplacement, substitution, income, and macro effects.
+It cannot be known \emph{a priori}
+which rebound effects will be large and which will be negligible
+for a given EEU, 
+so all effects should be analyzed.
 The emplacement effect of an EEU includes 
 %
 \begin{enumerate*}[label={(\roman*)}]
