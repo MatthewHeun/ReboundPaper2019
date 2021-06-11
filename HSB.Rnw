@@ -114,30 +114,24 @@ Leeds, LS2 9JT, UK}
 % then cite the author(s) and year(s).
 % Also, non-standard or uncommon abbreviations should be avoided, but
 % if essential they must be defined at their first mention in the abstract itself.
-**** Not yet edited to reflect new introduction. ---MKH ****
 Implementation of widespread energy efficiency measures
 is an important global strategy to meet Paris greenhouse gas emissions reduction targets. 
 However, energy rebound can ``take back'' efficiency-based
 energy reductions via behavior changes and economic effects.
-Evidence is growing that rebound effects are 
-larger than typically assumed, 
-meaning that efficiency-based efforts to reduce carbon emissions 
+If rebound effects are larger than typically assumed, 
+efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
 % The problem
-To date, most work on energy rebound is empirical and microeconomic.
-Although microeconomic theory is available,
-it is scattered across papers and
-lacks rigorous theoretical foundations.
-Furthermore, there is a paucity of both theoretical and empirical work on macro rebound.
-Consequently, understanding of rebound mechanisms is inhibited, and 
-macro energy modeling and energy efficiency policy are at risk
-of being ineffective at efficiency-based emissions reductions.
+An operationalized rebound analysis framework is needed, 
+one that discriminates among all rebound effects
+in energy, expenditure, and consumption spaces
+with a detailed model of consumer responses 
+to non-marginal energy efficiency changes.
 % Our response
 In response, 
-we develop a comprehensive, consumer-based rebound analysis framework.
-We build upon microeconomic fundamentals and
-employ a constant elasticity of substitution utility model to 
-describe direct and indirect channels 
+we develop such a comprehensive rebound analysis framework that 
+employs a constant elasticity of substitution utility model to 
+describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macroeconomic factor to link
 macro to micro rebound effects.
@@ -146,14 +140,14 @@ expenditure, and consumption spaces.
 The framework is applied to two case studies: 
 upgrades of a car and an electric lamp.
 % Results
-We find microeconomic rebounds of 24\% and 29\% 
-and total rebound of 33\% and 48\% for the car and lamp examples, respectively.
-% **** 
-% These numbers are not automatically recalculated.
-% Double-check before submission. 
-% ****
-Sensitivity studies are performed, and 
-policy implications are discussed.
+We find total rebound of 32\% and 45\% 
+for the car and lamp examples, respectively.
+Sensitivity studies are performed, showing the effects of 
+energy efficiency, capital cost, energy price, 
+energy service price elasticity of energy demand, and 
+the macroeconomic factor on rebound components.
+Policy implications are discussed. 
+**** Need to do better than this for policy. ---MKH ****
 \end{abstract}
 
 
