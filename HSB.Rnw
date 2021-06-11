@@ -943,9 +943,9 @@ that consumes final energy%
   Note that
   the vocabulary and mathematical notation for rebound effects is extensive;
   Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-  decoration elements used throughout the paper, including
+  notational elements used throughout this paper, including
   symbols, Greek letters, decorations, and subscripts.
-  The notation elements 
+  The notational elements 
   can be mixed to provide a rich and expressive ``language'' of energy rebound.
   In several places, we use colored backgrounds on rebound effects for visual convenience. 
 }.
