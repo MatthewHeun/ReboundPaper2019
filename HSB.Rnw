@@ -1873,6 +1873,8 @@ where its slope is equal to the slope of the
 assuming the CES utility model%
 \footnote{
   Other utility models could be used.
+  However, the Cobb-Douglas utility model is inappropriate for this framework, 
+  because it assumes that the sum of substitution and income rebound is 100\% \emph{always}.
   Regardless of the utility model, expressions for
   $\rasub{q}_s/\rorig{q}_s$ and
   $\rasub{C}_o/\rorig{C}_o$

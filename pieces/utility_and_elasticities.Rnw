@@ -29,7 +29,7 @@ the substitution effect requires a model for device owner utility
 that compares the perceived benefits of 
 consuming the energy service ($\rate{q}_s$) to
 consuming other goods and services ($\rate{q}_o$).
-In this appendix, we describe three utility models.
+In this appendix, we describe two utility models.
 The first utility model is an approximate model
 that applies only for small and marginal
 changes in energy efficiency and 
@@ -58,7 +58,7 @@ the CES utility model is needed for
 the example EEUs in this paper,
 which have very large, non-marginal
 percentage increases in energy efficiency.
-For the car in Section~\ref{sec:car_example}, 
+For the car example in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
 $\amacro{\eta} = \Sexpr{mpg_better}$~mpg, 
@@ -67,21 +67,21 @@ For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
 \Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
 
-For completeness,
-we briefly mention a third utility model with Cobb-Douglas form.
-The Cobb-Douglas utility model is a commonly used special case
-of the CES utility model
-with elasticity of substitution ($\sigma$) equal to 1. 
-The Cobb-Douglas utility model simplifies many derivations due to a number of strong assumptions on behavior.
-However, the simplicity of Cobb-Douglas utility model has side effects:
-especially that it always gives 100\% direct substitution rebound.
-That characteristic disqualifies its use in a rebound analysis framework
-that purports to estimate the magnitude of substitution effect rebound.  
-So, we reject the special case Cobb-Douglas utility model
-in favor of the generalized CES utility model.
+% For completeness,
+% we briefly mention a third utility model with Cobb-Douglas form.
+% The Cobb-Douglas utility model is a commonly used special case
+% of the CES utility model
+% with elasticity of substitution ($\sigma$) equal to 1. 
+% The Cobb-Douglas utility model simplifies many derivations due to a number of strong assumptions on behavior.
+% However, the simplicity of Cobb-Douglas utility model has side effects:
+% especially that it always gives 100\% direct substitution rebound.
+% That characteristic disqualifies its use in a rebound analysis framework
+% that purports to estimate the magnitude of substitution effect rebound.  
+% So, we reject the special case Cobb-Douglas utility model
+% in favor of the generalized CES utility model.
 
-Both the substitution effect and the income effect
-use elasticities to model consumer preferences. 
+% Both the substitution effect and the income effect
+% use elasticities to model consumer preferences. 
 % In the substitution effect, all utility models
 % rely upon elasticities to estimate
 % consumption utility and
@@ -96,14 +96,18 @@ use elasticities to model consumer preferences.
 % elasticities describe the proportions of net savings ($\rasub{N}$)
 % spent on the energy service
 % and other goods and services.
-In this appendix,
-the approximate, CES, and Cobb-Douglas utility models are described.
-Then, elasticities for the substitution effect are 
-discussed.
+% In this appendix,
+% the approximate, CES, and Cobb-Douglas utility models are described.
+% the approximate and Cobb-Douglas utility models are described.
+% Then, elasticities for the substitution effect are 
+% discussed.
+
+Both the substitution effect and the income effect
+use elasticities to model consumer preferences, and those elasticities are discussed below. 
 Finally, elasticities for the income effect are discussed. 
 
-Before proceeding with the utility models,
-we note that the rate of other goods consumption ($\rate{q}_o$)
+Before proceeding with the utility models and elasticities,
+we note briefly that the rate of other goods consumption ($\rate{q}_o$)
 is not known independently from the prices of other goods ($p_o$).
 With the assumption that the prices of other goods do not change
 across rebound effects
@@ -346,62 +350,62 @@ with
 \end{equation}
 
 
-%------------------------------
-\subsubsection{Cobb-Douglas utility model}
-\label{sec:CD_utility_model}
-%------------------------------
-
-We note briefly (because we don't use it elsewhere in this paper), 
-that a common utility model takes the form of a Cobb-Douglas function
-
-\begin{equation} \label{eq:CD_utility}
-  \frac{\rate{u}}{\rorig{u}} = A \left( \frac{\rate{q}_s}{\rorig{q}_s}\right)^\alpha 
-                                 \left( \frac{\rate{q}_o}{\rorig{q}_o} \right) ^{(1 - \alpha)} \; ,
-\end{equation}
-%
-where $A$ is a proportionality constant and
-$\alpha \in (0,1)$ is an weighing parameter 
-which describes the utility
-of consuming the energy service ($\rate{q}_s$)
-relative to consuming other goods ($\rate{q}_o$).
-The Cobb-Douglas utility model is a special case of the general CES utility model,
-with the elasticity of substitution ($\sigma$) equal to 1.
-This simplicity leads to a number of desirable theoretical features for a variety of
-contexts but it is not of use for rebound analysis as it leads to a direct
-rebound ($Re_{dsub} + Re_{dinc}$) of 1, by definition.
-
-To see how $Re_{dsub} + Re_{dinc} = 1$,
-note that the own-price elasticity ($\eqspsUC$)
-in the Cobb-Douglas utility model is a constant, namely $-1$.
-The Cobb-Douglas uncompensated (Marshallian) demand 
-for the energy service is of the form
-
-\begin{equation} \label{eq:CD_marshall}
-  \rate{q}_{s} = \alpha \rate{M} / p_s \; ,
-\end{equation}
-%
-where $\rate{M}$ is the income rate as before. The price elasticity of demand is therefore
-
-\begin{equation} \label{eq:elasticity_one_for_CD}
-  \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_{s,m}} 
-    = -\dfrac{\alpha \rate{M}}{p_s^2} \dfrac{ p_s^2}{\alpha \rate{M}} = -1 \; .
-\end{equation}
-%
-at every point in the consumption space. Therefore one can calculate exact
-rebounds with elasticities and in particular
-
-\begin{equation} \label{eq:CD_direct}
-  \frac{\rainc{q}_s}{\rbempl{q}_s}
-      = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsUC} 
-       =  \frac{\amacro{\eta}}{\bempl{\eta}}  
-\end{equation}
-In other words the Cobb-Douglas model of consumer utility assumes demand
-for the energy service grows in the same proportion as its efficiency rises,
-precisely offsetting energy demand reductions from efficiency.
-%which is inappropriate for a rebound analysis framework that purports to
-%estimate the magnitude of rebound effects.
-\citet{Saunders2008} discusses similar problems
-in a rebound analysis context with the Cobb-Douglas production function.
+% %------------------------------
+% \subsubsection{Cobb-Douglas utility model}
+% \label{sec:CD_utility_model}
+% %------------------------------
+% 
+% We note briefly (because we don't use it elsewhere in this paper), 
+% that a common utility model takes the form of a Cobb-Douglas function
+% 
+% \begin{equation} \label{eq:CD_utility}
+%   \frac{\rate{u}}{\rorig{u}} = A \left( \frac{\rate{q}_s}{\rorig{q}_s}\right)^\alpha 
+%                                  \left( \frac{\rate{q}_o}{\rorig{q}_o} \right) ^{(1 - \alpha)} \; ,
+% \end{equation}
+% %
+% where $A$ is a proportionality constant and
+% $\alpha \in (0,1)$ is an weighing parameter 
+% which describes the utility
+% of consuming the energy service ($\rate{q}_s$)
+% relative to consuming other goods ($\rate{q}_o$).
+% The Cobb-Douglas utility model is a special case of the general CES utility model,
+% with the elasticity of substitution ($\sigma$) equal to 1.
+% This simplicity leads to a number of desirable theoretical features for a variety of
+% contexts but it is not of use for rebound analysis as it leads to a direct
+% rebound ($Re_{dsub} + Re_{dinc}$) of 1, by definition.
+% 
+% To see how $Re_{dsub} + Re_{dinc} = 1$,
+% note that the own-price elasticity ($\eqspsUC$)
+% in the Cobb-Douglas utility model is a constant, namely $-1$.
+% The Cobb-Douglas uncompensated (Marshallian) demand 
+% for the energy service is of the form
+% 
+% \begin{equation} \label{eq:CD_marshall}
+%   \rate{q}_{s} = \alpha \rate{M} / p_s \; ,
+% \end{equation}
+% %
+% where $\rate{M}$ is the income rate as before. The price elasticity of demand is therefore
+% 
+% \begin{equation} \label{eq:elasticity_one_for_CD}
+%   \eqspsUC = \dfrac{\partial \rate{q}_{s,m}}{\partial p_s} \dfrac{p_s}{\rate{q}_{s,m}} 
+%     = -\dfrac{\alpha \rate{M}}{p_s^2} \dfrac{ p_s^2}{\alpha \rate{M}} = -1 \; .
+% \end{equation}
+% %
+% at every point in the consumption space. Therefore one can calculate exact
+% rebounds with elasticities and in particular
+% 
+% \begin{equation} \label{eq:CD_direct}
+%   \frac{\rainc{q}_s}{\rbempl{q}_s}
+%       = \left( \frac{\amacro{\eta}}{\bempl{\eta}} \right)^{-\eqspsUC} 
+%        =  \frac{\amacro{\eta}}{\bempl{\eta}}  
+% \end{equation}
+% In other words the Cobb-Douglas model of consumer utility assumes demand
+% for the energy service grows in the same proportion as its efficiency rises,
+% precisely offsetting energy demand reductions from efficiency.
+% %which is inappropriate for a rebound analysis framework that purports to
+% %estimate the magnitude of rebound effects.
+% \citet{Saunders2008} discusses similar problems
+% in a rebound analysis context with the Cobb-Douglas production function.
 
 
 %++++++++++++++++++++++++++++++
@@ -410,7 +414,7 @@ in a rebound analysis context with the Cobb-Douglas production function.
 %++++++++++++++++++++++++++++++
 
 The substitution effect requires a utility model.
-In this paper, we describe two utiliity models in detail: 
+In this paper, we describe two utility models in detail: 
 an approximate model and a CES model.
 All utility models require elasticities to describe consumer preferences.
 In fact, there are three elasticies across the two utility models we discuss in detail:
@@ -420,11 +424,12 @@ the compensated price elasticity of energy service demand ($\eqspsC$) and
 the compensated cross-price elasticity of energy service demand ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
-Since the \emph{un}compensated price elasticity of energy service 
-demand ($\eqspsUC$), tends to be more widely estimated,
-e.g. in studies about driver behavior \citep{Gillingham:2020aa}, the usual
-approach is to use it and the Slutsky equation to derive the compensated
-elasticity. The CES model then imposes enough restrictions to determine
+Because the \emph{un}compensated price elasticity of energy service 
+demand ($\eqspsUC$) tends to be more widely estimated,
+e.g.\ in studies about driver behavior \citep{Gillingham:2020aa}, 
+the usual approach is to use $\eqspsUC$ and the Slutsky equation to derive the compensated
+elasticity ($\eqspsC$).
+The CES utility model then imposes enough restrictions to determine
 the elasticity of substitution.
 
 
