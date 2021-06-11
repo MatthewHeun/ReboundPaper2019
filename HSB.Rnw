@@ -122,11 +122,12 @@ If rebound effects are larger than typically assumed,
 efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
 % The problem
-An operationalized rebound analysis framework is needed, 
+An operationalized rebound analysis framework is needed
+to study non-marginal energy efficiency changes
+for specific energy efficiency upgrades, 
 one that discriminates among all rebound effects
 in energy, expenditure, and consumption spaces
-with a detailed model of consumer responses 
-to non-marginal energy efficiency changes.
+with a detailed model of consumer responses.
 % Our response
 In response, 
 we develop a comprehensive rebound analysis framework that 
@@ -135,8 +136,8 @@ describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macroeconomic factor to link
 macro to micro rebound effects.
-A sequence of novel graphs shows rebound paths through energy, 
-expenditure, and consumption spaces.
+A sequence of novel graphs shows rebound paths through 
+energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
 upgrades of a car and an electric lamp.
 % Results
@@ -235,8 +236,8 @@ and to diminish the cost of its use,
 directly tends to augment the value of the steam-engine, 
 and to enlarge the field of its operations''~\citep[p.~161]{Parkes1838}.
 For nearly 200 years, then, it has been understood 
-that efficiency gains may be taken back or, paradoxically, 
-even drive growth in energy consumption.
+that efficiency gains may be taken back or, paradoxically even, 
+drive growth in energy consumption.
 
 The oil crises of the 1970s shone a light back onto energy efficiency,
 and a modern debate over the magnitude of energy rebound commenced. 
@@ -351,9 +352,11 @@ The emplacement effect of an EEU includes
 \end{enumerate*}
 %
 The substitution effect accounts for behavior changes across the EEU,
-typically increased use of the upgraded device and decreased consumption of other goods.
+typically increased use of the upgraded device and decreased consumption of other goods,
+assuming no change in device owner utility.
 The emplacement and substitution effects create net monetary savings
-which is spent in the income effect on more of the energy service and more other goods. 
+which is spent in the income effect on more of the energy service and 
+more other goods and services. 
 Finally, the macro effect accounts for long-run economic expansion 
 (and subsequent rising energy consumption),
 because the EEU decreases input costs for the device owner.
@@ -373,7 +376,7 @@ it is important that rebound analysis frameworks
 account for all effects, locations, and scales.
 Everything links together!
 The emplacement effect
-frees the device owners cash to be spent in the income effect
+frees the device owner's cash to be spent in the income effect
 with energy implications.
 The substitution effect describes behavior adjustments that 
 provide net savings to be spent in the income effect, 
