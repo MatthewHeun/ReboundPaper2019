@@ -129,7 +129,7 @@ with a detailed model of consumer responses
 to non-marginal energy efficiency changes.
 % Our response
 In response, 
-we develop such a comprehensive rebound analysis framework that 
+we develop a comprehensive rebound analysis framework that 
 employs a constant elasticity of substitution utility model to 
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
