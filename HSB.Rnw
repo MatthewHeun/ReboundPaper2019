@@ -336,7 +336,7 @@ the need for operationalizable structure.
 
 Table~\ref{tab:typology} shows our rebound typology.
 ****
-Fix sentence above.
+Fix sentence above.  It will probably be a figure.
 ---MKH
 ****
 A comprehensive rebound framework will include 
