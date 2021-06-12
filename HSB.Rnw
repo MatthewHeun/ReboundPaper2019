@@ -478,44 +478,15 @@ in all spaces (energy, expenditure, and consumption).
 \label{sec:previous_frameworks}
 %++++++++++++++++++++++++++++++
 
-**** 
-GS: Should we also discuss the different types of frameworks from the 
-previous version of the introduction? 
-I'm thinking about microeconomic, macroeconomic (rare), and 
-CGE, non-CGE? 
-This could be the place where we defend our approach
-compared to the CGE crowd. 
----MKH 
-****
-
-Two early papers (Naessen, Thomas) 
-estimate the rebound quite well quantitatively (last row), 
-they motivate their study somewhat with economic theory
-(consumer preferences and substitution and income effects), 
-but in their empirical analysis they just use linear demand functions. 
-So the connection between economic theory and empirics remains tenuous.
-Then, more recently, two papers (Chan, Wang) 
-anchor the rebound effect firmly in consumer theory and
-extend it to more advanced topics such as multiple fuels, 
-welfare analysis and ``household production functions,''
-but their approach is not operational. 
-In between, there is an allrounder paper (Borenstein) 
-that tries to put it all together and
-touches on pretty much everything but also leaves pretty much everything somewhat open. 
-In particular, when it comes to examples of rebound, 
-actually the framework cannot separate
-substitution and income effects properly, and
-Borenstein reverts to partial analysis
-(I had not noticed this clearly before - but therefore only half score in “detailed model”).
-It might be well to put Borenstein as the middle paper, as the bridge: it would work chronologically and also with the story I just told.
-
-No study really properly engages with the embodied effect or maintenance and disposal. 
-And except for Naessen, no one engages with the capital cost
-(everybody notes it), which Naessen
-(we can cite them for that)
-say can have very strong effects on rebound.
-Since everybody does look at decreasing energy consumption, 
-everybody gets at least half a circle in row one.
+% **** 
+% GS: Should we also discuss the different types of frameworks from the 
+% previous version of the introduction? 
+% I'm thinking about microeconomic, macroeconomic (rare), and 
+% CGE, non-CGE? 
+% This could be the place where we defend our approach
+% compared to the CGE crowd. 
+% ---MKH 
+% ****
 
 Bringing together the high stakes of energy efficiency 
 \emph{vis-\`{a}-vis} emissions reduction goals
@@ -525,7 +496,7 @@ developing energy efficiency policy to meet emissions targets.
 Effective policy should be informed by rebound analyses conducted within
 a comprehensive rebound framework with firm theoretical foundations.
 
-In fact, several scholars have developed rebound analysis frameworks.
+In fact, several scholars have developed previous rebound analysis frameworks.
 It is worthwhile to evaluate those frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
@@ -533,39 +504,54 @@ analysis in energy, expenditure, and consumption spaces;
 a detailed model of consumer preferences;
 non-marginal energy efficiency changes; and 
 an operationalizable structure.
-Only when these characteristics are present can  
+For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
 
-Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
-relevant to the discussion above.
-Empty circles indicate no treatment of a subject (in rows)
-in a framework (in columns). 
+Table~\ref{tab:previous_frameworks} contains our assessment 
+of the previous frameworks (in columns)
+relative to the important characteristics discussed above (in rows).
+Empty (white) circles indicate no treatment of a subject by a framework. 
 Partially and fully filled circles indicate 
-partial and comprehensive treatment, respectively,
-of a subject in a framework.
-
-% \begin{table}
-%   \caption{Previous rebound analysis frameworks. **** This table is not correct. We need to decide which 
-%            frameworks to include and their characteristics. ---MKH ****}
-%   \centering
-%   \includegraphics[width=1\linewidth]{figure_other/PreviousFrameworksTable.pdf}
-%   \label{tab:previous_frameworks}
-% \end{table}
+partial and comprehensive treatment of a subject by a framework.
 
 \input{pieces/prev_frameworks_table.tex}
 
+Two early papers \citep{Nassen:2009aa, Thomas:2013aa}
+estimate rebound quantitatively, 
+earning high marks (\rating{100}) in the ``Operationalizable'' row. 
+Both motivate their frameworks at least partially with economic theory
+(consumer preferences and substitution and income effects)
+but use simple linear demand functions in their empirical analysis. 
+So the connection between economic theory and empirics is tenuous, 
+leading to intermediate ratings (\rating{50}) in many rows.
+Recently, \citet{Chan2015} and \citet{Wang2021}
+anchor the rebound effect firmly in consumer theory, 
+earning high ratings (\rating{100}) in the substitution and income effect rows. 
+They extend their frameworks to advanced topics such as multiple fuels, 
+welfare analysis, and ``household production functions,''
+but neither approach is operationalizable, 
+earning \rating{0} in the last row of Table~\ref{tab:previous_frameworks}. 
+In the middle of the table (and between the other studies in time), 
+the \citet{Borenstein:2015aa} framework 
+touches on nearly all characteristics of Table~\ref{tab:previous_frameworks}.
+Howver, the \citeauthor{Borenstein:2015aa} framework cannot separate
+substitution and income effects properly, 
+reverting to a partial analysis of both, 
+leading to a \rating{50} rating in the ``Detailed model'' row.
 
-
-**** GS: describe the table here. 
-But it can't be exhaustive. 
-Maybe easiest to go author-by-author,
-hitting the highlights.
-I.e., use the columns of the table
-as the outer organizational structure of this paragraph.
-Maybe talk about notional sketches instead of numerically-precise 
-graphs for the spaces row? ---MKH ****
-
-**** Then end with the following paragraph. ---MKH ****
+No study properly engages with the embodied energy or maintenance and disposal effects, 
+leading to low rating across all previous frameworks in those rows. 
+Except for \citep{Nassen:2009aa}, 
+no framework engages with capital costs, 
+although all note its importance. 
+(\citeauthor{Nassen:2009aa} notes that 
+capital costs and embodied energy can have very strong effects on rebound.)
+Because all frameworks look at decreasing energy consumption from the EEU, 
+the ``Direct emplacement effect'' row contains \rating{50} or better
+in each column.
+\citet{Borenstein:2015aa} postulates the macro effect, 
+but does not develop the idea into an operationalizable theory. 
+No other frameworks even discuss the link between macro and micro rebound effects.
 
 Table~\ref{tab:previous_frameworks} shows that previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop a comprehensive 
