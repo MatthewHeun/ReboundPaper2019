@@ -488,6 +488,35 @@ compared to the CGE crowd.
 ---MKH 
 ****
 
+Two early papers (Naessen, Thomas) 
+estimate the rebound quite well quantitatively (last row), 
+they motivate their study somewhat with economic theory
+(consumer preferences and substitution and income effects), 
+but in their empirical analysis they just use linear demand functions. 
+So the connection between economic theory and empirics remains tenuous.
+Then, more recently, two papers (Chan, Wang) 
+anchor the rebound effect firmly in consumer theory and
+extend it to more advanced topics such as multiple fuels, 
+welfare analysis and ``household production functions,''
+but their approach is not operational. 
+In between, there is an allrounder paper (Borenstein) 
+that tries to put it all together and
+touches on pretty much everything but also leaves pretty much everything somewhat open. 
+In particular, when it comes to examples of rebound, 
+actually the framework cannot separate
+substitution and income effects properly, and
+Borenstein reverts to partial analysis
+(I had not noticed this clearly before - but therefore only half score in “detailed model”).
+It might be well to put Borenstein as the middle paper, as the bridge: it would work chronologically and also with the story I just told.
+
+No study really properly engages with the embodied effect or maintenance and disposal. 
+And except for Naessen, no one engages with the capital cost
+(everybody notes it), which Naessen
+(we can cite them for that)
+say can have very strong effects on rebound.
+Since everybody does look at decreasing energy consumption, 
+everybody gets at least half a circle in row one.
+
 Bringing together the high stakes of energy efficiency 
 \emph{vis-\`{a}-vis} emissions reduction goals
 and the desirable characteristics of rebound frameworks discussed above,
