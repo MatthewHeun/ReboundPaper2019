@@ -335,6 +335,10 @@ the need for operationalizable structure.
 %------------------------------
 
 Table~\ref{tab:typology} shows our rebound typology.
+****
+Fix sentence above.
+---MKH
+****
 A comprehensive rebound framework will include 
 emplacement, substitution, income, and macro effects.
 For a given EEU, 
@@ -505,6 +509,11 @@ a comprehensive picture of rebound emerge.
 
 Table~\ref{tab:previous_frameworks} summarizes characteristics of previous frameworks
 relevant to the discussion above.
+Empty circles indicate no treatment of a subject (in rows)
+in a framework (in columns). 
+Partially and fully filled circles indicate 
+partial and comprehensive treatment, respectively,
+of a subject in a framework.
 
 % \begin{table}
 %   \caption{Previous rebound analysis frameworks. **** This table is not correct. We need to decide which 
@@ -519,19 +528,20 @@ relevant to the discussion above.
 
 
 **** GS: describe the table here. 
-Probably easiest to go author-by-author, 
-i.e., use the columns of the table
-as the outer organizational structure of these paragraphs.
+But it can't be exhaustive. 
+Maybe easiest to go author-by-author,
+hitting the highlights.
+I.e., use the columns of the table
+as the outer organizational structure of this paragraph.
 Maybe talk about notional sketches instead of numerically-precise 
-graphs? ---MKH ****
+graphs for the spaces row? ---MKH ****
 
 **** Then end with the following paragraph. ---MKH ****
 
 Table~\ref{tab:previous_frameworks} shows that previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop a comprehensive 
 rebound analysis framework.
-However, none of the previous frameworks includes all characteristics fully.
-Specifically, no previous rebound analysis framework 
+However, no previous rebound analysis framework 
 combines all rebound effects, locations, and scales
 across energy, expenditure, and consumption spaces
 with 
@@ -873,7 +883,7 @@ Section~\ref{sec:conclusion} concludes.
 
 In this section, we develop a comprehensive energy rebound analysis framework 
 (concisely, ``the framework'').
-We begin with our rebound typology. 
+We begin with a detailed description of the rebound typology. 
 
 
 %++++++++++++++++++++++++++++++
