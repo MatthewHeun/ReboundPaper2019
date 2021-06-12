@@ -550,8 +550,10 @@ Because all frameworks look at decreasing energy consumption from the EEU,
 the ``Direct emplacement effect'' row contains \rating{50} or better
 in each column.
 \citet{Borenstein:2015aa} postulates the macro effect, 
-but does not develop the idea into an operationalizable theory. 
-No other frameworks even discuss the link between macro and micro rebound effects.
+but does not develop the idea into an operationalizable theory, 
+earning \rating{25} in the ``Macro effect'' row. 
+No other frameworks even discuss the link between macro and micro rebound effects, 
+leading to \rating{0} in columns for all other previous frameworks.
 
 Table~\ref{tab:previous_frameworks} shows that previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop a comprehensive 
