@@ -508,7 +508,7 @@ For only when all of the above characteristics are present can
 a comprehensive picture of rebound emerge.
 
 Table~\ref{tab:previous_frameworks} contains our assessment 
-of the previous frameworks (in columns)
+of selected relevant previous frameworks (in columns)
 relative to the important characteristics discussed above (in rows).
 Empty (white) circles indicate no treatment of a subject by a framework. 
 Partially and fully filled circles indicate 
@@ -533,14 +533,14 @@ but neither approach is operationalizable,
 earning \rating{0} in the last row of Table~\ref{tab:previous_frameworks}. 
 In the middle of the table (and between the other studies in time), 
 the \citet{Borenstein:2015aa} framework 
-touches on nearly all characteristics of Table~\ref{tab:previous_frameworks}.
+touches on nearly all important characteristics.
 Howver, the \citeauthor{Borenstein:2015aa} framework cannot separate
-substitution and income effects properly, 
-reverting to a partial analysis of both, 
+substitution and income effects cleanly, 
+reverting to partial analyses of both, 
 leading to a \rating{50} rating in the ``Detailed model'' row.
 
 No study properly engages with the embodied energy or maintenance and disposal effects, 
-leading to low rating across all previous frameworks in those rows. 
+leading to low ratings across all previous frameworks in those rows. 
 Except for \citep{Nassen:2009aa}, 
 no framework engages with capital costs, 
 although all note its importance. 
@@ -548,16 +548,17 @@ although all note its importance.
 capital costs and embodied energy can have very strong effects on rebound.)
 Because all frameworks look at decreasing energy consumption from the EEU, 
 the ``Direct emplacement effect'' row contains \rating{50} or better
-in each column.
+for each framework.
 \citet{Borenstein:2015aa} postulates the macro effect, 
 but does not develop the idea into an operationalizable theory, 
 earning \rating{25} in the ``Macro effect'' row. 
 No other frameworks even discuss the link between macro and micro rebound effects, 
 leading to \rating{0} in columns for all other previous frameworks.
 
-Table~\ref{tab:previous_frameworks} shows that previous frameworks contain many needed pieces, 
-providing a substantial base from which to develop a comprehensive 
-rebound analysis framework.
+Table~\ref{tab:previous_frameworks} shows that 
+previous frameworks contain many needed pieces, 
+providing a substantial base from which to develop 
+a comprehensive rebound analysis framework.
 However, no previous rebound analysis framework 
 combines all rebound effects, locations, and scales
 across energy, expenditure, and consumption spaces
@@ -566,7 +567,7 @@ a detailed model of consumer preferences and
 non-marginal energy service price changes
 in an operationalizable manner.
 In particular, the macro effect and non-marginal price changes 
-need conceptual development.
+require conceptual development and operationalization.
 
 
 %++++++++++++++++++++++++++++++
