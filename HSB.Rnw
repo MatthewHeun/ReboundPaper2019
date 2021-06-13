@@ -462,16 +462,18 @@ For such EEUs, energy efficiency can increase by nearly a factor of 10!
 
 
 %------------------------------
-\subsubsection{Operationalizable} 
+\subsubsection{Operationality} 
 \label{sec:operationalizable}
 %------------------------------
 
-An operationalizable rebound analysis framework is one that includes
+An operational rebound analysis framework is one that includes
 sufficient descriptions of energy rebound 
 for all effects, locations, and scales
-in all spaces (energy, expenditure, and consumption).
-**** GS to add more here. ---MKH ****
-
+in all spaces (energy, expenditure, and consumption) to calculate
+quantitative estimates of rebound effects with real-world data.
+This is particularly important for microeconomically grounded
+rebound frameworks that involve unobserved utility functions and,
+by extension, substitution and income effects.
 
 %++++++++++++++++++++++++++++++
 \subsection{Previous frameworks} 
@@ -497,6 +499,8 @@ Effective policy should be informed by rebound analyses conducted within
 a comprehensive rebound framework with firm theoretical foundations.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
+*** MKH, is this a good place to say two sentences about how we do
+not look at total rebound frameworks? ---GS ***
 It is worthwhile to evaluate those frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
@@ -516,56 +520,70 @@ partial and comprehensive treatment of a subject by a framework.
 
 \input{pieces/prev_frameworks_table.tex}
 
-Two early papers \citep{Nassen:2009aa, Thomas:2013aa}
+Two early sets of papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
-earning high marks (\rating{100}) in the ``Operationalizable'' row. 
-Both motivate their frameworks at least partially with economic theory
+earning high marks (\rating{100}) in the ``Operationality'' row. 
+Both motivate their frameworks at least partially with microeconomic theory
 (consumer preferences and substitution and income effects)
 but use simple linear demand functions in their empirical analysis. 
 So the connection between economic theory and empirics is tenuous, 
-leading to intermediate ratings (\rating{50}) in many rows.
-Recently, \citet{Chan2015} and \citet{Wang2021}
+leading to intermediate ratings (\rating{50}) in substitution, income and
+detailed model of preferences rows.
+More recently, \citet{Chan2015} and \citet{Wang2021}
 anchor the rebound effect firmly in consumer theory, 
-earning high ratings (\rating{100}) in the substitution and income effect rows. 
-They extend their frameworks to advanced topics such as multiple fuels, 
-welfare analysis, and ``household production functions,''
-but neither approach is operationalizable, 
+earning high ratings (\rating{100}) in the substitution, income effect
+and detailed model rows. 
+They extend their frameworks to advanced topics such as multiple fuels and 
+energy services, and nested utility functions with intermediate inputs,
+but neither approach is operational, 
 earning \rating{0} in the last row of Table~\ref{tab:previous_frameworks}. 
 In the middle of the table (and between the other studies in time), 
 the \citet{Borenstein:2015aa} framework 
 touches on nearly all important characteristics.
-Howver, the \citeauthor{Borenstein:2015aa} framework cannot separate
-substitution and income effects cleanly, 
+Howver, the \citeauthor{Borenstein:2015aa} framework, cannot separate
+substitution and income effects cleanly in empirical analysis, 
 reverting to partial analyses of both, 
 leading to a \rating{50} rating in the ``Detailed model'' row.
 
-No study properly engages with the embodied energy or maintenance and disposal effects, 
-leading to low ratings across all previous frameworks in those rows. 
-Except for \citep{Nassen:2009aa}, 
-no framework engages with capital costs, 
-although all note its importance. 
-(\citeauthor{Nassen:2009aa} notes that 
+No study engages fully with both the differential financial and energetic effects
+of the upfront purchase of the more efficient device, 
+leading to low ratings across all previous frameworks in those rows.
+Except for \citep{Nassen:2009aa}, no framework engages with capital costs, 
+although all note its importance. (\citeauthor{Nassen:2009aa} note that 
 capital costs and embodied energy can have very strong effects on rebound.)
-Because all frameworks look at decreasing energy consumption from the EEU, 
-the ``Direct emplacement effect'' row contains \rating{50} or better
-for each framework.
+\citet{Thomas:2013aa} are the only ones to trace embodied effects of every good consumed using
+input-output methods, but do not analyze embodied energy of the upfront purchase
+\citet{Borenstein:2015aa} treats both but does not integrate embodied energy
+or financing costs into the empirical analysis. \citeauthor{Borenstein:2015aa}
+is also the only author to treat the financial side of 
+embodied energy or maintenance and disposal effects. 
+%Because all frameworks look at decreasing energy consumption from the EEU, 
+%the ``Direct emplacement effect'' row contains \rating{50} or better
+%for each framework.
 \citet{Borenstein:2015aa} postulates the macro effect, 
-but does not develop the idea into an operationalizable theory, 
+but does not develop the idea into an operational theory, 
 earning \rating{25} in the ``Macro effect'' row. 
 No other frameworks even discuss the link between macro and micro rebound effects, 
-leading to \rating{0} in columns for all other previous frameworks.
+leading to \rating{0} in columns for all other previous frameworks. Finally,
+all previous frameworks assume constant price elasticities and implicitly ``marginal"
+or small improvements in efficiency, excluding the analysis of
+important non-incremental upgrades.
 
 Table~\ref{tab:previous_frameworks} shows that 
 previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop 
-a comprehensive rebound analysis framework.
-However, no previous rebound analysis framework 
+a comprehensive rebound analysis framework that is also operational.
+We also see that all of these frameworks start from micoreconomic
+consumer theory and move towards more rigorous theoretical treatment
+over time, the recent pieces making important advanced theoretical contributions
+however at the expense of operationality.
+As a result, no previous rebound analysis framework 
 combines all rebound effects, locations, and scales
-across energy, expenditure, and consumption spaces
-with 
+across energy, expenditure, and consumption spaces for the most
+simple case of a single service and single fuel with 
 a detailed model of consumer preferences and
 non-marginal energy service price changes
-in an operationalizable manner.
+in an operational manner.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
 
