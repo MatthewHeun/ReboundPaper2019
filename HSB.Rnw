@@ -134,14 +134,15 @@ we develop a comprehensive rebound analysis framework that
 employs a constant elasticity of substitution utility model to 
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
-We utilize a macroeconomic factor to link
+We utilize a macro factor to link
 macro to micro rebound effects.
 A sequence of novel graphs shows rebound paths through 
 energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
 upgrades of a car and an electric lamp.
 % Results
-We find total rebound of 32\% and 45\% 
+After calibrating the macro factor,
+we find total rebound of 48\% and 80\% 
 for the car and lamp examples, respectively.
 Sensitivity studies are performed, showing the effects of 
 energy efficiency, capital cost, energy price, 
