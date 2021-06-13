@@ -576,7 +576,8 @@ require conceptual development and operationalization.
 %++++++++++++++++++++++++++++++
 
 There is a strategic \emph{need} for a comprehensive rebound analysis framework
-to firm up theoretical foundations, enable empirical analysis, and 
+to firm up theoretical foundations, 
+enable empirical analysis, and 
 guide effective energy efficiency policy-making.
 In particular the framework should be one that 
 combines all rebound effects, locations, and scales
