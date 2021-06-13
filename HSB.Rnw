@@ -561,11 +561,12 @@ no framework engages with capital costs,
 although all note its importance. 
 (\citeauthor{Nassen:2009aa} note that 
 capital costs and embodied energy can have very strong effects on rebound.)
-\citet{Thomas:2013aa} are the only ones to trace embodied energy effects
-of every good consumed using input-output methods, but
-they do not analyze embodied energy of the upfront purchase.
-\citet{Borenstein:2015aa} treats both 
-the embodied energy of the upfront purchase
+\citet{Thomas:2013aa,Thomas:2013ab} provide the only framework 
+that traces embodied energy effects
+of every consumer good using input-output methods, but
+they do not analyze embodied energy of the upgraded device.
+\citet{Borenstein:2015aa} notes both 
+the embodied energy of the upgraded device
 and the embodied energy of other goods
 but does not integrate embodied energy
 or financing costs into the empirical analysis. 
