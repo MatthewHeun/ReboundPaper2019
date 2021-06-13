@@ -902,16 +902,6 @@ Section~\ref{sec:conclusion} concludes.
 
 In this section, we develop a comprehensive energy rebound analysis framework 
 (concisely, ``the framework'').
-We begin with a detailed description of the rebound typology. 
-
-
-%++++++++++++++++++++++++++++++
-\subsection{Rebound typology}
-\label{sec:rebound_typology}
-%++++++++++++++++++++++++++++++
-
-% A challenge to understanding energy rebound is that it comprises
-% many mechanisms and effects.
 We follow convention to distinguish between
 microeconomic effects (at the single device or device owner level)
 and 
