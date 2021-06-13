@@ -147,7 +147,7 @@ for the car and lamp examples, respectively.
 Sensitivity studies are performed, showing the effects of 
 energy efficiency, capital cost, energy price, 
 energy service price elasticity of energy demand, and 
-the macroeconomic factor on rebound components.
+the macro factor on rebound components.
 Policy implications are discussed. 
 **** Need to do better than this for policy. ---MKH ****
 \end{abstract}
