@@ -2315,6 +2315,9 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%% - these two rows to be deleted when read - GREGOR DONE WITH EDITS: the most part was about total rebound and went to intro
+%%%  I have no particular view on the other references but think we have enough references
+
 % Section 3 refs to add
 % Possibly include in section 3 calcs (for own-price elasticities) 
 % and/or section 4 discussion
@@ -2322,41 +2325,6 @@ we find
 % \citet{Saunders2012},
 % \citet{Schleich2014},
 % 
-% Section 3 ref to add, at place where elasticity estimates 
-% for case study examples are given.
-% \citet{Gillingham:2020aa},
-% 
-% Section 3 refs to add (or appendix D)
-% Text from Gregor email, need to translate into paper
-% Discharging of action item CES utility - is it novel? +++ We decided it's not ---GS+++
-
-%Well, I haven’t seen anyone use CES utility fitted 
-%to an actual two sector model. 
-%Hart (2018, attached) writes "the same goods are demanded 
-%by consumers based on nested CES utility functions” 
-%about Broberg (2015, attached), 
-%but that’s not clear from the Broberg paper. 
-
-%Moshiri (2017) use the almost idea demand system 
-%which derives demand from a cost function - 
-%not something I’ve got any background in, 
-%as I’ve noted numerous times, 
-%so maybe that might have been a better approach. 
-%Li (2018) discusses who else uses these almost ideal demand system approaches.
-
-%I think our approach is novel in the sense that we start from a direct utility,
-%not cost function, and optimize instead of just postulate elasticities. 
-%To me, the main novelty lies in the fact that we can therefore draw 
-%the indifference curves rigorously and compute exact, 
-%not just approximate changes. 
-%I think that’s something to highlight. 
-%But I haven’t had a chance to study the Moshiri (2017) appendix B 
-%that might give a better picture of whether others can do that or not. 
-
-% \citet{Broberg2015},
-% \citet{Hart2018},
-% \citet{Li2018},
-% \citet{Moshiri2017},
 
 To demonstrate application of the framework
 developed in Section~\ref{sec:framework},
