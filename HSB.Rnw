@@ -592,7 +592,8 @@ Table~\ref{tab:previous_frameworks} shows that
 previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop 
 a comprehensive and operational rebound analysis framework.
-The table demonstrates that previous frameworks start from micoreconomic
+A left-to-right reading of the table 
+demonstrates that previous frameworks start from micoreconomic
 consumer theory and move towards more rigorous theoretical treatment over time,
 with recent frameworks making important advanced theoretical contributions
 at the expense of operationality.
@@ -606,6 +607,8 @@ for the
 simplest case of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
+This paper aims to fill the gaps in Table~\ref{tab:previous_frameworks},
+completing the rightmost column with filled circles.
 
 
 %++++++++++++++++++++++++++++++
