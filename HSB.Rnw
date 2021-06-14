@@ -2317,10 +2317,10 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To demonstrate application of the framework
+To demonstrate application of the comprehensive rebound analysis framework
 developed in Section~\ref{sec:framework},
 we select two case studies:
-energy efficiency upgrades for a car and an electric lamp.
+energy efficiency upgrades to a car and an electric lamp.
 We first collect parameter values
 for the equations for
 eight rebound components:
@@ -2336,13 +2336,13 @@ The total rebound
 %sum 
 ($Re_{tot}$)
 is given by the sum of the above components,
-which can also be checked against Eq.~(\ref{eq:Re_tot}).
+which can also be verified against Eq.~(\ref{eq:Re_tot}).
 
 As discussed in Section~\ref{sec:macro_effect_main_paper},
-the link between microeconomic factors and macro rebound effects 
-is a largely unexplored area. 
+the link between macroeconomic and microeconomic rebound effects 
+is largely unexplored. 
 For now, we assume a placeholder value of $k = 1$ for both case studies.
-We return to the matter of quantifying $k$
+We return to the matter of calibrating $k$
 in the Discussion (Section~\ref{sec:discussion}).
  
 
