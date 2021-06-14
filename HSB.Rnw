@@ -1876,7 +1876,7 @@ Here, we present an exact utility model that allows
 the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
 the compensated energy service cross-price elasticity of other goods demand ($\eqopsC$)
 to vary along an indifference curve, 
-allowing analysis of non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
+allowing analysis of non-marginal energy service price changes ($\orig{p}_s >\!\!> \aempl{p}_s$). 
 We employ a fully specified CES utility model,
 which allows the direct calculation
 of the utility maximizing consumption bundle for any constraint.
@@ -1895,8 +1895,8 @@ The share parameter ($\fCs$) is taken from the original (pre-EEU) consumption ba
 The exponent $\rho$ is calculated from the (constant) elasticity of substitution ($\sigma$) 
 as $\rho \equiv (\sigma - 1)/\sigma$.
 All quantities are normalized to pre-EEU values so that
-the cost share of other goods can straightforwardly
-be used in empirical applications rather than having
+the cost share of other goods can be used straightforwardly 
+in empirical applications rather than having
 to construct quantity and price indices.
 The normalized specification is commonly used in empirical CES \emph{production}
 function applications \citep{Klump2012,Temple2012,Gechert2021}.
@@ -1985,7 +1985,7 @@ of the derivations of Eqs.~(\ref{eq:Re_dsub_prelim}),
 \label{sec:inc_effect_main_paper}
 %------------------------------
 
-The monetary income rate of the device owner, $\rbempl{M}$, 
+The monetary income rate of the device owner ($\rbempl{M}$)
 remains unchanged across the rebound effects, 
 such that
 $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
@@ -2004,25 +2004,23 @@ Rebound from the income effect quantifies the rate of additional energy demand
 that arises when the energy conversion device owner spends net
 savings from the EEU
 (segments \hatd{} and \dbar{} in 
-Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}), and is determined by several constraints.
+Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}), 
 
+Additional energy demand from the income effect
+is determined by several constraints.
 The income effect under utility maximization
 satisfies the budget constraint, so that
 net savings are zero after
 the income effect ($\rainc{N} = 0$).
-%The monetary budget constraint $\rbempl{M}$ holds, so that only 
-%net savings ($\rasub{N}$) can be re-spent.
-%Standard non-satiation assumptions on preferences (and in particular for the CES utility function),
-%net savings should be completely re-spent.
-This constraint can be seen in 
+The budget constraint can be seen in 
 expenditure path graphs (e.g., Fig.~\ref{fig:ExampleCostPathGraph})
-where the post-income-effect point ($-$) returns to the original expenditure line.
+where the post-income-effect point ($-$) returns to the original expenditure isoquant.
 See Appendix~\ref{sec:proof_income_elasticities}
 for a mathematical proof that the income preference equations below
 (Eqs.~(\ref{eq:qsrat_eqsM}) and~(\ref{eq:qorat_eqoM}))
 satisfy the budget constraint.
 
-Net savings are re-spent completely on
+A second constraint is that net savings are spent completely on
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -2034,13 +2032,13 @@ Net savings are re-spent completely on
 %
 This constraint is satisfied by construction below.
 
-The proportions in which spending is allocated
-depends on preferences, which prescribe
-an income expansion. The CES utility function 
+The proportions in which income-effect spending is allocated depends on preferences, 
+which prescribe an income expansion. 
+The CES utility function 
 allocates spending on the energy service and other goods in the same proportion as post-substitution-effect 
 expenditures on the energy service and other goods,
-due to its homotheticity, so that the income
-expansion path is a ray.
+due to its homotheticity, 
+so that the income expansion path is a ray (\rr{}) on consumption path graphs.
 This constraint is satisfied by construction below, 
 particularly via an effective income ($\Mdothatprime$).
 In the consumption path graph, the pre- and post-income-effect 
@@ -2105,13 +2103,13 @@ the expression for direct income rebound is
 \end{equation}
 %
 If there is no net savings after the substitution effect ($\rasub{N} = 0$), 
-direct income effect rebound is zero ($Re_{dinc} = 0$), as expected.%
+direct income effect rebound is zero ($Re_{dinc} = 0$), as expected%
 \footnote{
   Zero net savings ($\rasub{N} = 0$) could occur if 
   an increase in capital cost rate ($\Delta \raempl{C}_{cap}$) and
   maintenance and disposal cost rate ($\Delta \raempl{C}_{\md}$)
-  consume all freed cash ($\rate{G}$) and savings from the CV.
-}
+  consume all freed cash ($\rate{G}$) and savings from the compensating variation.
+}.
 %
 See Appendix~\ref{sec:Re_inc} for details of the derivation
 of income effect rebound.
@@ -2138,12 +2136,12 @@ and is represented by segments \dbar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 Under the assumption that prices of other goods are exogenous
 (see Appendix~\ref{sec:other_goods_expenditures}), 
-the ratio of rates of other goods consumption ($\rasub{q}_o/\rorig{q}_o$)
-is equal to the ratio of rates of other goods expenditures ($\rasub{C}_o/\rorig{C}_o$)
+the ratio of rates of other goods consumption ($\rainc{q}_o/\rbinc{q}_o$)
+is equal to the ratio of rates of other goods expenditures ($\rainc{C}_o/\rbinc{C}_o$)
 such that 
 
 \begin{equation} \label{eq:Corat_eqoM}
-  \frac{\rasub{C}_o}{\rorig{C}_o} = \left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqoM} \; .
+  \frac{\rainc{C}_o}{\rbinc{C}_o} = \left( 1 + \frac{\rasub{N}}{\Mdothatprime} \right)^{\eqoM} \; .
 \end{equation}
 %
 Homotheticity means that $\eqoM = 1$.
@@ -2153,7 +2151,7 @@ As shown in Table~\ref{tab:inceffect}, indirect income rebound is defined as
   Re_{iinc} \equiv \frac{\Delta \rainc{C}_o I_E}{\Sdot} \; .
 \end{equation}
 %
-After substitution, rearranging, and canceling of terms (Appendix~\ref{sec:Re_iinc}), 
+After substitution, rearranging, and canceling of terms, 
 the expression for indirect income rebound is
 
 \begin{equation} \label{eq:Re_iinc}
@@ -2161,7 +2159,7 @@ the expression for indirect income rebound is
 \end{equation}
 %
 See Appendix~\ref{sec:Re_inc} for details of the derivation
-of income effect rebound.
+of cirect and indirect income effect rebound.
 
 
 %------------------------------
@@ -2169,7 +2167,7 @@ of income effect rebound.
 \label{sec:macro_effect_main_paper}
 %------------------------------
 
-Rebound effects so far
+The previous rebound effects 
 (emplacement effect, substitution effect, and income effect)
 are microeconomic in nature. 
 However, the changes at the micro level have important implications at the macro level,
@@ -2181,13 +2179,13 @@ described by \citeauthor{Hulten1978}'s theorem,
 which states that the economy grows at the rate 
 of an efficiency increase in some part of the economy, 
 scaled by that part's share in gross output~\citep{Hulten1978}.
-\citeauthor{blackburn2020energy}  
+\citet{blackburn2020energy}  
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item show that Hulten's theorem also applies to factor-augmenting technical change and
   
-  \item express rebound as a scale effect \citep{blackburn2020energy}.
+  \item express rebound as a scale effect.
     
 \end{enumerate*}
 
@@ -2211,8 +2209,8 @@ cheaper energy services facilitate the development and
 deployment of new products (product innovation),
 an important driver of rising aggregate demand \citep{Szostack1995}. 
 Ultimately, these dynamic phenomena lead to 
-higher incomes and more spending on goods and energy services than would otherwise be the case 
-in the absence of the EEU.
+higher incomes and more spending on goods and energy services than 
+otherwise would have been the case in the absence of the EEU.
 
 \citeauthor{Borenstein:2015aa} has addressed these macro effects from the demand side,
 noting that ``income effect rebound will be larger economy-wide than 
@@ -2231,16 +2229,16 @@ and demand-side effects both play a role as the consequences of the
 technology shock play themselves out.
 Furthermore, his approach has the advantage that it can be directly
 linked to our income effect and its consequences for macroeconomic rebound. 
-
 \citet{Borenstein:2015aa} also notes that scaling from net 
 savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is unexplored territory.
-One of the contributions of this paper is the first implementation of the 
-macro rebound multiplier idea.
+
+One contribution of this paper is the first 
+operationalization of the macro rebound multiplier idea.
 To operationalize the macro rebound effect, we scale
-the net savings gained by device owners at the micro level
+the net savings gained by the device owner at the micro level ($\rasub{N}$)
 by a macro factor ($k$) that represents the economic activity generated
-by the infinite series of respending of the energy cost savings%
+by the infinite series of respending of the net savings throughout the economy%
 \footnote{
   $k$ has units of \$ of economic growth created per \$ of spending 
   by the device owner in the income effect ($\rbinc{N}$).
@@ -2260,12 +2258,13 @@ with consequent implications for additional energy consumption in the economy.
 (See Appendix~\ref{sec:income_macro_mpc} 
 for the mathematical relationship between $k$ and $\MPC$.)
 
-A further advantage of using the multiplier approach is that there are
-many estimates of its magnitude (though we caution again that it is
-not the original mechanism triggering the expansion). A recent review
-by \citet{Carroll2017} reports that most empirical estimates show
-an MPC of between 0.2 and 0.6, with the full range estimates spanning zero
-to 0.9. For now, we choose $\MPC = 0.5$ and $k = 1$ as a placeholder value,
+A further advantage of using the $\MPC$ approach is that there are
+many estimates of its magnitude, though we caution again that 
+the mechanism triggering the economic expansion is energy efficiency.
+A recent review by \citet{Carroll2017} 
+reports that most empirical estimates show $\MPC$ between 0.2 and 0.6, 
+with the full range estimates spanning zero to 0.9.
+For now, we choose $\MPC = 0.5$ and $k = 1$ as a placeholder value,
 with further exploration of the macro effect
 in Sections~\ref{sec:effect_of_macro_factor} 
 and~\ref{sec:macro_rebound_discussion}.
@@ -2280,7 +2279,7 @@ Macro rebound is given by
 \end{equation}
 %
 (See Table~\ref{tab:macroeffect}.) 
-Macro effects are shown as segment \bartilde{}
+The macro effect is shown as segment \bartilde{}
 in Fig.~\ref{fig:ExampleEnergyPathGraph}.
 After some algebra (Appendix~\ref{sec:Re_macro}), 
 we arrive at an expression for macro effect rebound:
