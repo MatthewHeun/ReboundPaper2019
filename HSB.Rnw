@@ -522,6 +522,9 @@ partial and comprehensive treatment of a subject by a framework.
 
 \input{pieces/prev_frameworks_table.tex}
 
+Because all frameworks look at decreasing energy consumption from the EEU,
+the ``Direct emplacement effect'' row contains \rating{50} or better
+for all previous frameworks.
 Three early papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
 earning high marks (\rating{100}) in the ``Operationality'' row. 
@@ -574,9 +577,6 @@ but does not integrate embodied energy
 or financing costs into the framework for empirical analysis. 
 \citeauthor{Borenstein:2015aa} is the only author to treat the financial side of 
 embodied energy or maintenance and disposal effects. 
-%Because all frameworks look at decreasing energy consumption from the EEU, 
-%the ``Direct emplacement effect'' row contains \rating{50} or better
-%for each framework.
 \citet{Borenstein:2015aa} postulates the macro effect, 
 but does not develop the idea into an operational theory, 
 earning \rating{25} in the ``Macro effect'' row. 
