@@ -3562,7 +3562,7 @@ $\amacro{C}_{cap}$,
 $p_E$, 
 $\eqspsUC$, 
 and $k$)
-on energy rebound ($Re_{tot}$) and its components
+on total energy rebound ($Re_{tot}$) and its components
 ($Re_{emb}$, $Re_{md}$, $Re_{dsub}$, $Re_{isub}$,
 $Re_{dinc}$, $Re_{iinc}$, and $Re_{\macro}$).
 In the graphs, 
@@ -3654,7 +3654,7 @@ with post-EEU efficiency ($\amacro{\eta}$).
 In the car and lamp examples, 
 direct substitution rebound ($Re_{dsub}$) is the 
 rebound component 
-most sensitive to changes in post-EEU efficiency ($\amacro{\eta}$),
+most sensitive to changes in post-EEU efficiency ($\amacro{\eta}$).
 
 A limitation of the energy efficiency sensitivity analysis is that 
 post-EEU efficiency ($\amacro{\eta}$)
@@ -3667,7 +3667,7 @@ is the only sensitivity analysis that requires careful explication
 of both the numerator and denominator of Eq.~(\ref{eq:Re_takeback}),
 as in Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph}, 
 because both the numerator and denominator of Eq.~(\ref{eq:Re_takeback})
-changes when post-upgrade efficiency ($\amacro{\eta}$) changes.
+change when post-upgrade efficiency ($\amacro{\eta}$) changes.
 The denominator of Eq.~(\ref{eq:Re_takeback}) doesn't change for
 the sensitivity analyses of Figs.~\ref{fig:all_Re_terms_C_cap_graph}--\ref{fig:all_Re_terms_k_graph}.
 Thus, for the remaining sensitivity analyses, 
@@ -3676,7 +3676,7 @@ the energy takeback rate in the numerator of Eq.~(\ref{eq:Re_takeback})
 increases (decreases) proportionally.
 
 
-<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings ($\\Sdot$, solid line) and takeback rate (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
+<<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings rate ($\\Sdot$, solid line) and takeback rate (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
 actual_cases <- rebound_data %>% 
   dplyr::filter(.data[[ReboundTools::eeu_base_params$case]] %in% c("Car", "Lamp"))
 
@@ -3836,12 +3836,12 @@ Fig.~\ref{fig:all_Re_terms_p_E_graph} also
 shows the effect of energy price ($p_E$)
 on all rebound components.
 Most rebound components increase with energy price, 
-with the examples exhibiting different sensitivities. 
+with the car and lamp examples exhibiting different sensitivities. 
 Substitution effects ($Re_{dsub}$ and $Re_{isub}$)
 are the only rebound components that decrease with energy price ($p_E$).
 Substitution effects decrease with energy price, because 
 at high energy price, less behavior adjustment is needed to re-equilibrate 
-after emplacement of the energy efficient device.
+after emplacement of the efficient device.
 
 <<GermanPrices, echo=FALSE>>=
 price_data <- tibble::tribble(~Case, ~Country, ~p_E_engr_units,
@@ -3878,7 +3878,7 @@ energy rebound would be
 $\Sexpr{formatC(unlist(Car_Germany_Re_tot * 100), digits = 3)}$\%
 for the car example and 
 $\Sexpr{formatC(unlist(Lamp_Germany_Re_tot * 100), digits = 3)}$\%
-for the lamp example.
+for the lamp example, assuming $k = 1$.
 
 A limitation of the energy price sensitivity analysis arises from the fact that
 energy price is not independent of other parameters.
@@ -4012,10 +4012,10 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we highlight several novel characteristics
-of the comprehensive, consumer-based energy rebound analysis framework.
+of the comprehensive rebound analysis framework.
 Next, we show how the framework enables insights
 on energy policy, especially policies to encourage energy efficiency. 
-Finally, we discuss below the macro factor ($k$), one of the novel features of this paper.
+Finally, we discuss and calibrate the macro factor ($k$).
 
 
 %++++++++++++++++++++++++++++++
