@@ -127,7 +127,8 @@ to study non-marginal energy efficiency changes
 for specific energy efficiency upgrades, 
 one that discriminates among all rebound effects
 in energy, expenditure, and consumption spaces
-with a detailed model of consumer responses.
+with a detailed model of consumer responses 
+for non-marginal energy efficiency changes.
 % Our response
 In response, 
 we develop a comprehensive rebound analysis framework that 
@@ -135,7 +136,7 @@ employs a constant elasticity of substitution utility model to
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macro factor to link
-macro to micro rebound effects.
+macroeconomic to microeconomic rebound effects.
 A sequence of novel graphs shows rebound paths through 
 energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
@@ -280,19 +281,19 @@ scenario~\citep[Fig.~2.1]{InternationalEnergyAgency2019}%
 %
 However, a study (by the present authors and two others) shows 
 that the expected reductions in energy consumption 
-would represent a significant structural break with the historical record
+would represent a significant structural break from the historical record
 of tight coupling between energy consumption and GDP \citep[Figs.~1 and~2]{Brockway2021}.
 The same study also found that 
 ``many of the mechanisms driving rebound effects are overlooked by 
-integrated assessment and global energy models'' ~\citep[p.~1]{Brockway2021}.
+integrated assessment and global energy models'' \citep[p.~1]{Brockway2021}.
 Thus, energy rebound is much more than an academic debate, 
 because there is a lot at stake. 
 Large rebound, if it exists and if it is not fully 
 included in models from which policies are derived, would mean that
 efficiency-based efforts to reduce carbon emissions may be less effective than supposed, 
 and achieving Paris emissions reduction targets will be at risk.
-So understanding the magnitude of energy rebound resulting from an EEU is important.
-Thus, developing clear and comprehensive ways
+So understanding the magnitude of energy rebound resulting from an EEU is important,
+and developing clear and comprehensive ways
 to estimate rebound is essential.
 
 
@@ -301,19 +302,18 @@ to estimate rebound is essential.
 \label{sec:rebound_frameworks}
 %++++++++++++++++++++++++++++++
 
-Rebound analysis frameworks are used to estimate the magnitude of rebound effects and total rebound
-from an EEU.
+Rebound analysis frameworks are used to estimate the magnitude of rebound effects 
+and total rebound from an EEU.
 We use the word ``framework'' to mean 
 the basic structure for analysis of a system or concept,
 in this case energy rebound.
-We define a rebound framework to be 
-the description and explication of rebound effects, locations, and scales
-(a rebound typology)
-to enable estimation of rebound for a particular EEU.
+We define a rebound framework to be a rebound typology
+applied to the task of estimating rebound for a particular EEU.
+A rebound typology is a description and explication of rebound effects, locations, and scales.
 Rebound frameworks are operationalized by a series of equations,
 typically ending with a summation equation for
 total rebound across all effects, locations, and scales.
-For accurate analysis of the size of rebound from any EEU, 
+For accurate analysis of the size of rebound from a given EEU, 
 rebound frameworks should be comprehensive, 
 accounting for all rebound effects
 in energy, expenditure, and consumption spaces
@@ -327,7 +327,7 @@ Thereafter, characteristics of rebound frameworks are discussed,
 including 
 the importance of detailed models of consumer preferences, 
 the importance of non-marginal energy service price changes, and 
-the need for operationalizable structure.
+the need for operationality.
 
 
 %------------------------------
@@ -402,7 +402,7 @@ it is important that rebound analysis frameworks
 account for all effects, locations, and scales.
 Everything links together!
 The emplacement effect
-frees the device owner's cash to be spent in the income effect
+frees the device owner's cash to be spent in the income effect,
 with energy implications.
 The substitution effect describes behavior adjustments that 
 provide net savings to be spent in the income effect, 
@@ -426,7 +426,7 @@ because of the EEU.
 Similar to rebound effects,
 energy, expenditure, and consumption spaces are all linked together.
 To give just a few examples, 
-net income spent on more of the energy service 
+net income from the EEU spent on more of the energy service 
 (described in the expenditure space)
 will have different energy implications
 from net income spent on other goods and services
@@ -476,6 +476,7 @@ This is particularly important for microeconomically grounded
 rebound frameworks that involve unobserved utility functions and,
 by extension, substitution and income effects.
 
+
 %++++++++++++++++++++++++++++++
 \subsection{Previous frameworks} 
 \label{sec:previous_frameworks}
@@ -508,7 +509,7 @@ analysis at all effects, locations, and scales;
 analysis in energy, expenditure, and consumption spaces; 
 a detailed model of consumer preferences;
 non-marginal energy efficiency changes; and 
-an operationalizable structure.
+operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
 
@@ -521,24 +522,24 @@ partial and comprehensive treatment of a subject by a framework.
 
 \input{pieces/prev_frameworks_table.tex}
 
-Two early sets of papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
+Three early papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
 earning high marks (\rating{100}) in the ``Operationality'' row. 
 Both motivate their frameworks at least partially with microeconomic theory
 (consumer preferences and substitution and income effects)
-but use simple linear demand functions in their empirical analysis.  
+but use simple linear demand functions in their empirical analyses.  
 Thus, the connection between economic theory and empirics is tenuous, 
 leading to intermediate ratings (\rating{50}) in the
-substitution effect, 
-income effect,
+``substitution effects,''
+``income effects,''
 and
-detailed model of preferences rows.
+``Detailed model of consumer preferences'' rows.
 More recently, \citet{Chan2015} and \citet{Wang2021}
 anchor the rebound effect firmly in consumer theory, 
 earning high ratings (\rating{100}) in the
-substitution effect,
-income effect, and 
-detailed model rows. 
+``substitution effects,''
+``income effects,'' and 
+``Detailed model of consumer preferences'' rows. 
 They extend their frameworks to advanced topics such as
 multiple fuels,  
 energy services, and
@@ -548,13 +549,13 @@ earning \rating{0} in the last row of Table~\ref{tab:previous_frameworks}.
 In the middle of the table (and between the other studies in time), 
 the \citet{Borenstein:2015aa} framework 
 touches on nearly all important characteristics.
-However, the \citeauthor{Borenstein:2015aa} framework, cannot separate
-substitution and income effects cleanly in empirical analysis, 
+However, the \citeauthor{Borenstein:2015aa} framework
+cannot separate substitution and income effects cleanly in empirical analysis, 
 reverting to partial analyses of both, 
-leading to a \rating{50} rating in the ``Detailed model'' row.
+leading to a \rating{50} rating in the ``Detailed model of consumer preferences'' row.
 
 No study engages fully with both the differential financial and energetic effects
-of the upfront purchase of the more efficient device, 
+of the upfront purchase of the upgraded device, 
 leading to low ratings across all previous frameworks in the
 ``Capital cost and embodied energy effect'' row.
 In fact, except for \citep{Nassen:2009aa},
@@ -566,12 +567,12 @@ capital costs and embodied energy can have very strong effects on rebound.)
 that traces embodied energy effects
 of every consumer good using input-output methods, but
 they do not analyze embodied energy of the upgraded device.
-\citet{Borenstein:2015aa} notes both 
+\citet{Borenstein:2015aa} notes
 the embodied energy of the upgraded device
 and the embodied energy of other goods
 but does not integrate embodied energy
-or financing costs into the empirical analysis. 
-\citeauthor{Borenstein:2015aa} is also the only author to treat the financial side of 
+or financing costs into the framework for empirical analysis. 
+\citeauthor{Borenstein:2015aa} is the only author to treat the financial side of 
 embodied energy or maintenance and disposal effects. 
 %Because all frameworks look at decreasing energy consumption from the EEU, 
 %the ``Direct emplacement effect'' row contains \rating{50} or better
@@ -580,26 +581,29 @@ embodied energy or maintenance and disposal effects.
 but does not develop the idea into an operational theory, 
 earning \rating{25} in the ``Macro effect'' row. 
 No other frameworks even discuss the link between macro and micro rebound effects, 
-leading to \rating{0} in columns for all other previous frameworks. 
+leading to \rating{0} in the ``Macro effect'' row for all other previous frameworks. 
 Finally, all previous frameworks assume constant price elasticities and
 implicitly ``marginal'' or small improvements in efficiency, 
-excluding the analysis of important non-incremental upgrades.
+excluding the analysis of important non-incremental upgrades. 
+Therefore, all previous frameworks earn \rating{0} in the 
+``Non-marginal energy service price changes'' row.
 
 Table~\ref{tab:previous_frameworks} shows that 
 previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop 
-a comprehensive rebound analysis framework that is also operational.
-We also see that all of these frameworks start from micoreconomic
+a comprehensive and operational rebound analysis framework.
+The table demonstrates that previous frameworks start from micoreconomic
 consumer theory and move towards more rigorous theoretical treatment over time,
-the recent frameworks making important advanced theoretical contributions
+with recent frameworks making important advanced theoretical contributions
 at the expense of operationality.
-As a result, no previous rebound analysis framework 
+In the end, no previous rebound analysis framework 
 combines all rebound effects, locations, and scales
-across energy, expenditure, and consumption spaces for the most
-simple case of a single energy service and single fuel with 
+across energy, expenditure, and consumption spaces with 
 a detailed model of consumer preferences and
 non-marginal energy service price changes
-in an operational manner.
+in an operational manner
+for the 
+simplest case of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
 
