@@ -636,8 +636,10 @@ The key \emph{contributions} of this paper are
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item developing a comprehensive rebound analysis framework
-        that accommodates non-marginal price increases,
+  \item developing the first (to our knowledge)
+        comprehensive rebound analysis framework
+        that accommodates non-marginal energy service price decreases
+        and non-marginal energy efficiency increases,
 
   \item providing the first (to our knowledge) visualizations of rebound effects
         in energy, expenditure, and consumption spaces, and 
@@ -4023,16 +4025,33 @@ Finally, we discuss and calibrate the macro factor ($k$).
 \label{sec:framework_novelties}
 %++++++++++++++++++++++++++++++
 
-In this section, we highlight four novel characteristics of the rebound analysis framework.
-First, the framework is, to our knowledge, the first to enable 
-numerically precise calculation of several microeconomic rebound effects
-and a macro effect.
-The two examples show the benefits of the framework for such calculations.
+In the section, we return to the contributions discussed 
+in Section~\ref{sec:aim_contribution_structure}.
+First, the framework developed in Section~\ref{sec:framework}
+contributes the first comprehensive rebound analysis framework
+that 
+%
+\begin{enumerate*}[label={(\roman*)}]
+	
+  \item includes embodied energy and maintenance and disposal effects and
+  
+  \item accommodates non-marginal energy service price decreases and
+        non-marginal energy efficiency increases.
+    
+\end{enumerate*}
+%
+The embodied energy and maintenance and disposal effects
+are the energy manifestation of the important difference 
+between costless technology upgrades or (costly) mandated efficiency 
+increases \citep{Gillingham:2013aa,Fullerton2020}.
+Embodied energy and maintenance and disposal effects are not typically 
+included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
+Most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
 
-Another novelty of our work involves expressing 
-numerically precise income and substitution effects
-for non-marginal efficiency improvements
-in numerically precise graphics. 
+The accommodation of non-marginal energy service price decreases and
+non-marginal energy efficiency increases is
+made possible by the use of the CES utility model
+in Eqs.~\ref{eq:q_s_solution}--\ref{eq:Re_isub_CES}.
 The possibility of decomposing direct and indirect rebound effects into 
 substitution and income effects was outlined by \citet{Khazzoom1980}, 
 spelled out clearly by \citet{greening2000}, and
@@ -4041,24 +4060,23 @@ Yet, past investigations of microeconomic rebound
 typically show only stylized graphs of indifference curves in the consumption space, 
 even if they are numerically precise in other respects 
 \citep{Thomas:2013aa,Moshiri2017,Li2018}.
-Our precisely drawn rebound path graphs
-(Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph})
+
+Second, this paper contributes the first visualizations of rebound effects
+in energy, expenditure, and consumption spaces. 
+We call these visualizations ``rebound path graphs,'' and
+they can be seen in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph}. 
+Our precisely drawn, quantified rebound path graphs
 through energy, expenditure, and consumption spaces
 aid comprehension of and intuition about the various rebound effects.
 
-The third novel aspect of this framework is its inclusion of
-embodied energy and maintenance and disposal effects of the EEU. 
-These effects are the energy manifestation of the important difference 
-between costless technology upgrades or (costly) mandated efficiency 
-increases \citep{Gillingham:2013aa,Fullerton2020}.
-Embodied energy and maintenance and disposal effects are not typically 
-included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
-Most rebound frameworks assume costless upgrade in both financial and energy terms.
-This framework shows that it is possible to include such effects.
-
-Finally, this framework is the first, to our knowledge, 
-to operationalize the macroeconomic factor and 
-to identify the place to link macro to micro effects. 
+Finally, the framework contributes the first operationalized link between 
+rebound effects on macroeconomic and microeconomic scales. 
+We both operationalize the link and show the location where it should be applied
+(scaling net income after the substitution effect).
+We further draw upon the MPC literature to show how macro effects 
+operate via economic expansion over the long term.
+This macro-to-micro link can be see in Eq.~\ref{eq:Re_macro_def} and
+Figs.~\ref{fig:ExampleEnergyPathGraph}, \ref{fig:CarEnergyGraph}, and \ref{fig:LampEnergyGraph}.
 
 
 %++++++++++++++++++++++++++++++
@@ -4073,7 +4091,8 @@ The sensitivity analyses of Section~\ref{sec:sensitivity_analyses}
 enable exploration of several policy options that are often suggested
 to promote energy efficiency:
 energy efficiency standards, rebates or subsidies, and carbon taxes.
-We discuss the rebound implications of each policy option with reference to the sensitivity analysis
+In the subsections below, 
+we discuss the rebound implications of each policy option with reference to the sensitivity analysis
 of Section~\ref{sec:sensitivity_analyses}.
 
 
@@ -4111,7 +4130,7 @@ To encourage market penetration of higher-efficiency devices,
 regulators may be tempted to reduce costs to device purchasers via rebates or subsidies.
 Rebates or subsidies can be offered to device purchasers to incentivize adoption of 
 energy-efficiency technologies and grow their markets.
-Doing so effectively reduces the capital cost of energy efficiency devices ($\amacro{C}_{cap}$).
+Doing so effectively reduces the capital cost of energy efficient devices ($\amacro{C}_{cap}$).
 However, Fig.~\ref{fig:all_Re_terms_C_cap_graph} shows that reducing capital cost 
 increases energy rebound, 
 the route being, predominantly, the income effect 
@@ -4194,12 +4213,9 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
   magrittr::extract2("Re_tot")
 @
 
-The framework also links to the total or economy-wide rebound literature
-by relating the size of macroeconomic rebound 
-to that of the microeconomic rebound 
-in a term that corresponds to magnitudes in the microeconomic portion of the framework. 
-We note, again, that 
-most rebound analyses focus on either microeconomic effects or total rebound.
+The framework relates  macroeconomic rebound 
+to microeconomic rebound 
+via a term that scales magnitudes in the microeconomic portion of the framework. 
 Few rebound studies have explored the macro space 
 between micro and total rebound.
 Inspired by \citet{Borenstein:2015aa} and others, 
@@ -4211,25 +4227,27 @@ meaning that every \$1 spending by the device owner in the income effect
 generates \$1 of additional economic activity in the broader economy.
 However, the framework presented in Section~\ref{sec:framework} and
 the results obtained in Section~\ref{sec:examples}
-allow, for the first time, some initial discussion about a value for $k$.
+allow, for the first time, some initial discussion about a calibrated value for $k$.
 
-To calibrate the macro factor,
+To calibrate the macro factor ($k$),
 we treat macro rebound ($Re_{\macro}$) as a residual.
 The macro factor ($k$) becomes an unknown parameter whose value is to be chosen
 such that $Re_{\macro}$
 is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
-average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.\footnote{
-The relevance of this value is confirmed by three studies that came out after \citet{Brockway2021}
-did their analysis.
-\citet{Yan2019} report 87\% short run and 78\% long-run average rebounds for Chinese provinces.
-\citet{blackburn2020energy} report average total rebound between 52\% and 77\% for the US for plausible values
-of the elasticity of substitution.
-\citet{Berner2021} report 78\% to 101\% for several Western European countries and the US
-after two years.}
-long recent studies not yet incorporated in the review find total rebounds
-of 
+average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$%
+\footnote{
+  The relevance of this value is confirmed by three studies that 
+  appeared around the time of \citet{Brockway2021}.
+  \citet{Yan2019} report 87\% short run and 78\% long-run average rebounds for Chinese provinces.
+  \citet{blackburn2020energy} report average total rebound between
+  52\% and 77\% for the US for plausible values
+  of the elasticity of substitution.
+  \citet{Berner2021} report 78\% to 101\% for several Western European countries and the U.S.\
+  after two years.
+}.
+%
 The calibrated values of $k$ that give identical $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
 for both examples are
 $k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$
@@ -4264,7 +4282,7 @@ $k = 3$ could be interpreted as $\MPC = 0.75$.
 $\MPC = 0.75$ is a reasonable number, 
 being in the upper half of recent estimates by \citet{Carroll2017}.
 (The analogy with MPC
-makes a link to Borenstein's approach, 
+makes a link to \citeauthor{Borenstein:2015aa}'s approach, 
 even though we consider the macro effect to be 
 driven by supply side productivity growth.)
 
