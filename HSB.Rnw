@@ -2405,8 +2405,6 @@ N_dot_hat_car_char <- val_to_string(case = "Car", val = ReboundTools::hat_vars$N
 Re_macro_car_char_perc <- val_to_string(case = "Car", val = ReboundTools::rebound_terms$Re_macro, to_perc = TRUE)
 @
 
-
-
 For the first example, 
 we consider the purchase of a more fuel efficient car, 
 namely a gasoline-electric Ford Fusion Hybrid car,
@@ -2416,7 +2414,7 @@ except for the inclusion of an electric battery
 in the hybrid car.  
 The car case study features a larger initial capital investment
 versus the long-term benefit of decreased direct energy costs 
-for the same energy service (mileage/year). 
+for the same energy service (miles/year). 
 
 
 %------------------------------
@@ -2923,10 +2921,10 @@ freed cash to additional driving.
 Rebound from the indirect income effect 
 ($Re_{iinc}$) is positive (\Sexpr{Re_iinc_car_char_perc}\%)
 due to higher spending on other goods. 
-Thus, the freed cash after the substitution effect
+Thus, the net income after the substitution effect
 ($\rasub{N} = \Sexpr{N_dot_hat_car_char}$~\$/year) 
 translates into positive direct and indirect income
-rebound at the micro level. 
+rebound at the micro scale. 
 Total micro rebound (emplacement, substitution, and income effects)
 sums to $Re_{micro} = \Sexpr{Re_micro_car_char_perc}$\%.
 
@@ -3007,7 +3005,7 @@ in terms of energy service delivery (measured in lumen output per lamp),
 the key difference being the energy required to provide that energy service. 
 The LED lamp has a low 
 initial capital investment rate
-(negative versus the incumbent incandescent lamp, actually!)
+(less than the incumbent incandescent lamp, actually!)
 and a long-term benefit of decreased direct energy expenditures
 for the same annual energy service (lm-hr/year).
 
