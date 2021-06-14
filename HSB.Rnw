@@ -613,7 +613,8 @@ require conceptual development and operationalization.
 \label{sec:aim_contribution_structure}
 %++++++++++++++++++++++++++++++
 
-There is a strategic \emph{need} for a comprehensive rebound analysis framework
+There is a strategic \emph{need} for 
+a comprehensive rebound analysis framework
 to firm up theoretical foundations, 
 enable empirical analysis, and 
 guide effective energy efficiency policy-making.
@@ -644,8 +645,9 @@ The key \emph{contributions} of this paper are
 \end{enumerate*}
 
 The remainder of this paper is \emph{structured} as follows.
-Section~\ref{sec:framework} describes the comprehensive, rebound analysis framework.
-Section~\ref{sec:examples} provides two calculation examples, a car and an electric lamp.
+Section~\ref{sec:framework} describes the comprehensive rebound analysis framework.
+Section~\ref{sec:examples} provides two examples: 
+energy efficiency upgrades to a car and an electric lamp.
 Section~\ref{sec:discussion} discusses the results, and 
 Section~\ref{sec:conclusion} concludes.
 
@@ -940,7 +942,9 @@ Section~\ref{sec:conclusion} concludes.
 
 In this section, we develop a comprehensive energy rebound analysis framework 
 (concisely, ``the framework'').
-We follow convention to distinguish between
+We follow the rebound typology discussed in Section~\ref{sec:rebound_typologies}
+and Table~\ref{tab:typology}, 
+distinguishing between
 microeconomic effects (at the single device or device owner level)
 and 
 macroeconomic effects (broader, economy-wide responses
@@ -948,9 +952,7 @@ to a single device upgrade).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
 We follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
 in splitting microeconomic effects into 
-direct effects (associated with energy to run the energy conversion device) and
-indirect effects (associated with other expenditures) effects.
-
+direct and indirect locations.
 Like other authors, we recognize many macroeconomic effects, 
 even if we don't later distinguish among them.
 \citet{Sorrell:2009cg} 
@@ -963,14 +965,6 @@ between the micro and macro levels.
 \citet{VandenBergh2011} distinguishes 14 types of rebound, 
 providing, perhaps, the greatest complexity. 
 
-Table~\ref{tab:typology} 
-summarizes existing typologies and
-establishes the typology for this paper. 
-Rebound effects (emplacement, substitution, income, and macro), 
-locations (direct and indirect), and 
-scales (micro and macro) 
-are identified.
-
 Fig.~\ref{fig:flowchart} shows rebound effects
 arranged in left-to-right order of their discussion in this paper.
 Rebound symbols are shown above each effect ($Re_{empl}$, etc.).
@@ -978,16 +972,19 @@ Nomenclature for direct and indirect locations are shown beneath each effect ($R
 Decorations for each stage are shown between rebound effects
 ($\circ$, $*$, etc.).
 Names for the decorations are given at the bottom of the figure
-(``orig,'' ``star,'' etc.).
+(``orig,'' ``star,'' etc.)%
+\footnote{
+  Note that
+  the vocabulary and mathematical notation for rebound effects is extensive;
+  Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
+  notational elements used throughout this paper, including
+  symbols, Greek letters, abbreviations, decorations, and subscripts.
+  The notational elements 
+  can be mixed to provide a rich and expressive ``language'' of energy rebound.
+  In several places, we use colored backgrounds on rebound effects for visual convenience. 
+}.
 The left-to-right order does not necessarily represent 
 the progression of rebound effects through time.
-
-% \begin{table}
-% \caption{Rebound typology (right column) with comparison to existing literature (center column).}
-% \centering
-% \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-% \label{tab:typology}
-% \end{table}
 
 \begin{figure}
 \centering
@@ -1013,18 +1010,7 @@ that consumes final energy%
   energy services (e.g., transport, illumination, and space heating).
 }
 %
-(say, gasoline) at a rate $\rbempl{E}$ (in MJ/year)%
-\footnote{
-  Note that
-  the vocabulary and mathematical notation for rebound effects is extensive;
-  Fig.~\ref{fig:flowchart} and Appendix~\ref{sec:nomenclature} provide guides to 
-  notational elements used throughout this paper, including
-  symbols, Greek letters, decorations, and subscripts.
-  The notational elements 
-  can be mixed to provide a rich and expressive ``language'' of energy rebound.
-  In several places, we use colored backgrounds on rebound effects for visual convenience. 
-}.
-%
+(say, gasoline) at a rate $\rbempl{E}$ (in MJ/year).
 The final energy is available at price $p_E$ (in \$/MJ).
 The energy conversion device provides a rate of energy service 
 $\rbempl{q}_s$ (in vehicle-km/year)
@@ -1063,8 +1049,8 @@ so the final energy purchaser (the device owner) is a price taker%
   would require a full-economy model that is beyond the scope of this paper.
   Rebound due to energy price change is included in the macro effect.
   (See Table~\ref{tab:typology}.)
-}
-.
+}.
+%
 Initially, the device owner spends income ($\rorig{M}$)
 on final energy for the device ($\rorig{C}_s = p_E \rorig{E}_s$), 
 annualized capital costs for the device ($\rorig{C}_{cap}$), 
@@ -1074,7 +1060,7 @@ The budget constraint
 for the device owner is
 
 \begin{equation} \label{eq:budget_constraint}
-  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} + \rorig{N} \; ,
+  \rorig{M} = \rorig{C}_s + \rorig{C}_{cap} + \rorig{C}_{\md} + \rorig{C}_{o} + \cancelto{0}{\rorig{N}} \; ,
 \end{equation}
 %
 where 
@@ -1085,8 +1071,11 @@ we walk through four rebound effects,
 deriving rebound expressions for each. 
 But first 
 we define rebound relationships 
-(Section~\ref{sec:rebound_relationships}) and 
-typical energy and cost relationships (Section~\ref{sec:energy_and_cost_relationships}).
+(Section~\ref{sec:rebound_relationships}),  
+show typical energy and cost relationships 
+(Section~\ref{sec:energy_and_cost_relationships}), and 
+discuss rebound path graphs
+(Section~\ref{sec:rebound_path_graphs}.
 
 
 %++++++++++++++++++++++++++++++
@@ -1148,7 +1137,7 @@ Typical units for automotive transport and illumination
 beneath each equation%
 \footnote{
   Note that ``pass'' is short for ``passenger,'' and
-  ``lm'' is the SI notation for the lumen, a lighting unit.
+  ``lm'' is the SI notation for the lumen, a unit of lighting energy rate.
 }.
 
 \begin{align} \label{eq:typ_qs_eta_Edot}
@@ -1157,7 +1146,8 @@ beneath each equation%
   \text{[lm-hr/yr]} &= [\text{lm-hr/MJ}] \text{[MJ/yr]} \nonumber
 \end{align}
 %
-Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) to the final-to-services efficiency~($\eta$).
+Second, the energy service price~($p_s$) is the ratio of energy price~($p_E$) 
+to the final-to-service efficiency~($\eta$).
 
 \begin{align} \label{eq:ps_pE_eta}
   p_s &= \frac{p_E}{\eta} \\
@@ -1190,15 +1180,14 @@ of expenditures rates~($\rate{C}_j$) and energy intensity of the economy~($I_E$)
 %++++++++++++++++++++++++++++++
 
 Any comprehensive rebound analysis must track
-energy, expenditures, and consumption
+energy, expenditure, and consumption
 at the device (direct location) and elsewhere in the economy (indirect location)
 across all adjustments for all rebound effects. 
 One novel contribution of this paper is visualization of rebound effects 
-in three planes:
-the energy plane, the expenditure plane, and the consumption plane.
-Each plane contains a path graph that illustrates adjustments
-to energy consumption, expenditures, and 
-demand for consumption of goods and services as a result of the EEU.
+in three spaces:
+the energy space, the expenditure space, and the consumption space.
+Each space is represented by a plane that contains a path graph that illustrates adjustments
+to energy, expenditure, and consumption as a result of the EEU.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
 Important quantities for the path graphs are
@@ -1218,7 +1207,7 @@ In rebound path graphs, direct effects are placed on the $x$-axis, and
 indirect effects are placed placed on the $y$-axis.
 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
-notional rebound path graphs on the energy, expenditure, and consumption planes.
+notional rebound path graphs on the energy, expenditure, and consumption spaces.
 The notional path graphs are not quantified; there are no scales on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate the numerical examples.
@@ -1235,7 +1224,6 @@ Lines with negative slope through points
 $\circ$, $a$, $*$, $\wedge$, $-$, and $\sim$
 indicate energy consumption isoquants
 (sum of direct and indirect components) at key points.
-
 Table~\ref{tab:path_graph_segments} shows 
 segments and rebound effects for all rebound path graphs.
 
@@ -1604,15 +1592,17 @@ is given by
   \Sdot \equiv \rbempl{E}_s - \raempl{E}_s = - \Delta \raempl{E}_s \; .
 \end{equation}
 %
-Appendix~\ref{sec:Sdot} shows that $\Sdot$ can be rewritten conveniently as
+$\Sdot$ can be rewritten conveniently as
 
 \begin{equation} \label{eq:Sdot}
   \Sdot = \Sdoteqn \; .
 \end{equation}
+%
+(See Appendix~\ref{sec:Sdot}.)
 
 Because behavior changes are not considered
 in the direct emplacement effect,
-actual and expected energy savings rates are identical.
+actual and expected energy savings rates are identical, and there is no takeback.
 By definition, then, the direct emplacement effect causes no rebound.
 Thus, 
 
@@ -1647,7 +1637,7 @@ i.e.\ greater energy consumption after the EEU than before it.
 
 Although the direct emplacement effect does not cause rebound, 
 Fig.~\ref{fig:ExampleEnergyPathGraph} shows that
-indirect emplacement effects may cause rebound.
+indirect emplacement effects may indeed cause rebound.
 Indirect emplacement effects 
 (segments \ab{} and \bstar{}
 in Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}) 
@@ -1723,10 +1713,9 @@ $\rbempl{E}_{emb} = \bempl{E}_{emb} / \bempl{t}_{\life}$
 and 
 $\raempl{E}_{emb} = \aempl{E}_{emb} / \aempl{t}_{\life}$.
 The change in embodied final energy due to the EEU (expressed as a rate) is given by
-$\raempl{E}_{emb} - \rbempl{E}_{emb}$
+$\Delta \raempl{E}_{emb} = \raempl{E}_{emb} - \rbempl{E}_{emb}$
 and is shown as segment \ab{} in Fig.~\ref{fig:ExampleEnergyPathGraph}.
-The expression for embodied energy rebound is derived in 
-Appendix~\ref{sec:Re_emb} to be
+The expression for embodied energy rebound is
 
 \begin{equation} \label{eq:Re_emb}
   Re_{emb} = \Reembeqn{} \; .
@@ -1747,7 +1736,7 @@ $\raempl{E}_{emb} - \rbempl{E}_{emb}$ could be negative,
 meaning that the upgraded device has a lower embodied energy rate than the original device,
 as shown by point \emph{2} being below point \emph{1} 
 in the notional energy path graph of Fig.~\ref{fig:ExampleEnergyPathGraph}.
-See Appendix~\ref{sec:Re_emb} for details.
+See Appendix~\ref{sec:Re_emb} for details of the derivation.
 
 In addition to embodied energy, 
 indirect emplacement effect rebound accounts for
@@ -1785,7 +1774,7 @@ See Appendix~\ref{sec:Re_OMd} for details of the derivation.
 \label{sec:sub_effect_main_paper}
 %------------------------------
 
-Neoclassical consumer theory decpomposes price-induced
+Neoclassical consumer theory decomposes price-induced
 behavior change into
 %
 \begin{enumerate*}[label={(\roman*)}]
@@ -1794,7 +1783,7 @@ behavior change into
         other goods consumption due to the lower post-EEU price of the energy service 
         (the substitution effect) and
   
-  \item re-spending the higher real income (the income effect)%
+  \item spending the higher real income (the income effect)%
         \footnote{
           For the original development of the decomposition
           see \citet{Slutsky1915} and \citet{Allen1936}.
@@ -1810,21 +1799,20 @@ about consumer behavior.
 (The next section addresses income effect rebound, $Re_{inc}$.)
 The substitution effect alters compensated demand, which is the demand for
 the expenditure minimizing consumption bundle that
-maintains utility at the pre-EEU upgrade level, given the new prices. Compensated
-demand is a technical term for a thought experiment from welfare economics: 
-the device owner's budget is altered so that the owner is ``compensated" 
-for the change in price and continues just to be
-able to reach the same level of utility as before. The change in 
-the budget is called compensating variation.
+maintains utility at the pre-EEU level, given the new prices.
+Compensated demand is a technical term for a thought experiment from welfare economics: 
+the device owner's budget is altered so that the owner is ``compensated''
+for the change in price while maintaining the same level of utility as before. 
+The change in the budget is called ``compensating variation'' (CV).
 The substitution effect involves
 %
 \begin{enumerate*}[label={(\roman*)}]
 
   \item an increase in consumption of the energy service,
-        a direct substitution effect (subscript $dsub$) and
+        the direct substitution effect (subscript $dsub$) and
 
   \item a decrease in consumption of other goods,
-        an indirect substitution effect (subscript $isub$).
+        the indirect substitution effect (subscript $isub$).
 
 \end{enumerate*}
 %
@@ -1839,14 +1827,15 @@ The substitution effect is best described
 with reference to a consumption path graph (Fig.~\ref{fig:ExampleConsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point, and 
-the line of constant expenditure, the budget constraint, is \circcirc{}.
+the expenditure isoquant, the budget constraint, is \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
 (\iicirc{}) at point $\circ$, the optimal consumption
-bundle prior to device upgrade.
+bundle prior to the EEU.
 After emplacement of the more efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
-pivoting the budget constraint counterclockwise around the y-axis intercept. The budget line \starstar{} indicates the
+pivoting the budget constraint counterclockwise around the y-axis intercept.
+The budget line \starstar{} indicates the
 cost of purchasing the original consumption bundle
 at the new prices.
 The substitution effect indicates the cheaper, optimal
@@ -1856,10 +1845,10 @@ translates into a lower budget constraint \hathat{}
 in Fig.~\ref{fig:ExampleConsPathGraph}.
 The $\wedge$ point shows consumption with new prices yielding utility
 at the level prior to the EEU and minimizing expenditure, 
-by consuming more of the relatively less costly energy service consumption and less of the relatively more costly
-other consumption goods.
+by consuming more of the now-lower-cost energy service
+and less of the relatively more costly other goods.
 
-The rebound from the substitution effect can be decomposed into 
+Rebound from the substitution effect can also be decomposed into 
 indirect (the decrease in other goods consumption, segment \starc{}) 
 and 
 direct (the increase in energy service consumption, segment \chat{})
@@ -1883,13 +1872,12 @@ Constant price elasticities (as in the approximate utility model)
 are approximations that are in general only applicable to marginal price changes. 
 Appendix~\ref{sec:Re_sub} contains details of the approximate utility model.
 
-Here, we present an exact method that allows 
+Here, we present an exact utility model that allows 
 the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
 the compensated energy service cross-price elasticity of other goods demand ($\eqopsC$)
-to vary along an indifference curve, allowing analysis of
-non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
-We use a fully specified 
-CES utility model,
+to vary along an indifference curve, 
+allowing analysis of non-marginal price changes ($\aempl{p}_s <\!\!< \orig{p}_s$). 
+We employ a fully specified CES utility model,
 which allows the direct calculation
 of the utility maximizing consumption bundle for any constraint.
 The utility model describes the device owner's behavior as
