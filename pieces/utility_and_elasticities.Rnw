@@ -414,12 +414,12 @@ with
 %++++++++++++++++++++++++++++++
 
 The substitution effect requires a utility model.
-In this paper, we describe two utility models in detail: 
+In this paper, we describe two utility models: 
 an approximate model and a CES model.
 All utility models require elasticities to describe consumer preferences.
-In fact, there are three elasticies across the two utility models we discuss in detail:
+In fact, there are three elasticies across the two utility models:
 $\eqspsC$, $\eqopsC$, and $\sigma$.
-The approximate method requires 
+The approximate utility model requires 
 the compensated price elasticity of energy service demand ($\eqspsC$) and
 the compensated cross-price elasticity of energy service demand ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
@@ -529,7 +529,7 @@ can be determined from two pieces of readily available information:
 %++++++++++++++++++++++++++++++
 
 The income effect requires two elasticities to 
-estimate the respending of net savings:
+estimate the spending of net savings:
 the income elasticity of energy service consumption ($\eqsM$) and
 the income elasticity of other goods consumption ($\eqoM$).
 Due to the homotheticity assumption,
