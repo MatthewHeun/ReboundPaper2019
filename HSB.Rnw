@@ -4180,7 +4180,7 @@ yet, rebound effects become more pronounced.
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Macroeconomic rebound}
+\subsection{Calibrating $k$}
 \label{sec:macro_rebound_discussion}
 %++++++++++++++++++++++++++++++
 
@@ -4308,62 +4308,54 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we developed a comprehensive, consumer-based rebound analysis framework
-that solidifies theoretical foundations for energy rebound,
-enables empirical analysis, and 
-can be used to guide energy efficiency policy.
-The framework is the first to our knowledge
-to integrate all components of direct and indirect microeconomic rebound for consumers
-in an analytically consistent yet numerically precise and operationalizable manner. 
-The sets of three rebound path graphs that simultaneously 
-track energy, expenditure, and consumption 
-decisions for every rebound component display and summarize this integration. 
-The framework 
-%
-\begin{enumerate*}[label={(\roman*)}]
-	
-  \item builds upon microeconomic foundations and 
-        carefully distinguishes among microeconomic rebound effects,
-  
-  \item identifies and incorporates, for the first time,
-        a plausible value for the macro factor ($k = 3$)
-        to provide a better link between macro and micro effects, and 
-
-  \item enables empirical estimation of rebound magnitudes for real energy efficiency upgrades.
-
-\end{enumerate*}
+we developed a comprehensive rebound analysis framework that
+combines all rebound effects, locations, and scales
+across energy, expenditure, and consumption spaces with 
+a detailed model of consumer preferences and
+non-marginal energy service price changes
+in an operational manner
+for the 
+simplest case of a single fuel and a single energy service.
+This paper also contributes the first visualizations of 
+rebound path graphs in energy, expenditure, and consumption spaces.
+We operationalize and calibrate the macro factor ($k = 3$)
+to provide a better link between macro and micro effects. 
 
 From the development and application of the framework, 
-we can draw four important conclusions.
+we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
         quantification of magnitudes of all microeconomic rebound mechanisms, including 
-        direct and indirect channels 
+        direct and indirect locations 
         for emplacement, substitution, and income effects.
 Second, the examples show that magnitudes of rebound effects
         vary with the type of energy efficiency upgrade performed.
 Third, the sensitivity studies
         (Section~\ref{sec:sensitivity_analyses})
-        enable evaluation of rebound sensitivies to imporant parameters. 
+        enable evaluation of rebound sensitivities to important parameters. 
         For the examples in this paper, total rebound is   
         more sensitive to
         the price of energy ($p_E$),
         the elasticity of energy service demand ($\eqspsUC$), and
         the macro factor ($k$) 
         than either
-        efficiency ($\amacro{\eta}$) or
-        capital cost ($\amacro{C}_{cap}$).
+        energy efficiency ($\amacro{\eta}$) or
+        the capital cost ($\amacro{C}_{cap}$) of the upgraded device.
 Last, the discussion (Section~\ref{sec:discussion}) shows that
         rebound is a headwind for efficiency-led energy reduction and CO$_2$ mitigation policies.
         Quantification of rebound effect magnitudes
-        is an important precursor to devising energy efficiency policies
-        that would both encourage efficiency and limit rebound effects.
+        is an important precursor to devising effective energy policies
+        that would 
+        encourage energy efficiency, 
+        limit rebound effects, and
+        reduce CO$_2$ emissions.
 
 Future work could be pursued in several areas. 
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item Other utility models could be explored for the substitution effect.
+  \item Other utility models (besides the CES utility model) 
+        could be explored for the substitution effect.
   
   \item Further empirical studies could be performed
         to estimate the magnitude of different 
