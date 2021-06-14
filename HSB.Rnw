@@ -522,6 +522,9 @@ partial and comprehensive treatment of a subject by a framework.
 
 \input{pieces/prev_frameworks_table.tex}
 
+Because all frameworks look at decreasing energy consumption from the EEU,
+the ``Direct emplacement effect'' row contains \rating{50} or better
+for all previous frameworks.
 Three early papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
 earning high marks (\rating{100}) in the ``Operationality'' row. 
@@ -574,9 +577,6 @@ but does not integrate embodied energy
 or financing costs into the framework for empirical analysis. 
 \citeauthor{Borenstein:2015aa} is the only author to treat the financial side of 
 embodied energy or maintenance and disposal effects. 
-%Because all frameworks look at decreasing energy consumption from the EEU, 
-%the ``Direct emplacement effect'' row contains \rating{50} or better
-%for each framework.
 \citet{Borenstein:2015aa} postulates the macro effect, 
 but does not develop the idea into an operational theory, 
 earning \rating{25} in the ``Macro effect'' row. 
@@ -592,7 +592,8 @@ Table~\ref{tab:previous_frameworks} shows that
 previous frameworks contain many needed pieces, 
 providing a substantial base from which to develop 
 a comprehensive and operational rebound analysis framework.
-The table demonstrates that previous frameworks start from micoreconomic
+A left-to-right reading of the table 
+demonstrates that previous frameworks start from micoreconomic
 consumer theory and move towards more rigorous theoretical treatment over time,
 with recent frameworks making important advanced theoretical contributions
 at the expense of operationality.
@@ -606,6 +607,8 @@ for the
 simplest case of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
+This paper aims to fill the gaps in Table~\ref{tab:previous_frameworks},
+completing the rightmost column with filled circles.
 
 
 %++++++++++++++++++++++++++++++
@@ -1870,7 +1873,8 @@ are constant along an indifference curve.
 Whether that is true depends on the utility function used.
 Constant price elasticities (as in the approximate utility model)
 are approximations that are in general only applicable to marginal price changes. 
-Appendix~\ref{sec:Re_sub} contains details of the approximate utility model.
+Appendix~\ref{sec:Resub_approximate_method}
+contains details of the approximate utility model.
 
 Here, we present an exact utility model that allows 
 the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
@@ -2313,10 +2317,10 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-To demonstrate application of the framework
+To demonstrate application of the comprehensive rebound analysis framework
 developed in Section~\ref{sec:framework},
 we select two case studies:
-energy efficiency upgrades for a car and an electric lamp.
+energy efficiency upgrades to a car and an electric lamp.
 We first collect parameter values
 for the equations for
 eight rebound components:
@@ -2332,13 +2336,13 @@ The total rebound
 %sum 
 ($Re_{tot}$)
 is given by the sum of the above components,
-which can also be checked against Eq.~(\ref{eq:Re_tot}).
+which can also be verified against Eq.~(\ref{eq:Re_tot}).
 
 As discussed in Section~\ref{sec:macro_effect_main_paper},
-the link between microeconomic factors and macro rebound effects 
-is a largely unexplored area. 
+the link between macroeconomic and microeconomic rebound effects 
+is largely unexplored. 
 For now, we assume a placeholder value of $k = 1$ for both case studies.
-We return to the matter of quantifying $k$
+We return to the matter of calibrating $k$
 in the Discussion (Section~\ref{sec:discussion}).
  
 
