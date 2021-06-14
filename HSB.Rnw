@@ -4013,7 +4013,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 \label{sec:discussion}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section, we highlight several novel characteristics
+In this section, we highlight contributions
 of the comprehensive rebound analysis framework.
 Next, we show how the framework enables insights
 on energy policy, especially policies to encourage energy efficiency. 
@@ -4021,7 +4021,7 @@ Finally, we discuss and calibrate the macro factor ($k$).
 
 
 %++++++++++++++++++++++++++++++
-\subsection{Novel aspects of the framework}
+\subsection{Contributions}
 \label{sec:framework_novelties}
 %++++++++++++++++++++++++++++++
 
@@ -4042,7 +4042,7 @@ that
 %
 The embodied energy and maintenance and disposal effects
 are the energy manifestation of the important difference 
-between costless technology upgrades or (costly) mandated efficiency 
+between costless technology upgrades and (costly) mandated efficiency 
 increases \citep{Gillingham:2013aa,Fullerton2020}.
 Embodied energy and maintenance and disposal effects are not typically 
 included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
