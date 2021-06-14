@@ -1873,7 +1873,8 @@ are constant along an indifference curve.
 Whether that is true depends on the utility function used.
 Constant price elasticities (as in the approximate utility model)
 are approximations that are in general only applicable to marginal price changes. 
-Appendix~\ref{sec:Re_sub} contains details of the approximate utility model.
+Appendix~\ref{sec:Resub_approximate_method}
+contains details of the approximate utility model.
 
 Here, we present an exact utility model that allows 
 the compensated energy service price elasticity of energy service demand ($\eqspsC$) and
