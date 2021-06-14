@@ -2197,8 +2197,8 @@ dynamic, long-run effects induced by the EEU%
 \footnote{
   In fact, considerable empirical evidence in the context
   of critiquing real business cycle models shows that
-  short-run effects of technological on inputs (in that literature: labor)
-  is contractionary \citep{Basu2006,Ramey2016hb}.
+  short-run effects of technological improvements on inputs (in that literature: labor)
+  are contractionary \citep{Basu2006,Ramey2016hb}.
 }.
 Our framework incorporates annual average effects over 
 the lifetime of the upgraded device, 
@@ -2262,8 +2262,9 @@ with consequent implications for additional energy consumption in the economy.
 for the mathematical relationship between $k$ and $\MPC$.)
 
 A further advantage of using the $\MPC$ approach is that there are
-many estimates of its magnitude, though we caution again that 
-the mechanism triggering the economic expansion is energy efficiency.
+many estimates of its magnitude, though we stress again that  $\MPC$ is a
+\emph{representation} of the effect, while the cause is higher
+energy efficiency on the supply side.
 A recent review by \citet{Carroll2017} 
 reports that most empirical estimates show $\MPC$ between 0.2 and 0.6, 
 with the full range estimates spanning zero to 0.9.
