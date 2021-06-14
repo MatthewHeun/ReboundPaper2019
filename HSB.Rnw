@@ -4216,7 +4216,16 @@ such that $Re_{\macro}$
 is sufficient to achieve an expected value for total rebound ($Re_{tot}$).
 We take the expected value for $Re_{tot}$ from 
 \citet{Brockway2021} who surveyed 33 recent studies to find
-average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.
+average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$.\footnote{
+The relevance of this value is confirmed by three studies that came out after \citet{Brockway2021}
+did their analysis.
+\citet{Yan2019} report 87\% short run and 78\% long-run average rebounds for Chinese provinces.
+\citet{blackburn2020energy} report average total rebound between 52\% and 77\% for the US for plausible values
+of the elasticity of substitution.
+\citet{Berner2021} report 78\% to 101\% for several Western European countries and the US
+after two years.}
+long recent studies not yet incorporated in the review find total rebounds
+of 
 The calibrated values of $k$ that give identical $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
 for both examples are
 $k = \Sexpr{formatC(calibrated_k[["Car"]], digits = 2)}$
