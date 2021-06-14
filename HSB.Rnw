@@ -2441,7 +2441,8 @@ Note that Table~\ref{tab:car_stages_table} applies to the car owner.
 Across the macro effect (segment \bartilde{} in Fig.~\ref{fig:CarEnergyGraph}), 
 changes occur only in the macroeconomy.
 For the car owner, no changes are observed across the macro effect.
-Thus, the $-$ and $\sim$ columns of Table~\ref{tab:car_stages_table} are identical.
+Thus, the $-$ (bar) and $\sim$ (tilde) columns
+of Table~\ref{tab:car_stages_table} are identical.
 
 % Reduce spacing between table rows henceforth.
 \renewcommand{\arraystretch}{0.6}
@@ -3032,7 +3033,8 @@ as shown below in Table~\ref{tab:lamp_stages_table}.
 Similar to Table~\ref{tab:car_stages_table}, 
 Table~\ref{tab:lamp_stages_table} applies to the lamp owner.
 For the lamp owner, no changes are observed across the macro effect.
-Thus, the $-$ and $\sim$ columns of Table~\ref{tab:lamp_stages_table} are identical.
+Thus, the $-$ (bar) and $\sim$ (tilde) columns
+of Table~\ref{tab:lamp_stages_table} are identical.
 
 
 \begin{landscape}
@@ -3507,11 +3509,11 @@ as shown by segment \starc{} in Fig.~\ref{fig:LampConsGraph},
 yielding indirect substitution effect rebound
 ($Re_{isub}$) of $\Sexpr{Re_isub_lamp_char_perc}$\%.
 
-\Inceffect{} rebound arises from respending of net energy cost savings
+\Inceffect{} rebound arises from spending net energy cost savings
 associated with converting from the incandescent lamp to the LED lamp
 ($\rbinc{N} = \Sexpr{N_dot_hat_lamp_char}$~\$/year).
 Direct income effect rebound 
-($Re_{dinc}$) is \Sexpr{Re_dinc_lamp_char_perc}\%),
+($Re_{dinc}$) is \Sexpr{Re_dinc_lamp_char_perc}\%,
 positive but small, 
 as the lamp owner allocates 
 some of the additional income to increased demand for lighting. 
