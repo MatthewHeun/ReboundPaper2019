@@ -2312,17 +2312,6 @@ we find
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%% - these two rows to be deleted when read - GREGOR DONE WITH EDITS: the most part was about total rebound and went to intro
-%%%  I have no particular view on the other references but think we have enough references
-
-% Section 3 refs to add
-% Possibly include in section 3 calcs (for own-price elasticities) 
-% and/or section 4 discussion
-% \citet{Mills2014},
-% \citet{Saunders2012},
-% \citet{Schleich2014},
-% 
-
 To demonstrate application of the framework
 developed in Section~\ref{sec:framework},
 we select two case studies:
