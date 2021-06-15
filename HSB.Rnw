@@ -335,12 +335,8 @@ the need for operationality.
 \label{sec:rebound_typologies}
 %------------------------------
 
-Table~\ref{tab:typology} shows our rebound typology.
-****
-Fix sentence above.  It will probably be a figure.
----MKH
-****
-A comprehensive rebound framework will include 
+Anyt comprehensive rebound framework should include 
+in its typology
 emplacement, substitution, income, and macro effects.
 For a given EEU, 
 it cannot be known \emph{a priori}
@@ -390,12 +386,12 @@ dynamic response of the economy to reach a new stable equilibrium
 in response to the EEU.
 Macroeconomic rebound involves various short- and long-run effects.
 
-\begin{table}
-  \caption{Rebound typology (right column) with comparison to existing literature (center column).}
-  \centering
-  \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-  \label{tab:typology}
-\end{table}
+% \begin{table}
+%   \caption{Rebound typology (right column) with comparison to existing literature (center column).}
+%   \centering
+%   \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
+%   \label{tab:typology}
+% \end{table}
 
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
@@ -603,12 +599,12 @@ across energy, expenditure, and consumption spaces with
 a detailed model of consumer preferences and
 non-marginal energy service price changes
 in an operational manner
-for the 
-simplest case of a single fuel and a single energy service.
+for the simplest case
+of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
 This paper aims to fill the gaps in Table~\ref{tab:previous_frameworks},
-completing the rightmost column with filled circles.
+completing the rightmost column with filled circles (\rating{100}).
 
 
 %++++++++++++++++++++++++++++++
