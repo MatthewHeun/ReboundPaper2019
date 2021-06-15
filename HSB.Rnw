@@ -366,7 +366,7 @@ in the income effect on more of the energy service and
 more other goods and services. 
 Finally, the macro effect accounts for long-run economic expansion 
 (and subsequent rising energy consumption),
-because the EEU decreases input costs for the device owner.
+because the EEU is a cost-saving technological change.
 
 Rebound can occur at direct and indirect locations.
 Direct rebound involves takeback of expected savings of energy
