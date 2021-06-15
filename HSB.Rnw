@@ -401,9 +401,10 @@ The emplacement effect
 frees the device owner's cash to be spent in the income effect,
 with energy implications.
 The substitution effect describes behavior adjustments that 
-provide net savings to be spent in the income effect, 
+provide further net savings to be spent in the income effect, 
 again with energy implications.
-And the rate of net savings initiates the macro effect.
+And the more efficiency increase and behavior change at the micro level,
+the larger the macro effect is likely to be.
 (We note briefly that 
 the link between microeconomic and macroeconomic scales 
 is largely unexplored territory.
