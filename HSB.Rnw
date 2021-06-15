@@ -1,9 +1,9 @@
 % Energy Economics Author Guide: 
 % https://www.elsevier.com/journals/energy-economics/0140-9883/guide-for-authors
 
-\documentclass[review]{elsarticle}      % For the review process; lots of space between lines
+% \documentclass[review]{elsarticle}      % For the review process; lots of space between lines
 % \documentclass[1p]{elsarticle}          % Single spacing closer to published version
-% \documentclass[preprint]{elsarticle}    % For submission
+\documentclass[preprint]{elsarticle}    % For submission
 
 \usepackage{lineno}
 \modulolinenumbers[5]
@@ -268,10 +268,9 @@ energy efficiency measures are expected to deliver
 energy-related 
 CO$_2$ emissions reductions in support of
 Paris Agreement targets~\citep{masson-delmotte2018},
-even while the world economy grows.
-In one 
-example, by 2050
-energy efficiency is expected to
+even as the world economy grows.
+In one example, 
+by 2050 energy efficiency is expected to
 contribute 37\% of 
 energy-related carbon emissions reductions globally
 in the International Energy Agency's (IEA's) Sustainable Development 
@@ -385,16 +384,9 @@ A static economy is assumed.
 Microeconomic rebound includes the emplacement, substitution, and income effects.
 Rebound at the macroeconomic scale arises from the 
 dynamic response of the economy to reach a new stable equilibrium
-(between supply and demand for goods and energy services)
+(between supply and demand for the energy service and other goods)
 in response to the EEU.
 Macroeconomic rebound involves various short- and long-run effects.
-
-% \begin{table}
-%   \caption{Rebound typology (right column) with comparison to existing literature (center column).}
-%   \centering
-%   \includegraphics[width=1\linewidth]{figure_other/typology.pdf}
-%   \label{tab:typology}
-% \end{table}
 
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
@@ -406,8 +398,9 @@ with energy implications.
 The substitution effect describes behavior adjustments that 
 provide further net savings to be spent in the income effect, 
 again with energy implications.
-And the more efficiency increase and behavior change at the micro level,
-the larger the macro effect is likely to be.
+And greater efficiency gains and 
+behavior changes at the microeconomic scale
+are likely to lead to larger macroeconomic rebound.
 (We note briefly that 
 the link between microeconomic and macroeconomic scales 
 is largely unexplored territory.
@@ -423,21 +416,31 @@ for our approach to the macro effect.)
 A comprehensive rebound framework will enable analyses
 in several conceptual ``spaces'' in which changes occur
 because of the EEU.
-Energy, expenditure, and consumption spaces are all linked together,
-and transparent tracking of all of them increases understanding of causal
-linkages.
-To give just a few examples, 
-net savings from the EEU will be respent (described in the expenditure space)
-but what they are spent on depends on preferences
-(described in the consumption space)
-with varying energy implications 
-(described in the energy space).
-The amount of embodied energy (in the energy space) may be correlated
-with the cost of device upgrades (in the expenditure space). The cost in
-turn has implications for what can be consumed (in the consumption space).
-%Because everything is linked together, 
-%each rebound effect should be analyzed for its adjustments 
-%in energy, expenditure, and consumption spaces.
+Energy, expenditure, and consumption spaces are all linked together, 
+as illustrated by two examples.
+%
+\begin{enumerate*}[label={(\alph*)}]
+	
+  \item Net savings from the EEU are determined in the expenditure space.
+        Which goods and services are purchased with net savings 
+        is determined by consumer preferences and 
+        described in the consumption space.
+        The energy implications of the purchases vary 
+        by the goods and services purchased
+        and is described in the energy space.
+
+  \item The amount of embodied energy in the upgraded device 
+        is described in the energy space and
+        may be correlated with the cost of device upgrades, 
+        which is described in the expenditure space.
+        The cost of the upgrade, in turn,
+        has implications for what can be consumed, 
+        which is described in the consumption space.
+    
+\end{enumerate*}
+%
+Tracking changes across all spaces increases understanding 
+of causal linkages across rebound effects, locations, and scales.
 
 
 %------------------------------
@@ -448,10 +451,11 @@ turn has implications for what can be consumed (in the consumption space).
 A comprehensive rebound framework will include a detailed description of consumer preferences,
 because device owner preferences drive the substitution effect.
 By ``detailed,'' we mean a utility or payoff 
-specification that allows translating
+specification that translates
 energy service price and device purchase 
-cost changes into consumption choices while allowing
-decomposition into substitution and income effects.
+cost changes into consumption choices, simultaneously 
+decomposing into substitution and income effects.
+
 
 %------------------------------
 \subsubsection{Non-marginal energy efficiency changes} 
@@ -461,8 +465,10 @@ decomposition into substitution and income effects.
 A comprehensive rebound framework will allow non-marginal efficiency changes,
 because EEUs often involve a very large percentage increase in energy efficiency.
 A good example of non-marginal energy efficiency changes is 
-replacing incandescent lamps with Light Emitting Diode (LED) lamps.
+replacing incandescent lamps with Light Emitting Diode (LED) lamps, 
+as discussed in Section~\ref{sec:lamp_example}.
 For such EEUs, energy efficiency can increase by nearly a factor of 10!
+
 
 %------------------------------
 \subsubsection{Operationality} 
