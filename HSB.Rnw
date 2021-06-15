@@ -335,7 +335,7 @@ the need for operationality.
 \label{sec:rebound_typologies}
 %------------------------------
 
-Anyt comprehensive rebound framework should include 
+Any comprehensive rebound framework should include 
 in its typology
 emplacement, substitution, income, and macro effects.
 For a given EEU, 
@@ -358,7 +358,7 @@ The emplacement effect of an EEU includes
 \end{enumerate*}
 %
 The substitution effect accounts for behavior changes across the EEU,
-typically increased use of the upgraded device and decreased consumption of other goods,
+typically increased use of the upgraded device and decreased consumption of other goods due to relative price changes,
 assuming no change in device owner utility.
 The emplacement and substitution effects create net monetary savings
 which are spent by the device owner 
@@ -368,7 +368,7 @@ Finally, the macro effect accounts for long-run economic expansion
 (and subsequent rising energy consumption),
 because the EEU is a cost-saving technological change.
 
-Rebound occurs at direct and indirect locations.
+Rebound can occur at direct and indirect locations.
 Direct rebound involves takeback of expected savings of energy
 consumed by the device.
 Indirect rebound arises from increased energy consumption 
@@ -376,11 +376,11 @@ in other locations and in other economic sectors
 as a result of the EEU.
 
 Rebound scales include microeconomic and macroeconomic.
-Microeconomic rebound arises from the series of adjustments
+Rebound at the microeconomic scale arises from the series of adjustments
 to the reduction in the implicit price of the energy service. 
 A static economy is assumed. 
-Microeconomic effects include the emplacement, substitution, and income effects.
-Macroeconomic rebound arises from the 
+Microeconomic rebound includes the emplacement, substitution, and income effects.
+Rebound at the macroeconomic scale arises from the 
 dynamic response of the economy to reach a new stable equilibrium
 (between supply and demand for goods and energy services)
 in response to the EEU.
