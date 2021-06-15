@@ -331,7 +331,7 @@ the need for operationality.
 
 
 %------------------------------
-\subsubsection{Rebound typologies} 
+\subsubsection{Typologies: effects, locations, scales} 
 \label{sec:rebound_typologies}
 %------------------------------
 
@@ -368,7 +368,7 @@ Finally, the macro effect accounts for long-run economic expansion
 (and subsequent rising energy consumption),
 because the EEU is a cost-saving technological change.
 
-Rebound can occur at direct and indirect locations.
+Rebound occurs at direct and indirect locations.
 Direct rebound involves takeback of expected savings of energy
 consumed by the device.
 Indirect rebound arises from increased energy consumption 
