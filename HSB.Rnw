@@ -4047,7 +4047,7 @@ The embodied energy and maintenance and disposal effects
 are the energy manifestation of the important difference 
 between costless technology upgrades or (costly) mandated efficiency 
 increases \citep{Gillingham:2013aa,Fullerton2020} and are not typically 
-included in microeconomic rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
+included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
 Most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
 One surprising result is that taking account of differential capital cost can increase long-run
 rebound as the rate of capital cost declines (see lamp example). Therefore the
@@ -4338,7 +4338,7 @@ From the development and application of the framework,
 we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all microeconomic rebound effects, including 
+        quantification of magnitudes of all effects at the microeconomic scale, including 
         direct and indirect locations 
         for emplacement, substitution, and income effects.
 Second, the examples show that magnitudes of rebound effects
