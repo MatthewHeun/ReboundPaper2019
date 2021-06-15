@@ -604,7 +604,7 @@ of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
 This paper aims to fill the gaps in Table~\ref{tab:previous_frameworks},
-completing the rightmost column with filled circles (\rating{100}).
+completing the ``This paper'' column with filled circles (\rating{100}).
 
 
 %++++++++++++++++++++++++++++++
