@@ -530,12 +530,12 @@ a simplified, one-dimensional macroeconomic-scale rebound effect
 discussed in Section~\ref{sec:macro_effect_main_paper}.
 
 We are not the first to develop a partial equilibrium rebound analysis framework,
-so it is worthwhile to assess previous partial equilibrium frameworks for
+so it is worthwhile to assess previous frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
 analysis in energy, expenditure, and consumption spaces; 
 level of detail in the consumer preference model;
-allowance of non-marginal energy efficiency changes; and 
+allowance for non-marginal energy efficiency changes; and 
 operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
@@ -584,7 +584,7 @@ cannot separate substitution and income effects cleanly in empirical analysis,
 reverting to partial analyses of both, 
 leading to a \rating{50} rating in the ``Detailed model of consumer preferences'' row.
 
-No study engages fully with both the differential financial and energetic effects
+No previous framework engages fully with both the differential financial and energetic effects
 of the upfront purchase of the upgraded device, 
 leading to low ratings across all previous frameworks in the
 ``Capital cost and embodied energy effect'' row.
@@ -634,7 +634,7 @@ for the simplest case
 of a single fuel and a single energy service.
 In particular, the macro effect and non-marginal price changes 
 require conceptual development and operationalization.
-This paper aims to fill the gaps in Table~\ref{tab:previous_frameworks},
+This paper aims to address the gaps in Table~\ref{tab:previous_frameworks},
 completing the ``This paper'' column with filled circles (\rating{100}).
 
 
