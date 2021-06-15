@@ -151,6 +151,7 @@ energy service price elasticity of energy demand, and
 the macro factor on rebound components.
 Policy implications are discussed. 
 **** Need to do better than this for policy. ---MKH ****
+Here is my line for Gregor. Will cause a conflict.
 \end{abstract}
 
 
