@@ -959,7 +959,7 @@ macroeconomic rebound (broader, economy-wide responses
 to a single device upgrade).
 (See \citet{greening2000}, \citet{Barker2009}, and \citet{FontVivanco2018}.) 
 We follow others, including \citet{Jenkins2011} and \citet{Walnum2014}, 
-in splitting microeconomic effects into 
+in splitting microeconomic rebound into 
 direct and indirect locations.
 Like other authors, we recognize many macroeconomic effects, 
 even if we don't later distinguish among them.
@@ -2344,7 +2344,7 @@ is given by the sum of the above components,
 which can also be verified against Eq.~(\ref{eq:Re_tot}).
 
 As discussed in Section~\ref{sec:macro_effect_main_paper},
-the link between macroeconomic and microeconomic rebound effects 
+the link between macroeconomic and microeconomic rebound 
 is largely unexplored. 
 For now, we assume a placeholder value of $k = 1$ for both case studies.
 We return to the matter of calibrating $k$
