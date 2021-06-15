@@ -2223,7 +2223,7 @@ noting that ``income effect rebound will be larger economy-wide than
 would be inferred from evaluating only the direct income gain from 
 the end user's transaction'' \citep[p.~11]{Borenstein:2015aa} and 
 likening it to the Keynesian macroeconomic multiplier.
-However, the dynamic macro rebound mechanism 
+However, the dynamic macro rebound effect 
 is not an autonomous expansion of expenditure in an otherwise unchanged economy 
 (like the Keynesian multiplier).
 Rather, macroeconomic rebound is caused by an energy productivity improvement,
@@ -4025,7 +4025,7 @@ Finally, we discuss and calibrate the macro factor ($k$).
 \label{sec:framework_novelties}
 %++++++++++++++++++++++++++++++
 
-We recall the contributions discussed 
+We recall the contributions raised 
 in Section~\ref{sec:aim_contribution_structure}.
 First, the framework developed in Section~\ref{sec:framework}
 contributes the first comprehensive rebound analysis framework
@@ -4335,7 +4335,7 @@ From the development and application of the framework,
 we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all microeconomic rebound mechanisms, including 
+        quantification of magnitudes of all microeconomic rebound effects, including 
         direct and indirect locations 
         for emplacement, substitution, and income effects.
 Second, the examples show that magnitudes of rebound effects
@@ -4369,7 +4369,7 @@ Future work could be pursued in several areas.
   
   \item Further empirical studies could be performed
         to estimate the magnitude of different 
-        rebound mechanisms in a range of real-life case studies.
+        rebound effects in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$) and its relation to the MPC.
@@ -4377,7 +4377,7 @@ Future work could be pursued in several areas.
         across various socioeconomic groups~\citep{Carroll2017}
         could be explored.
 
-  \item The framework could be extended to producer-sided energy rebound mechanisms.
+  \item The framework could be extended to producer-sided energy rebound effects.
     
   \item The framework presented here could be embedded 
         in energy-economy models to better include rebound effects 
