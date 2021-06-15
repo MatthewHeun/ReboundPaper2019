@@ -56,11 +56,13 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Analytical support estimating \\
-       micro and macro rebound effects \\
-       for particular energy efficiency upgrades}
+\title{A comprehensive, partial-equilibrium\\
+       energy rebound analysis framework}
 
 % Bonepile
+% Analytical support estimating \\
+% micro and macro rebound effects \\
+% for particular energy efficiency upgrades
 % Toward a mathematically rigorous analytical framework
 % for microeconomic energy rebound effects \\
 % OR \\
