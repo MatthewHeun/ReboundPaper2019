@@ -526,22 +526,22 @@ all other prices remain constant.
 In our partial equilibrium framework, 
 general equilibrium effects are captured by 
 a simplified, one-dimensional macroeconomic-scale rebound effect
-discussed in Section~\ref{sec:macro_effect_main_paper} below.
+discussed in Section~\ref{sec:macro_effect_main_paper}.
 
-We are not the first to develop a partial equilibrium rebound analysis framework.
-So it is worthwhile to assess previous partial equilibrium frameworks for
+We are not the first to develop a partial equilibrium rebound analysis framework,
+so it is worthwhile to assess previous partial equilibrium frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
 analysis in energy, expenditure, and consumption spaces; 
-detail in the consumer preference model;
-non-marginal energy efficiency changes; and 
+level of detail in the consumer preference model;
+allowance of non-marginal energy efficiency changes; and 
 operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
 
 Table~\ref{tab:previous_frameworks} contains our evaluation 
-of selected recent previous partial equilibrium frameworks (in columns)
-relative to the important characteristics discussed above (in rows).
+of selected recent partial equilibrium frameworks (in columns)
+relative to the characteristics discussed above (in rows).
 Empty (white) circles indicate no treatment of a subject by a framework. 
 Partially and fully filled circles indicate 
 partial and comprehensive treatment of a subject by a framework.
