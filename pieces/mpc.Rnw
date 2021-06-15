@@ -51,7 +51,6 @@ With $\MPC = 0.5$, as in Section~\ref{sec:macro_effect_main_paper},
 $k = 1$ is obtained.
 If $k = 3$, as in Section~\ref{sec:macro_rebound_discussion}, 
 $\MPC = 0.75$ is implied.
-
 The relationship between $k$ and $\MPC$ is given in Fig.~\ref{fig:k_vs_mpc}.
 Vertical lines indicate relevant $\MPC$ values of 0.5 and 0.75.
 
