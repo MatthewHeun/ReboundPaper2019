@@ -508,8 +508,9 @@ for mitigation of rebound effects.
 General equilibrium frameworks allow prices of all goods and services 
 in an economy to adjust to the EEU.
 Recent examples include 
-\citet{Lemoine2020aa,Fullerton2020,Blackburn,blackburn2020energy}.
-**** GS: please fix references. I get ???? ---MKH ****
+\citet{Lemoine:2020aa}, 
+\citet{Fullerton2020}, and 
+\citet{blackburn2020energy}.
 General equilibrium frameworks provide detail and precision 
 on price adjustment tracking, 
 but they give up specificity about individual device upgrades, 
