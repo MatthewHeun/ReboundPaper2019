@@ -2539,7 +2539,7 @@ of Table~\ref{tab:car_stages_table} are identical.
   Distance driven prior to upgrade   & \Sexpr{q_dot_s_orig_car_char}        & Average U.S.\ vehicle miles/year, calculated from \citet{Car_Insurance:2019}.  \\
   $\rbempl{q}_s$ [miles/year]                               &               & This is slightly lower than the average driver miles/year (13,476) \\
                                                             &               & \citet{US_DoT:2018},as there are \\
-                                                            &               & more registered US vehicles than drivers. \\
+                                                            &               & more registered U.S.\ vehicles than drivers. \\
   \midrule
   Real median personal income U.S., in 2018                 & 34,317        & Taken from \citet{St_Louis_Fed:2019}.\\
   {} [\$/year]                                              &               & \\
@@ -3145,7 +3145,7 @@ of Table~\ref{tab:lamp_stages_table} are identical.
   Personal consumption in 2018                   & \Sexpr{M_dot_orig_lamp_char}     & Calculation: $(\$34,317\mathrm{/year}) (0.88319) (1 - 0.07848)$. \\
   $\rate{M}$ [\$/year]                                      &               &                                              \\
   \midrule
-  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2018 average US household electricity price \\
+  Price of electricity                  & \Sexpr{p_E_orig_lamp_char}        & U.S.\ 2018 average U.S.\ household electricity price \\
   $p_E$ [\$/kW-hr]                                          &               & \citep{US_EIA:2020_electricity}.  \\
   \midrule
   Fractional spend on original energy service    & \Sexpr{f_Cs_orig_lamp_char}       & Calculation: \$8.5/year (spend on energy service) / \\
@@ -4274,7 +4274,7 @@ average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$%
   appeared around the time of \citet{Brockway2021}.
   \citet{Yan2019} report 87\% short run and 78\% long-run average rebounds for Chinese provinces.
   \citet{blackburn2020energy} report average total rebound between
-  52\% and 77\% for the US for plausible values
+  52\% and 77\% for the U.S.\ for plausible values
   of the elasticity of substitution.
   \citet{Berner2021} report 78\% to 101\% for several Western European countries and the U.S.\
   after two years.
