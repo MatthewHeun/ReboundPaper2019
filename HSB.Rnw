@@ -499,34 +499,48 @@ Effective policy should be informed by rebound analyses conducted within
 a comprehensive rebound framework with firm theoretical foundations.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
-It is worthwhile to evaluate those frameworks for
+We divide the frameworks crudely into general equilibrium frameworks and 
+partial equilibrium frameworks.
+Both partial and general equilibrium frameworks
+will be needed to improve understanding and develop policies
+for mitigation of rebound effects.
+
+General equilibrium frameworks allow prices of all goods and services 
+in an economy to adjust to the EEU.
+Recent examples include 
+\citet{Lemoine2020aa,Fullerton2020,Blackburn,blackburn2020energy}.
+**** GS: please fix references. I get ???? ---MKH ****
+General equilibrium frameworks provide detail and precision 
+on price adjustment tracking, 
+but they give up specificity about individual device upgrades, 
+make assumptions during calibration, and
+lose simplicity of exposition. 
+
+In contrast, we develop below (Section~\ref{sec:framework})
+a partial equilibrium framework.
+Partial equilibrium frameworks provide detailed assessment of individual EEUs
+with tractable, easier-to-understand mathematics.
+Partial equilibrium frameworks are easier to understand, in part, because
+they constrain price variation to the energy service only; 
+all other prices remain constant.
+In our partial equilibrium framework, 
+general equilibrium effects are captured by 
+a simplified, one-dimensional macroeconomic-scale rebound effect
+discussed in Section~\ref{sec:macro_effect_main_paper} below.
+
+We are not the first to develop a partial equilibrium rebound analysis framework.
+So it is worthwhile to assess previous partial equilibrium frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
 analysis in energy, expenditure, and consumption spaces; 
-a detailed model of consumer preferences;
+detail in the consumer preference model;
 non-marginal energy efficiency changes; and 
 operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
 
-Before we proceed with evaluation we note that we are operating in 
-a partial equilibrium framework, meaning we allow only the price of
-the energy service to vary. Analytical general equilibrium frameworks,
-that allow all prices to adjust have recently been developed by 
-\citet{Lemoine2020aa,Fullerton2020,Blackburn,blackburn2020energy} and allow
-calibration to empirical data. What these frameworks gain in detail and
-precision on price adjustment tracking, 
-they lose in detail about individual device upgrades, more assumptions
-in calibration and simplicity of exposition. 
-Here we focus on a detailed assessment of individual upgrades in a partial
-equilibrium framework to consolidate this widely-researched line of
-rebound research, while simplifying potential general equilibrium effects
-in a one-dimensional macro rebound. Ultimately, both partial and general
-equilibrium analyses will be needed to improve understanding and measures
-for reduction of rebound effects.
-
-Table~\ref{tab:previous_frameworks} contains our assessment 
-of selected relevant previous partial equilibrium frameworks (in columns)
+Table~\ref{tab:previous_frameworks} contains our evaluation 
+of selected recent previous partial equilibrium frameworks (in columns)
 relative to the important characteristics discussed above (in rows).
 Empty (white) circles indicate no treatment of a subject by a framework. 
 Partially and fully filled circles indicate 
