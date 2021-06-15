@@ -4017,7 +4017,7 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = k_sens_param
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we highlight several novel characteristics
-of the comprehensive rebound analysis framework.
+of the comprehensive partial equilibrium rebound analysis framework.
 Next, we show how the framework enables insights
 on energy policy, especially policies to encourage energy efficiency. 
 Finally, we discuss and calibrate the macro factor ($k$).
@@ -4321,7 +4321,7 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we developed a comprehensive rebound analysis framework that
+we developed a comprehensive partial equilibrium rebound analysis framework that
 combines all rebound effects, locations, and scales
 across energy, expenditure, and consumption spaces with 
 a detailed model of consumer preferences and
