@@ -34,7 +34,7 @@ The macro effect portion of the spending can be represented by the macro factor 
   (1 + \MPC + \MPC^2 + \MPC^3 + \ldots) \rasub{N} = (1 + k) \rasub{N}
 \end{equation}
 
-Cancelling $\rasub{N}$ and simplifying the infinite series to its converged fraction
+Canceling $\rasub{N}$ and simplifying the infinite series to its converged fraction
 (assuming $\MPC < 1$) gives
 
 \begin{equation}
