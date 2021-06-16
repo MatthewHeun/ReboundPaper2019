@@ -4211,16 +4211,17 @@ is through the income and macro effects (assuming non-zero macro factor ($k$)).
 Thus, policymakers should be aware that raising 
 energy prices may not be as effective 
 as presumed, due to rebound effects.
-The picture becomes more complicated as more consumers may buy 
+The picture becomes more complicated as more consumers buy 
 more-efficient devices or consider substitutes to avoid 
-the price penalty, increasing the rate of absolute
-savings. Moreover, higher energy prices are likely
+the price penalty, increasing the rate of absolute savings. 
+Moreover, higher energy prices are likely
 to induce energy-saving technical change as well as structural change towards an overall 
-less energy-intensive economy which could be designed by
-policy makers with complementary policies to increase the availability of 
-substitutes (e.g. more public transport). This in turn could lead to
-a boost to economic growth and larger macro rebound effects, to which
-we now turn.
+less-energy-intensive economy,
+which could be achieved by complementary policies to increase the availability of 
+substitutes (e.g., more public transport).
+Unfortunately, policies to incentivize substitutes
+could boost economic growth, leading to larger macro rebound effects, 
+the subject of the next section.
 
 
 %++++++++++++++++++++++++++++++
@@ -4257,21 +4258,23 @@ Re_tot_lamp_k_3 <- rebound_analysis_with_cal_k %>%
   magrittr::extract2("Re_tot")
 @
 
-The framework relates  macroeconomic rebound 
-to microeconomic rebound 
+The framework developed in Section~\ref{sec:framework} 
+links macroeconomic rebound to microeconomic rebound 
 via a term that scales magnitudes in the microeconomic portion of the framework. 
-Few rebound studies have explored the macro space 
-between micro and total rebound.
+Few rebound studies have explored the macroeconomic scale
+between microeconomic and total rebound.
 Inspired by \citet{Borenstein:2015aa} and others, 
-we bridge macro and micro with the macro factor ($k$), 
+we bridge macroeconomic and microeconomic scales with the macro factor ($k$), 
 as discussed in Section~\ref{sec:macro_effect_main_paper}.
 For the results presented in Section~\ref{sec:examples}, 
 we assumed a placeholder value of $k = 1$,
-meaning that every \$1 spending by the device owner in the income effect
+meaning that every \$1 of spending by the device owner in the income effect
 generates \$1 of additional economic activity in the broader economy.
-However, the framework presented in Section~\ref{sec:framework} and
-the results obtained in Section~\ref{sec:examples}
-allow, for the first time, some initial discussion about a calibrated value for $k$.
+However, the framework presented in Section~\ref{sec:framework}, 
+the results obtained in Section~\ref{sec:examples}, and
+recent studies of total rebound
+allow, for the first time, 
+a discussion about a calibrated value for $k$.
 
 To calibrate the macro factor ($k$),
 we treat macro rebound ($Re_{\macro}$) as a residual.
@@ -4282,7 +4285,8 @@ We take the expected value for $Re_{tot}$ from
 \citet{Brockway2021} who surveyed 33 recent studies to find
 average total rebound of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$%
 \footnote{
-  The relevance of this value is confirmed by three studies that 
+  The relevance of $Re_{tot} = \Sexpr{Re_tot_expected*100}\%$
+  is confirmed by three studies that 
   appeared around the time of \citet{Brockway2021}.
   \citet{Yan2019} report 87\% short run and 78\% long-run average rebounds for Chinese provinces.
   \citet{blackburn2020energy} report average total rebound between
