@@ -4498,8 +4498,8 @@ Declarations of interest: none.
   Investigation               & \rating{100} & \rating{100} & \rating{100} \\
   Resources                   & \rating{100} &              &              \\
   Data curation               &              &              & \rating{100} \\
-  Writing - original draft    & \rating{100} & \rating{100} & \rating{100} \\
-  Writing - Review \& editing & \rating{100} & \rating{100} & \rating{100} \\
+  Writing--original draft     & \rating{100} & \rating{100} & \rating{100} \\
+  Writing--review \& editing  & \rating{100} & \rating{100} & \rating{100} \\
   Visualization               & \rating{100} & \rating{100} &              \\
   Supervision                 & \rating{100} &              &              \\
   Project administration      & \rating{100} &              &              \\
