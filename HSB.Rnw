@@ -496,14 +496,14 @@ Bringing together the high stakes of energy efficiency
 and the desirable characteristics of rebound frameworks discussed above,
 we see that comprehensive rebound frameworks are needed for 
 developing energy efficiency policy to meet emissions targets. 
-Effective policy should be informed by rebound analyses conducted within
-a comprehensive rebound framework with firm theoretical foundations.
+I.e., effective policy should be informed by rebound analyses conducted within
+a comprehensive framework.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
 We divide the frameworks crudely into general equilibrium frameworks and 
 partial equilibrium frameworks.
 Both partial and general equilibrium frameworks
-will be needed to improve understanding and develop policies
+will be needed to improve understanding and develop effective policies
 for mitigation of rebound effects.
 
 General equilibrium frameworks allow prices of all goods and services 
@@ -585,14 +585,16 @@ cannot separate substitution and income effects cleanly in empirical analysis,
 reverting to partial analyses of both, 
 leading to a \rating{50} rating in the ``Detailed model of consumer preferences'' row.
 
-No previous framework engages fully with both the differential financial and energetic effects
+No previous framework engages fully with either the differential financial effects
+or the differential energetic effects
 of the upfront purchase of the upgraded device, 
 leading to low ratings across all previous frameworks in the
 ``Capital cost and embodied energy effect'' row.
 In fact, except for \citep{Nassen:2009aa},
 no framework engages with capital costs, 
 although all note its importance. 
-(\citeauthor{Nassen:2009aa} note that 
+(In particular, 
+\citeauthor{Nassen:2009aa} note that 
 capital costs and embodied energy can have very strong effects on rebound.)
 \citet{Thomas:2013aa,Thomas:2013ab} provide the only framework 
 that traces embodied energy effects
