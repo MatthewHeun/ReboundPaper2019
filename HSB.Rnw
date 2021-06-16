@@ -513,7 +513,7 @@ Recent examples include
 \citet{Fullerton2020}, and 
 \citet{blackburn2020energy}.
 General equilibrium frameworks provide detail and precision 
-on price adjustment tracking, 
+on economy-wide price adjustment, 
 but they give up specificity about individual device upgrades, 
 make assumptions during calibration, and
 lose simplicity of exposition. 
