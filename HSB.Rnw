@@ -151,7 +151,7 @@ Sensitivity studies are performed, showing the effects of
 energy efficiency, capital cost, energy price, 
 energy service price elasticity of energy demand, and 
 the macro factor on rebound components.
-Implications of rebound for three energy policies are considered:
+Implications of rebound for three common energy policies are considered:
 energy efficiency standards,
 rebates or subsidies, and
 carbon pricing or energy taxes.
@@ -3951,18 +3951,19 @@ rebound_terms_graph(rebound_data = actual_cases, parameterization = p_E_sens_par
 
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows the variation of total rebound ($Re_{tot}$)
 with the uncompensated price elasticity of energy service demand ($\eqspsUC$).
-The effect is exponential:
+The effect is exponential, and
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
 The lamp example also shows stronger exponential variation than the car example.
-We can also see the main reason that the car and lamp total rebounds 
-are different is due to the larger elasticity ($\eqspsUC$) value 
-in the case of the lamp. Once the car has the same elasticity 
-as the lamp (-0.4) then the overall rebound is approximately the same (~50\%).
+The main reason that total rebound values 
+are different is the larger absolute value of elasticity ($\eqspsUC$) 
+for the lamp ($-0.4$) compared to the car ($-0.2$).
+Were the car to have the same elasticity as the lamp ($-0.4$), 
+total rebound would be approximately the same for both examples ($\sim 50$\%).
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows that direct substitution rebound 
 ($Re_{dsub}$) is the most sensitive rebound component to changes in $\eqspsUC$.
 For the lamp example, indirect income rebound ($Re_{iinc}$) also increases
 substantially with $\eqspsUC$, 
-because freed cash increases substantially with $\eqspsUC$ in the lamp example. 
+because freed cash increases substantially with $\eqspsUC$. 
 
 A limitation of the elasticity sensitivity study derives from limitations of the 
 CES utility model itself, which constrains price elasticity variation
