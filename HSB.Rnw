@@ -4071,21 +4071,23 @@ between costless technology upgrades or (costly) mandated efficiency
 increases \citep{Gillingham:2013aa,Fullerton2020} and are not typically 
 included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
 Most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
-One surprising result is that taking account of differential capital cost can increase long-run
-rebound as the rate of capital cost declines (see lamp example). 
-Therefore the costless EEU need not provide the upper bound to rebound,
-as was previously suggested \citep{Thomas:2013ab}.
+One surprising result is that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
+can increase rebound when the capital cost rate declines.
+The lamp example of Section~\ref{sec:lamp_example} illustrates this tendency.
+Therefore, the costless EEU need not provide the upper bound to rebound,
+as previously suggested \citep{Thomas:2013ab}.
 
 The accommodation of non-marginal energy service price decreases and
 non-marginal energy efficiency increases is
 made possible by the direct calculation of consumption positions 
-using Eqs.~\ref{eq:q_s_solution}--\ref{eq:Re_isub_CES}, 
-rather than relying on price elasticities. 
-The possibility of decomposing direct and indirect rebound effects into 
-substitution and income effects was outlined by \citet{Khazzoom1980}, 
-spelled out clearly by \citet{greening2000}, and some
-numerical magnitudes approximated by \citet{Borenstein:2015aa}. 
-Yet, past operational investigations of microeconomic rebound
+via the CES utility model of Eqs.~\ref{eq:q_s_solution}--\ref{eq:Re_isub_CES}, 
+rather than relying on the approximate utility model and price elasticities. 
+The possibility of precisely decomposing microeconomic rebound into 
+substitution and income effects in direct and indirect locations
+was outlined by \citet{Khazzoom1980}, 
+spelled out clearly by \citet{greening2000}, and 
+numerically approximated by \citet{Borenstein:2015aa}. 
+Yet, authors of previous operationalized frameworks of microeconomic rebound
 typically show only stylized graphs of indifference curves in the consumption space, 
 even if they are numerically precise in other respects 
 \citep{Thomas:2013aa,Moshiri2017,Li2018}.
