@@ -548,6 +548,8 @@ Empty (white) circles indicate no treatment of a subject by a framework.
 Partially and fully filled circles indicate 
 partial and comprehensive treatment of a subject by a framework.
 
+\renewcommand{\arraystretch}{0.6}
+
 \input{pieces/prev_frameworks_table.tex}
 
 Because all frameworks look at decreasing energy consumption from the EEU,
@@ -4457,30 +4459,58 @@ Declarations of interest: none.
 \label{sec:author_contributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\textbf{Matthew Kuperus Heun}: 
-Conceptualization, 
-Formal analysis, 
-Resources, 
-Software, 
-Supervision, 
-Validation,
-Visualization,
-Writing--original draft,
-Writing--review \& editing.
-\textbf{Gregor Semieniuk}: 
-Conceptualization, 
-Formal analysis, 
-Investigation, 
-Writing--original draft,
-Writing--review \& editing.
-\textbf{Paul Brockway}: 
-Conceptualization, 
-Data curation, 
-Formal analysis, 
-Investigation, 
-Validation, 
-Writing--original draft,
-Writing--review \& editing.
+% \textbf{Matthew Kuperus Heun}: 
+% Conceptualization, 
+% Formal analysis, 
+% Resources, 
+% Software, 
+% Supervision, 
+% Validation,
+% Visualization,
+% Writing--original draft,
+% Writing--review \& editing.
+% \textbf{Gregor Semieniuk}: 
+% Conceptualization, 
+% Formal analysis, 
+% Investigation, 
+% Writing--original draft,
+% Writing--review \& editing.
+% \textbf{Paul Brockway}: 
+% Conceptualization, 
+% Data curation, 
+% Formal analysis, 
+% Investigation, 
+% Validation, 
+% Writing--original draft,
+% Writing--review \& editing.
+
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{r c c c}
+  \toprule
+                              & MKH          & GS           & PEB          \\
+  \midrule
+  Conceptualization           & \rating{100} & \rating{100} &              \\
+  Methodology                 & \rating{100} & \rating{100} & \rating{100} \\
+  Software                    & \rating{100} &              &              \\
+  Validation                  & \rating{100} &              & \rating{100} \\
+  Formal analysis             & \rating{100} & \rating{100} & \rating{100} \\
+  Investigation               & \rating{100} & \rating{100} & \rating{100} \\
+  Resources                   & \rating{100} &              &              \\
+  Data curation               &              &              & \rating{100} \\
+  Writing - original draft    & \rating{100} & \rating{100} & \rating{100} \\
+  Writing - Review \& editing & \rating{100} & \rating{100} & \rating{100} \\
+  Visualization               & \rating{100} & \rating{100} &              \\
+  Supervision                 & \rating{100} &              &              \\
+  Project administration      & \rating{100} &              &              \\
+  Funding acquisition         &              &              &              \\
+\bottomrule
+\end{tabular}
+\label{tab:credit}
+\end{center}
+\end{table}
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
