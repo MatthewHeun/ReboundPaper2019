@@ -3953,7 +3953,11 @@ Fig.~\ref{fig:all_Re_terms_eps_graph} shows the variation of total rebound ($Re_
 with the uncompensated price elasticity of energy service demand ($\eqspsUC$).
 The effect is exponential:
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
-The lamp example shows stronger exponential variation than the car example.
+The lamp example also shows stronger exponential variation than the car example.
+We can also see the main reason that the car and lamp total rebounds 
+are different is due to the larger elasticity ($\eqspsUC$) value 
+in the case of the lamp. Once the car has the same elasticity 
+as the lamp (-0.4) then the overall rebound is approximately the same (~50\%).
 Fig.~\ref{fig:all_Re_terms_eps_graph} shows that direct substitution rebound 
 ($Re_{dsub}$) is the most sensitive rebound component to changes in $\eqspsUC$.
 For the lamp example, indirect income rebound ($Re_{iinc}$) also increases
