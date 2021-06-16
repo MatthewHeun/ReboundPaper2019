@@ -151,9 +151,10 @@ Sensitivity studies are performed, showing the effects of
 energy efficiency, capital cost, energy price, 
 energy service price elasticity of energy demand, and 
 the macro factor on rebound components.
-Policy implications are discussed. 
-**** Need to do better than this for policy. ---MKH ****
-We can't have a conflict.
+Implications of rebound for three energy policies are considered:
+energy efficiency standards,
+rebates or subsidies, and
+carbon pricing or energy taxes.
 \end{abstract}
 
 
