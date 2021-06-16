@@ -4227,7 +4227,7 @@ substitutes (e.g., more public transport).
 Unfortunately, policies to incentivize substitutes
 could boost economic growth, leading to larger macro rebound effects, 
 the subject of the next section.
-
+\citet{Owen2020}
 
 %++++++++++++++++++++++++++++++
 \subsection{Calibrating $k$}
