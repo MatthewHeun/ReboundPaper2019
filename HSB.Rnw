@@ -4375,17 +4375,18 @@ simplest case of a single fuel and a single energy service.
 This paper also contributes the first visualizations of 
 rebound path graphs in energy, expenditure, and consumption spaces.
 We operationalize and calibrate the macro factor ($k = 3$)
-to provide a better link between macro and micro effects. 
+to provide a better link between macro and micro effects
+than previous partial equilibrium frameworks. 
 
 From the development and application of the framework, 
 we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all effects at the microeconomic scale, including 
+        quantification of magnitudes of all effects at microeconomic and macroeconomic scales, including 
         direct and indirect locations 
-        for emplacement, substitution, and income effects.
+        for emplacement, substitution, income, and macro effects.
 Second, the examples show that magnitudes of rebound effects
-        vary with the type of energy efficiency upgrade performed.
+        vary with the type of EEU performed.
 Third, the sensitivity studies
         (Section~\ref{sec:sensitivity_analyses})
         enable evaluation of rebound sensitivities to important parameters. 
@@ -4398,7 +4399,7 @@ Third, the sensitivity studies
         energy efficiency ($\amacro{\eta}$) or
         the capital cost ($\amacro{C}_{cap}$) of the upgraded device.
 Last, the discussion (Section~\ref{sec:discussion}) shows that
-        rebound is a headwind for efficiency-led energy reduction and CO$_2$ mitigation policies.
+        rebound is a headwind for efficiency-led reduction of energy consumption and CO$_2$ mitigation policies.
         Quantification of rebound effect magnitudes
         is an important precursor to devising effective energy policies
         that would 
@@ -4418,16 +4419,19 @@ Future work could be pursued in several areas.
         rebound effects in a range of real-life case studies.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
-        for the macro factor ($k$) and its relation to the MPC.
-        The rebound effects of the distribution of $\MPC$ values 
-        across various socioeconomic groups~\citep{Carroll2017}
+        for the macro factor ($k$) and its relation to $\MPC$.
+        
+  \item The rebound implications of the distribution of $\MPC$ values 
+        across socioeconomic groups~\citep{Carroll2017}
         could be explored.
 
   \item The framework could be extended to producer-sided energy rebound effects.
     
-  \item The framework presented here could be embedded 
-        in energy-economy models to better include rebound effects 
-        in macro energy modeling and energy policy discussions.
+  \item The framework could be embedded 
+        in energy-economy models to better include rebound effects in discussions of 
+        macro energy modeling, 
+        energy policy, and 
+        CO$_2$ emissions mitigation.
 
 \end{enumerate*}
 
