@@ -4166,10 +4166,17 @@ required to participate in a market is beneficial
 for reducing energy consumption.
 Indeed, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows the gap between 
 the expected energy savings rate and the takeback rate grows with post-emplacement efficiency, so
-absolute energy savings are expected to increase as efficiency grows.
-However, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows that 
-the takeback rate increases with efficiency.
-Caution is warranted to avoid takeback rate growing too large.
+absolute energy savings are expected to increase as efficiency grows for our example EEUs.
+However, larger efficiency increases can require higher capital investment
+within a given technology, 
+which can make adoption difficult, especially for lower income groups.
+Inequities can result.
+One measure to help alleviate inequities is 
+(income-dependent) financial rebates or subsidies, 
+the subject of the next section%
+\footnote{
+  For a discussion of financing difficulties and the requisite size of rebates, see \citep{Fowlie2018}.
+}.
 
 
 %------------------------------
