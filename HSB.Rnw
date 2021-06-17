@@ -4181,9 +4181,10 @@ at least for the examples in Section~\ref{sec:examples}.
 tractable only because the framework accommodates
 non-marginal efficiency changes by calculating the new
 consumption bundle directly from the CES utility model.)
+
 However, larger efficiency increases can require higher capital investment
 within a given technology, 
-which hinder adoption of energy-efficient devices.
+which hinders adoption of energy-efficient devices.
 One measure often employed to boost adoption is 
 financial rebates or subsidies, the subject of the next section.
 
