@@ -4141,7 +4141,9 @@ rebound should be taken into account.
 The sensitivity analyses of Section~\ref{sec:sensitivity_analyses}
 enable exploration of policy options that are often suggested
 to promote energy efficiency and reduce CO$_2$ emissions:
-standards, rebates or subsidies, and carbon taxes.
+energy efficiency standards, 
+rebates or subsidies, and
+carbon pricing or energy taxes.
 In the subsections below, 
 we discuss the rebound implications of each policy option with reference to the sensitivity analyses
 of Section~\ref{sec:sensitivity_analyses}.
