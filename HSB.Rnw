@@ -455,8 +455,7 @@ specification that translates
 energy service price and device purchase 
 cost changes into consumption choices, simultaneously 
 decomposing into substitution and income effects. These two
-effects allow for a more nuanced understanding of direct and
-indirect rebound effects for different commodities and
+effects allow for a more nuanced understanding of behavior for different commodities and
 preferences, and
 have become the standard route for analysing
 direct and indirect rebound locations.
