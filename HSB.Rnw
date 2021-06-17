@@ -4199,14 +4199,15 @@ within a given technology for an EEU.
 To encourage market penetration of higher-efficiency devices, 
 rebates or subsidies can be offered to device purchasers to incentivize adoption of 
 energy-efficiency technologies and grow their markets.
-(E.g., current subsidies for battery electric vehicle cars.)
-Doing so effectively reduces the capital cost to the purchaser 
-of energy-efficient devices ($\amacro{C}_{cap}$).
+(One example of this approach is current subsidies for battery electric vehicle cars.)
+Providing rebates or subsidies
+effectively reduces the capital cost ($\amacro{C}_{cap}$) for the purchaser 
+of energy-efficient devices.
 However, Fig.~\ref{fig:all_Re_terms_C_cap_graph} shows that reducing capital cost 
 increases energy rebound, 
 mostly due to the income effect
 in which more net savings (thanks to the rebate) 
-are spent on the energy service and other goods.
+are available to spend on the energy service and other goods.
 Thus, policymakers should be aware that rebound will 
 reduce the effectiveness of rebates and subsidies
 to generate actual energy savings%
