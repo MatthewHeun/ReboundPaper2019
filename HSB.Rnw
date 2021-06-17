@@ -4178,7 +4178,7 @@ the expected energy savings rate and the takeback rate grows with post-emplaceme
 absolute energy savings are expected to increase as efficiency grows, 
 at least for the examples in Section~\ref{sec:examples}.
 (We note in passing that this change in price elasticity is 
-only tractable thanks to the framework accommodating
+tractable only because the framework accommodates
 non-marginal efficiency changes by calculating the new
 consumption bundle directly from the CES utility model.)
 However, larger efficiency increases can require higher capital investment
