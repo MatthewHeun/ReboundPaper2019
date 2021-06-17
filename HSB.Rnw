@@ -4268,20 +4268,20 @@ of Fig.~\ref{fig:all_Re_terms_p_E_graph}.
 At the macroeconomic scale, 
 higher energy prices are likely to induce both 
 energy-saving technical change and
-structural change toward an overall lower energy intensity economy.
+structural change toward an overall lower-energy-intensity economy.
 To avoid the price penalty, 
 consumers might buy other, more-efficient devices or consume substitutes
 both for the energy service and in other areas of life,
-thereby contributing to reducing the overall energy intensity of the economy ($I_E$), see also \citet{Hart2018} for
-a related discussion.
-(A less energy-intensive economy could be further encouraged by policymakers 
+thereby contributing to reducing the overall energy intensity of the economy ($I_E$).
+(See \citet{Hart2018} for a related discussion.)
+A less energy-intensive economy could be further encouraged by policymakers 
 with complementary policies 
 to encourage use of efficient substitutes,
-such as public transport.)
+such as public transport.
 
-If a fossil-energy tax changes the energy intensity of the economy ($I_E$), 
-all rebound terms whose equation includes $I_E$ will be affected.
-Thus, although the introduction of energy or carbon taxes
+If a fossil-energy tax reduces the energy intensity of the economy ($I_E$), 
+all rebound terms whose equations include $I_E$ will be affected.
+Thus, although the introduction of carbon prices or fossil-energy taxes
 can induce higher income effect rebound and higher macro effect rebound, 
 those increases might be less than predicted 
 by the sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph},
