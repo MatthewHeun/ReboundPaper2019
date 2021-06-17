@@ -4158,9 +4158,11 @@ standards for U.S.\ cars.
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows that rebound falls
 as post-upgrade energy efficiency ($\amacro{\eta}$) rises. 
 This result is driven mainly by
-decreasing direct rebound effect 
+decreasing direct substitution effect 
 as efficiency goes up, 
-in turn driven by declining own price elasticity of energy service demand ($\eqspsUC$). 
+in turn driven by declining (i.e.\ closer to zero) compensated own price elasticity of energy service demand ($\eqspsC$) which leads to an equally declining
+uncompensated price elasticity which can be observed,
+see also Fig.~\ref{fig:all_Re_terms_eps_graph}. 
 As a result, raising the minimum efficiency 
 required to participate in a market is beneficial
 for reducing energy consumption.
@@ -4168,6 +4170,10 @@ Indeed, Fig.~\ref{fig:eta_tilde_takeback_Sdot_sens_graph} shows the gap between
 the expected energy savings rate and the takeback rate grows with post-emplacement efficiency, so
 absolute energy savings are expected to increase as efficiency grows, 
 at least for the examples in Section~\ref{sec:examples}.
+(We note in passing that this change in price elasticity is 
+only tractable thanks to a framework incorporating
+non-marginal efficiency changes by calculating the new
+consumption bundle directly from the utility function.)
 However, larger efficiency increases can require higher capital investment
 within a given technology, 
 which can make adoption difficult.
