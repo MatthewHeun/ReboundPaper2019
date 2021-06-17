@@ -4135,10 +4135,10 @@ We take for granted that it is desirable
 to use energy efficiency to reduce energy consumption and CO$_2$ emissions.
 For energy efficiency to be as effective as possible
 at reducing CO$_2$ emissions,
-rebound should be minimized.
+rebound should be taken into account.
 The sensitivity analyses of Section~\ref{sec:sensitivity_analyses}
 enable exploration of policy options that are often suggested
-to promote energy efficiency:
+to promote energy efficiency and reduce CO$_2$ emissions:
 standards, rebates or subsidies, and carbon taxes.
 In the subsections below, 
 we discuss the rebound implications of each policy option with reference to the sensitivity analysis
@@ -4169,8 +4169,7 @@ the expected energy savings rate and the takeback rate grows with post-emplaceme
 absolute energy savings are expected to increase as efficiency grows.
 However, larger efficiency increases can require higher capital investment
 within a given technology, 
-which can make adoption difficult, especially for lower income groups.
-Inequities can result.
+which can make adoption difficult.
 One measure to help alleviate inequities is 
 (income-dependent) financial rebates or subsidies, 
 the subject of the next section%
