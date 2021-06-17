@@ -4063,7 +4063,7 @@ Finally, we discuss and calibrate the macro factor ($k$).
 
 In Section~\ref{sec:aim_contribution_structure}, 
 we claimed three contributions.
-Here, we reiterate and discuss those contributions.
+Here, we reiterate and discuss each.
 
 First, we have developed the first comprehensive rebound analysis framework to include
 %
@@ -4077,19 +4077,20 @@ First, we have developed the first comprehensive rebound analysis framework to i
 %
 The embodied energy and maintenance and disposal effects
 are the energy manifestation of the important difference 
-between costless technology upgrades or (costly) mandated efficiency 
-increases \citep{Gillingham:2013aa,Fullerton2020} and are not typically 
-included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
-Most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
+between costless technology upgrades and
+(costly) mandated efficiency increases \citep{Gillingham:2013aa,Fullerton2020}.
+Costly EEUs are not typically 
+included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa};
+most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
 One surprising result is that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
 can \emph{increase} rebound when $\Delta \raempl{C}_{cap} < 0$.
 The lamp example of Section~\ref{sec:lamp_example} illustrates this result.
-This finding demonstrates that the costless EEU does not provide the upper bound to rebound,
+This finding demonstrates that the costless EEU does not provide an upper bound to rebound,
 as previously suggested \citep{Thomas:2013ab}.
 
-The accommodation of non-marginal energy service price decreases and
-non-marginal energy efficiency increases is
-made possible by the direct calculation of consumption positions 
+The accommodation of non-marginal energy efficiency increases and 
+non-marginal energy service price decreases
+is made possible by direct calculation of consumption positions 
 via the CES utility model of Eqs.~\ref{eq:q_s_solution}--\ref{eq:Re_isub_CES}, 
 rather than relying on the approximate utility model and price elasticities. 
 The possibility of precisely decomposing microeconomic rebound into 
@@ -4104,7 +4105,7 @@ even if they are numerically precise in other respects
 
 The stylized indifference curves of previous frameworks 
 lead to the second contribution, 
-the first visualizations of rebound effects
+namely the first visualizations of rebound effects
 in energy, expenditure, and consumption spaces. 
 We call these visualizations ``rebound path graphs,'' and
 they can be seen in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph}. 
