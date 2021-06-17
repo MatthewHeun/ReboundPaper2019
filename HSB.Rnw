@@ -4453,14 +4453,13 @@ From the development and application of the framework,
 we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all effects at microeconomic and macroeconomic scales, including 
+        quantification of rebound magnitudes at microeconomic and macroeconomic scales, including 
         direct and indirect locations 
         for emplacement, substitution, income, and macro effects.
 Second, the examples show that magnitudes of rebound effects
         vary with the type of EEU performed.
-Third, the sensitivity studies
-        (Section~\ref{sec:sensitivity_analyses})
-        enable evaluation of rebound sensitivities to important parameters. 
+Third, the framework enables evaluation of rebound sensitivities to important parameters
+        (Section~\ref{sec:sensitivity_analyses}). 
         For the examples in this paper, total rebound is   
         more sensitive to
         the price of energy ($p_E$),
@@ -4470,7 +4469,8 @@ Third, the sensitivity studies
         energy efficiency ($\amacro{\eta}$) or
         the capital cost ($\amacro{C}_{cap}$) of the upgraded device.
 Last, the discussion (Section~\ref{sec:discussion}) shows that
-        rebound is a headwind for efficiency-led reduction of energy consumption and CO$_2$ mitigation policies.
+        rebound is a headwind for efficiency-led reduction of energy consumption 
+        and CO$_2$ mitigation policies.
         Quantification of rebound effect magnitudes
         is an important precursor to devising effective energy policies
         that would 
@@ -4487,7 +4487,7 @@ Future work could be pursued in several areas.
   
   \item Further empirical studies could be performed
         to estimate the magnitude of different 
-        rebound effects in a range of real-life case studies.
+        rebound effects in a variety of real-life EEUs.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$) and its relation to $\MPC$.
