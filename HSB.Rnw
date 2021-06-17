@@ -420,7 +420,7 @@ because of the EEU.
 Energy, expenditure, and consumption spaces are all linked together, 
 as illustrated by two examples.
 %
-\begin{enumerate*}[label={(\alph*)}]
+\begin{enumerate*}[label={(\roman*)}]
 	
   \item Net savings from the EEU are determined in the expenditure space.
         Which goods and services are purchased with net savings 
