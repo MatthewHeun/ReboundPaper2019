@@ -4113,7 +4113,7 @@ Our precisely drawn and quantified rebound path graphs
 through energy, expenditure, and consumption spaces
 aid comprehension of and intuition about the various rebound effects.
 
-Energy path graphs show the macro effect (and other rebound effects),
+Segment \bartilde{} in energy path graphs is the macro effect,
 the third and final contribution.
 We have developed the first operational link between 
 rebound effects on macroeconomic and microeconomic scales. 
@@ -4121,7 +4121,7 @@ We both operationalize the link and show how it should be applied:
 scaling net income after the substitution effect.
 We further draw upon the MPC literature to show how macro effects 
 operate via economic expansion over the long term.
-This micro-to-macro link can be see in Eq.~\ref{eq:Re_macro_def} and
+This micro-to-macro link can be seen in Eq.~\ref{eq:Re_macro_def} and
 Figs.~\ref{fig:ExampleEnergyPathGraph}, \ref{fig:CarEnergyGraph}, and \ref{fig:LampEnergyGraph}.
 We make the first calibration of the macro factor ($k$) 
 in Section~\ref{sec:calibrating_k} below.
