@@ -4159,11 +4159,14 @@ the Corporate Average Fuel Economy (CAFE) standards for U.S.\ cars.
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows that rebound falls
 as post-upgrade energy efficiency ($\amacro{\eta}$) rises. 
 This result is driven mainly by
-decreasing direct substitution effect 
-as efficiency goes up, 
-in turn driven by declining (i.e.\ closer to zero) compensated own price elasticity of energy service demand ($\eqspsC$) which leads to an equally declining
-uncompensated price elasticity which can be observed,
-see also Fig.~\ref{fig:all_Re_terms_eps_graph}. 
+decreasing direct substitution effect rebound ($Re_{dsub}$)
+as efficiency goes up.
+Declining $Re_{dsub}$ is driven by declining (i.e., closer to zero)
+compensated own price elasticity of energy service demand ($\eqspsC$),
+which leads to an equally declining
+uncompensated price elasticity of energy service demand ($\eqspsUC$), 
+an observable quantity.
+(See also Fig.~\ref{fig:all_Re_terms_eps_graph}.)
 As a result, raising the minimum efficiency 
 required to participate in a market is beneficial
 for reducing energy consumption.
@@ -4172,12 +4175,12 @@ the expected energy savings rate and the takeback rate grows with post-emplaceme
 absolute energy savings are expected to increase as efficiency grows, 
 at least for the examples in Section~\ref{sec:examples}.
 (We note in passing that this change in price elasticity is 
-only tractable thanks to a framework incorporating
+only tractable thanks to the framework accommodating
 non-marginal efficiency changes by calculating the new
-consumption bundle directly from the utility function.)
+consumption bundle directly from the CES utility model.)
 However, larger efficiency increases can require higher capital investment
 within a given technology, 
-which can make adoption difficult.
+which hinder adoption of energy-efficient devices.
 One measure often employed to boost adoption is 
 financial rebates or subsidies, the subject of the next section.
 
