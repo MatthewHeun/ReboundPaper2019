@@ -4247,6 +4247,64 @@ could boost economic growth, leading to larger macro rebound effects,
 the subject of the next section.
 \citet{Owen2020}
 
+
+
+However, increasing the price of fossil energy means that the net savings of the emplacement effect grows,
+driving higher income effect rebound. 
+
+
+
+
+
+
+
+An energy tax or other penalty on energy consumption, 
+preferably limited to fossil energy and enacted alongside the EEU,
+does two things at the microeconomic scale.
+First, a fossil-energy tax raises the effective price of fossil energy and 
+the price of any fossil-energy-powered energy service.
+By raising the relative price of the energy service, substitution effect rebound shrinks. 
+Second, a fossil-energy tax raises net financial savings earned 
+by device owners after emplacing the EEU.
+The net savings of the emplacement effect grows,
+driving higher income effect rebound. 
+Higher energy prices lead to higher macro rebound, too, 
+due to increased savings from the emplacement effect, 
+assuming a constant value for the macro factor ($k$).
+Larger income and macro rebound overwhelms the decrease in substitution rebound, 
+leading to higher overall rebound from an energy price increase,
+as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
+
+That said, another outcome of energy taxes could be reduction of the macro factor ($k$), 
+a dynamic effect not included 
+in the univariate sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph}.
+At the macroeconomic scale, 
+higher energy prices are likely to induce both 
+energy-saving technical change and
+structural change toward an overall less energy-intensive economy.
+To avoid the price penalty, 
+consumers might buy more-efficient devices or consume substitutes,
+thereby increasing the rate of absolute energy savings. 
+A less energy-intensive economy could be designed by policymakers 
+with complementary policies 
+to encourage use of efficient substitutes,
+such as public transport.
+Thus, although the introduction of energy or carbon taxes
+can induce higher income effect rebound, 
+the increase of macro rebound might be less than predicted by this framework
+if taxes cause a reduction of $k$.
+
+Across-the-board fossil-energy taxes taxes could raise equity issues
+by limiting the ability of low-income groups to purchase energy \cite{Owen2020}. 
+To ameliorate inequities, progressive feebates could be implemented%
+\footnote{
+  Feebates route energy tax revenues to the lower-income EEU purchasers \citep{Boyce2018}.
+}.
+
+Given the above, we believe that fossil-energy taxes
+with feebates are desirable policy options.
+
+
 %++++++++++++++++++++++++++++++
 \subsection{Calibrating $k$}
 \label{sec:calibrating_k}
