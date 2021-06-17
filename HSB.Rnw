@@ -508,7 +508,7 @@ for mitigation of rebound effects.
 
 General equilibrium frameworks allow prices of all goods and services 
 in an economy to adjust to the EEU.
-Recent examples include 
+Recent examples include \citet{Hart2018}, 
 \citet{Lemoine:2020aa}, 
 \citet{Fullerton2020}, and 
 \citet{blackburn2020energy}.
@@ -4266,7 +4266,8 @@ structural change toward an overall lower energy intensity economy.
 To avoid the price penalty, 
 consumers might buy other, more-efficient devices or consume substitutes
 both for the energy service and in other areas of life,
-thereby contributing to reducing the overall energy intensity of the economy ($I_E$).
+thereby contributing to reducing the overall energy intensity of the economy ($I_E$), see also \citet{Hart2018} for
+a related discussion.
 (A less energy-intensive economy could be further encouraged by policymakers 
 with complementary policies 
 to encourage use of efficient substitutes,
@@ -4295,6 +4296,7 @@ To ameliorate inequities, progressive feebates could be implemented%
 
 The rebound effects of fossil-energy taxes
 deserve further study with multiple fuel types
+building on \citet{Chan2015}
 to untangle the web of interconnected dynamic effects
 discussed above.
 But such fossil-energy taxes could be an effective policy option
