@@ -4063,7 +4063,7 @@ Finally, we discuss and calibrate the macro factor ($k$).
 
 In Section~\ref{sec:aim_contribution_structure}, 
 we claimed three contributions.
-Here, we reiterate and discuss those contributions.
+Here, we reiterate and discuss each.
 
 First, we have developed the first comprehensive rebound analysis framework to include
 %
@@ -4077,19 +4077,20 @@ First, we have developed the first comprehensive rebound analysis framework to i
 %
 The embodied energy and maintenance and disposal effects
 are the energy manifestation of the important difference 
-between costless technology upgrades or (costly) mandated efficiency 
-increases \citep{Gillingham:2013aa,Fullerton2020} and are not typically 
-included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa}.
-Most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
+between costless technology upgrades and
+(costly) mandated efficiency increases \citep{Gillingham:2013aa,Fullerton2020}.
+Costly EEUs are not typically 
+included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa};
+most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
 One surprising result is that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
 can \emph{increase} rebound when $\Delta \raempl{C}_{cap} < 0$.
 The lamp example of Section~\ref{sec:lamp_example} illustrates this result.
-This finding demonstrates that the costless EEU does not provide the upper bound to rebound,
+This finding demonstrates that the costless EEU does not provide an upper bound to rebound,
 as previously suggested \citep{Thomas:2013ab}.
 
-The accommodation of non-marginal energy service price decreases and
-non-marginal energy efficiency increases is
-made possible by the direct calculation of consumption positions 
+The accommodation of non-marginal energy efficiency increases and 
+non-marginal energy service price decreases
+is made possible by direct calculation of consumption positions 
 via the CES utility model of Eqs.~\ref{eq:q_s_solution}--\ref{eq:Re_isub_CES}, 
 rather than relying on the approximate utility model and price elasticities. 
 The possibility of precisely decomposing microeconomic rebound into 
@@ -4104,7 +4105,7 @@ even if they are numerically precise in other respects
 
 The stylized indifference curves of previous frameworks 
 lead to the second contribution, 
-the first visualizations of rebound effects
+namely the first visualizations of rebound effects
 in energy, expenditure, and consumption spaces. 
 We call these visualizations ``rebound path graphs,'' and
 they can be seen in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:LampConsGraph}. 
@@ -4112,7 +4113,7 @@ Our precisely drawn and quantified rebound path graphs
 through energy, expenditure, and consumption spaces
 aid comprehension of and intuition about the various rebound effects.
 
-Energy path graphs show the macro effect (and other rebound effects),
+Segment \bartilde{} in energy path graphs is the macro effect,
 the third and final contribution.
 We have developed the first operational link between 
 rebound effects on macroeconomic and microeconomic scales. 
@@ -4120,7 +4121,7 @@ We both operationalize the link and show how it should be applied:
 scaling net income after the substitution effect.
 We further draw upon the MPC literature to show how macro effects 
 operate via economic expansion over the long term.
-This micro-to-macro link can be see in Eq.~\ref{eq:Re_macro_def} and
+This micro-to-macro link can be seen in Eq.~\ref{eq:Re_macro_def} and
 Figs.~\ref{fig:ExampleEnergyPathGraph}, \ref{fig:CarEnergyGraph}, and \ref{fig:LampEnergyGraph}.
 We make the first calibration of the macro factor ($k$) 
 in Section~\ref{sec:calibrating_k} below.
@@ -4141,7 +4142,7 @@ enable exploration of policy options that are often suggested
 to promote energy efficiency and reduce CO$_2$ emissions:
 standards, rebates or subsidies, and carbon taxes.
 In the subsections below, 
-we discuss the rebound implications of each policy option with reference to the sensitivity analysis
+we discuss the rebound implications of each policy option with reference to the sensitivity analyses
 of Section~\ref{sec:sensitivity_analyses}.
 
 
@@ -4152,8 +4153,8 @@ of Section~\ref{sec:sensitivity_analyses}.
 
 Energy efficiency standards mandate minimum efficiency levels for selling 
 energy conversion devices into a market.
-One example of energy efficiency standards is the Corporate Average Fuel Economy (CAFE) 
-standards for U.S.\ cars.
+One example of energy efficiency standards is 
+the Corporate Average Fuel Economy (CAFE) standards for U.S.\ cars.
 
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows that rebound falls
 as post-upgrade energy efficiency ($\amacro{\eta}$) rises. 
@@ -4196,7 +4197,7 @@ Doing so effectively reduces the capital cost to the purchaser
 of energy-efficient devices ($\amacro{C}_{cap}$).
 However, Fig.~\ref{fig:all_Re_terms_C_cap_graph} shows that reducing capital cost 
 increases energy rebound, 
-mostly to the income effect
+mostly due to the income effect
 in which more net savings (thanks to the rebate) 
 are spent on the energy service and other goods.
 Thus, policymakers should be aware that rebound will 
@@ -4212,7 +4213,8 @@ to stimulate initial take-up of a new EEU technology
 From a rebound perspective, 
 the subsidy-related stimulus should be removed when
 cost reductions due to scale effects and learning by doing \citep{Wilson2012} 
-take hold and EEU uptake goes mainstream.
+take hold, and
+the EEU uptake goes mainstream.
 
 A potential downside to rebates and subsidies is inequities:
 only those wealthy enough to afford expensive EEUs 
@@ -4225,16 +4227,17 @@ effectively raising the price of energy, the topic of the next section.
 
 
 %------------------------------
-\subsubsection{Carbon price or energy taxes} 
+\subsubsection{Carbon pricing or energy taxes} 
 \label{sec:splicy:energy_taxes}
 %------------------------------
 
 An energy tax or other penalty on energy consumption, 
 preferably limited to fossil energy and enacted alongside the EEU,
 does two things at the microeconomic scale.
-First, a fossil-energy tax raises the effective price of fossil energy and 
-the price of any fossil-energy-powered energy service.
-By raising the relative price of the energy service, substitution effect rebound shrinks, 
+First, a fossil-energy tax raises the effective price of fossil energy ($p_E$) and 
+the price of any fossil-energy-powered energy service ($p_s$).
+By raising the relative price of the energy service,
+substitution effect rebound shrinks, 
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 Second, a fossil-energy tax raises net financial savings earned 
 by device owners after emplacing the EEU.
@@ -4272,7 +4275,7 @@ such as public transport.)
 If a fossil-energy tax changes the energy intensity of the economy ($I_E$), 
 all rebound terms whose equation includes $I_E$ will be affected.
 Thus, although the introduction of energy or carbon taxes
-can induce higher income effect rebound and macro effect rebound, 
+can induce higher income effect rebound and higher macro effect rebound, 
 those increases might be less than predicted 
 by the sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph},
 due to reduction of the energy intensity of the economy ($I_E$).
@@ -4388,8 +4391,8 @@ Note that $k = 3$ implies that
 every \$1 of net savings spent by the device owner
 generates \$3 of additional economic 
 activity in the broader economy.
-We multiply $k \rasub{N}$ by the energy intensity of the economy to 
-find the energy implications of respending in the economy.
+We multiply $k \rasub{N}$ by the energy intensity of the economy ($I_E$) to 
+find the energy implications of macro-effect respending in the economy.
 
 There are three ways to interpret $k = 3$.
 First, $k = 3$ can be considered the average long-run 
@@ -4456,14 +4459,13 @@ From the development and application of the framework,
 we draw four important conclusions.
 First, the car and lamp examples (Section~\ref{sec:examples}) show that
         the framework enables
-        quantification of magnitudes of all effects at microeconomic and macroeconomic scales, including 
+        quantification of rebound magnitudes at microeconomic and macroeconomic scales, including 
         direct and indirect locations 
         for emplacement, substitution, income, and macro effects.
 Second, the examples show that magnitudes of rebound effects
         vary with the type of EEU performed.
-Third, the sensitivity studies
-        (Section~\ref{sec:sensitivity_analyses})
-        enable evaluation of rebound sensitivities to important parameters. 
+Third, the framework enables evaluation of rebound sensitivities to important parameters
+        (Section~\ref{sec:sensitivity_analyses}). 
         For the examples in this paper, total rebound is   
         more sensitive to
         the price of energy ($p_E$),
@@ -4473,7 +4475,8 @@ Third, the sensitivity studies
         energy efficiency ($\amacro{\eta}$) or
         the capital cost ($\amacro{C}_{cap}$) of the upgraded device.
 Last, the discussion (Section~\ref{sec:discussion}) shows that
-        rebound is a headwind for efficiency-led reduction of energy consumption and CO$_2$ mitigation policies.
+        rebound is a headwind for efficiency-led reduction of energy consumption 
+        and CO$_2$ mitigation policies.
         Quantification of rebound effect magnitudes
         is an important precursor to devising effective energy policies
         that would 
@@ -4490,7 +4493,7 @@ Future work could be pursued in several areas.
   
   \item Further empirical studies could be performed
         to estimate the magnitude of different 
-        rebound effects in a range of real-life case studies.
+        rebound effects in a variety of real-life EEUs.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
         for the macro factor ($k$) and its relation to $\MPC$.
