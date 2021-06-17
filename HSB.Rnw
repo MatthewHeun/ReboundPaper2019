@@ -4385,8 +4385,8 @@ Note that $k = 3$ implies that
 every \$1 of net savings spent by the device owner
 generates \$3 of additional economic 
 activity in the broader economy.
-We multiply $k \rasub{N}$ by the energy intensity of the economy to 
-find the energy implications of respending in the economy.
+We multiply $k \rasub{N}$ by the energy intensity of the economy ($I_E$) to 
+find the energy implications of macro-effect respending in the economy.
 
 There are three ways to interpret $k = 3$.
 First, $k = 3$ can be considered the average long-run 
