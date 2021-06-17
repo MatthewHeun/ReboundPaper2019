@@ -4276,7 +4276,7 @@ consumers might buy other, more-efficient devices or consume substitutes
 both for the energy service and in other areas of life,
 thereby contributing to reducing the overall energy intensity of the economy ($I_E$).
 (See \citet{Hart2018} for a related discussion.)
-A less energy-intensive economy could be further encouraged by policymakers 
+A less-energy-intensive economy could be further encouraged by policymakers 
 with complementary policies 
 to encourage use of efficient substitutes,
 such as public transport.
