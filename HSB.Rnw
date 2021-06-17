@@ -282,7 +282,7 @@ scenario~\citep[Fig.~2.1]{InternationalEnergyAgency2019}%
   which itself includes planned energy efficiency.
 }.
 %
-However, a study (by the present authors and two others) shows 
+However, a study by the present authors and two others shows 
 that the expected reductions in energy consumption 
 would represent a significant structural break from the historical record
 of tight coupling between energy consumption and GDP \citep[Figs.~1 and~2]{Brockway2021}.
@@ -426,8 +426,8 @@ as illustrated by two examples.
         Which goods and services are purchased with net savings 
         is determined by consumer preferences and 
         described in the consumption space.
-        The energy implications of the purchases vary 
-        by the goods and services purchased
+        The energy implications of purchases vary 
+        by the types of goods and services purchased
         and is described in the energy space.
 
   \item The amount of embodied energy in the upgraded device 
@@ -456,9 +456,10 @@ energy service price and device purchase
 cost changes into consumption choices, simultaneously 
 decomposing into substitution and income effects. 
 These two effects allow for a more nuanced understanding of behavior
-for different commodities and preferences and
-have become the standard approach to analyzing
-direct and indirect rebound locations.
+for different commodities and preferences.
+Decomposition into substitution and income effects 
+has become the standard approach to analyzing
+direct and indirect rebound effects at the microeconomic scale.
 
 %------------------------------
 \subsubsection{Non-marginal energy efficiency changes} 
@@ -482,7 +483,7 @@ An operational rebound analysis framework is one that includes
 sufficient descriptions of energy rebound 
 for all effects, locations, and scales
 in all spaces (energy, expenditure, and consumption) to calculate
-quantitative estimates of rebound effects with real-world data.
+quantitative estimates of rebound effects with available real-world data.
 This is particularly important for microeconomically grounded
 rebound frameworks that involve unobserved utility functions and,
 by extension, substitution and income effects.
@@ -515,7 +516,7 @@ Recent examples include \citet{Hart2018},
 \citet{Fullerton2020}, and 
 \citet{blackburn2020energy}.
 General equilibrium frameworks provide detail and precision 
-on economy-wide price adjustment, 
+on economy-wide price adjustments, 
 but they give up specificity about individual device upgrades, 
 make assumptions during calibration, and
 lose simplicity of exposition. 
@@ -594,11 +595,10 @@ or the differential energetic effects
 of the upfront purchase of the upgraded device, 
 leading to low ratings across all previous frameworks in the
 ``Capital cost and embodied energy effect'' row.
-In fact, except for \citep{Nassen:2009aa},
+In fact, except for \citet{Nassen:2009aa},
 no framework engages with capital costs, 
 although all note its importance. 
-(In particular, 
-\citeauthor{Nassen:2009aa} note that 
+(\citeauthor{Nassen:2009aa} note that 
 capital costs and embodied energy can have very strong effects on rebound.)
 \citet{Thomas:2013aa,Thomas:2013ab} provide the only framework 
 that traces embodied energy effects
