@@ -983,7 +983,7 @@ In this section, we develop a comprehensive energy rebound analysis framework
 (concisely, ``the framework'').
 We follow the rebound typology discussed in Section~\ref{sec:rebound_typologies}, 
 distinguishing between
-microeconomic rebound (at the single device or device owner level)
+microeconomic rebound (at the single device or for the device owner)
 and 
 macroeconomic rebound (broader, economy-wide responses
 to a single device upgrade).
