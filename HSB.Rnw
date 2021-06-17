@@ -4142,7 +4142,7 @@ enable exploration of policy options that are often suggested
 to promote energy efficiency and reduce CO$_2$ emissions:
 standards, rebates or subsidies, and carbon taxes.
 In the subsections below, 
-we discuss the rebound implications of each policy option with reference to the sensitivity analysis
+we discuss the rebound implications of each policy option with reference to the sensitivity analyses
 of Section~\ref{sec:sensitivity_analyses}.
 
 
@@ -4153,8 +4153,8 @@ of Section~\ref{sec:sensitivity_analyses}.
 
 Energy efficiency standards mandate minimum efficiency levels for selling 
 energy conversion devices into a market.
-One example of energy efficiency standards is the Corporate Average Fuel Economy (CAFE) 
-standards for U.S.\ cars.
+One example of energy efficiency standards is 
+the Corporate Average Fuel Economy (CAFE) standards for U.S.\ cars.
 
 Fig.~\ref{fig:all_Re_terms_eta_graph} shows that rebound falls
 as post-upgrade energy efficiency ($\amacro{\eta}$) rises. 
@@ -4191,7 +4191,7 @@ Doing so effectively reduces the capital cost to the purchaser
 of energy-efficient devices ($\amacro{C}_{cap}$).
 However, Fig.~\ref{fig:all_Re_terms_C_cap_graph} shows that reducing capital cost 
 increases energy rebound, 
-mostly to the income effect
+mostly due to the income effect
 in which more net savings (thanks to the rebate) 
 are spent on the energy service and other goods.
 Thus, policymakers should be aware that rebound will 
@@ -4207,7 +4207,8 @@ to stimulate initial take-up of a new EEU technology
 From a rebound perspective, 
 the subsidy-related stimulus should be removed when
 cost reductions due to scale effects and learning by doing \citep{Wilson2012} 
-take hold and EEU uptake goes mainstream.
+take hold, and
+the EEU uptake goes mainstream.
 
 A potential downside to rebates and subsidies is inequities:
 only those wealthy enough to afford expensive EEUs 
@@ -4220,16 +4221,17 @@ effectively raising the price of energy, the topic of the next section.
 
 
 %------------------------------
-\subsubsection{Carbon price or energy taxes} 
+\subsubsection{Carbon pricing or energy taxes} 
 \label{sec:splicy:energy_taxes}
 %------------------------------
 
 An energy tax or other penalty on energy consumption, 
 preferably limited to fossil energy and enacted alongside the EEU,
 does two things at the microeconomic scale.
-First, a fossil-energy tax raises the effective price of fossil energy and 
-the price of any fossil-energy-powered energy service.
-By raising the relative price of the energy service, substitution effect rebound shrinks, 
+First, a fossil-energy tax raises the effective price of fossil energy ($p_E$) and 
+the price of any fossil-energy-powered energy service ($p_s$).
+By raising the relative price of the energy service,
+substitution effect rebound shrinks, 
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 Second, a fossil-energy tax raises net financial savings earned 
 by device owners after emplacing the EEU.
@@ -4267,7 +4269,7 @@ such as public transport.)
 If a fossil-energy tax changes the energy intensity of the economy ($I_E$), 
 all rebound terms whose equation includes $I_E$ will be affected.
 Thus, although the introduction of energy or carbon taxes
-can induce higher income effect rebound and macro effect rebound, 
+can induce higher income effect rebound and higher macro effect rebound, 
 those increases might be less than predicted 
 by the sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph},
 due to reduction of the energy intensity of the economy ($I_E$).
