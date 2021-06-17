@@ -1086,7 +1086,6 @@ so the final energy purchaser (the device owner) is a price taker%
   Relaxing the exogenous final energy price assumption
   would require a full-economy model that is beyond the scope of this paper.
   Rebound due to energy price change is included in the macro effect.
-  (See Table~\ref{tab:typology}.)
 }.
 %
 Initially, the device owner spends income ($\rorig{M}$)
