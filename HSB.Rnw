@@ -652,7 +652,7 @@ completing the ``This paper'' column with filled circles (\rating{100}).
 
 There is a strategic \emph{need} for 
 a comprehensive rebound analysis framework
-to firm up theoretical foundations, 
+to consolidate theoretical foundations, 
 enable empirical analysis, and 
 guide effective energy efficiency policy-making.
 In particular the framework should be one that 
