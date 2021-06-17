@@ -4275,7 +4275,8 @@ Larger income and macro rebounds overwhelm the decrease in substitution rebound,
 leading to higher overall rebound from a fossil-energy tax and effectively-higher energy price,
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 
-That said, another outcome of energy taxes could be reduction of the macro factor ($k$), 
+That said, another outcome of energy taxes could be 
+reduction of the energy intensity of the economy ($I_E$), 
 a dynamic effect not captured by the univariate sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph}.
 At the macroeconomic scale, 
 higher energy prices are likely to induce both 
@@ -4292,9 +4293,10 @@ Thus, although the introduction of energy or carbon taxes
 can induce higher income effect rebound, 
 the increase of macro rebound might be less than predicted 
 by the sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph}
-if fossil-energy taxes reduce $k$.
+if fossil-energy taxes reduce $I_E$.
 
-Across-the-board fossil-energy taxes taxes could raise equity issues
+On note of caution:
+across-the-board fossil-energy taxes taxes could raise equity issues
 by limiting the ability of low-income groups to purchase energy \cite{Owen2020}. 
 To ameliorate inequities, progressive feebates could be implemented%
 \footnote{
@@ -4303,10 +4305,10 @@ To ameliorate inequities, progressive feebates could be implemented%
 }.
 
 The rebound effects of fossil-energy taxes
-deserve further study to untangle the web of interconnected effects
+deserve further study to untangle the web of interconnected dynamic effects
 discussed above.
-But such taxes could be an effective policy option
-to reduce fossil energy consumption and CO$_2$ emissions.
+But such fossil-energy taxes could be an effective policy option
+to reduce consumption and CO$_2$ emissions.
 
 
 **** 
