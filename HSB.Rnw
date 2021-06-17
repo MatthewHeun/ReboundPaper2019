@@ -449,14 +449,17 @@ of causal linkages across rebound effects, locations, and scales.
 \label{sec:consumer_preferences}
 %------------------------------
 
-A comprehensive rebound framework will include a detailed description of consumer preferences,
-because device owner preferences drive the substitution effect.
+A comprehensive rebound framework will include a detailed description of consumer preferences.
 By ``detailed,'' we mean a utility or payoff 
 specification that translates
 energy service price and device purchase 
 cost changes into consumption choices, simultaneously 
-decomposing into substitution and income effects.
-
+decomposing into substitution and income effects. These two
+effects allow for a more nuanced understanding of direct and
+indirect rebound effects for different commodities and
+preferences, and
+have become the standard route for analysing
+direct and indirect rebound locations.
 
 %------------------------------
 \subsubsection{Non-marginal energy efficiency changes} 
