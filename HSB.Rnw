@@ -2070,7 +2070,7 @@ we find
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Two applications of the rebound framework}
+\section{Results: Two applications of the rebound framework}
 \label{sec:examples}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -3800,11 +3800,12 @@ between costless technology upgrades and
 Costly EEUs are not typically 
 included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa};
 most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
-One surprising result is that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
+One surprising result from including costly upgrades is
+that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
 can \emph{increase} rebound when $\Delta \raempl{C}_{cap} < 0$.
 The lamp example of Section~\ref{sec:lamp_example} illustrates this result.
 This finding demonstrates that the costless EEU does not provide an upper bound to rebound,
-as previously suggested \citep{Thomas:2013ab}.
+as previously suggested by \citet{Thomas:2013ab}.
 
 The accommodation of non-marginal energy efficiency increases and 
 non-marginal energy service price decreases
@@ -3832,7 +3833,7 @@ through energy, expenditure, and consumption spaces
 aid comprehension of and intuition about the various rebound effects.
 
 Segment \bartilde{} in energy path graphs is the macro effect,
-the third and final contribution.
+the third contribution.
 We have developed the first operational link between 
 rebound effects on macroeconomic and microeconomic scales. 
 We both operationalize the link and show how it should be applied:
@@ -3930,8 +3931,7 @@ reduce the effectiveness of rebates and subsidies
 to generate actual energy savings.
 
 That said, a rebate or subsidy could be used as a tool 
-to stimulate initial take-up of a new EEU technology
-(e.g., current subsidies for battery electric vehicle cars).
+to stimulate initial take-up of a new EEU technology.
 From a rebound perspective, 
 the subsidy-related stimulus should be removed when
 cost reductions due to scale effects and learning by doing \citep{Wilson2012} 
@@ -3974,8 +3974,8 @@ assuming a constant value for the product of the macro factor
 and the energy intensity of the economy ($k I_E$).
 Larger income effect and macro effect rebounds overwhelm
 the decrease in substitution effect rebound, 
-leading to higher overall rebound from carbon pricing or a fossil-energy tax
-and effectively higher energy price,
+leading to higher overall rebound 
+from the effectively higher energy price,
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 But so long as backfire is avoided
 (i.e., total rebound remains less than 100\%),
@@ -4004,7 +4004,7 @@ such as public transport.
 If carbon pricing or a fossil-energy tax reduces the energy intensity of the economy ($I_E$), 
 all rebound terms whose equations include $I_E$ will be affected.
 Thus, although the introduction of carbon prices or fossil-energy taxes
-can induce higher income effect rebound and higher macro effect rebound, 
+can induce higher income-effect rebound and higher macro-effect rebound, 
 those increases might be less than predicted 
 by the sensitivity study of Fig.~\ref{fig:all_Re_terms_p_E_graph},
 due to reduction of the energy intensity of the economy ($I_E$).
@@ -4019,17 +4019,18 @@ but it may weaken our framework.
 ****
 Thus, total rebound estimated by this framework
 (which assumes static $I_E$)
-could provide an upper bound on rebound 
-with regard to carbon pricing or fossil-energy taxes.
+could provide an upper bound on rebound
+for carbon pricing or fossil-energy taxes.
 
 Carbon pricing or fossil-energy taxes are likely to be an effective policy option
 to reduce energy consumption, rebound effects, and CO$_2$ emissions.
-But the rebound effects of these policies deserve further study,
+But the rebound implications of these policies deserve further study,
 perhaps building on \citet{Chan2015}
-to untangle the web of interconnected dynamic effects.
+to untangle the web of interconnected dynamic effects
+when multiple fuels are involved.
 One note of caution:
 across-the-board carbon pricing or fossil-energy taxes could raise further equity issues
-by limiting the ability of people in low-income groups to purchase energy \cite{Owen2020}. 
+by limiting the ability of people in low-income groups to purchase energy \citep{Owen2020}. 
 To ameliorate inequities, progressive feebates could be implemented%
 \footnote{
   Feebates route energy tax revenues to lower-income EEU purchasers. 
@@ -4084,9 +4085,9 @@ For the results presented in Section~\ref{sec:examples},
 we assumed a placeholder value of $k = 1$,
 meaning that every \$1 of spending by the device owner in the income effect
 generates \$1 of additional economic activity in the broader economy.
-However, the framework presented in Section~\ref{sec:framework}, 
+In combination, the framework presented in Section~\ref{sec:framework}, 
 the results obtained in Section~\ref{sec:examples}, and
-recent studies of total rebound allow, 
+recent estimates of total rebound allow, 
 for the first time, 
 a discussion about calibrating $k$.
 
@@ -4117,7 +4118,7 @@ for the car example and
 $k = \Sexpr{formatC(calibrated_k[["Lamp"]], digits = 2)}$ 
 for the lamp example.
 
-Difference in input-ouput network centrality as well as the considerable 
+Differences in input-ouput network centrality as well as the considerable 
 variance in $Re_{tot}$ in 33 surveyed studies 
 indicates that total rebound from one EEU is likely to be different from 
 total rebound from another EEU. 
@@ -4127,9 +4128,10 @@ estimated from the car and lamp examples.
 Note that $k = 3$ implies that 
 every \$1 of net savings spent by the device owner
 generates \$3 of additional economic 
-activity in the broader economy.
+activity in the broader economy,
+after the income effect.
 We multiply $k \rasub{N}$ by the energy intensity of the economy ($I_E$) to 
-find the energy implications of macro-effect respending in the economy.
+find the energy implications of macro-effect respending throughout the economy.
 
 There are three ways to interpret $k = 3$.
 First, $k = 3$ can be considered the average long-run 
@@ -4153,7 +4155,7 @@ being in the upper half of recent estimates by \citet{Carroll2017}.
 Although the cause of the growth in economic activity and energy consumption from an EEU 
 is a supply-side productivity shock,
 the subsequent demand-side effects may well be interpreted as a multiplier effect, 
-caused by higher real income instead of a higher monetary income.
+caused by higher real income instead of by higher monetary income.
 
 After calibrating $k = 3$, we see that choosing a placeholder value of $k = 1$
 in Section~\ref{sec:examples}
@@ -4189,8 +4191,8 @@ simplest case of a single fuel and a single energy service.
 This paper also contributes the first visualizations of 
 rebound path graphs in energy, expenditure, and consumption spaces.
 We operationalize and calibrate the macro factor ($k = 3$)
-to provide a better link between macro and micro effects
-than previous partial equilibrium frameworks. 
+to provide a link between effects at microeconomic and macroeconomic scales,
+missing from previous partial equilibrium frameworks. 
 
 From the development and application of the framework, 
 we draw four important conclusions.
@@ -4211,7 +4213,7 @@ Third, the framework enables evaluation of rebound sensitivities to important pa
         than either
         energy efficiency ($\amacro{\eta}$) or
         the capital cost ($\amacro{C}_{cap}$) of the upgraded device.
-Last, the discussion (Section~\ref{sec:discussion}) shows that
+Fourth, the discussion (Section~\ref{sec:discussion}) shows that
         rebound is a headwind for efficiency-led reduction of energy consumption 
         and CO$_2$ mitigation policies.
         Quantification of rebound effect magnitudes
