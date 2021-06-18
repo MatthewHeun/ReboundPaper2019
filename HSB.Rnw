@@ -2169,9 +2169,8 @@ to replace a conventional gasoline Ford Fusion car.
 The cars are matched as closely as possible, 
 except for the inclusion of an electric battery 
 in the hybrid car.  
-The car case study features a larger initial capital investment
-versus the long-term benefit of decreased direct energy costs 
-for the same energy service (miles/year). 
+The car case study features a larger initial capital investment ($\orig{C}_{cap} < \amacro{C}_{cap}$)
+versus the long-term benefit of decreased energy costs ($\rorig{C}_s > \ramacro{C}_s$). 
 
 
 %------------------------------
@@ -2193,7 +2192,7 @@ Fourth, armed with the parameter values from
 Tables~\ref{tab:car_parameters}--\ref{tab:car_elasticity_parameters}, 
 and the equations of Section~\ref{sec:framework},
 we calculate important values at each rebound stage,
-as shown below in Table~\ref{tab:car_stages_table}.
+as shown in Table~\ref{tab:car_stages_table}.
 Note that Table~\ref{tab:car_stages_table} applies to the car owner.
 Across the macro effect (segment \bartilde{} in Fig.~\ref{fig:CarEnergyGraph}), 
 changes occur only in the macroeconomy.
@@ -2381,7 +2380,7 @@ rebound_results %>%
 \label{sec:Car_results}
 %------------------------------
 
-Results are represented graphically in quantified energy, cost, and consumption path graphs
+Results are represented graphically in quantified energy, expenditure, and consumption path graphs
 in Figs.~\ref{fig:CarEnergyGraph}--\ref{fig:CarConsGraph}.
 The energy path graph (Fig.~\ref{fig:CarEnergyGraph})
 shows the size of each rebound effect
@@ -2610,7 +2609,7 @@ rebound_results %>%
 @
 
 
-The base results for the car upgrade are shown in Table~\ref{tab:car_results}.
+The results for the car upgrade are shown in Table~\ref{tab:car_results}.
 
 <<car_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
@@ -2669,26 +2668,23 @@ Indeed, less money is spent on other goods
 
 The \inceffect{} also has two components:
 direct and indirect income effect rebound.
-The car owner obtains freed cash 
-due to a net monetary savings from the emplacement and substitution effects. 
 The direct income effect
 ($Re_{dinc}$) is positive
 (\Sexpr{Re_dinc_car_char_perc}\%), 
 because the car owner allocates some
-freed cash to additional driving. 
+net savings to additional driving. 
 Rebound from the indirect income effect 
 ($Re_{iinc}$) is positive (\Sexpr{Re_iinc_car_char_perc}\%)
 due to higher spending on other goods. 
 Thus, the net income after the substitution effect
 ($\rasub{N} = \Sexpr{N_dot_hat_car_char}$~\$/year) 
 translates into positive direct and indirect income
-rebound at the micro scale. 
-Total micro rebound (emplacement, substitution, and income effects)
+rebound at the microeconomic scale. 
+Total microeconomic rebound (emplacement, substitution, and income effects)
 sums to $Re_{micro} = \Sexpr{Re_micro_car_char_perc}$\%.
 
 Finally, 
-%at the macro level, 
-the \macroeffect{} leads to macro rebound
+the \macroeffect{} leads to macroeconomic rebound
 ($Re_{\macro}$) of \Sexpr{Re_macro_car_char_perc}\%
 with $k$ assumed to be 1,
 due to economic expansion caused by 
@@ -2755,8 +2751,8 @@ Re_macro_lamp_char_perc <- val_to_string(case = "Lamp", val = ReboundTools::rebo
 @
 
 
-For our second example, 
-we consider purchasing a light emitting diode (LED) electric lamp
+For the second example, 
+we consider purchasing a Light Emitting Diode (LED) electric lamp
 to replace a baseline incandescent electric lamp. 
 Both lamps are matched as closely as possible 
 in terms of energy service delivery (measured in lumen output per lamp), 
@@ -2765,7 +2761,7 @@ The LED lamp has a low
 initial capital investment rate
 (less than the incumbent incandescent lamp, actually!)
 and a long-term benefit of decreased direct energy expenditures
-for the same annual energy service (lm-hr/year).
+at the same annual energy service (lm-hr/year).
 
 
 %------------------------------
@@ -2773,13 +2769,12 @@ for the same annual energy service (lm-hr/year).
 \label{sec:lamp_input_data}
 %------------------------------
 
-Again, we require four sets of data. 
+Again, four sets of data are required. 
 First, the basic lamp parameters are summarized in Table~\ref{tab:lamp_parameters}. 
-Second, we require several general parameters, 
+Second, several general parameters, 
 mainly relating to the U.S.\ economy and 
-personal finances of the average U.S.\ citizen. 
-The parameters and the values used in the lamp example 
-are given below in Table~\ref{tab:lamp_economic_parameters}.
+personal finances of the average U.S.\ citizen are 
+given below in Table~\ref{tab:lamp_economic_parameters}.
 Third, we require the elasticity parameters, 
 as shown in Table~\ref{tab:lamp_elasticity_parameters}.
 Fourth, with the parameter values from 
@@ -3187,13 +3182,13 @@ rebound_results %>%
 \label{sec:lamp_results}
 %------------------------------
 
-Results are represented graphically in energy, cost, and consumption path graphs
+Results are represented graphically in energy, expenditure, and consumption path graphs
 in Figs.~\ref{fig:LampEnergyGraph}--\ref{fig:LampConsGraph}.
 The energy path graph (Fig.~\ref{fig:LampEnergyGraph})
 shows the size of each rebound effect
 for the lamp example.
 
-The base results for the lamp upgrade are shown in Table~\ref{tab:lamp_results}.
+The results for the lamp upgrade are shown in Table~\ref{tab:lamp_results}.
 
 <<lamp_rebound_results_table, results="asis", echo=FALSE>>=
 rebound_results %>% 
@@ -3217,9 +3212,9 @@ rebound_results %>%
 @
 
 
-The \empleffect{} rebound components are as follows:
-the direct emplacement effect ($Re_{dempl}$) 
-is always $\Sexpr{Re_dempl_lamp_char_perc}$\%.
+The \empleffect{} rebound components start with
+the direct emplacement effect ($Re_{dempl}$),
+which is always $\Sexpr{Re_dempl_lamp_char_perc}$\%.
 Indirect rebound due to the embodied energy effect
 ($Re_{emb}$) is $\Sexpr{Re_emb_lamp_char_perc}$\%.
 Although the LED lamp has higher embodied energy 
@@ -3227,7 +3222,7 @@ Although the LED lamp has higher embodied energy
 than the incandescent lamp 
 ($\bempl{E}_{emb} = \Sexpr{E_emb_orig_lamp_char}$~MJ),
 the LED lamp has a much longer lifetime,
-meaning that the LED embodied energy rate 
+meaning that the LED embodied energy \emph{rate}
 ($\raempl{E}_{emb} = \Sexpr{E_dot_emb_star_lamp_char}$~MJ/year)
 is less than the incandescent embodied energy rate
 ($\rbempl{E}_{emb} = \Sexpr{E_dot_emb_orig_lamp_char}$~MJ/year).
@@ -3277,18 +3272,15 @@ some of the additional income to increased demand for lighting.
 The indirect income effect rebound is large
 ($Re_{iinc} = \Sexpr{Re_iinc_lamp_char_perc}$\%), 
 due to the energy implications of increased spending on other goods.
-Total micro rebound (emplacement, substitution, and income effects)
+Total microeconomic scale rebound (emplacement, substitution, and income effects)
 sums to $Re_{micro} = \Sexpr{Re_micro_lamp_char_perc}$\%.
 
-Finally, rebound due to the macroeconomic 
-\macroeffect{} 
+Finally, \macroeffect{} rebound
 ($Re_{\macro}$) is coincidentally also \Sexpr{Re_macro_lamp_char_perc}\%
 with $k$ assumed to be 1,
 due to economic expansion caused by 
 productivity enhancements arising from the more-efficient provision of the 
 energy service (lighting).
-%(It is a coincidence that $Re_{\macro}$ has the same value as $Re_{iinc}$to 1 decimal place for the lighting example.)
-%+++I commented out the last sentence and inserted 'coincidentally also' in line above, as its shorter and it doesnt need a line by itself.+++PEB 
 
 
 %++++++++++++++++++++++++++++++
@@ -3365,7 +3357,7 @@ Another 5 mpg boost in efficiency (to $\amacro{\eta} = 35$ mpg)
 will use $\aempl{E}_s = 2.86$ gal to drive 100 miles, 
 a further expected savings of only $\Sdot = 0.47$ gallons.
 Each successive 5 mpg boost in fuel economy 
-is expected to save less energy than the previous 5 mpg boost in fuel economy
+saves less energy than the previous 5 mpg boost in fuel economy.
 
 Saturation can be seen mathematically, too.
 Taking the limit as $\amacro{\eta} \rightarrow \infty$ 
@@ -3430,7 +3422,8 @@ the sensitivity analyses of Figs.~\ref{fig:all_Re_terms_C_cap_graph}--\ref{fig:a
 Thus, for the remaining sensitivity analyses, 
 when the rebound percentage increases (decreases), 
 the energy takeback rate in the numerator of Eq.~(\ref{eq:Re_takeback})
-increases (decreases) proportionally.
+increases (decreases) proportionally,
+and the actual energy savings rate decreases (increases) accordingly.
 
 
 <<eta_tilde_takeback_Sdot_sens_graph, echo=FALSE, fig.cap="Expected energy savings rate ($\\Sdot$, solid line) and takeback rate (dashed line) sensitivity to post-EEU efficiency ($\\amacro{\\eta}$). (Note different $x$- and $y$-axis scales.)", fig.width=6, fig.height=4>>=
@@ -3528,7 +3521,7 @@ to capital cost ($\amacro{C}_{cap}$) is shown
 in Fig.~\ref{fig:all_Re_terms_C_cap_graph}.
 All other things being equal,
 as capital cost of the EEU rises, 
-less cash is freed by the EEU,
+less net savings results from the emplacement effect,
 leading to smaller income, macro, and total rebound.
 The same effects would be observed
 with increasing maintenance and disposal cost rate ($\ramacro{C}_{\md}$).
@@ -3584,9 +3577,9 @@ Lamp_Germany_Re_tot <- rebound_results %>%
 
 The effect of energy price on rebound is shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}.
 Increasing energy prices lead to larger total rebound ($Re_{tot}$),
-because higher energy prices lead to more freed cash 
-to be re-spent by the device owner.
-All other things being equal, more freed cash leads to 
+because higher energy prices lead to more net savings ($\rasub{N}$)
+to be spent by the device owner.
+All other things being equal, more net savings leads to 
 more spending on other goods and services that demand energy.
 
 Fig.~\ref{fig:all_Re_terms_p_E_graph} also 
@@ -3683,7 +3676,8 @@ The effect is exponential, and
 total rebound increases with larger negative values of $\eqspsUC$, as expected.
 The lamp example also shows stronger exponential variation than the car example.
 The main reason that total rebound values 
-are different is the larger absolute value of elasticity ($\eqspsUC$) 
+are different between the two examples
+is the larger absolute value of elasticity ($\eqspsUC$) 
 for the lamp ($-0.4$) compared to the car ($-0.2$).
 Were the car to have the same elasticity as the lamp ($-0.4$), 
 total rebound would be approximately the same for both examples ($\sim 50$\%).
@@ -3691,7 +3685,7 @@ Fig.~\ref{fig:all_Re_terms_eps_graph} shows that direct substitution rebound
 ($Re_{dsub}$) is the most sensitive rebound component to changes in $\eqspsUC$.
 For the lamp example, indirect income rebound ($Re_{iinc}$) also increases
 substantially with $\eqspsUC$, 
-because freed cash increases substantially with $\eqspsUC$. 
+because net income increases substantially with $\eqspsUC$. 
 
 A limitation of the elasticity sensitivity study derives from limitations of the 
 CES utility model itself, which constrains price elasticity variation
