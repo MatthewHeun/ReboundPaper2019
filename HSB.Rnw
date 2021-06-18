@@ -3966,14 +3966,16 @@ substitution effect rebound ($Re_{sub}$) shrinks,
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 Second, a fossil-energy tax raises net financial savings earned 
 by device owners after emplacing the EEU.
-The net savings of the emplacement effect grows with the effective energy price,
+The gross savings of the emplacement effect grows with the effective energy price,
 driving higher income effect rebound ($Re_{inc}$).
 Higher energy prices lead to higher macro rebound ($Re_{macro}$), too, 
-due to increased savings from the emplacement effect, 
+again due to increased gross savings from the emplacement effect, 
 assuming a constant value for the product of the macro factor
 and the energy intensity of the economy ($k I_E$).
-Larger income and macro rebounds overwhelm the decrease in substitution rebound, 
-leading to higher overall rebound from a fossil-energy tax and effectively higher energy price,
+Larger income effect and macro effect rebounds overwhelm
+the decrease in substitution effect rebound, 
+leading to higher overall rebound from carbon pricing or a fossil-energy tax
+and effectively higher energy price,
 as shown in Fig.~\ref{fig:all_Re_terms_p_E_graph}. 
 But so long as backfire is avoided
 (i.e., total rebound remains less than 100\%),
@@ -3999,7 +4001,7 @@ with complementary policies
 to encourage use of efficient substitutes,
 such as public transport.
 
-If a fossil-energy tax reduces the energy intensity of the economy ($I_E$), 
+If carbon pricing or a fossil-energy tax reduces the energy intensity of the economy ($I_E$), 
 all rebound terms whose equations include $I_E$ will be affected.
 Thus, although the introduction of carbon prices or fossil-energy taxes
 can induce higher income effect rebound and higher macro effect rebound, 
@@ -4013,9 +4015,8 @@ absolute energy savings will occur.
 
 The rebound effects of fossil-energy taxes deserve further study,
 perhaps building on \citet{Chan2015}
-to untangle the web of interconnected dynamic effects
-among multiple fuel types.
-But such fossil-energy taxes could be an effective policy option
+to untangle the web of interconnected dynamic effects.
+But carbon pricing or fossil-energy taxes could be an effective policy option
 to reduce energy consumption, rebound effects, and CO$_2$ emissions.
 One note of caution:
 across-the-board fossil-energy taxes could raise further equity issues
