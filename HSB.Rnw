@@ -3994,7 +3994,7 @@ structural change toward an overall lower-energy-intensity economy.
 To avoid the price penalty, 
 additional consumers might buy other, more-efficient devices or consume substitutes
 both for the energy service and in other areas of life,
-thereby contributing to reducing the overall energy intensity of the economy ($I_E$).
+thereby contributing to reducing $I_E$.
 (See \citet{Hart2018} for a related discussion.)
 A less-energy-intensive economy could be further encouraged by policymakers 
 with complementary policies 
@@ -4012,15 +4012,24 @@ And any reduction in $I_E$ due to fossil-energy taxes
 will tend to reduce total rebound ($Re_{tot}$),
 increasing the likelihood that backfire will be avoided and
 absolute energy savings will occur.
+****
+We could add the following concluding sentence, 
+but it may weaken our framework.
+---MKH
+****
+Thus, total rebound estimated by this framework
+(which assumes static $I_E$)
+could provide an upper bound on rebound 
+with regard to carbon pricing or fossil-energy taxes.
 
-The rebound effects of fossil-energy taxes deserve further study,
+Carbon pricing or fossil-energy taxes are likely to be an effective policy option
+to reduce energy consumption, rebound effects, and CO$_2$ emissions.
+But the rebound effects of these policies deserve further study,
 perhaps building on \citet{Chan2015}
 to untangle the web of interconnected dynamic effects.
-But carbon pricing or fossil-energy taxes could be an effective policy option
-to reduce energy consumption, rebound effects, and CO$_2$ emissions.
 One note of caution:
-across-the-board fossil-energy taxes could raise further equity issues
-by limiting the ability of low-income groups to purchase energy \cite{Owen2020}. 
+across-the-board carbon pricing or fossil-energy taxes could raise further equity issues
+by limiting the ability of people in low-income groups to purchase energy \cite{Owen2020}. 
 To ameliorate inequities, progressive feebates could be implemented%
 \footnote{
   Feebates route energy tax revenues to lower-income EEU purchasers. 
