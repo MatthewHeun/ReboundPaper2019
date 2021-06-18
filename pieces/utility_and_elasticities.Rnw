@@ -62,10 +62,10 @@ For the car example in Section~\ref{sec:car_example},
 energy efficiency increases from 
 $\orig{\eta} = \Sexpr{mpg_worse}$~mpg to
 $\amacro{\eta} = \Sexpr{mpg_better}$~mpg, 
-a \Sexpr{eta_car_perc_improvement}~\% improvement.
+a \Sexpr{eta_car_perc_improvement}\% improvement.
 For the lamp example in Section~\ref{sec:lamp_example},
 energy efficiency increases by 
-\Sexpr{formatC(unlist(eta_lamp_perc_improvement))}~\%.
+\Sexpr{formatC(unlist(eta_lamp_perc_improvement))}\%.
 
 % For completeness,
 % we briefly mention a third utility model with Cobb-Douglas form.
@@ -268,7 +268,8 @@ a generic version of Eqs.~(\ref{eq:M_acct_orig}),
 with $p_s \rate{q}_s$ substituted for $p_E \rate{E}_s$.
 In a manner similar to derivations in
 Appendix~\ref{sec:pref_graph_constant_expenditure_lines}, 
-we solve for $\rate{C}_o$ and judiciously multiplying by $\rbempl{C}_o/\rbempl{C}_o$
+we solve for $\rate{C}_o$ and 
+judiciously multiply by $\rbempl{C}_o/\rbempl{C}_o$
 and $\rbempl{q}_s/\rbempl{q}_s$ to obtain
 
 \begin{equation}
@@ -294,7 +295,7 @@ is taken by inspection to be
 \end{equation}
 
 At any equilibrium point, the expenditure line must be tangent to its indifference curve.
-Applying the tangency (equal slope) requirement before emplacement enables 
+Applying the tangency requirement before emplacement enables 
 solving for the correct expression for $a$.
 Setting the slope of the expenditure line (Eq.~(\ref{eq:slope_expenditure_line}))
 equal to the slope of the indifference curve (Eq.~(\ref{eq:slope_indifference_curve})) gives
@@ -422,8 +423,8 @@ $\eqspsC$, $\eqopsC$, and $\sigma$.
 The approximate utility model requires 
 the compensated price elasticity of energy service demand ($\eqspsC$) and
 the compensated cross-price elasticity of energy service demand ($\eqopsC$).
-The CES utility model requires the elasticity of substitution
-between energy service consumption and other goods consumption ($\sigma$).
+The CES utility model requires the elasticity of substitution ($\sigma$)
+between energy service consumption and other goods consumption.
 Because the uncompensated price elasticity of energy service 
 demand ($\eqspsUC$) tends to be more widely estimated,
 e.g.\ in studies about driver behavior \citep{Gillingham:2020aa}, 
