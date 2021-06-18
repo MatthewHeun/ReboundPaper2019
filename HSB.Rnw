@@ -123,17 +123,19 @@ energy reductions via behavior changes and economic effects.
 If rebound effects are larger than typically assumed, 
 efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
+The investigation of rebound effects is therefore a continued high priority. 
 % The problem
 An operationalized rebound analysis framework is needed
-to study non-marginal energy efficiency changes
-for specific energy efficiency upgrades, 
+to study energy efficiency upgrades 
+for specific energy conversion devices, 
 one that discriminates among all rebound effects
 in energy, expenditure, and consumption spaces
 with a detailed model of consumer responses 
 for non-marginal energy efficiency changes.
 % Our response
 In response, 
-we develop a comprehensive rebound analysis framework that 
+we develop a comprehensive, partial equilibrium 
+rebound analysis framework that 
 employs a constant elasticity of substitution utility model to 
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
@@ -321,7 +323,12 @@ rebound frameworks should be comprehensive,
 accounting for all rebound effects
 in energy, expenditure, and consumption spaces
 with a detailed model of consumer responses 
-to non-marginal energy efficiency changes.
+to non-marginal energy efficiency changes%
+\footnote{
+  Note that non-marginal (i.e., large) energy efficiency gains are quite common
+  but missing from previous rebound analysis frameworks.
+  See Section~\ref{sec:non_marginal_changes}.
+}.
 
 In the subsections that follow, 
 rebound frameworks are further elucidated, 
@@ -391,8 +398,8 @@ Macroeconomic rebound involves various short- and long-run effects.
 
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
-account for all effects, locations, and scales.
-Everything links together!
+account for all effects, locations, and scales, because
+everything links together.
 The emplacement effect
 frees the device owner's cash to be spent in the income effect,
 with energy implications.
@@ -459,7 +466,8 @@ These two effects allow for a more nuanced understanding of behavior
 for different commodities and preferences.
 Decomposition into substitution and income effects 
 has become the standard approach to analyzing
-direct and indirect rebound effects at the microeconomic scale.
+direct and indirect rebound effects 
+at the microeconomic scale~\citep{greening2000}.
 
 %------------------------------
 \subsubsection{Non-marginal energy efficiency changes} 
@@ -467,11 +475,11 @@ direct and indirect rebound effects at the microeconomic scale.
 %------------------------------
 
 A comprehensive rebound framework will allow non-marginal efficiency changes,
-because EEUs often involve a very large percentage increase in energy efficiency.
+because EEUs often involve a large percentage increase in energy efficiency.
 A good example of non-marginal energy efficiency changes is 
 replacing incandescent lamps with Light Emitting Diode (LED) lamps, 
 as discussed in Section~\ref{sec:lamp_example}.
-For such EEUs, energy efficiency can increase by nearly a factor of 10!
+For such EEUs, energy efficiency can increase by nearly a factor of 10.
 
 
 %------------------------------
@@ -494,12 +502,12 @@ by extension, substitution and income effects.
 \label{sec:previous_frameworks}
 %++++++++++++++++++++++++++++++
 
-Bringing together the high stakes of energy efficiency 
+Bringing together the importance of energy efficiency 
 \emph{vis-\`{a}-vis} emissions reduction goals
 and the desirable characteristics of rebound frameworks discussed above,
-we see that comprehensive rebound frameworks are needed for 
-developing energy efficiency policy to meet emissions targets. 
-I.e., effective policy should be informed by rebound analyses conducted within
+we see that comprehensive rebound frameworks are needed to help develop 
+energy efficiency policy to meet emissions targets. 
+I.e.\ effective policy should be informed by rebound analyses conducted within
 a comprehensive framework.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
@@ -543,13 +551,9 @@ allowance for non-marginal energy efficiency changes; and
 operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
-
 Table~\ref{tab:previous_frameworks} contains our evaluation 
 of selected recent partial equilibrium frameworks (in columns)
 relative to the characteristics discussed above (in rows).
-Empty (white) circles indicate no treatment of a subject by a framework. 
-Partially and fully filled circles indicate 
-partial and comprehensive treatment of a subject by a framework.
 
 \renewcommand{\arraystretch}{0.6}
 
@@ -989,17 +993,17 @@ segments and rebound effects for all rebound path graphs.
   \toprule
   Segment      & Rebound effect            & Symbol          & Equation \\
   \midrule
-  \circa{}     & Direct emplacement        & $Re_{dempl}$    & \ref{eq:Re_dempl0} \\
-  \ab{}        & Embodied energy           & $Re_{emb}$      & \ref{eq:Re_emb} \\
-  \bstar{}     & Maintenance and disposal  & $Re_{\md}$      & \ref{eq:Re_md} \\
+  \circa{}     & Direct emplacement        & $Re_{dempl}$    & (\ref{eq:Re_dempl0}) \\
+  \ab{}        & Embodied energy           & $Re_{emb}$      & (\ref{eq:Re_emb}) \\
+  \bstar{}     & Maintenance and disposal  & $Re_{\md}$      & (\ref{eq:Re_md}) \\
   \midrule
-  \starc{}     & Indirect substitution     & $Re_{isub}$     & \ref{eq:Re_isub_CES} \\ 
-  \chat{}      & Direct substitution       & $Re_{dsub}$     & \ref{eq:Re_dsub_CES} \\ 
+  \starc{}     & Indirect substitution     & $Re_{isub}$     & (\ref{eq:Re_isub_CES}) \\ 
+  \chat{}      & Direct substitution       & $Re_{dsub}$     & (\ref{eq:Re_dsub_CES}) \\ 
   \midrule
-  \hatd{}      & Direct income             & $Re_{dinc}$     & \ref{eq:Re_dinc} \\ 
-  \dbar{}      & Indirect income           & $Re_{iinc}$     & \ref{eq:Re_iinc} \\ 
+  \hatd{}      & Direct income             & $Re_{dinc}$     & (\ref{eq:Re_dinc}) \\ 
+  \dbar{}      & Indirect income           & $Re_{iinc}$     & (\ref{eq:Re_iinc}) \\ 
   \midrule
-  \bartilde{}  & Macro                     & $Re_{macro}$    & \ref{eq:Re_macro_def} \\
+  \bartilde{}  & Macro                     & $Re_{macro}$    & (\ref{eq:Re_macro_def}) \\
   \bottomrule
 \end{tabular}
 \label{tab:path_graph_segments}
@@ -1441,7 +1445,7 @@ they could move in opposite directions,
 depending on the results of the independent analyses for 
 embodied energy and capital cost rates.
 
-Consistent with the energy/exergy analysis literature, 
+Consistent with the energy analysis literature, 
 we define embodied energy 
 to be the sum of all energy (direct and indirect) 
 consumed in the production of the energy conversion device.
@@ -1648,7 +1652,9 @@ The device owner's utility
 is determined by
 the consumption rate of the energy service ($\rate{q}_s$) and
 the consumption rate of other goods and services ($\rate{C}_o$).
-The share parameter ($\fCs$) is taken from the original (pre-EEU) consumption basket.
+The share parameter ($\fCs$) 
+between $\rate{q}_s$ and $\rate{C}_o$
+is taken from the original (pre-EEU) consumption basket.
 The exponent $\rho$ is calculated from the (constant) elasticity of substitution ($\sigma$) 
 as $\rho \equiv (\sigma - 1)/\sigma$.
 All quantities are normalized to pre-EEU values so that
