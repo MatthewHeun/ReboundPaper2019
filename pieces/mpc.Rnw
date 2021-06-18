@@ -43,8 +43,8 @@ Canceling $\rasub{N}$ and simplifying the infinite series to its converged fract
 %
 Solving for $k$ yields
 
-\begin{equation} \label{eq:mpc_and_k_converged}
-  k = \frac{1}{\frac{1}{\MPC} - 1} \; .
+\begin{equation}
+  k = \frac{1}{\frac{1}{\MPC} - 1} \; .  \tag{\ref{eq:mpc_and_k_converged}}
 \end{equation}
 
 With $\MPC = 0.5$, as in Section~\ref{sec:macro_effect_main_paper}, 

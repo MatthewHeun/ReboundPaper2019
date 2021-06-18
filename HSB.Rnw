@@ -1965,7 +1965,7 @@ Our framework incorporates annual average effects over
 the lifetime of the upgraded device, 
 so dynamic effects that take time to unfold matter.
 To describe all the mechanisms by which these dynamic effects operate, 
-the literature distinguishes among several macro rebound effects:
+the literature distinguishes among several macro rebound effects, including
 a scale effect, a structural change effect, employment and investment effects, 
 and further price effects \citep{Colmenares2020,Brockway2021}.
 As \citet{VanBenthem2015} notes, 
@@ -2007,7 +2007,8 @@ by a macro factor ($k$) that represents the economic activity generated
 by the infinite series of respending of net savings ($\rasub{N}$)
 throughout the economy%
 \footnote{
-  $k$ has units of \$ of economic growth created per \$ of spending 
+  The macro factor ($k$) appears unitless,
+  but its units are actually \$ of economic growth created per \$ of spending 
   by the device owner in the income effect ($\rbinc{N}$).
 }.
 %
@@ -2022,8 +2023,14 @@ $k = 0$ means there is no dynamic effect
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
 with consequent implications for additional energy consumption in the economy.
-(See Appendix~\ref{sec:income_macro_mpc} 
-for the mathematical relationship between $k$ and $\MPC$.)
+The relationship between $k$ and $\MPC$ is given by
+
+\begin{equation} \label{eq:mpc_and_k_converged}
+  k = \frac{1}{\frac{1}{\MPC} - 1} \; .
+\end{equation}
+%
+(See Appendix~\ref{sec:income_macro_mpc} for the derivation 
+of Eq.~\ref{eq:mpc_and_k_converged}.)
 
 A further advantage of using the $\MPC$ approach is that there are
 many estimates of its magnitude, though we stress again that  $\MPC$ is a
@@ -2665,7 +2672,7 @@ positive, as expected (\Sexpr{Re_dsub_car_char_perc}\%).
 The car owner will, on average, prefer more driving, 
 because of fuel economy enhancements (\Sexpr{mpg_better}~mpg $>$ \Sexpr{mpg_worse}~mpg).
 In other words, with no other changes, 
-the more fuel efficient car increases driving by \Sexpr{Re_dsub_car_char_perc}\%. 
+the more fuel efficient car is driven \Sexpr{Re_dsub_car_char_perc}\% further per year. 
 Conversely, the indirect substitution effect ($Re_{isub}$)
 is slightly negative ($\Sexpr{Re_isub_car_char_perc}$\%)
 to achieve the same level of utility after increased driving. 
@@ -2765,7 +2772,7 @@ in terms of energy service delivery (measured in lumen output per lamp),
 the key difference being the energy required to provide that energy service. 
 The LED lamp has a low 
 initial capital investment rate
-(less than the incumbent incandescent lamp, actually!)
+(less than the incumbent incandescent lamp, actually)
 and a long-term benefit of decreased direct energy expenditures
 at the same annual energy service (lm-hr/year).
 
@@ -3241,9 +3248,10 @@ Rebound due to the maintenance and disposal effect
 because we assume no difference in maintenance and disposal costs between 
 the incandescent lamp and the LED lamp%
 \footnote{
-  Maintenance cost rates for both incandescent and LED lamps are likely to be equal, because both are negligible;
+  Maintenance cost rates for both incandescent and LED lamps are likely to be equal 
+  and negligible;
   lamps are usually installed and forgotten.
-  Real world disposal cost differences between the incandescent and LED technologies
+  Real-world disposal cost differences between the incandescent and LED technologies
   are also likely to be negligible. 
   However, if ``disposal'' includes recycling processes, 
   cost rates may be different between the two technologies
@@ -3380,7 +3388,7 @@ the difference being that
 the LED lamp is already much more efficient than the incandescent lamp
 (\Sexpr{lamp_efficacy_ratio}$\times$),
 whereas the hybrid car is only 
-\Sexpr{car_efficiency_ratio}$\times$ as efficient as the conventional gasoline car. 
+\Sexpr{car_efficiency_ratio}$\times$ more efficient than the conventional gasoline car. 
 Thus, at $\amacro{\eta} = \Sexpr{efficacy_better}$ lm-hr/W-hr, 
 the energy efficient LED
 is far closer to efficiency saturation than the hybrid vehicle 
