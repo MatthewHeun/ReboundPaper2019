@@ -3461,9 +3461,9 @@ sensitivity_graphs(.parametric_data = eta_sens_data,
   ggplot2::facet_wrap(facets = "Case", scales = "free") +
   ggplot2::scale_x_continuous(labels = eta_tilde_formatter) +
   ggplot2::scale_y_continuous(limits = c(0, NA)) +
-  ggplot2::scale_colour_manual(values = c(S_dot_dev = "black", takeback = "black"), guide = FALSE) + 
-  ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = FALSE) + 
-  ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = FALSE) +
+  ggplot2::scale_colour_manual(values = c(S_dot_dev = "black", takeback = "black"), guide = "none") + 
+  ggplot2::scale_size_manual(values = c(S_dot_dev = 0.5, takeback = 0.5), guide = "none") + 
+  ggplot2::scale_linetype_manual(values = c(S_dot_dev = "solid", takeback = "dashed"), guide = "none") +
   ggplot2::labs(x = expression(tilde(eta)*" [mpg (Car) or lm-hr/W-hr (Lamp)]"),
                 y = expression("Takeback rate and "*dot(S)[dev]*" [MJ/yr]"),
                 colour = ggplot2::element_blank(),
