@@ -3797,7 +3797,8 @@ In Section~\ref{sec:aim_contribution_structure},
 we claimed three contributions.
 Here, we reiterate and discuss each.
 
-First, we have developed the first comprehensive rebound analysis framework to include
+First, we believe we have developed 
+the first comprehensive rebound analysis framework to include
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
@@ -4026,11 +4027,6 @@ And any reduction in $I_E$ due to fossil-energy taxes
 will tend to reduce total rebound ($Re_{tot}$),
 increasing the likelihood that backfire will be avoided and
 absolute energy savings will occur.
-****
-We could add the following concluding sentence, 
-but it may weaken our framework.
----MKH
-****
 Thus, total rebound estimated by this framework
 (which assumes static $I_E$)
 could provide an upper bound on rebound
@@ -4122,7 +4118,7 @@ average total rebound ($Re_{tot}$) of \Sexpr{Re_tot_expected*100}\%%
   52\% and 77\% for the U.S.\ for plausible values
   of the elasticity of substitution.
   \citet{Berner2021} report 78\% to 101\% for several Western European countries and the U.S.\
-  after two years.
+  two years after an income shock.
 }.
 %
 The calibrated values of $k$ that give identical $Re_{tot} = \Sexpr{Re_tot_expected*100}$\% 
@@ -4249,7 +4245,7 @@ Future work could be pursued in several areas.
         rebound effects in a variety of real-life EEUs.
 
   \item Deeper study of macro rebound is needed, including improved estimates 
-        for the macro factor ($k$) and its relation to $\MPC$.
+        for the macro factor ($k$) and its relation to the MPC.
         
   \item The rebound implications of the distribution of $\MPC$ values 
         across socioeconomic groups~\citep{Carroll2017}

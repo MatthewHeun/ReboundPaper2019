@@ -56,7 +56,7 @@ in this framework.
 Furthermore,
 the CES utility model is needed for 
 the example EEUs in this paper,
-which have very large, non-marginal
+which have large, non-marginal
 percentage increases in energy efficiency.
 For the car example in Section~\ref{sec:car_example}, 
 energy efficiency increases from 
