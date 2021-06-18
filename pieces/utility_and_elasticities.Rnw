@@ -424,7 +424,7 @@ the compensated price elasticity of energy service demand ($\eqspsC$) and
 the compensated cross-price elasticity of energy service demand ($\eqopsC$).
 The CES utility model requires the elasticity of substitution
 between energy service consumption and other goods consumption ($\sigma$).
-Because the \emph{un}compensated price elasticity of energy service 
+Because the uncompensated price elasticity of energy service 
 demand ($\eqspsUC$) tends to be more widely estimated,
 e.g.\ in studies about driver behavior \citep{Gillingham:2020aa}, 
 the usual approach is to use $\eqspsUC$ and the Slutsky equation to derive the compensated

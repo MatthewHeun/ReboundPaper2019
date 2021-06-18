@@ -3298,7 +3298,7 @@ Key rebound parameters include
 post-EEU efficiency ($\amacro{\eta}$),
 capital cost ($\amacro{C}_{cap}$),
 energy price ($p_E$),
-price elasticity of energy service demand ($\eqspsUC$), 
+uncompensated price elasticity of energy service demand ($\eqspsUC$), 
 and the macro factor ($k$).
 Sensitivity analyses must be undertaken carefully,
 because rebound parameters are not expected to be 
