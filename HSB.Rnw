@@ -1576,21 +1576,21 @@ Thus, two terms comprise substitution effect rebound,
 direct substitution rebound ($Re_{dsub}$) and
 indirect substitution rebound ($Re_{isub}$).
 The substitution effect is shown by segments
-\starc{} (indirect component) and \chat{} (direct component) 
+\starc{} (the indirect component) and \chat{} (the direct component) 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 
 The substitution effect is best described 
 with reference to a consumption path graph (Fig.~\ref{fig:ExampleConsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
-is represented by the $\circ$ point, and 
-the expenditure isoquant, the budget constraint, is \circcirc{}.
+is represented by the $\circ$ point. 
+The expenditure isoquant, the budget constraint, is shown as isoquant \circcirc{}.
 The \circcirc{} line is tangent to the lower indifference curve 
 (\iicirc{}) at point $\circ$, the optimal consumption
 bundle prior to the EEU.
 After emplacement of the more efficient device
 (but before the substitution effect), 
-the price of the energy service decreases ($\aempl{p}_s < \bempl{p}_s$),
-pivoting the budget constraint counterclockwise around the y-axis intercept.
+the price of the energy service decreases ($\bempl{p}_s > \aempl{p}_s$),
+pivoting the budget constraint counterclockwise at the $\circ$ point.
 The budget line \starstar{} indicates the
 cost of purchasing the original consumption bundle
 at the new prices.
@@ -1600,11 +1600,11 @@ This compensating variation
 translates into a lower budget constraint \hathat{} 
 in Fig.~\ref{fig:ExampleConsPathGraph}.
 The $\wedge$ point shows consumption with new prices yielding utility
-at the level prior to the EEU and minimizing expenditure, 
+at the same level prior to the EEU and minimizing expenditure, 
 by consuming more of the now-lower-cost energy service
-and less of the relatively more costly other goods.
+and less of the now-relatively-more-expensive other goods.
 
-Rebound from the substitution effect can also be decomposed into 
+Rebound from the substitution effect is typically decomposed into 
 indirect (the decrease in other goods consumption, segment \starc{}) 
 and 
 direct (the increase in energy service consumption, segment \chat{})
@@ -1636,7 +1636,7 @@ to vary along an indifference curve,
 allowing analysis of non-marginal energy service price changes ($\orig{p}_s >\!\!> \aempl{p}_s$). 
 We employ a fully specified CES utility model,
 which allows the direct calculation
-of the utility maximizing consumption bundle for any constraint.
+of the utility-maximizing consumption bundle for any constraint.
 The utility model describes the device owner's behavior as
 
 \begin{equation} \label{eq:ces_utility}
@@ -1699,7 +1699,8 @@ assuming the CES utility model%
   $\rasub{q}_s/\rorig{q}_s$ and
   $\rasub{C}_o/\rorig{C}_o$
   must be determined
-  and substituted into Eqs.~\ref{eq:Re_dsub_prelim} and~\ref{eq:Re_isub_prelim}.
+  and substituted into Eqs.~\ref{eq:Re_dsub_prelim} and~\ref{eq:Re_isub_prelim}, 
+  respectively.
 }.
 The results are
 
@@ -1749,7 +1750,7 @@ $\rbempl{M} = \raempl{M} = \rasub{M} = \rainc{M} = \ramacro{M}$.
 Thanks to the energy service price decline, real income rises, 
 and freed cash from the EEU is given by Eq.~(\ref{eq:G_dot})
 as $\rate{G} = p_E \Sdot$. 
-Emplacement effect expenditures and compensating variation
+Emplacement effect adjustments and compensating variation
 modify freed cash to leave the device owner with
 \emph{net} savings ($\rasub{N}$) from the EEU,
 as shown in Eq.~(\ref{eq:N_dot_after_sub}).
@@ -1781,9 +1782,9 @@ A second constraint is that net savings are spent completely on
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item additional spending on the energy service ($\rainc{q}_s > \rbinc{q}_s$, segment \hatd{}) and
+  \item additional spending on the energy service ($\rbinc{q}_s < \rainc{q}_s$, segment \hatd{}) and
   
-  \item additional spending on other goods ($\rainc{q}_o > \rbinc{q}_o$, segment \dbar{}).
+  \item additional spending on other goods ($\rbinc{q}_o < \rainc{q}_o$, segment \dbar{}).
     
 \end{enumerate*}
 %
@@ -1803,10 +1804,11 @@ points ($\wedge$ and $-$, respectively)
 lie along ray \rr{} from the origin through point $\wedge$ in Fig.~\ref{fig:ExampleConsPathGraph}.
 However, this framework could accommodate non-homothetic preferences
 for spending across the income effect (turning the income
-expansion path into a more general curve).
+expansion path into a more-general curve).
 
 We next show expressions for 
 direct and indirect income effect rebound.
+
 
 %..............................
 \paragraph{Direct income effect} 
@@ -1827,8 +1829,7 @@ The ratio of rates of energy service consumed across the income effect is given 
   \incprefseqn \; .
 \end{equation}
 %
-Homotheticity means that $\eqsM = 1$, 
-but not all net savings ($\rbinc{N}$) are spent on more energy for the energy conversion device.
+Homotheticity means that $\eqsM = 1$. 
 The increased consumption rate of the energy service is 
 represented by segments \hatd{} 
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
@@ -1863,13 +1864,10 @@ If there is no net savings after the substitution effect ($\rasub{N} = 0$),
 direct income effect rebound is zero ($Re_{dinc} = 0$), as expected%
 \footnote{
   Zero net savings ($\rasub{N} = 0$) could occur if 
-  an increase in capital cost rate ($\Delta \raempl{C}_{cap}$) and
-  maintenance and disposal cost rate ($\Delta \raempl{C}_{\md}$)
-  consume all freed cash ($\rate{G}$) and savings from the compensating variation.
+  increases in the capital cost rate ($\Delta \raempl{C}_{cap}$) and/or
+  the maintenance and disposal cost rate ($\Delta \raempl{C}_{\md}$)
+  consume all freed cash ($\rate{G}$) plus savings from the compensating variation.
 }.
-%
-See Appendix~\ref{sec:Re_inc} for details of the derivation
-of income effect rebound.
 
 
 %..............................
@@ -1877,9 +1875,10 @@ of income effect rebound.
 \label{sec:indirect_income_effect}
 %..............................
 
+But not all net savings ($\rbinc{N}$) are spent on more energy for the energy conversion device.
 The income elasticity of other goods demand ($\eqoM$)
 quantifies the amount of net savings spent 
-on additional other goods ($\rainc{q}_o > \rbinc{q}_o$).
+on additional other goods ($\rbinc{q}_o < \rainc{q}_o$).
 Spending of net savings on other goods and services
 leads to indirect income effect rebound ($Re_{iinc}$).
 
@@ -1916,7 +1915,7 @@ the expression for indirect income rebound is
 \end{equation}
 %
 See Appendix~\ref{sec:Re_inc} for details of the derivation
-of cirect and indirect income effect rebound.
+of direct and indirect income effect rebound.
 
 
 %------------------------------
