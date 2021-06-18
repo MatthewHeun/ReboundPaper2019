@@ -1820,7 +1820,7 @@ quantifies the amount of net savings spent
 on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
 (See Appendix~\ref{sec:utility_and_elasticities} 
 for additional information about elasticities.)
-Spending of net savings on the energy service 
+Spending of net savings on additional energy service 
 leads to direct income effect rebound ($Re_{dinc}$).
 
 The ratio of rates of energy service consumed across the income effect is given by
@@ -1879,7 +1879,7 @@ But not all net savings ($\rbinc{N}$) are spent on more energy for the energy co
 The income elasticity of other goods demand ($\eqoM$)
 quantifies the amount of net savings spent 
 on additional other goods ($\rbinc{q}_o < \rainc{q}_o$).
-Spending of net savings on other goods and services
+Spending of net savings on additional other goods and services
 leads to indirect income effect rebound ($Re_{iinc}$).
 
 The ratio of rates of other goods consumed across the income effect is given by
@@ -1925,8 +1925,8 @@ of direct and indirect income effect rebound.
 
 The previous rebound effects 
 (emplacement effect, substitution effect, and income effect)
-are microeconomic in nature. 
-However, the changes at the micro level have important implications at the macro level,
+occur at the microeconomic scale. 
+However, the changes at the microeconomic scale have important implications at the macroeconomic scale,
 including economic expansion.
 As the price level in the economy falls, 
 demand for goods grows, and the economy grows. 
@@ -1939,20 +1939,22 @@ scaled by that part's share in gross output~\citep{Hulten1978}.
 %
 \begin{enumerate*}[label={(\roman*)}]
 	
-  \item show that Hulten's theorem also applies to factor-augmenting technical change and
+  \item show that \citeauthor{Hulten1978}'s theorem also applies to factor-augmenting technical change and
   
   \item express rebound as a scale effect.
     
 \end{enumerate*}
 
-However, the scale effect is static and does not account for
+However, \citeauthor{Hulten1978}'s scale effect is static and does not account for
 dynamic, long-run effects induced by the EEU%
 \footnote{
   In fact, considerable empirical evidence in the context
   of critiquing real business cycle models shows that
-  short-run effects of technological improvements on inputs (in that literature: labor)
+  short-run effects of technological improvements on inputs 
+  (in that literature, labor)
   are contractionary \citep{Basu2006,Ramey2016hb}.
 }.
+%
 Our framework incorporates annual average effects over 
 the lifetime of the upgraded device, 
 so dynamic effects that take time to unfold matter.
@@ -1978,7 +1980,8 @@ is not an autonomous expansion of expenditure in an otherwise unchanged economy
 (like the Keynesian multiplier).
 Rather, macroeconomic rebound is caused by an energy productivity improvement,
 a supply-side shock.
-It takes less energy to generate the same economic output, because 
+After the EEU, 
+it takes less energy to generate the same economic output, because 
 energy efficiency has improved.
 That said, \citeauthor{Borenstein:2015aa} is right to highlight that supply-side 
 and demand-side effects both play a role as the consequences of the
@@ -1989,21 +1992,23 @@ linked to our income effect and its consequences for macroeconomic rebound.
 savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is unexplored territory.
 
-One contribution of this paper is the first 
-operationalization of the macro rebound multiplier idea.
+Another novel contribution of this paper
+(in addition to the framework itself and rebound path graphs)
+is the first operationalization of the macro rebound multiplier idea.
 To operationalize the macro rebound effect, we scale
-the net savings gained by the device owner at the micro level ($\rasub{N}$)
+the net savings gained by the device owner at the microeconomic scale ($\rasub{N}$)
 by a macro factor ($k$) that represents the economic activity generated
-by the infinite series of respending of the net savings throughout the economy%
+by the infinite series of respending of net savings ($\rasub{N}$)
+throughout the economy%
 \footnote{
   $k$ has units of \$ of economic growth created per \$ of spending 
   by the device owner in the income effect ($\rbinc{N}$).
 }.
 %
 The macro factor ($k$) can be likened to 
-the total respending derived from
+the total respending described by
 a marginal propensity to consume ($\MPC$).
-$k$ represents spending in the broader economy 
+$k$ represents respending in the broader economy 
 after the income effect has occurred
 and is not tied to any particular EEU or economic sector.
 $k \ge 0$ is expected.
@@ -2024,9 +2029,9 @@ with the full range estimates spanning zero to 0.9.
 For now, we choose $\MPC = 0.5$ and $k = 1$ as a placeholder value,
 with further exploration of the macro effect
 in Sections~\ref{sec:effect_of_macro_factor} 
-and~\ref{sec:macro_rebound_discussion}.
+and~\ref{sec:calibrating_k}.
 We assume as a first approximation
-(and with \citet{Antal:2014aa} and \citet{Borenstein:2015aa}) that macro effect spending
+(following \citet{Antal:2014aa} and \citet{Borenstein:2015aa}) that macro effect respending
 implies energy consumption according to 
 the average energy intensity of the economy ($I_E$).
 Macro rebound is given by
@@ -2095,7 +2100,7 @@ the link between macroeconomic and microeconomic rebound
 is largely unexplored. 
 For now, we assume a placeholder value of $k = 1$ for both case studies.
 We return to the matter of calibrating $k$
-in the Discussion (Section~\ref{sec:discussion}).
+in the Discussion (Section~\ref{sec:calibrating_k}).
  
 
 %++++++++++++++++++++++++++++++
