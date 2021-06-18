@@ -4349,14 +4349,14 @@ can be found at \url{https://github.com/MatthewHeun/ReboundTools}.
 Paul Brockway’s time was funded by the UK Research and Innovation (UKRI) 
 Council, supported under EPSRC Fellowship award EP/R024254/1.
 The authors are grateful for comments from internal reviewers
-Fred Haan, Becky Haney, and Jeremy Van Antwerp (Calvin University); 
+Becky Haney and Jeremy Van Antwerp (Calvin University); 
 Nathan Chan (University of Massachusetts at Amherst); and 
 Zeke Marshall (University of Leeds).
 The authors benefitted from discussions with 
 Daniele Girardi (University of Massachusetts at Amherst) and 
 Christopher Blackburn (Bureau of Economic Analysis).
 Finally, the authors thank the students of MKH's Fall 2019 
-Thermal Systems Design course (ENGR333) 
+Thermal Systems Design course (ENGR333) at Calvin University
 who studied energy rebound of many energy conversion devices
 using an early version of this framework.
 
