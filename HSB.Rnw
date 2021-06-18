@@ -959,7 +959,7 @@ Important quantities for the path graphs are
     
 \end{enumerate*}
 In rebound path graphs, direct effects are placed on the $x$-axis, and 
-indirect effects are placed placed on the $y$-axis.
+indirect effects are placed on the $y$-axis.
 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
 notional rebound path graphs on the energy, expenditure, and consumption spaces.
