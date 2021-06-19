@@ -140,7 +140,7 @@ employs a constant elasticity of substitution utility model to
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macro factor to link
-macroeconomic to microeconomic rebound effects.
+macroeconomic to microeconomic rebound scales.
 A sequence of novel graphs shows rebound paths through 
 energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
@@ -370,7 +370,7 @@ The emplacement effect of an EEU includes
 The substitution effect accounts for behavior changes across the EEU,
 typically increased use of the upgraded device and decreased consumption of other goods due to relative price changes,
 assuming no change in device owner utility.
-The emplacement and substitution effects create net monetary savings
+The emplacement and substitution effects create net financial savings
 which are spent by the device owner 
 in the income effect on more of the energy service and 
 more other goods and services. 
@@ -466,7 +466,7 @@ These two effects allow for a more nuanced understanding of behavior
 for different commodities and preferences.
 Decomposition into substitution and income effects 
 has become the standard approach to analyzing
-direct and indirect rebound effects 
+direct and indirect rebound locations 
 at the microeconomic scale~\citep{greening2000}.
 
 %------------------------------
@@ -559,9 +559,10 @@ relative to the characteristics discussed above (in rows).
 
 \input{pieces/prev_frameworks_table.tex}
 
-Because all frameworks look at decreasing energy consumption from the EEU,
-the ``Direct emplacement effect'' row contains \rating{50} or better
-for all previous frameworks.
+Because all frameworks evaluate the expected decrease 
+in direct energy consumption from the EEU,
+the ``Direct emplacement effect'' row contains \rating{100} 
+in each column.
 Three early papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
 earning high marks (\rating{100}) in the ``Operationality'' row. 
