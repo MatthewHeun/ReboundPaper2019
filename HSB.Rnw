@@ -588,7 +588,7 @@ nested utility functions with intermediate inputs.
 However, neither framework exhibits operationality,
 earning \rating{0} in the last row of Table~\ref{tab:previous_frameworks}. 
 In the middle of the table (and between the other studies in time), 
-the \citet{Borenstein:2015aa} framework 
+the framework by \citet{Borenstein:2015aa}
 touches on nearly all important characteristics.
 However, the \citeauthor{Borenstein:2015aa} framework
 cannot separate substitution and income effects cleanly in empirical analysis, 
@@ -623,7 +623,8 @@ No other frameworks even discuss the link between macro and micro rebound effect
 leading to \rating{0} in the ``Macro effect'' row for all other previous frameworks. 
 Finally, all previous frameworks assume constant price elasticities and
 implicitly ``marginal'' or small improvements in efficiency, 
-excluding the analysis of important non-incremental upgrades. 
+excluding the analysis of important non-incremental upgrades
+where price elasticities are likely to vary. 
 Therefore, all previous frameworks earn \rating{0} in the 
 ``Non-marginal energy service price changes'' row.
 
@@ -677,9 +678,11 @@ The key \emph{contributions} of this paper are
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item developing the first (to our knowledge)
-        comprehensive rebound analysis framework
-        that accommodates non-marginal energy service price decreases
-        and non-marginal energy efficiency increases,
+        comprehensive rebound analysis framework that accommodates 
+        embodied energy effects, 
+        maintenance and disposal effects, 
+        non-marginal energy efficiency increases, and 
+        non-marginal energy service price decreases, 
 
   \item providing the first (to our knowledge) visualizations of rebound effects
         in energy, expenditure, and consumption spaces, and 
