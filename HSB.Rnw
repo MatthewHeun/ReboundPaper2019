@@ -685,10 +685,13 @@ The key \emph{contributions} of this paper are
         non-marginal energy service price decreases, 
 
   \item providing the first (to our knowledge) visualizations of rebound effects
-        in energy, expenditure, and consumption spaces, and 
+        in energy, expenditure, and consumption spaces,  
         
   \item creating the first (to our knowledge) operationalized link between 
-        rebound effects on microeconomic and macroeconomic scales. 
+        rebound effects on microeconomic and macroeconomic scales, and 
+        
+  \item providing tools for other researchers to 
+        calculate rebound for other EEUs with our framework.
   
 \end{enumerate*}
 
@@ -810,7 +813,7 @@ The final energy price ($p_E$) is assumed exogenous
 so the final energy purchaser (the device owner) is a price taker%
 \footnote{
   Relaxing the exogenous final energy price assumption
-  would require a full-economy model that is beyond the scope of this paper.
+  would require a general equilibrium model that is beyond the scope of this paper.
   Rebound due to energy price change is included in the macro effect.
 }.
 %
@@ -966,8 +969,9 @@ Important quantities for the path graphs are
   \item the expenditure rate on other consumption goods ($\rate{C}_o$).
     
 \end{enumerate*}
-In rebound path graphs, direct effects are placed on the $x$-axis, and 
-indirect effects are placed on the $y$-axis.
+%
+In rebound path graphs, effects at the direct location are placed on the $x$-axis, and 
+effects at the indirect location are placed on the $y$-axis.
 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
 notional rebound path graphs on the energy, expenditure, and consumption spaces.
@@ -989,6 +993,9 @@ indicate energy consumption isoquants
 (sum of direct and indirect components) at key points.
 Table~\ref{tab:path_graph_segments} shows 
 segments and rebound effects for all rebound path graphs.
+Note that segment \bartilde{} appears only on energy path graphs, 
+because the framework tracks energy consumption but not expenditures or consumption
+in the macro effect.
 
 \begin{table}
 \centering % Centered table
@@ -1027,8 +1034,8 @@ Iso-cost loci of other goods and energy service demand (budget constraints)
 are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
-Note that stages $\circ$, $a$, $b$, and $*$ collapse to the same point
-on the consumption path graph, because both
+Note that points $\circ$, $a$, $b$, and $*$ collapse together
+on consumption path graphs, because both
 the rate of energy service consumption and 
 the rate of other goods consumption are
 unchanged across the emplacement effect
@@ -1303,7 +1310,7 @@ The four rebound effects shown in the rebound path graphs
 (emplacement, substitution, income, and macro)
 are discussed in subsections below.
 In each subsection, we
-define each rebound effect and
+define each effect and
 show mathematical expressions for rebound ($Re$) caused by each effect.
 The notional rebound path graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph})
@@ -1395,7 +1402,7 @@ The region below and to the left of the $Re_{tot} = 0\%$ line
 in Fig.~\ref{fig:ExampleEnergyPathGraph}
 exhibits negative rebound, indicating hyperconservation.
 The region above and to the right of the $Re_{tot} = 100\%$ line 
-shows ``backfire,'' 
+shows backfire, 
 i.e.\ greater total energy consumption after the EEU than before it. 
 
 Although the direct emplacement effect does not cause rebound, 
@@ -3798,7 +3805,7 @@ Finally, we discuss and calibrate the macro factor ($k$).
 %++++++++++++++++++++++++++++++
 
 In Section~\ref{sec:aim_contribution_structure}, 
-we claimed three contributions.
+we claimed four contributions.
 Here, we reiterate and discuss each.
 
 First, we believe we have developed 
@@ -3863,6 +3870,12 @@ This micro-to-macro link can be seen in Eq.~\ref{eq:Re_macro_def} and
 Figs.~\ref{fig:ExampleEnergyPathGraph}, \ref{fig:CarEnergyGraph}, and \ref{fig:LampEnergyGraph}.
 We make the first calibration of the macro factor ($k$) 
 in Section~\ref{sec:calibrating_k} below.
+
+The fourth contribution is tools for calculating
+rebound for other EEUs with this framework.
+The tools include an Excel workbook and an \texttt{R} package.
+See the Leeds University data repository and
+the \href{https://www.github.com/MatthewHeun/ReboundTools}{ReboundTools} \texttt{R} package.
 
 
 %++++++++++++++++++++++++++++++
