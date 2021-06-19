@@ -140,7 +140,7 @@ employs a constant elasticity of substitution utility model to
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macro factor to link
-macroeconomic to microeconomic rebound scales.
+microeconomic to macroeconomic rebound scales.
 A sequence of novel graphs shows rebound paths through 
 energy, expenditure, and consumption spaces.
 The framework is applied to two case studies: 
