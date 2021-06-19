@@ -688,7 +688,7 @@ The key \emph{contributions} of this paper are
         in energy, expenditure, and consumption spaces, and 
         
   \item creating the first (to our knowledge) operationalized link between 
-        rebound effects on macroeconomic and microeconomic scales. 
+        rebound effects on microeconomic and macroeconomic scales. 
   
 \end{enumerate*}
 
