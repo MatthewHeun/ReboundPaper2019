@@ -358,7 +358,7 @@ The emplacement effect of an EEU includes
 	
   \item expected energy savings, assuming no behavioral changes;
   
-  \item embodied energy effects, i.e., changes across the EEU of the embodied energy rate 
+  \item embodied energy effects, i.e.\ changes across the EEU of the embodied energy rate 
         of the energy conversion device; and 
         
   \item maintenance and disposal effects 
