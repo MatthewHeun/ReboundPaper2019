@@ -3875,7 +3875,7 @@ The fourth contribution is tools for calculating
 rebound for other EEUs with this framework.
 The tools include an Excel workbook and an \texttt{R} package.
 See the Leeds University data repository and
-the \href{https://www.github.com/MatthewHeun/ReboundTools}{ReboundTools} \texttt{R} package.
+the ReboundTools \texttt{R} package~\citep{Heun:2021us}.
 
 
 %++++++++++++++++++++++++++++++
