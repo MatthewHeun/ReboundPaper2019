@@ -54,24 +54,11 @@
 
 \begin{frontmatter}
 
+
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \title{A comprehensive, partial-equilibrium\\
        energy rebound analysis framework}
-
-% Bonepile
-% Analytical support estimating \\
-% micro and macro rebound effects \\
-% for particular energy efficiency upgrades
-% Toward a mathematically rigorous analytical framework
-% for microeconomic energy rebound effects \\
-% OR \\
-% Toward a mathematically rigorous, consumer-based rebound analysis framework\\
-% OR \\
-% Towards a comprehensive analytical framework
-% for microeconomic energy rebound effects
-% Toward a comprehensive, consumer-based \\
-% energy rebound analysis framework \\
 
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
