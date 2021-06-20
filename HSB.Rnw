@@ -398,8 +398,8 @@ Macroeconomic rebound involves various short- and long-run effects.
 
 Because a lot is at stake when analyzing energy rebound, 
 it is important that rebound analysis frameworks
-account for all effects, locations, and scales, because
-everything links together.
+account for all effects, locations, and scales;
+everything is interconnected.
 The emplacement effect
 frees the device owner's cash to be spent in the income effect,
 with energy implications.
