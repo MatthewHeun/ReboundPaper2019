@@ -700,6 +700,7 @@ even if we don't later distinguish among them.
 \citet{Sorrell:2009cg} 
 sets out five macroeconomic rebound effects:
 embodied energy effects, respending effects, output effects, energy market effects, and composition effects.
+(We place the embodied energy effect at the microeconomic scale.)
 \citet{Santarius2016} and \citet{Lange2021} 
 introduce 
 meso (i.e., sectoral) level rebound
@@ -778,8 +779,8 @@ such that
 $\amacro{\eta} > \bempl{\eta}$,
 possibly at an increased cost to
 emplace (capital cost), maintain, and dispose of the device such that
-$\amacro{C}_{cap} > \bempl{C}_{cap}$ and 
-$\ramacro{C}_{\md} > \rbempl{C}_{\md}$.
+$\bempl{C}_{cap} < \amacro{C}_{cap}$ and 
+$\rbempl{C}_{\md} < \ramacro{C}_{\md}$.
 (This is not a costless EEU.)
 As final-to-service efficiency increases ($\bempl{\eta} < \amacro{\eta}$),
 the price of the energy service declines ($\bempl{p}_s > \amacro{p}_s$).
@@ -849,7 +850,7 @@ Simplifying gives
   Re = \frac{\text{takeback rate}}{\text{expected final energy savings rate}} \; .
 \end{equation}
 %
-Thus, energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
+Energy rebound can be given by either Eq.~(\ref{eq:Re_def}) or Eq.~(\ref{eq:Re_takeback}).
 
 We define rebound at the final energy stage of the energy conversion chain,
 because that is the point of energy purchase by the device owner.
@@ -859,7 +860,7 @@ to final energy rates in the numerators and denominators of rebound expressions
 derived from Eqs.~(\ref{eq:Re_def}) and~(\ref{eq:Re_takeback});
 they divide out anyway.
 Henceforth, we drop the adjective ``final'' 
-on the noun ``energy,''
+from the noun ``energy,''
 unless there is reason to indicate a specific stage of the energy conversion chain.
 
 
@@ -928,7 +929,7 @@ One novel contribution of this paper is visualization of rebound effects
 in three spaces:
 the energy space, the expenditure space, and the consumption space.
 Each space is represented by a plane that contains a path graph that illustrates adjustments
-to energy, expenditure, and consumption as a result of the EEU.
+to energy, expenditure, or consumption as a result of the EEU.
 (See Appendix~\ref{sec:graph_details} for 
 detailed mathematical descriptions of rebound path graphs.)
 Important quantities for the path graphs are
@@ -949,7 +950,7 @@ In rebound path graphs, effects at the direct location are placed on the $x$-axi
 effects at the indirect location are placed on the $y$-axis.
 
 Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph} show
-notional rebound path graphs on the energy, expenditure, and consumption spaces.
+notional rebound path graphs in energy, expenditure, and consumption spaces.
 The notional path graphs are not quantified; there are no scales on the axes.
 Later (Section~\ref{sec:examples}), 
 rebound path graphs (with scales) illustrate the numerical examples.
@@ -1005,7 +1006,7 @@ indicate expenditure isoquants (sum of direct and indirect components).
 A notional consumption path graph is shown in Fig.~\ref{fig:ExampleConsPathGraph}.
 The indexed rate of energy service demand ($\rate{q}_s/\rbempl{q}_s$) is shown on the $x$-axis, and
 the indexed rate of other goods demand ($\rate{C}_o/\rbempl{C}_o$) is shown on the $y$-axis.
-Iso-cost loci of other goods and energy service demand (budget constraints)
+Iso-cost loci of energy service and other goods demand
 are shown as lines with negative slope. 
 Indifference curves are denoted by \iicirc{} and \iibar{}. 
 A ray from the origin through the $\wedge$ point is denoted \rr{}.
@@ -1281,8 +1282,9 @@ rebound_results %>%
 \label{sec:rebound_effects}
 %++++++++++++++++++++++++++++++
 
-The four rebound effects shown in the rebound path graphs
+The four rebound effects
 (emplacement, substitution, income, and macro)
+shown in the rebound path graphs
 are discussed in subsections below.
 In each subsection, we
 define each effect and
@@ -1368,7 +1370,8 @@ all expected energy savings are taken back by rebound effects.
 Thus, the line of constant energy consumption through the $\circ$ point is labeled
 $Re_{tot} = 100\%$.
 The contribution of each rebound effect to total rebound 
-is the distance each component's segment moves across the rebound isoquants.  
+is represented by the distance that each component's segment
+moves across the rebound isoquants.  
 Total rebound ($Re_{tot}$) is measured linearly between and beyond the
 $Re_{tot} = 0\%$ and $Re_{tot} = 100\%$ lines, 
 with direct rebound in the $x$ direction and 
@@ -1392,15 +1395,15 @@ maintenance and disposal activities (subscript $\md$).
 In the notional energy path graph (Fig.~\ref{fig:ExampleEnergyPathGraph}), 
 emplacement rebound is negative ($Re_{empl} < 0$),
 because the upgraded device has a lesser
-embodied energy rate ($\raempl{E}_{emb} < \rbempl{E}_{emb}$)
-and a lesser maintenance and disposal expenditure rate ($\raempl{C}_{\md} < \rbempl{C}_{\md}$)
+embodied energy rate ($\rbempl{E}_{emb} > \raempl{E}_{emb}$)
+and a lesser maintenance and disposal expenditure rate ($\rbempl{C}_{\md} > \raempl{C}_{\md}$)
 than the original device.
 Fig.~\ref{fig:ExampleCostPathGraph} shows segments \ab{} and \bstar{}
 moving in the negative $y$ direction,
 consistent with a lower capital expenditure rate
-($\raempl{C}_{cap} < \rbempl{C}_{cap}$) and 
+($\rbempl{C}_{cap} > \raempl{C}_{cap}$) and 
 a reduced maintenance and disposal expenditure rate
-($\raempl{C}_{\md} < \rbempl{C}_{\md}$).
+($\rbempl{C}_{\md} > \raempl{C}_{\md}$).
 
 One of the unique features of this framework
 is that independent analyses of embodied energy and 
@@ -1410,8 +1413,7 @@ We note that the different terms
 capital cost rate, $\rate{C}_{cap}$)
 might seem to imply different processes, 
 but they actually refer to the same emplacement effect, 
-namely energy segment \ab{} and expenditure segment \ab{} 
-in energy and expenditure path graphs
+namely segment \ab{} in energy and expenditure path graphs
 (Figs.~\ref{fig:ExampleEnergyPathGraph} and
 \ref{fig:ExampleCostPathGraph}, respectively).
 Purchasing an upgraded device
@@ -1424,7 +1426,7 @@ in the energy and economics fields, respectively.
 In the notional graphs of
 Figs.~\ref{fig:ExampleEnergyPathGraph} and~\ref{fig:ExampleCostPathGraph}, 
 embodied energy rates and capital cost rates
-(represented by energy segment \ab{} and expenditure segment \ab{}, respectively) 
+(represented by segments \ab{}) 
 move in the same direction (both in the negative $y$ direction).
 However, both segments \ab{} could move in the positive $y$ direction, or
 they could move in opposite directions, 
@@ -1433,17 +1435,18 @@ embodied energy and capital cost rates.
 
 Consistent with the energy analysis literature, 
 we define embodied energy 
-to be the sum of all energy (direct and indirect) 
-consumed in the production of the energy conversion device.
+to be the sum of all energy
+consumed in the production of the energy conversion device, 
+all the way back to resource extraction.
 Energy is embodied in the device within manufacturing and distribution supply chains
 prior to consumer acquisition of the device.
 No energy is embodied in the device while in service.
 The EEU causes the embodied energy of the energy conversion device to change
 from $\orig{E}_{emb}$ to $\aempl{E}_{emb}$.
 
-However, for simplicity, we spread all embodied energy
+For simplicity, we spread all embodied energy
 over the lifetime of the device
-to provide a uniform embodied energy rate ($\rate{E}_{emb}$),
+to provide a constant embodied energy rate ($\rate{E}_{emb}$).
 (We later take the same approach to capital costs ($\rate{C}_{cap}$) and
 maintenance and disposal costs ($\rate{C}_{\md}$).)
 A justification for spreading embodied energy purchase costs comes from considering
@@ -1466,7 +1469,7 @@ The expression for embodied energy rebound is
   Re_{emb} = \Reembeqn{} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Re_emb} for details of the derivation.
+(See Appendix~\ref{sec:Re_emb} for details of the derivation.)
 
 Embodied energy rebound ($Re_{emb}$)
 can be either positive or negative, depending on 
@@ -1475,7 +1478,7 @@ $(\aempl{E}_{emb}/\bempl{E}_{emb})(\bempl{t}_{\life}/\aempl{t}_{\life}) - 1$.
 Rising energy efficiency can be associated with increased device complexity,
 additional energy consumption in manufacturing, and
 more embodied energy,
-such that $\aempl{E}_{emb} > \bempl{E}_{emb}$ and $Re_{emb} > 0$,
+such that $\bempl{E}_{emb} < \aempl{E}_{emb}$ and $Re_{emb} > 0$,
 all other things being equal.
 However, if the upgraded device has longer life than the original device
 ($\aempl{t}_{\life} > \bempl{t}_{\life}$),
@@ -1512,7 +1515,7 @@ is given by
   Re_{\md} = \ReOMdeqn{} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Re_OMd} for details of the derivation.
+(See Appendix~\ref{sec:Re_OMd} for details of the derivation.)
 
 
 %------------------------------
@@ -1570,7 +1573,7 @@ The substitution effect is shown by segments
 in Figs.~\ref{fig:ExampleEnergyPathGraph}--\ref{fig:ExampleConsPathGraph}.
 
 The substitution effect is best described 
-with reference to a consumption path graph (Fig.~\ref{fig:ExampleConsPathGraph}).
+with reference to a consumption path graph (e.g., Fig.~\ref{fig:ExampleConsPathGraph}).
 Prior to the EEU, the consumption basket (of the energy service and other goods)
 is represented by the $\circ$ point. 
 The budget constraint,
@@ -1582,7 +1585,7 @@ bundle prior to the EEU.
 After emplacement of the more efficient device
 (but before the substitution effect), 
 the price of the energy service decreases ($\bempl{p}_s > \aempl{p}_s$),
-pivoting the budget constraint counterclockwise at the $\circ$ point.
+pivoting the budget constraint counterclockwise about the $\circ$ point.
 The budget line \starstar{} indicates the
 cost of purchasing the original consumption bundle
 at the new prices.
@@ -1592,7 +1595,7 @@ This compensating variation
 translates into a lower budget constraint \hathat{} 
 in Fig.~\ref{fig:ExampleConsPathGraph}.
 The $\wedge$ point shows consumption with new prices yielding utility
-at the same level prior to the EEU and minimizing expenditure, 
+at the same level as prior to the EEU and minimizing expenditure, 
 by consuming more of the now-lower-cost energy service
 and less of the now-relatively-more-expensive other goods.
 
@@ -1635,7 +1638,7 @@ The utility model describes the device owner's behavior as
   \frac{\rate{u}}{\rbempl{u}} = \cesutility{} \; .
 \end{equation}
 
-The device owner's utility
+The device owner's utility rate
 (relative to the original condition, $\rate{u}/\rorig{u}$)
 is determined by
 the consumption rate of the energy service ($\rate{q}_s$) and
@@ -1726,10 +1729,10 @@ via the CES utility model.
   Re_{isub} = \ReisubCES{}
 \end{equation}
 
-See Appendix~\ref{sec:Resub_exact_method} for details
+(See Appendix~\ref{sec:Resub_exact_method} for details
 of the derivations of Eqs.~(\ref{eq:Re_dsub_prelim}), 
 (\ref{eq:Re_isub_prelim}), and 
-(\ref{eq:q_s_solution})--(\ref{eq:Re_isub_CES}).
+(\ref{eq:q_s_solution})--(\ref{eq:Re_isub_CES}).)
 
 
 %------------------------------
@@ -1793,13 +1796,13 @@ expenditures on the energy service and other goods,
 due to its homotheticity, 
 so that the income expansion path is a ray (\rr{}) on consumption path graphs.
 This constraint is satisfied by construction below, 
-particularly via an effective income ($\Mdothatprime$).
+particularly via an effective income term ($\Mdothatprime$).
 In the consumption path graph, the pre- and post-income-effect 
 points ($\wedge$ and $-$, respectively)
 lie along ray \rr{} from the origin through point $\wedge$ in Fig.~\ref{fig:ExampleConsPathGraph}.
 However, this framework could accommodate non-homothetic preferences
 for spending across the income effect (turning the income
-expansion path into a more-general curve).
+expansion path into a more general curve).
 
 We next show expressions for 
 direct and indirect income effect rebound.
@@ -1812,7 +1815,7 @@ direct and indirect income effect rebound.
 
 The income elasticity of energy service demand ($\eqsM$)
 quantifies the amount of net savings spent 
-on more of the energy service ($\rainc{q}_s > \rbinc{q}_s$).
+on more of the energy service ($\rbinc{q}_s < \rainc{q}_s$).
 (See Appendix~\ref{sec:utility_and_elasticities} 
 for additional information about elasticities.)
 Spending of net savings on additional energy service 
@@ -1909,8 +1912,8 @@ the expression for indirect income rebound is
   Re_{iinc} = \Reiinceqnexact{} \; .
 \end{equation}
 %
-See Appendix~\ref{sec:Re_inc} for details of the derivation
-of direct and indirect income effect rebound.
+(See Appendix~\ref{sec:Re_inc} for details of the derivation
+of direct and indirect income effect rebound.)
 
 
 %------------------------------
@@ -1950,7 +1953,7 @@ dynamic, long-run effects induced by the EEU%
   are contractionary \citep{Basu2006,Ramey2016hb}.
 }.
 %
-Our framework incorporates annual average effects over 
+This framework incorporates annual average effects over 
 the lifetime of the upgraded device, 
 so dynamic effects that take time to unfold matter.
 To describe all the mechanisms by which these dynamic effects operate, 
@@ -1963,7 +1966,7 @@ deployment of new products (product innovation),
 an important driver of rising aggregate demand \citep{Szostack1995}. 
 Ultimately, these dynamic phenomena lead to 
 higher incomes and more spending on goods and energy services than 
-otherwise would have been the case in the absence of the EEU.
+otherwise would have been the case in the counterfactual absence of the EEU.
 
 \citeauthor{Borenstein:2015aa} has addressed these macro effects from the demand side,
 noting that ``income effect rebound will be larger economy-wide than 
@@ -1976,14 +1979,15 @@ is not an autonomous expansion of expenditure in an otherwise unchanged economy
 Rather, macroeconomic rebound is caused by an energy productivity improvement,
 a supply-side shock.
 After the EEU, 
-it takes less energy to generate the same economic output, because 
+it takes less energy (and therefore less energy cost)
+to generate the same economic output, because 
 energy efficiency has improved.
 That said, \citeauthor{Borenstein:2015aa} is right to highlight that supply-side 
 and demand-side effects both play a role as the consequences of the
 technology shock play themselves out.
 Furthermore, his approach has the advantage that it can be directly
 linked to our income effect and its consequences for macroeconomic rebound. 
-\citet{Borenstein:2015aa} also notes that scaling from net 
+\citeauthor{Borenstein:2015aa} also notes that scaling from net 
 savings ($\rasub{N}$) at the device level
 to productivity-driven growth at the macro level is unexplored territory.
 
@@ -1997,7 +2001,8 @@ by the infinite series of respending of net savings ($\rasub{N}$)
 throughout the economy%
 \footnote{
   The macro factor ($k$) appears unitless,
-  but its units are actually \$ of economic growth created per \$ of spending 
+  but its units are actually \$ of economic growth created 
+  per \$ of net savings spent
   by the device owner in the income effect ($\rbinc{N}$).
 }.
 %
@@ -2011,7 +2016,7 @@ $k \ge 0$ is expected.
 $k = 0$ means there is no dynamic effect
 resulting from the energy efficiency upgrade.
 $k > 0$ means that productivity-driven macroeconomic growth has occurred
-with consequent implications for additional energy consumption in the economy.
+with consequent implications for additional energy consumption in the wider economy.
 The relationship between $k$ and $\MPC$ is given by
 
 \begin{equation} \label{eq:mpc_and_k_converged}
@@ -2019,7 +2024,7 @@ The relationship between $k$ and $\MPC$ is given by
 \end{equation}
 %
 (See Appendix~\ref{sec:income_macro_mpc} for the derivation 
-of Eq.~\ref{eq:mpc_and_k_converged}.)
+of Eq.~(\ref{eq:mpc_and_k_converged}).)
 
 A further advantage of using the $\MPC$ approach is that there are
 many estimates of its magnitude, though we stress again that  $\MPC$ is a
@@ -2092,15 +2097,14 @@ $Re_{dinc}$ (Eq.~(\ref{eq:Re_dinc})),
 $Re_{iinc}$ (Eq.~(\ref{eq:Re_iinc})), and
 $Re_{\macro}$ (Eq.~(\ref{eq:Re_macro})).
 The total rebound 
-%sum 
 ($Re_{tot}$)
 is given by the sum of the above components,
 which can also be verified against Eq.~(\ref{eq:Re_tot}).
 
 As discussed in Section~\ref{sec:macro_effect_main_paper},
 the link between macroeconomic and microeconomic rebound 
-is largely unexplored. 
-For now, we assume a placeholder value of $k = 1$ for both case studies.
+is largely unexplored, and 
+we assume a placeholder value of $k = 1$ for both case studies.
 We return to the matter of calibrating $k$
 in the Discussion (Section~\ref{sec:calibrating_k}).
  
