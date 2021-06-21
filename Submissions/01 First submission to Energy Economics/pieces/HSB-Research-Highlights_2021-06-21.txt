@@ -1,0 +1,7 @@
+Highlights for Heun, Semieniuk, and Brockway, 2021
+
+* Microeconomic rebound theory is scattered across papers and lacks unification
+* We develop a comprehensive, partial equilibrium rebound analysis framework
+* We utilize a macroeconomic factor to link macro to micro rebound effects
+* Novel graphs show rebound paths through energy, expenditure, and consumption spaces
+* Two case studies yield microeconomic rebounds of 24-29% and total rebounds of 48-80%
