@@ -92,17 +92,6 @@ Leeds, LS2 9JT, UK}
 %% Abstract %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{abstract}
-% A concise and factual abstract is required.
-% The abstract should state briefly 
-% the purpose of the research, 
-% the principal results, and
-% major conclusions. 
-% An abstract is often presented separately from the article, 
-% so it must be able to stand alone.
-% For this reason, References should be avoided, but if essential, 
-% then cite the author(s) and year(s).
-% Also, non-standard or uncommon abbreviations should be avoided, but
-% if essential they must be defined at their first mention in the abstract itself.
 Widespread implementation of energy efficiency measures
 is an important global strategy to meet Paris greenhouse gas emissions reduction targets. 
 However, energy rebound can ``take back'' efficiency-based
@@ -110,7 +99,7 @@ energy reductions via behavior changes and economic effects.
 If rebound effects are larger than typically assumed, 
 efficiency-based efforts to reduce carbon emissions 
 will be less effective than supposed.
-The investigation of rebound effects is therefore a continued high priority. 
+Therefore, the investigation of rebound effects is a high priority. 
 % The problem
 An operationalized rebound analysis framework is needed
 to study energy efficiency upgrades 
@@ -122,8 +111,7 @@ for non-marginal energy efficiency changes.
 % Our response
 In response, 
 we develop a comprehensive, partial equilibrium 
-rebound analysis framework that 
-employs a constant elasticity of substitution utility model to 
+rebound analysis framework to 
 describe direct and indirect locations
 for emplacement, substitution, and income rebound effects. 
 We utilize a macro factor to link
@@ -449,7 +437,7 @@ specification that translates
 energy service price and device purchase 
 cost changes into consumption choices, simultaneously 
 decomposing into substitution and income effects. 
-These two effects allow for a more nuanced understanding of behavior
+These two effects allow for nuanced understanding of behavior
 for different commodities and preferences.
 Decomposition into substitution and income effects 
 has become the standard approach to analyzing
@@ -461,7 +449,7 @@ at the microeconomic scale~\citep{greening2000}.
 \label{sec:non_marginal_changes}
 %------------------------------
 
-A comprehensive rebound framework will allow non-marginal efficiency changes,
+A comprehensive rebound analysis framework will allow non-marginal efficiency changes,
 because EEUs often involve a large percentage increase in energy efficiency.
 A good example of non-marginal energy efficiency changes is 
 replacing incandescent lamps with Light Emitting Diode (LED) lamps, 
@@ -492,16 +480,16 @@ by extension, substitution and income effects.
 Bringing together the importance of energy efficiency 
 \emph{vis-\`{a}-vis} emissions reduction goals
 and the desirable characteristics of rebound frameworks discussed above,
-we see that comprehensive rebound frameworks are needed to help develop 
+we see that comprehensive frameworks are needed to help develop 
 energy efficiency policy to meet emissions targets. 
 I.e.\ effective policy should be informed by rebound analyses conducted within
 a comprehensive framework.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
-We divide the frameworks crudely into general-equilibrium frameworks and 
+We divide the previous frameworks crudely into general equilibrium frameworks and
 partial equilibrium frameworks.
 Both partial and general equilibrium frameworks
-will be needed to improve understanding and develop effective policies
+are necessary to improve understanding and develop effective policies
 for mitigation of rebound effects.
 
 General equilibrium frameworks allow prices of all goods and services 
@@ -525,7 +513,7 @@ they constrain price variation to the energy service only;
 all other prices remain constant.
 In our partial equilibrium framework, 
 general equilibrium effects are captured by 
-a simplified, one-dimensional macroeconomic-scale rebound effect
+a simplified, one-dimensional, macroeconomic-scale rebound effect
 discussed in Section~\ref{sec:macro_effect_main_paper}.
 
 We are not the first to develop a partial equilibrium rebound analysis framework,
@@ -549,7 +537,7 @@ relative to the characteristics discussed above (in rows).
 Because all frameworks evaluate the expected decrease 
 in direct energy consumption from the EEU,
 the ``Direct emplacement effect'' row contains \rating{100} 
-in each column.
+in all columns.
 Three early papers \citep{Nassen:2009aa, Thomas:2013aa, Thomas:2013ab}
 estimate rebound quantitatively, 
 earning high marks (\rating{100}) in the ``Operationality'' row. 
@@ -557,7 +545,7 @@ Both motivate their frameworks at least partially with microeconomic theory
 (consumer preferences and substitution and income effects)
 but use simple linear demand functions in their empirical analyses.  
 Thus, the connection between economic theory and empirics is tenuous, 
-leading to intermediate ratings (\rating{50}) in the
+leading to intermediate ratings (\rating{50} or less) in the
 ``substitution effects,''
 ``income effects,''
 and
@@ -665,7 +653,7 @@ The key \emph{contributions} of this paper are
 \begin{enumerate*}[label={(\roman*)}]
 	
   \item developing the first (to our knowledge)
-        comprehensive rebound analysis framework that accommodates 
+        comprehensive rebound analysis framework that combines 
         embodied energy effects, 
         maintenance and disposal effects, 
         non-marginal energy efficiency increases, and 
@@ -696,7 +684,7 @@ Section~\ref{sec:conclusion} concludes.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this section, we develop a comprehensive energy rebound analysis framework 
-(concisely, ``the framework'').
+(concisely, ``this framework'').
 We follow the rebound typology discussed in Section~\ref{sec:rebound_typologies}, 
 distinguishing between
 microeconomic rebound (at the single device or for the device owner)
