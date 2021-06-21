@@ -57,7 +57,7 @@
 
 %% Title %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{A comprehensive, partial-equilibrium\\
+\title{A comprehensive, partial equilibrium\\
        energy rebound analysis framework}
 
 
@@ -121,7 +121,7 @@ with a detailed model of consumer responses
 for non-marginal energy efficiency changes.
 % Our response
 In response, 
-we develop a comprehensive, partial-equilibrium 
+we develop a comprehensive, partial equilibrium 
 rebound analysis framework that 
 employs a constant elasticity of substitution utility model to 
 describe direct and indirect locations
@@ -499,7 +499,7 @@ a comprehensive framework.
 
 In fact, several scholars have developed previous rebound analysis frameworks.
 We divide the frameworks crudely into general-equilibrium frameworks and 
-partial-equilibrium frameworks.
+partial equilibrium frameworks.
 Both partial and general equilibrium frameworks
 will be needed to improve understanding and develop effective policies
 for mitigation of rebound effects.
@@ -517,18 +517,18 @@ make assumptions during calibration, and
 lose simplicity of exposition. 
 
 In contrast, we develop below (Section~\ref{sec:framework})
-a partial-equilibrium framework.
-Partial-equilibrium frameworks provide detailed assessment of individual EEUs
+a partial equilibrium framework.
+Partial equilibrium frameworks provide detailed assessment of individual EEUs
 with tractable, easier-to-understand mathematics.
-Partial-equilibrium frameworks are easier to understand, in part, because
+Partial equilibrium frameworks are easier to understand, in part, because
 they constrain price variation to the energy service only; 
 all other prices remain constant.
-In our partial-equilibrium framework, 
+In our partial equilibrium framework, 
 general equilibrium effects are captured by 
 a simplified, one-dimensional macroeconomic-scale rebound effect
 discussed in Section~\ref{sec:macro_effect_main_paper}.
 
-We are not the first to develop a partial-equilibrium rebound analysis framework,
+We are not the first to develop a partial equilibrium rebound analysis framework,
 so it is worthwhile to assess previous frameworks for
 the key features discussed above: 
 analysis at all effects, locations, and scales; 
@@ -539,7 +539,7 @@ operationality.
 For only when all of the above characteristics are present can  
 a comprehensive picture of rebound emerge.
 Table~\ref{tab:previous_frameworks} contains our evaluation 
-of selected recent partial-equilibrium frameworks (in columns)
+of selected recent partial equilibrium frameworks (in columns)
 relative to the characteristics discussed above (in rows).
 
 \renewcommand{\arraystretch}{0.6}
@@ -3814,7 +3814,7 @@ are the energy manifestation of the important difference
 between costless technology upgrades and
 (costly) mandated efficiency increases \citep{Gillingham:2013aa,Fullerton2020}.
 Costly EEUs are not typically 
-included in partial-equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa};
+included in partial equilibrium rebound frameworks \citep{Azevedo2014,Gillingham:2020aa};
 most rebound analysis frameworks assume costless upgrade in both financial and energy terms.
 One surprising result from including costly upgrades is
 that accounting for differential capital cost ($\Delta \raempl{C}_{cap}$)
@@ -4199,7 +4199,7 @@ respectively.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In this paper,
-we developed a comprehensive, partial-equilibrium rebound analysis framework that
+we developed a comprehensive, partial equilibrium rebound analysis framework that
 combines all rebound effects, locations, and scales
 across energy, expenditure, and consumption spaces with 
 a detailed model of consumer preferences and
@@ -4211,7 +4211,7 @@ This paper also contributes the first visualizations of
 rebound path graphs in energy, expenditure, and consumption spaces.
 We operationalize and calibrate the macro factor ($k = 3$)
 to provide a link between effects at microeconomic and macroeconomic scales,
-missing from previous partial-equilibrium frameworks. 
+missing from previous partial equilibrium frameworks. 
 
 From the development and application of the framework, 
 we draw four important conclusions.
