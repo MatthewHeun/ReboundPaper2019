@@ -63,7 +63,7 @@
 
 %% Authors %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\author[MKH_address]{Matthew Kuperus Heun\corref{corr_author}}
+\author[MKH_address]{Matthew Kuperus Heun\corref{corr_author} bogus}
 \cortext[corr_author]{Corresponding author}
 \ead{mkh2@calvin.edu}
 
